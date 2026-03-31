@@ -181,7 +181,9 @@ li { margin-bottom: 0.5rem; }
 
 <li><strong>Bounce rate blues:</strong> If too many of your emails bounce back (usually >5%), your sender reputation takes a hit and you may get blocked.</li>
 
-<li><strong>HTML formatting headaches:</strong> HTML-only emails get flagged as spam by providers like Gmail and may not send. <strong>The workaround:</strong>Use plain text version Bonus Tip: skip the images in your first outreach email.</li>
+<li><strong>Blank emails (the real issue):</strong> If emails send successfully (API returns a message_id) but arrive blank, you're likely using the wrong JSON format. <strong>The fix:</strong> Use <code>text</code> at the top level of your JSON, NOT nested in a <code>body</code> object. Correct: <code>{"text": "Hello"}</code>. Wrong: <code>{"body": {"text": "Hello"}}</code>. Also works: adding <code>html</code> for clickable links, and <code>attachments[]</code> for files (base64 encoded).</li>
+
+<li><strong>Make it a skill:</strong> Since session memory can reset, create a dedicated AgentMail skill that includes the correct JSON format so your agent doesn't forget. Key reminder: always use top-level <code>text</code>, not nested body.</li>
 
 <li><strong>Links are suspicious:</strong> Email providers side-eye emails with links in the first message of a conversation. If you're sending "check out this link" as your opening move, expect trouble. Strategy: send your first message with zero links or images, then test out in the followup.</li>
 
