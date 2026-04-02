@@ -22,17 +22,12 @@ li { margin-bottom: 0.5rem; }
 .urgent-box { background: #2c241b; color: #faf8f3; padding: 1.5rem; margin: 0 0 2rem 0; text-align: center; }
 .urgent-box h1 { color: #faf8f3; font-size: 1.5rem; margin-bottom: 0.5rem; }
 .time-estimate { display: inline-block; background: #e94560; color: #fff; padding: 0.3rem 0.8rem; font-size: 0.85rem; margin-top: 0.5rem; }
-.stop-box { background: #e94560; color: #fff; padding: 1.5rem; margin: 2rem 0; text-align: center; }
-.stop-box strong { font-size: 1.2rem; display: block; margin-bottom: 0.5rem; }
+.red-warning { background: #ffe3e3; border: 2px solid #e94560; color: #7a1a1a; padding: 1rem; margin: 1rem 0; }
 .analogy-box { background: #fff; border: 2px solid #8b7355; padding: 1.5rem; margin: 1.5rem 0; }
 .analogy-box h3 { color: #2c241b; margin-bottom: 1rem; }
 .step-box { background: #fff; border: 2px solid #d4c4a8; padding: 1.5rem; margin: 1.5rem 0; position: relative; }
 .step-number { position: absolute; top: -15px; left: 20px; background: #2c241b; color: #faf8f3; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem; }
-.why-it-works { background: #f5f0e8; border: 1px solid #d4c4a8; padding: 1rem; margin-top: 1rem; font-size: 0.9rem; color: #5a4a3a; }
-.why-it-works h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; color: #8b7355; }
 .warning-inline { background: #fff3cd; padding: 0.5rem 1rem; display: inline-block; margin: 0.5rem 0; }
-.red-warning { background: #ffe3e3; border: 2px solid #e94560; color: #7a1a1a; padding: 1rem; margin: 1rem 0; }
-.platform-note { background: #f5f0e8; border: 1px solid #d4c4a8; padding: 1rem; margin: 1rem 0; font-size: 14px; }
 .action-prompt { background: #f5f0e8; border-left: 4px solid #8b7355; padding: 1rem; margin: 1rem 0; font-family: 'IBM Plex Mono', monospace; }
 .action-prompt strong { color: #2c241b; }
 .footer-nav { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #d4c4a8; display: flex; justify-content: space-between; }
@@ -41,12 +36,9 @@ li { margin-bottom: 0.5rem; }
 .footer-nav .next { font-weight: 600; }
 .callout-box { background: #f5f0e8; border: 3px solid #8b7355; padding: 1.5rem; margin: 2rem 0; }
 .callout-box h3 { color: #2c241b; font-size: 1.2rem; margin-top: 0; }
-.limitations-box { background: #fff; border: 2px solid #e94560; padding: 1.5rem; margin: 2rem 0; }
-.limitations-box h3 { color: #e94560; font-size: 1.2rem; margin-top: 0; }
-.limitations-box ul { margin-bottom: 0; }
-.limits-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-.limits-table th, .limits-table td { border: 1px solid #d4c4a8; padding: 0.75rem; text-align: left; }
-.limits-table th { background: #f5f0e8; font-weight: 600; }
+.critical-box { background: #fff3cd; border: 2px solid #ffc107; padding: 1.5rem; margin: 1.5rem 0; }
+.critical-box h3 { color: #8b5a00; margin-bottom: 0.75rem; }
+.critical-box code { background: #fff; padding: 0.2rem 0.4rem; }
 </style>
 </head>
 <body>
@@ -71,189 +63,100 @@ li { margin-bottom: 0.5rem; }
 
 <div class="callout-box">
 <h3>✨ Why AgentMail?</h3>
-<p>Think of AgentMail as your AI's own personal mailbox — it's free, it's made for agents, and it keeps your regular email tidy. No more getting work emails mixed up with your agent's midnight poetry submissions.</p>
-<p><strong>Other options if you're feeling fancy:</strong></p>
+<p>Think of AgentMail as your AI's own personal mailbox — it's free, it's made for agents, and it keeps your regular email tidy.</p>
+<p><strong>Other options:</strong></p>
 <ul>
-<li><strong>Gmail:</strong> Create a fresh Gmail account just for your agent</li>
-<li><strong>Your own domain:</strong> Set up <code>agent@yourdomain.com</code> (looks professional!)</li>
-<li><strong>Any email service:</strong> As long as it has an API, your agent can use it</li>
+<li><strong>Gmail:</strong> Create a fresh account just for your agent</li>
+<li><strong>Your domain:</strong> Set up <code>agent@yourdomain.com</code></li>
 </ul>
-<p>The key is: <em>keep it separate.</em> Your agent needs its own digital space.</p>
+<p>Keep it separate from your personal email.</p>
+</div>
+
+<div class="critical-box">
+<h3>🔑 CRITICAL: The JSON Format That Makes Emails Work</h3>
+<p>Most email sending problems come from wrong JSON format. <strong>Always use both <code>text</code> and <code>html</code> at the top level</strong> (not nested in a <code>body</code> object):</p>
+<pre><code>{
+  "to": "recipient@example.com",
+  "subject": "My Subject",
+  "text": "Plain text fallback",
+  "html": "<p>This is <strong>HTML</strong> with <a href=\"...\">a link</a></p>"
+}</code></pre>
+<p><strong>Why both?</strong> Text is fallback for clients that don't render HTML. Always provide both — it improves deliverability.</p>
+<p><strong>Pro tip:</strong> Create a skill with this JSON format so your agent remembers it.</p>
 </div>
 
 <div class="red-warning">
 <strong>⚠️ Warning: Don't Mix Email Lives</strong>
-<p>Your agent will read, send, and sometimes forward email automatically. If you use your personal email for agent work, you might accidentally share grandma's cookie recipe with a client, or worse — let your agent sort through sensitive work emails. </p>
-<p><strong>Keep it clean:</strong> AgentMail (or a fresh Gmail/domain address) for agent stuff. Your real email for human stuff. Simple.</p>
+<p>Your agent will read, send, and forward email automatically. Use AgentMail (or a fresh Gmail) for agent stuff. Your real email for human stuff.</p>
 </div>
 
-<h2>Okay, let's get your agent its own mailbox</h2>
+<h2>Let's get your agent its own mailbox</h2>
 
 <div class="step-box">
 <div class="step-number">1</div>
 <h3>Go get an AgentMail inbox</h3>
 <ol>
-<li>Open your browser and visit <strong>https://agentmail.to</strong></li>
-<li>Sign up for a free inbox (pick something fun like <code>yourname-agent</code> or <code>robot-pal</code>)</li>
-<li>Check your regular email for a verification link — click it</li>
-<li>Once verified, log into your new AgentMail inbox</li>
+<li>Visit <strong>https://agentmail.to</strong></li>
+<li>Sign up for a free inbox (e.g., <code>yourname-agent</code>)</li>
+<li>Check your email for a verification link</li>
+<li>Log into your new inbox</li>
 </ol>
-<div class="why-it-works">
-<h4>Why we do this first</h4>
-<p>AgentMail is built for this exact thing. It's simpler than trying to force a regular email account to behave like an agent inbox.</p>
-</div>
 </div>
 
 <div class="step-box">
 <div class="step-number">2</div>
-<h3>Grab the magic key (API token)</h3>
-<p>Your agent needs permission to access the inbox. That's what the API token is for.</p>
+<h3>Grab your API token</h3>
 <ol>
-<li>In your AgentMail inbox, look for "API", "Integration", or "Tokens"</li>
-<li>Click "Generate new token" and label it something like <code>My Heyron Agent</code></li>
-<li><strong>Copy the token right now</strong> — this is the only time you'll see the full thing</li>
+<li>In your AgentMail inbox, look for "API" or "Tokens"</li>
+<li>Click "Generate new token" — name it <code>My Heyron Agent</code></li>
+<li><strong>Copy the token now</strong> — you won't see it again</li>
 </ol>
-<div class="warning-inline">⚠️ This token is like a password for your inbox. Save it somewhere safe!</div>
-<div class="why-it-works">
-<h4>Why this works</h4>
-<p>Tokens let your agent act on behalf of the inbox without ever knowing your real password. It's secure and revocable.</p>
-</div>
+<div class="warning-inline">⚠️ This token is like a password. Save it somewhere safe!</div>
 </div>
 
 <div class="step-box">
 <div class="step-number">3</div>
-<h3>Tell your agent about AgentMail</h3>
-<p>Time to connect the dots. Go back to your Heyron chat and say exactly this:</p>
+<h3>Connect your agent</h3>
+<p>Tell your agent:</p>
 <div class="action-prompt">
-<strong>Say:</strong> "Connect to AgentMail. My inbox is <code>your-inbox-name@agentmail.to</code> and here's my token: <code>paste-the-token-here</code>"
+<strong>"Connect to AgentMail. My inbox is [your-inbox]@agentmail.to and here's my token: [paste-token]"</strong>
 </div>
-<p>Your agent will do a quick test connection and confirm everything works. If it asks for extra permissions, just allow read and send — that's all you need.</p>
+<p>It will test the connection and confirm it's working.</p>
 </div>
 
 <div class="step-box">
 <div class="step-number">4</div>
-<h3>Test it with a fun email</h3>
-<p>Let's make sure emails actually go through.</p>
+<h3>Test it</h3>
 <div class="action-prompt">
-<strong>Say:</strong> "Send a test email from AgentMail to my personal email. Subject: 'Heyron AgentMail Test — Today's Date'"
+<strong>"Send a test email to my regular email"</strong>
 </div>
-<p>Check both inboxes — your regular email should get the test, and your AgentMail inbox should show it was sent.</p>
-<div class="why-it-works">
-<h4>Why we test</h4>
-<p>A quick send/receive test catches any permission issues before you build real automations.</p>
-</div>
+<p>Check both inboxes to confirm it went through.</p>
 </div>
 
-<div class="step-box">
-<div class="step-number">5</div>
-<h3>Store that token safely</h3>
-<p>Now that it's working, make sure the token is secure.</p>
-<ol>
-<li>If you use a password manager, add it there</li>
-<li>Ask your agent: "Where did you store my token?" (it should be in secure storage)</li>
-<li><strong>Never</strong> paste the token in public chats, GitHub, or anywhere people might see it</li>
-</ol>
-<div class="why-it-works">
-<h4>Why security matters</h4>
-<p>This token can send email from your agent inbox. Keep it safe like you'd keep a house key. To avoid pasting a token in chat, have your agent create a file called agentmail.env and paste the token and credentials in there, and tell it where to find them.</p>
-</div>
-</div>
-
-<h2>Quick notes & alternatives</h2>
-
-<div class="platform-note">
-<ul>
-<li><strong>Using Gmail instead?</strong> Create a fresh Gmail account just for your agent. You'll need an app password or OAuth — your agent can guide you through it.</li>
-<li><strong>Domain email user?</strong> Set up <code>agent@yourdomain.com</code> and either forward to it or give API access. Looks slick!</li>
-<li><strong>Already using email for work?</strong> Keep it separate. Your agent might send unexpected replies or attachments.</li>
-</ul>
-</div>
-
-<h2>The Fine Print: AgentMail Limitations</h2>
-
-<div class="limitations-box">
-<h3>⚠️ Things That Can Go Wrong</h3>
-
-<p>AgentMail is great, but it's not magic. Here's what users have run into, straight from the Reddit trenches:</p>
+<h2>⚠️ Common Issues</h2>
 
 <ul>
-<li><strong>Volume limits:</strong> The free tier gives you 3,000 emails/month. That's plenty for testing and small projects, but if your agent goes crazy with automation, you'll hit the wall. Upgrade to Developer ($20/month) to remove daily limits.</li>
-
-<li><strong>Bounce rate blues:</strong> If too many of your emails bounce back (usually >5%), your sender reputation takes a hit and you may get blocked.</li>
-
-<li><strong>Blank emails (the real issue):</strong> If emails send successfully (API returns a message_id) but arrive blank, you're likely using the wrong JSON format. <strong>The fix:</strong> Use <code>text</code> at the top level of your JSON, NOT nested in a <code>body</code> object. Correct: <code>{"text": "Hello"}</code>. Wrong: <code>{"body": {"text": "Hello"}}</code>. Also works: adding <code>html</code> for clickable links, and <code>attachments[]</code> for files (base64 encoded).</li>
-
-<li><strong>Make it a skill:</strong> Since session memory can reset, create a dedicated AgentMail skill that includes the correct JSON format so your agent doesn't forget. Key reminder: always use top-level <code>text</code>, not nested body.</li>
-
-<li><strong>Links are suspicious:</strong> Email providers side-eye emails with links in the first message of a conversation. If you're sending "check out this link" as your opening move, expect trouble. Strategy: send your first message with zero links or images, then test out in the followup.</li>
-
-<li><strong>Attachment quirks:</strong> Standard limit is 20-25MB per email — anything larger gets rejected b. Also, AgentMail's docs explicitly recommend <strong>not</strong> sending images as inline attachments in first emails (yep, deliverability penalty again).</li>
-
-<li><strong>Open trackers will hurt you:</strong> Those little pixels that tell you if someone opened your email? They're getting flagged more and more. Remove open trackers from your HTML or your deliverability suffers.</li>
+<li><strong>Blank emails / HTML not rendering:</strong> Wrong JSON format. Use both <code>text</code> AND <code>html</code> at top level (not nested in <code>body</code>). Without <code>html</code>, you just get plain text.</li>
+<li><strong>Links get blocked:</strong> First emails with links often get flagged. Send your first message plain, add links in follow-ups.</li>
+<li><strong>Attachments:</strong> Max 20-25MB. Don't send images inline in first emails — send as links instead.</li>
 </ul>
-</div>
 
-<h2>Quick Limits Reference</h2>
-
-<table class="limits-table">
-<tr>
-<th>Plan</th>
-<th>Emails/Month</th>
-<th>Daily Limit</th>
-<th>Custom Domains</th>
-</tr>
-<tr>
-<td>Free</td>
-<td>3,000</td>
-<td>Yes (soft)</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Developer ($20/mo)</td>
-<td>Unlimited</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Startup ($200/mo)</td>
-<td>Unlimited</td>
-<td>No</td>
-<td>Yes + dedicated IPs</td>
-</tr>
-</table>
-
-<h2>Pro Tips from the Field</h2>
-
-<div class="analogy-box">
-<h3>Make It Work For You</h3>
-<ul>
-<li><strong>Warm up gradually:</strong> Day 1 = 10 emails, Day 2 = 20, Day 3 = 40... email providers trust gradual ramp-ups.</li>
-<li><strong>Diversify:</strong> For high volume, use multiple inboxes instead of hammering one. AgentMail makes this easy.</li>
-<li><strong>Plain text wins:</strong> When in doubt, send plain text. It's less likely to trigger spam filters and looks more authentic. And actually sends</li>
-</ul>
-</div>
+<p><strong>Full documentation:</strong> <a href="https://docs.agentmail.to/messages">https://docs.agentmail.to/messages</a></p>
 
 <h2>✨ Look what you've built!</h2>
 
-<div class="analogy-box">
-<h3>Your Agent Now Has Superpowers</h3>
-<p>Let's count what your agent can do now:</p>
+<p>Your agent now has:</p>
 <ul>
-<li><strong>Chat with you</strong> (thanks to Discord in Module 03)</li>
-<li><strong>Remember everything</strong> (GitHub in Module 04)</li>
-<li><strong>See and describe images</strong> (Module 05)</li>
-<li><strong>Schedule tasks</strong> (cron in Module 07)</li>
-<li><strong>Send and receive email</strong> (AgentMail — you just did this!)</li>
+<li><strong>Chat</strong> (Discord — Module 03)</li>
+<li><strong>Memory</strong> (GitHub — Module 04)</li>
+<li><strong>Vision</strong> (Images — Module 05)</li>
+<li><strong>Scheduling</strong> (Cron — Module 07)</li>
+<li><strong>Email</strong> (AgentMail — right now)</li>
 </ul>
-<p>That's not just a chatbot — that's a full digital assistant with memory, scheduling, and communication channels. It can save things, find things, remind you, email you, and chat with you.</p>
-<p><strong>And you built it in about an hour.</strong></p>
-</div>
-
-<p>Next up? Your agent can now handle email automations. Try something like: "When a message arrives with subject 'Invoice', save attachments to uploads/invoices/".</p>
+<p>A full digital assistant.</p>
 
 <div class="footer-nav">
-<a href="07-time-and-cron.html">← Module 07: Time & Cron</a>
-<a href="09-automations.html" class="next">Next: Module 09 →</a>
+<a href="07-time-and-cron.html">← Module 07</a>
 </div>
 
 </div>
