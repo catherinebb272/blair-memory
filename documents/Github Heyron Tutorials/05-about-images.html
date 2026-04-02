@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>05 — Audio-Visual | Heyron Quick Start</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'IBM Plex Mono', 'Courier New', monospace;
+background: #faf8f3;
+color: #2c241b;
+line-height: 1.7;
+font-size: 15px;
+}
+
+nav {
+background: #fff;
+border-bottom: 2px solid #d4c4a8;
+padding: 1rem;
+position: sticky;
+top: 0;
+z-index: 100;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 0.75rem;
+margin-right: 0.5rem;
+border: 1px solid transparent;
+transition: all 0.2s;
+font-size: 13px;
+}
+
+nav a:hover, nav a.active {
+border-color: #8b7355;
+background: #f5f0e8;
+}
+
+nav a.home { font-weight: 600; color: #2c241b; }
+
+.container {
+max-width: 680px;
+margin: 0 auto;
+padding: 3rem 2rem;
+}
+
+h1 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a1510;
+font-weight: 600;
+}
+
+h2 {
+font-size: 1.3rem;
+margin: 2rem 0 1rem 0;
+color: #2c241b;
+font-weight: 600;
+border-bottom: 1px solid #d4c4a8;
+padding-bottom: 0.5rem;
+}
+
+h3 {
+font-size: 1.1rem;
+margin: 1.5rem 0 0.75rem 0;
+color: #3d3126;
+font-weight: 600;
+}
+
+p { margin-bottom: 1.25rem; }
+
+ul, ol {
+margin-left: 1.5rem;
+margin-bottom: 1.25rem;
+}
+
+li { margin-bottom: 0.5rem; }
+
+.urgent-box {
+background: #2c241b;
+color: #faf8f3;
+padding: 1.5rem;
+margin: 0 0 2rem 0;
+text-align: center;
+}
+
+.urgent-box h1 {
+color: #faf8f3;
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+}
+
+.time-estimate {
+display: inline-block;
+background: #e94560;
+color: #fff;
+padding: 0.3rem 0.8rem;
+font-size: 0.85rem;
+margin-top: 0.5rem;
+}
+
+.reality-box {
+background: #fff;
+border: 2px solid #8b7355;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.reality-box h3 {
+color: #2c241b;
+margin-bottom: 1rem;
+}
+
+.can-box {
+background: #f0f7f0;
+border: 2px solid #4a7c59;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.can-box h3 {
+color: #4a7c59;
+margin-bottom: 1rem;
+}
+
+.cannot-box {
+background: #fff5f5;
+border: 2px solid #c44d4d;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.cannot-box h3 {
+color: #c44d4d;
+margin-bottom: 1rem;
+}
+
+.platform-card {
+background: #f5f0e8;
+border: 1px solid #d4c4a8;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.platform-card h4 {
+color: #2c241b;
+font-size: 1.1rem;
+margin-bottom: 0.75rem;
+border-bottom: 1px solid #d4c4a8;
+padding-bottom: 0.5rem;
+}
+
+.workflow-step {
+background: #fff;
+border: 1px solid #d4c4a8;
+padding: 1rem;
+margin: 0.75rem 0;
+border-left: 4px solid #8b7355;
+}
+
+.api-note {
+background: #fff3cd;
+border: 1px solid #e94560;
+padding: 1rem;
+margin: 1rem 0 1.5rem 0;
+}
+
+.api-note strong {
+color: #e94560;
+}
+
+.cost-box {
+background: #f5f0e8;
+padding: 1rem;
+margin: 1rem 0;
+}
+
+.cost-box h4 {
+margin-bottom: 0.5rem;
+color: #2c241b;
+}
+
+.footer-nav {
+margin-top: 3rem;
+padding-top: 2rem;
+border-top: 2px solid #d4c4a8;
+display: flex;
+justify-content: space-between;
+}
+
+.footer-nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #d4c4a8;
+}
+
+.footer-nav a:hover {
+background: #f5f0e8;
+border-color: #8b7355;
+}
+
+.footer-nav .next { font-weight: 600; }
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="home">Home</a>
+<a href="01-start-here.html">01</a>
+<a href="02-talk-to-agent.html">02</a>
+<a href="03-connect-discord.html">03</a>
+<a href="04-connect-github.html">04</a>
+<a href="05-about-images" class="active">05</a>
+<a href="06-memory-deep-dive.html">06</a>
+<a href="07-time-and-cron.html">07</a>
+<a href="08-agentmail-setup.html">08</a>
+</nav>
+
+<div class="container">
+
+<div class="urgent-box">
+<h1>Module 05 — Audio-Visual</h1>
+<span class="time-estimate">⏱️ 5 minutes</span>
+</div>
+
+<h2>The Reality Check</h2>
+
+<p>The big AI platforms promise everything in one place — images, video, audio, all inside the chat. Your Agent works differently. It is text-based at heart and <strong>orchestrates specialized tools</strong> instead of doing everything itself.</p>
+
+<div class="reality-box">
+<h3>🎬 The Orchestration Model</h3>
+
+<p><strong>Your Agent does NOT:</strong></p>
+<ul>
+<li>Generate images directly</li>
+<li>Edit photos or videos</li>
+<li>Create video content</li>
+<li>Watch YouTube links or analyze video natively</li>
+</ul>
+
+<p><strong>Your Agent DOES:</strong></p>
+<ul>
+<li>Connect to specialized platforms via API</li>
+<li>Analyze images you upload</li>
+<li>Write detailed prompts based on your project knowledge</li>
+<li>Direct the workflow — you approve, platforms execute</li>
+</ul>
+
+<p><strong>Why this matters:</strong> Your Agent knows your project's context, history, and goals. It crafts specific, informed prompts that generic AI cannot generate.</p>
+</div>
+
+<h2>Images: What Actually Works</h2>
+
+<div class="can-box">
+<h3>✅ Your Agent CAN Do This With Images</h3>
+
+<ul>
+<li><strong>Analyze content:</strong> "What's in this product photo?" → detailed description</li>
+<li><strong>Extract text (OCR):</strong> Pull text from screenshots, documents, signs</li>
+<li><strong>Answer questions:</strong> "Does this image contain a price tag?"</li>
+<li><strong>Retrieve from URLs:</strong> Scan images hosted online</li>
+<li><strong>Write prompts:</strong> Create detailed descriptions for external image generators</li>
+</ul>
+</div>
+
+<div class="cannot-box">
+<h3>❌ Your Agent CANNOT Do This</h3>
+
+<ul>
+<li>Create or modify images (no built-in DALL-E)</li>
+<li>Create or edit animations or video</li>
+</ul>
+</div>
+
+<div class="platform-card">
+<h4>Image Generation Platforms</h4>
+
+<p>Your Agent writes prompts; these platforms generate the visuals:</p>
+
+<ul>
+<li><strong>DALL-E 3</strong> (OpenAI) — Best for precise, literal interpretations</li>
+<li><strong>Midjourney</strong> — Best for artistic, stylized images</li>
+<li><strong>Leonardo</strong> — Good balance of control and artistry</li>
+</ul>
+
+<p><em>Cost note: These typically use a credits system per generation. Prices vary. Ask your agent to research options and talk you through setup</em></p>
+</div>
+
+<h2>Audio: Input, Output, and Production</h2>
+
+<p>Audio adds a powerful new layer to your agent. It can be used in two primary ways: real-time interaction (talking directly with your agent) and production output (creating polished audio for content like audiobooks, voiceovers, and training materials).</p>
+
+<div class="platform-card">
+<h4>Two Core Audio Use Cases</h4>
+
+<ul>
+<li><strong>Conversational Audio:</strong> Speak naturally with your agent using voice input and receive spoken responses. This creates a more intuitive, hands-free workflow.</li>
+<li><strong>Production Audio:</strong> Generate high-quality voice content for external use — including audiobooks, narration, marketing voiceovers, and social content.</li>
+</ul>
+</div>
+
+<div class="api-note">
+<strong>Voice Input (Speaking to Your Agent):</strong><br>
+The Nerve interface currently has a voice option for speaking to your agent.  WhatsApp currently provides the best experience for voice interaction. It supports native voice messages that are automatically transcribed into text for your agent.<br><br>
+For Discord, speech-to-text (microphone-to-text) support is in development. Until that is released, WhatsApp is the recommended option if you want to speak directly to your agent. ElevenLabs is not as good for this use.
+</div>
+
+<div class="platform-card">
+<h4>Audio Capabilities (via API Integrations) </h4>
+
+<ul>
+<li><strong>Text-to-Speech (TTS):</strong> Convert written content into natural-sounding voice output using a variety of voices and styles</li>
+<li><strong>Speech-to-Text (STT):</strong> Transcribe spoken audio into text for processing, automation, or storage</li>
+<li><strong>Voice Customization:</strong> Adjust tone, pacing, and style — or use cloned/custom voices depending on provider</li>
+<li><strong>Audio Generation:</strong> Some platforms also support music or background audio creation for richer content</li>
+</ul>
+
+<p>Multiple providers support these features (e.g., ElevenLabs, Play.ht, Murf, AWS Polly). Your agent can guide you through selecting and connecting the best option for your use case. We know the ElevenLabs integration with Heyron works.</p>
+
+<p><strong>Pricing:</strong> Most platforms offer free tiers for testing, with paid plans for higher volume or production use.</p>
+</div>
+
+<div class="api-note">
+<strong>Getting Started:</strong> Ask your agent something like: "Help me set up ElevenLabs" or "Connect a text-to-speech provider," and it will walk you through the process step-by-step.
+</div>
+
+<h2>Video: The Studio Workflow Option </h2>
+
+<p><strong>Your Agent cannot watch YouTube links</strong> or analyze video content natively. This is a common misconception. Video requires a different workflow. There are other outside apps for this.</p>
+
+<div class="platform-card">
+<h4>ElevenLabs Studio 3.0</h4>
+
+<p>For video creation and editing, ElevenLabs offers Studio 3.0 — an AI-powered video editor that integrates with their audio models.</p>
+
+<p><strong>What Studio 3.0 does:</strong></p>
+<ul>
+<li>Upload MP4/MOV files for AI enhancement</li>
+<li>Add AI voiceovers synchronized to video</li>
+<li>Generate captions,edit, collaborate and more</li>
+
+</ul>
+
+<p><strong>Plus:</strong> Access to video generation models (Veo, Sora, Kling) for creating footage from prompts. It does not generate video natively. </p>
+</div>
+
+<div class="workflow-step">
+<strong>Typical Video Workflow:</strong>
+<p style="margin-bottom: 0;">Your Agent writes script → ElevenLabs Studio generates voiceover + adds to timeline → You upload footage or generate video → Your Agent reviews and suggests edits → Platform renders final output</p>
+</div>
+
+<h2>The Cost Reality</h2>
+
+<div class="cost-box">
+<h4>What Sometimes Costs Money</h4>
+
+<ul>
+<li><strong>Image generators:</strong> Usually credits per generation (varies by platform, free generators exist, or are included in programs you already pay for, like Canva)</li>
+<li><strong>ElevenLabs:</strong> Free tier for testing; paid for scale (characters/month)</li>
+<li><strong>Video platforms:</strong> Generally most expensive — compute-intensive</li>
+</ul>
+
+<p><strong>Money-saving tip:</strong> Your Agent can optimize prompts to reduce waste. Better prompts = fewer attempts = lower cost. Ask: "Make this prompt more specific so we get it right the first time."</p>
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>Your Agent is the <strong>strategic partner</strong> who knows your project. External platforms are the <strong>production tools</strong> that execute. Your Agent bridges that gap — turning your goals into specific, actionable prompts.</p>
+
+<p><strong>Remember:</strong> Your Agent brings context and knowledge; specialized tools bring production capability. Together, they get you better results than either alone.</p>
+
+<div class="footer-nav">
+<a href="04-connect-github.html">Left Arrow Module 04</a>
+<a href="06-memory-deep-dive.html" class="next">Next: Module 06 Right Arrow</a>
+</div>
+
+</div>
+</body>
+</html>

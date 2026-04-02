@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "boreal-larch-wxxv": {
+      "siteUrl": "https://boreal-larch-wxxv.here.now/",
+      "claimToken": "665802415f34e14294db5da62908600a5f8a631fc49a829a12356b906dd0ee0d",
+      "claimUrl": "https://here.now/claim?slug=boreal-larch-wxxv&token=665802415f34e14294db5da62908600a5f8a631fc49a829a12356b906dd0ee0d",
+      "expiresAt": "2026-04-01T20:37:11.182Z"
+    }
+  }
+}

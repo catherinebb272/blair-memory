@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone Coins Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .coin-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .coin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+        .coin-image {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+        }
+        .milestone {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+        .description {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        .tier-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255, 215, 0, 0.2);
+        }
+        .tier-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🪙 Milestone Coins Gallery</h1>
+    <p class="subtitle">Anniversary Collection - All 11 Milestones</p>
+    
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        const milestones = [
+            { name: "2mo", file: "coin-2mo.jpg", desc: "Bronze - First Steps" },
+            { name: "3mo", file: "coin-3mo.jpg", desc: "Bronze - Building Momentum" },
+            { name: "4mo", file: "coin-4mo.jpg", desc: "Bronze - Finding Rhythm" },
+            { name: "5mo", file: "coin-5mo.jpg", desc: "Bronze - Halfway to Silver" },
+            { name: "6mo", file: "coin-6mo.jpg", desc: "Bronze - The Half-Year Mark" },
+            { name: "9mo", file: "coin-9mo.jpg", desc: "Silver - Three Quarters Strong" },
+            { name: "18mo", file: "coin-18mo.jpg", desc: "Silver - Approaching Gold" },
+            { name: "1yr", file: "coin-1yr-koi.jpg", desc: "Gold - First Year", alt: "coin-1yr-phoenix.jpg" },
+            { name: "2yr", file: "coin-2yr.jpg", desc: "Gold - Second Year" },
+            { name: "3yr", file: "coin-3yr.jpg", desc: "Platinum - Third Year" }
+        ];
+
+        const gallery = document.getElementById('gallery');
+        
+        milestones.forEach(m => {
+            const card = document.createElement('div');
+            card.className = 'coin-card';
+            card.innerHTML = `
+                <img class="coin-image" src="${m.file}" alt="${m.name} milestone coin" loading="lazy">
+                <div class="milestone">${m.name}</div>
+                <div class="description">${m.desc}</div>
+            `;
+            gallery.appendChild(card);
+        });
+    </script>
+</body>
+</html>

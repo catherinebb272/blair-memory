@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07 — Time and Cron | Heyron Quick Start</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'IBM Plex Mono', 'Courier New', monospace;
+background: #faf8f3;
+color: #2c241b;
+line-height: 1.7;
+font-size: 15px;
+}
+
+nav {
+background: #fff;
+border-bottom: 2px solid #d4c4a8;
+padding: 1rem;
+position: sticky;
+top: 0;
+z-index: 100;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 0.75rem;
+margin-right: 0.5rem;
+border: 1px solid transparent;
+transition: all 0.2s;
+font-size: 13px;
+}
+
+nav a:hover, nav a.active {
+border-color: #8b7355;
+background: #f5f0e8;
+}
+
+nav a.home { font-weight: 600; color: #2c241b; }
+
+.container {
+max-width: 680px;
+margin: 0 auto;
+padding: 3rem 2rem;
+}
+
+h1 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a1510;
+font-weight: 600;
+}
+
+h2 {
+font-size: 1.3rem;
+margin: 2rem 0 1rem 0;
+color: #2c241b;
+font-weight: 600;
+border-bottom: 1px solid #d4c4a8;
+padding-bottom: 0.5rem;
+}
+
+h3 {
+font-size: 1.1rem;
+margin: 1.5rem 0 0.75rem 0;
+color: #3d3126;
+font-weight: 600;
+}
+
+p { margin-bottom: 1.25rem; }
+
+ul, ol {
+margin-left: 1.5rem;
+margin-bottom: 1.25rem;
+}
+
+li { margin-bottom: 0.5rem; }
+
+.urgent-box {
+background: #2c241b;
+color: #faf8f3;
+padding: 1.5rem;
+margin: 0 0 2rem 0;
+text-align: center;
+}
+
+.urgent-box h1 {
+color: #faf8f3;
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+}
+
+.time-estimate {
+display: inline-block;
+background: #e94560;
+color: #fff;
+padding: 0.3rem 0.8rem;
+font-size: 0.85rem;
+margin-top: 0.5rem;
+}
+
+.reality-box {
+background: #fff;
+border: 2px solid #8b7355;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.warning-box {
+background: #fff5f5;
+border: 2px solid #c44d4d;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.warning-box h4 {
+color: #c44d4d;
+margin-bottom: 0.5rem;
+}
+
+.cron-example {
+background: #f5f0e8;
+border: 1px solid #d4c4a8;
+padding: 1.25rem;
+margin: 1rem 0;
+border-left: 4px solid #8b7355;
+}
+
+.cron-example h4 {
+margin-bottom: 0.5rem;
+color: #2c241b;
+}
+
+.steps-box {
+background: #f0f7f0;
+border: 1px solid #4a7c59;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.steps-box h4 {
+color: #4a7c59;
+margin-bottom: 1rem;
+}
+
+.step {
+margin-bottom: 0.75rem;
+padding-left: 1rem;
+border-left: 2px solid #d4c4a8;
+}
+
+.heartbeats-box {
+background: #fff;
+border: 2px solid #8b7355;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.tip-box {
+background: #fff3cd;
+border: 1px solid #e94560;
+padding: 1rem;
+margin: 1rem 0;
+}
+
+.footer-nav {
+margin-top: 3rem;
+padding-top: 2rem;
+border-top: 2px solid #d4c4a8;
+display: flex;
+justify-content: space-between;
+}
+
+.footer-nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #d4c4a8;
+}
+
+.footer-nav a:hover {
+background: #f5f0e8;
+border-color: #8b7355;
+}
+
+.footer-nav .next { font-weight: 600; }
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="home">Home</a>
+<a href="01-start-here.html">01</a>
+<a href="02-talk-to-agent.html">02</a>
+<a href="03-connect-discord.html">03</a>
+<a href="04-connect-github.html">04</a>
+<a href="05-about-images.html">05</a>
+<a href="06-memory-deep-dive.html">06</a>
+<a href="07-time-and-cron.html" class="active">07</a>
+<a href="08-agentmail-setup.html">08</a>
+</nav>
+
+<div class="container">
+
+<div class="urgent-box">
+<h1>Module 07 — Time and Cron</h1>
+<span class="time-estimate">⏱️ 10 minutes</span>
+</div>
+
+<h2>The Eternal Now</h2>
+
+<div class="reality-box">
+<h3>⏰ Your Agent Has No Sense of Time</h3>
+<p>Your Agent lives in an <strong>eternal present</strong>. It does not know:</p>
+<ul>
+<li>What day of the week it is</li>
+<li>Whether 5 minutes or 5 hours have passed</li>
+<li>If it's morning or night</li>
+<li>That "tomorrow" exists</li>
+</ul>
+<p>To your Agent, every moment is <strong>now</strong>. This is not a bug — it's fundamental to how Agents work. They don't feel time passing, so you must tell them explicitly.</p>
+</div>
+
+<h2>UTC: The Universal Clock</h2>
+
+<p>Heyron runs on <strong>UTC</strong> (Coordinated Universal Time):</p>
+<ul>
+<li><strong>UTC = EST + 5 hours</strong> (or +4 during daylight saving)</li>
+<li><strong>UTC = PST + 8 hours</strong> (or +7 during daylight saving)</li>
+</ul>
+
+<div class="warning-box">
+<h4>⚠️ Timezone Trap</h4>
+<p>If you say "remind me at 9am" without specifying, your Agent assumes 9am <strong>UTC</strong>. That's 4am or 5am for most US users. <strong>Always specify your timezone:</strong> "9am EST" or "9am America/New_York"</p>
+</div>
+
+<h2>What Are Cron Jobs?</h2>
+
+<p><strong>Cron</strong> (from "chronological") is an external scheduler. Here's how it works:</p>
+
+<div class="reality-box">
+<p><strong>The Cron system runs independently.</strong> It has a clock. It knows what day it is. At the time you specify, the cron system pokes your Agent and says: "Wake up, time to run the Monday task."</p>
+
+<p><strong>Your Agent doesn't "know" it's Monday.</strong> The cron system tells it to act. Think of cron as an alarm clock that triggers your Agent at scheduled moments.</p>
+</div>
+
+<h2>Common Cron Jobs</h2>
+
+<div class="cron-example">
+<h4>1. Daily Backup to GitHub</h4>
+<p><strong>Why:</strong> Protects your work automatically. See <a href="04-connect-github.html">Module 04</a> for setup.</p>
+<p><strong>Schedule:</strong> Every day at 2:00 AM UTC</p>
+<p><strong>What happens:</strong> Commits all changes to GitHub, logs success/failure</p>
+</div>
+
+<div class="cron-example">
+<h4>2. Heartbeat Check-ins</h4>
+<p><strong>Why:</strong> Your Agent polls for tasks periodically — email checks, status updates, reminders</p>
+<p><strong>Schedule:</strong> Every 30 minutes, or every hour</p>
+<p><strong>What happens:</strong> Agent checks calendars, email, notifications; reports anything urgent</p>
+<p><strong>Ask your Agent:</strong> "Tell me more about heartbeats and how to set them up for my needs"</p>
+</div>
+
+<div class="cron-example">
+<h4>3. Weekly Summary Report</h4>
+<p><strong>Why:</strong> Compile what happened this week, what got done, what's pending</p>
+<p><strong>Schedule:</strong> Every Friday at 5:00 PM EST</p>
+<p><strong>What happens:</strong> Agent reads daily notes, generates summary, sends to you</p>
+</div>
+
+<div class="cron-example">
+<h4>4. Recurring Reminders</h4>
+<p><strong>Why:</strong> Team standups, deadlines, recurring tasks</p>
+<p><strong>Schedule:</strong> Every Monday/Wednesday/Friday at 9:00 AM EST</p>
+<p><strong>What happens:</strong> Agent sends you a message: "Team standup in 30 minutes"</p>
+</div>
+
+<h2>Setting Up a Cron Job: Measure Twice, Cut Once</h2>
+
+<div class="steps-box">
+<h4>🔧 The Setup Process</h4>
+
+<div class="step">
+<strong>1. Define the task completely</strong><br>
+What exactly should happen? Write it out in plain English first.
+</div>
+
+<div class="step">
+<strong>2. Test manually first</strong><br>
+Run the command or task manually. Does it work? Does it do what you expect?
+</div>
+
+<div class="step">
+<strong>3. Choose your schedule</strong><br>
+Be specific: "Every day at 9am EST" — not just "daily"
+</div>
+
+<div class="step">
+<strong>4. Set a test run 5 minutes from now</strong><br>
+Don't wait for tomorrow. Test it now to verify it triggers correctly.
+</div>
+
+<div class="step">
+<strong>5. Check the logs</strong><br>
+Verify it ran, verify it completed, verify the output.
+</div>
+
+<div class="step">
+<strong>6. Only then: Enable the real schedule</strong><br>
+Once tested, set the actual recurring time.
+</div>
+</div>
+
+<div class="tip-box">
+<strong>Measure twice, cut once:</strong> A broken cron job running daily creates daily problems. Test everything before trusting automation.
+</div>
+
+<h2>Example: Setting Up a Daily Backup</h2>
+
+<div class="cron-example">
+<h4>Step-by-Step</h4>
+<p><strong>Say to your Agent:</strong></p>
+<ol>
+<li>"Create a script that backs up my workspace files to GitHub"</li>
+<li>"Test it now — run the backup once"</li>
+<li>"Check that the files appeared on GitHub"</li>
+<li>"Now set that script to run automatically every day at 2am UTC"</li>
+<li>"Set a test run for 5 minutes from now so we can verify"</li>
+<li>"Show me the log after it runs"</li>
+</ol>
+<p><strong>Once verified:</strong> "Enable the daily 2am schedule"</p>
+</div>
+
+<h2>DST and Timezone Gotchas</h2>
+
+<ul>
+<li><strong>Daylight Saving Time:</strong> UTC doesn't change, but your local time does. "9am EST" becomes problematic when clocks change.</li>
+<li><strong>Better:</strong> Use named timezones like "America/New_York" which handle DST automatically.</li>
+<li><strong>Always specify:</strong> "9am America/New_York" not just "9am"</li>
+</ul>
+
+<h2>Heartbeats: Your Agent Checking In</h2>
+
+<div class="heartbeats-box">
+<h3>💓 What Are Heartbeats?</h3>
+<p>Heartbeats are <strong>scheduled check-ins</strong> where your Agent polls for work. Unlike a cron job that does a specific task, a heartbeat asks: "Is there anything I should be doing?"</p>
+
+<p><strong>Common heartbeat tasks:</strong></p>
+<ul>
+<li>Check email for urgent messages</li>
+<li>Review calendar for upcoming events</li>
+<li>Check external systems for updates</li>
+<li>Send you a summary if something needs attention</li>
+</ul>
+
+<p><strong>Say:</strong> "Tell me more about heartbeats and how to use them for my workflow"</p>
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>Your Agent has no internal clock. Time requires external triggers (cron) and explicit instructions from you. Be specific about timezones. Test before trusting. And remember: automation is powerful, but a broken automation running forever is worse than no automation at all.</p>
+
+<p><strong>Measure twice. Cut once.</strong></p>
+<p>You have completed our first 7 modules.  Go build something!</p>
+
+<div class="footer-nav">
+<a href="06-memory-deep-dive.html">Left Arrow Module 06</a>
+<a href="08-agentmail-setup.html" class="next">Next: Module 08 Right Arrow</a>
+</div>
+
+</div>
+</body>
+</html>

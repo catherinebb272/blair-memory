@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC Neighborhoods Ranker</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: #f8f9fa; 
+            padding: 15px;
+            line-height: 1.5;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: #2c5282; font-size: 24px; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+        .subtitle { color: #666; font-size: 14px; margin-bottom: 15px; }
+        
+        .controls { 
+            background: white; padding: 15px; border-radius: 12px; margin-bottom: 15px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .filter-group { margin-bottom: 12px; }
+        .filter-group label { 
+            display: block; font-weight: 600; margin-bottom: 6px; color: #444;
+            font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .filter-group select, .search-box {
+            width: 100%; padding: 10px 12px; border: 1px solid #e2e8f0;
+            border-radius: 8px; font-size: 15px; background: #f8f9fa;
+        }
+        .search-box { margin-bottom: 12px; }
+        
+        .weight-sliders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .slider-group { display: flex; flex-direction: column; }
+        .slider-group label { font-size: 12px; color: #666; margin-bottom: 4px; font-weight: 500; text-transform: none; }
+        .slider-group input[type="range"] { 
+            width: 100%; height: 6px; border-radius: 3px; background: #e2e8f0;
+            outline: none; -webkit-appearance: none;
+        }
+        .slider-group input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; width: 18px; height: 18px;
+            border-radius: 50%; background: #2c5282; cursor: pointer;
+        }
+        .slider-value { font-weight: 700; color: #2c5282; font-size: 14px; }
+        
+        .tag-filters { 
+            display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+            max-height: 120px; overflow-y: auto;
+        }
+        .tag-btn { 
+            padding: 6px 10px; border: 1px solid #e2e8f0; background: white;
+            border-radius: 16px; cursor: pointer; font-size: 12px; color: #555;
+            transition: all 0.2s; white-space: nowrap;
+        }
+        .tag-btn:hover { background: #f0f4f8; }
+        .tag-btn.active { background: #2c5282; color: white; border-color: #2c5282; }
+        
+        .results { display: grid; gap: 12px; }
+        
+        .neighborhood { 
+            background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden; transition: transform 0.2s;
+        }
+        .neighborhood:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        
+        .neighborhood-header {
+            display: grid; grid-template-columns: 50px 70px 1fr auto;
+            gap: 12px; padding: 15px; align-items: center;
+        }
+        .rank { font-size: 28px; font-weight: 800; color: #2c5282; text-align: center; }
+        
+        .neighborhood-image {
+            width: 70px; height: 55px; border-radius: 8px; object-fit: cover;
+            cursor: pointer; transition: transform 0.2s;
+        }
+        .neighborhood-image:hover { transform: scale(1.05); }
+        
+        .info { min-width: 0; }
+        .info h3 { color: #1a202c; font-size: 17px; margin-bottom: 2px; }
+        .info .metro { color: #718096; font-size: 13px; margin-bottom: 6px; }
+        
+        .score-section { text-align: right; min-width: 70px; }
+        .score { font-size: 32px; font-weight: 800; color: #2c5282; line-height: 1; }
+        .score-label { font-size: 10px; color: #718096; text-transform: uppercase; }
+        
+        .neighborhood-body { padding: 0 15px 15px; display: none; }
+        .neighborhood.expanded .neighborhood-body { display: block; }
+        
+        .neighborhood-preview { padding: 0 15px 15px; color: #4a5568; font-size: 14px; cursor: pointer; }
+        .neighborhood.expanded .neighborhood-preview { display: none; }
+        
+        .tags-row { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
+        .tag { background: #edf2f7; padding: 3px 8px; border-radius: 12px; font-size: 11px; color: #4a5568; }
+        
+        .cc-info { background: #f7fafc; border-radius: 8px; padding: 12px; margin-top: 10px; }
+        .cc-info .cc-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+        .cc-info .cc-name { font-weight: 700; color: #2c5282; font-size: 14px; }
+        .cc-info .waitlist-badge { font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 600; }
+        .cc-info .waitlist-yes { background: #fed7d7; color: #c53030; }
+        .cc-info .waitlist-no { background: #c6f6d5; color: #276749; }
+        .cc-info .waitlist-unknown { background: #e2e8f0; color: #4a5568; }
+        .cc-info .cc-notes { font-size: 13px; color: #718096; line-height: 1.5; margin-top: 4px; }
+        
+        .details-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+            margin-top: 12px; padding-top: 12px; border-top: 1px solid #e2e8f0;
+        }
+        .detail-item { font-size: 13px; }
+        .detail-item .label { color: #718096; font-size: 11px; text-transform: uppercase; }
+        .detail-item .value { color: #2d3748; font-weight: 600; }
+        
+        .expand-hint { text-align: center; color: #2c5282; font-size: 12px; padding: 8px; cursor: pointer; border-top: 1px solid #f0f0f0; }
+        .neighborhood.expanded .expand-hint { display: none; }
+        
+        .image-modal {
+            display: none; position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.9);
+            z-index: 1000; justify-content: center; align-items: center; padding: 20px;
+        }
+        .image-modal.active { display: flex; }
+        .image-modal img { max-width: 90%; max-height: 80vh; border-radius: 8px; object-fit: contain; }
+        .image-modal .close-btn {
+            position: absolute; top: 20px; right: 20px; color: white; font-size: 32px;
+            cursor: pointer; width: 40px; height: 40px; display: flex;
+            align-items: center; justify-content: center;
+            background: rgba(0,0,0,0.5); border-radius: 50%;
+        }
+        
+        @media (max-width: 600px) {
+            .weight-sliders { grid-template-columns: 1fr; }
+            .neighborhood-header { grid-template-columns: 35px 55px 1fr auto; gap: 8px; padding: 12px; }
+            .rank { font-size: 20px; }
+            .neighborhood-image { width: 55px; height: 45px; }
+            .info h3 { font-size: 15px; }
+            .score { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏘️ NC Neighborhoods Ranker</h1>
+        <p class="subtitle">Compare Raleigh-Durham, Charlotte & Chapel Hill neighborhoods</p>
+        
+        <div class="controls">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search neighborhoods, tags, or features...">
+            
+            <div class="filter-group">
+                <label>Metro Area</label>
+                <select id="metroFilter">
+                    <option value="all">All Areas</option>
+                    <option value="Raleigh">Raleigh-Durham</option>
+                    <option value="Charlotte">Charlotte</option>
+                    <option value="Chapel Hill">Chapel Hill</option>
+                    <option value="Durham">Durham</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Filter by Tags</label>
+                <div class="tag-filters" id="tagFilters"></div>
+            </div>
+            
+            <div class="filter-group">
+                <label>Your Priorities</label>
+                <div class="weight-sliders">
+                    <div class="slider-group">
+                        <label>💰 Affordability <span class="slider-value" id="priceWeightVal">30%</span></label>
+                        <input type="range" id="priceWeight" min="0" max="100" value="30">
+                    </div>
+                    <div class="slider-group">
+                        <label>⛳ Golf Access <span class="slider-value" id="golfWeightVal">40%</span></label>
+                        <input type="range" id="golfWeight" min="0" max="100" value="40">
+                    </div>
+                    <div class="slider-group">
+                        <label>🔇 Quiet Residential <span class="slider-value" id="quietWeightVal">30%</span></label>
+                        <input type="range" id="quietWeight" min="0" max="100" value="30">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="results" id="results"></div>
+    </div>
+    
+    <div class="image-modal" id="imageModal">
+        <div class="close-btn" onclick="closeModal()">&times;</div>
+        <img id="modalImage" src="" alt="Neighborhood view">
+    </div>
+
+    <script>
+        // Embedded neighborhood data from CSV
+        const neighborhoods = [
+            {
+                name: "Croasdaile", metro: "Durham", price: 990000, priceDisplay: "$990K",
+                tags: ["college-town","gritty-quirky","outer-suburb","golf-community","established-trees","large-lots","lake-river-access","medical-accessible","nature-preserve","custom-homes"],
+                cc: "Croasdaile Country Club", waitlist: false, waitlistStatus: "no-waitlist",
+                ccNotes: "Well-maintained, relaxed and neighborhood-oriented. Good practice facilities, full amenities including pickleball.",
+                medical: "Duke Health", areaParks: "Eno River State Park",
+                description: "Quiet, established community in NW Durham with spacious homes on wooded lots. Classic golf-community feel with mature landscaping and winding streets. Peaceful setting near Duke University.",
+                notes: "Colonial, Georgian and ranch houses on big lots. Just north of I-85.", image: "Croasdaile.jpg"
+            },
+            {
+                name: "Piper Glen", metro: "Charlotte", price: 965000, priceDisplay: "$965K",
+                tags: ["polished-suburban","golf-community","medical-accessible","traffic-moderate","trail-system","established-trees","mid-range","premium","outer-suburb"],
+                cc: "Piper Glen TPC (Invited)", waitlist: false, waitlistStatus: "no-waitlist",
+                ccNotes: "Pretty course. Invited Club, no big waitlist.",
+                medical: "Atrium", areaParks: "4 mile Greenway",
+                description: "Polished 1990s master-planned golf community with large homes, mature landscaping, and country-club amenities. Classic South Charlotte suburban lifestyle near Southpark shopping.",
+                notes: "Hilly, tree-filled area. Estates, townhomes, and smaller homes near the Interstate.", image: "Piper Glen.jpg"
+            },
+            {
+                name: "Downtown Cary", metro: "Raleigh", price: 1250000, priceDisplay: "$1.25M",
+                tags: ["walkable","inner-suburb","mixed-age","traffic-moderate","developed-park","established-trees","gritty-quirky","transitional"],
+                cc: "Prestonwood CC, Brier Creek", waitlist: true, waitlistStatus: "waitlist-yes",
+                ccNotes: "Prestonwood has multi-year wait. 20 min to Brier Creek.",
+                medical: "WakeMed", areaParks: "Cary City Park",
+                description: "Vital urban style in a Raleigh suburb. Fancy city park surrounded by townhomes and mixed development. Walkable with vibrant town center.",
+                notes: "$700K teardowns, $1M townhomes, $1.5M houses. Rapidly developing.", image: "Downtown Cary.jpg"
+            },
+            {
+                name: "MacGregor Downs", metro: "Raleigh", price: 1500000, priceDisplay: "$1.5M",
+                tags: ["polished-suburban","golf-community","traffic-moderate","established-trees","premium","custom-homes","medical-hub","nature-preserve","lake-river-access","large-lots","quiet-residential","inner-suburb"],
+                cc: "MacGregor Downs", waitlist: true, waitlistStatus: "waitlist-yes",
+                ccNotes: "Long waitlist confirmed. Lovely course. Limited options in the area.",
+                medical: "WakeMed", areaParks: "Cary City Park, Hemlock Bluff",
+                description: "Classic upscale golf-course community with mature trees, lakeside views, and elegant homes. Country-club social life near Waverly Place shopping.",
+                notes: "Very fancy, constant teardowns. Mix of mid-century to French chateau. Lake only for country club members.", image: "MacGregor Downs.png"
+            },
+            {
+                name: "Ballantyne", metro: "Charlotte", price: 700000, priceDisplay: "$700K",
+                tags: ["polished-suburban","outer-suburb","traffic-moderate","golf-community","medical-accessible","premium","developed-parks","cookie-cutter"],
+                cc: "Ballantyne, Piper Glen, Firethorn", waitlist: null, waitlistStatus: "waitlist-unknown",
+                ccNotes: "Piper Glen and Firethorn are Invited clubs without waitlists. Ballantyne has long wait.",
+                medical: "Atrium", areaParks: "Ballantyne Bowl, neighborhood parks",
+                description: "Affluent master-planned community on historic Ballantyne Ranch. Upscale homes, business center, manicured landscapes. Self-contained suburban experience.",
+                notes: "Feels like Plano. Big suburban mixed-use Ballantyne Bowl.", image: "Ballantyne.jpg"
+            },
+            {
+                name: "Meadowmont", metro: "Chapel Hill", price: 1200000, priceDisplay: "$1.2M",
+                tags: ["polished-suburban","established-trees","quaint-downtown","premium","college-town","medical-hub","inner-suburb","nature-preserve","trail-system"],
+                cc: "Chapel Hill Country Club", waitlist: true, waitlistStatus: "waitlist-yes",
+                ccNotes: "Several years wait.",
+                medical: "UNC Health", areaParks: "Carolina Forest, local ponds & trails",
+                description: "Upscale college town with UNC campus energy. Established 2000s hilly neighborhood with mature trees and vibrant intellectual community.",
+                notes: "Chapel Hill blends academic prestige and Southern charm. Youthful atmosphere with historic character.", image: "Meadowmont.png"
+            },
+            {
+                name: "Plaza Midwood", metro: "Charlotte", price: 800000, priceDisplay: "$800K",
+                tags: ["urban-core","mixed-age","medical-hub","traffic-heavy","established-trees","premium","compact-lots"],
+                cc: "Charlotte Country Club", waitlist: true, waitlistStatus: "waitlist-yes",
+                ccNotes: "Long wait, sky-high dues like DCC.",
+                medical: "Novant", areaParks: "Midwood, Veterans",
+                description: "Walkable urban neighborhood near downtown with shops and restaurants. Historic and new infill homes in vibrant, engaged community.",
+                notes: "Narrow streets, urban traffic and noise. Social district with active community.", image: "Plaza Midwood.jpg"
+            },
+            {
+                name: "Matthews", metro: "Charlotte", price: 600000, priceDisplay: "$600K",
+                tags: ["outer-suburb","traffic-moderate","mid-range","mixed-age","quaint-downtown","established-trees","trail-system","quiet-residential"],
+                cc: "Cedarwood CC, Providence CC", waitlist: true, waitlistStatus: "waitlist-yes",
+                ccNotes: "3+ year waitlist at both. $40K initiation.",
+                medical: "Novant", areaParks: "Beatty Park, 4 mile Greenway",
+                description: "Charming suburban town southeast of Charlotte that has preserved its small-town soul while growing into a desirable residential community.",
+                notes: "Downtown offers locally-owned shops, diverse restaurants, and the Farmers Market.", image: "Matthews.jpg"
+            },
+            {
+                name: "Lochmere", metro: "Raleigh", price: 810000, priceDisplay: "$810K",
+                tags: ["polished-suburban","traffic-moderate","quiet-residential","inner-suburb","mid-range","premium","lake-river-access","medical-hub","custom-homes","established-trees","golf-nearby","nature-preserve"],
+                cc: "MacGregor Downs", waitlist: true, waitlistStatus: "waitlist-yes",
+                ccNotes: "Next closest country club is Prestonwood. MacGregor Downs has a long waitlist.",
+                medical: "WakeMed", areaParks: "Lochmere Community Park, Hemlock Bluff",
+                description: "Well-established planned community in SW Cary with mature trees, lakes, and extensive walking trails. Quieter, more traditional suburban feel.",
+                notes: "Variety of subdivisions and prices. Former country club provides tennis courts & swimming. Golf course is semi-private.", image: "Lochmere.jpg"
+            },
+            {
+                name: "Providence Plantation", metro: "Charlotte", price: 890000, priceDisplay: "$890K",
+                tags: ["trail-system","medical-accessible","traffic-moderate","quiet-residential","inner-suburb","established-trees","mid-range","premium","custom-homes"],
+                cc: "Providence CC, Raintree CC, Ballantyne", waitlist: true, waitlistStatus: "waitlist-yes",
+                ccNotes: "Providence & Ballantyne have waits. Raintree may not. $10-15K initiation.",
+                medical: "Novant", areaParks: "neighborhood parks",
+                description: "Older area of S Charlotte with plentiful trees and winding roads. Mid-century and later homes near shopping at Arboretum.",
+                notes: "Near Raintree & Providence Park neighborhoods. Community pool or park. 15 min to Southpark.", image: "Providence Plantation.png"
+            },
+            {
+                name: "Hope Valley", metro: "Durham", price: 480000, priceDisplay: "$480K",
+                tags: ["mixed-age","medical-hub","college-town","inner-suburb","gritty-quirky","mid-range","premium"],
+                cc: "Hope Valley Country Club", waitlist: true, waitlistStatus: "waitlist-yes",
+                ccNotes: "Haven't confirmed HV waitlist. Popular, established course. Croasdaile is 20 min away.",
+                medical: "Duke Health", areaParks: "Southern Boundaries Park",
+                description: "Historic, tree-covered country-club neighborhood started in the 1920s. Classic architecture, winding streets, and long-established homes create one of Durham's most traditional settings.",
+                notes: "Gentrifying area, slope changes, mostly built in the 60s. Parks within 5-10 min drive.", image: "Hope Valley.jpg"
+            },
+            {
+                name: "Duke Forest", metro: "Durham", price: 800000, priceDisplay: "$800K",
+                tags: ["mixed-age","college-town","inner-suburb","traffic-light","established-trees","quirky-gritty","quiet-residential","medical-hub","nature-preserve","custom-homes"],
+                cc: "Hope Valley, Croasdaile or Treyburn", waitlist: false, waitlistStatus: "no-waitlist",
+                ccNotes: "No course in the neighborhood. Would have to drive to nearby course.",
+                medical: "Duke Health", areaParks: "Duke Forest",
+                description: "Serene, quiet tree-lined neighborhood blending upscale suburban living with immediate access to hiking, trails, and natural beauty of Duke Forest. Larger lots with mid-century vibe.",
+                notes: "Older, architect-driven, funky neighborhood with rolling hills and lots of trees, south of Duke campus.", image: "DukeForest.png"
+            },
+            {
+                name: "Brier Creek", metro: "Raleigh", price: 900000, priceDisplay: "$900K",
+                tags: ["polished-suburban","traffic-moderate","golf-community","mid-range","premium","outer-suburb","nature-preserve"],
+                cc: "Brier Creek Country Club", waitlist: false, waitlistStatus: "no-waitlist",
+                ccNotes: "No apparent waitlist, $10-15K initiation, under $1K dues, cart fee extra. Trying hard, chef is local.",
+                medical: "UNC Health", areaParks: "Umstead State Park",
+                description: "Modern master-planned community in suburban NW Raleigh. Located between Raleigh and Durham near RTP and RDU. Popular with commuting professionals.",
+                notes: "Toll Brothers community built in early 2000s. Very suburban but pleasant. 10 min from State Park.", image: "Brier Creek.jpg"
+            }
+        ];
+
+        let activeTags = new Set();
+        
+        function initTags() {
+            const allTags = [...new Set(neighborhoods.flatMap(n => n.tags))].sort();
+            const container = document.getElementById('tagFilters');
+            allTags.forEach(tag => {
+                const btn = document.createElement('button');
+                btn.className = 'tag-btn';
+                btn.textContent = tag.replace(/-/g, ' ');
+                btn.onclick = () => toggleTag(tag, btn);
+                container.appendChild(btn);
+            });
+        }
+        
+        function toggleTag(tag, btn) {
+            if (activeTags.has(tag)) {
+                activeTags.delete(tag);
+                btn.classList.remove('active');
+            } else {
+                activeTags.add(tag);
+                btn.classList.add('active');
+            }
+            render();
+        }
+        
+        function getWeights() {
+            return {
+                price: parseInt(document.getElementById('priceWeight').value),
+                golf: parseInt(document.getElementById('golfWeight').value),
+                quiet: parseInt(document.getElementById('quietWeight').value)
+            };
+        }
+        
+        function calculateScore(n, weights) {
+            let score = 0;
+            const maxPrice = 1600000;
+            
+            const priceScore = (1 - n.price / maxPrice) * weights.price;
+            
+            let golfScore = 0;
+            if (n.cc) {
+                golfScore = 50;
+                if (n.waitlist === false) golfScore += 50;
+            }
+            golfScore = golfScore * weights.golf / 100;
+            
+            const quietScore = (n.tags.includes('quiet-residential') ? 100 : 0) * weights.quiet / 100;
+            
+            return Math.round(priceScore + golfScore + quietScore);
+        }
+        
+        function getImagePath(filename) {
+            return encodeURIComponent(filename);
+        }
+        
+        function openModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').classList.add('active');
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('active');
+        }
+        
+        function toggleExpand(el) {
+            el.closest('.neighborhood').classList.toggle('expanded');
+        }
+        
+        function render() {
+            const metro = document.getElementById('metroFilter').value;
+            const search = document.getElementById('searchBox').value.toLowerCase();
+            const weights = getWeights();
+            
+            let filtered = neighborhoods.filter(n => {
+                if (metro !== 'all' && n.metro !== metro) return false;
+                if (activeTags.size > 0 && !n.tags.some(t => activeTags.has(t))) return false;
+                if (search) {
+                    const searchText = (n.name + ' ' + n.description + ' ' + n.tags.join(' ') + ' ' + n.cc + ' ' + n.notes).toLowerCase();
+                    if (!searchText.includes(search)) return false;
+                }
+                return true;
+            });
+            
+            filtered = filtered.map(n => ({...n, score: calculateScore(n, weights)}));
+            filtered.sort((a, b) => b.score - a.score);
+            
+            const container = document.getElementById('results');
+            if (filtered.length === 0) {
+                container.innerHTML = '<div style="text-align:center;padding:40px;color:#666;">No neighborhoods match your filters.</div>';
+                return;
+            }
+            
+            container.innerHTML = filtered.map((n, i) => `
+                <div class="neighborhood" onclick="toggleExpand(this)">
+                    <div class="neighborhood-header">
+                        <div class="rank">#${i + 1}</div>
+                        <img class="neighborhood-image" 
+                             src="${getImagePath(n.image)}" 
+                             alt="${n.name}" 
+                             onclick="event.stopPropagation();openModal('${getImagePath(n.image)}')"
+                             onerror="this.style.display='none'">
+                        <div class="info">
+                            <h3>${n.name}</h3>
+                            <div class="metro">${n.metro} • ${n.priceDisplay}</div>
+                            <div class="tags-row">
+                                ${n.tags.map(t => `<span class="tag">${t.replace(/-/g, ' ')}</span>`).join('')}
+                            </div>
+                        </div>
+                        <div class="score-section">
+                            <div class="score">${n.score}</div>
+                            <div class="score-label">match</div>
+                        </div>
+                    </div>
+                    <div class="neighborhood-preview">${n.description.substring(0, 100)}... <strong style="color:#2c5282;">Tap to expand</strong></div>
+                    <div class="neighborhood-body">
+                        <div class="tags-row" style="margin-bottom:12px;">
+                            <strong style="font-size:11px;color:#718096;text-transform:uppercase;width:100%;margin-bottom:4px;">Tags:</strong>
+                            ${n.tags.map(t => `<span class="tag">${t.replace(/-/g, ' ')}</span>`).join('')}
+                        </div>
+                        <div class="description">${n.description}</div>
+                        ${n.cc ? `
+                            <div class="cc-info">
+                                <div class="cc-header">
+                                    <span class="cc-name">⛳ ${n.cc}</span>
+                                    <span class="waitlist-badge ${n.waitlistStatus}">
+                                        ${n.waitlist === false ? '✅ No waitlist' : n.waitlist === true ? '⚠️ Waitlist' : '❓ Check waitlist'}
+                                    </span>
+                                </div>
+                                ${n.ccNotes ? `<div class="cc-notes">${n.ccNotes}</div>` : ''}
+                            </div>
+                        ` : ''}
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <div class="label">Medical</div>
+                                <div class="value">${n.medical}</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Parks</div>
+                                <div class="value">${n.areaParks}</div>
+                            </div>
+                        </div>
+                        ${n.notes ? `<div style="margin-top:10px;font-size:13px;color:#718096;font-style:italic;">Notes: ${n.notes}</div>` : ''}
+                    </div>
+                    <div class="expand-hint">👆 Tap to expand</div>
+                </div>
+            `).join('');
+        }
+        
+        document.getElementById('metroFilter').onchange = render;
+        document.getElementById('searchBox').oninput = render;
+        
+        ['priceWeight', 'golfWeight', 'quietWeight'].forEach(id => {
+            const slider = document.getElementById(id);
+            const display = document.getElementById(id.replace('Weight', 'WeightVal'));
+            slider.oninput = () => {
+                display.textContent = slider.value + '%';
+                render();
+            };
+        });
+        
+        document.getElementById('imageModal').onclick = function(e) {
+            if (e.target === this) closeModal();
+        };
+        
+        initTags();
+        render();
+    </script>
+</body>
+</html>

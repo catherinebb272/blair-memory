@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>04 — Connect GitHub | Heyron Quick Start</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'IBM Plex Mono', 'Courier New', monospace;
+background: #faf8f3;
+color: #2c241b;
+line-height: 1.7;
+font-size: 15px;
+}
+
+nav {
+background: #fff;
+border-bottom: 2px solid #d4c4a8;
+padding: 1rem;
+position: sticky;
+top: 0;
+z-index: 100;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 0.75rem;
+margin-right: 0.5rem;
+border: 1px solid transparent;
+transition: all 0.2s;
+font-size: 13px;
+}
+
+nav a:hover, nav a.active {
+border-color: #8b7355;
+background: #f5f0e8;
+}
+
+nav a.home { font-weight: 600; color: #2c241b; }
+
+.container {
+max-width: 680px;
+margin: 0 auto;
+padding: 3rem 2rem;
+}
+
+h1 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a1510;
+font-weight: 600;
+}
+
+h2 {
+font-size: 1.3rem;
+margin: 2rem 0 1rem 0;
+color: #2c241b;
+font-weight: 600;
+border-bottom: 1px solid #d4c4a8;
+padding-bottom: 0.5rem;
+}
+
+h3 {
+font-size: 1.1rem;
+margin: 1.5rem 0 0.75rem 0;
+color: #3d3126;
+font-weight: 600;
+}
+
+p { margin-bottom: 1.25rem; }
+
+ul, ol {
+margin-left: 1.5rem;
+margin-bottom: 1.25rem;
+}
+
+li { margin-bottom: 0.5rem; }
+
+.urgent-box {
+background: #2c241b;
+color: #faf8f3;
+padding: 1.5rem;
+margin: 0 0 2rem 0;
+text-align: center;
+}
+
+.urgent-box h1 {
+color: #faf8f3;
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+}
+
+.time-estimate {
+display: inline-block;
+background: #e94560;
+color: #fff;
+padding: 0.3rem 0.8rem;
+font-size: 0.85rem;
+margin-top: 0.5rem;
+}
+
+.stop-box {
+background: #e94560;
+color: #fff;
+padding: 1.5rem;
+margin: 2rem 0;
+text-align: center;
+}
+
+.stop-box strong {
+font-size: 1.2rem;
+display: block;
+margin-bottom: 0.5rem;
+}
+
+.analogy-box {
+background: #fff;
+border: 2px solid #8b7355;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.analogy-box h3 {
+color: #2c241b;
+margin-bottom: 1rem;
+}
+
+.step-box {
+background: #fff;
+border: 2px solid #d4c4a8;
+padding: 1.5rem;
+margin: 1.5rem 0;
+position: relative;
+}
+
+.step-number {
+position: absolute;
+top: -15px;
+left: 20px;
+background: #2c241b;
+color: #faf8f3;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 600;
+font-size: 0.9rem;
+}
+
+.why-it-works {
+background: #f5f0e8;
+border: 1px solid #d4c4a8;
+padding: 1rem;
+margin-top: 1rem;
+font-size: 0.9rem;
+color: #5a4a3a;
+}
+
+.why-it-works h4 {
+font-size: 0.85rem;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+margin-bottom: 0.5rem;
+color: #8b7355;
+}
+
+.warning-inline {
+background: #fff3cd;
+padding: 0.5rem 1rem;
+display: inline-block;
+margin: 0.5rem 0;
+}
+
+.platform-note {
+background: #f5f0e8;
+border: 1px solid #d4c4a8;
+padding: 1rem;
+margin: 1rem 0;
+font-size: 14px;
+}
+
+.action-prompt {
+background: #f5f0e8;
+border-left: 4px solid #8b7355;
+padding: 1rem;
+margin: 1rem 0;
+font-family: 'IBM Plex Mono', monospace;
+}
+
+.action-prompt strong {
+color: #2c241b;
+}
+
+.footer-nav {
+margin-top: 3rem;
+padding-top: 2rem;
+border-top: 2px solid #d4c4a8;
+display: flex;
+justify-content: space-between;
+}
+
+.footer-nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #d4c4a8;
+}
+
+.footer-nav a:hover {
+background: #f5f0e8;
+border-color: #8b7355;
+}
+
+.footer-nav .next { font-weight: 600; }
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="home">Home</a>
+<a href="01-start-here.html">01</a>
+<a href="02-talk-to-agent.html">02</a>
+<a href="03-connect-discord.html">03</a>
+<a href="04-connect-github.html" class="active">04</a>
+<a href="05-about-images.html">05</a>
+<a href="06-memory-deep-dive.html">06</a>
+<a href="07-time-and-cron.html">07</a>
+<a href="08-agentmail-setup.html">08</a>
+</nav>
+
+<div class="container">
+
+<div class="urgent-box">
+<h1>Module 04 — Connect GitHub</h1>
+<span class="time-estimate">⏱️ 10-15 minutes</span>
+</div>
+
+<div class="stop-box">
+<strong>STOP — Do This Before Real Work</strong><br>
+Discord saves conversations. GitHub saves files.<br>
+Without both, you lose everything when sessions end.<br>
+This is your "Save Project" button. Other cloud storage works, but GitHub is pretty easy and effective.
+</div>
+
+<h2>What Is GitHub? (Simple Version)</h2>
+
+<p>GitHub is like <strong>Google Drive for files + a time machine for changes</strong>.</p>
+
+<ul>
+<li><strong>Storage:</strong> Your agent can save files there, accessible from any device</li>
+<li><strong>Downloads:</strong> Since you cannot retrieve work product from inside chat, GitHub is where you get complicated projects</li>
+
+<li><strong>Backup:</strong> If something breaks, your files are safe</li>
+<li><strong>Sharing:</strong> Share file links with others</li>
+<li><strong>History:</strong> GitHub remembers every change</li>
+</ul>
+
+<div class="analogy-box">
+<h3>🗄️ The Cricut Analogy: Save Your Project</h3>
+
+<p>Remember Module 03 — Discord was downloading the software so you could use the machine. <strong>GitHub is saving your project.</strong></p>
+
+<p>You just spent 15 minutes in Modules 01-03 setting things up. Without GitHub:</p>
+<ul>
+<li>Your SOUL.md (agent's personality) — gone on restart</li>
+<li>Your MEMORY.md (what the agent knows about you) — gone on restart</li>
+<li>Any files you created — stuck on the VPS, potentially lost</li>
+</ul>
+
+<p><strong>With GitHub:</strong> Everything persists. Close the browser, come back tomorrow, pick up exactly where you left off.</p>
+</div>
+
+<h2>What You Do vs. What Your Agent Does</h2>
+
+<div class="platform-note">
+<strong>👤 YOU Do This (One-time setup):</strong>
+<ol>
+<li>Create a GitHub account</li>
+<li>Create a "repository" (fancy word for folder)</li>
+<li>Give your agent a "token" (like a password)</li>
+<li>Test that it works</li>
+</ol>
+
+<strong>🤖 YOUR AGENT Does This (Ongoing):</strong>
+<ul>
+<li>Save files to GitHub automatically</li>
+<li>Organize files into folders</li>
+<li>Retrieve files when needed</li>
+<li>Create backups on schedule</li>
+</ul>
+</div>
+
+<h2>The Setup (You Do This)</h2>
+
+<div class="step-box">
+<div class="step-number">1</div>
+<h3>Create Your GitHub Account</h3>
+
+<ol>
+<li>Go to <strong>github.com</strong></li>
+<li>Click <strong>"Sign up"</strong></li>
+<li>Enter your email, create a password</li>
+<li>Choose a username (this becomes part of your address: github.com/yourname)</li>
+<li>Verify your email (check inbox for confirmation)</li>
+</ol>
+
+<div class="why-it-works">
+<h4>Why this works</h4>
+<p>GitHub is free for personal use. The account is yours — your agent just gets permission to use it.</p>
+</div>
+</div>
+
+<div class="step-box">
+<div class="step-number">2</div>
+<h3>Create Your Repository</h3>
+
+<p>A "repository" is just a tracked folder.</p>
+
+<ol>
+<li>While logged into GitHub, click the <strong>"+"</strong> button (top right)</li>
+<li>Click <strong>"New repository"</strong></li>
+<li><strong>Repository name:</strong> Type something like <code>my-agent-files</code> or <code>heyron-backup</code></li>
+<li><strong>Description:</strong> (Optional) "Files and backups for my AI agent"</li>
+<li><strong>Public or Private?</strong>
+<ul>
+<li><strong>Private</strong> = Only you and your agent can see it ✓ (Recommended)</li>
+<li><strong>Public</strong> = Anyone on the internet can see it</li>
+</ul>
+</li>
+<li>Check the box: <strong>"Add a README file"</strong></li>
+<li>Click <strong>"Create repository"</strong></li>
+</ol>
+
+<div class="why-it-works">
+<h4>Why this works</h4>
+<p>You just created a private folder in the cloud. Right now it only has a README file. Your agent will add more.</p>
+</div>
+</div>
+
+<div class="step-box">
+<div class="step-number">3</div>
+<h3>Get a Personal Access Token</h3>
+
+<p>Your agent needs a "key" to unlock your GitHub folder.</p>
+
+<ol>
+<li>Click your <strong>profile picture</strong> (top right)</li>
+<li>Click <strong>"Settings"</strong></li>
+<li>Scroll down left sidebar, click <strong>"Developer settings"</strong></li>
+<li>Click <strong>"Personal access tokens"</strong> → <strong>"Tokens (classic)"</strong></li>
+<li>Click <strong>"Generate new token"</strong> → <strong>"Generate new token (classic)"</strong></li>
+<li><strong>Note:</strong> Type "Agent Access"</li>
+<li><strong>Expiration:</strong> Select "No expiration" (or 90 days if you prefer)</li>
+<li><strong>Scopes:</strong> Check the box for <strong>"repo"</strong> (lets your agent read/write files)</li>
+<li>Click <strong>"Generate token"</strong></li>
+<li><strong>IMPORTANT:</strong> Copy the token immediately! Looks like <code>ghp_abc123xyz...</code></li>
+</ol>
+
+<div class="warning-inline">
+⚠️ This is the ONLY time you'll see this token. Save it somewhere safe now.
+</div>
+
+<div class="why-it-works">
+<h4>Why this works</h4>
+<p>The token is like a password that only works on your repository. You can revoke it anytime if needed.</p>
+</div>
+</div>
+
+<div class="step-box">
+<div class="step-number">4</div>
+<h3>Give Your Agent the Token</h3>
+
+<p>Tell your agent about your GitHub:</p>
+
+<div class="action-prompt">
+<strong>Say:</strong> "Connect to GitHub. My repository is at github.com/YOURUSERNAME/YOUR-REPO-NAME. My token is: ghp_abc123xyz..."
+</div>
+
+<p>Your agent will:</p>
+<ul>
+<li>Test the connection</li>
+<li>Create folder structure</li>
+<li>Save the token securely</li>
+<li>Confirm everything works</li>
+</ul>
+</div>
+
+<div class="step-box">
+<div class="step-number">5</div>
+<h3>Test: Save a File</h3>
+
+<p>Verify GitHub is working:</p>
+
+<div class="action-prompt">
+<strong>Say:</strong> "Create a test file on GitHub with today's date"
+</div>
+
+<p><strong>What should happen:</strong></p>
+<ul>
+<li>Agent confirms file created</li>
+<li>You can see it on github.com in your repository</li>
+</ul>
+
+<p><strong>If it doesn't work:</strong> Common issues — wrong username, typo in repo name, token copied incorrectly. Try again or ask in Discord.</p>
+</div>
+
+<h2>What You Can Do Now</h2>
+
+<p>With GitHub connected:</p>
+<ul>
+<li>✅ Ask your agent to save important files</li>
+<li>✅ Upload documents for the agent to analyze (in uploads/ folder)</li>
+<li>✅ Download agent-created work from downloads/ folder</li>
+<li>✅ Access files from any device</li>
+<li>✅ Recover everything if your agent session resets</li>
+</ul>
+
+<p><strong>Quick commands to remember:</strong></p>
+<ul>
+<li><em>"Save this to GitHub"</em> — persists important files</li>
+<li><em>"Put this in the downloads folder"</em> — creates files you can grab</li>
+<li><em>"Check the uploads folder"</em> — sees what you uploaded</li>
+</ul>
+
+<h2>The Reality Check</h2>
+
+<p><strong>Without GitHub:</strong></p>
+<ul>
+<li>Close browser tab → conversation gone (Discord fixes this)</li>
+<li>Agent resets → files gone, memory gone, setup lost</li>
+<li>You start from scratch every time</li>
+</ul>
+
+<p><strong>With GitHub:</strong></p>
+<ul>
+<li>Close browser → no problem, files are saved</li>
+<li>Agent resets → agent reads SOUL.md and MEMORY.md from GitHub, knows you again</li>
+<li>You build cumulative knowledge over time</li>
+</ul>
+
+<p><strong>This is the difference between a toy and a tool.</strong></p>
+
+<div class="footer-nav">
+<a href="03-connect-discord.html">Left Arrow Module 03</a>
+<a href="05-about-images.html" class="next">Next: Module 05 Right Arrow</a>
+</div>
+
+</div>
+</body>
+</html>

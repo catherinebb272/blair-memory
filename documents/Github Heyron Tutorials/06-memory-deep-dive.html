@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>06 — Memory Deep Dive | Heyron Quick Start</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'IBM Plex Mono', 'Courier New', monospace;
+background: #faf8f3;
+color: #2c241b;
+line-height: 1.7;
+font-size: 15px;
+}
+
+nav {
+background: #fff;
+border-bottom: 2px solid #d4c4a8;
+padding: 1rem;
+position: sticky;
+top: 0;
+z-index: 100;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 0.75rem;
+margin-right: 0.5rem;
+border: 1px solid transparent;
+transition: all 0.2s;
+font-size: 13px;
+}
+
+nav a:hover, nav a.active {
+border-color: #8b7355;
+background: #f5f0e8;
+}
+
+nav a.home { font-weight: 600; color: #2c241b; }
+
+.container {
+max-width: 680px;
+margin: 0 auto;
+padding: 3rem 2rem;
+}
+
+h1 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a1510;
+font-weight: 600;
+}
+
+h2 {
+font-size: 1.3rem;
+margin: 2rem 0 1rem 0;
+color: #2c241b;
+font-weight: 600;
+border-bottom: 1px solid #d4c4a8;
+padding-bottom: 0.5rem;
+}
+
+h3 {
+font-size: 1.1rem;
+margin: 1.5rem 0 0.75rem 0;
+color: #3d3126;
+font-weight: 600;
+}
+
+p { margin-bottom: 1.25rem; }
+
+ul, ol {
+margin-left: 1.5rem;
+margin-bottom: 1.25rem;
+}
+
+li { margin-bottom: 0.5rem; }
+
+.urgent-box {
+background: #2c241b;
+color: #faf8f3;
+padding: 1.5rem;
+margin: 0 0 2rem 0;
+text-align: center;
+}
+
+.urgent-box h1 {
+color: #faf8f3;
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+}
+
+.time-estimate {
+display: inline-block;
+background: #e94560;
+color: #fff;
+padding: 0.3rem 0.8rem;
+font-size: 0.85rem;
+margin-top: 0.5rem;
+}
+
+.analogy-intro {
+background: #f5f0e8;
+border: 2px solid #8b7355;
+padding: 2rem;
+margin: 2rem 0;
+font-size: 1.05rem;
+}
+
+.analogy-box {
+background: #fff;border: 2px solid #d4c4a8;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.memory-container {
+background: #fff;
+border: 1px solid #d4c4a8;
+padding: 1.25rem;
+margin: 1rem 0;
+border-left: 4px solid #8b7355;
+}
+
+.best-practice {
+background: #f5f0e8;border-left: 4px solid #8b7355;
+padding: 1rem;
+margin: 0.75rem 0;
+}
+
+.footer-nav {
+margin-top: 3rem;
+padding-top: 2rem;
+border-top: 2px solid #d4c4a8;
+display: flex;
+justify-content: space-between;
+}
+
+.footer-nav a {
+color: #5a4a3a;text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #d4c4a8;
+}
+
+.footer-nav a:hover {
+background: #f5f0e8;
+border-color: #8b7355;
+}
+
+.footer-nav .next { font-weight: 600; }
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="home">Home</a>
+<a href="01-start-here.html">01</a>
+<a href="02-talk-to-agent.html">02</a>
+<a href="03-connect-discord.html">03</a>
+<a href="04-connect-github.html">04</a>
+<a href="05-about-images.html">05</a>
+<a href="06-memory-deep-dive.html" class="active">06</a>
+<a href="07-time-and-cron.html">07</a>
+<a href="08-agentmail-setup.html">08</a>
+</nav>
+
+<div class="container">
+
+<div class="urgent-box">
+<h1>Module 06 — Memory Deep Dive</h1>
+<span class="time-estimate">⏱️ 10 minutes</span>
+</div>
+
+<div class="analogy-intro">
+<p>Sit back and think about how people talk, develop ideas, and save information. In a meeting, someone takes notes. Not everything gets written down—just what seems important or what's explicitly pointed out. Later, people ask about what was said, action items get captured, and finally everything gets filed away or tossed.</p>
+<p>Your Agent works exactly the same way. Let me show you how.</p>
+</div>
+
+<h2>The Meeting Assistant Analogy</h2>
+
+<div class="analogy-box">
+<h3>👔 Your Agent Is the Assistant Taking Notes</h3>
+<p>Imagine a weekly staff meeting. The assistant sits in the corner with a notepad, tasked with capturing what happens:</p>
+<ul>
+<li>The assistant listens but <strong>does not transcribe everything</strong></li>
+<li>Decides what seems important and jots that down</li>
+<li>The manager (you) says: <em>"Write this down—it's important"</em></li>
+<li>Someone asks: <em>"What did we decide last month?"</em> — assistant flips through notes</li>
+<li>Chairperson asks: <em>"What are our action items?"</em> — assistant summarizes</li>
+</ul>
+<p><strong>Meeting adjourned:</strong> The assistant writes up a summary, distributes it (or not), files notes (or tosses them). <strong>Unless specifically instructed otherwise, the handwritten notes get thrown away.</strong></p>
+<p><strong>Your Agent works identically.</strong> The chat is the meeting. Your memory files are the notes. Just like the assistant, your Agent only keeps what you explicitly tell it to keep.</p>
+</div>
+
+<h2>The Four Memory Containers</h2>
+
+<p>Back in <a href="02-talk-to-agent.html">Module 02</a>, you set up foundational files. Here is what each actually does:</p>
+
+<div class="memory-container">
+<h4>SOUL.md — Core Identity</h4>
+<p>This is the assistant's personality and job description. Who they are, how they speak, how they approach tasks. Crafted in Module 02. Loaded every session.</p>
+</div>
+
+<div class="memory-container">
+<h4>MEMORY.md — Long-Term Knowledge</h4>
+<p>The file the assistant keeps in their desk drawer—important information from past meetings. Your Agent writes here when something seems worth remembering, or when you say "remember this."</p>
+</div>
+
+<div class="memory-container">
+<h4>memory/YYYY-MM-DD.md — Daily Meeting Notes</h4>
+<p>Today's steno pad. Automatic but temporary—raw notes, not permanent records. The assistant creates one each calendar day.</p>
+</div>
+
+<div class="memory-container">
+<h4>Real-Time Context — The Current Conversation</h4>
+<p>What the assistant hears right now. The words you're typing. Immediate and complete, but <strong>does not persist</strong>. Close the tab, and this memory is gone unless saved to a file above.</p>
+</div>
+
+<h2>Automatic vs. Explicit Saves</h2>
+
+<p>Your Agent decides some things automatically, but most requires your direction:</p>
+
+<div class="best-practice">
+<strong>Automatic:</strong> Daily notes (memory/YYYY-MM-DD.md) when conversation seems significant
+</div>
+<div class="best-practice">
+<strong>When you say "remember this":</strong> Goes to MEMORY.md for long-term retention
+</div>
+<div class="best-practice">
+<strong>When you say "create":</strong> Work product file created in workspace
+</div>
+<div class="best-practice">
+<strong>When you say "save to GitHub":</strong> Permanent cloud backup (see <a href="04-connect-github.html">Module 04</a>)
+</div>
+<div class="best-practice">
+<strong>Unsaid:</strong> Chat context is temporary and disappears
+</div>
+
+<h2>Storage Structure</h2>
+
+<p>Your files live in two places:</p>
+<ul>
+<li><strong>Workspace (VPS):</strong> Active files on the server—SOUL.md, MEMORY.md, daily notes, your documents and folders</li>
+<li><strong>Cloud (GitHub):</strong> Your backup vault—accessible anywhere, survives VPS issues</li>
+</ul>
+<p>Modules 03 and 04 set up Discord (communication) and GitHub (storage). Together they create a complete system.</p>
+
+<h2>Best Practices</h2>
+
+<ul>
+<li><strong>"Remember this for next time"</strong> → Goes to MEMORY.md</li>
+<li><strong>"Create a document from this"</strong> → File created in workspace</li>
+<li><strong>"Save this to GitHub"</strong> → Cloud backup created</li>
+<li><strong>Restructure when cumbersome:</strong> Move old notes to archives, clean workspace</li>
+<li><strong>Save early, save often:</strong> Daily notes are automatic; important decisions need explicit instruction</li>
+</ul>
+
+<h2>Backups (Preview)</h2>
+
+<p>In <a href="07-time-and-cron.html">Module 07</a> we discuss automated backups—setting your Agent to save important files on a schedule, even if you forget. For now, remember: one-time saves are manual, recurring saves can be automated.</p>
+<h2>Bottom Line</h2>
+
+<p>Your memory system is only as good as your instruction. The assistant is competent but not psychic. If something matters, say so explicitly. "Write this down." "Save this." "Remember this." Don't assume.</p>
+
+<div class="footer-nav">
+<a href="05-about-images.html">Left Arrow Module 05</a>
+<a href="07-time-and-cron.html" class="next">Next: Module 07 Right Arrow</a>
+</div>
+
+</div>
+</body>
+</html>

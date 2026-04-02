@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>01 — Start Here | Heyron Quick Start</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'IBM Plex Mono', 'Courier New', monospace;
+background: #faf8f3;
+color: #2c241b;
+line-height: 1.7;
+font-size: 15px;
+}
+
+nav {
+background: #fff;
+border-bottom: 2px solid #d4c4a8;
+padding: 1rem;
+position: sticky;
+top: 0;
+z-index: 100;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 0.75rem;
+margin-right: 0.5rem;
+border: 1px solid transparent;
+transition: all 0.2s;
+font-size: 13px;
+}
+
+nav a:hover, nav a.active {
+border-color: #8b7355;
+background: #f5f0e8;
+}
+
+nav a.home { font-weight: 600; color: #2c241b; }
+
+.container {
+max-width: 680px;
+margin: 0 auto;
+padding: 3rem 2rem;
+}
+
+h1 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a1510;
+font-weight: 600;
+}
+
+h2 {
+font-size: 1.3rem;
+margin: 2rem 0 1rem 0;
+color: #2c241b;
+font-weight: 600;
+border-bottom: 1px solid #d4c4a8;
+padding-bottom: 0.5rem;
+}
+
+p { margin-bottom: 1.25rem; }
+
+.urgent-box {
+background: #2c241b;
+color: #faf8f3;
+padding: 1.5rem;
+margin: 0 0 2rem 0;
+text-align: center;
+}
+
+.urgent-box h1 {
+color: #faf8f3;
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+}
+
+.time-estimate {
+display: inline-block;
+background: #e94560;
+color: #fff;
+padding: 0.3rem 0.8rem;
+font-size: 0.85rem;
+margin-top: 0.5rem;
+}
+
+.beta-notice {
+background: #fff3cd;
+border-left: 4px solid #e94560;
+padding: 1rem;
+margin: 1.5rem 0;
+}
+
+.beta-notice strong {
+color: #2c241b;
+}
+
+.box-contents {
+background: #fff;
+border: 2px solid #d4c4a8;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.box-contents h3 {
+color: #2c241b;
+margin-bottom: 1rem;
+font-size: 1.1rem;
+}
+
+.box-contents ul {
+margin-left: 1.5rem;
+}
+
+.box-contents li {
+margin-bottom: 0.5rem;
+}
+
+.key-point {
+background: #f5f0e8;
+border-left: 4px solid #8b7355;
+padding: 1rem;
+margin: 1.5rem 0;
+}
+
+.key-point strong {
+color: #2c241b;
+}
+
+.comparison-table {
+width: 100%;
+margin: 1.5rem 0;
+border-collapse: collapse;
+}
+
+.comparison-table th {
+background: #2c241b;
+color: #faf8f3;
+padding: 0.75rem;
+text-align: left;
+font-weight: 500;
+}
+
+.comparison-table td {
+padding: 0.75rem;
+border-bottom: 1px solid #d4c4a8;
+}
+
+.comparison-table tr:nth-child(even) {
+background: #f5f0e8;
+}
+
+.footer-nav {
+margin-top: 3rem;
+padding-top: 2rem;
+border-top: 2px solid #d4c4a8;
+display: flex;
+justify-content: space-between;
+}
+
+.footer-nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #d4c4a8;
+}
+
+.footer-nav a:hover {
+background: #f5f0e8;
+border-color: #8b7355;
+}
+
+.footer-nav .next { font-weight: 600; }
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="home">Home</a>
+<a href="01-start-here.html" class="active">01</a>
+<a href="02-talk-to-agent.html">02</a>
+<a href="03-connect-discord.html">03</a>
+<a href="04-about-images.html">04</a>
+<a href="05-connect-github.html">05</a>
+<a href="06-memory-deep-dive.html">06</a>
+<a href="07-time-and-cron.html">07</a>
+</nav>
+
+<div class="container">
+
+<div class="urgent-box">
+<h1>Module 01 — What's In The Box</h1>
+<span class="time-estimate">⏱️ 3 minutes</span>
+</div>
+
+<div class="beta-notice">
+<strong>🚧 Beta Software</strong><br>
+Heyron is actively being built. Things change fast. If something looks different from this guide, that's normal. Stuck? Ask in the <a href="https://discord.gg/clawd" style="color: #2c241b; text-decoration: underline;">Heyron Discord</a> — the community and help feature are here for you.
+</div>
+
+<h2>You Have a Newly Hatched Agent</h2>
+
+<p>Right now, you have a blank slate. Your agent doesn't know you yet, doesn't know what you want, and hasn't been configured for your needs. That's <em>by design</em> — this is a platform you shape, not a finished product.</p>
+
+<p><strong>In one sentence:</strong> Unlike ChatGPT, Heyron connects to outside tools and has stronger persistence — but requires setup to unlock its potential.</p>
+
+<div class="box-contents">
+<h3>📦 What's In The Box</h3>
+<ul>
+<li><strong>One newly hatched agent</strong> — Ready to learn you and your workflows</li>
+<li><strong>Behavior-control files</strong> — SOUL.md (personality), MEMORY.md (long-term memory), IDENTITY.md (who you are), TOOLS.md (your integrations)</li>
+<li><strong>Short-term memory</strong> — Each conversation, until you close the tab</li>
+<li><strong>Long-term memory capability</strong> — Daily logs and curated files (once configured)</li>
+<li><strong>Help feature</strong> — Built into the Discord server</li>
+<li><strong>Community support</strong> — Active Discord with other users and the founder</li>
+</ul>
+</div>
+
+<h2>What You DON'T Have Yet</h2>
+
+<p><strong>That's why you're reading this guide.</strong> These modules walk you through the essential attachments:</p>
+
+<table class="comparison-table">
+<thead>
+<tr>
+<th>What's Missing</th>
+<th>Why It Matters</th>
+<th>Fixed In Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Persistent memory</td>
+<td>Agent forgets you when session ends</td>
+<td>02, 06</td>
+</tr>
+<tr>
+<td>Discord access</td>
+<td>Browser chat only; no phone access</td>
+<td>03</td>
+</tr>
+<tr>
+<td>Image understanding</td>
+<td>Can't see or generate images or videos yet</td>
+<td>04 (explanation)</td>
+</tr>
+<tr>
+<td>Saved work</td>
+<td>Files stay on VPS; risk of loss</td>
+<td>05</td>
+</tr>
+<tr>
+<td>Time-based actions</td>
+<td>No reminders, scheduling, or automation</td>
+<td>07</td>
+</tr>
+</tbody>
+</table>
+
+<div class="key-point">
+<strong>💡 The Cricut Analogy (for crafters)</strong><br>
+When you unboxed your Cricut cutting machine, you couldn't immediately make a project. You had to download software, pair the machine, and attach tools. <strong>Heyron is the same.</strong> These 7 modules are your unboxing sequence. Skip them, and Day 1 work disappears. Complete them, and you have a partner that remembers, saves, and improves over time.
+</div>
+
+<h2>Ready?</h2>
+
+<p>Module 02 is the conversation that creates your agent's memory and personality. It's where the partnership begins.</p>
+
+<p><strong>⚠️ Important:</strong> Don't get stuck chatting for hours in Module 2. Modules 3-7 contain essential setup you need before real work begins.</p>
+
+<div class="footer-nav">
+<a href="index.html">← Home</a>
+<a href="02-talk-to-agent.html" class="next">Next: Module 02 →</a>
+</div>
+
+</div>
+</body>
+</html>

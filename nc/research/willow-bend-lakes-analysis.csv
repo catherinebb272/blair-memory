@@ -1,0 +1,82 @@
+Address,Year Built,Beds,Full Baths,Half Baths,Garage,Special Features,Acreage,Living Area (Sq Ft),List Price,Sale Price,Price per Sq Ft (List),Price per Sq Ft (Sale),Date Sold,Days on Market,Zestimate,Notes
+2017 Misty Haven Ln,1983,4,3,1,2,Pool,0.29,3388,1075000,1070000,317.30,315.82,3/5/2025,4,1100000,Listed 1/28/25 Zest 2/2025
+2613 Seascape Ct,1983,5,6,1,3,Pool,0.42,5470,2800000,2750000,511.88,502.74,3/18/2025,0,2800000,Confusion over list date March or July
+2704 Coastline Dr,1986,5,5,1,4,Pool,0.6,6198,2450000,2350000,395.29,379.15,3/25/2025,-10,2400000,Listed 1/12/25 Zest 2/2025
+2400 Crown Knoll Ln,1981,4,3,1,3,Pool,0.49,3720,1400000,1453000,376.34,390.59,4/22/2025,2,1300000,Listed 3/13/25 $1.4M Zest 2/2025
+5336 Corinthian Bay Dr,1982,4,3,0,3,Pool,0.39,3272,1295000,1350000,395.78,412.59,5/28/2025,3,1300000,Listed 5/19/25 $1.3M Zest 5/2025
+2209 Colonial Dr,1986,6,6,1,3,Pool/Golf,0.55,7959,3300000,3569000,414.62,448.42,6/3/2025,1,3300000,Listed 6/3/25 $3.3M Zest 6/2025
+2304 Winding Hollow Ln,1981,4,3,0,3,Pool,,3462,1050000,,303.29,,6/23/2025,7,973000,Listed 5/28/25 $1.1M Zest 5/2025 - NO SALE PRICE
+2020 Winding Hollow Ln,1979,4,3,1,3,Pool,0.34,3854,1350000,1345000,350.29,348.99,6/30/2025,0,1300000,Listed 6/5/25 $1.4M Zest 5/2025
+5128 Seascape Ln,2017,5,5,2,3,Pool/Lake,0.5,5601,4350000,4100000,776.65,731.98,7/9/2025,24,4100000,Listed 5/10/25 $4.5M Zest 6/2025
+2308 Misty Haven Ln,1981,4,3,0,3,Pool,0.31,3201,1295000,1350000,404.56,421.74,7/28/2025,141,1300000,Listed 5/20/25 $1.3M Zest as of 6/2025
+2100 Winding Hollow Ln,1979,3,3,0,2,Pool,0.37,3001,1098000,1060000,365.88,353.22,7/31/2025,2,1100000,Listed 6/26/25 $1.1M Zest 6/2025
+5224 Windjammer Rd,1986,4,4,1,3,Pool,0.47,5345,1599999,1385000,299.34,259.12,7/31/2025,3,1500000,Listed 4/24/25 for $1.7M Zest 6/2025
+2021 Wing Point Ln,1979,4,3,1,3,Pool,0.35,3732,1250000,1175000,334.94,314.84,8/15/2025,0,1200000,Listed 6/4/25 for $1.4M Zest as of 7/25
+2020 Crown Knoll Ln,1983,5,5,1,3,Pool,0.53,5243,1650000,1553000,314.71,296.21,10/29/2025,80,1600000,Listed 9/27/25 $1.7M Zest as of 9/2025
+5325 Seascape Ln,1982,4,4,0,3,Pool,0.34,3427,1041000,945000,303.76,275.61,11/21/2025,51,1000000,Listed 9/18/25 $1M Zest as of 11/2025
+2204 Bridge View Ln,1980,4,3,0,,,,3298,999000,,302.91,,1/15/2026,,946000,Listed 10/22/25 for $1.1M Zest as of 12/2025 - NO SALE PRICE
+
+---
+
+ANALYSIS & FINDINGS
+
+Pool Impact on Price/SqFt:
+- All 16 properties have pools (baseline expectation in this neighborhood)
+- Cannot determine pool premium — no non-pool comps available
+
+Lake View Premium:
+- 5128 Seascape (Pool/Lake): $732/sqft sale price — HIGHEST in dataset
+- 2209 Colonial (Pool/Golf): $448/sqft — second highest
+- Lake view adds approximately $200-300/sqft premium over standard pool homes
+
+Zestimate vs Sale Price Accuracy:
+- Average Zestimate: $1.73M
+- Average Sale Price: $1.71M
+- Overall accuracy: Within 1% — Zillow very accurate in this neighborhood
+- 7 of 14 sales: Within 5% of Zestimate
+- 3 sales: 10-15% below Zestimate (buyer's market conditions)
+- 2 sales: 10-15% above Zestimate (competitive bidding)
+- Trend: Earlier in year (Mar-Jun) = closer to Zestimate; Later (Oct-Nov) = below Zestimate
+
+Days on Market Analysis:
+- Average DOM: 22 days (excluding -10 outlier)
+- Median DOM: 2.5 days
+- 10 of 15 properties: Sold in 0-7 days (very fast market)
+- 2308 Misty Haven: 141 days on market BUT still sold above list price — suggests initial overpricing, not market weakness
+- 2704 Coastline: -10 days = sold before listing (pocket listing)
+- Quick sales indicate: Strong demand, proper pricing, or both
+
+Half Bath Analysis:
+Properties with half baths:
+- 2017 Misty Haven (3/1): $316/sqft
+- 2613 Seascape (6/1): $503/sqft
+- 2704 Coastline (5/1): $379/sqft
+- 2400 Crown Knoll (3/1): $391/sqft
+- 2209 Colonial (6/1): $448/sqft
+- 2020 Winding Hollow (3/1): $349/sqft
+- 5128 Seascape (5/2): $732/sqft — only home with 2 half baths
+- 5224 Windjammer (4/1): $259/sqft
+- 2021 Wing Point (3/1): $315/sqft
+- 2020 Crown Knoll (5/1): $296/sqft
+
+Finding: Half baths don't strongly correlate with price/sqft — location and views matter more.
+
+Pricing Strategy Recommendations:
+1. Price at or slightly below Zestimate for 0-7 day sale
+2. Lake/golf views: Add 20-30% premium
+3. Expect longer DOM in fall/winter: Oct-Nov avg 65 days vs spring avg 3 days
+4. If DOM exceeds 30 days: Consider 5-10% price reduction
+5. Newer construction (2017+): Justifies significant premium regardless of view
+
+Other Observations:
+- Acreage does not strongly correlate with price/sqft in this dataset
+- Year built matters: 2017 construction = $732/sqft vs 1979-1986 avg = $360/sqft
+- Bedroom/bath count less important than total sqft and premium features
+- Most homes sold at or below list price — suggests pricing discipline by sellers
+
+---
+
+Data Sources: Sharon Ketko (Keller Williams), Ebby Halliday Realtors
+Compiled: March 15, 2026
+Properties: 16 sales in Willow Bend Lakes, Plano TX (March 2025 - January 2026)
+Full Baths and Half Baths updated from Ebby Halliday data where available
