@@ -200,6 +200,18 @@ margin-bottom: 0.75rem;
 margin-bottom: 1rem;
 }
 
+.critical-box {
+background: #fff3cd;
+border: 2px solid #ffc107;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.critical-box h3 {
+color: #8b5a00;
+margin-bottom: 0.75rem;
+}
+
 .footer-nav {
 margin-top: 3rem;
 padding-top: 2rem;
@@ -280,7 +292,20 @@ border-color: #8b7355;
 <li>Ask for your bot token and connect it automatically</li>
 </ol>
 
-<p>This is the easiest method — your agent handles all the wiring.</p>
+<div class="critical-box">
+<h3>🔑 Critical Step: Enable Channel Replies</h3>
+<p>After your agent connects, <strong>tell it this exact phrase</strong>:</p>
+<p><strong>"Set Discord groupPolicy to open"</strong></p>
+<p><em>This is the #1 issue users face.</em> Without this, your bot sits silent in channels and won't respond to any messages.</p>
+</div>
+
+<div class="critical-box">
+<h3>🔗 What About That Pairing Code?</h3>
+<p>When you first message your bot, it will reply with a code like <code>ABC123</code>. This is how OpenClaw verifies it's really you.</p>
+<p><strong>Just copy the code and tell your agent:</strong></p>
+<p><strong>"Approve Discord pairing code: ABC123"</strong></p>
+<p>This only happens once.</p>
+</div>
 
 <h3>Option B: Do It Yourself</h3>
 
@@ -313,6 +338,18 @@ border-color: #8b7355;
 
 <div class="step-box">
 <div class="step-number">3</div>
+<h3>Enable Server DMs (Required)</h3>
+
+<ol>
+<li><strong>Right-click your server icon</strong> in the left sidebar</li>
+<li>Click <strong>"Privacy Settings"</strong></li>
+<li>Toggle ON <strong>"Allow direct messages from server members"</strong></li>
+</ol>
+<p><em>This lets your bot send you the pairing code. You can disable this later after setup is complete.</em></p>
+</div>
+
+<div class="step-box">
+<div class="step-number">4</div>
 <h3>Create Your Bot</h3>
 
 <ol>
@@ -342,7 +379,7 @@ border-color: #8b7355;
 </div>
 
 <div class="step-box">
-<div class="step-number">4</div>
+<div class="step-number">5</div>
 <h3>Enable Required Settings</h3>
 
 <ol>
@@ -359,7 +396,7 @@ border-color: #8b7355;
 </div>
 
 <div class="step-box">
-<div class="step-number">5</div>
+<div class="step-number">6</div>
 <h3>Invite Bot to Your Server</h3>
 
 <ol>
@@ -379,7 +416,7 @@ border-color: #8b7355;
 </div>
 
 <div class="step-box">
-<div class="step-number">6</div>
+<div class="step-number">7</div>
 <h3>Give Token to Your Agent</h3>
 
 <p>Tell your agent (choose one method):</p>
@@ -392,36 +429,31 @@ border-color: #8b7355;
 <p>Your agent will validate the token, connect, and confirm it's working.</p>
 </div>
 
-<h2>Troubleshooting</h2>
+<div class="step-box">
+<div class="step-number">8</div>
+<h3>Enable Channel Replies (Critical!)</h3>
 
-<div class="troubleshooting-box">
-<h3>🔧 Common Issues</h3>
-
-<p><strong>Bot shows up but doesn't respond to messages?</strong></p>
-<ol>
-<li><strong>Try DMing first:</strong> Right-click your bot in the server → "Message" → send a test message</li>
-<li>If DMs work but channel messages don't, tell your agent:</li>
-</ol>
+<p>Tell your agent this exact phrase:</p>
 
 <div class="action-prompt">
-<strong>"set Discord groupPolicy to open"</strong>
+<strong>"Set Discord groupPolicy to open"</strong>
 </div>
 
-<p><strong>Bot doesn't appear in server?</strong></p>
-<ol>
-<li>Go to Discord Server Settings → Apps → Installed Apps</li>
-<li>Or re-run the OAuth2 invite URL</li>
-</ol>
+<p><em>This is the #1 issue users face.</em> Without this, your bot sits silent in channels and won't respond to any messages.</p>
+</div>
 
-<p><strong>Agent says token is invalid?</strong></p>
-<ol>
-<li>Go to discord.com/developers/applications</li>
-<li>Click your app → Bot → Reset Token</li>
-<li>Copy the new token and give it to your agent</li>
-</ol>
+<div class="step-box">
+<div class="step-number">9</div>
+<h3>Approve Pairing Code</h3>
 
-<p><strong>Still having issues?</strong></p>
-<p>As of March 2026, all Discord setup problems should be submitted as a help ticket. Your agent can help you do that.</p>
+<p>When you first DM your bot, it will reply with a code like <code>ABC123</code>. This is how OpenClaw verifies it's really you.</p>
+<p><strong>Copy the code and tell your agent:</strong></p>
+
+<div class="action-prompt">
+<strong>"Approve Discord pairing code: [paste code here]"</strong>
+</div>
+
+<p>Done! Your bot is now fully connected.</p>
 </div>
 
 <h2>What You Can Do Now</h2>
