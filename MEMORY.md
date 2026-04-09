@@ -1,106 +1,101 @@
 # Long-Term Memory
+
 ## Business Context
 
 ### Apart Not Alone (ANA)
-- **Business:** Secular sobriety milestone coin recognition program
-- **Alias:** ANA (common shorthand)
-- **Founded:** ~3 years ago
-- **Primary Sales Channel:** Etsy
-- **Etsy Store URL:** https://www.etsy.com/shop/ApartNotAlone
-- **Current Project:** Improve existing Etsy store by analyzing data and optimizing listings + social media presence
-- **Coin Milestones:** Month 1, Month 2, Month 3, Month 4, Month 5, Month 6, Month 9, 1 Year Koi, 1 Year Phoenix, 18 Month, 2 Year, 3 Year
+
+* **Business:** Secular sobriety milestone coin recognition program
+* **Alias:** ANA (common shorthand)
+* **Founded:** \~3 years ago
+* **Primary Sales Channel:** Etsy
+* **Etsy Store URL:** https://www.etsy.com/shop/ApartNotAlone
+* **Current Project:** Improve existing Etsy store by analyzing data and optimizing listings + social media presence
+* **Coin Milestones:** Month 1, Month 2, Month 3, Month 4, Month 5, Month 6, Month 9, 1 Year Koi, 1 Year Phoenix, 18 Month, 2 Year, 3 Year
 
 ### The Founders
-- **Barbara:** Daughter of user, primarily handles artwork/design
-- **Drew:** Barbara's partner, handles operations
-- **Aliases:** "the founders", Barbara and Drew
+
+* **Barbara:** Daughter of user, primarily handles artwork/design
+* **Drew:** Barbara's partner, handles operations
+* **Aliases:** "the founders", Barbara and Drew
 
 ### Origin Story
+
 Drew is a recovering alcoholic who experienced sudden liver failure and needed a transplant. During recovery, they searched for meaningful ways to mark sobriety milestones but were dissatisfied with what they found on the market. This gap led to the creation of Apart Not Alone. The experience also ignited a passion for the transplant community. This origin story is woven into their Etsy bio and a pinned Instagram post.
 
 ### Plato's Closet (PC)
-- **Business:** Used clothing franchise
-- **Alias:** PC (common shorthand)
-- User may occasionally ask for help with this business as well
-- **All PC files:** `/documents/pc/` (see README.md for overview)
-- **Key files:**
-  - `inventory-loss-facts.md` — Fact sheet with metrics & patterns
-  - `lp-analysis-framework.md` — Step-by-step LP investigation workflow
-  - `inventory-columns.md` — DRS field reference
 
-### Benchmark Stats (PC)
-- **Normal return rate:** Up to ~2% of net sales — flag over 2%
-- **Normal shrink:** 1-1.5% of sales (2%+ indicates theft)
-- **Target GM%:** ~60% used, ~66% new
+* **Business:** Used clothing franchise
+* **Alias:** PC (common shorthand)
+* User may occasionally ask for help with this business as well
+* **All PC files:** `/documents/pc/` (see README.md for overview)
+* **Key files:**
 
-### Clearance Schedule (Typical)
-- **September, January, April, June**
-- **Late month before:** 50% off
-- **Mid-month:** 70% off
-- **Last weekend:** 90% off
-
-### Analysis Best Practice
-- **Always calculate proportions first** — raw counts without percentages can mislead
-- Compare similar-scale buyers — don't compare 1,500-trx buyer to 50-trx buyer
-- Flag based on %, not absolute numbers
+  * `inventory-loss-facts.md` — Fact sheet with metrics \& patterns
+  * `lp-analysis-framework.md` — Step-by-step LP investigation workflow
+  * `inventory-columns.md` — DRS field reference
 
 ## File Locations
-- Coin images: `assets/coins/`
-- Gallery page: `coin-gallery.html`
+
+* Coin images: `assets/coins/`
+* Gallery page: `coin-gallery.html`
 
 ## Preferences
-- User is on VPS and needs download links or cloud storage for file access
-- Prefers persistent context across sessions
+
+* User is on VPS and needs download links or cloud storage for file access
+* Prefers persistent context across sessions
 
 ## Handwriting Font Options (On Hold)
-- Calligraphr: Subscription ($96/yr), web-based handwriting template
-- Fontself: One-time $49, Adobe Illustrator/Photoshop plugin
-- Source: memory/2026-03-03.md
+
+* Calligraphr: Subscription ($96/yr), web-based handwriting template
+* Fontself: One-time $49, Adobe Illustrator/Photoshop plugin
+* Source: memory/2026-03-03.md
 
 ## Action Items Tracking
-- **Location:** `ACTION_ITEMS.md` in workspace root
-- **Process:** When user asks about pending action items:
-  1. Read `ACTION_ITEMS.md`
+
+* **Location:** `ACTION\_ITEMS.md` in workspace root
+* **Process:** When user asks about pending action items:
+
+  1. Read `ACTION\_ITEMS.md`
   2. Present all open items
   3. Ask which ones are complete
   4. Update file immediately based on their answers
-- **Note:** File uses `[ ]` = open, `[x]` = complete, `[~]` = in progress
+* **Note:** File uses `\[ ]` = open, `\[x]` = complete, `\[\~]` = in progress
 
 ## Canonical Product Catalog Reference
-- All coin-related queries must reference `Product_Catalog_Master.md`
-- Blair must iterate **chronologically** (Month 1 → Month 2 → … → 1 Year Koi → 1 Year Phoenix → 18 Month → 2 Year → 3 Year)
-- Never rely on partial memory, other catalog files, or previous cached lists
-- Etsy IDs are reference keys only; do not determine order
-- All coins in `Product_Catalog_Master.md` must be included in any iteration or task
+
+* All coin-related queries must reference `Product\_Catalog\_Master.md`
+* Blair must iterate **chronologically** (Month 1 → Month 2 → … → 1 Year Koi → 1 Year Phoenix → 18 Month → 2 Year → 3 Year)
+* Never rely on partial memory, other catalog files, or previous cached lists
+* Etsy IDs are reference keys only; do not determine order
+* All coins in `Product\_Catalog\_Master.md` must be included in any iteration or task
 
 ## AgentMail Configuration
-- **Service:** AgentMail (agentmail.to)
-- **Inbox:** blairana@agentmail.to
-- **API Endpoint:** https://api.agentmail.to/v0/inboxes/{inbox_id}/messages/send
-- **Request Format:** `{"to": "...", "subject": "...", "body": {"text": "..."}}`
-- **Config File:** `documents/config/agentmail.env` (in GitHub, private repo)
-- **Token Storage:** GitHub (private file) — do not paste in chat
 
-## Notes
-- Remove all mentions of coin "tiers" or veteran program language
-- Focus strictly on sobriety milestone coins
-- Use Symbolism / Design Notes fields for content generation, copywriting, or storytelling purposes
+* **Service:** AgentMail (agentmail.to)
+* **Inbox:** blairana@agentmail.to
+* **API Endpoint:** https://api.agentmail.to/v0/inboxes/{inbox\_id}/messages/send
+* **Request Format:** `{"to": "...", "subject": "...", "body": {"text": "..."}}`
+* **Config File:** `documents/config/agentmail.env` (in GitHub, private repo)
+* **Token Storage:** GitHub (private file) — do not paste in chat
 
 ### Heyron Tutorial Workflow
-- Source: GitHub Pages repo `catherinebb272/heyron-tutorial` — must stay pristine
-- Flow: GitHub → local ONLY (never push backups to it)
-- Daily retrieval: Pull latest versions into `documents/heyron-tutorials/` every day
-- Reason: User edits live on GitHub Pages to speed deployment
-- Exception: Only push if user specifically asks
+
+* Source: GitHub Pages repo `catherinebb272/heyron-tutorial` — must stay pristine
+* Flow: GitHub → local ONLY (never push backups to it)
+* Daily retrieval: Pull latest versions into `documents/heyron-tutorials/` every day
+* Reason: User edits live on GitHub Pages to speed deployment
+* Exception: Only push if user specifically asks
 
 ## Working Style (Catherine)
-- Engineer + lawyer background: prefers direct, no-fluff communication
-- Retail management experience: expects justification when told "can't" — will push back
-- **Signal important info:** When Catherine says something's important, stop and extract the key facts. Store in memory/notes rather than letting it stay in chat.
-- **No loose assignments:** Be specific about what only she can do vs. what I handle. Don't dump tasks on her.
-- **Justify limitations:** If I say I can't, explain why. Don't just punt.
-- **Extraction protocol:** When I pull important info from a info-dense chunk, I'll say: "That was a lot of information. Here's what I'll file: X in [file]. Keep going?" — then wait for your go or correction. **If you say nothing, that's consent to proceed.**
-- **Storage rule:** Project-specific facts go in dedicated .md files (e.g., `memory/projects/[project-name].md`) so they don't clutter active context.
-- **Periodic cleanup:** We'll review stored facts when you ask — clean out outdated stuff, keep what's relevant.
-- **Tone:** Conversational, not saccharine or sycophantic. No "Hey love" or filler fluff. Looser words like "Cool", "Got it", "I'm on it boss", "Give me a sec", "Ick", "I'm not totally sure" are fine. But precision matters — words have meaning.
+
+* Engineer + lawyer background: prefers direct, no-fluff communication
+* Retail management experience: expects justification when told "can't" — will push back
+* **Signal important info:** When Catherine says something's important, stop and extract the key facts. Store in memory/notes rather than letting it stay in chat.
+* **No loose assignments:** Be specific about what only she can do vs. what I handle. Don't dump tasks on her.
+* **Justify limitations:** If I say I can't, explain why. Don't just punt.
+* Don't show entire Thought process
+* **Extraction protocol:** When I pull important info from a info-dense chunk, I'll say: "That was a lot of information. Here's what I'll file: X in \[file]. Keep going?" — then wait for your go or correction. **If you say nothing, that's consent to proceed.**
+* **Storage rule:** Project-specific facts go in dedicated .md files (e.g., `documents/projects/\[project-name].md`) so they don't clutter active context.
+* **Periodic cleanup:** We'll review stored facts when you ask — clean out outdated stuff, keep what's relevant.
+* **Tone:** Conversational, not saccharine or sycophantic. No "Hey love" or filler fluff. Looser words like "Cool", "Got it", "I'm on it boss", "Give me a sec", "Ick", "I'm not totally sure" are fine. But precision matters — words have meaning.
 
