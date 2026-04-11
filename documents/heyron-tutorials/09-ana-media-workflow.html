@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>09 — ANA Media Workflow | Heyron Tutorials</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'IBM Plex Mono', 'Courier New', monospace;
+background: #faf8f3;
+color: #2c241b;
+line-height: 1.7;
+font-size: 15px;
+}
+
+nav {
+background: #fff;
+border-bottom: 2px solid #d4c4a8;
+padding: 1rem;
+position: sticky;
+top: 0;
+z-index: 100;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 0.75rem;
+margin-right: 0.5rem;
+border: 1px solid transparent;
+transition: all 0.2s;
+font-size: 13px;
+}
+
+nav a:hover, nav a.active {
+border-color: #8b7355;
+background: #f5f0e8;
+}
+
+nav a.home { font-weight: 600; color: #2c241b; }
+
+.container {
+max-width: 680px;
+margin: 0 auto;
+padding: 3rem 2rem;
+}
+
+h1 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a1510;
+font-weight: 600;
+}
+
+h2 {
+font-size: 1.3rem;
+margin: 2rem 0 1rem 0;
+color: #2c241b;
+font-weight: 600;
+border-bottom: 1px solid #d4c4a8;
+padding-bottom: 0.5rem;
+}
+
+p { margin-bottom: 1.25rem; }
+
+.urgent-box {
+background: #2c241b;
+color: #faf8f3;
+padding: 1.5rem;
+margin: 0 0 2rem 0;
+text-align: center;
+}
+
+.urgent-box h1 {
+color: #faf8f3;
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+}
+
+.time-estimate {
+display: inline-block;
+background: #e94560;
+color: #fff;
+padding: 0.3rem 0.8rem;
+font-size: 0.85rem;
+margin-top: 0.5rem;
+}
+
+.beta-notice {
+background: #fff3cd;
+border-left: 4px solid #e94560;
+padding: 1rem;
+margin: 1.5rem 0;
+}
+
+.beta-notice strong {
+color: #2c241b;
+}
+
+.box-contents {
+background: #fff;
+border: 2px solid #d4c4a8;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.box-contents h3 {
+color: #2c241b;
+margin-bottom: 1rem;
+font-size: 1.1rem;
+}
+
+.box-contents ul {
+margin-left: 1.5rem;
+}
+
+.box-contents li {
+margin-bottom: 0.5rem;
+}
+
+.key-point {
+background: #f5f0e8;
+border-left: 4px solid #8b7355;
+padding: 1rem;
+margin: 1.5rem 0;
+}
+
+.key-point strong {
+color: #2c241b;
+}
+
+.code-block {
+background: #2c241b;
+color: #faf8f3;
+padding: 1rem;
+margin: 1.5rem 0;
+font-family: 'IBM Plex Mono', monospace;
+overflow-x: auto;
+}
+
+.code-block code {
+color: #f5f0e8;
+}
+
+.prompt-box {
+background: #e8f4f8;
+border: 2px solid #5a9ead;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.prompt-box h3 {
+color: #2c241b;
+margin-bottom: 0.75rem;
+font-size: 1.1rem;
+}
+
+.prompt-box blockquote {
+font-style: italic;
+color: #5a4a3a;
+margin: 0.75rem 0;
+padding-left: 1rem;
+border-left: 3px solid #5a9ead;
+}
+
+.footer-nav {
+margin-top: 3rem;
+padding-top: 2rem;
+border-top: 2px solid #d4c4a8;
+display: flex;
+justify-content: space-between;
+}
+
+.footer-nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #d4c4a8;
+}
+
+.footer-nav a:hover {
+background: #f5f0e8;
+border-color: #8b7355;
+}
+
+.footer-nav .next { font-weight: 600; }
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="home">Home</a>
+<a href="01-start-here.html">01</a>
+<a href="02-talk-to-agent.html">02</a>
+<a href="03-connect-discord.html">03</a>
+<a href="04-about-images.html">04</a>
+<a href="05-connect-github.html">05</a>
+<a href="06-memory-deep-dive.html">06</a>
+<a href="07-time-and-cron.html">07</a>
+<a href="08-agentmail-setup.html">08</a>
+<a href="09-ana-media-workflow.html" class="active">09</a>
+</nav>
+
+<div class="container">
+
+<div class="urgent-box">
+<h1>Module 09 — ANA Media Workflow</h1>
+<span class="time-estimate">⏱️ 10 minutes</span>
+</div>
+
+<div class="beta-notice">
+<strong>📋 Workflow Guide</strong><br>
+This guide walks through setting up the media creation workflow for Apart Not Alone (ANA) — using ElevenLabs for voice and LipSync AI for animation.
+</div>
+
+<h2>The Workflow</h2>
+
+<p>This module covers how to use your AI agent to create audio and animated content for your sobriety milestone coins. The workflow involves:</p>
+
+<div class="box-contents">
+<h3>🎯 Complete Media Workflow</h3>
+<ul>
+<li><strong>Step 1:</strong> Generate voice audio using ElevenLabs TTS</li>
+<li><strong>Step 2:</strong> Use the voice audio with LipSync AI to create animated avatar videos</li>
+<li><strong>Step 3:</strong> Export and use in your marketing/content</li>
+</ul>
+</div>
+
+<h2>Step 1: ElevenLabs Voice Generation</h2>
+
+<p>Your agent can generate text-to-speech using your ElevenLabs API key. Here's what you need to know:</p>
+
+<h3>Setup Required</h3>
+
+<p>Before using voice generation, you'll need to provide your ElevenLabs API key. The agent stores this securely in the workspace environment.</p>
+
+<div class="key-point">
+<strong>💡 Important: Free Tier Limitation</strong><br>
+ElevenLabs free tier has a limit on API calls. Rapid requests trigger "unusual activity" detection and may disable the free tier. <strong>Space out your requests</strong> or consider upgrading to a paid plan for production use.
+</div>
+
+<h3>Sample Prompt for Voice Generation</h3>
+
+<div class="prompt-box">
+<h3>Prompt to Use</h3>
+<blockquote>
+"We need to set up ElevenLabs to generate a voice sample for our otter avatar. Generate a 5 second test sample using [voice name] with the script: [your script text here]."
+</blockquote>
+</div>
+
+<h3>Available Voices</h3>
+
+<p>Your account has access to these voices (and any custom voices you've created):</p>
+
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Voice</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Sarah</td><td>Young adult woman, confident & warm</td></tr>
+<tr><td>Laura</td><td>Young female, sunny enthusiasm</td></tr>
+<tr><td>Jessica</td><td>Playful, bright, warm — good for trendy content</td></tr>
+<tr><td>Bella</td><td>Professional, warm, polished narrative</td></tr>
+<tr><td>Lily</td><td>British female, velvety & clear</td></tr>
+<tr><td>Alice</td><td>British female, clear for e-learning</td></tr>
+<tr><td>Matilda</td><td>Professional, pleasing alto</td></tr>
+<tr><td>River</td><td>Neutral, relaxed, calm</td></tr>
+<tr><td>Eric</td><td>Middle-aged male, smooth & trustworthy</td></tr>
+<tr><td>Chris</td><td>Down-to-earth, natural</td></tr>
+<tr><td>Brian</td><td>Deep, resonant, comforting</td></tr>
+<tr><td>George</td><td>British, warm storyteller</td></tr>
+</tbody>
+</table>
+
+<h3>API Notes</h3>
+
+<div class="box-contents">
+<h3>🔧 Technical Details</h3>
+<ul>
+<li><strong>API Key Location:</strong> Stored in `.env` file as `ELEVENLABS_API_KEY`</li>
+<li><strong>Voice ID Retrieval:</strong> Can be retrieved via `GET /v1/voices` API call</li>
+<li><strong>Model:</strong> Uses `eleven_turbo_v2` for speed</li>
+</ul>
+</div>
+
+<h2>Step 2: LipSync AI Animation</h2>
+
+<p>Once you have your voice audio, use LipSync AI to animate your avatar image.</p>
+
+<h3>Platform</h3>
+
+<p><strong>lipSync.video</strong> — No sign-up required for free tier</p>
+
+<h3>What You'll Need Ready</h3>
+
+<ul>
+<li>📷 Your otter avatar image (PNG/JPG, front-facing works best)</li>
+<li>🎵 A 5-second audio file (mp3/wav) with the voice script</li>
+</ul>
+
+<h3>Sample Prompt for LipSync Setup</h3>
+
+<div class="prompt-box">
+<h3>Prompt to Use</h3>
+<blockquote>
+"We need to set up LipSync AI to create a sample animation. Talk me through creating a free 5 second animation of our [otter] avatar using the image and voice script we already created."
+</blockquote>
+</div>
+
+<h3>Step-by-Step Process</h3>
+
+<ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+<li style="margin-bottom: 0.75rem;"><strong>Go to</strong> https://lipsync.video/</li>
+<li style="margin-bottom: 0.75rem;"><strong>Click</strong> "Try AI Lip Sync" — no account needed for basic use</li>
+<li style="margin-bottom: 0.75rem;"><strong>Upload your otter image</strong> — front-facing with clear mouth area works best</li>
+<li style="margin-bottom: 0.75rem;"><strong>Add audio:</strong> Upload your pre-recorded voice file (mp3/wav)</li>
+<li style="margin-bottom: 0.75rem;"><strong>Set duration</strong> to 5 seconds</li>
+<li style="margin-bottom: 0.75rem;"><strong>Click "Generate"</strong> — AI creates the lip-synced animation</li>
+<li style="margin-bottom: 0.75rem;"><strong>Download</strong> your video</li>
+</ol>
+
+<div class="key-point">
+<strong>📝 Note</strong><br>
+The platform works with still images — it animates the mouth to match your audio. For best results, use a clear image where the mouth area is distinct.
+</div>
+
+<h2>Summary</h2>
+
+<p>This workflow enables you to:</p>
+
+<ul>
+<li>Generate voiceovers using ElevenLabs TTS with your API</li>
+<li>Animate your avatar using LipSync AI</li>
+<li>Create engaging content for your ANA milestone coins</li>
+</ul>
+
+<p>The agent can handle the ElevenLabs generation directly. LipSync AI requires your interaction through their web interface.</p>
+
+<div class="footer-nav">
+<a href="08-agentmail-setup.html">← Previous</a>
+<a href="index.html">Home</a>
+</div>
+
+</div>
+</body>
+</html>
