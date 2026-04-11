@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built This - Animated Avatar Project</title>
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    }
+    .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    }
+    header {
+    background-color: #008080;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin: -30px -30px 30px -30px;
+    }
+    header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    }
+    header h2 {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    font-weight: normal;
+    opacity: 0.9;
+    }
+    h3 {
+    color: #008080;
+    margin-top: 30px;
+    border-bottom: 2px solid #008080;
+    padding-bottom: 5px;
+    }
+    ul, ol {
+    margin-left: 20px;
+    }
+    li {
+    margin-bottom: 10px;
+    }
+    .prompt-block {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-left: 4px solid #008080;
+    margin-top: 20px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    }
+    footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How I Built This</h1>
+            <h2>Animated Avatar Project</h2>
+        </header>
+
+        <section id="project-scope">
+            <h3>Project Scope</h3>
+            <p>Create animated avatar videos for Apart Not Alone (ANA) sobriety milestone coins using AI voice generation and lip-sync technology. The goal is to produce engaging 5-second animated content featuring our otter avatar that can be used for social media and marketing.</p>
+        </section>
+
+        <section id="tools-needed">
+            <h3>Tools Needed</h3>
+            <ul>
+                <li><strong>ElevenLabs</strong> - For text-to-speech voice generation (requires API key)</li>
+                <li><strong>LipSync AI</strong> - For creating lip-synced animations from static images</li>
+                <li><strong> Otter avatar image</strong> - PNG/JPG with clear face/mouth area</li>
+                <li><strong>Voice script</strong> - 5-second script for the audio</li>
+            </ul>
+        </section>
+
+        <section id="workflow">
+            <h3>Workflow</h3>
+            <ol>
+                <li><strong>Provide ElevenLabs API key</strong> - Give your API key to the agent for TTS generation</li>
+                <li><strong>Choose a voice</strong> - Select from available voices (Sarah, Laura, Jessica, Bella, etc.)</li>
+                <li><strong>Generate voice audio</strong> - Have the agent create the TTS audio file</li>
+                <li><strong>Go to LipSync AI</strong> - Visit https://lipsync.video/</li>
+                <li><strong>Upload otter image</strong> - Use your avatar image</li>
+                <li><strong>Upload audio</strong> - Use the generated voice file</li>
+                <li><strong>Generate & download</strong> - Create and save the animated video</li>
+            </ol>
+        </section>
+
+        <section id="prompts-used">
+            <h3>Prompts Used</h3>
+            <div class="prompt-block">
+**Prompt for Voice Generation**
+
+"We need to set up ElevenLabs to generate a voice sample for our otter avatar. Generate a 5 second test sample using [voice name] with the script: [your script text here]."
+
+---
+
+**Prompt for LipSync Setup**
+
+"We need to set up LipSync AI to create a sample animation. Talk me through creating a free 5 second animation of our [otter] avatar using the image and voice script we already created."
+            </div>
+        </section>
+
+        <footer>
+            <p>Tutorial created by Blair ANA</p>
+        </footer>
+    </div>
+</body>
+</html>
