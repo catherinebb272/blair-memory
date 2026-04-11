@@ -29,6 +29,17 @@ Skills define how tools work. This file is for your specifics — the stuff that
 - **Bot:** BlairANA
 - **Used for:** Primary communication channel
 
+## Sample Prompts
+
+### LipSync AI Setup
+> "We need to set up LipSync AI to create a sample animation. Talk me through creating a free 5 second animation of our [otter] avatar using the image and voice script we already created."
+
+### ElevenLabs TTS Notes
+
+- **Free tier limitation:** Rapid API calls trigger "unusual activity" detection and disable free tier. Space out requests or upgrade to paid.
+- **API key storage:** Stored in `.env` file as `ELEVENLABS_API_KEY`
+- **Voice IDs:** Can be retrieved via `GET /v1/voices` API call
+
 ## Important File Locations
 - **Workspace:** `/root/.openclaw/workspace/`
 - **Memory files:** `/root/.openclaw/workspace/memory/`
