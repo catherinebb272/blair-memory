@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03 — Communicate with Discord (or Telegram) | Heyron Quick Start</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'IBM Plex Mono', 'Courier New', monospace;
+background: #faf8f3;
+color: #2c241b;
+line-height: 1.7;
+font-size: 15px;
+}
+
+nav {
+background: #fff;
+border-bottom: 2px solid #d4c4a8;
+padding: 1rem;
+position: sticky;
+top: 0;
+z-index: 100;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 0.75rem;
+margin-right: 0.5rem;
+border: 1px solid transparent;
+transition: all 0.2s;
+font-size: 13px;
+}
+
+nav a:hover, nav a.active {
+border-color: #8b7355;
+background: #f5f0e8;
+}
+
+nav a.home { font-weight: 600; color: #2c241b; }
+
+.container {
+max-width: 680px;
+margin: 0 auto;
+padding: 3rem 2rem;
+}
+
+h1 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: #1a1510;
+font-weight: 600;
+}
+
+h2 {
+font-size: 1.3rem;
+margin: 2rem 0 1rem 0;
+color: #2c241b;
+font-weight: 600;
+border-bottom: 1px solid #d4c4a8;
+padding-bottom: 0.5rem;
+}
+
+h3 {
+font-size: 1.1rem;
+margin: 1.5rem 0 0.75rem 0;
+color: #3d3126;
+font-weight: 600;
+}
+
+p { margin-bottom: 1.25rem; }
+
+ul, ol {
+margin-left: 1.5rem;
+margin-bottom: 1.25rem;
+}
+
+li { margin-bottom: 0.5rem; }
+
+.step-box {
+background: #fff;
+border: 2px solid #d4c4a8;
+padding: 1.5rem;
+margin: 1.5rem 0;
+position: relative;
+}
+
+.step-number {
+position: absolute;
+top: -15px;
+left: 20px;
+background: #2c241b;
+color: #faf8f3;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 600;
+font-size: 0.9rem;
+}
+
+.why-it-works {
+background: #f5f0e8;
+border: 1px solid #d4c4a8;
+padding: 1rem;
+margin-top: 1rem;
+font-size: 0.9rem;
+color: #5a4a3a;
+}
+
+.why-it-works h4 {
+font-size: 0.85rem;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+margin-bottom: 0.5rem;
+color: #8b7355;
+}
+
+.warning-inline {
+background: #fff3cd;
+padding: 0.5rem 1rem;
+display: inline-block;
+margin: 0.5rem 0;
+}
+
+.action-prompt {
+background: #f5f0e8;
+border-left: 4px solid #8b7355;
+padding: 1rem;
+margin: 1rem 0;
+font-family: 'IBM Plex Mono', monospace;
+}
+
+.action-prompt strong {
+color: #2c241b;
+}
+
+.analogy-box {
+background: #fff;
+border: 2px solid #8b7355;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.analogy-box h3 {
+color: #2c241b;
+margin-bottom: 1rem;
+}
+
+.code-block {
+background: #f5f0e8;
+border: 1px solid #d4c4a8;
+padding: 1rem;
+margin: 1rem 0;
+font-family: 'IBM Plex Mono', monospace;
+font-size: 13px;
+overflow-x: auto;
+}
+
+.troubleshooting-box {
+background: #fef3e2;
+border: 2px solid #e6a23c;
+padding: 1.5rem;
+margin: 2rem 0;
+}
+
+.troubleshooting-box h3 {
+color: #8b5a00;
+margin-bottom: 1rem;
+}
+
+.troubleshooting-box ol {
+margin-left: 1.25rem;
+}
+
+.troubleshooting-box li {
+margin-bottom: 0.75rem;
+}
+
+.new-method-box {
+background: #e8f5e9;
+border: 2px solid #4caf50;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.new-method-box h3 {
+color: #2e7d32;
+margin-bottom: 0.75rem;
+}
+
+.new-method-box p {
+margin-bottom: 1rem;
+}
+
+.critical-box {
+background: #fff3cd;
+border: 2px solid #ffc107;
+padding: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.critical-box h3 {
+color: #8b5a00;
+margin-bottom: 0.75rem;
+}
+
+.footer-nav {
+margin-top: 3rem;
+padding-top: 2rem;
+border-top: 2px solid #d4c4a8;
+display: flex;
+justify-content: space-between;
+}
+
+.footer-nav a {
+color: #5a4a3a;
+text-decoration: none;
+padding: 0.5rem 1rem;
+border: 1px solid #d4c4a8;
+}
+
+.footer-nav a:hover {
+background: #f5f0e8;
+border-color: #8b7355;
+}
+
+.footer-nav .next { font-weight: 600; }
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="home">Home</a>
+<a href="01-start-here.html">01</a>
+<a href="02-talk-to-agent.html">02</a>
+<a href="03-connect-discord.html" class="active">03</a>
+<a href="04-connect-github.html">04</a>
+<a href="05-about-images.html">05</a>
+<a href="06-memory-deep-dive.html">06</a>
+<a href="07-time-and-cron.html">07</a>
+<a href="08-agentmail-setup.html">08</a>
+</nav>
+
+<div class="container">
+
+<h1>Module 03 — Communicate with Discord (or Telegram)</h1>
+
+<div class="analogy-box">
+<h3>🎮 The Cricut Analogy: Download the Software</h3>
+<p>You bought a Cricut cutting machine, but you can't use it until you install Design Space. <strong>Discord is your Design Space.</strong> It's the persistent interface where conversations live, even when you close the browser tab.</p>
+</div>
+
+<div class="new-method-box">
+<h3>✨ New: Agent-Led Setup (March 2026)</h3>
+<p>Your agent can now set up Discord for you automatically. Just tell it:</p>
+<p><strong>"Connect me to Discord"</strong></p>
+<p>It'll walk you through creating a bot token and wire everything up itself. No manual config edits needed.</p>
+</div>
+
+<h2>What Discord Does (That the Web Chat Doesn't)</h2>
+
+<ul>
+<li><strong>Persistent conversations:</strong> Close your browser, come back tomorrow, history is still there</li>
+<li><strong>Multiple channels:</strong> Separate spaces for different topics or projects</li>
+<li><strong>Rich media:</strong> Images, files, code snippets display properly</li>
+<li><strong>Any device:</strong> Phone, tablet, laptop — all sync</li>
+<li><strong>Notifications:</strong> Agent can ping you when something needs attention</li>
+</ul>
+
+<h2>The Setup (Two Ways)</h2>
+
+<h3>Option A: Let Your Agent Do It (Recommended)</h3>
+
+<p>Simply say to your agent in web chat:</p>
+
+<div class="action-prompt">
+<strong>"Connect me to Discord"</strong>
+</div>
+
+<p>Your agent will:</p>
+<ol>
+<li>Ask you to create a Discord account (if you don't have one)</li>
+<li>Guide you through creating a Discord server</li>
+<li>Walk you through creating a bot in the Discord Developer Portal</li>
+<li>Ask for your bot token and connect it automatically</li>
+</ol>
+
+<div class="critical-box">
+<h3>🔑 Critical Step: Enable Channel Replies</h3>
+<p>After your agent connects, <strong>tell it this exact phrase</strong>:</p>
+<p><strong>"Set Discord groupPolicy to open"</strong></p>
+<p><em>This is the #1 issue users face.</em> Without this, your bot sits silent in channels and won't respond to any messages.</p>
+</div>
+
+<div class="critical-box">
+<h3>🔗 What About That Pairing Code?</h3>
+<p>When you first message your bot, it will reply with a code like <code>ABC123</code>. This is how OpenClaw verifies it's really you.</p>
+<p><strong>Just copy the code and tell your agent:</strong></p>
+<p><strong>"Approve Discord pairing code: ABC123"</strong></p>
+<p>This only happens once.</p>
+</div>
+
+<h3>Option B: Do It Yourself</h3>
+
+<p>If you prefer to understand the full process, here's what your agent does behind the scenes:</p>
+
+<div class="step-box">
+<div class="step-number">1</div>
+<h3>Create Your Discord Account</h3>
+
+<ol>
+<li>Go to <strong>discord.com</strong></li>
+<li>Click <strong>"Sign Up"</strong> or <strong>"Open Discord in Browser"</strong></li>
+<li>Enter your email, create a username, set a password</li>
+<li>Verify your email (check inbox for confirmation link)</li>
+</ol>
+</div>
+
+<div class="step-box">
+<div class="step-number">2</div>
+<h3>Create Your Discord Server</h3>
+
+<ol>
+<li>In Discord, click the <strong>"+"</strong> button in the left sidebar</li>
+<li>Click <strong>"Create My Own"</strong></li>
+<li>Select <strong>"For me and my friends"</strong></li>
+<li>Name it (e.g., "My Agent", "Heyron Workspace")</li>
+<li>Click <strong>"Create"</strong></li>
+</ol>
+</div>
+
+<div class="step-box">
+<div class="step-number">3</div>
+<h3>Enable Server DMs (Required)</h3>
+
+<ol>
+<li><strong>Right-click your server icon</strong> in the left sidebar</li>
+<li>Click <strong>"Privacy Settings"</strong></li>
+<li>Toggle ON <strong>"Allow direct messages from server members"</strong></li>
+</ol>
+<p><em>This lets your bot send you the pairing code. You can disable this later after setup is complete.</em></p>
+</div>
+
+<div class="step-box">
+<div class="step-number">4</div>
+<h3>Create Your Bot</h3>
+
+<ol>
+<li>Go to <strong>discord.com/developers/applications</strong></li>
+<li>Click <strong>"New Application"</strong> (top right)</li>
+<li>Name your bot (e.g., "MyAssistant") and click <strong>"Create"</strong></li>
+<li>Click <strong>"Bot"</strong> in the sidebar</li>
+<li>Click <strong>"Add Bot"</strong> → confirm</li>
+<li>Click <strong>"Reset Token"</strong> and <strong>COPY THE TOKEN</strong></li>
+</ol>
+
+<div class="warning-inline">
+⚠️ Copy the token immediately — you can't see it again without resetting.
+</div>
+
+<div class="troubleshooting-box">
+<h3>🔐 Security Option: Pass Token Without Chat</h3>
+<p>If your agent (or you) doesn't want to paste a token in chat, here's a secure alternative (only works if you have direct edit access to your workspace files):</p>
+<ol>
+<li>Tell your agent: <strong>"Create a file called discord.env in my workspace"</strong></li>
+<li>Open the file in the file browser UI</li>
+<li>Paste your bot token there (format: <code>DISCORD_BOT_TOKEN=your_token_here</code>)</li>
+<li>Press Ctrl+S (or Cmd+S) to save</li>
+<li>Tell your agent: <strong>"Read my discord.env file and connect to Discord"</strong></li>
+</ol>
+<p>Your agent will read the file, connect, and the token stays stored securely in your workspace.</p>
+</div>
+
+<div class="step-box">
+<div class="step-number">5</div>
+<h3>Enable Required Settings</h3>
+
+<ol>
+<li>In Developer Portal, scroll to <strong>"Privileged Gateway Intents"</strong></li>
+<li>Turn ON these three:
+<ul>
+<li><strong>Presence Intent</strong></li>
+<li><strong>Server Members Intent</strong></li>
+<li><strong>Message Content Intent</strong></li>
+</ul>
+</li>
+<li>Click <strong>"Save Changes"</strong></li>
+</ol>
+</div>
+
+<div class="step-box">
+<div class="step-number">6</div>
+<h3>Invite Bot to Your Server</h3>
+
+<ol>
+<li>In Developer Portal, go to <strong>"OAuth2"</strong> → <strong>"URL Generator"</strong></li>
+<li>Under <strong>"Scopes"</strong>, check <strong>"bot"</strong></li>
+<li>Under <strong>"Bot Permissions"</strong>, check:
+<ul>
+<li>Send Messages</li>
+<li>Read Message History</li>
+<li>Attach Files</li>
+<li>Embed Links</li>
+<li>Add Reactions</li>
+</ul>
+</li>
+<li>Copy the generated URL, paste in browser, select your server, authorize</li>
+</ol>
+</div>
+
+<div class="step-box">
+<div class="step-number">7</div>
+<h3>Give Token to Your Agent</h3>
+
+<p>Tell your agent (choose one method):</p>
+
+<div class="action-prompt">
+<strong>Method 1 (direct):</strong> "Connect to Discord. My bot token is: [paste token here]"<br><br>
+<strong>Method 2 (secure file):</strong> "Read my discord.env file and connect to Discord"
+</div>
+
+<p>Your agent will validate the token, connect, and confirm it's working.</p>
+</div>
+
+<div class="step-box">
+<div class="step-number">8</div>
+<h3>Enable Channel Replies (Critical!)</h3>
+
+<p>Tell your agent this exact phrase:</p>
+
+<div class="action-prompt">
+<strong>"Set Discord groupPolicy to open"</strong>
+</div>
+
+<p><em>This is the #1 issue users face.</em> Without this, your bot sits silent in channels and won't respond to any messages.</p>
+</div>
+
+<div class="step-box">
+<div class="step-number">9</div>
+<h3>Approve Pairing Code</h3>
+
+<p>When you first DM your bot, it will reply with a code like <code>ABC123</code>. This is how OpenClaw verifies it's really you.</p>
+<p><strong>Copy the code and tell your agent:</strong></p>
+
+<div class="action-prompt">
+<strong>"Approve Discord pairing code: [paste code here]"</strong>
+</div>
+
+<p>Done! Your bot is now fully connected.</p>
+</div>
+
+<h2>What You Can Do Now</h2>
+
+<p>With Discord connected:</p>
+<ul>
+<li>✅ Close your browser — conversation history persists</li>
+<li>✅ Send images and files easily</li>
+<li>✅ Create multiple channels for different projects</li>
+<li>✅ Access from phone, tablet, or any computer</li>
+<li>✅ Agent can notify you when tasks complete</li>
+</ul>
+
+<h2>Quick Tips</h2>
+
+<ul>
+<li><strong>DM vs Server:</strong> DM your bot directly for private conversations</li>
+<li><strong>Channels:</strong> Create new channels for topics (#project-alpha, #research)</li>
+<li><strong>Mentions:</strong> Type <code>@YourBotName</code> to make sure it notices</li>
+</ul>
+
+<div class="footer-nav">
+<a href="02-talk-to-agent.html">← Module 02</a>
+<a href="04-connect-github.html" class="next">Next: Module 04 →</a>
+</div>
+
+</div>
+</body>
+</html>
