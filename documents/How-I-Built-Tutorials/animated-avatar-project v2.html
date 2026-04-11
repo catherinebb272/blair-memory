@@ -67,6 +67,23 @@
     font-size: 0.9em;
     color: #777;
     }
+    .two-column {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    }
+    .column-left {
+    flex: 3;
+    }
+    .column-right {
+    flex: 1;
+    }
+    .column-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
     </style>
 </head>
 <body>
@@ -81,7 +98,9 @@
             <p>Create animated avatar videos using AI voice generation and lip-sync technology. The goal is to produce engaging 5-second or longer animated content featuring a new or existing avatar that can be used for social media and marketing.</p>
         </section>
 
-        <section id="tools-needed">
+        <div class="two-column">
+            <div class="column-left">
+                <section id="tools-needed">
             <h3>Tools Needed</h3>
             <ul>
                 <li><strong>ElevenLabs</strong> - For text-to-speech voice generation (requires API key)</li>
@@ -106,6 +125,11 @@
                 <li><strong>Generate & download</strong> - Create, edit as allowed, and save the animated video</li>
             </ol>
         </section>
+            </div>
+            <div class="column-right">
+                <img src="https://static.wixstatic.com/media/de450f_51d872a17f574a00b22b35f0796b095f~mv2.png/v1/fill/w_435,h_945,al_c,q_90,enc_avif,quality_auto/de450f_51d872a17f574a00b22b35f0796b095f~mv2.png" alt="Workflow Flowchart">
+            </div>
+        </div>
 
         <section id="prompts-used">
             <h3>Prompts Used</h3>
