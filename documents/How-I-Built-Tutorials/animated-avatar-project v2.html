@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built This - Animated Avatar Project</title>
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    }
+    .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    }
+    header {
+    background-color: #008080;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin: -30px -30px 30px -30px;
+    }
+    header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    }
+    header h2 {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    font-weight: normal;
+    opacity: 0.9;
+    }
+    h3 {
+    color: #008080;
+    margin-top: 30px;
+    border-bottom: 2px solid #008080;
+    padding-bottom: 5px;
+    }
+    ul, ol {
+    margin-left: 20px;
+    }
+    li {
+    margin-bottom: 10px;
+    }
+    .prompt-block {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-left: 4px solid #008080;
+    margin-top: 20px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    }
+    footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How I Built This</h1>
+            <h2>Animated Avatar Project</h2>
+        </header>
+
+        <section id="project-scope">
+            <h3>Project Scope</h3>
+            <p>Create animated avatar videos using AI voice generation and lip-sync technology. The goal is to produce engaging 5-second or longer animated content featuring a new or existing avatar that can be used for social media and marketing.</p>
+        </section>
+
+        <section id="tools-needed">
+            <h3>Tools Needed</h3>
+            <ul>
+                <li><strong>ElevenLabs</strong> - For text-to-speech voice generation (requires API key)</li>
+                <li><strong>LipSync AI</strong> - For creating lip-synced animations from static images</li>
+                <li><strong> ChatGPT or Midjourney</strong> to generate the desired character image</li>
+                <li><strong>Github or email</strong> To store final product</li>
+            </ul>
+        </section>
+
+        <section id="workflow">
+            <h3>Workflow</h3>
+            <ol>
+                <li><strong>Create Avatar image description</strong> Working with the agent, create a prompt that describes the character image you are looking for.  
+		<li><strong>Use Prompt to create image with ChatGPT</strong> or use Midjourney or other image processor to get a static image.Iterate as needed to get a good usable image.
+		<li><strong>Prepare ElevenLabs</strong> -If you have ElevenLabs connected, continue to choose a voice.  Otherwise, sign up, get an API key, and give your API key to the agent for TTS generation</li>
+                <li><strong>Choose a default voice</strong> - Select from available voices (Sarah, Laura, Jessica, Bella, etc.)and give this to your agent</li>
+                <li><strong>Create script</strong> for your avatar to say, using agent input as needed</li>
+		<li>strong>Generate voice audio</strong> - Have the agent use ElevenLabs to make audio file using the script you prepared</li>
+                <li><strong>Animate at LipSync AI</strong> - Visit https://lipsync.video/ and use free trial</li>
+                <li><strong>Upload avatar image</strong> - Use the best avatar image that you saved</li>
+                <li><strong>Upload audio</strong> - Use the generated voice file you saved, trim to 5 seconds</li>
+                <li><strong>Generate & download</strong> - Create, edit as allowed, and save the animated video</li>
+            </ol>
+        </section>
+
+        <section id="prompts-used">
+            <h3>Prompts Used</h3>
+            <div class="prompt-block">
+
+Step 1 - Prompt to create character using an iterative process**
+**Create a prompt I can give to Chat GPT to generate an [otter avatar] suitable for animation. 
+
+Your agent replies: "I can do that.  But first, some questions.  Personality: What kind of personality should this otter have? (e.g., playful, wise, curious, mischievous, calm, energetic),
+Style: What visual style are you going for? (e.g., realistic, cartoony, stylized, cute, more mature),
+Purpose: What will this avatar be used for? (e.g., intro video, ongoing agent representation, just for fun) This can influence the level of detail or expression needed.,
+Specific Traits: Are there any particular otter behaviors or characteristics you'd like to emphasize? (e.g., holding objects, swimming, specific fur markings)
+
+After some back and forth iterating, your agent generates this prompt (or one like it): 
+"Create a realistic, high‑resolution illustration of a standing river otter. The otter should be upright on its hind legs, looking straight ahead with an open, cheerful smile. Its front paws are gently gripping a ripe, bright‑red strawberry. Keep the fur texture soft and natural, the eyes clear and expressive, and the lighting warm and natural‑looking, as if the scene is outdoors near a riverbank. Use the uploaded reference photo for the [otter’s] pose, fur coloration, and overall style, but replace the background with a subtle, soft‑focus natural setting that highlights the otter and the strawberry"
+
+
+**Step 2 - Prompt for Voice Generation**
+
+Ask your agent 
+"We need to use ElevenLabs to generate a voice sample for our [otter] avatar. Generate a 5 second  audio file using [voice name] with the script: [your script text here]OR [ask agent to generate a very short intro speech] for our [otter]{avatar name} and send it to me [by email][via Github][by dropbox, if connected}
+
+If you don't have ElevenLabs configured, use this prompt:
+"Talk me through setting up an ElevenLabs connection, including creating the account, getting an API and selecting a default voice"
+
+If you aren't specific about ElevenLabs, your agent may use a Discord TTS routine without telling you.  It will not sound good.  Read tips in the other training about ElevenLabs.
+---
+
+**Step 3 - Prompt for LipSync Setup**
+
+"Use LipSync AI to create a short animation. Talk me through creating a free 5 second animation of our [otter] avatar using the image and voice script we already created."
+
+You will be talked through the workflow above.
+
+
+
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Tutorial created by Blair ANA</p>
+        </footer>
+    </div>
+</body>
+</html>
