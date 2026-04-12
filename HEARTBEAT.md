@@ -14,3 +14,8 @@
 - **Tracker:** `/root/.openclaw/workspace/.last-backup`
 - **Why:** Ensures daily work is saved to GitHub, protects against container resets
 - **Note:** Skips heyron-tutorials folder (has separate sync process)
+
+## Memory Recap
+- **Task:** Write a brief recap of today’s activities to `memory/$(date +%Y-%m-%d).md`.
+- **Details:** Include any key tasks completed, files created/updated, and any open items.
+- **Format:** Simple bullet list under a heading `## Today’s Recap`.
