@@ -61,6 +61,33 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     }
+    /* Lozenge-style step labels */
+    .step-lozenge {
+    display: inline-block;
+    background-color: #008080;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    }
+    /* Inset box for actual prompts */
+    .prompt-inset {
+    background-color: #2d2d2d;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: inset 3px 3px 8px rgba(0,0,0,0.4);
+    font-size: 0.95em;
+    line-height: 1.5;
+    }
+    .prompt-inset em {
+    color: #aaa;
+    font-style: italic;
+    }
     footer {
     text-align: center;
     margin-top: 40px;
@@ -136,31 +163,39 @@
             <h3>Prompts Used</h3>
             
             <div class="prompt-block">
-                <strong>Step 1: Create Character Prompt</strong>
+                <span class="step-lozenge">Step 1: Create Character Prompt</span>
                 
+                <div class="prompt-inset">
                 "Create a prompt I can give to Chat GPT to generate an [otter avatar] suitable for animation."
+                </div>
                 
-                <br><br>
                 <em>Your agent will ask clarifying questions about personality, style, purpose, and specific traits. After iterating, they'll generate a detailed prompt like:</em>
-                <br><br>
+                
+                <div class="prompt-inset">
                 "Create a realistic, high‑resolution illustration of a standing river otter. The otter should be upright on its hind legs, looking straight ahead with an open, cheerful smile. Its front paws are gently gripping a ripe, bright‑red strawberry..."
+                </div>
             </div>
             
             <div class="prompt-block">
-                <strong>Step 2: Voice Generation</strong>
+                <span class="step-lozenge">Step 2: Voice Generation</span>
                 
+                <div class="prompt-inset">
                 "We need to use ElevenLabs to generate a voice sample for our [otter] avatar. Generate a 5 second audio file using [voice name] with the script: [your script text here]"
+                </div>
                 
-                <br><br>
                 <em>If ElevenLabs isn't configured:</em>
-                <br><br>
+                
+                <div class="prompt-inset">
                 "Talk me through setting up an ElevenLabs connection, including creating the account, getting an API key, and selecting a default voice"
+                </div>
             </div>
             
             <div class="prompt-block">
-                <strong>Step 3: LipSync Setup</strong>
+                <span class="step-lozenge">Step 3: LipSync Setup</span>
                 
+                <div class="prompt-inset">
                 "Use LipSync AI to create a short animation. Talk me through creating a free 5 second animation of our [otter] avatar using the image and voice script we already created."
+                </div>
             </div>
         </section>
 
