@@ -113,7 +113,7 @@
         <section id="workflow">
             <h3>Workflow</h3>
             <ol>
-                <li><strong>Create Avatar image description</strong> Working with the agent, create a prompt that describes the character image you are looking for.  
+                <li><strong>Create Avatar image description</strong> Working with the agent, create a prompt that describes the character image you are looking for.
 		<li><strong>Use Prompt to create image with ChatGPT</strong> or use Midjourney or other image processor to get a static image.Iterate as needed to get a good usable image.
 		<li><strong>Prepare ElevenLabs</strong> -If you have ElevenLabs connected, continue to choose a voice.  Otherwise, sign up, get an API key, and give your API key to the agent for TTS generation</li>
                 <li><strong>Choose a default voice</strong> - Select from available voices (Sarah, Laura, Jessica, Bella, etc.)and give this to your agent</li>
@@ -134,40 +134,33 @@
 
         <section id="prompts-used">
             <h3>Prompts Used</h3>
+            
             <div class="prompt-block">
-
-Step 1 - Prompt to create character using an iterative process**
-**Create a prompt I can give to Chat GPT to generate an [otter avatar] suitable for animation. 
-
-Your agent replies: "I can do that.  But first, some questions.  Personality: What kind of personality should this otter have? (e.g., playful, wise, curious, mischievous, calm, energetic),
-Style: What visual style are you going for? (e.g., realistic, cartoony, stylized, cute, more mature),
-Purpose: What will this avatar be used for? (e.g., intro video, ongoing agent representation, just for fun) This can influence the level of detail or expression needed.,
-Specific Traits: Are there any particular otter behaviors or characteristics you'd like to emphasize? (e.g., holding objects, swimming, specific fur markings)
-
-After some back and forth iterating, your agent generates this prompt (or one like it): 
-"Create a realistic, high‑resolution illustration of a standing river otter. The otter should be upright on its hind legs, looking straight ahead with an open, cheerful smile. Its front paws are gently gripping a ripe, bright‑red strawberry. Keep the fur texture soft and natural, the eyes clear and expressive, and the lighting warm and natural‑looking, as if the scene is outdoors near a riverbank. Use the uploaded reference photo for the [otter’s] pose, fur coloration, and overall style, but replace the background with a subtle, soft‑focus natural setting that highlights the otter and the strawberry"
-
-
-**Step 2 - Prompt for Voice Generation**
-
-Ask your agent 
-"We need to use ElevenLabs to generate a voice sample for our [otter] avatar. Generate a 5 second  audio file using [voice name] with the script: [your script text here]OR [ask agent to generate a very short intro speech] for our [otter]{avatar name} and send it to me [by email][via Github][by dropbox, if connected}
-
-If you don't have ElevenLabs configured, use this prompt:
-"Talk me through setting up an ElevenLabs connection, including creating the account, getting an API and selecting a default voice"
-
-If you aren't specific about ElevenLabs, your agent may use a Discord TTS routine without telling you.  It will not sound good.  Read tips in the other training about ElevenLabs.
----
-
-**Step 3 - Prompt for LipSync Setup**
-
-"Use LipSync AI to create a short animation. Talk me through creating a free 5 second animation of our [otter] avatar using the image and voice script we already created."
-
-You will be talked through the workflow above.
-
-
-
-
+                <strong>Step 1: Create Character Prompt</strong>
+                
+                "Create a prompt I can give to Chat GPT to generate an [otter avatar] suitable for animation."
+                
+                <br><br>
+                <em>Your agent will ask clarifying questions about personality, style, purpose, and specific traits. After iterating, they'll generate a detailed prompt like:</em>
+                <br><br>
+                "Create a realistic, high‑resolution illustration of a standing river otter. The otter should be upright on its hind legs, looking straight ahead with an open, cheerful smile. Its front paws are gently gripping a ripe, bright‑red strawberry..."
+            </div>
+            
+            <div class="prompt-block">
+                <strong>Step 2: Voice Generation</strong>
+                
+                "We need to use ElevenLabs to generate a voice sample for our [otter] avatar. Generate a 5 second audio file using [voice name] with the script: [your script text here]"
+                
+                <br><br>
+                <em>If ElevenLabs isn't configured:</em>
+                <br><br>
+                "Talk me through setting up an ElevenLabs connection, including creating the account, getting an API key, and selecting a default voice"
+            </div>
+            
+            <div class="prompt-block">
+                <strong>Step 3: LipSync Setup</strong>
+                
+                "Use LipSync AI to create a short animation. Talk me through creating a free 5 second animation of our [otter] avatar using the image and voice script we already created."
             </div>
         </section>
 
