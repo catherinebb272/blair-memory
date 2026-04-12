@@ -39,6 +39,15 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * Coin images: `assets/coins/`
 * Gallery page: `coin-gallery.html`
 
+## How I Built It Tutorials
+
+* **Template location:** `documents/How-I-Built-Tutorials/` — use the index.html template for new tutorials
+* **Format:** Teal header (#008080), sections: Project Scope, Tools Needed, Workflow, Prompts Used
+* **Existing tutorials:**
+  * Creating Audio from Family Memoirs using Eleven Labs
+  * Animated Avatar Project (ElevenLabs TTS + LipSync AI)
+* **Use for:** Step-by-step project guides with prompts the user can reuse
+
 ## Preferences
 
 * User is on VPS and needs download links or cloud storage for file access
