@@ -88,6 +88,18 @@
     color: #aaa;
     font-style: italic;
     }
+    .prompt-block p {
+    margin: 8px 0;
+    }
+    .tip-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    }
     footer {
     text-align: center;
     margin-top: 40px;
@@ -169,10 +181,15 @@
                 "Create a prompt I can give to Chat GPT to generate an [otter avatar] suitable for animation."
                 </div>
                 
-                <em>Your agent will ask clarifying questions about personality, style, purpose, and specific traits. After iterating, they'll generate a detailed prompt like:</em>
+                <p><em>Your agent replies with clarifying questions:</em></p>
+                <p><strong>Personality:</strong> What kind of personality should this otter have? (e.g., playful, wise, curious, mischievous, calm, energetic)</p>
+                <p><strong>Style:</strong> What visual style are you going for? (e.g., realistic, cartoony, stylized, cute, more mature)</p>
+                <p><strong>Purpose:</strong> What will this avatar be used for? (e.g., intro video, ongoing agent representation, just for fun)</p>
+                <p><strong>Specific Traits:</strong> Are there any particular otter behaviors or characteristics you'd like to emphasize? (e.g., holding objects, swimming, specific fur markings)</p>
                 
+                <p><em>After iterating, your agent generates a prompt like:</em></p>
                 <div class="prompt-inset">
-                "Create a realistic, high‑resolution illustration of a standing river otter. The otter should be upright on its hind legs, looking straight ahead with an open, cheerful smile. Its front paws are gently gripping a ripe, bright‑red strawberry..."
+                "Create a realistic, high‑resolution illustration of a standing river otter. The otter should be upright on its hind legs, looking straight ahead with an open, cheerful smile. Its front paws are gently gripping a ripe, bright‑red strawberry. Keep the fur texture soft and natural, the eyes clear and expressive, and the lighting warm and natural‑looking, as if the scene is outdoors near a riverbank. Use the uploaded reference photo for the [otter's] pose, fur coloration, and overall style, but replace the background with a subtle, soft‑focus natural setting that highlights the otter and the strawberry"
                 </div>
             </div>
             
@@ -180,14 +197,15 @@
                 <span class="step-lozenge">Step 2: Voice Generation</span>
                 
                 <div class="prompt-inset">
-                "We need to use ElevenLabs to generate a voice sample for our [otter] avatar. Generate a 5 second audio file using [voice name] with the script: [your script text here]"
+                "We need to use ElevenLabs to generate a voice sample for our [otter] avatar. Generate a 5 second audio file using [voice name] with the script: [your script text here] OR [ask agent to generate a very short intro speech] for our [otter] and send it to me [by email][via GitHub][by Dropbox, if connected]"
                 </div>
                 
-                <em>If ElevenLabs isn't configured:</em>
-                
+                <p><em>If ElevenLabs isn't configured:</em></p>
                 <div class="prompt-inset">
                 "Talk me through setting up an ElevenLabs connection, including creating the account, getting an API key, and selecting a default voice"
                 </div>
+                
+                <p class="tip-warning">⚠️ <strong>Tip:</strong> If you aren't specific about ElevenLabs, your agent may use a Discord TTS routine without telling you. It will not sound good.</p>
             </div>
             
             <div class="prompt-block">
@@ -196,6 +214,8 @@
                 <div class="prompt-inset">
                 "Use LipSync AI to create a short animation. Talk me through creating a free 5 second animation of our [otter] avatar using the image and voice script we already created."
                 </div>
+                
+                <p><em>You will be talked through the workflow above.</em></p>
             </div>
         </section>
 
