@@ -1,0 +1,267 @@
+# Heartbeat System Guide (Agent-Based VPS Environment)
+
+## Overview
+
+In this environment, "heartbeat" is not a traditional background scheduler like cron. Instead, it is a **conditional routine that executes when the agent is active** and enough time has passed since the last run.
+
+This distinction is critical.
+
+---
+
+## How Heartbeat Actually Works
+
+### Key Characteristics
+
+* Heartbeat only runs when the agent session is active
+* There is no continuous background process
+* `intervalMinutes` is a *minimum delay*, not a guaranteed trigger
+* Execution timing is **opportunistic**, not exact
+
+### Mental Model
+
+Think of heartbeat as:
+
+> "When I wake up, I check what I should have done, and do it now."
+
+NOT:
+
+> "Run this task every X minutes no matter what."
+
+---
+
+## Active vs Inactive Sessions
+
+### Active Session
+
+* Heartbeat can run
+* Time checks are evaluated
+* Tasks may execute
+
+### Inactive Session
+
+* No code runs at all
+* No timers advance
+* No heartbeat checks occur
+
+### Implication
+
+If the agent is idle:
+
+* Heartbeat pauses completely
+* Scheduled work is delayed
+* Nothing resumes until the agent is triggered again
+
+---
+
+## Why Cron Doesn’t Exist Here
+
+Traditional cron requires:
+
+* Persistent background processes
+* OS-level scheduling
+
+This environment provides neither.
+
+So instead, we simulate scheduling using:
+
+* Time comparisons
+* Persistent state files
+* Execution on wake
+
+---
+
+## The Core Workaround: Persistent Time Tracking
+
+### Problem
+
+Session-based timing resets when the agent restarts.
+
+### Solution
+
+Track timestamps in a file that survives sessions.
+
+### Example File
+
+`CORE/heartbeat_state.json`
+
+```json
+{
+  "last_1h": "2026-04-13T10:00:00",
+  "last_6h": "2026-04-13T06:00:00",
+  "last_12h": "2026-04-13T00:00:00"
+}
+```
+
+### Behavior
+
+On each heartbeat:
+
+1. Load timestamps
+2. Compare to current time
+3. Run overdue tasks
+4. Update timestamps
+
+---
+
+## Catch-Up Execution Model
+
+If the agent was inactive for a long time:
+
+* Missed tasks are not lost
+* They are executed on next activation
+
+### Example
+
+* Last backup: 6 hours ago
+* Agent inactive for 8 hours
+* On next message:
+  → Backup runs immediately
+
+---
+
+## Designing a Stable Heartbeat
+
+### Golden Rules
+
+1. Never assume files or folders exist
+2. Always validate paths before use
+3. Never allow a single failure to stop execution
+4. Avoid reusing cached or temporary paths
+5. Treat each run as independent
+
+---
+
+## Common Failure Modes
+
+### 1. Missing Files or Directories
+
+* Causes immediate crashes
+* Fix: create if missing
+
+### 2. Cached Paths
+
+* Paths from previous runs become invalid
+* Fix: regenerate dynamically
+
+### 3. Script Failures
+
+* External scripts may not run
+* Fix: check existence before execution
+
+### 4. Session Dependency
+
+* No session = no execution
+* Fix: rely on catch-up logic
+
+---
+
+## Example Workflow: Work Preservation System
+
+### Goal
+
+Prevent loss of work due to:
+
+* Agent resets
+* Missed saves
+* Container restarts
+
+---
+
+### Step 1: Hourly Check
+
+* Summarize current session activity
+* Write to daily log file
+
+Example:
+
+`CORE/memory/YYYY-MM-DD.md`
+
+Content:
+
+* Tasks completed
+* Files modified
+* Decisions made
+* Open items
+
+---
+
+### Step 2: 6-Hour Backup
+
+* Run backup script
+* Verify backup exists
+
+If script missing:
+
+* Skip safely
+* Log issue
+
+---
+
+### Step 3: 12-Hour Verification
+
+* Confirm logs exist
+* Confirm backups exist
+* Validate system structure
+
+---
+
+### Step 4: Recovery Behavior
+
+If system was inactive:
+
+* Run all overdue steps
+* Do not repeat steps multiple times
+* Resume normal tracking
+
+---
+
+## Example Execution Timeline
+
+| Time  | Event                                   |
+| ----- | --------------------------------------- |
+| 10:00 | Heartbeat runs                          |
+| 11:00 | Runs again                              |
+| 12:00 | Agent goes idle                         |
+| 18:00 | User returns                            |
+| 18:00 | Heartbeat runs → triggers 6-hour backup |
+
+---
+
+## Design Philosophy
+
+A robust heartbeat system should be:
+
+* Stateless between runs (or safely stateful)
+* Tolerant of missing data
+* Able to recover from interruption
+* Independent of session continuity
+
+---
+
+## Key Takeaway
+
+This is not a scheduler.
+
+It is a:
+
+> "Wake-triggered recovery system with memory."
+
+Design everything around that idea.
+
+---
+
+## Optional Enhancements
+
+* External pings to wake the agent
+* Secondary monitoring agent
+* More granular state tracking
+
+---
+
+## Final Principle
+
+Never design heartbeat logic that assumes it will run on time.
+
+Always design it to:
+
+> Run late, recover gracefully, and continue forward.
