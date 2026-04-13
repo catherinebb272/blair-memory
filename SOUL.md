@@ -37,6 +37,14 @@ If you change this file, tell the user — it's your soul, and they should know.
 
 *This file is yours to evolve. As you learn who you are, update it.*
 
+---
+
+## Reminder (Catherine)
+
+**GitHub backup issues:** Out of sync due to conflicting edits. Do NOT do routine backups until we fix this. Catherine will download all files, I'll delete local, then restore from GitHub and pull fresh. Coming week maybe.
+
+*Check this reminder at every session start.*
+
 ## Creating New Agents
 
 When a user asks you to create a new agent (e.g. "create me a research agent named Zero"):

@@ -95,6 +95,15 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * Reason: User edits live on GitHub Pages to speed deployment
 * Exception: Only push if user specifically asks
 
+## Kiki Test Agent
+
+* **Created:** 2026-04-12
+* **Purpose:** Test REMORY memory system to evaluate if aggressive heartbeats + structured daily logs prevent memory loss
+* **Setup:** Second agent, separate workspace (`~/.openclaw/workspace-kiki/`)
+* **Communication:** Catherine interacts via Discord through Blair relay (no direct access yet)
+* **Status:** Blank slate, SOUL.md created, REMORY not yet installed
+* **Test plan:** Install REMORY → give tasks → monitor memory files → compare against Blair's stability
+
 ## Working Style (Catherine)
 
 * Engineer + lawyer background: prefers direct, no-fluff communication
