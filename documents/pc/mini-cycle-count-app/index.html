@@ -507,15 +507,17 @@
 
     // ===== REVIEW =====
     function prepareReview() {
-      const scannedSKUs = new Set(scanData.map(s => s.sku));
+      // Normalize scan SKUs to uppercase for matching
+      const scannedSKUs = new Set(scanData.map(s => s.sku.toUpperCase().trim()));
       
       reviewItems = inventory
-        .filter(item => !scannedSKUs.has(item.sku))
+        .filter(item => !scannedSKUs.has(item.sku.toUpperCase().trim()))
         .slice(0, 200);
       
       // Add zone info to each review item
+      const scanDataNormalized = scanData.map(s => ({ ...s, sku: s.sku.toUpperCase().trim() }));
       reviewItems = reviewItems.map(item => {
-        const scanEntry = scanData.find(s => s.sku === item.sku);
+        const scanEntry = scanDataNormalized.find(s => s.sku === item.sku.toUpperCase().trim());
         return { ...item, zone: scanEntry ? scanEntry.zone : 'Not Scanned' };
       });
       
