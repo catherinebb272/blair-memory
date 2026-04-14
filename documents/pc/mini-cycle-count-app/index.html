@@ -326,8 +326,8 @@
     }
 
     function nextScreen() {
-      if (currentScreen === 2) prepareReview();
-      if (currentScreen === 3) prepareExport();
+      if (currentScreen === 1) prepareReview(); // Going to scan -> review
+      if (currentScreen === 2) prepareExport(); // Going to review -> export
       if (currentScreen < screens.length - 1) showScreen(currentScreen + 1);
     }
 
