@@ -363,7 +363,7 @@
         // Find column indexes
         const findCol = (patterns) => headers.find(h => patterns.some(p => h.toLowerCase().includes(p)));
         const skuCol = findCol(['ski', 'sku', 'item id', 'item', 'sku no']);
-        const descCol = findCol(['description', 'desc', 'name', 'model']);
+        const descCol = findCol(['description', 'long description', 'desc', 'name', 'model', 'product']);
         const costCol = findCol(['drs cost', 'cost', 'buy cost']);
         const retailCol = findCol(['drs retail', 'current retail', 'retail', 'price', 'list price']);
         const brandCol = findCol(['brand', 'brand description', 'manufacturer']);
