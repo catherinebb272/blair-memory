@@ -588,31 +588,54 @@
             MISSING - In file but not scanned
           </div>
           <div style="display: flex; gap: 12px; margin-top: 16px;">
-            <button class="btn btn-success" onclick="acceptItem(${currentReviewIndex})">✓ Accept Write-Off</button>
-            <button class="btn btn-ghost" onclick="skipItem(${currentReviewIndex})">✗ Skip</button>
+            <button class="btn btn-success" onclick="acceptItem()">✓ Accept Write-Off</button>
+            <button class="btn btn-ghost" onclick="skipItem()">✗ Skip</button>
+          </div>
+          <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #e5e7eb;">
+            <button class="btn btn-ghost btn-small" onclick="prevItem()">← Previous</button>
+            <span style="margin: 0 12px; color: #6b7280;">${currentReviewIndex + 1} of ${reviewItems.length}</span>
+            <button class="btn btn-ghost btn-small" onclick="nextItem()">Next →</button>
           </div>
         </div>
       `;
       
       document.onkeydown = (e) => {
-        if (e.key === 'ArrowRight') acceptItem(currentReviewIndex);
-        if (e.key === 'ArrowLeft') skipItem(currentReviewIndex);
+        if (e.key === 'ArrowRight') acceptItem();
+        if (e.key === 'ArrowLeft') skipItem();
+        if (e.key === 'ArrowUp') prevItem();
+        if (e.key === 'ArrowDown') nextItem();
       };
     }
 
-    function acceptItem(index) {
-      const item = reviewItems[index];
+    function acceptItem() {
+      const item = reviewItems[currentReviewIndex];
       decisions[item.sku] = 'accepted';
       showToast('Accepted', 'success');
       currentReviewIndex++;
+      if (currentReviewIndex >= reviewItems.length) currentReviewIndex = reviewItems.length - 1;
       renderReviewItem();
     }
 
-    function skipItem(index) {
-      const item = reviewItems[index];
+    function skipItem() {
+      const item = reviewItems[currentReviewIndex];
       decisions[item.sku] = 'skipped';
       currentReviewIndex++;
+      if (currentReviewIndex >= reviewItems.length) currentReviewIndex = reviewItems.length - 1;
       renderReviewItem();
+    }
+    
+    function prevItem() {
+      if (currentReviewIndex > 0) {
+        currentReviewIndex--;
+        renderReviewItem();
+      }
+    }
+    
+    function nextItem() {
+      if (currentReviewIndex < reviewItems.length - 1) {
+        currentReviewIndex++;
+        renderReviewItem();
+      }
     }
 
     document.getElementById('btn-accept-all').addEventListener('click', () => {
