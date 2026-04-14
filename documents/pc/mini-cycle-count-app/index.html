@@ -422,11 +422,26 @@
 
     function handleScanDataFile(file) {
       if (!file) return;
+      
+      const isHeaderRow = (row) => {
+        const firstCell = String(row[0] || '').toLowerCase().trim();
+        const headerWords = ['sku', 'zone', 'item', 'scan', 'barcode', 'description'];
+        return headerWords.some(w => firstCell === w || firstCell.includes(w + ' '));
+      };
+      
       Papa.parse(file, {
-        header: false, // Column A = SKU, Column B = Zone
+        header: false,
         skipEmptyLines: true,
         complete: results => {
-          scanData = results.data.map(row => ({
+          let rows = results.data;
+          
+          // Skip header row if detected
+          if (rows.length > 0 && isHeaderRow(rows[0])) {
+            rows = rows.slice(1);
+            showToast('Header row detected and skipped', 'info');
+          }
+          
+          scanData = rows.map(row => ({
             sku: String(row[0] || '').trim().toUpperCase(),
             zone: row[1] ? String(row[1]).trim() : 'Unassigned'
           })).filter(item => item.sku);
