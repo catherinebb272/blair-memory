@@ -96,7 +96,11 @@
   <div class="container">
     <!-- Progress Bar -->
     <div class="progress-bar">
-      <div class="progress-step active" data-step="1">
+      <div class="progress-step" data-step="0">
+        <div class="circle">🪙</div>
+        <div class="label">Start</div>
+      </div>
+      <div class="progress-step" data-step="1">
         <div class="circle">1</div>
         <div class="label">Upload</div>
       </div>
@@ -114,8 +118,122 @@
       </div>
     </div>
 
+    <!-- Screen 0: Splash -->
+    <div class="screen" id="screen-splash">
+      <!-- Hero with Plato's Closet branding -->
+      <div style="text-align: center; padding: 24px 0;">
+        <div style="display: inline-block; background: #000; padding: 16px 24px; border-radius: 8px; margin-bottom: 24px;">
+          <div style="font-size: 32px; font-weight: bold; letter-spacing: 2px;">
+            <span style="color: #DC2626;">PLATO'S</span>
+            <span style="color: #fff;">CLOSET</span>
+          </div>
+        </div>
+        
+        <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 12px; color: #1F2937;">
+          AI Powered Cycle Count Program
+        </h1>
+        <p style="font-size: 18px; color: #4B5563; max-width: 600px; margin: 0 auto;">
+          Targeted inventory counts that fit your schedule — not your budget
+        </p>
+      </div>
+
+      <!-- How It Works -->
+      <div class="card">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 16px; color: #1E40AF;">How It Works</h2>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: center;">
+          <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+            <div style="font-size: 24px; margin-bottom: 8px;">📄</div>
+            <div style="font-weight: 600; color: #1F2937;">1. Export</div>
+            <div style="font-size: 12px; color: #6b7280;">Pull 3 files from DRS</div>
+          </div>
+          <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+            <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
+            <div style="font-weight: 600; color: #1F2937;">2. Scan</div>
+            <div style="font-size: 12px; color: #6b7280;">Walk the floor with scanner</div>
+          </div>
+          <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+            <div style="font-size: 24px; margin-bottom: 8px;">✅</div>
+            <div style="font-weight: 600; color: #1F2937;">3. Review</div>
+            <div style="font-size: 12px; color: #6b7280;">Approve write-offs</div>
+          </div>
+          <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+            <div style="font-size: 24px; margin-bottom: 8px;">📤</div>
+            <div style="font-weight: 600; color: #1F2937;">4. Export</div>
+            <div style="font-size: 12px; color: #6b7280;">Send results to DRS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Files Needed from DRS -->
+      <div class="card">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 16px; color: #1E40AF;">What You Need from DRS</h2>
+        <p style="margin-bottom: 16px; color: #4B5563;">You'll export three reports from DRS to get started:</p>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #1E40AF;">
+            <span style="font-size: 20px;">📋</span>
+            <div>
+              <div style="font-weight: 600; color: #1F2937;">1. Item Buy Detail</div>
+              <div style="font-size: 14px; color: #6b7280;">Your master inventory list — SKU, description, cost, retail, buy date</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #1E40AF;">
+            <span style="font-size: 20px;">📊</span>
+            <div>
+              <div style="font-weight: 600; color: #1F2937;">2. Inventory On Hand Report</div>
+              <div style="font-size: 14px; color: #6b7280;">Shows what's currently in the system — we compare this against what you scan</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #1E40AF;">
+            <span style="font-size: 20px;">🏷️</span>
+            <div>
+              <div style="font-weight: 600; color: #1F2937;">3. Pre-Count Report (Optional)</div>
+              <div style="font-size: 14px; color: #6b7280;">If you've done a partial precount, upload it to cross-check results</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barcode Sheets -->
+      <div class="card" style="background: linear-gradient(90deg, #1F2937, #374151); color: #fff;">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 16px;">Need to Scan Items Fast?</h2>
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: center;">
+          <div>
+            <p style="color: #D1D5DB; margin-bottom: 16px;">
+              Generate a printable barcode sheet from your target items. Print it out, walk the floor, 
+              and scan items directly off the sheet — no digging through racks needed.
+            </p>
+            <ul style="list-style: none; color: #9CA3AF;">
+              <li style="margin-bottom: 8px;">• Print barcode sheets for specific categories</li>
+              <li style="margin-bottom: 8px;">• Focus on high-value or high-turn items</li>
+              <li>• Works with any USB or Bluetooth scanner</li>
+            </ul>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 48px; margin-bottom: 8px;">🖨️</div>
+            <div style="font-weight: 600;">Barcode Sheet Generator</div>
+            <div style="font-size: 12px; color: #9CA3AF;">Available in export step</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Caveats -->
+      <div class="card" style="border: 2px solid #F59E0B; background: #FFFBEB;">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #92400E;">⚠️ Important</h2>
+        <ul style="list-style: none; color: #92400E;">
+          <li style="margin-bottom: 8px;">• <strong>Not a substitute for full physical inventory</strong> — This tool helps you catch drift and manage shrinkage between counts, but it won't replace a proper RGIS or Datascan full count.</li>
+          <li style="margin-bottom: 8px;">• <strong>Use results cautiously</strong> — Always verify high-value items before writing off. When in doubt, skip it and investigate manually.</li>
+          <li>• <strong>Best for targeted counts</strong> — Ideal for monthly category checks, pre-clearance verification, or tracking specific bins.</li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align: center;">
+        <button class="btn btn-primary" id="btn-splash-next" style="font-size: 18px; padding: 16px 40px;">Let's Get Started →</button>
+      </div>
+    </div>
+
     <!-- Screen 1: Upload -->
-    <div class="screen active" id="screen-upload">
+    <div class="screen" id="screen-upload">
       <div class="card">
         <h2>📁 Step 1: Upload Your Files</h2>
         <p style="margin-bottom: 16px; color: #6b7280;">You need two files to run a zone-based count.</p>
@@ -285,6 +403,55 @@
         </div>
       </div>
       
+      <!-- Duplicate Scan Log -->
+      <div class="card" style="border: 2px solid #F97316;">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 16px; color: #1F2937;">📋 Duplicate Scan Log</h2>
+        <p style="font-size: 14px; color: #6b7280; margin-bottom: 16px;">
+          Records of items scanned that match previous scans. Threshold settings: Nearby duplicates within 5 items, repeated chunks of 8.
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px;">
+          <div style="padding: 12px; background: #FFF7ED; border-radius: 8px; text-align: center;">
+            <div style="font-size: 24px; font-weight: bold; color: #EA580C;" id="dup-chunk-count">0</div>
+            <div style="font-size: 12px; color: #6b7280;">Repeated Chunks</div>
+          </div>
+          <div style="padding: 12px; background: #FFFBEB; border-radius: 8px; text-align: center;">
+            <div style="font-size: 24px; font-weight: bold; color: #D97706;" id="dup-nearby-count">0</div>
+            <div style="font-size: 12px; color: #6b7280;">Nearby Duplicates</div>
+          </div>
+          <div style="padding: 12px; background: #FEF2F2; border-radius: 8px; text-align: center;">
+            <div style="font-size: 24px; font-weight: bold; color: #DC2626;" id="dup-exact-count">0</div>
+            <div style="font-size: 12px; color: #6b7280;">Exact Duplicates</div>
+          </div>
+        </div>
+
+        <div id="dup-log-list" style="max-height: 150px; overflow-y: auto; border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 16px; display: none;">
+          <table style="font-size: 12px;">
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th>Position</th>
+                <th>Issue</th>
+              </tr>
+            </thead>
+            <tbody id="dup-log-table"></tbody>
+          </table>
+        </div>
+
+        <button class="btn btn-secondary" id="btn-download-dup-log" style="width: 100%;">Download Duplicate Scan Log</button>
+      </div>
+
+      <!-- 2 OH Write-Up Candidates -->
+      <div class="card" style="border: 2px solid #FBBF24; background: #FEFCE8;">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 16px; color: #1F2937;">📈 2 OH Write-Up Candidates</h2>
+        <p style="font-size: 14px; color: #6b7280; margin-bottom: 16px;">
+          Items with exactly 2 on-hand that may need inventory written up. (Populated after inventory file comparison)
+        </p>
+        <div style="text-align: center; padding: 24px; color: #6b7280;">
+          ℹ️ This section will be populated after comparing scanned items against your inventory file. Run a cycle count to generate this list.
+        </div>
+      </div>
+      
       <div class="nav-buttons">
         <button class="btn btn-secondary" id="btn-export-back">← Back</button>
         <button class="btn btn-success" id="btn-finish">Finish</button>
@@ -300,7 +467,11 @@
   <script>
     // State
     let inventory = []; // Items from DRS file
-    let scanData = []; // {sku, zone} from scan file
+    let scanData = []; // {sku, zone, isDuplicate, isNearbyDuplicate, isRepeatedChunk} from scan file
+    
+    // Duplicate detection config
+    const NEARBY_DUPLICATE_THRESHOLD = 5;  // Duplicates within X items of each other
+    const EXACT_CHUNK_THRESHOLD = 8;       // Same chunk scanned twice
     let currentZone = null;
     let zones = {}; // zone -> count
     let reviewItems = [];
@@ -308,7 +479,7 @@
     let decisions = {};
 
     // Screen navigation
-    const screens = ['upload', 'scan', 'review', 'export'];
+    const screens = ['splash', 'upload', 'scan', 'review', 'export'];
     let currentScreen = 0;
 
     function showScreen(index) {
@@ -326,14 +497,19 @@
     }
 
     function nextScreen() {
-      if (currentScreen === 1) prepareReview(); // Going to scan -> review
-      if (currentScreen === 2) prepareExport(); // Going to review -> export
+      if (currentScreen === 2) prepareReview(); // Going to scan -> review
+      if (currentScreen === 3) prepareExport(); // Going to review -> export
       if (currentScreen < screens.length - 1) showScreen(currentScreen + 1);
     }
 
     function prevScreen() {
       if (currentScreen > 0) showScreen(currentScreen - 1);
     }
+
+    // Splash screen button
+    document.getElementById('btn-splash-next').addEventListener('click', () => {
+      showScreen(1);
+    });
 
     // ===== INVENTORY FILE =====
     const invZone = document.getElementById('inventory-zone');
@@ -441,10 +617,34 @@
             showToast('Header row detected and skipped', 'info');
           }
           
-          scanData = rows.map(row => ({
-            sku: String(row[0] || '').trim().toUpperCase(),
-            zone: row[1] ? String(row[1]).trim() : 'Unassigned'
-          })).filter(item => item.sku);
+          scanData = rows.map((row, idx) => {
+            const sku = String(row[0] || '').trim().toUpperCase();
+            const zone = row[1] ? String(row[1]).trim() : 'Unassigned';
+            
+            // Check for exact duplicate
+            const isDuplicate = scanData.some(s => s.sku === sku);
+            
+            // Check for nearby duplicate (within threshold)
+            const nearbyItems = scanData.slice(-NEARBY_DUPLICATE_THRESHOLD);
+            const isNearbyDuplicate = nearbyItems.some(s => s.sku === sku);
+            
+            // Check for repeated chunk
+            let isRepeatedChunk = false;
+            if (scanData.length >= EXACT_CHUNK_THRESHOLD) {
+              const lastChunk = scanData.slice(-EXACT_CHUNK_THRESHOLD).map(s => s.sku).join(',');
+              const newChunk = [...scanData.slice(-EXACT_CHUNK_THRESHOLD + 1).map(s => s.sku), sku].join(',');
+              isRepeatedChunk = lastChunk === newChunk;
+            }
+            
+            return { 
+              sku, 
+              zone, 
+              isDuplicate, 
+              isNearbyDuplicate: isNearbyDuplicate && !isDuplicate,
+              isRepeatedChunk,
+              scanPosition: idx 
+            };
+          }).filter(item => item.sku);
           
           // Count zones
           zones = {};
@@ -477,7 +677,26 @@
         e.preventDefault();
         const sku = scanInputField.value.trim().toUpperCase();
         if (sku) {
-          scanData.push({ sku, zone: currentZone || 'Unassigned' });
+          const currentPos = scanData.length;
+          const isDuplicate = scanData.some(s => s.sku === sku);
+          const nearbyItems = scanData.slice(-NEARBY_DUPLICATE_THRESHOLD);
+          const isNearbyDuplicate = nearbyItems.some(s => s.sku === sku);
+          
+          let isRepeatedChunk = false;
+          if (scanData.length >= EXACT_CHUNK_THRESHOLD) {
+            const lastChunk = scanData.slice(-EXACT_CHUNK_THRESHOLD).map(s => s.sku).join(',');
+            const newChunk = [...scanData.slice(-EXACT_CHUNK_THRESHOLD + 1).map(s => s.sku), sku].join(',');
+            isRepeatedChunk = lastChunk === newChunk;
+          }
+          
+          scanData.push({ 
+            sku, 
+            zone: currentZone || 'Unassigned',
+            isDuplicate,
+            isNearbyDuplicate: isNearbyDuplicate && !isDuplicate,
+            isRepeatedChunk,
+            scanPosition: currentPos
+          });
           zones[currentZone || 'Unassigned'] = (zones[currentZone || 'Unassigned'] || 0) + 1;
           scanInputField.value = '';
           updateScanCount();
@@ -687,6 +906,34 @@
           <td>$${item.cost.toFixed(2)}</td>
         </tr>
       `).join('');
+      
+      // Populate duplicate scan log
+      const duplicateItems = scanData.filter(item => item.isDuplicate || item.isNearbyDuplicate || item.isRepeatedChunk);
+      const repeatedChunks = scanData.filter(item => item.isRepeatedChunk);
+      const nearbyDuplicates = scanData.filter(item => item.isNearbyDuplicate);
+      const exactDuplicates = scanData.filter(item => item.isDuplicate);
+      
+      document.getElementById('dup-chunk-count').textContent = repeatedChunks.length;
+      document.getElementById('dup-nearby-count').textContent = nearbyDuplicates.length;
+      document.getElementById('dup-exact-count').textContent = exactDuplicates.length;
+      
+      const dupTable = document.getElementById('dup-log-table');
+      const dupLogList = document.getElementById('dup-log-list');
+      
+      if (duplicateItems.length > 0) {
+        dupLogList.style.display = 'block';
+        dupTable.innerHTML = duplicateItems.slice(0, 20).map(item => `
+          <tr>
+            <td style="font-family: monospace;">${item.sku}</td>
+            <td>${item.scanPosition || 0}</td>
+            <td style="color: ${item.isRepeatedChunk ? '#EA580C' : item.isNearbyDuplicate ? '#D97706' : '#DC2626'}; font-weight: 500;">
+              ${item.isRepeatedChunk ? 'REPEATED CHUNK' : item.isNearbyDuplicate ? 'NEARBY' : 'DUPLICATE'}
+            </td>
+          </tr>
+        `).join('');
+      } else {
+        dupLogList.style.display = 'none';
+      }
     }
 
     document.getElementById('btn-download-csv').addEventListener('click', () => {
@@ -727,6 +974,24 @@
       
       downloadBlob(csv, `zone_report_${new Date().toISOString().split('T')[0]}.csv`);
       showToast('Zone report downloaded', 'success');
+    });
+
+    // Download duplicate scan log
+    document.getElementById('btn-download-dup-log').addEventListener('click', () => {
+      const duplicateItems = scanData.filter(item => item.isDuplicate || item.isNearbyDuplicate || item.isRepeatedChunk);
+      if (duplicateItems.length === 0) { showToast('No duplicates to export', 'info'); return; }
+      
+      const headers = ['SKU', 'Scan Position', 'Issue Type', 'Notes'];
+      const rows = duplicateItems.map(item => [
+        item.sku,
+        item.scanPosition || 0,
+        item.isRepeatedChunk ? 'REPEATED_CHUNK' : item.isNearbyDuplicate ? 'NEARBY_DUPLICATE' : 'EXACT_DUPLICATE',
+        item.isRepeatedChunk ? `Same ${EXACT_CHUNK_THRESHOLD} items scanned twice` : item.isNearbyDuplicate ? `Within ${NEARBY_DUPLICATE_THRESHOLD} scans` : 'Already scanned'
+      ]);
+      
+      const csv = [headers.join(','), ...rows.map(row => row.join(','))].join('\n');
+      downloadBlob(csv, `duplicate_scan_log_${new Date().toISOString().split('T')[0]}.csv`);
+      showToast('Duplicate scan log downloaded', 'success');
     });
 
     function downloadBlob(content, filename) {
