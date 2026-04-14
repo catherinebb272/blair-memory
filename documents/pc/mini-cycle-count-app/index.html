@@ -461,9 +461,13 @@
     }
 
     function checkReady() {
-      const ready = inventory.length > 0 && scanData.length > 0;
+      // Allow proceed if inventory is loaded (scan data is optional)
+      const ready = inventory.length > 0;
       document.getElementById('btn-upload-next').disabled = !ready;
-      if (ready) showToast('Both files loaded!', 'success');
+      if (inventory.length > 0) {
+        const msg = scanData.length > 0 ? 'Both files loaded!' : 'Inventory loaded! You can also scan directly.';
+        showToast(msg, 'success');
+      }
     }
 
     // ===== REAL-TIME SCANNING =====
