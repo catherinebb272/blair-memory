@@ -13,6 +13,7 @@
     /* Cards */
     .card { background: #fff; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 24px; margin-bottom: 24px; }
     .card h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: #1E40AF; }
+    .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 12px; color: #475569; }
     
     /* Buttons */
     .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: 8px; font-weight: 500; cursor: pointer; border: none; font-size: 16px; transition: all 0.2s; }
@@ -25,10 +26,11 @@
     .btn-secondary:hover { background: #334155; }
     .btn-ghost { background: transparent; color: #6b7280; }
     .btn-ghost:hover { background: #f3f4f6; }
+    .btn-small { padding: 8px 16px; font-size: 14px; }
     
     /* Forms */
     input, select { padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; width: 100%; }
-    input:focus, select:focus { outline: none; border-color: #1E40AF; ring: 2px solid #1E40AF; }
+    input:focus, select:focus { outline: none; border-color: #1E40AF; box-shadow: 0 0 0 2px rgba(30,64,175,0.2); }
     
     /* Progress bar */
     .progress-bar { display: flex; justify-content: space-between; margin-bottom: 32px; position: relative; }
@@ -51,31 +53,15 @@
     .scan-count { text-align: center; font-size: 18px; margin: 16px 0; }
     .scan-count strong { color: #1E40AF; font-size: 24px; }
     
-    /* Review items */
-    .item-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
-    .item-card.missing { border-left: 4px solid #dc2626; }
-    .item-card.not-in-file { border-left: 4px solid #f59e0b; }
-    .item-card.scanned { border-left: 4px solid #059669; }
-    .item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .item-brand { font-weight: 600; color: #1E40AF; }
-    .item-sku { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #6b7280; }
-    .item-details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 14px; }
-    .item-details span { color: #6b7280; }
-    .item-details strong { color: #1F2937; }
-    .item-status { margin-top: 12px; padding: 8px; border-radius: 4px; font-size: 14px; font-weight: 500; }
-    .item-status.missing { background: #fef2f2; color: #dc2626; }
-    .item-status.not-in-file { background: #fffbeb; color: #f59e0b; }
-    .item-actions { display: flex; gap: 12px; margin-top: 16px; }
-    .item-actions .btn { flex: 1; }
+    /* Zone indicator */
+    .zone-badge { display: inline-block; background: #1E40AF; color: #fff; padding: 4px 12px; border-radius: 16px; font-size: 14px; font-weight: 500; margin-left: 8px; }
     
-    /* Summary stats */
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: center; }
-    .stat-box { padding: 16px; background: #f8fafc; border-radius: 8px; }
-    .stat-box .value { font-size: 24px; font-weight: 600; color: #1E40AF; }
-    .stat-box .label { font-size: 12px; color: #6b7280; }
+    /* Scan data upload */
+    .scan-data-upload { border: 2px dashed #059669; border-radius: 12px; padding: 24px; text-align: center; cursor: pointer; background: #f0fdf4; }
+    .scan-data-upload:hover { background: #dcfce7; }
     
     /* Tables */
-    table { width: 100%; border-collapse: collapse; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; }
     th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
     th { background: #f8fafc; font-weight: 600; font-size: 14px; }
     
@@ -84,20 +70,26 @@
     .screen.active { display: block; }
     
     /* Toast */
-    .toast { position: fixed; bottom: 24px; right: 24px; padding: 12px 24px; border-radius: 8px; color: #fff; font-weight: 500; transform: translateY(100px); opacity: 0; transition: all 0.3s; }
+    .toast { position: fixed; bottom: 24px; right: 24px; padding: 12px 24px; border-radius: 8px; color: #fff; font-weight: 500; transform: translateY(100px); opacity: 0; transition: all 0.3s; z-index: 1000; }
     .toast.show { transform: translateY(0); opacity: 1; }
     .toast.success { background: #059669; }
     .toast.error { background: #dc2626; }
+    .toast.info { background: #1E40AF; }
     
-    /* Recent scans list */
-    .recent-scans { max-height: 200px; overflow-y: auto; border: 1px solid #e5e7eb; border-radius: 8px; margin-top: 16px; }
-    .recent-scan-item { padding: 8px 12px; border-bottom: 1px solid #e5e7eb; font-family: 'JetBrains Mono', monospace; font-size: 14px; display: flex; justify-content: space-between; }
-    .recent-scan-item:last-child { border-bottom: none; }
-    
-    /* Navigation buttons */
-    .nav-buttons { display: flex; justify-content: space-between; margin-top: 24px; padding-top: 24px; border-top: 1px solid #e5e7eb; }
+    /* Stats grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: center; }
+    .stat-box { padding: 16px; background: #f8fafc; border-radius: 8px; }
+    .stat-box .value { font-size: 24px; font-weight: 600; color: #1E40AF; }
+    .stat-box .label { font-size: 12px; color: #6b7280; }
     
     .progress-indicator { text-align: center; margin-bottom: 16px; color: #6b7280; font-size: 14px; }
+    
+    .nav-buttons { display: flex; justify-content: space-between; margin-top: 24px; padding-top: 24px; border-top: 1px solid #e5e7eb; }
+    
+    /* Zone summary */
+    .zone-summary { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .zone-tag { background: #e5e7eb; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+    .zone-tag.active { background: #1E40AF; color: #fff; }
   </style>
 </head>
 <body>
@@ -125,19 +117,33 @@
     <!-- Screen 1: Upload -->
     <div class="screen active" id="screen-upload">
       <div class="card">
-        <h2>📁 Step 1: Upload Your Inventory File</h2>
-        <p style="margin-bottom: 16px; color: #6b7280;">Upload your DRS Item Buy Detail report (CSV or Excel). This gives us the list of items supposed to be in the store.</p>
+        <h2>📁 Step 1: Upload Your Files</h2>
+        <p style="margin-bottom: 16px; color: #6b7280;">You need two files to run a zone-based count.</p>
         
-        <div class="upload-zone" id="upload-zone">
-          <div class="icon">📂</div>
-          <p>Drag & drop your file here<br>or click to browse</p>
-          <p style="font-size: 14px;">Supported: .csv, .xlsx</p>
-          <input type="file" id="file-input" accept=".csv,.xlsx" style="display: none;">
+        <h3>1. Inventory File (DRS Export)</h3>
+        <div class="upload-zone" id="inventory-zone">
+          <div class="icon">📋</div>
+          <p>Drag & drop your DRS Item Buy Detail CSV<br>or click to browse</p>
+          <input type="file" id="inventory-input" accept=".csv" style="display: none;">
         </div>
-        
-        <div id="file-info" style="display: none; margin-top: 16px; padding: 12px; background: #f0fdf4; border-radius: 8px; border: 1px solid #86efac;">
-          <strong>✓ File loaded:</strong> <span id="filename"></span>
-          <br><span id="row-count" style="color: #6b7280; font-size: 14px;"></span>
+        <div id="inventory-info" style="display: none; margin-top: 12px; padding: 12px; background: #f0fdf4; border-radius: 8px;">
+          <strong>✓ Inventory loaded:</strong> <span id="inventory-filename"></span> (<span id="inventory-count"></span> items)
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>2. Scan Data (Excel/CSV)</h3>
+        <p style="margin-bottom: 12px; color: #6b7280; font-size: 14px;">
+          Format: Column A = SKU, Column B = Zone (optional).<br>
+          If no zone provided, items will be assigned to "Unassigned".
+        </p>
+        <div class="upload-zone" id="scan-data-zone" style="border-color: #059669; background: #f0fdf4;">
+          <div class="icon">📊</div>
+          <p>Drag & drop your scan data CSV/Excel<br>or click to browse</p>
+          <input type="file" id="scan-data-input" accept=".csv,.xlsx" style="display: none;">
+        </div>
+        <div id="scan-data-info" style="display: none; margin-top: 12px; padding: 12px; background: #f0fdf4; border-radius: 8px;">
+          <strong>✓ Scan data loaded:</strong> <span id="scan-data-filename"></span> (<span id="scan-data-count"></span> scans)
         </div>
       </div>
       
@@ -147,25 +153,35 @@
       </div>
     </div>
 
-    <!-- Screen 2: Scan -->
+    <!-- Screen 2: Scan (Alternative - Real-time scanning) -->
     <div class="screen" id="screen-scan">
       <div class="card">
-        <h2>🔍 Step 2: Scan Items</h2>
-        <p style="margin-bottom: 16px; color: #6b7280;">Click in the box below and start scanning items. The scanner will automatically input each barcode.</p>
+        <h2>🔍 Step 2: Scan (Optional)</h2>
+        <p style="margin-bottom: 16px; color: #6b7280;">
+          If you didn't upload scan data, you can scan directly here. 
+          Set a zone below, then scan items. All items scanned after the zone is set belong to that zone.
+        </p>
         
-        <input type="text" class="scan-input" id="scan-input" placeholder="Click here and scan..." autocomplete="off">
-        
-        <div class="scan-count">
-          Items scanned this session: <strong id="scanned-count">0</strong>
+        <div style="margin-bottom: 16px;">
+          <label style="font-weight: 500; display: block; margin-bottom: 8px;">Current Zone:</label>
+          <div style="display: flex; gap: 8px;">
+            <input type="text" id="zone-input" placeholder="e.g., WALL-RACK-1" style="flex: 1;">
+            <button class="btn btn-success btn-small" id="btn-set-zone">Set Zone</button>
+          </div>
         </div>
         
-        <div class="recent-scans">
-          <div style="padding: 12px; color: #6b7280; font-size: 14px;">Recent scans:</div>
-          <div id="recent-scans-list"></div>
+        <div class="zone-summary" id="zone-summary"></div>
+        
+        <input type="text" class="scan-input" id="scan-input" placeholder="Click here and scan items..." autocomplete="off" style="margin-top: 16px;">
+        
+        <div class="scan-count">
+          Items scanned: <strong id="scanned-count">0</strong>
+          <span class="zone-badge" id="current-zone-badge" style="display: none;">Zone: <span id="current-zone-name">-</span></span>
         </div>
         
         <div style="margin-top: 16px;">
-          <button class="btn btn-ghost" id="btn-clear-scans">Clear All Scans</button>
+          <button class="btn btn-ghost btn-small" id="btn-finish-zone">End Current Zone</button>
+          <button class="btn btn-ghost btn-small" id="btn-clear-scans">Clear All</button>
         </div>
       </div>
       
@@ -199,17 +215,18 @@
           </div>
         </div>
         
+        <p style="margin-bottom: 16px; color: #6b7280;">Zones found in scan data:</p>
+        <div class="zone-summary" id="review-zone-summary"></div>
+        
         <div class="progress-indicator" id="review-progress">Reviewing item 0 of 0</div>
         
-        <div id="review-items">
-          <!-- Items populated by JS -->
-        </div>
+        <div id="review-items"></div>
         
         <div style="margin-top: 24px; padding: 16px; background: #f8fafc; border-radius: 8px;">
           <p style="font-size: 14px; color: #6b7280; margin-bottom: 12px;">Batch actions:</p>
           <div style="display: flex; gap: 12px;">
-            <button class="btn btn-success" id="btn-accept-all">Accept All Remaining</button>
-            <button class="btn btn-ghost" id="btn-skip-all">Skip All Remaining</button>
+            <button class="btn btn-success btn-small" id="btn-accept-all">Accept All Remaining</button>
+            <button class="btn btn-ghost btn-small" id="btn-skip-all">Skip All Remaining</button>
           </div>
         </div>
       </div>
@@ -243,25 +260,28 @@
             <div class="label">Write-off Value</div>
           </div>
         </div>
-        
+      </div>
+      
+      <div class="card">
+        <h3>Write-Off Items</h3>
         <table>
           <thead>
             <tr>
               <th>SKU</th>
+              <th>Zone</th>
               <th>Description</th>
               <th>Cost</th>
-              <th>Status</th>
             </tr>
           </thead>
-          <tbody id="export-table">
-          </tbody>
+          <tbody id="export-table"></tbody>
         </table>
       </div>
       
       <div class="card">
         <h3>Download Options</h3>
-        <div style="display: flex; gap: 12px; margin-top: 16px;">
-          <button class="btn btn-primary" id="btn-download-csv">📄 Download CSV</button>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button class="btn btn-primary" id="btn-download-csv">📄 Download DRS CSV</button>
+          <button class="btn btn-secondary" id="btn-download-zone-csv">📊 Download Zone Report</button>
         </div>
       </div>
       
@@ -278,23 +298,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <script>
     // State
-    let inventory = []; // Items from uploaded file
-    let scanned = new Set(); // Scanned SKUs
-    let reviewItems = []; // Items to review
+    let inventory = []; // Items from DRS file
+    let scanData = []; // {sku, zone} from scan file
+    let currentZone = null;
+    let zones = {}; // zone -> count
+    let reviewItems = [];
     let currentReviewIndex = 0;
-    let decisions = {}; // sku -> 'accepted' | 'skipped'
+    let decisions = {};
 
-    // DOM Elements
+    // Screen navigation
     const screens = ['upload', 'scan', 'review', 'export'];
     let currentScreen = 0;
 
-    // Screen navigation
     function showScreen(index) {
       screens.forEach((s, i) => {
         document.getElementById(`screen-${s}`).classList.toggle('active', i === index);
       });
       
-      // Update progress
       document.querySelectorAll('.progress-step').forEach((el, i) => {
         el.classList.remove('active', 'completed');
         if (i < index) el.classList.add('completed');
@@ -305,6 +325,8 @@
     }
 
     function nextScreen() {
+      if (currentScreen === 2) prepareReview();
+      if (currentScreen === 3) prepareExport();
       if (currentScreen < screens.length - 1) showScreen(currentScreen + 1);
     }
 
@@ -312,172 +334,164 @@
       if (currentScreen > 0) showScreen(currentScreen - 1);
     }
 
-    // File Upload
-    const uploadZone = document.getElementById('upload-zone');
-    const fileInput = document.getElementById('file-input');
+    // ===== INVENTORY FILE =====
+    const invZone = document.getElementById('inventory-zone');
+    const invInput = document.getElementById('inventory-input');
+    
+    invZone.addEventListener('click', () => invInput.click());
+    invZone.addEventListener('dragover', e => { e.preventDefault(); invZone.classList.add('dragover'); });
+    invZone.addEventListener('dragleave', () => invZone.classList.remove('dragover'));
+    invZone.addEventListener('drop', e => { e.preventDefault(); invZone.classList.remove('dragover'); handleInventoryFile(e.dataTransfer.files[0]); });
+    invInput.addEventListener('change', e => handleInventoryFile(e.target.files[0]));
 
-    uploadZone.addEventListener('click', () => fileInput.click());
-    uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('dragover'); });
-    uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
-    uploadZone.addEventListener('drop', (e) => {
-      e.preventDefault();
-      uploadZone.classList.remove('dragover');
-      handleFile(e.dataTransfer.files[0]);
-    });
-
-    fileInput.addEventListener('change', (e) => handleFile(e.target.files[0]));
-
-    function handleFile(file) {
+    function handleInventoryFile(file) {
       if (!file) return;
-      
-      const ext = file.name.split('.').pop().toLowerCase();
-      
-      if (ext === 'csv') {
-        Papa.parse(file, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (results) => {
-            processInventory(results.data, file.name);
-          }
-        });
-      } else if (ext === 'xlsx') {
-        showToast('Excel files not yet supported. Please export as CSV from DRS.', 'error');
-      } else {
-        showToast('Please upload a CSV file', 'error');
-      }
+      Papa.parse(file, {
+        header: true,
+        skipEmptyLines: true,
+        complete: results => {
+          inventory = results.data.map(row => {
+            const sku = row['SKU'] || row['Item ID'] || row['sku'] || row['SKU NO'] || Object.keys(row).find(k => k.toLowerCase().includes('sku')) ? row[Object.keys(row).find(k => k.toLowerCase().includes('sku'))] : '';
+            const desc = row['Description'] || row['DESC'] || row['description'] || '';
+            const cost = parseFloat(row['Cost'] || row['COST'] || row['cost'] || 0) || 0;
+            const retail = parseFloat(row['Retail'] || row['RETAIL'] || row['retail'] || 0) || 0;
+            const brand = row['Brand'] || row['brand'] || '';
+            const buyDate = row['Buy Date'] || row['Date'] || row['buy_date'] || '';
+            return { sku: String(sku).trim().toUpperCase(), description: desc, cost, retail, brand, buyDate };
+          }).filter(item => item.sku);
+          
+          document.getElementById('inventory-filename').textContent = file.name;
+          document.getElementById('inventory-count').textContent = inventory.length.toLocaleString();
+          document.getElementById('inventory-info').style.display = 'block';
+          checkReady();
+        }
+      });
     }
 
-    function processInventory(data, fname) {
-      // Normalize column names - try to detect SKU, description, cost, etc.
-      const normalized = data.map(row => {
-        // Find SKU column
-        const sku = row['SKU'] || row['Item ID'] || row['Item'] || row['sku'] || row['SKU NO'] || Object.values(row).find((v, i) => {
-          const key = Object.keys(row)[i].toLowerCase();
-          return key.includes('sku') || key.includes('item');
-        });
-        
-        // Find description
-        const desc = row['Description'] || row['DESC'] || row['Item Desc'] || row['description'] || Object.values(row).find((v, i) => {
-          const key = Object.keys(row)[i].toLowerCase();
-          return key.includes('desc') || key.includes('name');
-        });
-        
-        // Find cost
-        const cost = row['Cost'] || row['COST'] || row['Buy Cost'] || row['cost'] || parseFloat(Object.values(row).find((v, i) => {
-          const key = Object.keys(row)[i].toLowerCase();
-          return key.includes('cost') && !key.includes('retail');
-        })) || 0;
-        
-        // Find retail
-        const retail = row['Retail'] || row['RETAIL'] || row['List Price'] || row['retail'] || parseFloat(Object.values(row).find((v, i) => {
-          const key = Object.keys(row)[i].toLowerCase();
-          return key.includes('retail') || key.includes('price');
-        })) || 0;
-        
-        // Find brand
-        const brand = row['Brand'] || row['BRAND'] || row['manufacturer'] || row['brand'] || '';
-        
-        // Find buy date
-        const buyDate = row['Buy Date'] || row['Date'] || row['buy_date'] || row['DATE'] || '';
-        
-        return {
-          sku: sku || '',
-          description: desc || '',
-          cost: parseFloat(cost) || 0,
-          retail: parseFloat(retail) || 0,
-          brand: brand || '',
-          buyDate: buyDate || ''
-        };
-      }).filter(item => item.sku); // Remove rows without SKU
+    // ===== SCAN DATA FILE =====
+    const scanZone = document.getElementById('scan-data-zone');
+    const scanInput = document.getElementById('scan-data-input');
+    
+    scanZone.addEventListener('click', () => scanInput.click());
+    scanZone.addEventListener('dragover', e => { e.preventDefault(); scanZone.classList.add('dragover'); });
+    scanZone.addEventListener('dragleave', () => scanZone.classList.remove('dragover'));
+    scanZone.addEventListener('drop', e => { e.preventDefault(); scanZone.classList.remove('dragover'); handleScanDataFile(e.dataTransfer.files[0]); });
+    scanInput.addEventListener('change', e => handleScanDataFile(e.target.files[0]));
 
-      inventory = normalized;
-      document.getElementById('filename').textContent = fname;
-      document.getElementById('row-count').textContent = `${inventory.length.toLocaleString()} items loaded`;
-      document.getElementById('file-info').style.display = 'block';
-      document.getElementById('btn-upload-next').disabled = false;
-      
-      showToast(`Loaded ${inventory.length.toLocaleString()} items`, 'success');
+    function handleScanDataFile(file) {
+      if (!file) return;
+      Papa.parse(file, {
+        header: false, // Column A = SKU, Column B = Zone
+        skipEmptyLines: true,
+        complete: results => {
+          scanData = results.data.map(row => ({
+            sku: String(row[0] || '').trim().toUpperCase(),
+            zone: row[1] ? String(row[1]).trim() : 'Unassigned'
+          })).filter(item => item.sku);
+          
+          // Count zones
+          zones = {};
+          scanData.forEach(item => {
+            zones[item.zone] = (zones[item.zone] || 0) + 1;
+          });
+          
+          document.getElementById('scan-data-filename').textContent = file.name;
+          document.getElementById('scan-data-count').textContent = scanData.length.toLocaleString();
+          document.getElementById('scan-data-info').style.display = 'block';
+          checkReady();
+        }
+      });
     }
 
-    // Scanning
-    const scanInput = document.getElementById('scan-input');
-    scanInput.addEventListener('keydown', (e) => {
+    function checkReady() {
+      const ready = inventory.length > 0 && scanData.length > 0;
+      document.getElementById('btn-upload-next').disabled = !ready;
+      if (ready) showToast('Both files loaded!', 'success');
+    }
+
+    // ===== REAL-TIME SCANNING =====
+    const scanInputField = document.getElementById('scan-input');
+    scanInputField.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         e.preventDefault();
-        const sku = scanInput.value.trim().toUpperCase();
+        const sku = scanInputField.value.trim().toUpperCase();
         if (sku) {
-          addScan(sku);
-          scanInput.value = '';
+          scanData.push({ sku, zone: currentZone || 'Unassigned' });
+          zones[currentZone || 'Unassigned'] = (zones[currentZone || 'Unassigned'] || 0) + 1;
+          scanInputField.value = '';
+          updateScanCount();
         }
       }
     });
 
-    scanInput.addEventListener('focus', () => scanInput.select());
-
-    function addScan(sku) {
-      scanned.add(sku);
-      document.getElementById('scanned-count').textContent = scanned.size;
-      
-      // Add to recent list
-      const list = document.getElementById('recent-scans-list');
-      const item = document.createElement('div');
-      item.className = 'recent-scan-item';
-      item.innerHTML = `<span>${sku}</span><span style="color: #059669;">✓</span>`;
-      list.insertBefore(item, list.firstChild);
-      
-      // Keep only last 10
-      while (list.children.length > 10) {
-        list.removeChild(list.lastChild);
+    document.getElementById('btn-set-zone').addEventListener('click', () => {
+      const zone = document.getElementById('zone-input').value.trim().toUpperCase();
+      if (zone) {
+        currentZone = zone;
+        document.getElementById('current-zone-name').textContent = currentZone;
+        document.getElementById('current-zone-badge').style.display = 'inline-block';
+        showToast(`Zone set to: ${currentZone}`, 'info');
+        updateZoneSummary();
       }
-      
-      document.getElementById('btn-scan-next').disabled = false;
-    }
+    });
+
+    document.getElementById('btn-finish-zone').addEventListener('click', () => {
+      currentZone = null;
+      document.getElementById('current-zone-badge').style.display = 'none';
+      document.getElementById('zone-input').value = '';
+      showToast('Zone ended. Start a new zone to continue.', 'info');
+      updateZoneSummary();
+    });
 
     document.getElementById('btn-clear-scans').addEventListener('click', () => {
-      scanned.clear();
-      document.getElementById('scanned-count').textContent = '0';
-      document.getElementById('recent-scans-list').innerHTML = '';
-      document.getElementById('btn-scan-next').disabled = true;
+      scanData = [];
+      zones = {};
+      currentZone = null;
+      updateScanCount();
+      showToast('All scans cleared', 'info');
     });
 
-    // Navigation buttons
-    document.getElementById('btn-upload-next').addEventListener('click', nextScreen);
-    document.getElementById('btn-scan-back').addEventListener('click', prevScreen);
-    document.getElementById('btn-scan-next').addEventListener('click', () => {
-      prepareReview();
-      nextScreen();
-    });
-    document.getElementById('btn-review-back').addEventListener('click', prevScreen);
-    document.getElementById('btn-review-next').addEventListener('click', nextScreen);
-    document.getElementById('btn-export-back').addEventListener('click', prevScreen);
-    document.getElementById('btn-finish').addEventListener('click', () => {
-      showToast('Done! Refresh to start a new count.', 'success');
-    });
+    function updateScanCount() {
+      document.getElementById('scanned-count').textContent = scanData.length;
+      document.getElementById('btn-scan-next').disabled = scanData.length === 0;
+    }
 
-    // Review
+    function updateZoneSummary() {
+      const container = document.getElementById('zone-summary');
+      container.innerHTML = Object.entries(zones).map(([zone, count]) => 
+        `<span class="zone-tag ${zone === currentZone ? 'active' : ''}">${zone}: ${count}</span>`
+      ).join('');
+    }
+
+    // ===== REVIEW =====
     function prepareReview() {
-      // Identify missing items (in file but not scanned)
+      const scannedSKUs = new Set(scanData.map(s => s.sku));
+      
       reviewItems = inventory
-        .filter(item => !scanned.has(item.sku))
-        .slice(0, 100); // Limit for MVP
+        .filter(item => !scannedSKUs.has(item.sku))
+        .slice(0, 200);
+      
+      // Add zone info to each review item
+      reviewItems = reviewItems.map(item => {
+        const scanEntry = scanData.find(s => s.sku === item.sku);
+        return { ...item, zone: scanEntry ? scanEntry.zone : 'Not Scanned' };
+      });
       
       currentReviewIndex = 0;
       decisions = {};
       
-      updateReviewStats();
-      renderReviewItem();
-    }
-
-    function updateReviewStats() {
-      const total = inventory.length;
-      const scannedCount = scanned.size;
-      const missing = total - scannedCount;
-      const pending = reviewItems.length;
+      document.getElementById('stat-total').textContent = inventory.length.toLocaleString();
+      document.getElementById('stat-scanned').textContent = scanData.length.toLocaleString();
+      document.getElementById('stat-missing').textContent = reviewItems.length.toLocaleString();
+      document.getElementById('stat-pending').textContent = reviewItems.length.toLocaleString();
       
-      document.getElementById('stat-total').textContent = total.toLocaleString();
-      document.getElementById('stat-scanned').textContent = scannedCount.toLocaleString();
-      document.getElementById('stat-missing').textContent = missing.toLocaleString();
-      document.getElementById('stat-pending').textContent = pending.toLocaleString();
+      // Zone summary
+      const zoneSummary = document.getElementById('review-zone-summary');
+      zoneSummary.innerHTML = Object.entries(zones).map(([zone, count]) => 
+        `<span class="zone-tag">${zone}: ${count}</span>`
+      ).join('');
+      
+      renderReviewItem();
     }
 
     function renderReviewItem() {
@@ -497,41 +511,43 @@
       const item = reviewItems[currentReviewIndex];
       
       container.innerHTML = `
-        <div class="item-card missing">
-          <div class="item-header">
-            <span class="item-brand">${item.brand || 'Unknown Brand'}</span>
-            <span class="item-sku">${item.sku}</span>
+        <div class="card" style="margin-top: 16px; border-left: 4px solid #dc2626;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-weight: 600; color: #1E40AF;">${item.brand || 'Unknown Brand'}</span>
+            <span style="font-family: monospace; color: #6b7280;">${item.sku}</span>
           </div>
-          <div class="item-details">
-            <div><span>Description:</span> <strong>${item.description || '-'}</strong></div>
-            <div><span>Cost:</span> <strong>$${item.cost.toFixed(2)}</strong></div>
-            <div><span>Retail:</span> <strong>$${item.retail.toFixed(2)}</strong></div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 14px; margin-bottom: 12px;">
+            <div><span style="color: #6b7280;">Zone:</span> <strong>${item.zone}</strong></div>
+            <div><span style="color: #6b7280;">Cost:</span> <strong>$${item.cost.toFixed(2)}</strong></div>
+            <div><span style="color: #6b7280;">Retail:</span> <strong>$${item.retail.toFixed(2)}</strong></div>
           </div>
-          <div class="item-status missing">MISSING - In file but not scanned</div>
-          <div class="item-actions">
-            <button class="btn btn-success" onclick="acceptItem('${item.sku}')">✓ Accept Write-Off</button>
-            <button class="btn btn-ghost" onclick="skipItem('${item.sku}')">✗ Skip</button>
+          <div style="padding: 8px; background: #fef2f2; color: #dc2626; border-radius: 4px; font-size: 14px; font-weight: 500;">
+            MISSING - In file but not scanned
+          </div>
+          <div style="display: flex; gap: 12px; margin-top: 16px;">
+            <button class="btn btn-success" onclick="acceptItem(${currentReviewIndex})">✓ Accept Write-Off</button>
+            <button class="btn btn-ghost" onclick="skipItem(${currentReviewIndex})">✗ Skip</button>
           </div>
         </div>
       `;
       
-      // Keyboard shortcuts
       document.onkeydown = (e) => {
-        if (e.key === 'ArrowRight') acceptItem(item.sku);
-        if (e.key === 'ArrowLeft') skipItem(item.sku);
-        if (e.key === 'ArrowDown') { skipItem(item.sku); }
+        if (e.key === 'ArrowRight') acceptItem(currentReviewIndex);
+        if (e.key === 'ArrowLeft') skipItem(currentReviewIndex);
       };
     }
 
-    function acceptItem(sku) {
-      decisions[sku] = 'accepted';
+    function acceptItem(index) {
+      const item = reviewItems[index];
+      decisions[item.sku] = 'accepted';
       showToast('Accepted', 'success');
       currentReviewIndex++;
       renderReviewItem();
     }
 
-    function skipItem(sku) {
-      decisions[sku] = 'skipped';
+    function skipItem(index) {
+      const item = reviewItems[index];
+      decisions[item.sku] = 'skipped';
       currentReviewIndex++;
       renderReviewItem();
     }
@@ -553,56 +569,33 @@
       renderReviewItem();
     });
 
-    // Export
+    // ===== EXPORT =====
     function prepareExport() {
-      const accepted = [];
-      const rejected = [];
+      const accepted = reviewItems.filter(item => decisions[item.sku] === 'accepted');
+      const rejected = reviewItems.filter(item => decisions[item.sku] === 'skipped');
       let totalValue = 0;
       
-      reviewItems.forEach(item => {
-        const decision = decisions[item.sku];
-        if (decision === 'accepted') {
-          accepted.push(item);
-          totalValue += item.cost;
-        } else if (decision === 'skipped') {
-          rejected.push(item);
-        }
-      });
+      accepted.forEach(item => totalValue += item.cost);
       
-      document.getElementById('export-scanned').textContent = scanned.size;
+      document.getElementById('export-scanned').textContent = scanData.length;
       document.getElementById('export-accepted').textContent = accepted.length;
       document.getElementById('export-rejected').textContent = rejected.length;
       document.getElementById('export-value').textContent = '$' + totalValue.toFixed(2);
       
-      // Build table
       const tbody = document.getElementById('export-table');
       tbody.innerHTML = accepted.map(item => `
         <tr>
-          <td style="font-family: 'JetBrains Mono', monospace;">${item.sku}</td>
-          <td>${item.description}</td>
+          <td style="font-family: monospace;">${item.sku}</td>
+          <td>${item.zone}</td>
+          <td>${item.description || '-'}</td>
           <td>$${item.cost.toFixed(2)}</td>
-          <td><span style="color: #059669;">Accepted</span></td>
         </tr>
       `).join('');
     }
 
-    // Modify nextScreen to prepare export when entering screen 4
-    const originalNextScreen = nextScreen;
-    nextScreen = function() {
-      if (currentScreen === 2) {
-        prepareExport();
-      }
-      originalNextScreen();
-    };
-
-    // Download CSV
     document.getElementById('btn-download-csv').addEventListener('click', () => {
       const accepted = reviewItems.filter(item => decisions[item.sku] === 'accepted');
-      
-      if (accepted.length === 0) {
-        showToast('No items to export', 'error');
-        return;
-      }
+      if (accepted.length === 0) { showToast('No items to export', 'error'); return; }
       
       const csv = Papa.unparse(accepted.map(item => ({
         SKU: item.sku,
@@ -611,22 +604,54 @@
         BuyDate: item.buyDate,
         Cost: item.cost,
         Retail: item.retail,
+        Zone: item.zone,
         AdjustmentType: 'REMOVE',
         ReasonCode: 'C-Cycl',
         Notes: 'Mini cycle count ' + new Date().toISOString().split('T')[0]
       })));
       
-      const blob = new Blob([csv], { type: 'text/csv' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `adjustments_${new Date().toISOString().split('T')[0]}.csv`;
-      a.click();
-      
+      downloadBlob(csv, `adjustments_${new Date().toISOString().split('T')[0]}.csv`);
       showToast('CSV downloaded', 'success');
     });
 
-    // Toast
+    document.getElementById('btn-download-zone-csv').addEventListener('click', () => {
+      const accepted = reviewItems.filter(item => decisions[item.sku] === 'accepted');
+      if (accepted.length === 0) { showToast('No items to export', 'error'); return; }
+      
+      // Group by zone
+      const byZone = {};
+      accepted.forEach(item => {
+        if (!byZone[item.zone]) byZone[item.zone] = [];
+        byZone[item.zone].push(item);
+      });
+      
+      const csv = Papa.unparse(Object.entries(byZone).flatMap(([zone, items]) => 
+        items.map(item => ({ Zone: zone, SKU: item.sku, Description: item.description, Brand: item.brand, Cost: item.cost, Retail: item.retail }))
+      ));
+      
+      downloadBlob(csv, `zone_report_${new Date().toISOString().split('T')[0]}.csv`);
+      showToast('Zone report downloaded', 'success');
+    });
+
+    function downloadBlob(content, filename) {
+      const blob = new Blob([content], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+    }
+
+    // ===== NAV =====
+    document.getElementById('btn-upload-next').addEventListener('click', nextScreen);
+    document.getElementById('btn-scan-back').addEventListener('click', prevScreen);
+    document.getElementById('btn-scan-next').addEventListener('click', nextScreen);
+    document.getElementById('btn-review-back').addEventListener('click', prevScreen);
+    document.getElementById('btn-review-next').addEventListener('click', nextScreen);
+    document.getElementById('btn-export-back').addEventListener('click', prevScreen);
+    document.getElementById('btn-finish').addEventListener('click', () => showToast('Done! Refresh to start new count.', 'success'));
+
+    // ===== TOAST =====
     function showToast(message, type = 'success') {
       const toast = document.getElementById('toast');
       toast.textContent = message;
@@ -634,13 +659,11 @@
       setTimeout(() => toast.classList.remove('show'), 3000);
     }
 
-    // Auto-focus scan input when entering scan screen
+    // Focus scan input on scan screen
     const originalShowScreen = showScreen;
     showScreen = function(index) {
       originalShowScreen(index);
-      if (index === 1) {
-        setTimeout(() => scanInput.focus(), 100);
-      }
+      if (index === 1) setTimeout(() => scanInputField.focus(), 100);
     };
   </script>
 </body>
