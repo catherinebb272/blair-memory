@@ -573,24 +573,34 @@
       
       const item = reviewItems[currentReviewIndex];
       
+      // Check if this item already has a decision
+      const existingDecision = decisions[item.sku];
+      const isAccepted = existingDecision === 'accepted';
+      const isSkipped = existingDecision === 'skipped';
+      const cardStyle = isAccepted ? 'border-left: 4px solid #059669; background: #f0fdf4;' : (isSkipped ? 'border-left: 4px solid #6b7280; background: #f3f4f6;' : 'border-left: 4px solid #dc2626;');
+      const statusText = isAccepted ? '✓ ACCEPTED' : (isSkipped ? '○ SKIPPED' : 'MISSING - In file but not scanned');
+      const statusStyle = isAccepted ? 'background: #dcfce7; color: #059669;' : (isSkipped ? 'background: #e5e7eb; color: #6b7280;' : 'background: #fef2f2; color: #dc2626;');
+      
       container.innerHTML = `
-        <div class="card" style="margin-top: 16px; border-left: 4px solid #dc2626;">
+        <div class="card" style="margin-top: 16px; ${cardStyle}">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
             <span style="font-weight: 600; color: #1E40AF;">${item.brand || 'Unknown Brand'}</span>
             <span style="font-family: monospace; color: #6b7280;">${item.sku}</span>
           </div>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 14px; margin-bottom: 12px;">
-            <div><span style="color: #6b7280;">Zone:</span> <strong>${item.zone}</strong></div>
+          <div style="font-size: 14px; margin-bottom: 8px; color: #1F2937;">${item.description || '-'}</div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; font-size: 14px; margin-bottom: 12px;">
             <div><span style="color: #6b7280;">Cost:</span> <strong>$${item.cost.toFixed(2)}</strong></div>
             <div><span style="color: #6b7280;">Retail:</span> <strong>$${item.retail.toFixed(2)}</strong></div>
           </div>
-          <div style="padding: 8px; background: #fef2f2; color: #dc2626; border-radius: 4px; font-size: 14px; font-weight: 500;">
-            MISSING - In file but not scanned
+          <div style="padding: 8px; border-radius: 4px; font-size: 14px; font-weight: 500; ${statusStyle}">
+            ${statusText}
           </div>
+          ${!existingDecision ? `
           <div style="display: flex; gap: 12px; margin-top: 16px;">
             <button class="btn btn-success" onclick="acceptItem()">✓ Accept Write-Off</button>
             <button class="btn btn-ghost" onclick="skipItem()">✗ Skip</button>
           </div>
+          ` : ''}
           <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #e5e7eb;">
             <button class="btn btn-ghost btn-small" onclick="prevItem()">← Previous</button>
             <span style="margin: 0 12px; color: #6b7280;">${currentReviewIndex + 1} of ${reviewItems.length}</span>
