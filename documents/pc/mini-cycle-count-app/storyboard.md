@@ -2,6 +2,15 @@
 
 *A detailed page-by-page walkthrough of the user interface*
 
+> **Note (2026-04-14):** This storyboard reflects the original design. The current implementation has evolved to include:
+> - **3-file workflow**: Item Buy Detail + Precount (optional) + Scan Data
+> - **Zone-based scanning**: Assign scans to zones (Wall Rack 1, Floor A, etc.)
+> - **Precount filtering**: Match Precount against Item Buy Detail to create clean scan list
+> - **Status indicators**: Accepted/Skipped/Pending visual states in review
+> - **Excel support**: .xlsx uploads for inventory file
+> 
+> See `mini-cycle-count-app-framework.md` for updated workflow documentation.
+
 ---
 
 ## Design Specifications
