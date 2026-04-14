@@ -296,6 +296,7 @@
   <div class="toast" id="toast"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script>
     // State
     let inventory = []; // Items from DRS file
@@ -346,26 +347,67 @@
 
     function handleInventoryFile(file) {
       if (!file) return;
-      Papa.parse(file, {
-        header: true,
-        skipEmptyLines: true,
-        complete: results => {
-          inventory = results.data.map(row => {
-            const sku = row['SKU'] || row['Item ID'] || row['sku'] || row['SKU NO'] || Object.keys(row).find(k => k.toLowerCase().includes('sku')) ? row[Object.keys(row).find(k => k.toLowerCase().includes('sku'))] : '';
-            const desc = row['Description'] || row['DESC'] || row['description'] || '';
-            const cost = parseFloat(row['Cost'] || row['COST'] || row['cost'] || 0) || 0;
-            const retail = parseFloat(row['Retail'] || row['RETAIL'] || row['retail'] || 0) || 0;
-            const brand = row['Brand'] || row['brand'] || '';
-            const buyDate = row['Buy Date'] || row['Date'] || row['buy_date'] || '';
-            return { sku: String(sku).trim().toUpperCase(), description: desc, cost, retail, brand, buyDate };
-          }).filter(item => item.sku);
-          
-          document.getElementById('inventory-filename').textContent = file.name;
-          document.getElementById('inventory-count').textContent = inventory.length.toLocaleString();
-          document.getElementById('inventory-info').style.display = 'block';
-          checkReady();
+      
+      const ext = file.name.split('.').pop().toLowerCase();
+      
+      // Helper to process inventory data
+      const processInventoryData = (data) => {
+        if (!data || data.length === 0) {
+          showToast('No data found in file', 'error');
+          return;
         }
-      });
+        
+        // Get headers
+        const headers = Object.keys(data[0]);
+        
+        // Find column indexes
+        const findCol = (patterns) => headers.find(h => patterns.some(p => h.toLowerCase().includes(p)));
+        const skuCol = findCol(['sku', 'item id', 'item', 'sku no']);
+        const descCol = findCol(['desc', 'name', 'description']);
+        const costCol = findCol(['cost', 'buy cost']);
+        const retailCol = findCol(['retail', 'price', 'list price']);
+        const brandCol = findCol(['brand', 'manufacturer']);
+        const dateCol = findCol(['buy date', 'date', 'purchase']);
+        
+        if (!skuCol) {
+          showToast('Could not find SKU column. Columns found: ' + headers.join(', '), 'error');
+          return;
+        }
+        
+        inventory = data.map(row => ({
+          sku: String(row[skuCol] || '').trim().toUpperCase(),
+          description: row[descCol] || '',
+          cost: parseFloat(row[costCol] || 0) || 0,
+          retail: parseFloat(row[retailCol] || 0) || 0,
+          brand: row[brandCol] || '',
+          buyDate: row[dateCol] || ''
+        })).filter(item => item.sku);
+        
+        document.getElementById('inventory-filename').textContent = file.name;
+        document.getElementById('inventory-count').textContent = inventory.length.toLocaleString();
+        document.getElementById('inventory-info').style.display = 'block';
+        checkReady();
+      };
+      
+      if (ext === 'csv') {
+        Papa.parse(file, {
+          header: true,
+          skipEmptyLines: true,
+          complete: results => processInventoryData(results.data)
+        });
+      } else if (ext === 'xlsx' || ext === 'xls') {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const data = new Uint8Array(e.target.result);
+          const workbook = XLSX.read(data, { type: 'array' });
+          const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+          const jsonData = XLSX.utils.sheet_to_json(firstSheet, { defval: '' });
+          processInventoryData(jsonData);
+        };
+        reader.readAsArrayBuffer(file);
+      } else {
+        showToast('Unsupported file type. Use CSV or Excel.', 'error');
+      }
     }
 
     // ===== SCAN DATA FILE =====
