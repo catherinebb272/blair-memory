@@ -362,12 +362,12 @@
         
         // Find column indexes
         const findCol = (patterns) => headers.find(h => patterns.some(p => h.toLowerCase().includes(p)));
-        const skuCol = findCol(['sku', 'item id', 'item', 'sku no']);
-        const descCol = findCol(['desc', 'name', 'description']);
-        const costCol = findCol(['cost', 'buy cost']);
-        const retailCol = findCol(['retail', 'price', 'list price']);
-        const brandCol = findCol(['brand', 'manufacturer']);
-        const dateCol = findCol(['buy date', 'date', 'purchase']);
+        const skuCol = findCol(['ski', 'sku', 'item id', 'item', 'sku no']);
+        const descCol = findCol(['description', 'desc', 'name', 'model']);
+        const costCol = findCol(['drs cost', 'cost', 'buy cost']);
+        const retailCol = findCol(['drs retail', 'current retail', 'retail', 'price', 'list price']);
+        const brandCol = findCol(['brand', 'brand description', 'manufacturer']);
+        const dateCol = findCol(['buy date', 'date', 'purchase', 'sale']);
         
         if (!skuCol) {
           showToast('Could not find SKU column. Columns found: ' + headers.join(', '), 'error');
