@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SplashPage from './screens/SplashPage'
 import Welcome from './screens/Welcome'
 import PrepareFiles from './screens/PrepareFiles'
 import ConductScan from './screens/ConductScan'
@@ -10,6 +11,7 @@ import FAQ from './screens/FAQ'
 import Security from './screens/Security'
 
 const SCREENS = {
+  splash: 'splash',
   welcome: 'welcome',
   prepareFiles: 'prepareFiles',
   conductScan: 'conductScan',
@@ -22,6 +24,7 @@ const SCREENS = {
 }
 
 const STEP_LABELS = [
+  'Splash',
   'Welcome',
   'Prepare Files',
   'Conduct Scan',
@@ -31,7 +34,7 @@ const STEP_LABELS = [
 ]
 
 function App() {
-  const [currentScreen, setCurrentScreen] = useState('welcome')
+  const [currentScreen, setCurrentScreen] = useState('splash')
   const [countData, setCountData] = useState({
     storeName: '',
     storeNumber: '',
@@ -53,6 +56,8 @@ function App() {
 
   const renderScreen = () => {
     switch (currentScreen) {
+      case SCREENS.splash:
+        return <SplashPage onNext={() => goToScreen(SCREENS.welcome)} />
       case SCREENS.welcome:
         return <Welcome onNext={() => goToScreen(SCREENS.prepareFiles)} />
       case SCREENS.prepareFiles:
@@ -91,7 +96,7 @@ function App() {
               />
       case SCREENS.drsInstructions:
         return <DRSInstructions 
-                onHome={() => goToScreen(SCREENS.welcome)}
+                onHome={() => goToScreen(SCREENS.splash)}
                 onFAQ={() => goToScreen(SCREENS.faq)}
                 onSecurity={() => goToScreen(SCREENS.security)}
               />
@@ -100,12 +105,12 @@ function App() {
       case SCREENS.security:
         return <Security onBack={() => goToScreen(SCREENS.drsInstructions)} />
       default:
-        return <Welcome onNext={() => goToScreen(SCREENS.prepareFiles)} />
+        return <SplashPage onNext={() => goToScreen(SCREENS.welcome)} />
     }
   }
 
   // Hide progress bar on certain screens
-  const hideProgress = ['processing', 'faq', 'security'].includes(currentScreen)
+  const hideProgress = ['splash', 'welcome', 'processing', 'faq', 'security'].includes(currentScreen)
 
   return (
     <div className="min-h-screen pb-32">
@@ -116,9 +121,9 @@ function App() {
             <span className="text-2xl">🏪</span>
             <h1 className="text-xl font-semibold text-slate-800">Mini Cycle Count</h1>
           </div>
-          {currentScreen !== 'welcome' && currentScreen !== 'faq' && currentScreen !== 'security' && (
+          {currentScreen !== 'splash' && currentScreen !== 'welcome' && currentScreen !== 'faq' && currentScreen !== 'security' && (
             <button 
-              onClick={() => goToScreen(SCREENS.welcome)}
+              onClick={() => goToScreen(SCREENS.splash)}
               className="text-sm text-slate-500 hover:text-primary"
             >
               Start Over
@@ -133,7 +138,7 @@ function App() {
       </main>
 
       {/* Progress Bar */}
-      {!hideProgress && currentScreen !== 'welcome' && currentScreen !== 'drsInstructions' && (
+      {!hideProgress && currentScreen !== 'splash' && currentScreen !== 'welcome' && currentScreen !== 'drsInstructions' && (
         <footer className="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg">
           <div className="max-w-3xl mx-auto px-6 py-4">
             {/* Step Indicators */}

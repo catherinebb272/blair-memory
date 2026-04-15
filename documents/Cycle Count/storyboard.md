@@ -179,6 +179,9 @@ Provide hardware setup instructions and guide user through scanning process.
 │  │  SCANNING TIPS                                             │   │
 │  │  ──────────────────────────────────────────────────────   │   │
 │  │  • Scan each item once — duplicate beeps = already counted │   │
+│  │  • Duplicate detection shows: DUPLICATE (red),            │   │
+│  │    NEARBY (amber, within 5 scans), REPEAT CHUNK (orange,  │   │
+│  │    same 8 items twice)                                     │   │
 │  │  • Move systematically through the aisle/bin              │   │
 │  │  • Keep the scanner beam perpendicular to the barcode     │   │
 │  │  • For items without barcodes, you can skip or manually   │   │
@@ -381,6 +384,33 @@ Allow user to download or email the final write-off list.
 │  │     → Full report with all columns                       │   │
 │  │                                                           │   │
 │  │              [  Download All Files  ]                    │   │
+│  │                                                           │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                                                                  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  📋 DUPLICATE SCAN LOG                                    │   │
+│  │  ────────────────────────────────────────────────────────│   │
+│  │  Records of items scanned that match previous scans       │   │
+│  │  Threshold: Nearby duplicates within 5 items,           │   │
+│  │  repeated chunks of 8 items                              │   │
+│  │                                                           │   │
+│  │  ┌─────────────────────────────────────────────────────┐  │   │
+│  │  │ 0  │  Repeated Chunks  │  (orange)                 │  │   │
+│  │  │ 0  │  Nearby Duplicates│  (amber)                  │  │   │
+│  │  │ 12 │  Exact Duplicates │  (red)                    │  │   │
+│  │  └─────────────────────────────────────────────────────┘  │   │
+│  │                                                           │   │
+│  │     [  Download Duplicate Scan Log  ]                    │   │
+│  │                                                           │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                                                                  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  📈 2 OH WRITE-UP CANDIDATES                              │   │
+│  │  ────────────────────────────────────────────────────────│   │
+│  │  Items with exactly 2 on-hand that may need              │   │
+│  │  inventory written up                                    │   │
+│  │                                                           │   │
+│  │     [  View 2 OH Items  ]    [  Download 2 OH List  ]   │   │
 │  │                                                           │   │
 │  └──────────────────────────────────────────────────────────┘   │
 │                                                                  │

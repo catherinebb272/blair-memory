@@ -2,15 +2,6 @@
 
 *A detailed page-by-page walkthrough of the user interface*
 
-> **Note (2026-04-14):** This storyboard reflects the original design. The current implementation has evolved to include:
-> - **3-file workflow**: Item Buy Detail + Precount (optional) + Scan Data
-> - **Zone-based scanning**: Assign scans to zones (Wall Rack 1, Floor A, etc.)
-> - **Precount filtering**: Match Precount against Item Buy Detail to create clean scan list
-> - **Status indicators**: Accepted/Skipped/Pending visual states in review
-> - **Excel support**: .xlsx uploads for inventory file
-> 
-> See `mini-cycle-count-app-framework.md` for updated workflow documentation.
-
 ---
 
 ## Design Specifications
@@ -188,6 +179,9 @@ Provide hardware setup instructions and guide user through scanning process.
 │  │  SCANNING TIPS                                             │   │
 │  │  ──────────────────────────────────────────────────────   │   │
 │  │  • Scan each item once — duplicate beeps = already counted │   │
+│  │  • Duplicate detection shows: DUPLICATE (red),            │   │
+│  │    NEARBY (amber, within 5 scans), REPEAT CHUNK (orange,  │   │
+│  │    same 8 items twice)                                     │   │
 │  │  • Move systematically through the aisle/bin              │   │
 │  │  • Keep the scanner beam perpendicular to the barcode     │   │
 │  │  • For items without barcodes, you can skip or manually   │   │
@@ -307,23 +301,23 @@ Show likely missing items, allow user to approve or reject each for write-off.
 │  └──────────────────────────────────────────────────────────┘   │
 │                                                                  │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  ITEM #1          Brand: Nike   |  Buy Date: 02/15/25    │   │
+│  │  ITEM #1          Buy Date: 2024-12-30                    │   │
 │  │  ────────────────────────────────────────────────────────│   │
 │  │  SKU: SK892034                                           │   │
-│  │  Description: Dunk High                                  │   │
+│  │  Description: Dunk High/Nike                            │   │
 │  │  Size: 10    |   Cost: $4.00   |   Retail: $14.00        │   │
 │  │  Category: Shoes                                          │   │
 │  │                                                           │   │
 │  │  ────────────────────────────────────────────────────────│   │
-│  │  STATUS: Missing (in file, not scanned)                  │   │
+│  │  STATUS: MISSING (in file, not scanned)                  │   │
 │  │                                                           │   │
 │  │              [ ✓ ACCEPT WRITE-OFF ]   [ ✗ SKIP ]         │   │
-│  │              [ 📝 Add note ]                             │   │
 │  │                                                           │   │
 │  └──────────────────────────────────────────────────────────┘   │
 │                                                                  │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  ITEM #2          Brand: Adidas   |  Buy Date: 03/02/25   │   │
+│  │  ITEM #2          Buy Date: 2025-01-15                   │   │
+│  │  Description: WT Tank/lululemon  |  Size: M  |  Cost: $6 │   │
 │  │  ...                                                       │   │
 │  └──────────────────────────────────────────────────────────┘   │
 │                                                                  │
@@ -342,10 +336,11 @@ Show likely missing items, allow user to approve or reject each for write-off.
 ### Elements
 - **Summary card:** Top-level stats, toggle views
 - **Item cards:** One at a time in viewport, scrollable
-  - SKU, Description, Brand, Size, Cost, Retail, Buy Date
-  - Status badge (Missing, Not in File, etc.)
+  - SKU, Description (concatenated with Brand), Size, Cost, Retail, Buy Date
+  - Status badge (MISSING, NOT IN FILE, etc.)
   - Large action buttons: Accept Write-Off (green), Skip (gray)
-  - Optional note field
+- **Buy Date handling:** Converts Excel serial dates (e.g., 45505 → 2024-12-30)
+- **Description format:** Shows "Description/Brand" (e.g., "WT Tank/lululemon")
 - **Keyboard shortcuts:** Right arrow = accept, Left arrow = skip, Down = next
 - **Batch actions:** For power users, with filter dropdowns
 - **Progress bar:** "47 of 203" — shows position in queue
@@ -394,6 +389,37 @@ Allow user to download or email the final write-off list.
 │  └──────────────────────────────────────────────────────────┘   │
 │                                                                  │
 │  ┌──────────────────────────────────────────────────────────┐   │
+│  │  📋 DUPLICATE SCAN LOG                                     │   │
+│  │  ────────────────────────────────────────────────────────│   │
+│  │  Records of items scanned that match previous scans       │   │
+│  │  Threshold: Nearby duplicates within 5 items,            │   │
+│  │  repeated chunks of 8 items                              │   │
+│  │                                                           │   │
+│  │  ┌─────────────────────────────────────────────────────┐  │   │
+│  │  │ Count │ Type              │ Example               │  │   │
+│  │  │  0    │  Repeated Chunks  │ Pos 45→53             │  │   │
+│  │  │  0    │  Nearby Duplicates│ Pos 12→Pos 89 (Zone)  │  │   │
+│  │  │ 12    │  Exact Duplicates │ Pos 5→Pos 67 (Endcap) │  │   │
+│  │  └─────────────────────────────────────────────────────┘  │   │
+│  │                                                           │   │
+│  │  CSV columns: SKU, Scan Position, Other Position, Zone,  │   │
+│  │              Issue Type, Notes                           │   │
+│  │                                                           │   │
+│  │     [  Download Duplicate Scan Log  ]                   │   │
+│  │                                                           │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                                                                  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  📈 2 OH WRITE-UP CANDIDATES                              │   │
+│  │  ────────────────────────────────────────────────────────│   │
+│  │  Items with exactly 2 on-hand that may need              │   │
+│  │  inventory written up                                    │   │
+│  │                                                           │   │
+│  │     [  View 2 OH Items  ]    [  Download 2 OH List  ]   │   │
+│  │                                                           │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                                                                  │
+│  ┌──────────────────────────────────────────────────────────┐   │
 │  │  EMAIL TO ME                                              │   │
 │  │  ────────────────────────────────────────────────────────│   │
 │  │  📧 Send to: [your@email.com]                            │   │
@@ -416,6 +442,15 @@ Allow user to download or email the final write-off list.
 - **Email form:** Pre-filled address, editable subject
 - **Action buttons:** Large, primary action prominent
 - **Navigation:** Back + Finish
+
+### Barcode ZIP Processing
+- **Input:** ZIP file from barcodegenerator.tech (Code 128, ~200 PNG files)
+- **Process:** 
+  1. User uploads ZIP
+  2. App unzips using JSZip
+  3. Creates 5×22 grid layouts (5 columns, 22 rows)
+  4. Generates printable PDF/HTML
+- **Output:** Print-ready barcode sheets
 
 ---
 
@@ -519,6 +554,11 @@ Guide user through applying write-offs in the DRS system.
 - **Warning callout:** Clear distinction on code usage
 - **Help links:** FAQ and assistant contact
 - **Navigation:** Back + Done (returns to home)
+
+### Output File Format
+The adjustments CSV uses columns:
+- SKU, Description (with Brand concatenated), Size, Buy Date (YYYY-MM-DD), Cost, Retail, Category, Reason Code, Notes
+- Zone column removed (was redundant - all items "Not Scanned")
 
 ---
 

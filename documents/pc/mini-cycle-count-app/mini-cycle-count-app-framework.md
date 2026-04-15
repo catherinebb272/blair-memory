@@ -9,12 +9,12 @@
 **Purpose:** Enable LP investigators to run mini cycle counts — focused scans of specific item categories or date ranges — without needing full RGIS/Datascan deployments.
 
 **Workflow:**
-1. Upload DRS Item Buy Detail (full inventory)
-2. (Optional) Upload Precount file (category gospel) to filter inventory
-3. Upload Scan Data CSV (Column A=SKU, Column B=Zone) OR scan live with zone tracking
-4. Review "missing" items (in Precinct but not in scans)
-5. Accept/reject each item for write-off
-6. Export DRS-ready adjustment file + zone report
+1. Upload DRS export (Item Buy Detail or custom SKU list)
+2. Scan physical inventory (barcode/T별)
+3. Review mismatches on-screen (scrollable list)
+4. Accept/reject each item for write-off
+5. Export finished adjustment file + barcode CSV for printing
+6. Email files to user for downstream processing
 
 ---
 
@@ -83,32 +83,27 @@ Actions:
 
 ### Step 2: Data File Upload
 
-**Screen: "Upload Files"**
+**Screen: "Upload Inventory File"**
 
-Three optional uploads:
+Drag-and-drop zone supporting:
+- `.xlsx` (Excel)
+- `.csv` (DRS exports)
+- Column auto-detection for common DRS formats
 
-**1. Item Buy Detail (Required)**
-- Full inventory export from DRS
-- `.csv` or `.xlsx`
-- Columns: SKI (SKU), DRS Cost, DRS Retail, Description, Brand, etc.
-- Auto-detects column names
-
-**2. Precount File (Optional - for category filtering)**
-- "Precount [category]" export from DRS
-- Used to filter Item Buy Detail to specific subcategory
-- Logic: Only keep items that exist in BOTH files
-- Discards dead SKUs that exist in Precount but not in Item Buy
-
-**3. Scan Data (Optional - OR use live scanning)**
-- CSV with Column A = SKU, Column B = Zone
-- Can also scan live on Step 3
+Preview table showing:
+- First 5 rows
+- Detected columns (SKU, Description, Buy Date, Cost, Retail, etc.)
+- Row count
 
 Actions:
-- Upload each file → validates and shows row count
-- Continue to scanning when Item Buy Detail is loaded
+- [Upload] → parses and validates
+- [Confirm Columns] → maps fields to app schema
+- [Cancel] → returns to start
 
-**Column Detection:**
-Supports: SKI, SKU, DRS Cost, Cost, DRS Retail, Current Retail, Brand Description, etc.
+**Validation Rules:**
+- Require SKU column
+- Warn if missing Buy Date or Cost (not blocking)
+- Flag duplicates
 
 ---
 
@@ -116,29 +111,41 @@ Supports: SKI, SKU, DRS Cost, Cost, DRS Retail, Current Retail, Brand Descriptio
 
 **Screen: "Scan Items"**
 
-Zone-based scanning for store organization.
+Two modes:
 
-**Mode A: Live Scanning with Zones**
-- Set current zone (e.g., "WALL-RACK-1")
-- All scanned items automatically assigned to that zone
-- "End Zone" button to finish current zone
-- Zone summary shows count per zone
+**Mode A: Barcode Scanner (Primary)**
+- Input field focused for USB/hardware scanner
+- Auto-submits on Enter/CR
+- Shows last scanned item temporarily (1.5s)
+- Running count: "Items scanned: 247"
 
-**Mode B: Scan Data File Upload**
-- CSV with Column A = SKU, Column B = Zone
-- Header row auto-detected and skipped
-- Zone counts calculated from file
+**Mode B: File Upload (Fallback)**
+- Accept scanned CSV from Datascan/RGIS
+- Match against uploaded inventory file
 
-**Scan Input:**
-- Large input field for barcode scanner
-- Enter key submits each scan
-- Running count displayed
+**Duplicate Detection Logic:**
+The scanner implements three tiers of duplicate detection:
 
-**Actions:**
-- [Set Zone] - assign current zone name
-- [End Current Zone] - finish zone, start new one
-- [Clear All] - reset scan data
-- [Continue] - proceed to review
+| Detection Type | Threshold | Color Code | Description |
+|---------------|-----------|------------|-------------|
+| Exact Duplicate | N/A | Red | SKU was already scanned in this session |
+| Nearby Duplicate | 5 items | Amber | Same SKU scanned within 5 positions |
+| Repeated Chunk | 8 items | Orange | Same sequence of 8 items scanned twice |
+
+The system tracks each scan with its position in the scan order and flags issues in real-time during scanning.
+
+Display:
+- Scanned items list (scrollable)
+- Items NOT found in inventory file (highlighted yellow)
+- Duplicate scans flagged with issue type:
+  - **REPEATED CHUNK** (orange): Same 8-item sequence detected
+  - **NEARBY** (amber): Within 5 scans of same SKU
+  - **DUPLICATE** (red): Already scanned SKU
+
+Actions:
+- [Finish Scanning] → proceeds to Step 4
+- [Add More] → returns to scan input
+- [Reset] → clears all scans
 
 ---
 
@@ -146,41 +153,51 @@ Zone-based scanning for store organization.
 
 **Screen: "Review Items"**
 
-This is the core interaction screen. Shows items that are IN the Precinct but NOT in the scan data (missing items).
+This is the core interaction screen. Layout:
 
-**Stats Display:**
-- In File: total items in filtered inventory
-- Scanned: items uploaded in scan data
-- Missing: items to review (in Precinct but not scanned)
-- To Review: current queue position
-
-**Item Card:**
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  Brand Name                              SKU: SK892034     │
-│  Description: Nike Dunk High                             │
-│  Cost: $4.00        Retail: $14.00                        │
-│  [MISSING - In file but not scanned]                     │
+│  Count: 247 items scanned    │  Matching: 210  │  Gap: 37  │
+├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  [✓ Accept Write-Off]  [✗ Skip]                           │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ SKU: SK892034  |  Buy Date: 2024-12-30              │   │
+│  │ Desc: Dunk High/Nike  |  Size: 10  |  Cost: $4.00  │   │
+│  │ Retail: $14.00   |  Status: MISSING                  │   │
+│  │                                                     │   │
+│  │   [ ✓ Accept as Write-Off ]    [ ✗ Reject ]         │   │
+│  └─────────────────────────────────────────────────────┘   │
 │                                                             │
-│  [← Previous]    1 of 200    [Next →]                     │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ SKU: SK892035  |  Buy Date: 2025-01-15              │   │
+│  │ Desc: WT Tank/lululemon  |  Size: M  |  Cost: $6.00 │   │
+│  │ ...                                                 │   │
+│  └─────────────────────────────────────────────────────┘   │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Status Indicators:**
-- Green card + "ACCEPTED" = already accepted
-- Gray card + "SKIPPED" = already skipped  
-- Red card + "MISSING" = pending decision
+**Notes:**
+- Description field shows combined Description/Brand (e.g., "WT Tank/lululemon")
+- Zone column removed from display (all items show "Not Scanned")
+- Buy Date converts Excel serial dates (e.g., 45505 → 2024-12-30)
 
 **Navigation:**
-- Previous / Next buttons
-- Keyboard: ← Accept, → Skip, ↑ Previous, ↓ Next
-- Counter shows "X of Y"
+- Vertical scroll through each item
+- Keyboard shortcuts: `→` accept, `←` reject, `↓` next
+- Progress bar at top showing position in queue
 
-**Batch Actions:**
+**Item Categories to Review:**
+
+| Category | Action | Color Code |
+|----------|--------|------------|
+| Scanned & in file | Already counted | Green badge |
+| Scanned but NOT in file | Decide: Accept as write-off or reject | Yellow highlight |
+| In file but NOT scanned | Shows as "Missing" — read-only | Gray text |
+
+**Batch Actions (for power users):**
 - [Accept All Remaining]
-- [Skip All Remaining]
+- [Reject All Remaining]
+- [Accept All "Not in File" matching criteria: cost < $X]
 
 ---
 
@@ -194,6 +211,17 @@ Summary dashboard:
 - Rejected
 - Missing items (in file but not scanned)
 
+**Duplicate Scan Log:**
+After the scan phase, a duplicate scan log is generated showing:
+- Repeated Chunks count (same 8-item sequence)
+- Nearby Duplicates count (within 5 items)
+- Exact Duplicates count
+
+This log is downloadable as CSV for review.
+
+**2 OH Write-Up Candidates:**
+A separate section identifies items with exactly 2 on-hand that may need inventory written up. This is populated after comparing scanned items against the inventory file.
+
 Actions:
 - [Generate Adjustment File] → DRS-ready CSV
 - [Generate Barcode File] → CSV with SKU, Description, Barcode for printing
@@ -202,15 +230,41 @@ Actions:
 
 **Adjustment File Format (DRS-Ready):**
 ```
-SKU,Description,Buy Date,Cost,Retail,Adjustment Type,Reason Code,Notes
-SK892034,Nike Dunk High,2025-02-15,4.00,14.00,REMOVE,C-Cycl,Physical count 04/2026
+SKU,Description,Size,Buy Date,Cost,Retail,Category,Reason Code,Notes
+SK892034,Dunk High/Nike,10,2024-12-30,4.00,14.00,Shoes,C-Cycl,Physical count
+SK982056,WT Tank/lululemon,M,2024-12-28,6.00,18.00,Tops,C-Cycl,Physical count
 ```
+
+**Notes:**
+- Description field concatenates Description + Brand (e.g., "WT Tank/lululemon")
+- Zone column removed (was redundant - all items "Not Scanned")
+- Buy Date formatted as YYYY-MM-DD (converts Excel serial dates like 45505)
 
 **Barcode File Format:**
 ```
 SKU,Description,Barcode,Cost,Retail
 SK892034,Nike Dunk High,200892034,4.00,14.00
 ```
+
+### Barcode Image Processing (ZIP → Printable Sheets)
+
+**Workflow:**
+1. User generates barcodes at [barcodegenerator.tech/Code128](https://www.barcodegenerator.tech/Code128)
+2. Select **Code 128** barcode type
+3. Upload SKU list or enter manually
+4. Download as **ZIP file** (~200 PNG images)
+5. Upload ZIP to app → app unzips and creates 5x22 page layouts
+
+**Technical Implementation:**
+- **Unzip:** Use JSZip library (frontend) to extract PNG files
+- **Layout:** Create 5 columns × 22 rows grid on letter-size pages
+- **Output:** Generate PDF or HTML with tiled barcode images
+- **Print:** User can print directly from browser
+
+**Why Code 128?**
+- Industry standard for retail/SKU encoding
+- Compact, scannable by all standard barcode readers
+- No length restrictions like Code 39
 
 ---
 
@@ -256,7 +310,6 @@ Configuration:
   "buyDate": "2025-02-15",
   "cost": 4.00,
   "retail": 14.00,
-  "zone": "WALL-RACK-1",
   "scannedAt": "2026-04-02T10:35:00Z",
   "status": "accepted | rejected | notInFile | missing"
 }

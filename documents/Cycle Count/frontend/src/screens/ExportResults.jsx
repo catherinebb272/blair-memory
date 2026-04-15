@@ -6,8 +6,36 @@ function ExportResults({ countData, setCountData, onNext, onBack }) {
 
   const acceptedItems = countData.acceptedItems || []
   const skippedItems = countData.skippedItems || []
+  const scannedItems = countData.scannedItems || []
   const totalCost = acceptedItems.reduce((sum, item) => sum + parseFloat(item.cost), 0).toFixed(2)
   const totalRetail = acceptedItems.reduce((sum, item) => sum + parseFloat(item.retail), 0).toFixed(2)
+
+  // Generate duplicate scan log
+  const duplicateLog = scannedItems.filter(item => item.isDuplicate || item.isNearbyDuplicate || item.isRepeatedChunk)
+  
+  const nearbyDuplicates = scannedItems.filter(item => item.isNearbyDuplicate)
+  const repeatedChunks = scannedItems.filter(item => item.isRepeatedChunk)
+  const exactDuplicates = scannedItems.filter(item => item.isDuplicate)
+
+  // Handle download of duplicate scan log
+  const handleDownloadDuplicateLog = () => {
+    const headers = ['SKU', 'Scan Position', 'Issue Type', 'Notes']
+    const rows = duplicateLog.map(item => [
+      item.sku,
+      item.scanPosition || 0,
+      item.isRepeatedChunk ? 'REPEATED_CHUNK' : item.isNearbyDuplicate ? 'NEARBY_DUPLICATE' : 'EXACT_DUPLICATE',
+      item.isRepeatedChunk ? `Same ${8} items scanned twice` : item.isNearbyDuplicate ? `Within ${5} scans` : 'Already scanned'
+    ])
+
+    const csv = [headers.join(','), ...rows.map(row => row.join(','))].join('\n')
+    const blob = new Blob([csv], { type: 'text/csv' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `duplicate_scan_log_${new Date().toISOString().split('T')[0]}.csv`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
 
   const handleDownload = () => {
     // Generate CSV content
@@ -117,6 +145,66 @@ function ExportResults({ countData, setCountData, onNext, onBack }) {
               Download
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Duplicate Scan Log */}
+      <div className="card border-2 border-orange-200">
+        <h2 className="text-xl font-semibold text-slate-800 mb-4">
+          📋 Duplicate Scan Log
+        </h2>
+        <div className="text-sm text-slate-600 mb-4">
+          Records of items scanned that match previous scans. Threshold settings: Nearby duplicates within 5 items, repeated chunks of 8.
+        </div>
+        
+        <div className="grid grid-cols-3 gap-4 mb-4">
+          <div className="bg-orange-50 p-3 rounded-lg text-center">
+            <div className="text-2xl font-bold text-orange-600">{repeatedChunks.length}</div>
+            <div className="text-xs text-slate-600">Repeated Chunks</div>
+          </div>
+          <div className="bg-amber-50 p-3 rounded-lg text-center">
+            <div className="text-2xl font-bold text-amber-600">{nearbyDuplicates.length}</div>
+            <div className="text-xs text-slate-600">Nearby Duplicates</div>
+          </div>
+          <div className="bg-red-50 p-3 rounded-lg text-center">
+            <div className="text-2xl font-bold text-red-600">{exactDuplicates.length}</div>
+            <div className="text-xs text-slate-600">Exact Duplicates</div>
+          </div>
+        </div>
+
+        {duplicateLog.length > 0 && (
+          <div className="max-h-48 overflow-y-auto border border-slate-200 rounded-lg mb-4">
+            <div className="divide-y divide-slate-200">
+              {duplicateLog.slice(0, 20).map((item, idx) => (
+                <div key={idx} className="p-2 flex justify-between items-center bg-white">
+                  <span className="font-mono text-sm">{item.sku}</span>
+                  <span className={`text-xs font-medium ${
+                    item.isRepeatedChunk ? 'text-orange-600' : 
+                    item.isNearbyDuplicate ? 'text-amber-600' : 'text-red-600'
+                  }`}>
+                    {item.isRepeatedChunk ? 'REPEATED CHUNK' : item.isNearbyDuplicate ? 'NEARBY' : 'DUPLICATE'}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <button onClick={handleDownloadDuplicateLog} className="btn-secondary w-full">
+          Download Duplicate Scan Log
+        </button>
+      </div>
+
+      {/* 2 OH Write-Up Candidates */}
+      <div className="card border-2 border-yellow-200 bg-yellow-50">
+        <h2 className="text-xl font-semibold text-slate-800 mb-4">
+          📈 2 OH Write-Up Candidates
+        </h2>
+        <div className="text-sm text-slate-600 mb-4">
+          Items with exactly 2 on-hand that may need inventory written up. (Populated after inventory file comparison)
+        </div>
+        <div className="text-center py-8 text-slate-500">
+          ℹ️ This section will be populated after comparing scanned items against your inventory file. Run a cycle count to generate this list.
         </div>
       </div>
 

@@ -11,17 +11,36 @@ function ConductScan({ countData, setCountData, onNext, onBack }) {
     inputRef.current?.focus()
   }, [])
 
+  // Configuration thresholds for duplicate detection
+  const NEARBY_DUPLICATE_THRESHOLD = 5  // Duplicates within X items of each other
+  const EXACT_CHUNK_THRESHOLD = 8       // Same chunk scanned twice
+
   const handleScan = (e) => {
     if (e.key === 'Enter' && scanInput.trim()) {
       const sku = scanInput.trim().toUpperCase()
+      const currentPosition = scannedItems.length
       
-      // Check for duplicate
+      // Check for exact duplicate (already scanned)
       const isDuplicate = scannedItems.some(item => item.sku === sku)
+      
+      // Check for nearby duplicate (within threshold)
+      const nearbyDuplicate = scannedItems.slice(-NEARBY_DUPLICATE_THRESHOLD).some(item => item.sku === sku)
+      
+      // Check for exact same chunk scanned (if we have enough items)
+      let isRepeatedChunk = false
+      if (scannedItems.length >= EXACT_CHUNK_THRESHOLD) {
+        const lastChunk = scannedItems.slice(-EXACT_CHUNK_THRESHOLD).map(i => i.sku).join(',')
+        const newChunk = [...scannedItems.slice(-EXACT_CHUNK_THRESHOLD + 1).map(i => i.sku), sku].join(',')
+        isRepeatedChunk = lastChunk === newChunk
+      }
       
       const newItem = {
         sku,
         scannedAt: new Date().toISOString(),
-        isDuplicate
+        isDuplicate,
+        isNearbyDuplicate: nearbyDuplicate && !isDuplicate,
+        isRepeatedChunk: isRepeatedChunk,
+        scanPosition: currentPosition
       }
       
       setScannedItems(prev => [...prev, newItem])
@@ -142,13 +161,21 @@ function ConductScan({ countData, setCountData, onNext, onBack }) {
                 <div 
                   key={idx} 
                   className={`p-3 flex justify-between items-center ${
-                    item.isDuplicate ? 'bg-red-50' : 'bg-white'
+                    item.isDuplicate ? 'bg-red-50' : item.isNearbyDuplicate ? 'bg-amber-50' : item.isRepeatedChunk ? 'bg-orange-50' : 'bg-white'
                   }`}
                 >
                   <span className="font-mono text-sm">{item.sku}</span>
-                  {item.isDuplicate && (
-                    <span className="text-xs text-danger font-medium">DUPLICATE</span>
-                  )}
+                  <div className="flex gap-1">
+                    {item.isRepeatedChunk && (
+                      <span className="text-xs text-orange-600 font-medium">REPEAT CHUNK</span>
+                    )}
+                    {item.isNearbyDuplicate && (
+                      <span className="text-xs text-amber-600 font-medium">NEARBY</span>
+                    )}
+                    {item.isDuplicate && (
+                      <span className="text-xs text-danger font-medium">DUPLICATE</span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

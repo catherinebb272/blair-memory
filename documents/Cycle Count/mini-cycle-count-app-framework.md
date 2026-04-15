@@ -123,10 +123,24 @@ Two modes:
 - Accept scanned CSV from Datascan/RGIS
 - Match against uploaded inventory file
 
+**Duplicate Detection Logic:**
+The scanner implements three tiers of duplicate detection:
+
+| Detection Type | Threshold | Color Code | Description |
+|---------------|-----------|------------|-------------|
+| Exact Duplicate | N/A | Red | SKU was already scanned in this session |
+| Nearby Duplicate | 5 items | Amber | Same SKU scanned within 5 positions |
+| Repeated Chunk | 8 items | Orange | Same sequence of 8 items scanned twice |
+
+The system tracks each scan with its position in the scan order and flags issues in real-time during scanning.
+
 Display:
 - Scanned items list (scrollable)
 - Items NOT found in inventory file (highlighted yellow)
-- Duplicate scans (highlighted red)
+- Duplicate scans flagged with issue type:
+  - **REPEATED CHUNK** (orange): Same 8-item sequence detected
+  - **NEARBY** (amber): Within 5 scans of same SKU
+  - **DUPLICATE** (red): Already scanned SKU
 
 Actions:
 - [Finish Scanning] → proceeds to Step 4
@@ -191,6 +205,17 @@ Summary dashboard:
 - Accepted for write-off (count + $ value)
 - Rejected
 - Missing items (in file but not scanned)
+
+**Duplicate Scan Log:**
+After the scan phase, a duplicate scan log is generated showing:
+- Repeated Chunks count (same 8-item sequence)
+- Nearby Duplicates count (within 5 items)
+- Exact Duplicates count
+
+This log is downloadable as CSV for review.
+
+**2 OH Write-Up Candidates:**
+A separate section identifies items with exactly 2 on-hand that may need inventory written up. This is populated after comparing scanned items against the inventory file.
 
 Actions:
 - [Generate Adjustment File] → DRS-ready CSV
