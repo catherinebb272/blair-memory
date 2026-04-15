@@ -585,14 +585,6 @@
     function handleInventoryFile(file) {
       if (!file) return;
       
-      // Clear previous data before loading new file
-      inventory = [];
-      scanData = [];
-      reviewItems = [];
-      decisions = {};
-      zones = {};
-      currentZone = null;
-      
       const ext = file.name.split('.').pop().toLowerCase();
       
       // Helper to process inventory data
@@ -613,8 +605,6 @@
         const retailCol = findCol(['drs retail', 'current retail', 'retail', 'price', 'list price']);
         const brandCol = findCol(['brand', 'brand description', 'manufacturer']);
         const dateCol = findCol(['buy date', 'date', 'purchase', 'sale']);
-        const sizeCol = findCol(['size', 'sized', 'garment size']);
-        const categoryCol = findCol(['category', 'subcategory', 'type', 'dept', 'department']);
         
         if (!skuCol) {
           showToast('Could not find SKU column. Columns found: ' + headers.join(', '), 'error');
@@ -627,9 +617,7 @@
           cost: parseFloat(row[costCol] || 0) || 0,
           retail: parseFloat(row[retailCol] || 0) || 0,
           brand: row[brandCol] || '',
-          buyDate: row[dateCol] || '',
-          size: row[sizeCol] || '',
-          category: row[categoryCol] || ''
+          buyDate: row[dateCol] || ''
         })).filter(item => item.sku);
         
         document.getElementById('inventory-filename').textContent = file.name;
@@ -672,21 +660,10 @@
     function handleScanDataFile(file) {
       if (!file) return;
       
-      // Clear previous scan data when loading new file
-      scanData = [];
-      zones = {};
-      currentZone = null;
-      
       const isHeaderRow = (row) => {
-        if (!row || row.length === 0) return false;
         const firstCell = String(row[0] || '').toLowerCase().trim();
-        // Check if first cell looks like a header word
         const headerWords = ['sku', 'zone', 'item', 'scan', 'barcode', 'description'];
-        const isHeader = headerWords.some(w => firstCell === w || firstCell.includes(w + ' ') || firstCell.startsWith(w));
-        // Also check if SKU column contains non-SKU-like values (text that isn't alphanumeric)
-        if (isHeader) return true;
-        // Additional check: if first cell is short text with no numbers, likely header
-        return firstCell.length > 0 && firstCell.length < 20 && /^[a-z\s]+$/i.test(firstCell) && !/\d/.test(firstCell);
+        return headerWords.some(w => firstCell === w || firstCell.includes(w + ' '));
       };
       
       Papa.parse(file, {
@@ -728,22 +705,13 @@
               isRepeatedChunk,
               scanPosition: idx 
             };
-          }).filter(item => {
-            // Filter out header rows that slipped through
-            const headerTerms = ['sku', 'zone', 'item', 'scan', 'barcode', 'description', 'item #', 'sku #'];
-            return item.sku && !headerTerms.includes(item.sku.toLowerCase());
-          });
+          }).filter(item => item.sku);
           
-          // Count zones (excluding any that look like headers)
+          // Count zones
           zones = {};
           scanData.forEach(item => {
             zones[item.zone] = (zones[item.zone] || 0) + 1;
           });
-          
-          // Show warning if we only got a few items (might be parsing issue)
-          if (scanData.length < 10 && rows.length > 10) {
-            showToast('Warning: Only ' + scanData.length + ' items parsed. Check file format.', 'error');
-          }
           
           document.getElementById('scan-data-filename').textContent = file.name;
           document.getElementById('scan-data-count').textContent = scanData.length.toLocaleString();
@@ -842,8 +810,8 @@
       const scannedSKUs = new Set(scanData.map(s => s.sku.toUpperCase().trim()));
       
       reviewItems = inventory
-        .filter(item => !scannedSKUs.has(item.sku.toUpperCase().trim()));
-        // No cap - show all missing items
+        .filter(item => !scannedSKUs.has(item.sku.toUpperCase().trim()))
+        .slice(0, 200);
       
       // Add zone info to each review item
       const scanDataNormalized = scanData.map(s => ({ ...s, sku: s.sku.toUpperCase().trim() }));
@@ -893,32 +861,14 @@
       const statusText = isAccepted ? '✓ ACCEPTED' : (isSkipped ? '○ SKIPPED' : 'MISSING - In file but not scanned');
       const statusStyle = isAccepted ? 'background: #dcfce7; color: #059669;' : (isSkipped ? 'background: #e5e7eb; color: #6b7280;' : 'background: #fef2f2; color: #dc2626;');
       
-      // Convert Excel serial date to YYYY-MM-DD
-      function formatExcelDate(val) {
-        if (!val) return '-';
-        const num = parseInt(val, 10);
-        if (!isNaN(num) && num > 30000) {
-          const excelEpoch = new Date(1899, 11, 30);
-          const date = new Date(excelEpoch.getTime() + num * 24 * 60 * 60 * 1000);
-          return date.toISOString().split('T')[0];
-        }
-        return String(val);
-      }
-      
-      const descWithBrand = item.description && item.brand 
-        ? `${item.description}/${item.brand}` 
-        : (item.description || item.brand || '-');
-      const formattedBuyDate = formatExcelDate(item.buyDate);
-      
       container.innerHTML = `
         <div class="card" style="margin-top: 16px; ${cardStyle}">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-weight: 600; color: #1E40AF;">${item.brand || 'Unknown Brand'}</span>
             <span style="font-family: monospace; color: #6b7280;">${item.sku}</span>
-            <span style="font-weight: 600; color: #1E40AF;">${formattedBuyDate}</span>
           </div>
-          <div style="font-size: 18px; font-weight: 500; margin-bottom: 8px; color: #1F2937;">${descWithBrand}</div>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 14px; margin-bottom: 12px;">
-            <div><span style="color: #6b7280;">Size:</span> <strong>${item.size || '-'}</strong></div>
+          <div style="font-size: 14px; margin-bottom: 8px; color: #1F2937;">${item.description || '-'}</div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; font-size: 14px; margin-bottom: 12px;">
             <div><span style="color: #6b7280;">Cost:</span> <strong>$${item.cost.toFixed(2)}</strong></div>
             <div><span style="color: #6b7280;">Retail:</span> <strong>$${item.retail.toFixed(2)}</strong></div>
           </div>
@@ -1051,26 +1001,15 @@
       const accepted = reviewItems.filter(item => decisions[item.sku] === 'accepted');
       if (accepted.length === 0) { showToast('No items to export', 'error'); return; }
       
-      // Format Excel serial date
-      function formatExcelDate(val) {
-        if (!val) return '';
-        const num = parseInt(val, 10);
-        if (!isNaN(num) && num > 30000) {
-          const excelEpoch = new Date(1899, 11, 30);
-          const date = new Date(excelEpoch.getTime() + num * 24 * 60 * 60 * 1000);
-          return date.toISOString().split('T')[0];
-        }
-        return String(val);
-      }
-      
       const csv = Papa.unparse(accepted.map(item => ({
         SKU: item.sku,
-        Description: item.description && item.brand ? `${item.description}/${item.brand}` : (item.description || item.brand || ''),
-        Size: item.size || '',
-        BuyDate: formatExcelDate(item.buyDate),
+        Description: item.description,
+        Brand: item.brand,
+        BuyDate: item.buyDate,
         Cost: item.cost,
         Retail: item.retail,
-        Category: item.category || '',
+        Zone: item.zone,
+        AdjustmentType: 'REMOVE',
         ReasonCode: 'C-Cycl',
         Notes: 'Mini cycle count ' + new Date().toISOString().split('T')[0]
       })));
@@ -1103,18 +1042,10 @@
       const duplicateItems = scanData.filter(item => item.isDuplicate || item.isNearbyDuplicate || item.isRepeatedChunk);
       if (duplicateItems.length === 0) { showToast('No duplicates to export', 'info'); return; }
       
-      // Find other position for duplicates
-      const getOtherPosition = (item, allItems) => {
-        const firstIdx = allItems.findIndex(i => i.sku === item.sku && i.scanPosition !== item.scanPosition);
-        return firstIdx >= 0 ? firstIdx : '';
-      };
-      
-      const headers = ['SKU', 'Scan Position', 'Other Position', 'Zone', 'Issue Type', 'Notes'];
+      const headers = ['SKU', 'Scan Position', 'Issue Type', 'Notes'];
       const rows = duplicateItems.map(item => [
         item.sku,
         item.scanPosition || 0,
-        getOtherPosition(item, scanData),
-        item.zone || 'Endcap',
         item.isRepeatedChunk ? 'REPEATED_CHUNK' : item.isNearbyDuplicate ? 'NEARBY_DUPLICATE' : 'EXACT_DUPLICATE',
         item.isRepeatedChunk ? `Same ${EXACT_CHUNK_THRESHOLD} items scanned twice` : item.isNearbyDuplicate ? `Within ${NEARBY_DUPLICATE_THRESHOLD} scans` : 'Already scanned'
       ]);
