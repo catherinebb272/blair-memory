@@ -236,6 +236,17 @@
         </ul>
       </div>
 
+      <!-- Step 5 Barcode Callout -->
+      <div class="card" style="border-left: 4px solid #1E40AF; background: #EFF6FF;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 24px;">🔖</span>
+          <div>
+            <div style="font-weight: 600; color: #1E40AF;">Step 5: Barcode Sheets</div>
+            <div style="font-size: 14px; color: #6b7280;">After approving write-offs, generate printable barcode sheets for fast DRS entry. Available at the end.</div>
+          </div>
+        </div>
+      </div>
+
       <!-- CTA -->
       <div style="text-align: center;">
         <button class="btn btn-primary" id="btn-splash-next" style="font-size: 18px; padding: 16px 40px;">Let's Get Started →</button>
@@ -246,34 +257,56 @@
     <div class="screen" id="screen-upload">
       <div class="card">
         <h2>📁 Step 1: Upload Your Files</h2>
-        <p style="margin-bottom: 16px; color: #6b7280;">You need two files to run a zone-based count.</p>
+        <p style="margin-bottom: 16px; color: #6b7280;">Two files needed: Precount (what you scanned) + Item Buy Detail (DRS inventory).</p>
         
-        <h3>1. Inventory File (DRS Export)</h3>
-        <div class="upload-zone" id="inventory-zone">
-          <div class="icon">📋</div>
-          <p>Drag & drop your DRS Item Buy Detail CSV<br>or click to browse</p>
-          <input type="file" id="inventory-input" accept=".csv" style="display: none;">
+        <div class="card" style="border-left: 4px solid #1E40AF;">
+          <h3>1. Precount File ⭐ (Required)</h3>
+          <p style="margin-bottom: 12px; color: #6b7280; font-size: 14px;">
+            The list of items you scanned at the store (or from your scanner export).<br>
+            <strong>This filters your inventory down to only the items in this file.</strong><br>
+            Format: Column A = SKU, Column B = Zone (optional)
+          </p>
+          <div class="upload-zone" id="precount-zone" style="border-color: #1E40AF; background: #eff6ff;">
+            <div class="icon">🏷️</div>
+            <p>Drag & drop your Precount CSV/Excel<br>or click to browse</p>
+            <input type="file" id="precount-input" accept=".csv,.xlsx,.xls" style="display: none;">
+          </div>
+          <div id="precount-info" style="display: none; margin-top: 12px; padding: 12px; background: #eff6ff; border-radius: 8px;">
+            <strong>✓ Precount loaded:</strong> <span id="precount-filename"></span> (<span id="precount-count"></span> items)
+          </div>
         </div>
-        <div id="inventory-info" style="display: none; margin-top: 12px; padding: 12px; background: #f0fdf4; border-radius: 8px;">
-          <strong>✓ Inventory loaded:</strong> <span id="inventory-filename"></span> (<span id="inventory-count"></span> items)
+        
+        <div class="card" style="border-left: 4px solid #059669;">
+          <h3>2. Item Buy Detail (DRS Export)</h3>
+          <p style="margin-bottom: 12px; color: #6b7280; font-size: 14px;">
+            Full inventory from DRS (Item Buy Detail report).<br>
+            <strong>Only items in the Precount will be included in the count.</strong>
+          </p>
+          <div class="upload-zone" id="inventory-zone" style="border-color: #059669; background: #f0fdf4;">
+            <div class="icon">📋</div>
+            <p>Drag & drop your DRS Item Buy Detail CSV/Excel<br>or click to browse</p>
+            <input type="file" id="inventory-input" accept=".csv,.xlsx,.xls" style="display: none;">
+          </div>
+          <div id="inventory-info" style="display: none; margin-top: 12px; padding: 12px; background: #f0fdf4; border-radius: 8px;">
+            <strong>✓ Inventory loaded:</strong> <span id="inventory-filename"></span> (<span id="inventory-count"></span> items) → <span id="filtered-count">0</span> after filtering
+          </div>
         </div>
-      </div>
-      
-      <div class="card">
-        <h3>2. Scan Data (Excel/CSV)</h3>
-        <p style="margin-bottom: 12px; color: #6b7280; font-size: 14px;">
-          Format: Column A = SKU, Column B = Zone (optional).<br>
-          If no zone provided, items will be assigned to "Unassigned".
-        </p>
-        <div class="upload-zone" id="scan-data-zone" style="border-color: #059669; background: #f0fdf4;">
-          <div class="icon">📊</div>
-          <p>Drag & drop your scan data CSV/Excel<br>or click to browse</p>
-          <input type="file" id="scan-data-input" accept=".csv,.xlsx" style="display: none;">
+        
+        <div class="card" style="border-left: 4px solid #92400e; background: #fffbeb;">
+          <h3>3. Floor Scan (Optional)</h3>
+          <p style="margin-bottom: 12px; color: #6b7280; font-size: 14px;">
+            What you scanned on the floor this session. If skipped, you can manually scan on the next screen.
+            <br><strong style="color: #92400e;">⚠️ Must be saved as .csv file (Excel files may cause parsing errors)</strong>
+          </p>
+          <div class="upload-zone" id="scan-data-zone" style="border-color: #92400e; background: #fffbeb;">
+            <div class="icon">📊</div>
+            <p>Drag & drop your floor scan CSV<br>or click to browse</p>
+            <input type="file" id="scan-data-input" accept=".csv" style="display: none;">
+          </div>
+          <div id="scan-data-info" style="display: none; margin-top: 12px; padding: 12px; background: #fffbeb; border-radius: 8px;">
+            <strong>✓ Floor scan loaded:</strong> <span id="scan-data-filename"></span> (<span id="scan-data-count"></span> scans)
+          </div>
         </div>
-        <div id="scan-data-info" style="display: none; margin-top: 12px; padding: 12px; background: #f0fdf4; border-radius: 8px;">
-          <strong>✓ Scan data loaded:</strong> <span id="scan-data-filename"></span> (<span id="scan-data-count"></span> scans)
-        </div>
-      </div>
       
       <div class="nav-buttons">
         <div></div>
@@ -396,8 +429,8 @@
           <thead>
             <tr>
               <th>SKU</th>
-              <th>Zone</th>
               <th>Description</th>
+              <th>Buy Date</th>
               <th>Cost</th>
             </tr>
           </thead>
@@ -527,8 +560,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script>
     // State
-    let inventory = []; // Items from DRS file
-    let scanData = []; // {sku, zone, isDuplicate, isNearbyDuplicate, isRepeatedChunk} from scan file
+    let precountData = []; // SKUs from precount file (filters inventory)
+    let filteredInventory = []; // Inventory filtered to only items in precount
+    let inventory = []; // Full items from DRS file (unfiltered - kept for reference)
+    let scanData = []; // {sku, zone, isDuplicate, isNearbyDuplicate, isRepeatedChunk} from floor scan file
     
     // Duplicate detection config
     const NEARBY_DUPLICATE_THRESHOLD = 5;  // Duplicates within X items of each other
@@ -572,6 +607,78 @@
       showScreen(1);
     });
 
+    // ===== PRECOUNT FILE (Filters inventory) =====
+    const precountZone = document.getElementById('precount-zone');
+    const precountInput = document.getElementById('precount-input');
+    
+    precountZone.addEventListener('click', () => precountInput.click());
+    precountZone.addEventListener('dragover', e => { e.preventDefault(); precountZone.classList.add('dragover'); });
+    precountZone.addEventListener('dragleave', () => precountZone.classList.remove('dragover'));
+    precountZone.addEventListener('drop', e => { e.preventDefault(); precountZone.classList.remove('dragover'); handlePrecountFile(e.dataTransfer.files[0]); });
+    precountInput.addEventListener('change', e => handlePrecountFile(e.target.files[0]));
+
+    function handlePrecountFile(file) {
+      if (!file) return;
+      
+      const ext = file.name.split('.').pop().toLowerCase();
+      
+      const processPrecountData = (rows) => {
+        // Extract just SKUs from precount file
+        precountData = rows.map(row => String(row[0] || '').trim().toUpperCase()).filter(sku => sku);
+        
+        // Filter out header-like entries
+        const headerTerms = ['sku', 'item', 'scan', 'barcode', 'description', 'item #', 'sku #'];
+        precountData = precountData.filter(sku => sku && !headerTerms.includes(sku.toLowerCase()));
+        
+        document.getElementById('precount-filename').textContent = file.name;
+        document.getElementById('precount-count').textContent = precountData.length.toLocaleString();
+        document.getElementById('precount-info').style.display = 'block';
+        
+        // If inventory already loaded, re-filter it
+        if (inventory.length > 0) {
+          filterInventoryToPrecount();
+        }
+        
+        checkReady();
+      };
+      
+      if (ext === 'csv') {
+        Papa.parse(file, {
+          header: false,
+          skipEmptyLines: true,
+          complete: results => processPrecountData(results.data)
+        });
+      } else if (ext === 'xlsx' || ext === 'xls') {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const data = new Uint8Array(e.target.result);
+          const workbook = XLSX.read(data, { type: 'array' });
+          const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+          const jsonData = XLSX.utils.sheet_to_json(firstSheet, { defval: '' });
+          const rows = jsonData.map(row => Object.values(row));
+          processPrecountData(rows);
+        };
+        reader.readAsArrayBuffer(file);
+      } else {
+        showToast('Unsupported file type. Use CSV or Excel.', 'error');
+      }
+    }
+    
+    function filterInventoryToPrecount() {
+      if (precountData.length === 0) {
+        filteredInventory = [...inventory];
+      } else {
+        const precountSet = new Set(precountData);
+        filteredInventory = inventory.filter(item => precountSet.has(item.sku));
+      }
+      
+      document.getElementById('filtered-count').textContent = filteredInventory.length.toLocaleString();
+      
+      if (precountData.length > 0 && filteredInventory.length === 0) {
+        showToast('Warning: No items match between Precount and Inventory!', 'error');
+      }
+    }
+
     // ===== INVENTORY FILE =====
     const invZone = document.getElementById('inventory-zone');
     const invInput = document.getElementById('inventory-input');
@@ -587,6 +694,7 @@
       
       // Clear previous data before loading new file
       inventory = [];
+      filteredInventory = [];
       scanData = [];
       reviewItems = [];
       decisions = {};
@@ -635,6 +743,15 @@
         document.getElementById('inventory-filename').textContent = file.name;
         document.getElementById('inventory-count').textContent = inventory.length.toLocaleString();
         document.getElementById('inventory-info').style.display = 'block';
+        
+        // Apply precount filter if precount is already loaded
+        if (precountData.length > 0) {
+          filterInventoryToPrecount();
+        } else {
+          filteredInventory = [...inventory];
+          document.getElementById('filtered-count').textContent = filteredInventory.length.toLocaleString();
+        }
+        
         checkReady();
       };
       
@@ -677,6 +794,8 @@
       zones = {};
       currentZone = null;
       
+      const ext = file.name.split('.').pop().toLowerCase();
+      
       const isHeaderRow = (row) => {
         if (!row || row.length === 0) return false;
         const firstCell = String(row[0] || '').toLowerCase().trim();
@@ -689,12 +808,7 @@
         return firstCell.length > 0 && firstCell.length < 20 && /^[a-z\s]+$/i.test(firstCell) && !/\d/.test(firstCell);
       };
       
-      Papa.parse(file, {
-        header: false,
-        skipEmptyLines: true,
-        complete: results => {
-          let rows = results.data;
-          
+      const processScanData = (rows) => {
           // Skip header row if detected
           if (rows.length > 0 && isHeaderRow(rows[0])) {
             rows = rows.slice(1);
@@ -749,16 +863,37 @@
           document.getElementById('scan-data-count').textContent = scanData.length.toLocaleString();
           document.getElementById('scan-data-info').style.display = 'block';
           checkReady();
-        }
-      });
-    }
-
-    function checkReady() {
-      // Allow proceed if inventory is loaded (scan data is optional)
-      const ready = inventory.length > 0;
+      };
+      
+      if (ext === 'csv') {
+        Papa.parse(file, {
+          header: false,
+          skipEmptyLines: true,
+          complete: results => processScanData(results.data)
+        });
+      } else if (ext === 'xlsx' || ext === 'xls') {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const data = new Uint8Array(e.target.result);
+          const workbook = XLSX.read(data, { type: 'array' });
+          const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+          const jsonData = XLSX.utils.sheet_to_json(firstSheet, { defval: '' });
+          // Convert array of objects to array of arrays
+          const rows = jsonData.map(row => Object.values(row));
+          processScanData(rows);
+        };
+        reader.readAsArrayBuffer(file);
+      } else {
+        showToast('Unsupported file type. Use CSV or Excel.', 'error');
+        return;
+      }
+      
+      function checkReady() {
+      // Require both precount AND inventory loaded (scan data is optional)
+      const ready = precountData.length > 0 && filteredInventory.length > 0;
       document.getElementById('btn-upload-next').disabled = !ready;
-      if (inventory.length > 0) {
-        const msg = scanData.length > 0 ? 'Both files loaded!' : 'Inventory loaded! You can also scan directly.';
+      if (ready) {
+        const msg = scanData.length > 0 ? 'All 3 files loaded!' : 'Precount + Inventory loaded! Floor scan optional.';
         showToast(msg, 'success');
       }
     }
@@ -838,10 +973,16 @@
 
     // ===== REVIEW =====
     function prepareReview() {
+      // Clear previous review state
+      reviewItems = [];
+      decisions = {};
+      currentReviewIndex = 0;
+      
       // Normalize scan SKUs to uppercase for matching
       const scannedSKUs = new Set(scanData.map(s => s.sku.toUpperCase().trim()));
       
-      reviewItems = inventory
+      // Use FILTERED inventory (only items in precount) for review
+      reviewItems = filteredInventory
         .filter(item => !scannedSKUs.has(item.sku.toUpperCase().trim()));
         // No cap - show all missing items
       
@@ -855,7 +996,8 @@
       currentReviewIndex = 0;
       decisions = {};
       
-      document.getElementById('stat-total').textContent = inventory.length.toLocaleString();
+      // Show filtered count in stats
+      document.getElementById('stat-total').textContent = filteredInventory.length.toLocaleString();
       document.getElementById('stat-scanned').textContent = scanData.length.toLocaleString();
       document.getElementById('stat-missing').textContent = reviewItems.length.toLocaleString();
       document.getElementById('stat-pending').textContent = reviewItems.length.toLocaleString();
@@ -1008,15 +1150,31 @@
       document.getElementById('export-rejected').textContent = rejected.length;
       document.getElementById('export-value').textContent = '$' + totalValue.toFixed(2);
       
+      // Format Excel serial date to YYYY-MM-DD
+      function formatExcelDate(val) {
+        if (!val) return '-';
+        const num = parseInt(val, 10);
+        if (!isNaN(num) && num > 30000) {
+          const excelEpoch = new Date(1899, 11, 30);
+          const date = new Date(excelEpoch.getTime() + num * 24 * 60 * 60 * 1000);
+          return date.toISOString().split('T')[0];
+        }
+        return String(val);
+      }
+      
       const tbody = document.getElementById('export-table');
-      tbody.innerHTML = accepted.map(item => `
+      tbody.innerHTML = accepted.map(item => {
+        const descWithBrand = item.description && item.brand 
+          ? `${item.description}/${item.brand}` 
+          : (item.description || item.brand || '-');
+        return `
         <tr>
           <td style="font-family: monospace;">${item.sku}</td>
-          <td>${item.zone}</td>
-          <td>${item.description || '-'}</td>
+          <td>${descWithBrand}</td>
+          <td>${formatExcelDate(item.buyDate)}</td>
           <td>$${item.cost.toFixed(2)}</td>
         </tr>
-      `).join('');
+      `}).join('');
       
       // Populate duplicate scan log
       const duplicateItems = scanData.filter(item => item.isDuplicate || item.isNearbyDuplicate || item.isRepeatedChunk);
@@ -1063,17 +1221,22 @@
         return String(val);
       }
       
-      const csv = Papa.unparse(accepted.map(item => ({
-        SKU: item.sku,
-        Description: item.description && item.brand ? `${item.description}/${item.brand}` : (item.description || item.brand || ''),
-        Size: item.size || '',
-        BuyDate: formatExcelDate(item.buyDate),
-        Cost: item.cost,
-        Retail: item.retail,
-        Category: item.category || '',
-        ReasonCode: 'C-Cycl',
-        Notes: 'Mini cycle count ' + new Date().toISOString().split('T')[0]
-      })));
+      const csv = Papa.unparse(accepted.map(item => {
+        const descWithBrand = item.description && item.brand 
+          ? `${item.description}/${item.brand}` 
+          : (item.description || item.brand || '');
+        return {
+          SKU: item.sku,
+          Description: descWithBrand,
+          Size: item.size || '',
+          BuyDate: formatExcelDate(item.buyDate),
+          Cost: item.cost,
+          Retail: item.retail,
+          Category: item.category || '',
+          ReasonCode: 'C-Cycl',
+          Notes: 'Mini cycle count ' + new Date().toISOString().split('T')[0]
+        };
+      }));
       
       downloadBlob(csv, `adjustments_${new Date().toISOString().split('T')[0]}.csv`);
       showToast('CSV downloaded', 'success');
@@ -1090,8 +1253,27 @@
         byZone[item.zone].push(item);
       });
       
+      // Format Excel serial date
+      function formatExcelDate(val) {
+        if (!val) return '';
+        const num = parseInt(val, 10);
+        if (!isNaN(num) && num > 30000) {
+          const excelEpoch = new Date(1899, 11, 30);
+          const date = new Date(excelEpoch.getTime() + num * 24 * 60 * 60 * 1000);
+          return date.toISOString().split('T')[0];
+        }
+        return String(val);
+      }
+      
       const csv = Papa.unparse(Object.entries(byZone).flatMap(([zone, items]) => 
-        items.map(item => ({ Zone: zone, SKU: item.sku, Description: item.description, Brand: item.brand, Cost: item.cost, Retail: item.retail }))
+        items.map(item => ({ 
+          Zone: zone, 
+          SKU: item.sku, 
+          Description: item.description && item.brand ? `${item.description}/${item.brand}` : (item.description || item.brand || ''),
+          BuyDate: formatExcelDate(item.buyDate),
+          Cost: item.cost, 
+          Retail: item.retail 
+        }))
       ));
       
       downloadBlob(csv, `zone_report_${new Date().toISOString().split('T')[0]}.csv`);
