@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built This - Cron Reminders via Discord</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0e0e0;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            background-color: #008080;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -30px -30px 30px -30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+        h3 {
+            color: #008080;
+            margin-top: 30px;
+            border-bottom: 2px solid #008080;
+            padding-bottom: 5px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .prompt-block {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 4px solid #008080;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .step-lozenge {
+            display: inline-block;
+            background-color: #008080;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .prompt-inset {
+            background-color: #2d2d2d;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .gotcha-box {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .gotcha-box h4 {
+            margin: 0 0 10px;
+            color: #856404;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #008080;
+            color: white;
+        }
+        .note-box {
+            background-color: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .note-box h4 {
+            margin: 0 0 10px;
+            color: #1565c0;
+        }
+        .confirmation-box {
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .confirmation-box h4 {
+            margin: 0 0 10px;
+            color: #2e7d32;
+        }
+        .success-box {
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .success-box h4 {
+            margin: 0 0 10px;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How I Built This</h1>
+            <h2>Cron Reminders via Discord</h2>
+        </header>
+
+        <h3>Project Scope</h3>
+        <p>Set up automated reminders that send Discord DMs at scheduled times throughout the day. These can be daily vitamin reminders, pool maintenance checks, or any recurring task that needs a gentle nudge.</p>
+
+        <h3>Tools Needed</h3>
+        <ul>
+            <li><strong>OpenClaw Control</strong> - The web interface for your hosted VPS</li>
+            <li><strong>Two ways to do this:</strong>
+                <ul>
+                    <li><em>Through the UI</em> - Use the Cron Jobs Add Job form in the web interface</li>
+                    <li><em>Through the Agent</em> - Ask your agent to create the cron job via prompt</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="note-box">
+            <h4>💡 Note: UI vs Agent</h4>
+            <p>Some users have reported that the UI doesn't save their cron job properly. If you run into that issue, shifting to an agent prompt works great — just describe what you want and let the agent handle the details.</p>
+        </div>
+
+        <ul>
+            <li><strong>Your Discord User ID</strong> - To find this:
+                <ul>
+                    <li>Open Discord Settings → Advanced → Enable Developer Mode</li>
+                    <li>Right-click on your username in any chat → "Copy User ID"</li>
+                    <li>It's a long number like <code>881612027863375872</code></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Workflow</h3>
+        <p>Whether you use the UI or the Agent, the Cron Job form has several settings. Here's how to handle each one:</p>
+
+        <div class="step-lozenge">Job Name & Description</div>
+        <p>Give your job a short, memorable name and optional description. This helps identify it in the cron list.</p>
+
+        <div class="step-lozenge">Schedule</div>
+        <p>The schedule section has three options:</p>
+        <ul>
+            <li><strong>Every</strong> - Simple intervals like "every 2 hours" or "every 30 minutes"</li>
+            <li><strong>At</strong> - One-time schedule at a specific date/time</li>
+            <li><strong>Cron</strong> - Advanced cron expression (5 fields: minute, hour, day, month, weekday)</li>
+        </ul>
+        <p>When you pick Cron, two boxes appear:</p>
+        <ul>
+            <li><strong>Cron Expression</strong> - The 5-field format (e.g., "0 9 * * *" = 9am daily, "0 13-20/2 * * *" = 1pm, 3pm, 5pm, 7pm)</li>
+            <li><strong>Timezone</strong> - Defaults to UTC, so specify your local timezone (America/Chicago, America/New_York, etc.)</li>
+        </ul>
+
+        <div class="step-lozenge">Execution</div>
+        <ul>
+            <li><strong>Session</strong> - 
+                <ul>
+                    <li><strong>isolated</strong> - Runs in a separate session. Required for Discord/Telegram delivery.</li>
+                    <li><strong>main</strong> - Wakes your main conversation quietly. Use this only for background tasks that should NOT interrupt you — no sound, no Discord DM. It's silent.</li>
+                </ul>
+            </li>
+            <li><strong>Wake Mode</strong> - "now" runs immediately when triggered; "next-heartbeat" waits for the next 30-second heartbeat poll (more efficient, slight delay)</li>
+            <li><strong>What Runs</strong> - "post message" for simple text, or "run assistant" if you want the agent to do something first</li>
+        </ul>
+
+        <div class="step-lozenge">Prompt</div>
+        <p>The message you want sent. The key is to be <strong>explicit</strong> — tell the agent to <strong>send a Discord DM</strong> to your user ID, and include the exact message text. Vague prompts like "remind me to check the pool" may not trigger the DM.</p>
+        <p><strong>Better prompt format:</strong></p>
+        <div class="prompt-inset">Send a Discord DM to user [YOUR_DISCORD_ID] that says: "Your message here"</div>
+        <p>This explicit format ensures the agent knows exactly what to do.</p>
+
+        <div class="step-lozenge">Delivery</div>
+        <ul>
+            <li><strong>Mode</strong> - "announce" delivers to chat, "webhook" sends to a URL, "none" is silent</li>
+            <li><strong>Channel</strong> - Usually "last" (your current channel)</li>
+            <li><strong>To</strong> - Optional recipient override. For Discord DMs, use "channel:YOUR_DISCORD_ID"</li>
+        </ul>
+
+        <div class="gotcha-box">
+            <h4>⚠️ The Gotcha</h4>
+            <p><strong>Main session + system-event = NO Discord delivery.</strong></p>
+            <p>This is the most common mistake. If you want a Discord DM, you MUST use:</p>
+            <ul>
+                <li>Session: isolated (not main)</li>
+                <li>Delivery mode: announce (not none)</li>
+                <li>To: channel:YOUR_DISCORD_ID</li>
+            </ul>
+        </div>
+
+        <h3>Pro Tip: Keep the DM Channel Active</h3>
+        <div class="success-box">
+            <h4>🔄 The Keepalive Trick</h4>
+            <p>Discord DM channels can go "stale" when they're inactive for a while, causing cron job deliveries to fail. To fix this, create a <strong>keepalive cron job</strong> that runs every 10 minutes and sends then immediately deletes a message.</p>
+            <p>This "pings" the channel open without you ever seeing it. The prompt:</p>
+            <div class="prompt-inset">Send me a DM that says 'keepalive' and then delete that message. This keeps the DM channel active without spamming me.</div>
+            <p>Set it to run every 10 minutes, isolated session, with announce delivery. You won't see the messages, but Discord will keep the channel warm.</p>
+        </div>
+
+        <h3>Prompts Used</h3>
+        <p>Here are the actual prompts I used to create these reminder jobs:</p>
+
+        <div class="prompt-block">
+            <strong>Daily Vitamins Reminder (9am Chicago)</strong>
+            <div class="prompt-inset">Create a cron job that runs every day at 9am Chicago time. Use timezone America/Chicago. Use isolated session with --announce to deliver to Discord channel [YOUR_DISCORD_ID]. Use --message "Take your vitamins 💊". Use next-heartbeat wake mode.</div>
+        </div>
+
+        <div class="prompt-block">
+            <strong>Pool Skimmer Reminder (multiple times per day) - FIXED VERSION</strong>
+            <div class="prompt-inset">Create a cron job that runs every 2 hours between 1pm and 8pm Chicago time. The cron expression is "0 13-20/2 * * *" which covers 1pm, 3pm, 5pm, and 7pm. Use timezone America/Chicago. Run in the isolated session with --announce to deliver to Discord. Send a Discord DM to user [YOUR_DISCORD_ID] that says: "Hey! Go check the pool skimmers. Don't make me come up there 👀". Use next-heartbeat wake mode.</div>
+        </div>
+
+        <div class="prompt-block">
+            <strong>Keepalive (runs every 10 minutes)</strong>
+            <div class="prompt-inset">Create a cron job that runs every 10 minutes. Use timezone America/Chicago. Run in the isolated session with --announce to deliver to Discord. Send a Discord DM to user [YOUR_DISCORD_ID] that says "keepalive" and then immediately delete that message. Use --expect-final so the agent waits for completion. Use now wake mode.</div>
+        </div>
+
+        <div class="confirmation-box">
+            <h4>✅ Typical Confirmation</h4>
+            <p>When the agent successfully creates the job, it will return something like this:</p>
+            <div class="prompt-inset">Done. Created "pool-skimmer-reminder" — runs at 1pm, 3pm, 5pm, and 7pm Chicago time. First one should fire in ~20 minutes (1pm Chicago = 6pm UTC).
+
+"Hey! Go check the pool skimmers. Don't make me come up there 👀"</div>
+        </div>
+
+        <h3>Cron Expression Reference</h3>
+        <table>
+            <tr><th>Expression</th><th>Meaning</th></tr>
+            <tr><td>0 9 * * *</td><td>9am daily</td></tr>
+            <tr><td>0 9 * * 1-5</td><td>9am weekdays</td></tr>
+            <tr><td>0 13-20/2 * * *</td><td>1pm, 3pm, 5pm, 7pm (every 2 hours from 1-8pm)</td></tr>
+            <tr><td>0 9,12,18 * * *</td><td>9am, noon, 6pm daily</td></tr>
+            <tr><td>*/10 * * * *</td><td>Every 10 minutes</td></tr>
+            <tr><td>*/5 * * * *</td><td>Every 5 minutes</td></tr>
+        </table>
+
+        <h3>Key Takeaways</h3>
+        <ol>
+            <li>Want a Discord DM? Use isolated + announce + --to "channel:YOUR_ID"</li>
+            <li><strong>Be explicit in the prompt:</strong> "Send a Discord DM to user [ID] that says: '...'"</li>
+            <li>Always specify timezone or it defaults to UTC</li>
+            <li>Main session is for silent background tasks only (no DM)</li>
+            <li>Use a keepalive cron (every 10 min) to prevent DM channel from going stale</li>
+            <li>If the UI fails, shift to an agent prompt — it works great!</li>
+        </ol>
+    </div>
+</body>
+</html>
