@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built It - Creating Audio file from Family Memoirs using Eleven Labs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0e0e0; /* Soft greige */
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            background-color: #008080; /* Deep teal */
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -30px -30px 30px -30px; /* Extend background to edges */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+        h3 {
+            color: #008080; /* Deep teal for section titles */
+            margin-top: 30px;
+            border-bottom: 2px solid #008080;
+            padding-bottom: 5px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .prompt-block {
+            background-color: #f0f0f0; /* Slightly off-white for prominence */
+            padding: 15px;
+            border-left: 4px solid #008080;
+            margin-top: 20px;
+            border-radius: 4px;
+            white-space: pre-wrap; /* Preserve whitespace in prompts */
+            word-wrap: break-word; /* Break long words */
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .tips-and-tricks {
+            margin-top: 40px;
+        }
+        .tips-and-tricks ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .tips-and-tricks li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How I Built This</h1>
+            <h2>Creating Audio file from Family Memoirs using Eleven Labs</h2>
+        </header>
+
+        <section id="project-scope">
+            <h3>Project Scope</h3>
+            <p>The goal of this project is to convert typewritten family memoirs into digital audio files for each chapter, making them accessible and preserving them for future generations.</p>
+        </section>
+
+        <section id="tools-needed">
+            <h3>Tools Needed</h3>
+            <ul>
+                <li>Memoir Source: Digitized text files of family memoirs (originally typewritten, then retyped).</li>
+                <li>Transcription Input: Agent access to process text and potentially handle PDF conversion if scanned documents were used.</li>
+                <li>Method for uploading/retrieving text: Email (via Agentmail), GitHub, or direct attachment in Discord.</li>
+                <li>Agent Capabilities: Access to text processing, Connection to ElevenLabs for text-to-speech generation, Ability to handle file uploads/downloads or email attachments.</li>
+                <li>ElevenLabs Account: A free plan is sufficient for small jobs. Need to create an account and select a voice.</li>
+                <li>Tutorial Resources: Access to Thedenheyron.com (Training tab) for guidance on connecting email, GitHub, and ElevenLabs. Specific resource for Audio Visual (module 5) for ElevenLabs setup.</li>
+            </ul>
+        </section>
+
+        <section id="workflow">
+            <h3>Workflow</h3>
+            <ol>
+                <li>Prepare the Memoir Text: Ensure the family memoirs are available in a digital text format. If originally scanned PDFs, convert them to text. (In this case, they were retyped.)</li>
+                <li>Upload Memoir Text to Agent: Method Options: Email via Agentmail, GitHub, or Discord Attachment. Guidance: For tutorials on connecting email, GitHub, or handling attachments, refer to Thedenheyron.com &gt; Training tab.</li>
+                <li>Configure ElevenLabs Integration: Create an account on ElevenLabs.io. Utilize the free plan. Select a voice and add it to "My Voices" tab. Ensure the agent has access to ElevenLabs (follow tutorial on "Audio Visual" module 5).</li>
+                <li>Script Creation and Refinement: Prompt the agent to create a script for the audio file, based on the memoir text. Instruct the agent to incorporate emotion tags for added realism where appropriate. Review and revise the generated script for accuracy, tone, and flow.</li>
+                <li>Audio File Generation: Prompt the agent to use the final script and the selected ElevenLabs voice to create the audio file for each chapter.</li>
+                <li>Troubleshooting Potential Issues: Address voice issues, character limits, etc.</li>
+                <li>Retrieve the Audio File: Prompt the agent to return the generated audio file(s). Email Delivery can be configured using Agentmail.</li>
+            </ol>
+        </section>
+
+        <section id="prompts-used">
+            <h3>Prompts Used</h3>
+            <div class="prompt-block">
+<strong>Step 1 Prompt to get the text extracted</strong>
+
+"Please extract the text from the attached document (or from the file at this link: [provide link here if applicable]). Once extracted, please deliver the text to me in the chat window. If that's not possible, please email it to me at [your email address] I need to proofread it.
+<strong>Step 2: Prompt to install Agentmail [If Needed].</strong>
+"Connect Agentmail. Here is the link to all agentmail documentation https://docs.agentmail.to/llms.txt . Talk me through the installation process, including signing up for the account and getting an API key. Do a test email."
+<strong>Step 3: Prompt to configure ElevenLabs</strong>
+"Connect to ElevenLabs. Talk me through the installation process, including signing up for the free account and getting the API key, choosing a voice and troubleshooting any problems. Once connected, do a test audio sample and attach it as an audio message in Discord [or Telegram]. If there is a limitation on voices, talk me through selecting a compatible voice."
+<strong>Step 4: Prompt to create final script for Eleven Labs.</strong>
+"Using the text you extracted [or if changes were made, the script attached], please review and add punctuation as needed for pacing. Also provide recommended tags for additional emotion and realism in the elevenlabs conversion. Suggested tags can be found here: https://medium.com/@v-jur-kh/on-text-markup-for-the-elevenlabs-v3-text-to-speech-2b0a330110e1. Tags are placed before the word or phrase to be modified. Put the revised script with suggested tags [in this chat] [email] for me to review and approve."
+<strong>Step 5-6: Prompt to execute the script in ElevenLabs</strong>
+"Using our final agreed script, use the ElevenLabs text to speech conversion to create an audio file for me to listen to and approve. Give the file to me [in this chat] or [by email ] for final approval. Talk me through any troubleshooting required if the file doesn't create properly. Ask me if the file meets expectations or if anything needs to be changed.
+<strong>Step 7: Prompt to save final work product</strong>
+"Please save this audio file and call it [project name] in folder [project folder name]. . If we configured any tools today, please update memory, tools or other files with that information for future use. Update memory logs to include what we did in this project.
+"            </div>
+        </section>
+
+        <section class="tips-and-tricks">
+            <h3>Tips &amp; Tricks</h3>
+            <ul>
+                <li>If the material is large, you cannot paste it directly in Discord - use file upload</li>
+                <li>Create smaller sections first to test out ElevenLabs voice effects without burning through credits</li>
+                <li>Long chapters may exceed the available character plan limit in ElevenLabs free plan, so break into sections over time.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Tutorial created by Blair</p>
+        </footer>
+    </div>
+</body>
+</html>
