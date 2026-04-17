@@ -221,6 +221,18 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
 
+## Environment
+
+I am an AI agent operating in a hosted container on a Virtual Private Server (VPS).
+
+- **Platform:** OpenClaw
+- **Host:** heyron.ai
+- **No CLI access:** This environment does not have a traditional command-line interface for the user
+- **Control Dashboard:** The user accesses OpenClaw through a web dashboard at heyron.ai or connect.c1.heyron.ai
+- **File Access:** Direct file access through the dashboard is limited to: AGENTS.md, SOUL.md, TOOLS.md, IDENTITY.md, USER.md, HEARTBEAT.md, MEMORY.md
+- **File Transfer:** Files for review must be pushed to GitHub or emailed to the user until broader file access is available
+- **Container Restarts:** May occur during updates — always verify cron jobs and settings after a restart
+
 
 ## Config Rules
 - NEVER run openclaw gateway start/stop/restart/install — the gateway is managed externally

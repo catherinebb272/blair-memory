@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-17T21:36:28.786Z",
+  "entries": {
+    "memory:memory/2026-04-02.md:28:57": {
+      "key": "memory:memory/2026-04-02.md:28:57",
+      "path": "memory/2026-04-02.md",
+      "startLine": 28,
+      "endLine": 57,
+      "source": "memory",
+      "snippet": "- Created reference doc: `documents/agentmail-instructions.md` ### AgentMail Training Module (08-agentmail-setup.html) - Updated Module 08 based on discoveries: - Added critical JSON format box at top (text + html at top level) - Deleted Quick Limits table - Shortened Common Issues (removed bounce rate, other bloat) - Added clickable link to docs.agentmail.to/messages - General tightening — 14KB → 7.7KB - User uploaded to GitHub ### Daily Backup - Backup excluding heyron-tutorials folder (those stay on GitHub) - Target: catherinebb272/blair-documents --- ## Action Items - [x] Update Discord training module (03) - [x] Test HTML in AgentMail emails - [x] Update AgentMail training",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-17T21:36:28.786Z",
+      "lastRecalledAt": "2026-04-17T21:36:28.786Z",
+      "queryHashes": [
+        "626666369489"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "backup",
+        "08-agentmail-setup.html",
+        "docs.agentmail.to/messages",
+        "7.7kb",
+        "heyron-tutorials",
+        "catherinebb272/blair-documents",
+        "created",
+        "reference"
+      ]
+    },
+    "memory:memory/2026-03-25.md:1:27": {
+      "key": "memory:memory/2026-03-25.md:1:27",
+      "path": "memory/2026-03-25.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# Session Notes - 2026-03-25 ## Connections Status ### GitHub ✓ CONNECTED - CLI authenticated as catherinebb272 - Repo accessible: catherinebb272/blair-documents - Git identity configured ### AgentMail ⏸ ON HOLD - Skill installed to: /root/.openclaw/workspace/skills/agentmail/ - Token ready in config/agentmail.env - Blocked: Cannot edit openclaw.json to enable skill (permission denied, needs heyron-configure or admin) - **To complete:** Add skills.entries.agentmail config with API key ### Discord ⏳ NEEDS CHECK - User says they may have already set up bot + server for DMs - Need to verify if connection is active ## Config Files Created - /root/.openclaw/workspace/config/discord.env - /ro",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-17T21:36:28.786Z",
+      "lastRecalledAt": "2026-04-17T21:36:28.786Z",
+      "queryHashes": [
+        "626666369489"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "catherinebb272/blair-documents",
+        "config/agentmail.env",
+        "openclaw.json",
+        "heyron-configure",
+        "skills.entries.agentmail",
+        "connections",
+        "status",
+        "github"
+      ]
+    },
+    "memory:memory/2026-04-02.md:1:34": {
+      "key": "memory:memory/2026-04-02.md:1:34",
+      "path": "memory/2026-04-02.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# Memory - April 2, 2026 ## Today's Work ### Discord Training Module (03-connect-discord.html) - Reviewed user's heyron-tutorial at https://catherinebb272.github.io/heyron-tutorial/03-connect-discord.html - Cross-referenced with official OpenClaw docs - Identified key issues: 1. Pairing code mystery — users don't understand where it comes from 2. groupPolicy buried in troubleshooting — should be a required step 3. Missing server privacy settings (enable DMs for pairing) - Rewrote module with fixes: - Added \"What About That Pairing Code?\" explainer box - Moved groupPolicy to main setup flow (critical step) - Added Server Privacy Settings step - Added Developer Portal explanati",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-17T21:36:28.786Z",
+      "lastRecalledAt": "2026-04-17T21:36:28.786Z",
+      "queryHashes": [
+        "626666369489"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "03-connect-discord.html",
+        "heyron-tutorial",
+        "cross-referenced",
+        "april",
+        "today's",
+        "discord",
+        "training",
+        "module"
+      ]
+    },
+    "memory:memory/2026-03-12.md:1:44": {
+      "key": "memory:memory/2026-03-12.md:1:44",
+      "path": "memory/2026-03-12.md",
+      "startLine": 1,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "# Memory Log - 2026-03-12 ## Summary Major connectivity day - established multiple new integrations and backed up all critical files. ## Activities ### Discord Connection - Successfully connected to Discord via CB BlairAI server - User can now communicate via Discord DM - Bot: BlairANA (blairana@agentmail.to) ### GitHub Integration - Confirmed GitHub token works - Uploaded country club research PDF to agent-output folder - Created comprehensive backup of all memory files ### Email Setup (AgentMail) - Configured AgentMail service - Email address: blairana@agentmail.to - Successfully tested sending to catherine1@bellbracken.com - Drew's email added for ANA reports: Drew@bellbracken.com #",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-17T21:36:28.786Z",
+      "lastRecalledAt": "2026-04-17T21:36:28.786Z",
+      "queryHashes": [
+        "626666369489"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "backup",
+        "agentmail.to",
+        "agent-output",
+        "bellbracken.com",
+        "log",
+        "summary",
+        "major",
+        "connectivity"
+      ]
+    }
+  }
+}

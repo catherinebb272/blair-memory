@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Built This - Cron Reminders via Discord</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0e0e0;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            background-color: #008080;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -30px -30px 30px -30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+        h3 {
+            color: #008080;
+            margin-top: 30px;
+            border-bottom: 2px solid #008080;
+            padding-bottom: 5px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .prompt-block {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 4px solid #008080;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .step-lozenge {
+            display: inline-block;
+            background-color: #008080;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .prompt-inset {
+            background-color: #2d2d2d;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .gotcha-box {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .gotcha-box h4 {
+            margin: 0 0 10px;
+            color: #856404;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #008080;
+            color: white;
+        }
+        .note-box {
+            background-color: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .note-box h4 {
+            margin: 0 0 10px;
+            color: #1565c0;
+        }
+        .confirmation-box {
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .confirmation-box h4 {
+            margin: 0 0 10px;
+            color: #2e7d32;
+        }
+        .success-box {
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .success-box h4 {
+            margin: 0 0 10px;
+            color: #2e7d32;
+        }
+        .warning-box {
+            background-color: #ffebee;
+            border: 2px solid #f44336;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .warning-box h4 {
+            margin: 0 0 10px;
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How I Built This</h1>
+            <h2>Cron Reminders via Discord (Updated)</h2>
+        </header>
+
+        <h3>Project Scope</h3>
+        <p>Set up automated reminders that send Discord DMs at scheduled times throughout the day. These can be daily vitamin reminders, pool maintenance checks, or any recurring task that needs a gentle nudge.</p>
+
+        <h3>Tools Needed</h3>
+        <ul>
+            <li><strong>OpenClaw CLI</strong> - Via your agent or terminal</li>
+            <li><strong>Your Discord User ID</strong> - To find this:
+                <ul>
+                    <li>Open Discord Settings → Advanced → Enable Developer Mode</li>
+                    <li>Right-click on your username in any chat → "Copy User ID"</li>
+                    <li>It's a long number like <code>881612027863375872</code></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ Important: This is the WORKING method (April 2026)</h4>
+            <p>After extensive testing, we found that the isolated session approach doesn't work for Discord DMs. The working approach uses <strong>main session + system-event</strong>. This tutorial reflects that.</p>
+        </div>
+
+        <h3>The Working Setup</h3>
+        <p>Here's the only method that reliably sends Discord DMs:</p>
+
+        <div class="step-lozenge">Session: Main</div>
+        <p>Use the main session because it has full Discord access. Isolated sessions cannot send Discord DMs (they get "Unknown Channel" errors).</p>
+
+        <div class="step-lozenge">Payload: System Event</div>
+        <p>Use --system-event (not --message) when targeting main session. This wakes the main session with your prompt as a system event.</p>
+
+        <div class="step-lozenge">Delivery: None</div>
+        <p>Don't rely on the delivery system — the system event itself contains the instruction to send a DM.</p>
+
+        <h3>Command Format</h3>
+        <p>Use this exact format to create cron jobs that send Discord DMs:</p>
+
+        <div class="prompt-inset">openclaw cron add --name "your-job-name" --cron "0 9 * * *" --tz "America/Chicago" --session main --system-event "Send a Discord DM to user YOUR_USER_ID with your message here"</div>
+
+        <h3>Examples That Work</h3>
+
+        <div class="prompt-block">
+            <strong>Daily Vitamins Reminder (9am Chicago)</strong>
+            <div class="prompt-inset">openclaw cron add --name "daily-vitamins" --cron "0 9 * * *" --tz "America/Chicago" --session main --system-event "Send a Discord DM to user 881612027863375872 with message: Take your vitamins 💊"</div>
+        </div>
+
+        <div class="prompt-block">
+            <strong>Pool Skimmer Reminder (1pm, 3pm, 5pm, 7pm Chicago)</strong>
+            <div class="prompt-inset">openclaw cron add --name "pool-skimmer-reminder" --cron "0 13-20/2 * * *" --tz "America/Chicago" --session main --system-event "Send a Discord DM to user 881612027863375872 with message: Hey! Go check the pool skimmers"</div>
+        </div>
+
+        <h3>The Heartbeat Issue</h3>
+        <div class="gotcha-box">
+            <h4>⚠️ Critical: Main Session Heartbeat Must Be Enabled</h4>
+            <p>Cron jobs targeting main session will be <strong>skipped (disabled)</strong> if the main session heartbeat is disabled. This is the #1 reason cron jobs fail to run.</p>
+            <p><strong>To check:</strong> Run <code>openclaw status</code> and look at "Heartbeat" — it should NOT say "disabled (main)"</p>
+            <p><strong>If disabled:</strong> Your cron jobs will show "skipped" status. The gateway needs to be restarted or the heartbeat config needs to be updated.</p>
+        </div>
+
+        <h3>Why This Works</h3>
+        <ul>
+            <li><strong>Main session</strong> has full Discord access and can send DMs</li>
+            <li><strong>System event</strong> bypasses the normal conversation flow and directly delivers your prompt</li>
+            <li><strong>No delivery mode</strong> needed because the prompt itself contains the DM send instruction</li>
+        </ul>
+
+        <h3>What Doesn't Work (Don't Try These)</h3>
+        <ul>
+            <li><strong>Isolated session + message tool</strong> — Gets "Unknown Channel" error. Isolated sessions can't access Discord DMs.</li>
+            <li><strong>Isolated session + exec tool</strong> — Gets "exec host not allowed" error unless you change config.</li>
+            <li><strong>Main session + --message</strong> — Requires heartbeat to be enabled, otherwise gets skipped.</li>
+        </ul>
+
+        <h3>Testing Your Cron Job</h3>
+        <p>To test immediately without waiting for the schedule:</p>
+        <div class="prompt-inset">openclaw cron run YOUR_JOB_ID</div>
+
+        <p>Then check the logs:</p>
+        <div class="prompt-inset">openclaw logs | grep -i "Sent via"</div>
+
+        <h3>Checking Status</h3>
+        <div class="prompt-inset">openclaw cron list</div>
+        <p>Shows all cron jobs. Look for "idle" (scheduled), "running" (executing), or "ok" (completed successfully).</p>
+
+        <h3>Cron Expression Reference</h3>
+        <table>
+            <tr><th>Expression</th><th>Meaning</th></tr>
+            <tr><td>0 9 * * *</td><td>9am daily</td></tr>
+            <tr><td>0 9 * * 1-5</td><td>9am weekdays</td></tr>
+            <tr><td>0 13-20/2 * * *</td><td>1pm, 3pm, 5pm, 7pm (every 2 hours from 1-8pm)</td></tr>
+            <tr><td>0 9,12,18 * * *</td><td>9am, noon, 6pm daily</td></tr>
+            <tr><td>*/10 * * * *</td><td>Every 10 minutes</td></tr>
+        </table>
+
+        <h3>Backup & Restore</h3>
+        <p>Cron jobs are stored in <code>/home/openclaw/.openclaw/cron/jobs.json</code>. They can be lost if the container is recreated (e.g., during an OpenClaw update).</p>
+
+        <div class="note-box">
+            <h4>📦 Backup</h4>
+            <p>Cron jobs are included in the nightly backup to GitHub (file: <code>cron-jobs-backup.json</code>). This runs automatically at 2am UTC.</p>
+        </div>
+
+        <div class="note-box">
+            <h4>🔄 Restore</h4>
+            <p>If cron jobs disappear after a container restart, run:</p>
+            <div class="prompt-inset">bash /home/openclaw/.openclaw/workspace/restore-crons.sh</div>
+            <p>Or ask your agent to "restore cron jobs".</p>
+        </div>
+
+        <h3>Key Takeaways</h3>
+        <ol>
+            <li><strong>Use main session + system-event</strong> — This is the working combination</li>
+            <li><strong>Heartbeat must be enabled</strong> on main or crons get skipped</li>
+            <li><strong>Isolated session doesn't work</strong> for Discord DMs (Unknown Channel)</li>
+            <li><strong>Use --message</strong> not --content in your prompts</li>
+            <li><strong>Test with cron run</strong> before waiting for schedule</li>
+            <li><strong>Backups happen nightly</strong> — restore script available if needed</li>
+        </ol>
+    </div>
+</body>
+</html>

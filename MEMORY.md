@@ -48,6 +48,25 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
   * Animated Avatar Project (ElevenLabs TTS + LipSync AI)
 * **Use for:** Step-by-step project guides with prompts the user can reuse
 
+## Cron Jobs (Open Issue)
+
+**Known issues:**
+- Container restart disables cron jobs (they show as "skipped" with error "disabled")
+- Cron status can show "error" even when task completed successfully (false positive reporting bug)
+- Backup script path was wrong (/root → fixed to /home/openclaw)
+- Model behavior: sometimes refuses to execute Discord actions, just notes they should be done
+
+**Working setup (April 2026):**
+- Keepalive: every 15 min, isolated session, explicit prompt naming Discord tools
+- Pool skimmer: 1pm, 3pm, 5pm, 7pm Chicago, main session + system-event
+- Daily vitamins: 9am Chicago, main session + system-event
+
+**Backup:** cron-jobs-backup.json in workspace, restored via restore-crons.sh
+
+**User Discord ID:** 881612027863375872
+
+**Key fix:** Prompt must explicitly name the tools: "Use the Discord message tool to send a DM to user:881612027863375872..."
+
 ## Preferences
 
 * User is on VPS and needs download links or cloud storage for file access

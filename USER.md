@@ -5,7 +5,7 @@
 ### Contact Information
 - **Personal Email:** catherine1@bellbracken.com (daily use)
 - **AI Projects Email:** apartxalone@gmail.com (accounts, AI-related)
-- **Discord:** catherine1724
+- **Discord:** catherine1724 (user ID: 881612027863375872)
 
 ### Business Context
 - **Primary Business:** Apart Not Alone (ANA) - sobriety milestone coins
