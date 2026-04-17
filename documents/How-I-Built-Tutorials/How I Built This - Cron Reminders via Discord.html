@@ -154,7 +154,7 @@
     <div class="container">
         <header>
             <h1>How I Built This</h1>
-            <h2>Cron Reminders via Discord (Updated)</h2>
+            <h2>Cron Reminders via Discord (Updated April 2026)</h2>
         </header>
 
         <h3>Project Scope</h3>
@@ -189,8 +189,36 @@
         <div class="step-lozenge">Delivery: None</div>
         <p>Don't rely on the delivery system — the system event itself contains the instruction to send a DM.</p>
 
-        <h3>Command Format</h3>
-        <p>Use this exact format to create cron jobs that send Discord DMs:</p>
+        <h3>Plain English Prompts</h3>
+        <p>Just tell me what you need. Here's what works:</p>
+
+        <div class="prompt-block">
+            <strong>Daily Reminder (e.g., vitamins at 9am)</strong>
+            <p><em>Tell me:</em> "Set up a daily cron job to send me a Discord DM at 9am Chicago time saying 'Take your vitamins'"</p>
+        </div>
+
+        <div class="prompt-block">
+            <strong>Multiple Times Per Day (e.g., pool skimmers at 1pm, 3pm, 5pm)</strong>
+            <p><em>Tell me:</em> "Create a cron job to remind me to check the pool skimmers at 1pm, 3pm, 5pm, and 7pm Chicago time""</p>
+        </div>
+
+        <div class="prompt-block">
+            <strong>Every X Minutes (e.g., keepalive every 15 minutes)</strong>
+            <p><em>Tell me:</em> "Set up a keepalive cron that runs every 15 minutes to send a Discord DM with 'keepalive' and then delete it"</p>
+        </div>
+
+        <p>I already know your Discord user ID from your profile, so you don't need to provide it each time.</p>
+
+        <h3>What I Need From You</h3>
+        <ul>
+            <li><strong>When:</strong> Time(s) you want the reminder (e.g., "9am daily" or "2pm and 4pm")</li>
+            <li><strong>What:</strong> The message you want in the DM</li>
+            <li><strong>Where:</strong> Your timezone (default is Chicago/America Central)</li>
+        </ul>
+
+        <p><em>That's it. I'll figure out the cron expression and set it up.</em></p>
+
+        <h3>CLI Reference (For Reference)</h3>
 
         <div class="prompt-inset">openclaw cron add --name "your-job-name" --cron "0 9 * * *" --tz "America/Chicago" --session main --system-event "Send a Discord DM to user YOUR_USER_ID with your message here"</div>
 
@@ -208,10 +236,10 @@
 
         <h3>The Heartbeat Issue</h3>
         <div class="gotcha-box">
-            <h4>⚠️ Critical: Main Session Heartbeat Must Be Enabled</h4>
-            <p>Cron jobs targeting main session will be <strong>skipped (disabled)</strong> if the main session heartbeat is disabled. This is the #1 reason cron jobs fail to run.</p>
-            <p><strong>To check:</strong> Run <code>openclaw status</code> and look at "Heartbeat" — it should NOT say "disabled (main)"</p>
-            <p><strong>If disabled:</strong> Your cron jobs will show "skipped" status. The gateway needs to be restarted or the heartbeat config needs to be updated.</p>
+            <h4>⚠️ Container Restart Issues</h4>
+            <p>Cron jobs can get <strong>disabled</strong> after a container restart. They show as "skipped" with error "disabled".</p>
+            <p><strong>Fix:</strong> Run <code>openclaw cron list</code> and re-enable any disabled crons with <code>openclaw cron enable JOB_ID</code></p>
+            <p><strong>Prevention:</strong> Cron jobs are backed up to GitHub nightly. Use <code>bash restore-crons.sh</code> after a restart to restore from backup.</p>
         </div>
 
         <h3>Why This Works</h3>
@@ -266,12 +294,11 @@
 
         <h3>Key Takeaways</h3>
         <ol>
-            <li><strong>Use main session + system-event</strong> — This is the working combination</li>
+            <li><strong>Main session + system-event</strong> — This is the working combination</li>
             <li><strong>Heartbeat must be enabled</strong> on main or crons get skipped</li>
-            <li><strong>Isolated session doesn't work</strong> for Discord DMs (Unknown Channel)</li>
-            <li><strong>Use --message</strong> not --content in your prompts</li>
             <li><strong>Test with cron run</strong> before waiting for schedule</li>
             <li><strong>Backups happen nightly</strong> — restore script available if needed</li>
+            <li><strong>After container restart</strong> — Check that crons are still enabled, may need to re-enable</li>
         </ol>
     </div>
 </body>
