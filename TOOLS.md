@@ -6,11 +6,16 @@ Skills define how tools work. This file is for your specifics — the stuff that
 
 ### Nightly Backup to GitHub
 - **Schedule:** Daily at 2:00 AM UTC
-- **Command:** `cd /root/.openclaw/workspace && export GITHUB_TOKEN=<token> && ./backup-script.sh >> /var/log/blair-backup.log 2>&1`
-- **Script:** `/root/.openclaw/workspace/backup-script.sh`
+- **Command:** `cd /home/openclaw/.openclaw/workspace && export GITHUB_TOKEN=<token> && ./backup-script.sh >> /var/log/blair-backup.log 2>&1`
+- **Script:** `/home/openclaw/.openclaw/workspace/backup-script.sh`
 - **What it backs up:** All memory files, daily logs, and business files to GitHub
 - **Destination:** `catherinebb272/blair-documents/memory-backup/`
 - **Log:** `/var/log/blair-backup.log`
+
+### Discord DM Keepalive
+- **Schedule:** Every 15 minutes
+- **Command:** `openclaw message send --target @catherine1724 --content "keepalive" && openclaw message delete --last`
+- **Description:** Sends a DM with the text 'keepalive' to the user and immediately deletes it to keep the DM channel active without spamming.
 
 ## External Integrations
 
@@ -41,7 +46,7 @@ Skills define how tools work. This file is for your specifics — the stuff that
 - **Voice IDs:** Can be retrieved via `GET /v1/voices` API call
 
 ## Important File Locations
-- **Workspace:** `/root/.openclaw/workspace/`
-- **Memory files:** `/root/.openclaw/workspace/memory/`
-- **Daily logs:** `/root/.openclaw/workspace/memory/YYYY-MM-DD.md`
-- **Environment vars:** `/root/.openclaw/workspace/.env`
+- **Workspace:** `/home/openclaw/.openclaw/workspace/`
+- **Memory files:** `/home/openclaw/.openclaw/workspace/memory/`
+- **Daily logs:** `/home/openclaw/.openclaw/workspace/memory/YYYY-MM-DD.md`
+- **Environment vars:** `/home/openclaw/.openclaw/workspace/.env`
