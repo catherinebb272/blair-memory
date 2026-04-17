@@ -1,12 +1,11 @@
 {
-  "version": 1,
   "jobs": [
     {
       "id": "48875f1d-600a-4ed9-ba85-76ec3bb83831",
       "name": "pool-skimmer-reminder",
       "enabled": true,
       "createdAtMs": 1776442491509,
-      "updatedAtMs": 1776442493981,
+      "updatedAtMs": 1776452892240,
       "schedule": {
         "kind": "cron",
         "expr": "0 13-20/2 * * *",
@@ -19,14 +18,47 @@
         "text": "Send a Discord DM to user 881612027863375872 with message: Hey! Go check the pool skimmers. Dont make me come up there"
       },
       "state": {
-        "nextRunAtMs": 1776448800000,
-        "lastError": "disabled",
-        "lastRunAtMs": 1776442493980,
+        "nextRunAtMs": 1776456000000,
+        "lastRunAtMs": 1776448800002,
         "lastRunStatus": "skipped",
         "lastStatus": "skipped",
         "lastDurationMs": 1,
         "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 0,
+        "lastError": "disabled"
+      }
+    },
+    {
+      "id": "826e3032-5ca5-424d-b49c-f713b205156f",
+      "name": "keepalive-discord",
+      "enabled": true,
+      "createdAtMs": 1776451609321,
+      "updatedAtMs": 1776455227878,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 900000,
+        "anchorMs": 1776451609321
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Send a Discord DM to user:881612027863375872 with content 'keepalive' then delete the message"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1776456109333,
+        "lastRunAtMs": 1776455209333,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 18545,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 2,
+        "lastError": "⚠️ ✉️ Message failed"
       }
     },
     {
@@ -50,5 +82,10 @@
         "nextRunAtMs": 1776520800000
       }
     }
-  ]
+  ],
+  "total": 3,
+  "offset": 0,
+  "limit": 3,
+  "hasMore": false,
+  "nextOffset": null
 }
