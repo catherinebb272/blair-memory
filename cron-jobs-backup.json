@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "48875f1d-600a-4ed9-ba85-76ec3bb83831",
+      "name": "pool-skimmer-reminder",
+      "enabled": true,
+      "createdAtMs": 1776442491509,
+      "updatedAtMs": 1776442493981,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 13-20/2 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "Send a Discord DM to user 881612027863375872 with message: Hey! Go check the pool skimmers. Dont make me come up there"
+      },
+      "state": {
+        "nextRunAtMs": 1776448800000,
+        "lastError": "disabled",
+        "lastRunAtMs": 1776442493980,
+        "lastRunStatus": "skipped",
+        "lastStatus": "skipped",
+        "lastDurationMs": 1,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "ccb86ab9-c018-4e8d-81f8-e71a4253169d",
+      "name": "daily-vitamins",
+      "enabled": true,
+      "createdAtMs": 1776442569518,
+      "updatedAtMs": 1776442569518,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "Send a Discord DM to user 881612027863375872 with message: Take your vitamins 💊"
+      },
+      "state": {
+        "nextRunAtMs": 1776520800000
+      }
+    }
+  ]
+}
