@@ -9,7 +9,7 @@
       "updatedAtMs": 1776463200004,
       "schedule": {
         "kind": "cron",
-        "expr": "0 13-20/2 * * *",
+        "expr": "0 13-19/2 * * *",
         "tz": "America/Chicago"
       },
       "sessionTarget": "main",
