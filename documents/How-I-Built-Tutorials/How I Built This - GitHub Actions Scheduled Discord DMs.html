@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <title>How I Built This - GitHub Actions Scheduled Discord DMs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0e0e0;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            background-color: #008080;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -30px -30px 30px -30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+        h3 {
+            color: #008080;
+            margin-top: 30px;
+            border-bottom: 2px solid #008080;
+            padding-bottom: 5px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .prompt-block {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 4px solid #008080;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .step-lozenge {
+            display: inline-block;
+            background-color: #008080;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .prompt-inset {
+            background-color: #2d2d2d;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .gotcha-box {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .gotcha-box h4 {
+            margin: 0 0 10px;
+            color: #856404;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #008080;
+            color: white;
+        }
+        .note-box {
+            background-color: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .note-box h4 {
+            margin: 0 0 10px;
+            color: #1565c0;
+        }
+        .confirmation-box {
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .confirmation-box h4 {
+            margin: 0 0 10px;
+            color: #2e7d32;
+        }
+        .success-box {
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .success-box h4 {
+            margin: 0 0 10px;
+            color: #2e7d32;
+        }
+        .warning-box {
+            background-color: #ffebee;
+            border: 2px solid #f44336;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .warning-box h4 {
+            margin: 0 0 10px;
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How I Built This</h1>
+            <h2>GitHub Actions Scheduled Discord DMs</h2>
+        </header>
+
+        <h3>Project Scope</h3>
+        <p>Set up automated Discord DM reminders using GitHub Actions as the scheduler instead of cron. This solves the problem of container restarts disabling cron jobs — GitHub Actions runs reliably in the cloud and doesn't depend on your local setup.</p>
+        <p>The workflow fires at scheduled times, runs a small Node.js script that sends a Discord DM, then exits. No server required.</p>
+
+        <h3>Tools & Info Needed</h3>
+        <ul>
+            <li><strong>GitHub Account</strong> — For creating the repo and Actions</li>
+            <li><strong>Private GitHub Repository</strong> — Name it something like "plaid-fox-pinger"</li>
+            <li><strong>Discord Bot Token</strong> — Get from <a href="https://discord.com/developers/applications">Discord Developer Portal</a>:
+                <ul>
+                    <li>Create application → Bot → Reset Token</li>
+                </ul>
+            </li>
+            <li><strong>Your Discord User ID</strong> — Enable Developer Mode in Discord (Settings → Advanced), then right-click your username → Copy ID</li>
+            <li><strong>Node.js</strong> — The script uses built-in fetch (Node 18+) or falls back to node-fetch</li>
+        </ul>
+
+        <h3>Plain English Prompts</h3>
+        <p>Here's an example prompt you could use to generate this project with an AI agent:</p>
+
+        <div class="prompt-block">
+            <strong>Pool Skimmer Reminder Example</strong>
+            <p><em>Prompt:</em> "Create a GitHub Actions workflow that sends me a Discord DM every 2 hours from 1pm to 7pm Central Time. The message should remind me to check the pool skimmers — make it fun and cheeky like 'Hey! The skimmers aren't going to check themselves 👀' or 'Pool skimmer check! Don't make me come over there 🏊'</p>
+        </div>
+
+        <div class="prompt-block">
+            <strong>Generic Version</strong>
+            <p><em>Prompt:</em> "Create a GitHub Actions project that sends me a Discord DM at scheduled times throughout the day. Include a Node.js script that uses the Discord bot API to open a DM channel and send a message. The workflow should run on a schedule using cron syntax."</p>
+        </div>
+
+        <h3>How It Works</h3>
+        <ol>
+            <li><strong>GitHub Actions scheduler</strong> — Fires at cron times (e.g., 1pm, 3pm, 5pm, 7pm Central)</li>
+            <li><strong>Node script runs</strong> — Each time, it creates a fresh DM channel and sends the message</li>
+            <li><strong>Discord API</strong> — Uses bot token to create DM and send message, then exits</li>
+        </ol>
+
+        <div class="note-box">
+            <h4>💡 Why This Approach?</h4>
+            <p>Unlike cron running on a container that can restart and disable jobs, GitHub Actions runs on GitHub's infrastructure. It's free for personal use and reliable. The trade-off: it can have a 1-2 minute delay from the scheduled time.</p>
+        </div>
+
+        <h3>Setting It Up</h3>
+        <ol>
+            <li><strong>Create private GitHub repo</strong> (e.g., "plaid-fox-pinger")</li>
+            <li><strong>Add these files</strong> (see code sections below)</li>
+            <li><strong>Go to Settings → Secrets and variables → Actions</strong></li>
+            <li><strong>Add two repository secrets:</strong>
+                <ul>
+                    <li><code>DISCORD_TOKEN</code> — Your bot token</li>
+                    <li><code>USER_ID</code> — Your Discord user ID</li>
+                </ul>
+            </li>
+            <li><strong>Test manually</strong> — Go to Actions → "Send Scheduled DM" → Run workflow</li>
+        </ol>
+
+        <h3>Testing</h3>
+        <p>In your GitHub repo:</p>
+        <ol>
+            <li>Go to the <strong>Actions</strong> tab</li>
+            <li>Click on "Send Scheduled DM"</li>
+            <li>Click <strong>Run workflow</strong> (dropdown → main branch)</li>
+            <li>Check your Discord DMs — you should get the message within a minute</li>
+        </ol>
+
+        <h3>Cron Schedule Reference</h3>
+        <table>
+            <tr><th>Schedule</th><th>Cron Expression</th></tr>
+            <tr><td>1pm, 3pm, 5pm, 7pm Central</td><td><code>0 18,20,22,0 * * *</code></td></tr>
+            <tr><td>Every 2 hours (9am-7pm)</td><td><code>0 14-23/2 * * *</code></td></tr>
+            <tr><td>Once daily at 9am</td><td><code>0 14 * * *</code></td></tr>
+            <tr><td>Every 30 minutes</td><td><code>*/30 * * * *</code></td></tr>
+        </table>
+        <p><em>Note: Cron is in UTC. Central Time (CT) is UTC-6 (or UTC-5 during DST). So 1pm CT = 18:00 UTC (winter) or 19:00 UTC (summer).</em></p>
+
+        <h3>Customizing the Message</h3>
+        <p>Edit the <code>content</code> field in send.js to change the message. You can also add rotation:</p>
+
+        <div class="prompt-inset">const messages = [
+  "Hey! The skimmers aren't going to check themselves 👀",
+  "Pool skimmer check! Don't make me come over there 🏊",
+  "Your pool skimmers miss you. Go check 'em 💦",
+  "Skimmer status: unknown. Please investigate 🔍"
+];
+const content = messages[Math.floor(Math.random() * messages.length)];</div>
+
+        <h3>Code Files</h3>
+
+        <h4>package.json</h4>
+        <div class="prompt-inset">{
+  "name": "discord-dm-sender",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}</div>
+
+        <h4>send.js</h4>
+        <div class="prompt-inset">const TOKEN = process.env.DISCORD_TOKEN;
+const USER_ID = process.env.USER_ID;
+
+// Use native fetch (Node 18+), fallback to node-fetch for older versions
+const fetch = globalThis.fetch || require("node-fetch");
+
+async function sendDM() {
+  try {
+    // Step 1: Open (or fetch) DM channel
+    const channelRes = await fetch("https://discord.com/api/v10/users/@me/channels", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bot ${TOKEN}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        recipient_id: USER_ID
+      })
+    });
+
+    const channelData = await channelRes.json();
+
+    if (!channelData.id) {
+      console.error("Failed to create DM channel:", channelData);
+      process.exit(1);
+    }
+
+    console.log("DM channel created:", channelData.id);
+
+    // Step 2: Send message
+    const messageRes = await fetch(
+      `https://discord.com/api/v10/channels/${channelData.id}/messages`,
+      {
+        method: "POST",
+        headers: {
+          "Authorization": `Bot ${TOKEN}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          content: "⏰ Scheduled DM check-in. Still alive and behaving."
+        })
+      }
+    );
+
+    const messageData = await messageRes.json();
+
+    if (!messageData.id) {
+      console.error("Failed to send message:", messageData);
+      process.exit(1);
+    }
+
+    console.log("Message sent successfully:", messageData.id);
+  } catch (err) {
+    console.error("Error:", err);
+    process.exit(1);
+  }
+}
+
+sendDM();</div>
+
+        <h4>.github/workflows/send.yml</h4>
+        <div class="prompt-inset">name: Send Scheduled DM
+
+on:
+  schedule:
+    # 1pm, 3pm, 5pm, 7pm Central Time
+    - cron: '0 18,20,22,0 * * *'
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run DM script
+        run: node send.js
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          USER_ID: ${{ secrets.USER_ID }}</div>
+
+        <h3>Common Pitfalls</h3>
+        <div class="gotcha-box">
+            <h4>⚠️ Things to Watch For</h4>
+            <ul>
+                <li><strong>UTC vs. Local Time</strong> — GitHub cron uses UTC. Convert your desired times properly.</li>
+                <li><strong>Bot Prefix</strong> — Must use "Bot " in the Authorization header (with the space).</li>
+                <li><strong>Wrong User ID</strong> — Must be YOUR user ID, not the bot's.</li>
+                <li><strong>Bot hasn't DM'd you</strong> — The bot needs to have opened a DM with you at least once (the script handles this each run).</li>
+            </ul>
+        </div>
+
+        <h3>Key Takeaways</h3>
+        <ol>
+            <li><strong>Free and reliable</strong> — GitHub Actions is free for personal repos, runs on their infrastructure</li>
+            <li><strong>No server maintenance</strong> — Unlike container cron, this doesn't depend on your VPS</li>
+            <li><strong>1-2 minute delay</strong> — Actions may not fire exactly on time, give it a minute buffer</li>
+            <li><strong>Secrets stay secret</strong> — Token and user ID stored in GitHub secrets, not in code</li>
+            <li><strong>Easy to test</strong> — Run workflow manually from the Actions tab</li>
+        </ol>
+    </div>
+</body>
+</html>
