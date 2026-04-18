@@ -59,7 +59,7 @@ document.getElementById('generatePdfBtn').onclick=()=>{alert('PDF generation is 
 document.getElementById('backTo4').onclick=()=>show('screen4');
 document.getElementById('backToSplash').onclick=()=>show('splash');
 document.getElementById('backToSplashFromFaq').onclick=()=>show('splash');
-const faqLink=document.createElement('a');faqLink.href='#';faqLink.textContent='FAQ / Security';faqLink.style.float='right';faqLink.onclick=e=>{e.preventDefault();show('faq');};document.querySelector('#splash .container').appendChild(faqLink);
+const faqLink=document.createElement('a');faqLink.href='#';faqLink.textContent='FAQ / Security';faqLink.style.float='right';faqLink.onclick=e=>{e.preventDefault();show('faq');};document.querySelector('#splash').appendChild(faqLink);
 </script>
 </body>
 </html>
