@@ -154,32 +154,27 @@
     <div class="container">
         <header>
             <h1>How I Built This</h1>
-            <h2>GitHub Actions Scheduled Discord DMs</h2>
+            <h2>GitHub Actions: Reminders Using Discord DMs</h2>
         </header>
 
         <h3>Project Scope</h3>
-        <p>Set up automated Discord DM reminders using GitHub Actions as the scheduler instead of cron. This solves the problem of container restarts disabling cron jobs — GitHub Actions runs reliably in the cloud and doesn't depend on your local setup.</p>
-        <p>The workflow fires at scheduled times, runs a small Node.js script that sends a Discord DM, then exits. No server required.</p>
+        <p>Set up automated Discord DM reminders using GitHub Actions as the scheduler instead of cron. This solves the problem of container restarts disabling cron jobs or heartbeat unpredicatability — GitHub Actions runs reliably in the cloud and don't depend on your local setup.  And there's no problem with Discord having to "wake up" first.  </p>
+        <p>The workflow fires at scheduled times, runs a small Node.js script that sends a Discord DM, then exits. No server host required.  This project assumes you have an existing personal server and agent bot in Discord.  See tutorial on Discord at thedenheyron.com</p>
 
         <h3>Tools & Info Needed</h3>
         <ul>
             <li><strong>GitHub Account</strong> — For creating the repo and Actions</li>
-            <li><strong>Private GitHub Repository</strong> — Name it something like "plaid-fox-pinger"</li>
-            <li><strong>Discord Bot Token</strong> — Get from <a href="https://discord.com/developers/applications">Discord Developer Portal</a>:
-                <ul>
-                    <li>Create application → Bot → Reset Token</li>
-                </ul>
-            </li>
-            <li><strong>Your Discord User ID</strong> — Enable Developer Mode in Discord (Settings → Advanced), then right-click your username → Copy ID</li>
-            <li><strong>Node.js</strong> — The script uses built-in fetch (Node 18+) or falls back to node-fetch</li>
-        </ul>
+            <li><strong>New private GitHub Repository</strong> — Name it something like "project-pinger"</li>
+            <li><strong>Discord Bot Token</strong> — Get from your records or ask your agent to supply it from memory </a>:
+               </li>
+         </ul>
 
         <h3>Plain English Prompts</h3>
         <p>Here's an example prompt you could use to generate this project with an AI agent:</p>
 
         <div class="prompt-block">
             <strong>Pool Skimmer Reminder Example</strong>
-            <p><em>Prompt:</em> "Create a GitHub Actions workflow that sends me a Discord DM every 2 hours from 1pm to 7pm Central Time. The message should remind me to check the pool skimmers — make it fun and cheeky like 'Hey! The skimmers aren't going to check themselves 👀' or 'Pool skimmer check! Don't make me come over there 🏊'</p>
+            <p><em>Prompt:</em> "Create a GitHub Actions workflow that sends me a Discord DM every 2 hours from 1pm to 7pm Central Time. The message should remind me to check the pool skimmers — make it fun and cheeky and include emojis </p>
         </div>
 
         <div class="prompt-block">
@@ -187,39 +182,41 @@
             <p><em>Prompt:</em> "Create a GitHub Actions project that sends me a Discord DM at scheduled times throughout the day. Include a Node.js script that uses the Discord bot API to open a DM channel and send a message. The workflow should run on a schedule using cron syntax."</p>
         </div>
 
-        <h3>How It Works</h3>
+        <h3>Workflow</h3>
         <ol>
-            <li><strong>GitHub Actions scheduler</strong> — Fires at cron times (e.g., 1pm, 3pm, 5pm, 7pm Central)</li>
-            <li><strong>Node script runs</strong> — Each time, it creates a fresh DM channel and sends the message</li>
+            <li><strong>GitHub Actions scheduler</strong> — Fires at cron times (e.g., 1pm, 3pm, 5pm, 7pm Central) Don't forget the time zone!</li>
+            <li><strong>Node script runs</strong> — Each time, it creates a fresh DM channel and sends the message - no Discord "stale channel" issue</li>
             <li><strong>Discord API</strong> — Uses bot token to create DM and send message, then exits</li>
         </ol>
 
         <div class="note-box">
             <h4>💡 Why This Approach?</h4>
-            <p>Unlike cron running on a container that can restart and disable jobs, GitHub Actions runs on GitHub's infrastructure. It's free for personal use and reliable. The trade-off: it can have a 1-2 minute delay from the scheduled time.</p>
+            <p>Unlike cron running on a container that can restart and disable jobs or relies on unpredicatable heartbeat, GitHub Actions runs on GitHub's infrastructure. It's free for personal use and reliable. It can still have a 1-2 minute delay from the scheduled time.</p>
         </div>
 
-        <h3>Setting It Up</h3>
+        <h3>Setting It Up Manually</h3>
         <ol>
-            <li><strong>Create private GitHub repo</strong> (e.g., "plaid-fox-pinger")</li>
-            <li><strong>Add these files</strong> (see code sections below)</li>
-            <li><strong>Go to Settings → Secrets and variables → Actions</strong></li>
-            <li><strong>Add two repository secrets:</strong>
+            <li><strong>Create private GitHub repo</strong> (e.g., "project-pinger")</li>
+            <li><strong>Add these files</strong> package.json, send.js,.github/workflow/send.yml(see code sections below)</li>
+            <li><strong>In the new repository, go to Settings → Secrets and variables → Actions to add your tokens</strong></li>
+            <li><strong>Add two repository secrets (make sure to copy exactly):</strong>
                 <ul>
-                    <li><code>DISCORD_TOKEN</code> — Your bot token</li>
-                    <li><code>USER_ID</code> — Your Discord user ID</li>
+                    <li><code>DISCORD_TOKEN</code> — Paste your bot token</li>
+                    <li><code>USER_ID</code> — Paste Your Discord user ID</li>
+                    <li>Don't forget to SAVE! </li>
                 </ul>
             </li>
-            <li><strong>Test manually</strong> — Go to Actions → "Send Scheduled DM" → Run workflow</li>
+      
         </ol>
 
-        <h3>Testing</h3>
-        <p>In your GitHub repo:</p>
+        <h3>Testing Manually</h3>
+        <p>In your new GitHub repo that contains these files:</p>
         <ol>
-            <li>Go to the <strong>Actions</strong> tab</li>
+            <li>Go to the <strong>Actions</strong> tab in the top menu</li>
             <li>Click on "Send Scheduled DM"</li>
             <li>Click <strong>Run workflow</strong> (dropdown → main branch)</li>
             <li>Check your Discord DMs — you should get the message within a minute</li>
+            <li>Talk with your agent if you need help finding sections</li>
         </ol>
 
         <h3>Cron Schedule Reference</h3>
@@ -230,7 +227,7 @@
             <tr><td>Once daily at 9am</td><td><code>0 14 * * *</code></td></tr>
             <tr><td>Every 30 minutes</td><td><code>*/30 * * * *</code></td></tr>
         </table>
-        <p><em>Note: Cron is in UTC. Central Time (CT) is UTC-6 (or UTC-5 during DST). So 1pm CT = 18:00 UTC (winter) or 19:00 UTC (summer).</em></p>
+        <p><em>Note: You don't have to know all this - your Agent can create the right times for your schedule and time zone.  Just ask </em></p>
 
         <h3>Customizing the Message</h3>
         <p>Edit the <code>content</code> field in send.js to change the message. You can also add rotation:</p>
@@ -245,7 +242,7 @@ const content = messages[Math.floor(Math.random() * messages.length)];</div>
 
         <h3>Code Files</h3>
 
-        <h4>package.json</h4>
+        <h4>Create package.json in new Github and paste code</h4>
         <div class="prompt-inset">{
   "name": "discord-dm-sender",
   "version": "1.0.0",
@@ -254,7 +251,7 @@ const content = messages[Math.floor(Math.random() * messages.length)];</div>
   }
 }</div>
 
-        <h4>send.js</h4>
+        <h4>Create send.js in Github and paste code:</h4>
         <div class="prompt-inset">const TOKEN = process.env.DISCORD_TOKEN;
 const USER_ID = process.env.USER_ID;
 
@@ -315,13 +312,13 @@ async function sendDM() {
 
 sendDM();</div>
 
-        <h4>.github/workflows/send.yml</h4>
+        <h4>Create file .github/workflows/send.yml and paste code:</h4>
         <div class="prompt-inset">name: Send Scheduled DM
 
 on:
   schedule:
     # 1pm, 3pm, 5pm, 7pm Central Time
-    - cron: '0 18,20,22,0 * * *'
+    - cron: '0 18,20,22,12 * * *'
   workflow_dispatch:
 
 jobs:
