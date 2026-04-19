@@ -148,6 +148,17 @@
             margin: 0 0 10px;
             color: #c62828;
         }
+        /* Callout style - smaller with colored background */
+        .callout {
+            background-color: #f8f9fa;
+            border-left: 4px solid #008080;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .callout strong {
+            color: #008080;
+        }
     </style>
 </head>
 <body>
@@ -158,29 +169,15 @@
         </header>
 
         <h3>Project Scope</h3>
-        <p>Set up automated Discord DM reminders using GitHub Actions as the scheduler instead of cron. This solves the problem of container restarts disabling cron jobs or heartbeat unpredicatability — GitHub Actions runs reliably in the cloud and don't depend on your local setup.  And there's no problem with Discord having to "wake up" first.  </p>
-        <p>The workflow fires at scheduled times, runs a small Node.js script that sends a Discord DM, then exits. No server host required.  This project assumes you have an existing personal server and agent bot in Discord.  See tutorial on Discord at thedenheyron.com</p>
+        <p>Set up automated Discord DM reminders using GitHub Actions as the scheduler instead of cron. This solves the problem of container restarts disabling cron jobs or heartbeat unpredictability — GitHub Actions runs reliably in the cloud and doesn't depend on your local setup. And there's no problem with Discord having to "wake up" first.</p>
+        <p>The workflow fires at scheduled times, runs a small Node.js script that sends a Discord DM, then exits. No server host required. This project assumes you have an existing personal server and agent bot in Discord. See tutorial on Discord at thedenheyron.com</p>
 
         <h3>Tools & Info Needed</h3>
         <ul>
             <li><strong>GitHub Account</strong> — For creating the repo and Actions</li>
             <li><strong>New private GitHub Repository</strong> — Name it something like "project-pinger"</li>
-            <li><strong>Discord Bot Token</strong> — Get from your records or ask your agent to supply it from memory </a>:
-               </li>
-         </ul>
-
-        <h3>Plain English Prompts</h3>
-        <p>Here's an example prompt you could use to generate this project with an AI agent:</p>
-
-        <div class="prompt-block">
-            <strong>Pool Skimmer Reminder Example</strong>
-            <p><em>Prompt:</em> "Create a GitHub Actions workflow that sends me a Discord DM every 2 hours from 1pm to 7pm Central Time. The message should remind me to check the pool skimmers — make it fun and cheeky and include emojis </p>
-        </div>
-
-        <div class="prompt-block">
-            <strong>Generic Version</strong>
-            <p><em>Prompt:</em> "Create a GitHub Actions project that sends me a Discord DM at scheduled times throughout the day. Include a Node.js script that uses the Discord bot API to open a DM channel and send a message. The workflow should run on a schedule using cron syntax."</p>
-        </div>
+            <li><strong>Discord Bot Token</strong> — Get from your records or ask your agent to supply it from memory</li>
+        </ul>
 
         <h3>Workflow</h3>
         <ol>
@@ -189,24 +186,41 @@
             <li><strong>Discord API</strong> — Uses bot token to create DM and send message, then exits</li>
         </ol>
 
-        <div class="note-box">
-            <h4>💡 Why This Approach?</h4>
-            <p>Unlike cron running on a container that can restart and disable jobs or relies on unpredicatable heartbeat, GitHub Actions runs on GitHub's infrastructure. It's free for personal use and reliable. It can still have a 1-2 minute delay from the scheduled time.</p>
+        <div class="callout">
+            <strong>💡 Why This Approach?</strong><br>
+            Unlike cron running on a container that can restart and disable jobs or relies on unpredictable heartbeat, GitHub Actions runs on GitHub's infrastructure. It's free for personal use and reliable. It can still have a 1-2 minute delay from the scheduled time.
+        </div>
+
+        <h3>Plain English Prompts</h3>
+        <p>Here's an example prompt you could use to generate this project with an AI agent:</p>
+
+        <div class="prompt-block">
+            <strong>Pool Skimmer Reminder Example</strong>
+            <p><em>Prompt:</em> "Create a GitHub Actions workflow that sends me a Discord DM every 2 hours from 1pm to 7pm Central Time. The message should remind me to check the pool skimmers — make it fun and cheeky and include emojis."</p>
+        </div>
+
+        <div class="prompt-block">
+            <strong>Generic Version</strong>
+            <p><em>Prompt:</em> "Create a GitHub Actions project that sends me a Discord DM at scheduled times throughout the day. Include a Node.js script that uses the Discord bot API to open a DM channel and send a message. The workflow should run on a schedule using cron syntax."</p>
+        </div>
+
+        <div class="prompt-block">
+            <strong>Testing the Reminder</strong>
+            <p><em>Prompt:</em> "After you have set up the reminder in the new repository, test the reminder script immediately using the 'Run workflow' feature in the repository. Check with me to see if the message came through. Tell me what time it fired and if you received the DM."</p>
         </div>
 
         <h3>Setting It Up Manually</h3>
         <ol>
             <li><strong>Create private GitHub repo</strong> (e.g., "project-pinger")</li>
-            <li><strong>Add these files</strong> package.json, send.js,.github/workflow/send.yml(see code sections below)</li>
+            <li><strong>Add these files</strong> package.json, send.js, .github/workflow/send.yml (see code sections below)</li>
             <li><strong>In the new repository, go to Settings → Secrets and variables → Actions to add your tokens</strong></li>
             <li><strong>Add two repository secrets (make sure to copy exactly):</strong>
                 <ul>
                     <li><code>DISCORD_TOKEN</code> — Paste your bot token</li>
                     <li><code>USER_ID</code> — Paste Your Discord user ID</li>
-                    <li>Don't forget to SAVE! </li>
+                    <li>Don't forget to SAVE!</li>
                 </ul>
             </li>
-      
         </ol>
 
         <h3>Testing Manually</h3>
@@ -227,10 +241,17 @@
             <tr><td>Once daily at 9am</td><td><code>0 14 * * *</code></td></tr>
             <tr><td>Every 30 minutes</td><td><code>*/30 * * * *</code></td></tr>
         </table>
-        <p><em>Note: You don't have to know all this - your Agent can create the right times for your schedule and time zone.  Just ask </em></p>
+        <div class="callout">
+            <strong>Note:</strong> You don't have to know all this - your Agent can create the right times for your schedule and time zone. Just ask!
+        </div>
 
         <h3>Customizing the Message</h3>
         <p>Edit the <code>content</code> field in send.js to change the message. You can also add rotation:</p>
+
+        <div class="prompt-block">
+            <strong>Creating Rotating Messages</strong>
+            <p><em>Prompt:</em> "Update the send.js script to include a rotating list of messages that changes each time the reminder fires. Create 4-5 different variations that fit my use case (e.g., pool skimmer reminders), make them fun and cheeky with emojis, and have the script randomly select one each time it runs."</p>
+        </div>
 
         <div class="prompt-inset">const messages = [
   "Hey! The skimmers aren't going to check themselves 👀",
