@@ -73,29 +73,29 @@
 
 ---
 
-### #5: Centralized "How to Get Started"
+### #5: Streamline "How to Get Started"
 **Problem:** "How to Get Started" section on TheDen contains 8 steps that overlap with tutorials. When content exists in multiple places, it gets out of sync.
 
 **Recommendation:** 
-- Keep "How to Get Started" minimal: Sign up → Connect → Join Discord
+- Tighten to minimal: Sign up → Connect → Join Discord
 - Link to full tutorials for detailed setup
 - Single source of truth principle
 
 ---
 
-### #6: Clarify Guides vs Tutorials
+### #6: Delete Guides Tab — Merge into Prompts
 **Problem:** Unclear distinction between "How-To Guides" (tab on TheDen) and "Tutorials" (linked from Training tab).
 
-**Additional Issue:** "Prompts That Work" tab appears to duplicate content from "How-to-Guides" tab. Both seem to serve similar purpose (prompt templates, reference content). Recommend consolidating or clearly differentiating.
+**Additional Issue:** "Prompts That Work" tab appears to duplicate content from "How-to-Guides" tab. Both seem to serve similar purpose (prompt templates, reference content).
 
-**Recommendation:** Define and label clearly:
-- **Tutorials** = Step-by-step modules (Catherine's, Reb-Elle's)
-- **Guides** = Reference content, prompt formulas, how-to instructions
-- **Reference** = Dashboard explanations, term definitions
+**Recommendation:**
+- Delete How-To Guides tab entirely
+- Merge useful content into Prompts tab
+- Keep Tutorials as separate step-by-step modules (Catherine's, Reb-Elle's)
 
 ---
 
-### #14: How-To Guides — Are These the Right Examples?
+### #14: How-To Guides — Add Prerequisites to Examples (or delete if merging to Prompts)
 **Problem:** How-To Guides include prompts for tasks that assume significant prior setup (calendar integration, video generators, etc.). Users following these guides may hit dead ends or get frustrated when the agent can't perform the task because integrations aren't connected.
 
 **Recommendation:**
@@ -271,6 +271,30 @@
 - Clean, organized support landing page
 - Categories: Self-Service Docs → Community → Ticket → Direct Contact
 - Link to rather than duplicate troubleshooting content
+
+---
+
+### #19: Where to Put "How I Built It" Examples?
+**Problem:** Catherine has created detailed project tutorials ("How I Built It") showing how to use Heyron for specific projects (e.g., animated avatar, family memoir audio). These are valuable examples that prospective and current users would benefit from, but there's no clear place to host or link them.
+
+**Current state:** Tutorials live in Catherine's GitHub repo but aren't prominently linked from TheDen.
+
+**Recommendation:**
+- Option A: Add "How I Built It" as a sub-section under Training tab
+- Option B: Create new "Projects" or "Examples" tab showing completed projects with brief descriptions
+- Option C: Include in Agent Library as a special category
+- Best fit: Training tab makes most sense — these are advanced tutorials showcasing what's possible
+
+---
+
+### #20: Agent Library Aesthetic Mismatch
+**Problem:** Agent Library (heyron-ai.github.io/agent-library) has a different visual design than TheDen. The color scheme, typography, and layout feel disconnected from the main Heyron property, creating a fragmented brand experience.
+
+**Recommendation:**
+- Apply TheDen's visual theme/CSS to Agent Library
+- Match colors, fonts, button styles, spacing
+- Consider Agent Library as a subdomain that should inherit main brand identity
+- This is a CSS/htheming task Blair can handle
 
 ---
 
