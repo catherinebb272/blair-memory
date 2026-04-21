@@ -4,20 +4,21 @@
 
 ---
 
-## 🔧 Technical / Platform Architecture
+## 🔄 Onboarding
+
+| # | Issue | Priority |
+|---|-------|----------|
+| #17 | Onboarding steps must match actual flow | High |
+
+---
+
+## 🏗️ Architecture / Navigation
 
 | # | Issue | Priority |
 |---|-------|----------|
 | #1 | Convert JS tabs to real pages with URLs | High |
-| #18 | All content hardcoded — no CMS | Medium |
-
----
-
-## 🧭 Navigation & Site Structure
-
-| # | Issue | Priority |
-|---|-------|----------|
 | #16 | New 2-tier navigation (primary + secondary tabs) | High |
+| #18 | All content hardcoded — no CMS | Medium |
 | #9 | Unified navigation across all properties | Medium |
 | #13 | Rename "Welcome" → "What Is Heyron" | Low |
 | #5 | Streamline "How to Get Started" | Medium |
@@ -29,7 +30,7 @@
 | # | Issue | Priority |
 |---|-------|----------|
 | #2 | Fix Catherine's tutorial link (goes to Module 8) | High |
-| #3 | Tutorial descriptions — hardcoded vs live | High |
+| #3 | Tutorial descriptions — address duplicate/outdated content | High |
 | #4 | Agent Library needs index | Medium |
 | #6 | Delete Guides tab — merge content into Prompts | Medium |
 | #14 | Add prerequisites to How-To Guides examples | Medium |
@@ -64,14 +65,6 @@
 | #4 | No browsable index — search only | Medium |
 | #7 | Personas only findable via search | Low |
 | #20 | Visual mismatch with TheDen | Medium |
-
----
-
-## 🔄 Onboarding
-
-| # | Issue | Priority |
-|---|-------|----------|
-| #17 | Onboarding steps must match actual flow | High |
 
 ---
 
