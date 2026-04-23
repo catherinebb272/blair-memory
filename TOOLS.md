@@ -34,6 +34,19 @@ Skills define how tools work. This file is for your specifics — the stuff that
 - **Bot:** BlairANA
 - **Used for:** Primary communication channel
 
+### here.now (Static Site Hosting)
+- **API Key:** 6b1b31b22d1858757b6e8266ccf4de326e1c198f1f23567cc84ea695c1cb77ec
+- **Live Site:** https://boreal-larch-wxxv.here.now/
+- **Source:** `nc/neighborhoods/` folder in workspace
+- **Slug:** boreal-larch-wxxv
+- **How to Update:**
+  1. Get file metadata (path, size, contentType, SHA-256 hash)
+  2. PUT to `https://here.now/api/v1/publish/{slug}` with auth header
+  3. Upload each file to the presigned URLs returned
+  4. POST to finalizeUrl with versionId
+- **Script:** `/tmp/update-here.js` (generates file metadata)
+- **Stored in:** `.env` as `HERENOW_API_KEY` (recommended)
+
 ## Sample Prompts
 
 ### LipSync AI Setup

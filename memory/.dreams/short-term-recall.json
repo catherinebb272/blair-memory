@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-17T21:36:28.786Z",
+  "updatedAt": "2026-04-22T17:06:37.823Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -124,6 +124,130 @@
         "summary",
         "major",
         "connectivity"
+      ]
+    },
+    "memory:memory/2026-03-31.md:1:15": {
+      "key": "memory:memory/2026-03-31.md:1:15",
+      "path": "memory/2026-03-31.md",
+      "startLine": 1,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "# 2026-03-31 ## NC Neighborhoods App Updates Fixed two issues and redeployed: 1. **Tag display fix** - Changed from showing only 4 tags + count to showing all tags in both preview and expanded views 2. **Slider swap** - Replaced \"No Waitlist\" weighted priority with \"Quiet Residential\" (prioritizes neighborhoods with `quiet-residential` tag) **Deployed:** https://boreal-larch-wxxv.here.now/ ## Backup - Last backup: ~23:47 UTC (before this entry) - Backup script: `/root/.openclaw/workspace/backup-script.sh`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-22T17:06:37.823Z",
+      "lastRecalledAt": "2026-04-22T17:06:37.823Z",
+      "queryHashes": [
+        "fa8b805c80d0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "backup",
+        "quiet-residential",
+        "boreal-larch-wxxv.here.now",
+        "neighborhoods",
+        "app",
+        "updates",
+        "fixed",
+        "two"
+      ]
+    },
+    "memory:memory/2026-03-04.md:1:61": {
+      "key": "memory:memory/2026-03-04.md:1:61",
+      "path": "memory/2026-03-04.md",
+      "startLine": 1,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "# Milestone Coin Scripts - Apart Not Alone **Note:** These scripts match Drew and your daughter's voice from customer samples—warm, enthusiastic, and community-focused. Adjusted for veteran employee recognition context. --- ## 2 MONTH COIN (Bronze Tier) **Tone:** Welcoming, encouraging—first milestone **Script:** Congrats on two months! That's a real accomplishment. Every day adds up, and you've got a good streak going. Keep building on this foundation. – Apart Not Alone --- ## 3 MONTH COIN (Bronze Tier) **Tone:** Acknowledging the first quarter **Script:** Congrats on three months! That's a solid chunk of time. You're proving to yourself (and everyone else) that you've got this.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-22T17:06:37.823Z",
+      "lastRecalledAt": "2026-04-22T17:06:37.823Z",
+      "queryHashes": [
+        "fa8b805c80d0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "community-focused",
+        "milestone",
+        "coin",
+        "scripts",
+        "apart",
+        "not",
+        "alone",
+        "match"
+      ]
+    },
+    "memory:memory/2026-03-04.md:139:176": {
+      "key": "memory:memory/2026-03-04.md:139:176",
+      "path": "memory/2026-03-04.md",
+      "startLine": 139,
+      "endLine": 176,
+      "source": "memory",
+      "snippet": "Two years already! Wow! That is truly impressive. It represents a dedication to living a healthy life. Here's to the next chapter. Apart Not Alone --- ## 3 YEAR COIN (Platinum Tier) **Tone:** Big milestone—culmination of bronze, silver, gold journey **Script:** Three years. Platinum level. That's extraordinary. You've gone through seasons of hard work, tough days, and victories. This coin represents the whole journey—every step, every milestone, every ounce of effort. Hot damn. You did that. Apart Not Alone --- ## Voice Notes for Calligraphic Cards **Key phrases to capture in handwriting:** - \"Hot damn!\" – signature exclamation, high energy - \"You are amazing\" – direct affirmatio",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-22T17:06:37.823Z",
+      "lastRecalledAt": "2026-04-22T17:06:37.823Z",
+      "queryHashes": [
+        "fa8b805c80d0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "two",
+        "years",
+        "already",
+        "wow",
+        "truly",
+        "impressive",
+        "represents",
+        "dedication"
+      ]
+    },
+    "memory:memory/2026-03-04.md:91:152": {
+      "key": "memory:memory/2026-03-04.md:91:152",
+      "path": "memory/2026-03-04.md",
+      "startLine": 91,
+      "endLine": 152,
+      "source": "memory",
+      "snippet": "Congrats on 18 months! You are amazing! Take some time to reflect on your journey to this point and look at the scenery around you. Celebrate your persistence—you're doing the work. Apart Not Alone --- ## 1 YEAR KOI COIN (Gold Tier) **Reference Sample:** > \"Hot damn! You've made it a whole year! That's truly a milestone to celebrate. Congrats on...\" **Note:** Sample cuts off mid-sentence. Matches exuberant style. **Adapted for Veterans:** Hot damn! You've made it a whole year! That's truly a milestone to celebrate. One full trip around the sun. You've proven to yourself what you're capable of, and you've earned this gold. We're so proud of you. Apart Not Alone --- ## 1 YEAR PHOEN",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-22T17:06:37.823Z",
+      "lastRecalledAt": "2026-04-22T17:06:37.823Z",
+      "queryHashes": [
+        "fa8b805c80d0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "mid-sentence",
+        "congrats",
+        "months",
+        "you",
+        "amazing",
+        "take",
+        "time",
+        "reflect"
       ]
     }
   }
