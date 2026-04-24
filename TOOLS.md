@@ -4,18 +4,50 @@ Skills define how tools work. This file is for your specifics — the stuff that
 
 ## Cron Jobs / Scheduled Tasks
 
-### Nightly Backup to GitHub
+> **Note:** Some of these may be broken (container restarts disable cron). Verify before relying on them.
+
+### Cron → Email (Wake + Agent Sends)
+Use when you want a scheduled email trigger.
+
+**Step 1: Create the cron**
+```bash
+openclaw cron add \
+  --name "[name]" \
+  --every [duration] \
+  --session main \
+  --system-event "[event-name]"
+```
+
+**Step 2: When triggered, I send the email**
+```bash
+# API key from memory/2026-03-13.md or run:
+curl -s -X POST "https://api.agentmail.to/v0/inboxes/blairana@agentmail.to/messages/send" \
+  -H "Authorization: Bearer am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a" \
+  -H "Content-Type: application/json" \
+  -d '{"to": "[recipient]", "subject": "[subject]", "body": {"text": "[message]"}}'
+```
+
+**Example (hourly test):**
+```bash
+openclaw cron add --name "etsy-checkin-test" --every 1h --session main --system-event "send-test-email"
+```
+
+**Current live crons:**
+- `etsy-checkin` (Mon/Wed/Fri 1pm Chicago) → sends email reminder to Catherine
+- `etsy-checkin-test` (every 1h) → test cron
+
+### Discord DM Keepalive (may be broken)
+- **Schedule:** Every 15 minutes
+- **Command:** `openclaw message send --target @catherine1724 --content "keepalive" && openclaw message delete --last`
+- **Description:** Sends a DM with the text 'keepalive' to the user and immediately deletes it to keep the DM channel active without spamming.
+
+### Nightly Backup to GitHub (may be broken)
 - **Schedule:** Daily at 2:00 AM UTC
 - **Command:** `cd /home/openclaw/.openclaw/workspace && export GITHUB_TOKEN=<token> && ./backup-script.sh >> /var/log/blair-backup.log 2>&1`
 - **Script:** `/home/openclaw/.openclaw/workspace/backup-script.sh`
 - **What it backs up:** All memory files, daily logs, and business files to GitHub
 - **Destination:** `catherinebb272/blair-documents/memory-backup/`
 - **Log:** `/var/log/blair-backup.log`
-
-### Discord DM Keepalive
-- **Schedule:** Every 15 minutes
-- **Command:** `openclaw message send --target @catherine1724 --content "keepalive" && openclaw message delete --last`
-- **Description:** Sends a DM with the text 'keepalive' to the user and immediately deletes it to keep the DM channel active without spamming.
 
 ## External Integrations
 

@@ -179,4 +179,15 @@ Once browser automation is reliable:
 
 ---
 
+## Cron Configuration (FYI)
+
+The Mon/Wed/Fri email trigger is configured separately via OpenClaw CLI:
+```bash
+openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chicago --session main --system-event "etsy-checkin"
+```
+
+See `TOOLS.md` for the pattern. The cron just wakes me with a system event — then I send the email and we proceed into the workflow above.
+
+---
+
 **Last Updated:** 2026-04-24
