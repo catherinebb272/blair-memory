@@ -55,6 +55,8 @@ All Drew interactions logged with:
 - Coin shipment reminders
 
 ## Contact Info
-- **Discord:** @kaliodyme (user) / Channel: 1481691069878894702 (alerts)
+- **Discord:** @kaliodyme (user ID: 163139270515752960) / Channel: 1481691069878894702 (alerts)
+- **DM Policy:** For important alerts, post to channel AND DM Drew if @ mentions may be silenced. Use user ID for direct messages.
+- **Catherine Notification:** When sending DM to Drew, always also DM Catherine (user:881612027863375872) with: "Here's what I just sent to Drew by DM: [brief summary]"
 - **Email:** drew@bellbracken.com
 - **Role:** ANA Operations, Etsy shop management
