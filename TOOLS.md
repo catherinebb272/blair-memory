@@ -6,35 +6,38 @@ Skills define how tools work. This file is for your specifics — the stuff that
 
 > **Note:** Some of these may be broken (container restarts disable cron). Verify before relying on them.
 
-### Cron → Email (Wake + Agent Sends)
+### Cron → Email (Working Pattern)
 Use when you want a scheduled email trigger.
 
-**Step 1: Create the cron**
+**Step 1: Add API key to .env**
+```bash
+# Add to ~/.openclaw/workspace/.env:
+AGENTMAIL_API_KEY=am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a
+```
+
+**Step 2: Create the cron**
 ```bash
 openclaw cron add \
   --name "[name]" \
   --every [duration] \
-  --session main \
-  --system-event "[event-name]"
+  --session isolated \
+  --message "Send an email to [recipient] with subject '[subject]' and body: '[message]'"
 ```
 
-**Step 2: When triggered, I send the email**
+**Key insight:** Use `--message` (not `--system-event`) and `--session isolated` so the cron can take action without waking the main session. The isolated session reads .env for the API key.
+
+**Examples:**
 ```bash
-# API key from memory/2026-03-13.md or run:
-curl -s -X POST "https://api.agentmail.to/v0/inboxes/blairana@agentmail.to/messages/send" \
-  -H "Authorization: Bearer am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a" \
-  -H "Content-Type: application/json" \
-  -d '{"to": "[recipient]", "subject": "[subject]", "body": {"text": "[message]"}}'
+# Hourly test cron (disabled):
+openclaw cron add --name "etsy-checkin-test-v2" --every 1h --session isolated --message "Send a test email to apartxalone@gmail.com with subject 'TEST: Etsy Check-In (V2)' and body: 'This is V2 hourly test.'"
+
+# M-W-F at 1pm Chicago:
+openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chicago --session isolated --message "Send an email to apartxalone@gmail.com with subject 'Etsy Check-In Reminder' and body: 'Time for your Mon/Wed/Fri check-in. Reply with your Etsy data when ready.'"
 ```
 
-**Example (hourly test):**
-```bash
-openclaw cron add --name "etsy-checkin-test" --every 1h --session main --system-event "send-test-email"
-```
-
-**Current live crons:**
-- `etsy-checkin` (Mon/Wed/Fri 1pm Chicago) → sends email reminder to Catherine
-- `etsy-checkin-test` (every 1h) → test cron
+**Current crons:**
+- `etsy-checkin` (Mon/Wed/Fri 1pm Chicago) — disabled, needs update
+- `etsy-checkin-test-v2` — disabled after successful testing
 
 ### Discord DM Keepalive (may be broken)
 - **Schedule:** Every 15 minutes
