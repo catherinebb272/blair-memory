@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>08 — AgentMail Setup | Heyron Quick Start</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'IBM Plex Mono', 'Courier New', monospace; background: #faf8f3; color: #2c241b; line-height: 1.7; font-size: 15px; }
+nav { background: #fff; border-bottom: 2px solid #d4c4a8; padding: 1rem; position: sticky; top: 0; z-index: 100; overflow-x: auto; white-space: nowrap; }
+nav a { color: #5a4a3a; text-decoration: none; padding: 0.5rem 0.75rem; margin-right: 0.5rem; border: 1px solid transparent; transition: all 0.2s; font-size: 13px; }
+nav a:hover, nav a.active { border-color: #8b7355; background: #f5f0e8; }
+nav a.home { font-weight: 600; color: #2c241b; }
+.container { max-width: 680px; margin: 0 auto; padding: 3rem 2rem; }
+h1 { font-size: 2rem; margin-bottom: 1.5rem; color: #1a1510; font-weight: 600; }
+h2 { font-size: 1.3rem; margin: 2rem 0 1rem 0; color: #2c241b; font-weight: 600; border-bottom: 1px solid #d4c4a8; padding-bottom: 0.5rem; }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem 0; color: #3d3126; font-weight: 600; }
+p { margin-bottom: 1.25rem; }
+ul, ol { margin-left: 1.5rem; margin-bottom: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+.urgent-box { background: #2c241b; color: #faf8f3; padding: 1.5rem; margin: 0 0 2rem 0; text-align: center; }
+.urgent-box h1 { color: #faf8f3; font-size: 1.5rem; margin-bottom: 0.5rem; }
+.time-estimate { display: inline-block; background: #e94560; color: #fff; padding: 0.3rem 0.8rem; font-size: 0.85rem; margin-top: 0.5rem; }
+.red-warning { background: #ffe3e3; border: 2px solid #e94560; color: #7a1a1a; padding: 1rem; margin: 1rem 0; }
+.analogy-box { background: #fff; border: 2px solid #8b7355; padding: 1.5rem; margin: 1.5rem 0; }
+.analogy-box h3 { color: #2c241b; margin-bottom: 1rem; }
+.step-box { background: #fff; border: 2px solid #d4c4a8; padding: 1.5rem; margin: 1.5rem 0; position: relative; }
+.step-number { position: absolute; top: -15px; left: 20px; background: #2c241b; color: #faf8f3; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem; }
+.warning-inline { background: #fff3cd; padding: 0.5rem 1rem; display: inline-block; margin: 0.5rem 0; }
+.action-prompt { background: #f5f0e8; border-left: 4px solid #8b7355; padding: 1rem; margin: 1rem 0; font-family: 'IBM Plex Mono', monospace; }
+.action-prompt strong { color: #2c241b; }
+.footer-nav { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #d4c4a8; display: flex; justify-content: space-between; }
+.footer-nav a { color: #5a4a3a; text-decoration: none; padding: 0.5rem 1rem; border: 1px solid #d4c4a8; }
+.footer-nav a:hover { background: #f5f0e8; border-color: #8b7355; }
+.footer-nav .next { font-weight: 600; }
+.callout-box { background: #f5f0e8; border: 3px solid #8b7355; padding: 1.5rem; margin: 2rem 0; }
+.callout-box h3 { color: #2c241b; font-size: 1.2rem; margin-top: 0; }
+.critical-box { background: #fff3cd; border: 2px solid #ffc107; padding: 1.5rem; margin: 1.5rem 0; }
+.critical-box h3 { color: #8b5a00; margin-bottom: 0.75rem; }
+.critical-box code { background: #fff; padding: 0.2rem 0.4rem; }
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="home">Home</a>
+<a href="01-start-here.html">01</a>
+<a href="02-talk-to-agent.html">02</a>
+<a href="03-connect-discord.html">03</a>
+<a href="04-connect-github.html">04</a>
+<a href="05-about-images.html">05</a>
+<a href="06-memory-deep-dive.html">06</a>
+<a href="07-time-and-cron.html">07</a>
+<a href="08-agentmail-setup.html" class="active">08</a>
+</nav>
+
+<div class="container">
+
+<div class="urgent-box">
+<h1>Module 08 — AgentMail Setup</h1>
+<span class="time-estimate">⏱️ 10 minutes</span>
+</div>
+
+<div class="callout-box">
+<h3>✨ Why AgentMail?</h3>
+<p>Think of AgentMail as your AI's own personal mailbox — it's free, it's made for agents, and it keeps your regular email tidy.</p>
+<p><strong>Other options:</strong></p>
+<ul>
+<li><strong>Gmail:</strong> Create a fresh account just for your agent</li>
+<li><strong>Your domain:</strong> Set up <code>agent@yourdomain.com</code></li>
+</ul>
+<p>Keep it separate from your personal email.</p>
+</div>
+
+<div class="critical-box">
+<h3>🔑 CRITICAL: The JSON Format That Makes Emails Work</h3>
+<p>Most email sending problems come from wrong JSON format. <strong>Always use both <code>text</code> and <code>html</code> at the top level</strong> (not nested in a <code>body</code> object):</p>
+<pre><code>{
+  "to": "recipient@example.com",
+  "subject": "My Subject",
+  "text": "Plain text fallback",
+  "html": "<p>This is <strong>HTML</strong> with <a href=\"...\">a link</a></p>"
+}</code></pre>
+<p><strong>Why both?</strong> Text is fallback for clients that don't render HTML. Always provide both — it improves deliverability.</p>
+<p><strong>Pro tip:</strong> Create a skill with this JSON format so your agent remembers it.</p>
+</div>
+
+<div class="red-warning">
+<strong>⚠️ Warning: Don't Mix Email Lives</strong>
+<p>Your agent will read, send, and forward email automatically. Use AgentMail (or a fresh Gmail) for agent stuff. Your real email for human stuff.</p>
+</div>
+
+<h2>Let's get your agent its own mailbox</h2>
+
+<div class="step-box">
+<div class="step-number">1</div>
+<h3>Go get an AgentMail inbox</h3>
+<ol>
+<li>Visit <strong>https://agentmail.to</strong></li>
+<li>Sign up for a free inbox (e.g., <code>yourname-agent</code>)</li>
+<li>Check your email for a verification link</li>
+<li>Log into your new inbox</li>
+</ol>
+</div>
+
+<div class="step-box">
+<div class="step-number">2</div>
+<h3>Grab your API token</h3>
+<ol>
+<li>In your AgentMail inbox, look for "API" or "Tokens"</li>
+<li>Click "Generate new token" — name it <code>My Heyron Agent</code></li>
+<li><strong>Copy the token now</strong> — you won't see it again</li>
+</ol>
+<div class="warning-inline">⚠️ This token is like a password. Save it somewhere safe!</div>
+</div>
+
+<div class="step-box">
+<div class="step-number">3</div>
+<h3>Connect your agent</h3>
+<p>Tell your agent:</p>
+<div class="action-prompt">
+<strong>"Connect to AgentMail. My inbox is [your-inbox]@agentmail.to and here's my token: [paste-token]"</strong>
+</div>
+<p>It will test the connection and confirm it's working.</p>
+</div>
+
+<div class="step-box">
+<div class="step-number">4</div>
+<h3>Test it</h3>
+<div class="action-prompt">
+<strong>"Send a test email to my regular email"</strong>
+</div>
+<p>Check both inboxes to confirm it went through.</p>
+</div>
+
+<h2>⚠️ Common Issues</h2>
+
+<ul>
+<li><strong>Blank emails / HTML not rendering:</strong> Wrong JSON format. Use both <code>text</code> AND <code>html</code> at top level (not nested in <code>body</code>). Without <code>html</code>, you just get plain text.</li>
+<li><strong>Links get blocked:</strong> First emails with links often get flagged. Send your first message plain, add links in follow-ups.</li>
+<li><strong>Attachments:</strong> Max 20-25MB. Don't send images inline in first emails — send as links instead.</li>
+</ul>
+
+<p><strong>Full documentation:</strong> <a href="https://docs.agentmail.to/messages">https://docs.agentmail.to/messages</a></p>
+
+<h2>✨ Look what you've built!</h2>
+
+<p>Your agent now has:</p>
+<ul>
+<li><strong>Chat</strong> (Discord — Module 03)</li>
+<li><strong>Memory</strong> (GitHub — Module 04)</li>
+<li><strong>Vision</strong> (Images — Module 05)</li>
+<li><strong>Scheduling</strong> (Cron — Module 07)</li>
+<li><strong>Email</strong> (AgentMail — right now)</li>
+</ul>
+<p>A full digital assistant.</p>
+
+<div class="footer-nav">
+<a href="07-time-and-cron.html">← Module 07</a>
+</div>
+
+</div>
+</body>
+</html>

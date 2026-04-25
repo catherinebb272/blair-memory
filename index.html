@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Heyron "Quickstart" Guide</title>
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+ 
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ 
+ body {
+ font-family: 'IBM Plex Mono', 'Courier New', monospace;
+ background: #faf8f3;
+ color: #2c241b;
+ line-height: 1.7;
+ font-size: 15px;
+ }
+ 
+ /* Top Navigation */
+ nav {
+ background: #fff;
+ border-bottom: 2px solid #d4c4a8;
+ padding: 1rem;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ overflow-x: auto;
+ white-space: nowrap;
+ }
+ 
+ nav a {
+ color: #5a4a3a;
+ text-decoration: none;
+ padding: 0.5rem 0.75rem;
+ margin-right: 0.5rem;
+ border: 1px solid transparent;
+ transition: all 0.2s;
+ font-size: 13px;
+ }
+ 
+ nav a:hover, nav a.active {
+ border-color: #8b7355;
+ background: #f5f0e8;
+ }
+ 
+ nav a.home {
+ font-weight: 600;
+ color: #2c241b;
+ }
+ 
+ /* Container */
+ .container {
+ max-width: 680px;
+ margin: 0 auto;
+ padding: 3rem 2rem;
+ }
+ 
+ /* Typography */
+ h1 {
+ font-size: 2rem;
+ margin-bottom: 1.5rem;
+ color: #1a1510;
+ font-weight: 600;
+ }
+ 
+ h2 {
+ font-size: 1.3rem;
+ margin: 2rem 0 1rem 0;
+ color: #2c241b;
+ font-weight: 600;
+ border-bottom: 1px solid #d4c4a8;
+ padding-bottom: 0.5rem;
+ }
+ 
+ h3 {
+ font-size: 1.1rem;
+ margin: 1.5rem 0 0.75rem 0;
+ color: #3d3126;
+ font-weight: 600;
+ }
+ 
+ p {
+ margin-bottom: 1.25rem;
+ }
+ 
+ /* Special elements */
+ .tagline {
+ font-size: 1.1rem;
+ color: #5a4a3a;
+ font-style: italic;
+ margin-bottom: 2rem;
+ padding: 1rem;
+ border-left: 3px solid #8b7355;
+ background: #f5f0e8;
+ }
+ 
+ .module-list {
+ margin: 2rem 0;
+ }
+ 
+ .module-item {
+ padding: 1rem;
+ margin-bottom: 0.75rem;
+ background: #fff;
+ border: 1px solid #d4c4a8;
+ transition: all 0.2s;
+ }
+ 
+ .module-item:hover {
+ border-color: #8b7355;
+ background: #f5f0e8;
+ }
+ 
+ .module-item a {
+ color: #2c241b;
+ text-decoration: none;
+ font-weight: 500;
+ }
+ 
+ .module-item .desc {
+ font-size: 13px;
+ color: #5a4a3a;
+ margin-top: 0.25rem;
+ }
+ 
+ .cta-button {
+ display: inline-block;
+ background: #2c241b;
+ color: #faf8f3;
+ padding: 0.75rem 1.5rem;
+ text-decoration: none;
+ margin-top: 2rem;
+ font-weight: 500;
+ transition: all 0.2s;
+ }
+ 
+ .cta-button:hover {
+ background: #5a4a3a;
+ }
+ 
+ /* Footer nav */
+ .footer-nav {
+ margin-top: 3rem;
+ padding-top: 2rem;
+ border-top: 2px solid #d4c4a8;
+ display: flex;
+ justify-content: space-between;
+ }
+ 
+ .footer-nav a {
+ color: #5a4a3a;
+ text-decoration: none;
+ padding: 0.5rem 1rem;
+ border: 1px solid #d4c4a8;
+ }
+ 
+ .footer-nav a:hover {
+ background: #f5f0e8;
+ border-color: #8b7355;
+ }
+ 
+ .footer-nav .next {
+ font-weight: 600;
+ }
+ </style>
+</head>
+<body>
+ <nav>
+ <a href="index.html" class="home active">Home</a>
+ <a href="01-start-here">01</a>
+ <a href="02-talk-to-agent">02</a>
+ <a href="03-connect-discord.html">03</a>
+ <a href="04-connect-discord.html">04</a>
+ <a href="05-about-images">05</a>
+ <a href="06-memory-deep-dive.html">06</a>
+ <a href="07-time-and-cron.html">07</a>
+ <a href="08-agenmail-setup.html">08</a>
+ <a href="index.html">Home</a>
+ </nav>
+ 
+ <div class="container">
+ <h1>Heyron Onboarding Guide</h1>
+ 
+ <div class="tagline">
+ Working with your agent as a partner, not a tool.
+ </div>
+ 
+ <p><strong>Slow down. There's a better way.</strong></p>
+ 
+ <p>Complete this quickstart guide if you're a newbie - experienced OpenClaw users may be past this.  Agentic AI has robust capability, but you have to teach your agent and give it tools-it's not all built in.</p>
+ 
+ <h2>The Curriculum</h2>
+ 
+ <div class="module-list">
+ <div class="module-item">
+ <a href="01-start-here.html">01 — What's in the Box</a>
+ <div class="desc">Understanding what your agent is and isn't</div>
+ </div>
+ 
+ <div class="module-item">
+ <a href="02-talk-to-agent">02 — Talk to Your Agent</a>
+ <div class="desc">Your first real exchange + the partnership mindset</div>
+ </div>
+ 
+ <div class="module-item">
+ <a href="03-connect-discord.html">03 — Communicate with Discord</a>
+ <div class="desc">Understanding your workspace and organization</div>
+ </div>
+ 
+ <div class="module-item">
+ <a href="04-connect-github.html">04 — File Storage Using GitHub</a>
+ <div class="desc">Backups, version control, keeping your work safe</div>
+ </div>
+ 
+ <div class="module-item">
+ <a href="05-about-images.html">05 — Audio-Visual Issues</a>
+ <div class="desc">Tools your agent can use — pick what you need</div>
+ </div>
+ 
+ <div class="module-item">
+ <a href="06-memory-deep-dive">06 — Deep Dive Into Memory</a>
+ <div class="desc">How your Agent Remembers and saves things</div>
+ </div>
+ 
+ <div class="module-item">
+ <a href="07-time-and-cron.html">07 — Time and Scheduling</a>
+ <div class="desc">Using Your Agent for Routine Tasks</div>
+ </div>
+ 
+ <div class="module-item">
+* <a href="08-agentmail-connect.html">08 — Setting up Agentmail</a>
+ <div class="desc">Connecting to agentmail</div>
+ </div>
+ </div>
+ 
+ <h2>Start Here</h2>
+ 
+ <p>This guide is built by the Heyron community. It's meant to be practical, modular, and adaptable to how you work.</p>
+ 
+ <p><strong>Don't try to do everything at once.</strong> Read one module. Try one tool. Build from there.</p>
+ 
+ <a href="01-start-here.html" class="cta-button">Start with Module 01 →</a>
+ 
+ <div class="footer-nav">
+ <span></span>
+ <a href="01-start-here.html" class="next">Begin: Module 01 →</a>
+ </div>
+ </div>
+</body>
+</html>
