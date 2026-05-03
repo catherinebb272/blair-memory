@@ -1388,7 +1388,7 @@ function App() {
   // Dev-only: ?screen=beginner-names etc. lets us deep-link into a specific screen for QA.
   // In production routing will gate entry; this has no effect on real users.
   // First-time users start on 'hello' (pure welcome). 'welcome' is the Launchpad path picker.
-  const _initialScreen = (new URLSearchParams(window.location.search).get('screen')) || 'beginner-names';
+  const _initialScreen = (new URLSearchParams(window.location.search).get('path')) === 'expert' ? 'expert-names' : (new URLSearchParams(window.location.search).get('path')) === 'remix' ? 'expert-names' : (new URLSearchParams(window.location.search).get('screen')) || 'beginner-names';
   const [screen, setScreen] = useState(_initialScreen);
   const [data, setData] = useState(INITIAL_DATA);
   const update = (patch) => setData((d) => ({ ...d, ...patch }));
