@@ -92,8 +92,8 @@ button:focus-visible, .input:focus-visible, input:focus-visible, textarea:focus-
 .brand-name { font-size: 15px; font-weight: 600; letter-spacing: -0.012em; }
 .brand-dot { display: inline-block; width: 5px; height: 5px; background: var(--brand-secondary); border-radius: 50%; }
 
-h1.headline { font-size: 28px; font-weight: 500; line-height: 1.18; letter-spacing: -0.024em; margin-bottom: 10px; }
-p.sub { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
+h1.headline { font-size: 24px; font-weight: 500; line-height: 1.18; letter-spacing: -0.024em; margin-bottom: 10px; }
+p.sub { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
 .hero { display: flex; align-items: center; gap: 24px; margin-bottom: 28px; }
 .hero-text { flex: 1; }
 
@@ -171,8 +171,8 @@ select.input { appearance: none; -webkit-appearance: none; background-image: lin
 .usecase.selected .usecase-check::after { content: ''; position: absolute; left: 4px; top: 1px; width: 4px; height: 8px; border: 2px solid #FFFFFF; border-top: 0; border-left: 0; transform: rotate(45deg); }
 .usecase-label { font-size: 13px; flex: 1; }
 
-.soul-note { background: rgba(52,211,153,0.12); border: 0.5px solid rgba(52,211,153,0.50); border-radius: var(--r-md); padding: 12px 14px; margin-top: 18px; font-size: 12px; color: var(--status-success); line-height: 1.6; }
-.soul-note strong { color: var(--text-primary); font-weight: 500; }
+.soul-note { background: rgba(52,211,153,0.12); border: 0.5px solid rgba(52,211,153,0.50); border-radius: var(--r-md); padding: 12px 14px; margin-top: 18px; font-size: 12px; color: var(--text-primary); line-height: 1.6; }
+.soul-note strong { color: var(--accent); font-weight: 500; }
 .danger-note { background: var(--danger-bg); border: 0.5px solid var(--danger-edge); border-radius: var(--r-md); padding: 12px 14px; font-size: 12px; color: var(--danger-text); line-height: 1.6; }
 .danger-note strong { color: var(--text-primary); font-weight: 500; display: block; margin-bottom: 4px; }
 .danger-note ul { margin: 6px 0 0; padding-left: 16px; }
@@ -470,7 +470,7 @@ function HeadMascot({ size = 32 }) {
   return (<svg viewBox="0 0 40 40" width={size} height={size} aria-hidden="true"><circle cx="20" cy="22" r="13" fill="#D4D4D8" /><path d="M 10 15 L 12 7 L 17 13 Z" fill="#3F3F46" /><path d="M 30 15 L 28 7 L 23 13 Z" fill="#3F3F46" /><path d="M 12 12 L 13 9 L 15 12 Z" fill="#18181B" /><path d="M 28 12 L 27 9 L 25 12 Z" fill="#18181B" /><path d="M 9 21 Q 14 18 20 20 Q 26 18 31 21 Q 28 26 24 24 Q 22 22 20 23 Q 18 22 16 24 Q 12 26 9 21 Z" fill="#18181B" /><circle cx="15" cy="21" r="1.3" fill="#F5F5F5" /><circle cx="25" cy="21" r="1.3" fill="#F5F5F5" /><ellipse cx="20" cy="27" rx="4" ry="3" fill="#F5F5F5" /><ellipse cx="20" cy="26" rx="1.3" ry="1" fill="#18181B" /></svg>);
 }
 
-const Brand = () => (<div className="brand"><HeadMascot size={18} /><span className="brand-name">Heyron</span><span className="brand-dot" /></div>);
+const Brand = () => (<div className="brand"><img src="assets/logo.png" alt="Heyron" style={{ width: 18, height: 18, objectFit: 'contain' }} /><span className="brand-name">Heyron</span><span className="brand-dot" /></div>);
 
 // Rotating tiny Ron encouragement bubble that appears at the top of multi-step screens.
 // Picks a line based on the step number so it feels like he's walking the user through.
@@ -542,7 +542,7 @@ function NamesScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   const valid = data.yourName.trim() && data.agentName.trim();
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon2.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">What should we call each other?</h1><p className="sub">Your name and your agent's name. This is how it'll greet you, sign off on emails, and refer to you when it talks about you.</p></div></div>
+      <div className="hero-with-mascot"><img src="raccoon2.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Introduce Yourselves</h1><p className="sub">Your name and your agent's name. This is how it'll greet you, sign off on emails, and refer to you when it talks about you.</p></div></div>
       <div className="field"><label>Your name</label><input className="input" value={data.yourName} onChange={(e) => onUpdate({ yourName: e.target.value })} placeholder="Cassie" autoFocus /></div>
       <div className="field"><label>Your agent's name</label><input className="input" value={data.agentName} onChange={(e) => onUpdate({ agentName: e.target.value })} placeholder="e.g. Ron, Eloise, Navi, Ari, Mack" /><p className="field-hint">Pick something you'll enjoy seeing in your inbox every morning.</p></div>
       <div className="soul-note"><strong>Where these go:</strong> both names become part of {data.agentName ? data.agentName + "'s" : "your agent's"} <strong>identity</strong>, the always-on layer. {data.agentName || 'It'} will sign messages, introduce itself, and refer to you by name. Editable anytime in <strong>Settings → Identity</strong>.</div>
@@ -556,7 +556,7 @@ function UseCasesScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   const toggle = (id) => { const next = new Set(data.useCases); next.has(id) ? next.delete(id) : next.add(id); onUpdate({ useCases: Array.from(next) }); };
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon3.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">What's {data.agentName || 'your agent'} here for?</h1><p className="sub">Pick anything that fits your life. This shapes what your agent watches for, what it learns first, and where it starts to build around you.</p></div></div>
+      <div className="hero-with-mascot"><img src="raccoon3.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>How will {data.agentName || 'your agent'} help you?</h1><p className="sub">Pick anything that fits your life. This shapes what your agent watches for, what it learns first, and where it starts to build around you.</p></div></div>
       <div className="usecase-grid">{USE_CASES.map((u) => { const on = data.useCases.includes(u.id); return (<button key={u.id} className={`usecase ${on ? 'selected' : ''}`} onClick={() => toggle(u.id)}><div className="usecase-check" /><div className="usecase-label">{u.label}</div></button>); })}</div>
       <div className="soul-note"><strong>Where this goes:</strong> these get written into {data.agentName || 'your agent'}'s <strong>soul</strong>, the always-on identity that shapes every reply. Memory holds facts; soul holds priorities. Edit anytime in <strong>Settings → Soul</strong>.</div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext} disabled={data.useCases.length === 0}>Continue</button></div>
@@ -668,7 +668,7 @@ function IntegrationsPickScreen({ data, onUpdate, onNext, onBack, step, totalSte
   const cta = toSetup.length === 0 ? 'Skip integrations' : `Walk through ${toSetup.length} tool${toSetup.length === 1 ? '' : 's'}`;
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon7.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">What should it be able to do?</h1><p className="sub">Pick the apps you actually use. We'll set each one up together. Your keys, your data, your access. Skip anything now and add it later.</p></div></div>
+      <div className="hero-with-mascot"><img src="raccoon7.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>What functions should agent handle?</h1><p className="sub">Pick the apps you actually use. We'll set each one up together. Your keys, your data, your access. Skip anything now and add it later.</p></div></div>
       <div className="integrations">{INTEGRATIONS_LIST.map((i) => { const picked = toSetup.includes(i.id); return (
         <button key={i.id} className={`integration ${picked ? 'connected' : ''}`} onClick={() => toggle(i.id)}>
           <div className="integration-icon">{i.icon}</div>
@@ -691,11 +691,11 @@ function IntegrationsPickScreen({ data, onUpdate, onNext, onBack, step, totalSte
 function IntegrationStep({ name, desc, step, totalSteps, onSkip, onConnect, onBack, connected, canConnect, children }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero"><Mascot pose="coffee" size={90} /><div className="hero-text"><h1 className="headline">Would you like to add {name}?</h1><p className="sub">{desc}</p></div></div>
+      <div className="hero"><Mascot pose="coffee" size={90} /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>{name === 'Cron' ? 'Create a repeating cron task?' : `Would you like to add ${name}?`}</h1><p className="sub">{desc}</p></div></div>
       {children}
       <div className="actions">
-        <button className="btn btn-ghost btn-back" onClick={onBack}>Back</button>
-        <button className="btn btn-ghost btn-skip" onClick={onSkip}>Skip for now</button>
+        <button className="btn btn-ghost btn-back" onClick={onBack} style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>Back</button>
+        <button className="btn btn-ghost btn-skip" onClick={onSkip} style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>Skip for now</button>
         <button className="btn btn-primary" onClick={onConnect} disabled={!canConnect && !connected}>{connected ? 'Continue' : 'Connect'}</button>
       </div>
     </div>
@@ -1145,7 +1145,7 @@ function RonIntro({ data, onDismiss, onOpenChat }) {
   return (
     <div className="ron-intro" role="dialog">
       <button className="ron-intro-dismiss" onClick={onDismiss} aria-label="Dismiss">×</button>
-      <div className="ron-intro-row"><HeadMascot size={36} />
+      <div className="ron-intro-row"><img src="assets/logo.png" alt="Heyron" style={{ width: 36, height: 36, objectFit: 'contain' }} />
         <div className="ron-intro-text">
           <p className="ron-intro-title">Hey, I'm Ron.</p>
           <p className="ron-intro-body">I watch over {agent}'s container. Click me anytime, I pull logs, restart things, open tickets, or just answer questions.</p>
