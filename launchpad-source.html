@@ -50,8 +50,8 @@ html, body { background: var(--bg-page); }
 .step.active { background: var(--accent); }
 .step.done { background: var(--accent); opacity: 0.4; }
 .toggle.on { background: var(--accent); }
-.soul-note { background: rgba(52,211,153,0.12); border-color: rgba(52,211,153,0.50); color: var(--status-success); }
-.soul-note strong { color: var(--text-primary); }
+.soul-note { background: rgba(52,211,153,0.12); border-color: var(--border-strong); color: var(--text-primary); }
+.soul-note strong { color: var(--accent); font-weight: 500; }
 .metric-trend { color: var(--accent) !important; }
 /* Headline stays cool-white */
 h1.headline { color: #F5F5F5; }
@@ -81,7 +81,7 @@ code { font-family: 'JetBrains Mono', SFMono-Regular, Menlo, monospace; font-siz
 h1, h2, h3, h4 { letter-spacing: -0.018em; }
 .metric-value, .container-meta-value, code, input[type="time"] { font-variant-numeric: tabular-nums; }
 button, a { transition: background 140ms ease, border-color 140ms ease, color 140ms ease, transform 140ms ease, box-shadow 140ms ease, opacity 140ms ease; }
-button:focus-visible, .input:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--brand-secondary); outline-offset: 2px; }
+button:focus-visible, .input:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 1px solid var(--brand-secondary); outline-offset: 1px; }
 ::selection { background: var(--accent-soft); color: var(--text-primary); }
 
 .app { max-width: 720px; margin: 0 auto; padding: 32px 16px 120px; min-height: 100vh; position: relative; }
@@ -171,7 +171,7 @@ select.input { appearance: none; -webkit-appearance: none; background-image: lin
 .usecase.selected .usecase-check::after { content: ''; position: absolute; left: 4px; top: 1px; width: 4px; height: 8px; border: 2px solid #FFFFFF; border-top: 0; border-left: 0; transform: rotate(45deg); }
 .usecase-label { font-size: 13px; flex: 1; }
 
-.soul-note { background: rgba(52,211,153,0.12); border: 0.5px solid rgba(52,211,153,0.50); border-radius: var(--r-md); padding: 12px 14px; margin-top: 18px; font-size: 12px; color: var(--text-primary); line-height: 1.6; }
+.soul-note { background: rgba(52,211,153,0.12); border: 0.5px solid var(--border-strong); border-radius: var(--r-md); padding: 12px 14px; margin-top: 18px; font-size: 12px; color: var(--text-primary); line-height: 1.6; }
 .soul-note strong { color: var(--accent); font-weight: 500; }
 .danger-note { background: var(--danger-bg); border: 0.5px solid var(--danger-edge); border-radius: var(--r-md); padding: 12px 14px; font-size: 12px; color: var(--danger-text); line-height: 1.6; }
 .danger-note strong { color: var(--text-primary); font-weight: 500; display: block; margin-bottom: 4px; }
@@ -542,9 +542,11 @@ function NamesScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   const valid = data.yourName.trim() && data.agentName.trim();
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon2.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Introduce Yourselves</h1><p className="sub">Your name and your agent's name. This is how it'll greet you, sign off on emails, and refer to you when it talks about you.</p></div></div>
-      <div className="field"><label>Your name</label><input className="input" value={data.yourName} onChange={(e) => onUpdate({ yourName: e.target.value })} placeholder="Cassie" autoFocus /></div>
-      <div className="field"><label>Your agent's name</label><input className="input" value={data.agentName} onChange={(e) => onUpdate({ agentName: e.target.value })} placeholder="e.g. Ron, Eloise, Navi, Ari, Mack" /><p className="field-hint">Pick something you'll enjoy seeing in your inbox every morning.</p></div>
+      <div className="hero-with-mascot"><img src="raccoon2.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Introduce Yourselves</h1><p className="sub">Set your name and your agent's name. This is how it'll greet you, sign off on emails, and refer to you when it talks about you.</p></div></div>
+      <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+        <div className="field" style={{ flex: '1 1 180px', minWidth: 150 }}><label>Your name</label><input className="input" value={data.yourName} onChange={(e) => onUpdate({ yourName: e.target.value })} placeholder="Cassie" maxLength={15} autoFocus /></div>
+        <div className="field" style={{ flex: '1 1 180px', minWidth: 150 }}><label>Your agent's name</label><input className="input" value={data.agentName} onChange={(e) => onUpdate({ agentName: e.target.value })} placeholder="Ron" maxLength={15} /><p className="field-hint">Pick something you'll enjoy seeing in your inbox every morning.</p></div>
+      </div>
       <div className="soul-note"><strong>Where these go:</strong> both names become part of {data.agentName ? data.agentName + "'s" : "your agent's"} <strong>identity</strong>, the always-on layer. {data.agentName || 'It'} will sign messages, introduce itself, and refer to you by name. Editable anytime in <strong>Settings → Identity</strong>.</div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext} disabled={!valid}>Continue</button></div>
     </div>
@@ -588,14 +590,16 @@ const HEYRON_PERSONAS = [
 function PersonalityScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon4.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">What does {data.agentName || 'your agent'} sound like?</h1><p className="sub">This is the voice you'll hear every day. Pick a starting point. It'll grow into its own as it learns you.</p></div></div>
-      <p className="persona-intro">You're picking a <strong>starting voice</strong>, not a final one. As your agent gets to know you, it picks up your phrasing, your inside jokes, your rhythm. In a few weeks it sounds like your agent, not an archetype. You can change this anytime in settings.</p>
+      <div className="hero-with-mascot"><img src="raccoon4.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Pick {data.agentName || 'your agent'}'s Communication Style</h1><p className="sub">This is the style and tone of voice your agent will use every day. From this starting point, it'll grow into its own as it learns from you.</p></div></div>
+      <p className="persona-intro">You're picking a <strong>starting style and voice</strong>, not a final one. As your agent gets to know you, it picks up your phrasing, your inside jokes, your rhythm. In a few weeks it sounds like your agent, not an archetype. You can change this anytime in settings.</p>
+
+      <p style={{ marginBottom: 16 }}></p>
 
       <p className="persona-section-label">First, meet the family</p>
       <p className="persona-section-sub">Here's what a few Heyron agents already out in the world sound like. These aren't options, they're examples so you have a feel for the range before you pick.</p>
       <div className="persona-showcase">{HEYRON_PERSONAS.map((p) => (<div key={p.id} className="persona-example"><p className="persona-name">{p.name}</p><p className="persona-tag">{p.tag}</p><p className="persona-sample">{p.sample}</p></div>))}</div>
 
-      <p className="persona-section-label" style={{ marginTop: 22 }}>Now pick a voice for yours</p>
+      <p className="persona-section-label" style={{ marginTop: 22 }}>Now pick a style of voice for your agent. Any one of these works. Go with your gut to start.</p>
       <p className="persona-section-sub">Any one of these works. Go with gut.</p>
       <div className="options options-rich">{PERSONAS.map((p) => (<button key={p.id} className={`option persona-card ${data.personality === p.id ? 'selected' : ''}`} onClick={() => onUpdate({ personality: p.id })}><p className="persona-name">{p.name}</p><p className="persona-tag">{p.tag}</p><p className="persona-sample">{p.sample}</p><p className="persona-best"><strong>Best for:</strong> {p.best}</p></button>))}</div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext} disabled={!data.personality}>Continue</button></div>
@@ -668,7 +672,7 @@ function IntegrationsPickScreen({ data, onUpdate, onNext, onBack, step, totalSte
   const cta = toSetup.length === 0 ? 'Skip integrations' : `Walk through ${toSetup.length} tool${toSetup.length === 1 ? '' : 's'}`;
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon7.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>What functions should agent handle?</h1><p className="sub">Pick the apps you actually use. We'll set each one up together. Your keys, your data, your access. Skip anything now and add it later.</p></div></div>
+      <div className="hero-with-mascot"><img src="raccoon7.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>What functions should agent handle?</h1><p className="sub">Pick the apps you actually use. We'll set each one up together. Your keys, your data, your access. You can skip anything now and add it later.</p></div></div>
       <div className="integrations">{INTEGRATIONS_LIST.map((i) => { const picked = toSetup.includes(i.id); return (
         <button key={i.id} className={`integration ${picked ? 'connected' : ''}`} onClick={() => toggle(i.id)}>
           <div className="integration-icon">{i.icon}</div>
