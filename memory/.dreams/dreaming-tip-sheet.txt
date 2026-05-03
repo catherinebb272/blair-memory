@@ -1,0 +1,31 @@
+Dreaming Setup Tip Sheet (from external source, 2026-05-03)
+
+GUARDRAILS:
+- Dream diary = allowed to be reflective
+- MEMORY.md = factual only
+- No threshold changes yet
+- No automatic promotions without preview
+- Watch a few sweeps first
+
+STEPS TO ENABLE:
+1. Check current status: /dreaming status
+2. If enabled: off, ensure memory-core is loaded
+3. Add memory-core plugin to openclaw.json with dreaming config
+4. Restart: /restart
+5. Check again: /dreaming status
+6. After scheduled time, check log: "Show me the last dreaming sweep log."
+
+CONFIG USED:
+{
+  "memory-core": {
+    "enabled": true,
+    "config": {
+      "dreaming": {
+        "enabled": true,
+        "frequency": "0 3 * * *",
+        "timezone": "America/New_York",
+        "verboseLogging": true
+      }
+    }
+  }
+}

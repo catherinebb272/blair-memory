@@ -1,14 +1,6 @@
-# blair-documents
-Documents created by or need by AI Agent Blair
-# Blair Agent Documents Repository
+# Telegram Tool Documentation
 
-This repository stores:
-- **documents/**: Input documents for Blair to read and analyze
-- **agent-output/**: Files generated or modified by Blair
-- **memory-backups/**: Periodic backups of Blair's memory/context
+This folder contains the skill definition for the Telegram integration.
 
-## Using This Repository
-
-1. Upload documents to `documents/` for Blair to process
-2. Blair will create outputs in `agent-output/`
-3. Maintain memory backups in `memory-backups/`
+- **Token:** Set `TELEGRAM_BOT_TOKEN` in `.env`
+- **Full docs:** See `SKILL.md` for usage and troubleshooting.

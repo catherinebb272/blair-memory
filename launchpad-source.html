@@ -60,9 +60,9 @@ h1.headline { color: #F5F5F5; }
 .brand { gap: 8px; align-items: center; }
 .brand-name { letter-spacing: -0.008em; }
 
-/* Ron companion bubble, his little voice next to the progress bar */
-.ron-companion { display: flex; align-items: center; gap: 10px; padding: 12px 16px; margin: -14px 0 22px; background: var(--accent-soft); border: 0.5px solid var(--accent-edge); border-radius: var(--r-lg); font-size: 13px; color: var(--accent); line-height: 1.5; animation: ron-fade-in 260ms ease-out; box-shadow: 0 4px 16px rgba(143,211,244,0.08); }
-.ron-companion span { color: var(--text-primary); opacity: 0.95; font-weight: 400; }
+/* Ron companion - floating cyan text, no box */
+.ron-companion { display: block; margin: -14px 0 16px; padding: 0; background: transparent !important; border: none !important; box-shadow: none !important; font-size: 13px; color: var(--accent); line-height: 1.5; animation: ron-fade-in 260ms ease-out; text-shadow: 0 0 12px rgba(34,211,238,0.45); }
+.ron-companion span { color: var(--text-secondary); font-weight: 400; }
 @keyframes ron-fade-in { from { opacity: 0; transform: translateY(-2px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Active step dot gets a subtle glow so progress feels alive */

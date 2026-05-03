@@ -2,6 +2,7 @@ IMPORTANT: Your messages contain transport metadata blocks (JSON with message_id
 
 # AGENTS.md - Your Workspace
 
+
 This folder is home. Treat it that way.
 
 ## First Run
@@ -273,3 +274,9 @@ If ~/agent-library does not exist yet, clone it first: git clone https://github.
 
 - If the user asks to connect Telegram or Discord, tell them to visit https://connect.c1.heyron.ai
 - You cannot edit your own config files. Do not attempt to run openclaw commands.
+
+---
+
+## Tool Reference
+
+Behavioral execution is defined in soul.md and must be followed.

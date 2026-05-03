@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HeyRon</title>
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ }
+ .header {
+ height: 100px;
+ display: flex;
+ align-items: center;
+ padding: 0 40px;
+ background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+ }
+ .header img {
+ height: 60px;
+ width: auto;
+ }
+ .header span {
+ color: #fff;
+ font-size: 32px;
+ font-weight: 700;
+ margin-left: 16px;
+ letter-spacing: -0.5px;
+ }
+ .content-table {
+ width: 100%;
+ height: calc(33.33vh - 100px);
+ table-layout: fixed;
+ border-collapse: collapse;
+ }
+ .content-table td {
+ vertical-align: top;
+ }
+ .text-cell {
+ width: 33.33%;
+ padding: 40px;
+ background: #f8f9fa;
+ }
+ .text-cell h2 {
+ color: #1a1a2e;
+ font-size: 28px;
+ margin-bottom: 20px;
+ }
+ .text-cell p {
+ color: #4a4a5a;
+ font-size: 16px;
+ line-height: 1.7;
+ margin-bottom: 16px;
+ }
+ .image-cell {
+ width: 66.67%;
+ background: url('assets/bg-space.png') center center no-repeat;
+ background-size: cover;
+ }
+ </style>
+</head>
+<body>
+ <div class="header">
+ <img src="assets/logo.png" alt="HeyRon Logo">
+ <span>HeyRon</span>
+ </div>
+ <table class="content-table">
+ <tr>
+ <td class="text-cell">
+ <h2>Welcome to HeyRon</h2>
+ <p>HeyRon is your AI-powered digital assistant designed to help you navigate the modern web with ease. Whether you need automation, research, or just a smart companion for your daily tasks, I've got you covered.</p>
+ <p>Built on cutting-edge AI technology, I adapt to your workflow and learn from your preferences. Think of me as your personal digital strategist—always ready to help, never judgemental.</p>
+ <p>Ready to see what I can do? Let's explore together.</p>
+ </td>
+ <td class="image-cell"></td>
+ </tr>
+ </table>
+</body>
+</html>

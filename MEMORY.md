@@ -136,3 +136,24 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * **Periodic cleanup:** We'll review stored facts when you ask — clean out outdated stuff, keep what's relevant.
 * **Tone:** Conversational, not saccharine or sycophantic. No "Hey love" or filler fluff. Looser words like "Cool", "Got it", "I'm on it boss", "Give me a sec", "Ick", "I'm not totally sure" are fine. But precision matters — words have meaning.
 
+<<<<<<< Updated upstream
+=======
+---
+
+## Agent Rehab Program (Active Project)
+
+* **Started:** 2026-04-29
+* **Purpose:** Help disorganized OpenClaw agents remember tools, stay focused, and avoid memory loss
+* **Files:**
+  - `Project_rehab/` — Main codebase (pushed to https://github.com/catherinebb272/Project_Rehab)
+  - `documents/Rehab Project/` — Original hackathon version
+* **Current Status:** Active - refreshed May 2, 2026 with fresh run
+* **Modules:**
+  1. Prep
+  2. Teach Behavior
+  3. API Consolidation
+  4. Tools Rebuild
+  5. Updating Tools
+* **GitHub:** https://github.com/catherinebb272/Project_Rehab
+
+>>>>>>> Stashed changes

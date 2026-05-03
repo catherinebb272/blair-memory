@@ -1,5 +1,9 @@
 # TOOLS.md
 
+## API Keys
+All API keys and tokens are stored in `.env` — never hardcode values in this file.
+
+
 Skills define how tools work. This file is for your specifics — the stuff that's unique to your setup.
 
 ## Cron Jobs / Scheduled Tasks
@@ -12,7 +16,7 @@ Use when you want a scheduled email trigger.
 **Step 1: Add API key to .env**
 ```bash
 # Add to ~/.openclaw/workspace/.env:
-AGENTMAIL_API_KEY=am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a
+AGENTMAIL_API_KEY=your_api_key_here
 ```
 
 **Step 2: Create the cron**
@@ -70,7 +74,7 @@ openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chi
 - **Used for:** Primary communication channel
 
 ### here.now (Static Site Hosting)
-- **API Key:** 6b1b31b22d1858757b6e8266ccf4de326e1c198f1f23567cc84ea695c1cb77ec
+- **API Key:** Stored in `.env` as `HERENOW_API_KEY`
 - **Live Site:** https://boreal-larch-wxxv.here.now/
 - **Source:** `nc/neighborhoods/` folder in workspace
 - **Slug:** boreal-larch-wxxv
@@ -81,6 +85,14 @@ openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chi
   4. POST to finalizeUrl with versionId
 - **Script:** `/tmp/update-here.js` (generates file metadata)
 - **Stored in:** `.env` as `HERENOW_API_KEY` (recommended)
+
+## Sample Prompts
+
+### Etsy Check‑in Skill
+- **Skill name:** `etsy_checkin`
+- **Purpose:** Runs the full Mon/Wed/Fri Etsy check‑in workflow (order parsing, handwritten‑note suggestions, review drafts, Discord alert).
+- **Usage example:** `openclaw skill run etsy_checkin` – the skill will guide you through screenshot uploads and then post the compiled report.
+- **Location:** `/home/openclaw/.openclaw/skills/etsy_checkin/`
 
 ## Sample Prompts
 
@@ -98,3 +110,30 @@ openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chi
 - **Memory files:** `/home/openclaw/.openclaw/workspace/memory/`
 - **Daily logs:** `/home/openclaw/.openclaw/workspace/memory/YYYY-MM-DD.md`
 - **Environment vars:** `/home/openclaw/.openclaw/workspace/.env`
+
+---
+
+## Tool Handling
+
+All tools must:
+- store documentation in /skills
+- store secrets in .env
+- follow /skills/UPDATING_SKILLS.md
+
+## From updating_tools module of Project Rehab
+All new tools must follow /skills/UPDATING_SKILLS.md
+
+Tools index lives here.
+
+---
+
+## Discord IDs (Non-Secret)
+
+These are not secrets — stored in `config/discord.env` for reference:
+
+| ID | Value | Description |
+|---|---|---|
+| `DISCORD_DM_CHANNEL_CATHERINE` | 1481714637321015306 | Catherine's DM channel |
+| `DISCORD_USER_ID_CATHERINE` | 881612027863375872 | Catherine's user ID |
+| `DISCORD_CHANNEL_ID_DREW_ALERTS` | 1481691069878894702 | #general for Drew alerts |
+| `DISCORD_USER_ID_DREW` | 163139270515752960 | Drew's user ID (@kaliodyme) |
