@@ -427,7 +427,14 @@ html, body { background: var(--bg-page); }
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel" data-presets="env,react">
 const { useState, useEffect, useRef } = React;
-
+/* Ron companion on light panels - keep it cyan */
+.panel .ron-companion {
+  color: #22D3EE !important;
+  text-shadow: 0 0 10px rgba(34,211,238,0.5) !important;
+}
+.panel .ron-companion span {
+  color: #546E8F !important;
+}
 /* ─── Mascot ─────────────────────────────────────────────────────── */
 function Eye({ cx, cy, pupilCx, pupilCy }) {
   return (<g><circle cx={cx} cy={cy} r="4.8" fill="#F5F5F5" /><circle cx={pupilCx} cy={pupilCy} r="2.3" fill="#18181B" /><circle cx={pupilCx - 1} cy={pupilCy - 1} r="1.1" fill="#F5F5F5" /></g>);
