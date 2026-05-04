@@ -60,9 +60,9 @@ h1.headline { color: #F5F5F5; }
 .brand { gap: 8px; align-items: center; }
 .brand-name { letter-spacing: -0.008em; }
 
-/* Ron companion - floating cyan text, no box */
-.ron-companion { display: block; margin: -14px 0 16px; padding: 0; background: transparent !important; border: none !important; box-shadow: none !important; font-size: 13px; color: var(--accent); line-height: 1.5; animation: ron-fade-in 260ms ease-out; text-shadow: 0 0 12px rgba(34,211,238,0.45); }
-.ron-companion span { color: var(--text-secondary); font-weight: 400; }
+/* Ron companion bubble, his little voice next to the progress bar */
+.ron-companion { display: flex; align-items: center; gap: 10px; padding: 12px 16px; margin: -14px 0 22px; background: var(--accent-soft); border: 0.5px solid var(--accent-edge); border-radius: var(--r-lg); font-size: 13px; color: var(--accent); line-height: 1.5; animation: ron-fade-in 260ms ease-out; box-shadow: 0 4px 16px rgba(143,211,244,0.08); }
+.ron-companion span { color: var(--text-primary); opacity: 0.95; font-weight: 400; }
 @keyframes ron-fade-in { from { opacity: 0; transform: translateY(-2px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Active step dot gets a subtle glow so progress feels alive */
@@ -427,14 +427,7 @@ html, body { background: var(--bg-page); }
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel" data-presets="env,react">
 const { useState, useEffect, useRef } = React;
-/* Ron companion on light panels - keep it cyan */
-.panel .ron-companion {
-  color: #22D3EE !important;
-  text-shadow: 0 0 10px rgba(34,211,238,0.5) !important;
-}
-.panel .ron-companion span {
-  color: #546E8F !important;
-}
+
 /* ─── Mascot ─────────────────────────────────────────────────────── */
 function Eye({ cx, cy, pupilCx, pupilCy }) {
   return (<g><circle cx={cx} cy={cy} r="4.8" fill="#F5F5F5" /><circle cx={pupilCx} cy={pupilCy} r="2.3" fill="#18181B" /><circle cx={pupilCx - 1} cy={pupilCy - 1} r="1.1" fill="#F5F5F5" /></g>);
@@ -702,7 +695,7 @@ function IntegrationsPickScreen({ data, onUpdate, onNext, onBack, step, totalSte
 function IntegrationStep({ name, desc, step, totalSteps, onSkip, onConnect, onBack, connected, canConnect, children }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon7.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>{name === 'Cron' ? 'Create a repeating cron task?' : `Would you like to add ${name}?`}</h1><p className="sub">{desc}</p></div></div>
+      <div className="hero"><Mascot pose="coffee" size={90} /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>{name === 'Cron' ? 'Create a repeating cron task?' : `Would you like to add ${name}?`}</h1><p className="sub">{desc}</p></div></div>
       {children}
       <div className="actions">
         <button className="btn btn-ghost btn-back" onClick={onBack} style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>Back</button>
@@ -1030,7 +1023,7 @@ function AboutYouScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   const [text, setText] = useState(data.aboutYou || '');
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon12.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>Describe Yourself</h1><p className="sub">Your assistant starts with your backstory. Explain who you are, what you're building, what matters to you, and how you want to be spoken to.</p></div></div>
+      <div className="hero-with-mascot"><img src="raccoon12.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Tell {data.agentName || 'your agent'} who you are.</h1><p className="sub">This is the part nothing else on the market does. Everyone else gets a generic assistant. You're giving yours an origin story. Who you are, what you're building, what matters to you, how you want to be spoken to.</p></div></div>
       <p className="about-prompt">The more honest the better. This is what makes a generic assistant into <strong>yours</strong>. Think: what you do for work, what you're building, who's in your life, how you like to be talked to, what you're bad at remembering, what you wish a friend would chase you about. It grows from here, everything your agent learns about you builds on this foundation.</p>
       <textarea className="input about-textarea" value={text} onChange={(e) => { setText(e.target.value); onUpdate({ aboutYou: e.target.value }); }} rows={10} placeholder="I'm Cassie. I run product at Heyron. I have a dog named Coop. I'm bad at eating during work hours and great at forgetting to reply to my mom. I learn best by doing, not by reading docs. I care about craft, kindness, and not wasting people's time. I want you to flag when I haven't replied to someone in more than 2 days, help me draft messages when I'm stuck, and remind me to drink water…" />
       <p className="about-note">Editable anytime from <strong>Settings → About you</strong>.</p>
