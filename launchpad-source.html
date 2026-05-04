@@ -692,9 +692,12 @@ function IntegrationsPickScreen({ data, onUpdate, onNext, onBack, step, totalSte
 
 /* ─── Per-tool setup wrapper ────────────────────────────────────── */
 function IntegrationStep({ name, desc, step, totalSteps, onSkip, onConnect, onBack, connected, canConnect, children }) {
+  const toolNames = ['github','telegram','apify','elevenlabs','obsidian','cron','browser','composio','byok'];
+  const toolIndex = toolNames.indexOf(name.toLowerCase().replace(/\s+/g, '').replace('your own key (byok)', 'byok').replace('web browser', 'browser'));
+  const raccoonNum = toolIndex >= 0 ? toolIndex + 7 : 7;
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon7.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>{name === 'Cron' ? 'Create a repeating cron task?' : `Would you like to add ${name}?`}</h1><p className="sub">{desc}</p></div></div>
+      <div className="hero-with-mascot"><img src={`raccoon${raccoonNum}.png`} alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>{name === 'Cron' ? 'Create a repeating cron task?' : `Would you like to add ${name}?`}</h1><p className="sub">{desc}</p></div></div>
       {children}
       <div className="actions">
         <button className="btn btn-ghost btn-back" onClick={onBack} style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>Back</button>
@@ -1431,7 +1434,7 @@ function App() {
       {screen === 'beginner-preview' && <PreviewScreen data={data} onLaunch={() => advance('beginner-preview')} onBack={() => back('beginner-preview')} step={stepB('beginner-preview')} totalSteps={totalB} expert={false} />}
       {screen === 'beginner-about' && <AboutYouScreen data={data} onUpdate={update} onNext={() => advance('beginner-about')} onBack={() => back('beginner-about')} step={stepB('beginner-about')} totalSteps={totalB} />}
       {screen === 'beginner-disclaimer' && <DisclaimerScreen data={data} onAccept={() => { if (window.HeyronLaunchpad?.saveAboutYou) window.HeyronLaunchpad.saveAboutYou(data.aboutYou || '', { yourName: data.yourName, agentName: data.agentName }); advance('beginner-disclaimer'); }} onBack={() => back('beginner-disclaimer')} step={stepB('beginner-disclaimer')} totalSteps={totalB} />}
-      {screen === 'beginner-finish' && <FinishScreen data={data} onEnter={() => { if (window.HeyronLaunchpad?.save) window.HeyronLaunchpad.save(data); setScreen('dashboard'); }} onBack={() => back('beginner-finish')} onResumeLaunchpad={() => setScreen('beginner-pick-tools')} step={stepB('beginner-finish')} totalSteps={totalB} />}
+      {screen === 'beginner-finish' && <FinishScreen data={data} onEnter={() => { if (window.HeyronLaunchpad?.save) window.HeyronLaunchpad.save(data); setScreen('dashboard'); }} onBack={() => back('beginner-finish')} onResumeLaunchpad={() => setScreen('beginner-names')} step={stepB('beginner-finish')} totalSteps={totalB} />}
       {screen === 'expert-names' && <NamesScreen data={data} onUpdate={update} onBack={() => back('expert-names')} onNext={() => advance('expert-names')} step={stepE('expert-names')} totalSteps={totalE} />}
       {screen === 'expert-usecases' && <UseCasesScreen data={data} onUpdate={update} onBack={() => back('expert-usecases')} onNext={() => advance('expert-usecases')} step={stepE('expert-usecases')} totalSteps={totalE} />}
       {screen === 'expert-model' && <ModelScreen data={data} onUpdate={update} onBack={() => back('expert-model')} onNext={() => advance('expert-model')} step={stepE('expert-model')} totalSteps={totalE} />}
@@ -1446,7 +1449,7 @@ function App() {
       {screen === 'expert-preview' && <PreviewScreen data={data} onLaunch={() => advance('expert-preview')} onBack={() => back('expert-preview')} step={stepE('expert-preview')} totalSteps={totalE} expert={true} />}
       {screen === 'expert-about' && <AboutYouScreen data={data} onUpdate={update} onNext={() => advance('expert-about')} onBack={() => back('expert-about')} step={stepE('expert-about')} totalSteps={totalE} />}
       {screen === 'expert-disclaimer' && <DisclaimerScreen data={data} onAccept={() => { if (window.HeyronLaunchpad?.saveAboutYou) window.HeyronLaunchpad.saveAboutYou(data.aboutYou || '', { yourName: data.yourName, agentName: data.agentName }); advance('expert-disclaimer'); }} onBack={() => back('expert-disclaimer')} step={stepE('expert-disclaimer')} totalSteps={totalE} />}
-      {screen === 'expert-finish' && <FinishScreen data={data} onEnter={() => { if (window.HeyronLaunchpad?.save) window.HeyronLaunchpad.save(data); setScreen('dashboard'); }} onBack={() => back('expert-finish')} onResumeLaunchpad={() => setScreen('expert-pick-tools')} step={stepE('expert-finish')} totalSteps={totalE} />}
+      {screen === 'expert-finish' && <FinishScreen data={data} onEnter={() => { if (window.HeyronLaunchpad?.save) window.HeyronLaunchpad.save(data); setScreen('dashboard'); }} onBack={() => back('expert-finish')} onResumeLaunchpad={() => setScreen('expert-names')} step={stepE('expert-finish')} totalSteps={totalE} />}
       {screen === 'dashboard' && <Dashboard data={data} onReset={reset} onHelp={() => setScreen('help')} onNavigateHelp={(slug) => setScreen(`help-${slug}`)} onBackToLaunchpad={() => setScreen('beginner-pick-tools')} />}
       {screen === 'help' && <HelpIndex onSelect={(s) => setScreen(`help-${s}`)} onBack={() => setScreen('dashboard')} />}
       {screen.startsWith('help-') && <HelpPage slug={screen.replace('help-', '')} onSelect={(s) => setScreen(`help-${s}`)} onBack={() => setScreen('help')} />}
