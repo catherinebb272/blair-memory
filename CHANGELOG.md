@@ -7,6 +7,7 @@
 - **Working hours page:** Selected days now have darker background + cyan outline + white text (matching communication style)
 - **Communication channels page:** Chip/button selected state now has darker background + cyan outline + white text (matching working hours days)
 - **Restored working version:** Reverted to 5:15 PM backup after CSS override issues caused black screen
+- **Dashboard (index.html):** Deleted Tip of the Day, moved stats to the bottom, added animation section from hello-screen using `assets/raccoon.png`
 - **Ron companion redesign:** Floating cyan text with subtle glow, no box (matches #22D3EE accent color)
 - **Soul-note boxes:** Changed from green tint to dark panel background (matching input fields)
 - **Persona page:** Unified text sizes (12px), "First, meet the family" in cyan, removed duplicate text

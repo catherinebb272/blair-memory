@@ -156,4 +156,8 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
   5. Updating Tools
 * **GitHub:** https://github.com/catherinebb272/Project_Rehab
 
->>>>>>> Stashed changes
+---
+
+## Heyron Redesign Project
+
+* **GitHub Push Protocol:** Push directly to blair-documents main (no folder, no branch) — overwrite what's there. Commit frequently as we make changes.
