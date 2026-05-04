@@ -595,12 +595,11 @@ function PersonalityScreen({ data, onUpdate, onNext, onBack, step, totalSteps })
 
       <p style={{ marginBottom: 16 }}></p>
 
-      <p className="persona-section-label">First, meet the family</p>
-      <p className="persona-section-sub">Here's what a few Heyron agents already out in the world sound like. These aren't options, they're examples so you have a feel for the range before you pick.</p>
+      <p className="persona-section-label" style={{ color: 'var(--accent)' }}>First, meet the family</p>
+      <p className="persona-section-sub" style={{ fontSize: 12 }}>Here's what a few Heyron agents already out in the world sound like. These aren't options, they're examples so you have a feel for the range before you pick.</p>
       <div className="persona-showcase">{HEYRON_PERSONAS.map((p) => (<div key={p.id} className="persona-example"><p className="persona-name">{p.name}</p><p className="persona-tag">{p.tag}</p><p className="persona-sample">{p.sample}</p></div>))}</div>
 
-      <p className="persona-section-label" style={{ marginTop: 22 }}>Now pick a style of voice for your agent. Any one of these works. Go with your gut to start.</p>
-      <p className="persona-section-sub">Any one of these works. Go with gut.</p>
+      <p className="persona-section-label" style={{ marginTop: 22, fontSize: 12, color: 'var(--accent)' }}>Now pick a style of voice for your agent.</p>
       <div className="options options-rich">{PERSONAS.map((p) => (<button key={p.id} className={`option persona-card ${data.personality === p.id ? 'selected' : ''}`} onClick={() => onUpdate({ personality: p.id })}><p className="persona-name">{p.name}</p><p className="persona-tag">{p.tag}</p><p className="persona-sample">{p.sample}</p><p className="persona-best"><strong>Best for:</strong> {p.best}</p></button>))}</div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext} disabled={!data.personality}>Continue</button></div>
     </div>
