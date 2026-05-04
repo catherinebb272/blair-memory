@@ -4,11 +4,12 @@
 
 - **Restored working version:** Reverted to 5:15 PM backup after CSS override issues caused black screen
 - **Ron companion redesign:** Floating cyan text with subtle glow, no box (matches #22D3EE accent color)
-- **Persona intro text:** Reduced font size to 12px for better visual hierarchy
-- **Setup page (IntegrationStep):** Changed to hero-with-mascot layout with raccoon7.png beside headline
+- **Soul-note boxes:** Changed from green tint to dark panel background (matching input fields)
+- **Persona page:** Unified text sizes (12px), "First, meet the family" in cyan, removed duplicate text
+- **Setup page (IntegrationStep):** Changed to hero-with-mascot layout with numbered raccoon images
 - **AboutYou page:** Headline → "Describe Yourself" at 24px, shortened subtext
 - **Disclaimer page:** Changed headline to "A serious talk..." with raccoon11.png image
-- **Finish page:** Fixed to use raccoon12.png image beside headline
+- **Finish page:** Fixed to use raccoon12.png image beside headline; link now goes to first launchpad page (Names)
 
 ## 2026-05-03
 
