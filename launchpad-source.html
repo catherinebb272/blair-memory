@@ -60,9 +60,9 @@ h1.headline { color: #F5F5F5; }
 .brand { gap: 8px; align-items: center; }
 .brand-name { letter-spacing: -0.008em; }
 
-/* Ron companion bubble, his little voice next to the progress bar */
-.ron-companion { display: flex; align-items: center; gap: 10px; padding: 12px 16px; margin: -14px 0 22px; background: var(--accent-soft); border: 0.5px solid var(--accent-edge); border-radius: var(--r-lg); font-size: 13px; color: var(--accent); line-height: 1.5; animation: ron-fade-in 260ms ease-out; box-shadow: 0 4px 16px rgba(143,211,244,0.08); }
-.ron-companion span { color: var(--text-primary); opacity: 0.95; font-weight: 400; }
+/* Ron companion - floating cyan text, no box */
+.ron-companion { display: block; margin: -14px 0 16px; padding: 0; background: transparent !important; border: none !important; box-shadow: none !important; font-size: 13px; color: var(--accent); line-height: 1.5; animation: ron-fade-in 260ms ease-out; text-shadow: 0 0 12px rgba(34,211,238,0.45); }
+.ron-companion span { color: var(--text-secondary); font-weight: 400; }
 @keyframes ron-fade-in { from { opacity: 0; transform: translateY(-2px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Active step dot gets a subtle glow so progress feels alive */
@@ -591,7 +591,7 @@ function PersonalityScreen({ data, onUpdate, onNext, onBack, step, totalSteps })
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
       <div className="hero-with-mascot"><img src="raccoon4.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Pick {data.agentName || 'your agent'}'s Communication Style</h1><p className="sub">This is the style and tone of voice your agent will use every day. From this starting point, it'll grow into its own as it learns from you.</p></div></div>
-      <p className="persona-intro">You're picking a <strong>starting style and voice</strong>, not a final one. As your agent gets to know you, it picks up your phrasing, your inside jokes, your rhythm. In a few weeks it sounds like your agent, not an archetype. You can change this anytime in settings.</p>
+      <p className="persona-intro" style={{ fontSize: 12 }}>You're picking a <strong>starting style and voice</strong>, not a final one. As your agent gets to know you, it picks up your phrasing, your inside jokes, your rhythm. In a few weeks it sounds like your agent, not an archetype. You can change this anytime in settings.</p>
 
       <p style={{ marginBottom: 16 }}></p>
 
@@ -1037,7 +1037,7 @@ function DisclaimerScreen({ data, onAccept, onBack, step, totalSteps }) {
   const [agreed, setAgreed] = useState(false);
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero"><Mascot pose="thinking" size={90} /><div className="hero-text"><h1 className="headline">One real talk before {data.agentName || 'your agent'} goes live.</h1><p className="sub">A few honest things. Your agent is powerful, and we want you to use it well.</p></div></div>
+      <div className="hero-with-mascot"><img src="raccoon11.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">A serious talk before {data.agentName || 'your agent'} goes live.</h1><p className="sub">A few honest things. Your agent is powerful, and we want you to use it well.</p></div></div>
       <div className="disclaimer-list">
         <div className="disclaimer-item">
           <p className="disclaimer-title">AI makes mistakes.</p>
@@ -1066,7 +1066,7 @@ function DisclaimerScreen({ data, onAccept, onBack, step, totalSteps }) {
 function FinishScreen({ data, onEnter, onBack, step, totalSteps, onResumeLaunchpad }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero finish-hero"><Mascot pose="greeting" size={120} /><div className="hero-text"><h1 className="headline">You did it.</h1><p className="sub">{data.agentName || 'Your agent'} is yours now. Set up around you, ready to learn.</p></div></div>
+      <div className="hero-with-mascot"><img src="raccoon12.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">You did it.</h1><p className="sub">{data.agentName || 'Your agent'} is yours now. Set up around you, ready to learn.</p></div></div>
       <div className="finish-note">
         <p>This is day one. Every conversation, every task, every correction, {data.agentName || 'your agent'} remembers and grows from it. The more you work with it, the more it becomes yours.</p>
         <p>Change its name, voice, tools, or anything else anytime by coming back to Launchpad.</p>
