@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heyron Support</title>
+
+<style>
+:root {
+ --bg: #07090c;
+ --card: #0F141C;
+ --border: #1a2230;
+ --text: #e6edf3;
+ --muted: #8b949e;
+ --cyan: #22D3EE;
+ --mint: #00FFC6;
+ --amber: #FBBF24;
+}
+
+body {
+ margin: 0;
+ background: var(--bg);
+ color: var(--text);
+ font-family: Inter, sans-serif;
+}
+
+/* WRAPPER */
+.app-shell {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 16px;
+ padding-bottom: 80px;
+}
+
+/* HEADER */
+.header {
+ text-align: left;
+ margin-bottom: 12px;
+}
+.header h1 {
+ margin: 0;
+}
+.header p {
+ color: var(--muted);
+ margin-top: 4px;
+}
+
+/* WORKFLOW BAR */
+.workflow {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: var(--card);
+ border: 1px solid var(--border);
+ border-radius: 16px;
+ padding: 12px 16px;
+ overflow-x: auto;
+ gap: 8px;
+}
+
+.workflow-step {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ min-width: 80px;
+ color: var(--muted);
+ font-size: 11px;
+ flex-shrink: 0;
+}
+
+.workflow-step img {
+ width: 28px;
+ height: 28px;
+ margin-bottom: 4px;
+}
+
+.workflow-arrow {
+ color: var(--cyan);
+ font-size: 16px;
+ flex-shrink: 0;
+}
+
+/* =========================
+ SUPPORT GRID + CARD STYLES
+ ========================= */
+
+/* MOBILE DEFAULT — 2×2 grid */
+.support-grid {
+ display: grid;
+ gap: 16px;
+ margin-top: 20px;
+ grid-template-columns: repeat(2, 1fr); /* always 2 columns on mobile */
+}
+
+/* DESKTOP — 1 row × 4 columns */
+@media (min-width: 900px) {
+ .support-grid {
+ grid-template-columns: repeat(4, 1fr);
+ }
+}
+
+/* CARD */
+.card {
+ background: var(--card);
+ border: 1px solid var(--border);
+ border-radius: 16px;
+ padding: 16px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ text-align: left;
+}
+
+/* CARD IMAGE */
+.card img {
+ width: 40px;
+ height: 40px;
+ margin-bottom: 10px;
+ object-fit: contain;
+}
+
+/* CARD TITLE */
+.card h3 {
+ margin: 0 0 6px;
+ font-size: 14px;
+}
+
+/* CARD TEXT */
+.card p {
+ font-size: 12px;
+ color: var(--muted);
+}
+
+/* BUTTON */
+.button {
+ margin-top: 10px;
+ display: inline-block;
+ padding: 6px 10px;
+ border-radius: 999px;
+ border: 1px solid var(--cyan);
+ color: var(--cyan);
+ text-decoration: none;
+ font-size: 12px;
+ text-align: center;
+}
+/* FAQ */
+.faq {
+ margin-top: 30px;
+}
+
+.faq-item {
+ display: flex;
+ justify-content: space-between;
+ padding: 12px 0;
+ border-bottom: 1px solid var(--border);
+ font-size: 13px;
+}
+
+/* RON AND SPACESHIP */
+.space-scene {
+ position: relative;
+ width: 100%;
+ height: 500px;
+ overflow: hidden;
+ background: #07090c;
+}
+
+/* Background */
+.bg {
+ position: absolute;
+ width: 120%;
+ left: -10%;
+ bottom: 0;
+ object-fit: cover;
+ opacity: 0.95;
+}
+
+/* Spaceship */
+.ship {
+ position: absolute;
+ right: 15%;
+ top: 35%;
+ width: 220px;
+ animation: shipFloat 6s ease-in-out infinite;
+}
+
+/* Raccoon mascot */
+.raccoon {
+ position: absolute;
+ left: 20%;
+ top: 30%;
+ width: 140px;
+ animation: raccoonFloat 4s ease-in-out infinite;
+}
+
+
+
+/* FOOTER NAV */
+.footer-nav {
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ background: #0a0f14;
+ border-top: 1px solid var(--border);
+ display: flex;
+ justify-content: space-around;
+ padding: 10px 0;
+}
+
+.footer-nav a {
+ color: var(--muted);
+ text-decoration: none;
+ font-size: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+ .workflow {
+ overflow-x: auto;
+ padding-bottom: 4px;
+ }
+}
+</style>
+
+<style>
+.space-scene {
+ position: relative;
+ width: 100%;
+ height: 500px;
+ overflow: hidden;
+ background: #07090c;
+}
+
+.bg {
+ position: absolute;
+ width: 120%;
+ left: -10%;
+ bottom: 0;
+ object-fit: cover;
+}
+
+.ship {
+ position: absolute;
+ right: 15%;
+ top: 35%;
+ width: 220px;
+ filter: blur(1px) brightness(0.85);
+ opacity: 0.9;
+}
+
+.raccoon {
+ position: absolute;
+ left: 20%;
+ top: 30%;
+ width: 140px;
+ filter: brightness(1.05);
+}
+</style>
+
+
+
+</head>
+
+<body>
+<div class="app-shell">
+
+<!-- HEADER -->
+<div class="header">
+ <h1>Need Help?</h1>
+ <p>Start here to solve common issues</p>
+</div>
+
+<!-- WORKFLOW BAR -->
+<div class="workflow">
+ <div class="workflow-step">
+ <img src="assets/tools.svg" alt="Self-Help">
+ <span>Self-Help</span>
+ </div>
+ <div class="workflow-arrow">→</div>
+ <div class="workflow-step">
+ <img src="assets/ticket.svg" alt="Create Ticket">
+ <span>Create Ticket</span>
+ </div>
+ <div class="workflow-arrow">→</div>
+ <div class="workflow-step">
+ <img src="assets/discord.svg" alt="Peer Support">
+ <span>Peer Support</span>
+ </div>
+ <div class="workflow-arrow">→</div>
+ <div class="workflow-step">
+ <img src="assets/status.svg" alt="Track Ticket">
+ <span>Track Ticket</span>
+ </div>
+</div>
+
+<!-- SUPPORT GRID -->
+<div class="support-grid">
+ <div class="card">
+ <div>
+ <img src="assets/tools.svg" alt="Self-Help">
+ <h3>Try Self-Help Tools</h3>
+ <p>Search our knowledge base and use automated troubleshooting.</p>
+ </div>
+ <a href="https://heyron.ai/chat" class="button">Use Tools</a>
+ </div>
+
+ <div class="card">
+ <div>
+ <img src="assets/ticket.svg" alt="Ticket">
+ <h3>Open a Ticket</h3>
+ <p>Submit a support ticket and our team will assist as soon as possible.</p>
+ </div>
+ <a href="https://heyron.ai/support" class="button">Create Ticket</a>
+ </div>
+
+ <div class="card">
+ <div>
+ <img src="assets/discord.svg" alt="Discord">
+ <h3>Get Peer Support</h3>
+ <p>Join the community to ask questions and learn from others.</p>
+ </div>
+ <a href="https://discord.com" class="button">Join Discord</a>
+ </div>
+
+ <div class="card">
+ <div>
+ <img src="assets/status.svg" alt="Status">
+ <h3>Check Ticket Status</h3>
+ <p>View and manage your tickets and track progress.</p>
+ </div>
+ <a href="https://heyron.ai/support/ticket" class="button">View Tickets</a>
+ </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+ <div class="faq-item">
+ <span>How do I reset my password?</span>
+ <span>›</span>
+ </div>
+ <div class="faq-item">
+ <span>How do I configure new agents?</span>
+ <span>›</span>
+ </div>
+ <div class="faq-item">
+ <span>Why is my agent not responding?</span>
+ <span>›</span>
+ </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER NAV -->
+<div class="footer-nav">
+ <a href="https://heyron.ai/chat">💬 Chat</a>
+ <a href="https://heyron.ai/support">🎧 Support</a>
+ <a href="https://discord.com">🧠 Discord</a>
+</div>
+
+</body>
+</html>
