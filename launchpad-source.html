@@ -103,6 +103,8 @@ p.sub { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
 .hero-with-mascot .hero-text { flex: 1; }
 .hero-with-mascot .mascot-image { margin-top: 8px; }
 
+
+
 .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .card { background: var(--bg-panel); border: 0.5px solid var(--border-muted); border-radius: var(--r-lg); padding: 20px; display: flex; flex-direction: column; }
 .card.recommended { border: 1px solid var(--brand-secondary); }
@@ -1411,7 +1413,7 @@ function App() {
   };
   const beginnerFlow = orderFlow(BEGINNER_FLOW, 'beginner');
   const expertFlow = orderFlow(EXPERT_FLOW, 'expert');
-  const back = (current) => { const flow = current.startsWith('beginner-') ? beginnerFlow : current.startsWith('expert-') ? expertFlow : null; if (!flow) { setScreen('beginner-names'); return; } const idx = flow.indexOf(current); setScreen(idx <= 0 ? 'beginner-names' : flow[idx - 1]); };
+  const back = (current) => { window.scrollTo(0, 0); const flow = current.startsWith('beginner-') ? beginnerFlow : current.startsWith('expert-') ? expertFlow : null; if (!flow) { setScreen('beginner-names'); return; } const idx = flow.indexOf(current); setScreen(idx <= 0 ? 'beginner-names' : flow[idx - 1]); };
   const advance = (current) => { const flow = current.startsWith('beginner-') ? beginnerFlow : expertFlow; const idx = flow.indexOf(current); setScreen(idx >= flow.length - 1 ? 'dashboard' : flow[idx + 1]); };
   const reset = () => { setData(INITIAL_DATA); setScreen('beginner-names'); };
   const stepB = (n) => beginnerFlow.indexOf(n);
