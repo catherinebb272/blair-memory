@@ -45,7 +45,7 @@ html, body { background: var(--bg-page); }
 .option.selected { border-color: var(--accent); background: rgba(34,211,238,0.04); }
 .option.selected .option-mark { border-color: var(--accent); }
 .option.selected .option-mark::after { background: var(--accent); }
-.chip.selected { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+.chip.selected { border-color: var(--accent); color: #FFFFFF; background: rgba(34,211,238,0.08); box-shadow: 0 0 0 1px var(--accent); }
 .voice.selected { border-color: var(--accent); background: rgba(34,211,238,0.04); }
 .step.active { background: var(--accent); }
 .step.done { background: var(--accent); opacity: 0.4; }
@@ -160,7 +160,7 @@ select.input { appearance: none; -webkit-appearance: none; background-image: lin
 .persona-sample { font-size: 12px; color: var(--text-primary); background: var(--bg-panel-2); padding: 10px 12px; border-radius: var(--r-sm); margin-bottom: 10px; line-height: 1.55; font-style: italic; border-left: 2px solid var(--brand-secondary); }
 .persona-best { font-size: 11px; color: var(--text-tertiary); }
 .persona-best strong { color: var(--text-secondary); font-weight: 500; }
-.comm-sample { font-size: 13px; color: var(--text-primary); background: var(--bg-panel-2); padding: 10px 12px; border-radius: var(--r-sm); margin-top: 10px; line-height: 1.55; font-style: italic; border-left: 2px solid var(--brand-secondary); }
+.comm-sample { font-size: 13px; color: var(--text-primary); background: var(--bg-panel-2); padding: 10px 12px; border-radius: var(--r-sm); margin-top: 10px; line-height: 1.55; font-style: italic; border-left: 2px solid var(--accent); }
 
 .usecase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .usecase { display: flex; align-items: center; gap: 10px; background: var(--bg-panel); border: 0.5px solid var(--border-muted); border-radius: var(--r-md); padding: 12px; cursor: pointer; color: inherit; text-align: left; transition: border-color 140ms; width: 100%; }
@@ -274,7 +274,7 @@ select.input { appearance: none; -webkit-appearance: none; background-image: lin
 .day-row { display: flex; gap: 6px; margin-top: 8px; }
 .day { flex: 1; padding: 10px 4px; font-size: 12px; background: var(--bg-panel); border: 0.5px solid var(--border-muted); border-radius: var(--r-sm); cursor: pointer; text-align: center; color: var(--text-secondary); transition: all 140ms; }
 .day:hover { border-color: var(--border-strong); }
-.day.selected { border-color: var(--brand-secondary); color: var(--brand-secondary); background: var(--accent-soft); }
+.day.selected { border-color: var(--accent); color: #FFFFFF; background: rgba(34,211,238,0.08); box-shadow: 0 0 0 1px var(--accent); }
 
 .summary { display: flex; flex-direction: column; gap: 0; background: var(--bg-panel); border: 0.5px solid var(--border-muted); border-radius: var(--r-lg); }
 .summary-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 12px 16px; border-bottom: 0.5px solid var(--border-muted); font-size: 13px; gap: 12px; }
@@ -542,7 +542,7 @@ function NamesScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   const valid = data.yourName.trim() && data.agentName.trim();
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon2.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Introduce Yourselves</h1><p className="sub">Set your name and your agent's name. This is how it'll greet you, sign off on emails, and refer to you when it talks about you.</p></div></div>
+      <div className="hero-with-mascot"><img src="assets/raccoon2.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Introduce Yourselves</h1><p className="sub">Set your name and your agent's name. This is how it'll greet you, sign off on emails, and refer to you when it talks about you.</p></div></div>
       <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
         <div className="field" style={{ flex: '1 1 180px', minWidth: 150 }}><label>Your name</label><input className="input" value={data.yourName} onChange={(e) => onUpdate({ yourName: e.target.value })} placeholder="Cassie" maxLength={15} autoFocus /></div>
         <div className="field" style={{ flex: '1 1 180px', minWidth: 150 }}><label>Your agent's name</label><input className="input" value={data.agentName} onChange={(e) => onUpdate({ agentName: e.target.value })} placeholder="Ron" maxLength={15} /><p className="field-hint">Pick something you'll enjoy seeing in your inbox every morning.</p></div>
@@ -558,7 +558,7 @@ function UseCasesScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   const toggle = (id) => { const next = new Set(data.useCases); next.has(id) ? next.delete(id) : next.add(id); onUpdate({ useCases: Array.from(next) }); };
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon3.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>How will {data.agentName || 'your agent'} help you?</h1><p className="sub">Pick anything that fits your life. This shapes what your agent watches for, what it learns first, and where it starts to build around you.</p></div></div>
+      <div className="hero-with-mascot"><img src="assets/raccoon3.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>How will {data.agentName || 'your agent'} help you?</h1><p className="sub">Pick anything that fits your life. This shapes what your agent watches for, what it learns first, and where it starts to build around you.</p></div></div>
       <div className="usecase-grid">{USE_CASES.map((u) => { const on = data.useCases.includes(u.id); return (<button key={u.id} className={`usecase ${on ? 'selected' : ''}`} onClick={() => toggle(u.id)}><div className="usecase-check" /><div className="usecase-label">{u.label}</div></button>); })}</div>
       <div className="soul-note"><strong>Where this goes:</strong> these get written into {data.agentName || 'your agent'}'s <strong>soul</strong>, the always-on identity that shapes every reply. Memory holds facts; soul holds priorities. Edit anytime in <strong>Settings → Soul</strong>.</div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext} disabled={data.useCases.length === 0}>Continue</button></div>
@@ -590,7 +590,7 @@ const HEYRON_PERSONAS = [
 function PersonalityScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon4.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Pick {data.agentName || 'your agent'}'s Communication Style</h1><p className="sub">This is the style and tone of voice your agent will use every day. From this starting point, it'll grow into its own as it learns from you.</p></div></div>
+      <div className="hero-with-mascot"><img src="assets/raccoon4.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Pick {data.agentName || 'your agent'}'s Communication Style</h1><p className="sub">This is the style and tone of voice your agent will use every day. From this starting point, it'll grow into its own as it learns from you.</p></div></div>
       <p className="persona-intro" style={{ fontSize: 12 }}>You're picking a <strong>starting style and voice</strong>, not a final one. As your agent gets to know you, it picks up your phrasing, your inside jokes, your rhythm. In a few weeks it sounds like your agent, not an archetype. You can change this anytime in settings.</p>
 
       <p style={{ marginBottom: 16 }}></p>
@@ -609,7 +609,7 @@ const COMM_STYLES = [{ id: 'concise', name: 'Concise', desc: 'Just the answer. N
 function CommStyleScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon5.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">How chatty do you want it?</h1><p className="sub">Same voice, different rhythm. Do you like short and direct, or a little more context? It'll adjust over time to match you.</p></div></div>
+      <div className="hero-with-mascot"><img src="assets/raccoon5.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">How chatty do you want it?</h1><p className="sub">Same voice, different rhythm. Do you like short and direct, or a little more context? It'll adjust over time to match you.</p></div></div>
       <div className="options-list">{COMM_STYLES.map((c) => (<button key={c.id} className={`option ${data.commStyle === c.id ? 'selected' : ''}`} onClick={() => onUpdate({ commStyle: c.id })} style={{ flexDirection: 'column', alignItems: 'stretch', gap: 0 }}><div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><div className="option-mark" /><div className="option-body"><p className="option-title">{c.name}</p><p className="option-desc">{c.desc}</p></div></div><p className="comm-sample">{c.sample}</p></button>))}</div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext} disabled={!data.commStyle}>Continue</button></div>
     </div>
@@ -619,7 +619,7 @@ const MODELS = [{ id: 'standard', name: 'Heyron Standard', desc: 'Best balance o
 function ModelScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon6.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Which brain should it use?</h1><p className="sub">The model is the engine. You can swap it anytime without losing who your agent is. Memory, voice, and the relationship with you all stay.</p></div></div>
+      <div className="hero-with-mascot"><img src="assets/raccoon6.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">Which brain should it use?</h1><p className="sub">The model is the engine. You can swap it anytime without losing who your agent is. Memory, voice, and the relationship with you all stay.</p></div></div>
       <div className="options-list">{MODELS.map((m) => (<button key={m.id} className={`option ${data.model === m.id ? 'selected' : ''}`} onClick={() => onUpdate({ model: m.id })}><div className="option-mark" /><div className="option-body"><p className="option-title">{m.name} {m.recommended && <span className="option-tag">Recommended</span>}</p><p className="option-desc">{m.desc}</p></div></button>))}</div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext} disabled={!data.model}>Continue</button></div>
     </div>
@@ -697,7 +697,7 @@ function IntegrationStep({ name, desc, step, totalSteps, onSkip, onConnect, onBa
   const raccoonNum = toolIndex >= 0 ? toolIndex + 7 : 7;
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src={`raccoon${raccoonNum}.png`} alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>{name === 'Cron' ? 'Create a repeating cron task?' : `Would you like to add ${name}?`}</h1><p className="sub">{desc}</p></div></div>
+      <div className="hero-with-mascot"><img src={`assets/raccoon${raccoonNum}.png`} alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>{name === 'Cron' ? 'Create a repeating cron task?' : `Would you like to add ${name}?`}</h1><p className="sub">{desc}</p></div></div>
       {children}
       <div className="actions">
         <button className="btn btn-ghost btn-back" onClick={onBack} style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>Back</button>
@@ -980,7 +980,7 @@ const MEMORY_OPTIONS = [{ id: 'short', name: 'Short', desc: 'Forgets after each 
 function MemoryScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon8.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">How much should it remember?</h1><p className="sub">Memory holds facts and history. Edit anytime.</p></div></div>
+      <div className="hero-with-mascot"><img src="assets/raccoon8.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">How much should it remember?</h1><p className="sub">Memory holds facts and history. Edit anytime.</p></div></div>
       <div className="options-list">{MEMORY_OPTIONS.map((m) => (<button key={m.id} className={`option ${data.memory === m.id ? 'selected' : ''}`} onClick={() => onUpdate({ memory: m.id })}><div className="option-mark" /><div className="option-body"><p className="option-title">{m.name} {m.recommended && <span className="option-tag">Recommended</span>}</p><p className="option-desc">{m.desc}</p></div></button>))}</div>
       <button className={`checkbox ${data.editableMemory ? 'checked' : ''}`} onClick={() => onUpdate({ editableMemory: !data.editableMemory })}><span className="checkbox-mark" />Let me view and edit memory at any time</button>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext} disabled={!data.memory}>Continue</button></div>
@@ -992,7 +992,7 @@ function HoursScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   const toggleDay = (d) => { const next = new Set(data.workDays); next.has(d) ? next.delete(d) : next.add(d); onUpdate({ workDays: Array.from(next) }); };
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon9.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">When are you working?</h1><p className="sub">Your agent stays quiet outside these hours.</p></div></div>
+      <div className="hero-with-mascot"><img src="assets/raccoon9.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">When are you working?</h1><p className="sub">Your agent stays quiet outside these hours.</p></div></div>
       <div className="field"><label>Timezone</label><select className="input" value={data.timezone} onChange={(e) => onUpdate({ timezone: e.target.value })}><option>Pacific (PT)</option><option>Mountain (MT)</option><option>Central (CT)</option><option>Eastern (ET)</option><option>UK (GMT/BST)</option><option>Central Europe (CET)</option></select></div>
       <div className="two-col"><div className="field"><label>Start</label><input className="input" type="time" value={data.workStart} onChange={(e) => onUpdate({ workStart: e.target.value })} /></div><div className="field"><label>End</label><input className="input" type="time" value={data.workEnd} onChange={(e) => onUpdate({ workEnd: e.target.value })} /></div></div>
       <div className="field"><label>Days</label><div className="day-row">{DAYS.map((d) => (<button key={d} className={`day ${data.workDays.includes(d) ? 'selected' : ''}`} onClick={() => toggleDay(d)}>{d}</button>))}</div></div>
@@ -1003,7 +1003,7 @@ function HoursScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
 function NotificationsScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon10.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">How should we reach you?</h1><p className="sub">You'll get the daily briefing either way.</p></div></div>
+      <div className="hero-with-mascot"><img src="assets/raccoon10.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">How should we reach you?</h1><p className="sub">You'll get the daily briefing either way.</p></div></div>
       <div><div className="toggle-row"><div className="toggle-info"><p className="toggle-title">Email</p><p className="toggle-desc">Daily summary.</p></div><button className={`toggle ${data.notifyEmail ? 'on' : ''}`} onClick={() => onUpdate({ notifyEmail: !data.notifyEmail })} aria-label="toggle"/></div><div className="toggle-row"><div className="toggle-info"><p className="toggle-title">Push</p><p className="toggle-desc">Real-time alerts.</p></div><button className={`toggle ${data.notifyPush ? 'on' : ''}`} onClick={() => onUpdate({ notifyPush: !data.notifyPush })} aria-label="toggle"/></div></div>
       <div className="field" style={{ marginTop: 20 }}><label>How often</label><div className="chip-row">{[{id:'always',n:'Always'},{id:'important',n:'Important only'},{id:'daily',n:'Daily digest'}].map((p) => (<button key={p.id} className={`chip ${data.notifyFreq === p.id ? 'selected' : ''}`} onClick={() => onUpdate({ notifyFreq: p.id })}>{p.n}</button>))}</div></div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext}>Continue</button></div>
@@ -1013,7 +1013,7 @@ function NotificationsScreen({ data, onUpdate, onNext, onBack, step, totalSteps 
 function PrivacyScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon11.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">A few privacy choices.</h1><p className="sub">Change anytime.</p></div></div>
+      <img src="assets/raccoon11.png"<p className="sub">Change anytime.</p></div></div>
       <div><div className="toggle-row"><div className="toggle-info"><p className="toggle-title">Learn from my interactions</p><p className="toggle-desc">Improve at the things you do most.</p></div><button className={`toggle ${data.learnFromMe ? 'on' : ''}`} onClick={() => onUpdate({ learnFromMe: !data.learnFromMe })} aria-label="toggle"/></div><div className="toggle-row"><div className="toggle-info"><p className="toggle-title">Share anonymous usage data</p><p className="toggle-desc">Helps improve Heyron. No content.</p></div><button className={`toggle ${data.shareUsage ? 'on' : ''}`} onClick={() => onUpdate({ shareUsage: !data.shareUsage })} aria-label="toggle"/></div></div>
       <div className="field" style={{ marginTop: 20 }}><label>Auto-delete chat history</label><select className="input" value={data.autoDelete} onChange={(e) => onUpdate({ autoDelete: e.target.value })}><option>Never</option><option>After 30 days</option><option>After 90 days</option><option>After 1 year</option></select></div>
       <div className="actions"><button className="btn btn-ghost btn-back" onClick={onBack}>Back</button><button className="btn btn-primary" onClick={onNext}>Continue</button></div>
@@ -1025,7 +1025,7 @@ function AboutYouScreen({ data, onUpdate, onNext, onBack, step, totalSteps }) {
   const [text, setText] = useState(data.aboutYou || '');
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon12.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline" style={{ fontSize: '24px' }}>Describe Yourself</h1><p className="sub">Your assistant starts with your backstory. Explain who you are, what you're building, and how you want to be spoken to.</p></div></div>
+      <img src="assets/raccoon12.png"<p className="sub">Your assistant starts with your backstory. Explain who you are, what you're building, and how you want to be spoken to.</p></div></div>
       <p className="about-prompt">The more honest the better. This is what makes a generic assistant into <strong>yours</strong>. Think: what you do for work, what you're building, who's in your life, how you like to be talked to, what you're bad at remembering, what you wish a friend would chase you about. It grows from here, everything your agent learns about you builds on this foundation.</p>
       <textarea className="input about-textarea" value={text} onChange={(e) => { setText(e.target.value); onUpdate({ aboutYou: e.target.value }); }} rows={10} placeholder="I'm Cassie. I run product at Heyron. I have a dog named Coop. I'm bad at eating during work hours and great at forgetting to reply to my mom. I learn best by doing, not by reading docs. I care about craft, kindness, and not wasting people's time. I want you to flag when I haven't replied to someone in more than 2 days, help me draft messages when I'm stuck, and remind me to drink water…" />
       <p className="about-note">Editable anytime from <strong>Settings → About you</strong>.</p>
@@ -1039,7 +1039,7 @@ function DisclaimerScreen({ data, onAccept, onBack, step, totalSteps }) {
   const [agreed, setAgreed] = useState(false);
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon11.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">A serious talk before {data.agentName || 'your agent'} goes live.</h1><p className="sub">A few honest things. Your agent is powerful, and we want you to use it well.</p></div></div>
+      <img src="assets/raccoon11.png" {data.agentName || 'your agent'} goes live.</h1><p className="sub">A few honest things. Your agent is powerful, and we want you to use it well.</p></div></div>
       <div className="disclaimer-list">
         <div className="disclaimer-item">
           <p className="disclaimer-title">AI makes mistakes.</p>
@@ -1068,7 +1068,7 @@ function DisclaimerScreen({ data, onAccept, onBack, step, totalSteps }) {
 function FinishScreen({ data, onEnter, onBack, step, totalSteps, onResumeLaunchpad }) {
   return (
     <div className="panel"><Brand /><Steps current={step} total={totalSteps} />
-      <div className="hero-with-mascot"><img src="raccoon12.png" alt="Raccoon" className="mascot-image" /><div className="hero-text"><h1 className="headline">You did it.</h1><p className="sub">{data.agentName || 'Your agent'} is yours now. Set up around you, ready to learn.</p></div></div>
+      <img src="assets/raccoon12.png"<p className="sub">{data.agentName || 'Your agent'} is yours now. Set up around you, ready to learn.</p></div></div>
       <div className="finish-note">
         <p>This is day one. Every conversation, every task, every correction, {data.agentName || 'your agent'} remembers and grows from it. The more you work with it, the more it becomes yours.</p>
         <p>Change its name, voice, tools, or anything else anytime by coming back to Launchpad.</p>

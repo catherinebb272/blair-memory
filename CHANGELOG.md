@@ -2,6 +2,10 @@
 
 ## 2026-05-04
 
+- **Image path fixes:** Changed all raccoon images from `raccoonX.png` to `assets/raccoonX.png` (no leading slash)
+- **How chatty page:** Added cyan left border to sample boxes (matching tool choice page style)
+- **Working hours page:** Selected days now have darker background + cyan outline + white text (matching communication style)
+- **Communication channels page:** Chip/button selected state now has darker background + cyan outline + white text (matching working hours days)
 - **Restored working version:** Reverted to 5:15 PM backup after CSS override issues caused black screen
 - **Ron companion redesign:** Floating cyan text with subtle glow, no box (matches #22D3EE accent color)
 - **Soul-note boxes:** Changed from green tint to dark panel background (matching input fields)
