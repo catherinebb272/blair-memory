@@ -1818,9 +1818,9 @@ function App() {
 
   return (
     <div className="app">
-      {/* =====DELETE THE WELCOME SCREEN AND USE HELLO-SCREEN==============
+      {/* 
       {screen === 'welcome' && (<><div className="placeholder-note">Demo entry point. In production, users land here right after signing in to heyron.ai (you already have a sign-in flow).</div><LaunchpadWelcome data={data} onChoose={(p) => setScreen(p === 'beginner' ? 'beginner-names' : 'expert-names')} /></>)}
-      ==================DELETE THE WELCOME AND USE HELLO-SCREEN.HTML=================*/}
+      */}
       {screen === 'beginner-names' && <NamesScreen data={data} onUpdate={update} onBack={() => back('beginner-names')} onNext={() => advance('beginner-names')} step={stepB('beginner-names')} totalSteps={totalB} />}
       {screen === 'beginner-usecases' && <UseCasesScreen data={data} onUpdate={update} onBack={() => back('beginner-usecases')} onNext={() => advance('beginner-usecases')} step={stepB('beginner-usecases')} totalSteps={totalB} />}
       {screen === 'beginner-integrations' && <IntegrationsListScreen data={data} onUpdate={update} onBack={() => back('beginner-integrations')} onNext={() => advance('beginner-integrations')} step={stepB('beginner-integrations')} totalSteps={totalB} />}
