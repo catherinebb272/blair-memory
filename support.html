@@ -4,135 +4,72 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Heyron Support</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
- --bg: #07090c;
- --card: #0F141C;
- --border: #1a2230;
- --text: #e6edf3;
- --muted: #8b949e;
- --cyan: #22D3EE;
- --mint: #00FFC6;
- --amber: #FBBF24;
- --text-primary: #e6edf3;
- --text-secondary: #8B9CB5;
- --accent: #22D3EE;
+ --bg-page: #07090C;
+ --bg-panel: #0F141C;
+ --bg-panel-2: #161B23;
  --border-muted: #1C222B;
+ --border-strong: #2D333B;
+ --accent: #22D3EE;
+ --accent-soft: rgba(34,211,238,0.12);
+ --accent-edge: rgba(34,211,238,0.50);
+ --text-primary: #e6edf3;
+ --text-muted: #8b949e;
 }
 
-/* HEADER (from hello-screen) */
-.header {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border-muted);
+/* LAYOUT */
+body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'DM Sans',sans-serif;}
+.app-shell{position:relative;z-index:1;width:100%;max-width:1100px;min-width:320px;margin:0 auto;padding:0 12px;padding-bottom:80px;}
+.bg-image{position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.25;z-index:0;}
+
+/* HEADER */
+.header{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.header-left{display:flex;align-items:center;gap:10px;}
+.logo{width:32px;height:32px;border-radius:8px;object-fit:cover;}
+.header-title{display:flex;flex-direction:column;line-height:1.1;}
+.header-title h1{font-size:20px;margin:0;}
+.slogan{font-size:12px;color:var(--text-muted);margin-top:2px;}
+.header-right{display:flex;align-items:center;gap:16px;}
+.header-link{font-size:14px;color:var(--text-primary);text-decoration:none;}
+.header-link:hover{color:var(--accent);}
+
+/* HERO SECTION */
+.hero {
+ position: relative;
+ margin-bottom: 24px;
+ padding: 32px;
+ border-radius: 16px;
+ background: var(--bg-panel);
+ border: 1px solid var(--border-muted);
+ text-align: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-}
-
-.logo span {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.nav-links a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: color 0.25s ease;
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-}
-
-/* HERO STYLES */
 .hero-title {
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 4px;
-  color: var(--text-primary);
+ font-size: 38px;
+ font-weight: 700;
+ letter-spacing: -0.03em;
+ margin-bottom: 4px;
+ color: var(--text-primary);
 }
 
 .hero-tagline {
-  font-size: 14px;
-  color: var(--accent);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.hero-actions {
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  color: var(--text-secondary);
-  margin-bottom: 16px;
+ font-size: 14px;
+ color: var(--accent);
+ letter-spacing: 0.15em;
+ text-transform: uppercase;
+ margin-bottom: 16px;
 }
 
 .hero-body {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin: 0 auto 20px;
-  max-width: 500px;
-  text-align: center;
-}
-
-body {
- margin: 0;
- background: var(--bg);
- color: var(--text);
- font-family: Inter, sans-serif;
-}
-
-/* MAIN APP */
-<main class="app-shell">
-
-<!-- HERO SECTION -->
-<div class="card" style="text-align:center;padding:24px;margin-bottom:16px;">
-  <h2 class="hero-title">Need Help?</h2>
-  <p class="hero-tagline">Guide &middot; Improve &middot; Support</p>
-  <p class="hero-body">Here's everything you need to keep your agent running smoothly.</p>
-</div>
-
-<!-- WRAPPER -->
-.app-shell {
- max-width: 1100px;
+ font-size: 14px;
+ color: var(--text-muted);
+ line-height: 1.6;
+ max-width: 500px;
  margin: 0 auto;
- padding: 16px;
- padding-bottom: 80px;
-}
-
-/* HEADER */
-.header {
- text-align: left;
- margin-bottom: 12px;
-}
-.header h1 {
- margin: 0;
-}
-.header p {
- color: var(--muted);
- margin-top: 4px;
 }
 
 /* WORKFLOW BAR */
@@ -140,12 +77,13 @@ body {
  display: flex;
  justify-content: space-between;
  align-items: center;
- background: var(--card);
- border: 1px solid var(--border);
+ background: var(--bg-panel);
+ border: 1px solid var(--border-muted);
  border-radius: 16px;
  padding: 12px 16px;
  overflow-x: auto;
  gap: 8px;
+ margin-bottom: 24px;
 }
 
 .workflow-step {
@@ -153,7 +91,7 @@ body {
  flex-direction: column;
  align-items: center;
  min-width: 80px;
- color: var(--muted);
+ color: var(--text-muted);
  font-size: 11px;
  flex-shrink: 0;
 }
@@ -162,46 +100,45 @@ body {
  width: 28px;
  height: 28px;
  margin-bottom: 4px;
+ object-fit: contain;
 }
 
 .workflow-arrow {
- color: var(--cyan);
+ color: var(--accent);
  font-size: 16px;
  flex-shrink: 0;
 }
 
-/* =========================
- SUPPORT GRID + CARD STYLES
- ========================= */
-
-/* MOBILE DEFAULT — 2×2 grid */
+/* SUPPORT GRID */
 .support-grid {
  display: grid;
  gap: 16px;
- margin-top: 20px;
- grid-template-columns: repeat(2, 1fr); /* always 2 columns on mobile */
+ grid-template-columns: repeat(2, 1fr);
 }
 
-/* DESKTOP — 1 row × 4 columns */
 @media (min-width: 900px) {
  .support-grid {
  grid-template-columns: repeat(4, 1fr);
  }
 }
 
-/* CARD */
 .card {
- background: var(--card);
- border: 1px solid var(--border);
+ background: var(--bg-panel);
+ border: 1px solid var(--border-muted);
  border-radius: 16px;
  padding: 16px;
  display: flex;
  flex-direction: column;
  justify-content: space-between;
  text-align: left;
+ transition: all 0.2s ease;
 }
 
-/* CARD IMAGE */
+.card:hover {
+ border-color: var(--accent-edge);
+ transform: translateY(-2px);
+}
+
 .card img {
  width: 40px;
  height: 40px;
@@ -209,30 +146,34 @@ body {
  object-fit: contain;
 }
 
-/* CARD TITLE */
 .card h3 {
  margin: 0 0 6px;
  font-size: 14px;
 }
 
-/* CARD TEXT */
 .card p {
  font-size: 12px;
- color: var(--muted);
+ color: var(--text-muted);
+ margin: 0;
 }
 
-/* BUTTON */
 .button {
  margin-top: 10px;
  display: inline-block;
  padding: 6px 10px;
  border-radius: 999px;
- border: 1px solid var(--cyan);
- color: var(--cyan);
+ border: 1px solid var(--accent);
+ color: var(--accent);
  text-decoration: none;
  font-size: 12px;
  text-align: center;
+ transition: all 0.2s ease;
 }
+
+.button:hover {
+ background: var(--accent-soft);
+}
+
 /* FAQ */
 .faq {
  margin-top: 30px;
@@ -242,48 +183,14 @@ body {
  display: flex;
  justify-content: space-between;
  padding: 12px 0;
- border-bottom: 1px solid var(--border);
+ border-bottom: 1px solid var(--border-muted);
  font-size: 13px;
+ cursor: pointer;
 }
 
-/* RON AND SPACESHIP */
-.space-scene {
- position: relative;
- width: 100%;
- height: 500px;
- overflow: hidden;
- background: #07090c;
+.faq-item:hover {
+ color: var(--accent);
 }
-
-/* Background */
-.bg {
- position: absolute;
- width: 120%;
- left: -10%;
- bottom: 0;
- object-fit: cover;
- opacity: 0.95;
-}
-
-/* Spaceship */
-.ship {
- position: absolute;
- right: 15%;
- top: 35%;
- width: 220px;
- animation: shipFloat 6s ease-in-out infinite;
-}
-
-/* Raccoon mascot */
-.raccoon {
- position: absolute;
- left: 20%;
- top: 30%;
- width: 140px;
- animation: raccoonFloat 4s ease-in-out infinite;
-}
-
-
 
 /* FOOTER NAV */
 .footer-nav {
@@ -291,73 +198,66 @@ body {
  bottom: 0;
  width: 100%;
  background: #0a0f14;
- border-top: 1px solid var(--border);
+ border-top: 1px solid var(--border-muted);
  display: flex;
  justify-content: space-around;
  padding: 10px 0;
+ z-index: 100;
 }
 
 .footer-nav a {
- color: var(--muted);
+ color: var(--text-muted);
  text-decoration: none;
  font-size: 12px;
 }
 
+.footer-nav a:hover {
+ color: var(--accent);
+}
+
 /* MOBILE */
 @media (max-width: 600px) {
+ .hero-title {
+ font-size: 28px;
+ }
  .workflow {
  overflow-x: auto;
  padding-bottom: 4px;
  }
+ .support-grid {
+ grid-template-columns: 1fr;
+ }
 }
 </style>
-
-<style>
-.space-scene {
- position: relative;
- width: 100%;
- height: 500px;
- overflow: hidden;
- background: #07090c;
-}
-
-.bg {
- position: absolute;
- width: 120%;
- left: -10%;
- bottom: 0;
- object-fit: cover;
-}
-
-.ship {
- position: absolute;
- right: 15%;
- top: 35%;
- width: 220px;
- filter: blur(1px) brightness(0.85);
- opacity: 0.9;
-}
-
-.raccoon {
- position: absolute;
- left: 20%;
- top: 30%;
- width: 140px;
- filter: brightness(1.05);
-}
-</style>
-
-
-
 </head>
-
 <body>
+
+<!-- BACKGROUND IMAGE -->
+<img src="assets/bg-earth12x250.png" alt="" class="bg-image">
+
 <div class="app-shell">
 
 <!-- HEADER -->
-<div class="header">
- <h1>Need Help?</h1>
- <p>Start here to solve common issues</p>
+<header class="header">
+ <div class="header-left">
+ <img src="assets/logo.png" alt="Heyron" class="logo">
+ <div class="header-title">
+ <h1>Heyron</h1>
+ <span class="slogan">AI that actually knows you</span>
+ </div>
+ </div>
+ <div class="header-right">
+ <a href="site-dashboard.html" class="header-link">Home</a>
+ <a href="hello-screen.html" class="header-link">Launchpad</a>
+ <a href="#" class="header-link">Academy</a>
+ </div>
+</header>
+
+<!-- HERO SECTION -->
+<div class="hero">
+ <h2 class="hero-title">Need Help?</h2>
+ <p class="hero-tagline">Guide · Improve · Support</p>
+ <p class="hero-body">Here's everything you need to keep your agent running smoothly.</p>
 </div>
 
 <!-- WORKFLOW BAR -->
@@ -440,22 +340,12 @@ body {
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
 <!-- FOOTER NAV -->
-<div class="footer-nav">
+<nav class="footer-nav">
  <a href="https://heyron.ai/chat">💬 Chat</a>
  <a href="https://heyron.ai/support">🎧 Support</a>
  <a href="https://discord.com">🧠 Discord</a>
-</div>
+</nav>
 
 </body>
 </html>
