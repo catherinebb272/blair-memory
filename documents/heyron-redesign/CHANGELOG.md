@@ -2,13 +2,18 @@
 
 ## 2026-05-06 (Current Session)
 
-### Mascot Image Replacement
+### Change 4: Button Hover Fix
+- **File:** launchpad-originalhover.html
+- **Fix:** Button hover color changed from teal #4FD9C2 to lighter cyan #5EEADB
+- **Location:** Line 46
+- **Previous file:** launchpad-originalmascot.html
 
-- **Replaced all SVG Mascot components with PNG image tags**
-  - File: launchpad-originalmascot.html
-  - Path format: `assets/raccoonXX.png`
-  - Preserved original sizes (80-100px) with proportional height
-  - CommStyleScreen flipped with `scaleX(-1)`
+### Change 3: Mascot Image Replacement
+- **File:** launchpad-originalmascot.html
+- **Fix:** Replaced all SVG Mascot components with PNG image tags
+- **Path format:** `assets/raccoonXX.png`
+- **Preserved sizes:** Original sizes (80-100px) with proportional height
+- **Special:** CommStyleScreen flipped with `scaleX(-1)`
 
 | Screen | Image | Size |
 |--------|-------|------|
@@ -25,71 +30,30 @@
 | PreviewScreen | raccoon11.png | 100x125 |
 
 - **Hello-screen entry (line 376):** Skipped — page will be deleted
+- **Previous file:** launchpad-originaltools.html
 
-### Button Hover Fix
+### Change 2: Integration Tool Names Fix
+- **File:** launchpad-originaltools.html
+- **Fix:** Added `color: var(--text-primary)` to `.integration-name` CSS rule
+- **Location:** Line 153
+- **Result:** Tool names now render as light cream (#F5F0E8) instead of black (#000000)
+- **Previous file:** launchpad-originalcyan.html
 
-- **Button hover color:** Changed from teal #4FD9C2 to lighter cyan #5EEADB
-  - File: launchpad-originalhover.html
-  - Location: Line 46
-  - Matches new accent color scheme
-
-### Bug Fixes
-
-- **Integration tool names (black on dark):** Added `color: var(--text-primary)` to `.integration-name` CSS rule
-  - Location: Line 153 in launchpad-originaltools.html
-  - Fix: Tool names now render as light cream (#F5F0E8) instead of black (#000000)
-
----
-
-## 2026-05-05
-
-### Design System Updates
-
-- **Accent color changed:** Replaced teal (#5EEAD4) with cyan (#22D3EE)
-  - Old: `--accent: #5EEAD4`
-  - New: `--accent: #22D3EE`
-  - Also updated `--accent-soft` and `--accent-edge` variants for cyan
-
-### Welcome Page Elimination
-
-- **LaunchpadWelcome screen removed** from rendering (commented out)
-  - Location: Line ~1810 in launchpad-original.html
-  - Comment markers added: `/* =====DELETE THE WELCOME SCREEN AND USE HELLO-SCREEN...*/`
-- Flow arrays already start at `beginner-names` / `expert-names` — no changes needed there
-
-### Mascot Images Replaced
-
-- **All `<Mascot />` SVG calls replaced with `<img />` tags** pointing to raccoon images
-- Images located at `/images/` (e.g., `/images/raccoon2.png`)
-- Image sizes preserved from original (80-100px range)
-
-| Screen | Image | Size |
-|--------|-------|------|
-| NamesScreen | raccoon2.png | 100px |
-| UseCasesScreen | raccoon3.png | 80px |
-| CommStyleScreen | raccoon5.png | 80px (flipped with `scaleX(-1)`) |
-| ModelScreen | raccoon4.png | 80px |
-| IntegrationsPickScreen | raccoon6.png | 90px |
-| IntegrationStep (which tools) | raccoon6.png | 90px |
-| IntegrationStep (individual tool) | raccoon7.png | 90px |
-| MemoryScreen | raccoon8.png | 80px |
-| HoursScreen | raccoon9.png | 80px |
-| NotificationsScreen | raccoon10.png | 80px |
-| PrivacyScreen | raccoon11.png | 80px |
-| PreviewScreen | raccoon11.png | 100px |
-
-### Bug Fixes
-
-- **Welcome screen comment:** Fixed JSX comment syntax from `/* ... */` to `{/* ... */}` — was showing comment text on every page
-- **Button hover color:** Changed from teal #4FD9C2 to cyan #5EEADB to match new accent color
-- **Integration tool names:** Added explicit `color: var(--text-primary)` to prevent black-on-dark-grey issue
-
-### File Status
-
-- **Canon file:** `documents/Heyron-Redesign/launchpad-original.html`
-- **Obsolete file:** `launchpad-source.html` (do not use)
-- Image matchup stored in: `documents/heyron-redesign/image-matchup-revised.md`
+### Change 1: Accent Color (Cyan)
+- **File:** launchpad-originalcyan.html
+- **Fix:** Accent color changed from teal (#5EEAD4) to cyan (#22D3EE)
+- **Also updated:** `--accent-soft` and `--accent-edge` variants for cyan
+- **Previous file:** launchpad-source.html (original)
 
 ---
 
-*Previous changelog moved/discarded - this tracks current session changes only.*
+## Previous Sessions
+
+### 2026-05-05
+- Welcome page elimination (commented out)
+- Mascot replacements (earlier version)
+- Various bug fixes
+
+---
+
+*Each file tracks ONE incremental change for isolation testing.*
