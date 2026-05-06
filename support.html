@@ -24,7 +24,7 @@
 /* LAYOUT */
 body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'DM Sans',sans-serif;}
 .app-shell{position:relative;z-index:1;width:100%;max-width:1100px;min-width:320px;margin:0 auto;padding:0 12px;padding-bottom:80px;}
-.bg-image{position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.25;z-index:0;}
+.bg-image{position:absolute;top:80px;left:0;width:100%;height:250px;object-fit:cover;object-position:left center;opacity:0.4;z-index:0;pointer-events:none;}
 
 /* HEADER */
 .header{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
@@ -41,7 +41,7 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 .hero {
  position: relative;
  margin-bottom: 24px;
- padding: 32px;
+ padding: 20px;
  border-radius: 16px;
  background: var(--bg-panel);
  border: 1px solid var(--border-muted);
@@ -52,7 +52,7 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  font-size: 38px;
  font-weight: 700;
  letter-spacing: -0.03em;
- margin-bottom: 4px;
+ margin-bottom: 0;
  color: var(--text-primary);
 }
 
@@ -61,7 +61,7 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  color: var(--accent);
  letter-spacing: 0.15em;
  text-transform: uppercase;
- margin-bottom: 16px;
+ margin-bottom: 12px;
 }
 
 .hero-body {
@@ -264,7 +264,7 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 <div class="workflow">
  <div class="workflow-step">
  <img src="assets/tools.svg" alt="Self-Help">
- <span>Self-Help</span>
+ <span>Reset</span>
  </div>
  <div class="workflow-arrow">→</div>
  <div class="workflow-step">
@@ -288,7 +288,7 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  <div class="card">
  <div>
  <img src="assets/tools.svg" alt="Self-Help">
- <h3>Try Self-Help Tools</h3>
+ <h3>Reset container or API key, clear chat all in one place</h3>
  <p>Search our knowledge base and use automated troubleshooting.</p>
  </div>
  <a href="https://heyron.ai/chat" class="button">Use Tools</a>
