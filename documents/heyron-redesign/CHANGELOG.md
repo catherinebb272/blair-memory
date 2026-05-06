@@ -26,6 +26,13 @@
 
 - **Hello-screen entry (line 376):** Skipped — page will be deleted
 
+### Button Hover Fix
+
+- **Button hover color:** Changed from teal #4FD9C2 to lighter cyan #5EEADB
+  - File: launchpad-originalhover.html
+  - Location: Line 46
+  - Matches new accent color scheme
+
 ### Bug Fixes
 
 - **Integration tool names (black on dark):** Added `color: var(--text-primary)` to `.integration-name` CSS rule
