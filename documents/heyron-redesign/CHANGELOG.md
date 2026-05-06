@@ -21,6 +21,15 @@
   - If `path=expert` → starts at 'expert-names', else 'beginner-names'
 - **Previous file:** launchpad-originalwelcome.html
 
+### Change 7: Image Sizing
+- **File:** launchpad-originalimage.html
+- **Fix:** Made mascot images square and scaled up 20%
+- **Changes:**
+  - All images now render square (width = height)
+  - Sizes increased 20%: 80→96, 90→108, 100→120
+  - Kept objectFit: 'contain'
+- **Previous file:** launchpad-originalpath.html
+
 ### Change 4: Button Hover Fix
 - **File:** launchpad-originalhover.html
 - **Fix:** Button hover color changed from teal #4FD9C2 to lighter cyan #5EEADB
