@@ -15,6 +15,86 @@
  --cyan: #22D3EE;
  --mint: #00FFC6;
  --amber: #FBBF24;
+ --text-primary: #e6edf3;
+ --text-secondary: #8B9CB5;
+ --accent: #22D3EE;
+ --border-muted: #1C222B;
+}
+
+/* HEADER (from hello-screen) */
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-muted);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* HERO STYLES */
+.hero-title {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.hero-tagline {
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-actions {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.hero-body {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  max-width: 500px;
+  text-align: center;
 }
 
 body {
@@ -24,7 +104,30 @@ body {
  font-family: Inter, sans-serif;
 }
 
-/* WRAPPER */
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Heyron" class="logo-img">
+    <span>Heyron</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Launchpad</a>
+    <a href="#">Academy</a>
+  </nav>
+</header>
+
+<!-- MAIN APP -->
+<main class="app-shell">
+
+<!-- HERO SECTION -->
+<div class="card" style="text-align:center;padding:24px;margin-bottom:16px;">
+  <h2 class="hero-title">Need Help?</h2>
+  <p class="hero-tagline">Guide &middot; Improve &middot; Support</p>
+  <p class="hero-body">Here's everything you need to keep your agent running smoothly.</p>
+</div>
+
+<!-- WRAPPER -->
 .app-shell {
  max-width: 1100px;
  margin: 0 auto;
