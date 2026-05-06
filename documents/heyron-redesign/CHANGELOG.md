@@ -1,87 +1,63 @@
 # Heyron Launchpad Changelog
 
-## 2026-05-06 (Current Session)
+## 2026-05-06 Session Complete
 
-### Change 5: Welcome Page Removal
-- **File:** launchpad-originalwelcome.html
-- **Fix:** Removed welcome screen - launchpad now starts at beginner-names
-- **Changes:**
-  - Line 1794: Initial state changed from 'welcome' to 'beginner-names'
-  - Line 1798: Back function fallback changed from 'welcome' to 'beginner-names'
-  - Line 1799: Reset function changed from 'welcome' to 'beginner-names'
-  - Line 1806: Removed welcome screen rendering block (commented out)
-- **Note:** LaunchpadWelcome function remains (line 371) but is not rendered
-- **Previous file:** launchpad-originalhover.html
+### Final Versions (GitHub Main)
 
-### Change 6: URL Path Parameter
-- **File:** launchpad-originalpath.html
-- **Fix:** Added URL param reading to support hello-screen passing path=expert|beginner
-- **Changes:**
-  - Line 1795: Initial state now reads `?path=` param from URL
-  - If `path=expert` → starts at 'expert-names', else 'beginner-names'
-- **Previous file:** launchpad-originalwelcome.html
+| File | Changes |
+|------|---------|
+| launchpad-originaltools.html | Cyan accent + tool name fix |
+| launchpad-originalmascot.html | + SVG mascots → PNG images |
+| launchpad-originalpath.html | + URL param reading (?path=expert/beginner) |
+| launchpad-originalimage.html | + Square images + 20% larger + raccoon14.png |
 
-### Change 7: Image Sizing
-- **File:** launchpad-originalimage.html
-- **Fix:** Made mascot images square and scaled up 20%
-- **Changes:**
-  - All images now render square (width = height)
-  - Sizes increased 20%: 80→96, 90→108, 100→120
-  - Kept objectFit: 'contain'
-- **Previous file:** launchpad-originalpath.html
-
-### Change 4: Button Hover Fix
-- **File:** launchpad-originalhover.html
-- **Fix:** Button hover color changed from teal #4FD9C2 to lighter cyan #5EEADB
-- **Location:** Line 46
-- **Previous file:** launchpad-originalmascot.html
-
-### Change 3: Mascot Image Replacement
-- **File:** launchpad-originalmascot.html
-- **Fix:** Replaced all SVG Mascot components with PNG image tags
-- **Path format:** `assets/raccoonXX.png`
-- **Preserved sizes:** Original sizes (80-100px) with proportional height
-- **Special:** CommStyleScreen flipped with `scaleX(-1)`
-
-| Screen | Image | Size |
-|--------|-------|------|
-| NamesScreen | raccoon2.png | 100x125 |
-| UseCasesScreen | raccoon3.png | 80x100 |
-| CommStyleScreen | raccoon5.png (flipped) | 80x100 |
-| ModelScreen | raccoon4.png | 80x100 |
-| IntegrationsPickScreen | raccoon6.png | 90x112.5 |
-| IntegrationStep | raccoon7.png | 90x112.5 |
-| MemoryScreen | raccoon8.png | 80x100 |
-| HoursScreen | raccoon9.png | 80x100 |
-| NotificationsScreen | raccoon10.png | 80x100 |
-| PrivacyScreen | raccoon11.png | 80x100 |
-| PreviewScreen | raccoon11.png | 100x125 |
-
-- **Hello-screen entry (line 376):** Skipped — page will be deleted
-- **Previous file:** launchpad-originaltools.html
-
-### Change 2: Integration Tool Names Fix
-- **File:** launchpad-originaltools.html
-- **Fix:** Added `color: var(--text-primary)` to `.integration-name` CSS rule
-- **Location:** Line 153
-- **Result:** Tool names now render as light cream (#F5F0E8) instead of black (#000000)
-- **Previous file:** launchpad-originalcyan.html
-
-### Change 1: Accent Color (Cyan)
-- **File:** launchpad-originalcyan.html
-- **Fix:** Accent color changed from teal (#5EEAD4) to cyan (#22D3EE)
-- **Also updated:** `--accent-soft` and `--accent-edge` variants for cyan
-- **Previous file:** launchpad-source.html (original)
+### Hello-Screen Fix
+- File: hello-screen.html
+- Fix: Button text underline removed (text-decoration: none added to .btn)
 
 ---
 
-## Previous Sessions
+## Change Log Details
 
-### 2026-05-05
-- Welcome page elimination (commented out)
-- Mascot replacements (earlier version)
-- Various bug fixes
+### Change 7: Image Sizing (launchpad-originalimage.html)
+- Made mascot images square and scaled up 20%
+- Fixed PreviewScreen to use raccoon14.png
+- Lines: 407, 434, 492, 521, 579, 612, 1083, 1110, 1129, 1150, 1175
+
+### Change 6: URL Path Parameter (launchpad-originalpath.html)
+- Added URL param reading to support hello-screen passing path=expert|beginner
+- Line 1795: Reads `?path=` param from URL
+- If `path=expert` → starts at 'expert-names', else 'beginner-names'
+
+### Change 5: Welcome Page Removal (launchpad-originalpath.html)
+- Removed welcome screen - launchpad now starts based on URL param
+- Removed all 'welcome' screen references in state management
+
+### Change 4: Button Hover Fix (launchpad-originalhover.html - deleted)
+- Changed button hover color from teal #4FD9C2 to lighter cyan #5EEADB
+
+### Change 3: Mascot Image Replacement (launchpad-originalmascot.html)
+- Replaced all SVG Mascot components with PNG image tags
+- Path format: `assets/raccoonXX.png`
+
+### Change 2: Integration Tool Names Fix (launchpad-originaltools.html)
+- Added `color: var(--text-primary)` to `.integration-name` CSS rule
+- Line 153: Tool names now render as cream instead of black
+
+### Change 1: Accent Color (launchpad-originalcyan.html - deleted)
+- Accent color changed from teal (#5EEAD4) to cyan (#22D3EE)
 
 ---
 
-*Each file tracks ONE incremental change for isolation testing.*
+## Files Deleted (No Longer Needed)
+- launchpad-originalcyan.html (absorbed into tools version)
+- launchpad-originalhover.html (absorbed into path version)
+
+## Obsolete Files (Do Not Use)
+- launchpad-source.html
+- launchpad-original.html
+- launchpad-originalwelcome.html
+
+---
+
+*Full change history tracked in this file.*
