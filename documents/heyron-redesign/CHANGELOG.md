@@ -13,6 +13,14 @@
 - **Note:** LaunchpadWelcome function remains (line 371) but is not rendered
 - **Previous file:** launchpad-originalhover.html
 
+### Change 6: URL Path Parameter
+- **File:** launchpad-originalpath.html
+- **Fix:** Added URL param reading to support hello-screen passing path=expert|beginner
+- **Changes:**
+  - Line 1795: Initial state now reads `?path=` param from URL
+  - If `path=expert` → starts at 'expert-names', else 'beginner-names'
+- **Previous file:** launchpad-originalwelcome.html
+
 ### Change 4: Button Hover Fix
 - **File:** launchpad-originalhover.html
 - **Fix:** Button hover color changed from teal #4FD9C2 to lighter cyan #5EEADB
