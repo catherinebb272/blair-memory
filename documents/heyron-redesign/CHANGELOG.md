@@ -1,6 +1,16 @@
 # Heyron Launchpad Changelog
 
-## 2026-05-05 (Current Session)
+## 2026-05-06 (Current Session)
+
+### Bug Fixes
+
+- **Integration tool names (black on dark):** Added `color: var(--text-primary)` to `.integration-name` CSS rule
+  - Location: Line 153 in launchpad-original.html
+  - Fix: Tool names now render as light cream (#F5F0E8) instead of black (#000000)
+
+---
+
+## 2026-05-05
 
 ### Design System Updates
 
