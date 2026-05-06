@@ -2,6 +2,30 @@
 
 ## 2026-05-06 (Current Session)
 
+### Mascot Image Replacement
+
+- **Replaced all SVG Mascot components with PNG image tags**
+  - File: launchpad-originalmascot.html
+  - Path format: `assets/raccoonXX.png`
+  - Preserved original sizes (80-100px) with proportional height
+  - CommStyleScreen flipped with `scaleX(-1)`
+
+| Screen | Image | Size |
+|--------|-------|------|
+| NamesScreen | raccoon2.png | 100x125 |
+| UseCasesScreen | raccoon3.png | 80x100 |
+| CommStyleScreen | raccoon5.png (flipped) | 80x100 |
+| ModelScreen | raccoon4.png | 80x100 |
+| IntegrationsPickScreen | raccoon6.png | 90x112.5 |
+| IntegrationStep | raccoon7.png | 90x112.5 |
+| MemoryScreen | raccoon8.png | 80x100 |
+| HoursScreen | raccoon9.png | 80x100 |
+| NotificationsScreen | raccoon10.png | 80x100 |
+| PrivacyScreen | raccoon11.png | 80x100 |
+| PreviewScreen | raccoon11.png | 100x125 |
+
+- **Hello-screen entry (line 376):** Skipped — page will be deleted
+
 ### Bug Fixes
 
 - **Integration tool names (black on dark):** Added `color: var(--text-primary)` to `.integration-name` CSS rule
