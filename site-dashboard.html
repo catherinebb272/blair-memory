@@ -44,9 +44,19 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 .graph{height:28px;margin-top:6px;}
 .graph path{stroke-width:2;fill:none;stroke:var(--accent);stroke-dasharray:100;stroke-dashoffset:100;animation:draw 5s ease-in-out infinite alternate;}
 @keyframes draw{to{stroke-dashoffset:0;}}
-.status{display:flex;gap:10px;margin-top:12px;align-items:center;flex-wrap:nowrap;}
-.status-left{flex:0 0 220px;min-width:200px;display:flex;flex-direction:column;justify:center;padding:12px;}
-.status-right{flex:1;border-radius:8px;background-image:url("assets/status-visual.png");background-size:contain;background-position:center;background-repeat:no-repeat;min-height:50px;height:50px;max-height:60px;}
+.status{display:flex;gap:12px;margin-top:12px;align-items:stretch;flex-wrap:nowrap;}
+.status-left{flex:0 0 220px;min-width:200px;display:flex;flex-direction:column;justify:center;padding:12px;border-radius:12px;}
+.status-right{flex:1;display:flex;align-items:center;justify-content:center;padding:8px;border-radius:12px;position:relative;overflow:hidden;}
+.neuron{position:absolute;width:6px;height:6px;background:#22D3EE;border-radius:50%;opacity:0;animation:pulse 3s ease-in-out infinite;}
+.neuron:nth-child(1){left:20%;top:30%;animation-delay:0s;}
+.neuron:nth-child(2){left:40%;top:60%;animation-delay:0.5s;}
+.neuron:nth-child(3){left:60%;top:25%;animation-delay:1s;}
+.neuron:nth-child(4){left:75%;top:70%;animation-delay:1.5s;}
+.neuron:nth-child(5){left:85%;top:40%;animation-delay:2s;}
+.neuron:nth-child(6){left:30%;top:75%;animation-delay:0.3s;}
+.neuron:nth-child(7){left:55%;top:50%;animation-delay:0.8s;}
+.neuron:nth-child(8){left:10%;top:50%;animation-delay:1.3s;}
+@keyframes pulse{0%,100%{opacity:0;transform:scale(0.8);}50%{opacity:1;transform:scale(1.2);box-shadow:0 0 8px #22D3EE;}}
 .quick-card{display:flex;flex-direction:column;align-items:center;justify-start;text-align:center;min-height:140px;padding:16px;cursor:pointer;transition:all 0.2s ease;}
 .quick-card:hover{border-color:var(--accent-edge);transform:translateY(-2px);box-shadow:0 8px 24px rgba(34,211,238,0.15);}
 .quick-card h3{font-size:12px;margin:4px 0;}
@@ -93,7 +103,16 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
     <div class="stat-title">System Status</div>
     <div style="color:#34D399;">[Server Status]</div>
   </div>
-  <div class="card status-right"></div>
+  <div class="card status-right">
+    <div class="neuron"></div>
+    <div class="neuron"></div>
+    <div class="neuron"></div>
+    <div class="neuron"></div>
+    <div class="neuron"></div>
+    <div class="neuron"></div>
+    <div class="neuron"></div>
+    <div class="neuron"></div>
+  </div>
 </div>
 
 <!-- QUICK CARDS -->
