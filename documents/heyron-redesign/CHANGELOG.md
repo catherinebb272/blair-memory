@@ -2,6 +2,17 @@
 
 ## 2026-05-06 (Current Session)
 
+### Change 5: Welcome Page Removal
+- **File:** launchpad-originalwelcome.html
+- **Fix:** Removed welcome screen - launchpad now starts at beginner-names
+- **Changes:**
+  - Line 1794: Initial state changed from 'welcome' to 'beginner-names'
+  - Line 1798: Back function fallback changed from 'welcome' to 'beginner-names'
+  - Line 1799: Reset function changed from 'welcome' to 'beginner-names'
+  - Line 1806: Removed welcome screen rendering block (commented out)
+- **Note:** LaunchpadWelcome function remains (line 371) but is not rendered
+- **Previous file:** launchpad-originalhover.html
+
 ### Change 4: Button Hover Fix
 - **File:** launchpad-originalhover.html
 - **Fix:** Button hover color changed from teal #4FD9C2 to lighter cyan #5EEADB
