@@ -5,7 +5,7 @@
 ### Bug Fixes
 
 - **Integration tool names (black on dark):** Added `color: var(--text-primary)` to `.integration-name` CSS rule
-  - Location: Line 153 in launchpad-original.html
+  - Location: Line 153 in launchpad-originaltools.html
   - Fix: Tool names now render as light cream (#F5F0E8) instead of black (#000000)
 
 ---
