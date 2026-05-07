@@ -11,7 +11,7 @@
 | launchpad-originalpath.html | + URL param reading (?path=expert/beginner) |
 | launchpad-originalimage.html | + Square images + 20% larger + raccoon14.png |
 | support.html | ✅ DONE - Restructured with nav, bg strip, constrained width, hero + cards |
-| site-dashboard.html | Hero height reduced ~20% |
+| site-dashboard.html | ✅ DONE - Hero height reduced ~20% |
 
 ### Hello-Screen Fix
 - File: hello-screen.html
