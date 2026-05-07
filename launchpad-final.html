@@ -1793,6 +1793,7 @@ const INITIAL_DATA = {
 function App() {
   const [screen, setScreen] = useState(() => {
     const params = new URLSearchParams(window.location.search);
+    if (params.get('path') === 'dashboard') return 'dashboard';
     return params.get('path') === 'expert' ? 'expert-names' : 'beginner-names';
   });
   const [data, setData] = useState(INITIAL_DATA);
