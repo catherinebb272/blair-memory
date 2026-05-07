@@ -174,6 +174,75 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  background: var(--accent-soft);
 }
 
+/* RON CHAT PANEL */
+.ron-panel {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 20px;
+ background: var(--bg-panel);
+ border: 1px solid var(--border-muted);
+ border-radius: 16px;
+ padding: 20px 24px;
+ margin-bottom: 24px;
+}
+.ron-panel-left {
+ display: flex;
+ align-items: center;
+ gap: 16px;
+}
+.ron-avatar {
+ width: 56px;
+ height: 56px;
+ border-radius: 50%;
+ background: var(--bg-panel-2);
+ flex-shrink: 0;
+}
+.ron-avatar svg {
+ width: 100%;
+ height: 100%;
+}
+.ron-text h3 {
+ font-size: 18px;
+ font-weight: 500;
+ color: var(--accent);
+ margin: 0 0 4px 0;
+}
+.ron-text p {
+ font-size: 14px;
+ color: var(--text-muted);
+ margin: 0;
+}
+.ron-panel-right {
+ flex-shrink: 0;
+}
+.ron-dish {
+ width: 80px;
+ height: 80px;
+ border-radius: 12px;
+ background: var(--bg-page);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.ron-dish svg {
+ width: 48px;
+ height: 48px;
+ opacity: 0.6;
+}
+@media (max-width: 500px) {
+ .ron-panel {
+ flex-direction: column;
+ text-align: center;
+ }
+ .ron-panel-left {
+ flex-direction: column;
+ }
+ .ron-panel-right {
+ margin-top: 8px;
+ }
+}
+
 /* FAQ */
 .faq {
  margin-top: 30px;
@@ -318,6 +387,26 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  <p>View and manage your tickets and track progress.</p>
  </div>
  <a href="https://heyron.ai/support/ticket" class="button">View Tickets</a>
+ </div>
+</div>
+
+<!-- RON CHAT PANEL -->
+<div class="ron-panel">
+ <div class="ron-panel-left">
+  <div class="ron-avatar">
+   <!-- HeadMascot SVG - replace with local asset if preferred -->
+   <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="13" fill="#D4D4D8" /><path d="M 10 15 L 12 7 L 17 13 Z" fill="#3F3F46" /><path d="M 30 15 L 28 7 L 23 13 Z" fill="#3F3F46" /><path d="M 12 12 L 13 9 L 15 12 Z" fill="#18181B" /><path d="M 28 12 L 27 9 L 25 12 Z" fill="#18181B" /><path d="M 9 21 Q 14 18 20 20 Q 26 18 31 21 Q 28 26 24 24 Q 22 22 20 23 Q 18 22 16 24 Q 12 26 9 21 Z" fill="#18181B" /><circle cx="15" cy="21" r="1.3" fill="#F5F0E8" /><circle cx="25" cy="21" r="1.3" fill="#F5F0E8" /><ellipse cx="20" cy="27" rx="4" ry="3" fill="#F5F0E8" /><ellipse cx="20" cy="26" rx="1.3" ry="1" fill="#18181B" /></svg>
+  </div>
+  <div class="ron-text">
+   <h3>Hey, I'm Ron</h3>
+   <p>I'm here to help you.</p>
+  </div>
+ </div>
+ <div class="ron-panel-right">
+  <div class="ron-dish">
+   <!-- Satellite dish icon placeholder - replace with actual image -->
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" /></svg>
+  </div>
  </div>
 </div>
 
