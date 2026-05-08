@@ -19,6 +19,7 @@
  --accent-edge: rgba(34,211,238,0.50);
  --text-primary: #e6edf3;
  --text-muted: #8b949e;
+ --red-accent: #EF4444;
 }
 
 /* LAYOUT */
@@ -231,26 +232,66 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  opacity: 0.6;
 }
 
-/* DUMPSTER FIRE BUTTON */
+/* DUMPSTER FIRE - BOTTOM BAR */
+.bottom-bar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 20px;
+ background: var(--bg-panel);
+ border: 1px solid var(--border-muted);
+ border-radius: 16px;
+ padding: 16px 24px;
+ margin-bottom: 24px;
+}
+.bottom-bar-left {
+ display: flex;
+ align-items: center;
+ gap: 16px;
+}
+.bottom-bar-center {
+ flex: 1;
+ display: flex;
+ justify-content: center;
+}
+.bottom-bar-right {
+ display: flex;
+ align-items: center;
+ gap: 16px;
+}
 .dumpster-btn {
  display: inline-flex;
  align-items: center;
  justify-content: center;
- width: 48px;
- height: 48px;
+ width: 64px;
+ height: 64px;
  border-radius: 12px;
- background: var(--bg-panel);
+ background: var(--bg-panel-2);
  border: 1px solid var(--border-muted);
  cursor: pointer;
  transition: all 0.2s;
 }
 .dumpster-btn:hover {
- border-color: var(--accent);
+ border-color: var(--red-accent);
  transform: translateY(-2px);
 }
 .dumpster-btn img {
- width: 32px;
- height: 32px;
+ width: 48px;
+ height: 48px;
+}
+.dumpster-btn .emoji {
+ font-size: 36px;
+ line-height: 1;
+}
+
+/* Hide satellite on mobile */
+.satellite-dish {
+ display: block;
+}
+@media (max-width: 600px) {
+ .satellite-dish {
+  display: none;
+ }
 }
 
 /* MODAL */
@@ -274,79 +315,98 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  background: var(--bg-panel);
  border: 1px solid var(--border-muted);
  border-radius: 16px;
- padding: 24px;
+ padding: 20px;
  width: 100%;
- max-width: 360px;
+ max-width: 250px;
  transform: translateY(10px);
  transition: transform 0.2s;
 }
 .modal-overlay.active .modal-content {
  transform: translateY(0);
 }
-.modal-ron {
- width: 72px;
- height: 72px;
- border-radius: 50%;
- margin: 0 auto 16px;
- display: block;
-}
-.modal-title {
- font-size: 18px;
- font-weight: 500;
- color: var(--accent);
+.modal-header {
  text-align: center;
- margin: 0 0 8px 0;
+ margin-bottom: 12px;
 }
-.modal-desc {
- font-size: 14px;
+.modal-headline {
+ font-size: 16px;
+ font-weight: 600;
+ color: var(--red-accent);
+ margin: 0 0 4px 0;
+}
+.modal-subhead {
+ font-size: 10px;
+ color: var(--red-accent);
+ margin: 0;
+}
+.modal-body {
+ font-size: 12px;
  color: var(--text-muted);
  text-align: center;
- margin: 0 0 16px 0;
+ margin-bottom: 12px;
 }
 .modal-input {
  width: 100%;
- padding: 12px;
+ padding: 10px;
  background: var(--bg-page);
- border: 1px solid var(--border-muted);
+ border: 2px solid var(--red-accent);
  border-radius: 8px;
  color: var(--text-primary);
- font-size: 14px;
- margin-bottom: 16px;
+ font-size: 13px;
+ margin-bottom: 12px;
+ box-sizing: border-box;
 }
 .modal-input:focus {
  outline: none;
- border-color: var(--accent);
-}
-.modal-actions {
- display: flex;
- gap: 12px;
+ border-color: #F87171;
 }
 .modal-btn {
- flex: 1;
+ width: 100%;
  padding: 10px;
  border-radius: 8px;
- font-size: 14px;
+ font-size: 13px;
  font-weight: 500;
  cursor: pointer;
  transition: all 0.2s;
+ margin-bottom: 8px;
+ border: none;
+}
+.modal-btn-submit {
+ background: var(--red-accent);
+ color: white;
+}
+.modal-btn-submit:hover {
+ background: #DC2626;
 }
 .modal-btn-cancel {
  background: transparent;
- border: 1px solid var(--border-strong);
  color: var(--text-muted);
+ font-size: 10px;
+ padding: 6px;
 }
 .modal-btn-cancel:hover {
- border-color: var(--text-primary);
  color: var(--text-primary);
 }
-.modal-btn-submit {
- background: var(--accent);
- border: none;
- color: var(--bg-page);
+.modal-raccoon {
+ display: flex;
+ align-items: flex-end;
+ justify-content: center;
+ gap: 12px;
+ margin-top: 8px;
 }
-.modal-btn-submit:hover {
- background: #5EEADB;
+.modal-raccoon img {
+ width: 80px;
+ height: 80px;
+ object-fit: contain;
 }
+.modal-raccoon-text {
+ font-size: 11px;
+ color: var(--text-muted);
+ text-align: left;
+ max-width: 120px;
+ line-height: 1.4;
+}
+
 @media (max-width: 500px) {
  .ron-panel {
  flex-direction: column;
@@ -357,6 +417,13 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  }
  .ron-panel-right {
  margin-top: 8px;
+ }
+ .bottom-bar {
+ flex-direction: column;
+ text-align: center;
+ }
+ .bottom-bar-left, .bottom-bar-right {
+ justify-content: center;
  }
 }
 
@@ -508,34 +575,49 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 </div>
 
 <!-- RON CHAT -->
-<div style="display: flex; align-items: center; justify-content: space-between; background: var(--bg-page); padding: 24px 32px; margin-bottom: 24px; border-radius: 16px;">
- <div style="display: flex; align-items: center; gap: 16px;">
-  <img src="assets/ron-avatar.png" alt="Ron" style="width: 64px; height: 64px; border-radius: 50%;" />
-  <div>
-   <h3 style="font-size: 18px; font-weight: 500; color: var(--accent); margin: 0 0 4px 0;">Hey, I'm Ron</h3>
-   <p style="font-size: 14px; color: var(--text-muted); margin: 0;">I'm here to help you.</p>
+<div class="ron-panel">
+ <div class="ron-panel-left">
+  <img src="assets/ron-avatar.png" alt="Ron" class="ron-avatar" />
+  <div class="ron-text">
+   <h3>Hey, I'm Ron</h3>
+   <p>I'm here to help you.</p>
   </div>
  </div>
- <img src="assets/ron-dish.png" alt="Connect" style="width: 64px; height: 64px; border-radius: 12px;" />
+ <div class="ron-panel-right">
+  <img src="assets/ron-dish.png" alt="Connect" class="ron-dish" style="width:64px;height:64px;border-radius:12px;" />
+ </div>
 </div>
 
-<!-- DUMPSTER FIRE SECTION -->
-<div style="display: flex; justify-content: flex-end; margin-bottom: 24px;">
- <button class="dumpster-btn" onclick="openDumpsterModal()" title="Dumpster Fire">
-  <span style="font-size: 24px;">🗑️</span>
- </button>
+<!-- BOTTOM BAR WITH DUMPSTER FIRE -->
+<div class="bottom-bar">
+ <div class="bottom-bar-left">
+  <span style="font-size:12px;color:var(--text-muted);">Moderator Tools</span>
+ </div>
+ <div class="bottom-bar-center">
+  <!-- Empty center for spacing -->
+ </div>
+ <div class="bottom-bar-right">
+  <button class="dumpster-btn" onclick="openDumpsterModal()" title="Dumpster Fire Mod">
+   <img src="assets/trash.svg" alt="Dumpster Fire" style="width:48px;height:48px;" />
+  </button>
+  <img src="assets/ron-dish.png" alt="Satellite" class="satellite-dish" style="width:56px;height:56px;border-radius:12px;opacity:0.6;" />
+ </div>
 </div>
 
 <!-- DUMPSTER FIRE MODAL -->
 <div class="modal-overlay" id="dumpsterModal">
  <div class="modal-content">
-  <img src="assets/ron-avatar.png" alt="Ron" class="modal-ron" />
-  <h3 class="modal-title">Enter password to access Dumpster Fire</h3>
-  <p class="modal-desc">This will open the help ticket management area.</p>
+  <div class="modal-header">
+   <h3 class="modal-headline">Dumpster Fire Mod</h3>
+   <p class="modal-subhead">Moderators Only Access</p>
+  </div>
+  <p class="modal-body">Enter password to access, manage and resolve support tickets</p>
   <input type="password" class="modal-input" id="dumpsterPassword" placeholder="Enter password" />
-  <div class="modal-actions">
-   <button class="modal-btn modal-btn-cancel" onclick="closeDumpsterModal()">Cancel</button>
-   <button class="modal-btn modal-btn-submit" onclick="submitDumpster()">Enter</button>
+  <button class="modal-btn modal-btn-submit" onclick="submitDumpster()">Access Module</button>
+  <button class="modal-btn modal-btn-cancel" onclick="closeDumpsterModal()">Cancel</button>
+  <div class="modal-raccoon">
+   <img src="assets/dumpster-raccoon.png" alt="Raccoon in dumpster" onerror="this.style.display='none'" />
+   <span class="modal-raccoon-text"></span>
   </div>
  </div>
 </div>
@@ -551,7 +633,6 @@ function closeDumpsterModal() {
 }
 function submitDumpster() {
  const pwd = document.getElementById('dumpsterPassword').value;
- // TODO: Add password validation and redirect
  if(pwd) {
   alert('Password submitted: ' + pwd + ' — Redirect not configured yet');
   closeDumpsterModal();
