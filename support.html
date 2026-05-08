@@ -318,13 +318,14 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  background: var(--bg-panel);
  border: 1px solid var(--border-muted);
  border-radius: 16px;
- padding: 16px;
+ padding: 12px;
  width: 100%;
  max-width: 250px;
+ min-height: 220px;
  transform: translateY(10px);
  transition: transform 0.2s;
  display: flex;
- gap: 12px;
+ gap: 8px;
  align-items: stretch;
 }
 .modal-content > *:first-child {
@@ -402,17 +403,21 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 }
 .modal-raccoon {
  flex-shrink: 0;
- width: 70px;
- height: 180px;
+ width: 80px;
+ height: 100%;
  display: flex;
  align-items: flex-end;
+ padding: 0;
+ margin: 0;
 }
 .modal-raccoon img {
  width: 100%;
- height: auto;
- max-height: 100%;
- object-fit: contain;
+ height: 100%;
+ object-fit: cover;
  object-position: bottom center;
+ margin: 0;
+ padding: 0;
+ display: block;
 }
 
 @media (max-width: 500px) {
