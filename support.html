@@ -230,6 +230,123 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  height: 48px;
  opacity: 0.6;
 }
+
+/* DUMPSTER FIRE BUTTON */
+.dumpster-btn {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 48px;
+ height: 48px;
+ border-radius: 12px;
+ background: var(--bg-panel);
+ border: 1px solid var(--border-muted);
+ cursor: pointer;
+ transition: all 0.2s;
+}
+.dumpster-btn:hover {
+ border-color: var(--accent);
+ transform: translateY(-2px);
+}
+.dumpster-btn img {
+ width: 32px;
+ height: 32px;
+}
+
+/* MODAL */
+.modal-overlay {
+ position: fixed;
+ inset: 0;
+ background: rgba(0,0,0,0.7);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 1000;
+ opacity: 0;
+ visibility: hidden;
+ transition: all 0.2s;
+}
+.modal-overlay.active {
+ opacity: 1;
+ visibility: visible;
+}
+.modal-content {
+ background: var(--bg-panel);
+ border: 1px solid var(--border-muted);
+ border-radius: 16px;
+ padding: 24px;
+ width: 100%;
+ max-width: 360px;
+ transform: translateY(10px);
+ transition: transform 0.2s;
+}
+.modal-overlay.active .modal-content {
+ transform: translateY(0);
+}
+.modal-ron {
+ width: 72px;
+ height: 72px;
+ border-radius: 50%;
+ margin: 0 auto 16px;
+ display: block;
+}
+.modal-title {
+ font-size: 18px;
+ font-weight: 500;
+ color: var(--accent);
+ text-align: center;
+ margin: 0 0 8px 0;
+}
+.modal-desc {
+ font-size: 14px;
+ color: var(--text-muted);
+ text-align: center;
+ margin: 0 0 16px 0;
+}
+.modal-input {
+ width: 100%;
+ padding: 12px;
+ background: var(--bg-page);
+ border: 1px solid var(--border-muted);
+ border-radius: 8px;
+ color: var(--text-primary);
+ font-size: 14px;
+ margin-bottom: 16px;
+}
+.modal-input:focus {
+ outline: none;
+ border-color: var(--accent);
+}
+.modal-actions {
+ display: flex;
+ gap: 12px;
+}
+.modal-btn {
+ flex: 1;
+ padding: 10px;
+ border-radius: 8px;
+ font-size: 14px;
+ font-weight: 500;
+ cursor: pointer;
+ transition: all 0.2s;
+}
+.modal-btn-cancel {
+ background: transparent;
+ border: 1px solid var(--border-strong);
+ color: var(--text-muted);
+}
+.modal-btn-cancel:hover {
+ border-color: var(--text-primary);
+ color: var(--text-primary);
+}
+.modal-btn-submit {
+ background: var(--accent);
+ border: none;
+ color: var(--bg-page);
+}
+.modal-btn-submit:hover {
+ background: #5EEADB;
+}
 @media (max-width: 500px) {
  .ron-panel {
  flex-direction: column;
@@ -401,6 +518,51 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  </div>
  <img src="assets/ron-dish.png" alt="Connect" style="width: 64px; height: 64px; border-radius: 12px;" />
 </div>
+
+<!-- DUMPSTER FIRE SECTION -->
+<div style="display: flex; justify-content: flex-end; margin-bottom: 24px;">
+ <button class="dumpster-btn" onclick="openDumpsterModal()" title="Dumpster Fire">
+  <span style="font-size: 24px;">🗑️</span>
+ </button>
+</div>
+
+<!-- DUMPSTER FIRE MODAL -->
+<div class="modal-overlay" id="dumpsterModal">
+ <div class="modal-content">
+  <img src="assets/ron-avatar.png" alt="Ron" class="modal-ron" />
+  <h3 class="modal-title">Enter password to access Dumpster Fire</h3>
+  <p class="modal-desc">This will open the help ticket management area.</p>
+  <input type="password" class="modal-input" id="dumpsterPassword" placeholder="Enter password" />
+  <div class="modal-actions">
+   <button class="modal-btn modal-btn-cancel" onclick="closeDumpsterModal()">Cancel</button>
+   <button class="modal-btn modal-btn-submit" onclick="submitDumpster()">Enter</button>
+  </div>
+ </div>
+</div>
+
+<script>
+function openDumpsterModal() {
+ document.getElementById('dumpsterModal').classList.add('active');
+ document.getElementById('dumpsterPassword').focus();
+}
+function closeDumpsterModal() {
+ document.getElementById('dumpsterModal').classList.remove('active');
+ document.getElementById('dumpsterPassword').value = '';
+}
+function submitDumpster() {
+ const pwd = document.getElementById('dumpsterPassword').value;
+ // TODO: Add password validation and redirect
+ if(pwd) {
+  alert('Password submitted: ' + pwd + ' — Redirect not configured yet');
+  closeDumpsterModal();
+ } else {
+  document.getElementById('dumpsterPassword').focus();
+ }
+}
+document.addEventListener('keydown', function(e) {
+ if(e.key === 'Escape') closeDumpsterModal();
+});
+</script>
 
 <!-- FAQ -->
 <div class="faq">
