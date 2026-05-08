@@ -217,6 +217,11 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 .ron-panel-right {
  flex-shrink: 0;
 }
+.ron-panel-center {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
 .ron-dish {
  width: 80px;
  height: 80px;
@@ -274,6 +279,7 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 .dumpster-btn:hover {
  border-color: var(--red-accent);
  transform: translateY(-2px);
+ box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
 }
 .dumpster-btn img {
  width: 48px;
@@ -285,9 +291,6 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 }
 
 /* Hide satellite on mobile */
-.satellite-dish {
- display: block;
-}
 @media (max-width: 600px) {
  .satellite-dish {
   display: none;
@@ -574,7 +577,7 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  </div>
 </div>
 
-<!-- RON CHAT -->
+<!-- RON CHAT WITH DUMPSTER -->
 <div class="ron-panel">
  <div class="ron-panel-left">
   <img src="assets/ron-avatar.png" alt="Ron" class="ron-avatar" />
@@ -583,24 +586,13 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
    <p>I'm here to help you.</p>
   </div>
  </div>
- <div class="ron-panel-right">
-  <img src="assets/ron-dish.png" alt="Connect" class="ron-dish" style="width:64px;height:64px;border-radius:12px;" />
- </div>
-</div>
-
-<!-- BOTTOM BAR WITH DUMPSTER FIRE -->
-<div class="bottom-bar">
- <div class="bottom-bar-left">
-  <span style="font-size:12px;color:var(--text-muted);">Moderator Tools</span>
- </div>
- <div class="bottom-bar-center">
-  <!-- Empty center for spacing -->
- </div>
- <div class="bottom-bar-right">
+ <div class="ron-panel-center">
   <button class="dumpster-btn" onclick="openDumpsterModal()" title="Dumpster Fire Mod">
    <img src="assets/trash.svg" alt="Dumpster Fire" style="width:48px;height:48px;" />
   </button>
-  <img src="assets/ron-dish.png" alt="Satellite" class="satellite-dish" style="width:56px;height:56px;border-radius:12px;opacity:0.6;" />
+ </div>
+ <div class="ron-panel-right">
+  <img src="assets/ron-dish.png" alt="Connect" class="ron-dish satellite-dish" style="width:64px;height:64px;border-radius:12px;" />
  </div>
 </div>
 
@@ -616,7 +608,7 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
   <button class="modal-btn modal-btn-submit" onclick="submitDumpster()">Access Module</button>
   <button class="modal-btn modal-btn-cancel" onclick="closeDumpsterModal()">Cancel</button>
   <div class="modal-raccoon">
-   <img src="assets/dumpster-raccoon.png" alt="Raccoon in dumpster" onerror="this.style.display='none'" />
+   <img src="assets/dumpster-raccoon.png" alt="Raccoon in dumpster" />
    <span class="modal-raccoon-text"></span>
   </div>
  </div>
