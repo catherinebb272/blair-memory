@@ -318,45 +318,55 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
  background: var(--bg-panel);
  border: 1px solid var(--border-muted);
  border-radius: 16px;
- padding: 20px;
+ padding: 16px;
  width: 100%;
  max-width: 250px;
  transform: translateY(10px);
  transition: transform 0.2s;
+ display: flex;
+ gap: 12px;
+ align-items: stretch;
+}
+.modal-content > *:first-child {
+ flex-shrink: 0;
+}
+.modal-content .modal-right {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
 }
 .modal-overlay.active .modal-content {
  transform: translateY(0);
 }
 .modal-header {
- text-align: center;
- margin-bottom: 12px;
+ margin-bottom: 8px;
 }
 .modal-headline {
- font-size: 16px;
+ font-size: 14px;
  font-weight: 600;
  color: var(--red-accent);
- margin: 0 0 4px 0;
+ margin: 0 0 2px 0;
 }
 .modal-subhead {
- font-size: 10px;
+ font-size: 9px;
  color: var(--red-accent);
  margin: 0;
 }
 .modal-body {
- font-size: 12px;
+ font-size: 10px;
  color: var(--text-muted);
- text-align: center;
- margin-bottom: 12px;
+ margin-bottom: 8px;
 }
 .modal-input {
  width: 100%;
- padding: 10px;
+ padding: 8px;
  background: var(--bg-page);
  border: 2px solid var(--red-accent);
- border-radius: 8px;
+ border-radius: 6px;
  color: var(--text-primary);
- font-size: 13px;
- margin-bottom: 12px;
+ font-size: 12px;
+ margin-bottom: 8px;
  box-sizing: border-box;
 }
 .modal-input:focus {
@@ -365,13 +375,13 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 }
 .modal-btn {
  width: 100%;
- padding: 10px;
- border-radius: 8px;
- font-size: 13px;
+ padding: 8px;
+ border-radius: 6px;
+ font-size: 11px;
  font-weight: 500;
  cursor: pointer;
  transition: all 0.2s;
- margin-bottom: 8px;
+ margin-bottom: 6px;
  border: none;
 }
 .modal-btn-submit {
@@ -384,30 +394,25 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 .modal-btn-cancel {
  background: transparent;
  color: var(--text-muted);
- font-size: 10px;
- padding: 6px;
+ font-size: 9px;
+ padding: 4px;
 }
 .modal-btn-cancel:hover {
  color: var(--text-primary);
 }
 .modal-raccoon {
+ flex-shrink: 0;
+ width: 70px;
+ height: 180px;
  display: flex;
  align-items: flex-end;
- justify-content: center;
- gap: 12px;
- margin-top: 8px;
 }
 .modal-raccoon img {
- width: 80px;
- height: 80px;
+ width: 100%;
+ height: auto;
+ max-height: 100%;
  object-fit: contain;
-}
-.modal-raccoon-text {
- font-size: 11px;
- color: var(--text-muted);
- text-align: left;
- max-width: 120px;
- line-height: 1.4;
+ object-position: bottom center;
 }
 
 @media (max-width: 500px) {
@@ -599,17 +604,18 @@ body {margin:0;background:var(--bg-page);color:var(--text-primary);font-family:'
 <!-- DUMPSTER FIRE MODAL -->
 <div class="modal-overlay" id="dumpsterModal">
  <div class="modal-content">
-  <div class="modal-header">
-   <h3 class="modal-headline">Dumpster Fire Mod</h3>
-   <p class="modal-subhead">Moderators Only Access</p>
-  </div>
-  <p class="modal-body">Enter password to access, manage and resolve support tickets</p>
-  <input type="password" class="modal-input" id="dumpsterPassword" placeholder="Enter password" />
-  <button class="modal-btn modal-btn-submit" onclick="submitDumpster()">Access Module</button>
-  <button class="modal-btn modal-btn-cancel" onclick="closeDumpsterModal()">Cancel</button>
   <div class="modal-raccoon">
    <img src="assets/dumpster-raccoon.png" alt="Raccoon in dumpster" />
-   <span class="modal-raccoon-text"></span>
+  </div>
+  <div class="modal-right">
+   <div class="modal-header">
+    <h3 class="modal-headline">Dumpster Fire Mod</h3>
+    <p class="modal-subhead">Moderators Only Access</p>
+   </div>
+   <p class="modal-body">Enter password to access, manage and resolve support tickets</p>
+   <input type="password" class="modal-input" id="dumpsterPassword" placeholder="Enter password" />
+   <button class="modal-btn modal-btn-submit" onclick="submitDumpster()">Access Module</button>
+   <button class="modal-btn modal-btn-cancel" onclick="closeDumpsterModal()">Cancel</button>
   </div>
  </div>
 </div>
