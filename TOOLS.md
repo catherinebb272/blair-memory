@@ -5,6 +5,7 @@ All API keys and tokens are stored in `.env` — never hardcode values in this f
 
 
 Skills define how tools work. This file is for your specifics — the stuff that's unique to your setup.
+- **Browser_Tool** – wraps the Composio Browser Tool (`BROWSER_TOOL`). See `skills/browser_tool/skills_browser.md` for usage.
 
 ## Cron Jobs / Scheduled Tasks
 

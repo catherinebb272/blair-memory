@@ -158,6 +158,20 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 
 ---
 
+## Heyron Auth Flow (For Member Site)
+
+* **Auth Provider:** Supabase (magic link / PKCE)
+* **Flow:** Marketing → Sign Up → Stripe → Email (magic link) → Click → Logged in
+* **Session:** Persists as cookie in browser across heyron.ai domain
+* **If logged out:** "Forgot password" → new magic link → cookie restored
+* **User ID in URL:** user-0241.c1.heyron.ai (0241 = user ID)
+* **Landing page:** user-XXXX.c1.heyron.ai/sessions (OpenClaw control)
+* **For pages on heyron.ai:** Auth works automatically via cookie
+* **For external pages (GitHub):** Link to heyron.ai/chat for auth redirect
+* **Questions doc:** documents/heyron-member-site/SPEC-questions.md
+
+---
+
 ## Heyron Redesign Project
 
 * **GitHub Push Protocol:** Push directly to blair-documents main (no folder, no branch) — overwrite what's there. Commit frequently as we make changes.

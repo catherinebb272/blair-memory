@@ -99,6 +99,7 @@ For each customer message:
 ## Phase 3: Compose Discord Alert
 
 **Channel:** #general (CB BlairAI server)  
+**Channel Format:** Use `channel:1481691069878894702` as target (required `channel:` prefix)
 **Tag:** @kaliodyme (Drew's Discord username)
 
 ### Format:

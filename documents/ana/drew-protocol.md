@@ -6,6 +6,7 @@
 - **Server:** CB BlairAI server
 - **Channel:** #general
 - **Channel ID:** 1481691069878894702
+- **Format for message tool:** Use `channel:1481691069878894702` as target (required `channel:` prefix)
 - **Purpose:** Automated alerts when Drew has action items
 
 ## Ground Rules
