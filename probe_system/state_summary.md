@@ -1,1 +1,0 @@
-State persisted after read.
