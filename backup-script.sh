@@ -28,7 +28,7 @@ fi
 git commit -m "Nightly backup $(date '+%Y-%m-%d %H:%M UTC')"
 
 # Push to GitHub
-git push origin main
+git push blair-memory main
 
 echo "$(date): Backup completed successfully"
 

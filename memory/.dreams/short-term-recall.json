@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-22T17:06:37.823Z",
+  "updatedAt": "2026-05-09T20:36:11.891Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -40,18 +40,20 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# Session Notes - 2026-03-25 ## Connections Status ### GitHub ✓ CONNECTED - CLI authenticated as catherinebb272 - Repo accessible: catherinebb272/blair-documents - Git identity configured ### AgentMail ⏸ ON HOLD - Skill installed to: /root/.openclaw/workspace/skills/agentmail/ - Token ready in config/agentmail.env - Blocked: Cannot edit openclaw.json to enable skill (permission denied, needs heyron-configure or admin) - **To complete:** Add skills.entries.agentmail config with API key ### Discord ⏳ NEEDS CHECK - User says they may have already set up bot + server for DMs - Need to verify if connection is active ## Config Files Created - /root/.openclaw/workspace/config/discord.env - /ro",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-04-17T21:36:28.786Z",
+      "lastRecalledAt": "2026-05-09T20:36:11.891Z",
       "queryHashes": [
-        "626666369489"
+        "626666369489",
+        "a0903a12abe4"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-05-09"
       ],
       "conceptTags": [
         "catherinebb272/blair-documents",
@@ -248,6 +250,68 @@
         "take",
         "time",
         "reflect"
+      ]
+    },
+    "memory:memory/2026-04-23.md:1:25": {
+      "key": "memory:memory/2026-04-23.md:1:25",
+      "path": "memory/2026-04-23.md",
+      "startLine": 1,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "# 2026-04-23 ## Cache/Context Issue Investigation - **Issue:** \"Agent unable to respond\" errors when using tools - **Discovery:** Session cache climbs to 97-99% over time, appears to cause failures - **Status:** Reported to OpenClaw help ticket (3 users have same issue) - **Note:** Context at 31%, not at limit — bug in cache handling, not resource exhaustion ## Telegram → Kiki Setup Attempt - **Goal:** Connect Kiki directly to Telegram (independent of Blair) - **Steps taken:** 1. Created bot via @BotFather: `8728306798:AAFBm5MByewP8nedoqF5-tudEcEOnRPyrVs` 2. Added Telegram channel: `openclaw channels add --channel telegram --token <token>` 3. Bound Telegram to Kiki: `openclaw agent",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-09T20:36:11.891Z",
+      "lastRecalledAt": "2026-05-09T20:36:11.891Z",
+      "queryHashes": [
+        "a0903a12abe4"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "cache/context",
+        "97-99",
+        "cache",
+        "context",
+        "issue",
+        "investigation",
+        "unable",
+        "respond"
+      ]
+    },
+    "memory:memory/2026-04-29.md:1:21": {
+      "key": "memory:memory/2026-04-29.md:1:21",
+      "path": "memory/2026-04-29.md",
+      "startLine": 1,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "# 2026-04-29 ## Agent Rehab Project (Hackathon) - Created folder: documents/Rehab Project/ - Files created: - Blair Ideas.md (15 research ideas) - Project Outline.md (structure overview) - Flowcharts: Session Start, Tool Handling, Memory Management, Project Structure, File Review - Rehab Routine.md (main deliverable: 6 modules) - README.md - Core concept: Two-layer tools (TOOLS.md quick ref + skills/ detailed docs) - Modules: Tool Handling, Memory & Context, Session Start, Heartbeat, Advanced, New Tool Onboarding - **Post-session update:** Removed cron email step from README and Rehab Routine (keep file housekeeping, drop automated reminders) ## Follow-Up: Brave API Key - Support",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-09T20:36:11.891Z",
+      "lastRecalledAt": "2026-05-09T20:36:11.891Z",
+      "queryHashes": [
+        "a0903a12abe4"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "documents/rehab",
+        "ideas.md",
+        "outline.md",
+        "routine.md",
+        "readme.md",
+        "two-layer",
+        "tools.md",
+        "post-session"
       ]
     }
   }
