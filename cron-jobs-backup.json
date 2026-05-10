@@ -134,6 +134,28 @@
         "channel": "last"
       },
       "state": {}
+    },
+    {
+      "id": "5bea0002-577f-49a7-90bb-0b628bd44ff8",
+      "name": "nightly-backup",
+      "enabled": true,
+      "createdAtMs": 1778360676617,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 23 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run backup script: cd /home/openclaw/.openclaw/workspace && bash -c 'source .env && ./backup-script.sh'"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {}
     }
   ]
 }
