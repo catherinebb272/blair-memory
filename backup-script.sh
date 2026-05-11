@@ -33,4 +33,4 @@ git push blair-memory main
 echo "$(date): Backup completed successfully"
 
 # Update last backup timestamp
-echo "$(date '+%Y-%m-%d %H:%M:%S')" > /root/.openclaw/workspace/.last-backup
+echo "$(date '+%Y-%m-%d %H:%M:%S')" > /home/openclaw/.openclaw/workspace/.last-backup

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-09T20:36:11.891Z",
+  "updatedAt": "2026-05-10T20:36:08.204Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -104,18 +104,20 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# Memory Log - 2026-03-12 ## Summary Major connectivity day - established multiple new integrations and backed up all critical files. ## Activities ### Discord Connection - Successfully connected to Discord via CB BlairAI server - User can now communicate via Discord DM - Bot: BlairANA (blairana@agentmail.to) ### GitHub Integration - Confirmed GitHub token works - Uploaded country club research PDF to agent-output folder - Created comprehensive backup of all memory files ### Email Setup (AgentMail) - Configured AgentMail service - Email address: blairana@agentmail.to - Successfully tested sending to catherine1@bellbracken.com - Drew's email added for ANA reports: Drew@bellbracken.com #",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-04-17T21:36:28.786Z",
+      "lastRecalledAt": "2026-05-10T20:35:53.014Z",
       "queryHashes": [
-        "626666369489"
+        "626666369489",
+        "e9db6d6c9af5"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-05-10"
       ],
       "conceptTags": [
         "backup",
@@ -166,18 +168,21 @@
       "endLine": 61,
       "source": "memory",
       "snippet": "# Milestone Coin Scripts - Apart Not Alone **Note:** These scripts match Drew and your daughter's voice from customer samples—warm, enthusiastic, and community-focused. Adjusted for veteran employee recognition context. --- ## 2 MONTH COIN (Bronze Tier) **Tone:** Welcoming, encouraging—first milestone **Script:** Congrats on two months! That's a real accomplishment. Every day adds up, and you've got a good streak going. Keep building on this foundation. – Apart Not Alone --- ## 3 MONTH COIN (Bronze Tier) **Tone:** Acknowledging the first quarter **Script:** Congrats on three months! That's a solid chunk of time. You're proving to yourself (and everyone else) that you've got this.",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-04-22T17:06:37.823Z",
+      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
       "queryHashes": [
-        "fa8b805c80d0"
+        "fa8b805c80d0",
+        "5919912bf44c",
+        "706aa83977f7"
       ],
       "recallDays": [
-        "2026-04-22"
+        "2026-04-22",
+        "2026-05-10"
       ],
       "conceptTags": [
         "community-focused",
@@ -197,18 +202,21 @@
       "endLine": 176,
       "source": "memory",
       "snippet": "Two years already! Wow! That is truly impressive. It represents a dedication to living a healthy life. Here's to the next chapter. Apart Not Alone --- ## 3 YEAR COIN (Platinum Tier) **Tone:** Big milestone—culmination of bronze, silver, gold journey **Script:** Three years. Platinum level. That's extraordinary. You've gone through seasons of hard work, tough days, and victories. This coin represents the whole journey—every step, every milestone, every ounce of effort. Hot damn. You did that. Apart Not Alone --- ## Voice Notes for Calligraphic Cards **Key phrases to capture in handwriting:** - \"Hot damn!\" – signature exclamation, high energy - \"You are amazing\" – direct affirmatio",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-04-22T17:06:37.823Z",
+      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
       "queryHashes": [
-        "fa8b805c80d0"
+        "fa8b805c80d0",
+        "5919912bf44c",
+        "706aa83977f7"
       ],
       "recallDays": [
-        "2026-04-22"
+        "2026-04-22",
+        "2026-05-10"
       ],
       "conceptTags": [
         "two",
@@ -228,28 +236,31 @@
       "endLine": 152,
       "source": "memory",
       "snippet": "Congrats on 18 months! You are amazing! Take some time to reflect on your journey to this point and look at the scenery around you. Celebrate your persistence—you're doing the work. Apart Not Alone --- ## 1 YEAR KOI COIN (Gold Tier) **Reference Sample:** > \"Hot damn! You've made it a whole year! That's truly a milestone to celebrate. Congrats on...\" **Note:** Sample cuts off mid-sentence. Matches exuberant style. **Adapted for Veterans:** Hot damn! You've made it a whole year! That's truly a milestone to celebrate. One full trip around the sun. You've proven to yourself what you're capable of, and you've earned this gold. We're so proud of you. Apart Not Alone --- ## 1 YEAR PHOEN",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-04-22T17:06:37.823Z",
+      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
       "queryHashes": [
-        "fa8b805c80d0"
+        "fa8b805c80d0",
+        "5919912bf44c",
+        "706aa83977f7"
       ],
       "recallDays": [
-        "2026-04-22"
+        "2026-04-22",
+        "2026-05-10"
       ],
       "conceptTags": [
         "mid-sentence",
         "congrats",
         "months",
-        "you",
         "amazing",
         "take",
         "time",
-        "reflect"
+        "reflect",
+        "journey"
       ]
     },
     "memory:memory/2026-04-23.md:1:25": {
@@ -312,6 +323,194 @@
         "two-layer",
         "tools.md",
         "post-session"
+      ]
+    },
+    "memory:memory/2026-04-13.md:57:69": {
+      "key": "memory:memory/2026-04-13.md:57:69",
+      "path": "memory/2026-04-13.md",
+      "startLine": 57,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "### Files Created - `CORE/heartbeat_state.json` - Time tracking - `heyron-tutorials/10-heartbeat-system.html` - Kiki-created tutorial on heartbeat system - `heyron-tutorials/11-canva-automation-workflow.html` - Canva workflow diagram - `heyron-tutorials/canva-requirements.md` - Canva plan requirements ### Next Steps for Remory - Need a way to trigger Kiki without active session (system-level cron or external ping) - Could use a monitoring agent or webhook to ping Kiki periodically - Test after gateway restart to see if state file survives and helps recovery",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T15:25:12.924Z",
+      "lastRecalledAt": "2026-05-10T15:25:12.924Z",
+      "queryHashes": [
+        "7ede20e6d2a2"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "gateway",
+        "core/heartbeat-state.json",
+        "kiki-created",
+        "system-level",
+        "created",
+        "core",
+        "heartbeat-state.json",
+        "time"
+      ]
+    },
+    "memory:memory/2026-04-13.md:28:65": {
+      "key": "memory:memory/2026-04-13.md:28:65",
+      "path": "memory/2026-04-13.md",
+      "startLine": 28,
+      "endLine": 65,
+      "source": "memory",
+      "snippet": "3. **Error handling gaps** - Early HEARTBEAT.md allowed failures to stop execution 4. **No active session = no heartbeat** - If agent isn't running, nothing fires ### Solutions Implemented 1. **heartbeat_state.json** - Persistent state file tracking last_1h, last_6h, last_12h timestamps 2. **Updated HEARTBEAT.md** - Added State Tracking section with rules: - Check timestamps on each run - Run overdue tasks based on time, not session - Update state file after each interval 3. **Error handling rules** - \"Never stop execution\", \"always continue on failure\" ### Test Results After Fixes (2026-04-13) - 20:20 - Set all state timestamps to trigger all intervals (1h, 6h, 12h) - 20:21",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T15:25:12.924Z",
+      "lastRecalledAt": "2026-05-10T15:25:12.924Z",
+      "queryHashes": [
+        "7ede20e6d2a2"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-state.json",
+        "last-1h",
+        "last-6h",
+        "last-12h",
+        "error",
+        "handling",
+        "gaps"
+      ]
+    },
+    "memory:memory/2026-05-10.md:1:24": {
+      "key": "memory:memory/2026-05-10.md:1:24",
+      "path": "memory/2026-05-10.md",
+      "startLine": 1,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "# 2026-05-10 ## Backup Fix - Discovered `.env` had Git merge conflict markers (<<<<<, =====, >>>>>) causing syntax error on backup - Token `ghp_NQ…` (limited use for GitHubActions) vs `ghp_hb…` (regular use) — confirmed `ghp_hb…` was correct - Created fresh GitHub token `ghp_r8…` to replace both - Cleaned up stale git remotes: removed `origin2`, `pushrepo`, `pushrepo2`, `mockheyron` - Fixed backup-script.sh path for `.last-backup` (was writing to /root, now /home/openclaw/.openclaw/workspace) - Verified test push to blair-memory works ✓ ## API Keys Updated in .env - AGENTMAIL_API_KEY: new token from Catherine - ELEVENLABS_API_KEY: confirmed existing (sk_233…) - HERENOW_API_KEY: new full to",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T15:36:24.030Z",
+      "lastRecalledAt": "2026-05-10T15:36:24.030Z",
+      "queryHashes": [
+        "a7a74d5c114a"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "backup",
+        "ghp-nq",
+        "ghp-hb",
+        "ghp-r8",
+        "backup-script.sh",
+        "last-backup",
+        "home/openclaw",
+        "openclaw/workspace"
+      ]
+    },
+    "memory:memory/2026-04-16.md:1:21": {
+      "key": "memory:memory/2026-04-16.md:1:21",
+      "path": "memory/2026-04-16.md",
+      "startLine": 1,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "# 2026-04-16 ## Today's Recap - Created new PC inventory reconciliation process doc: `Step by Step.md` - 5-step workflow: Upload Item Buy Detail → Upload Precount → Collect Store Scans → Review Missing Items → Generate Barcodes - Cleaned up old mini-cycle-count-app folder: - Deleted storyboard.md, framework, data files (Precount, Item Buy Detail, Shorts scan file, subset file) - Pushed shorts-barcodes-printable.pdf to GitHub - Deleted old React app code, node_modules, barcodes - Moved Step by Step.md to GitHub repo: catherinebb272/mini-cycle-count-app - Updated MEMORY.md with GitHub location for the app - Created How I Built It tutorial: Cron with Discord - Saved to GitHub: cathe",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T15:36:24.030Z",
+      "lastRecalledAt": "2026-05-10T15:36:24.030Z",
+      "queryHashes": [
+        "a7a74d5c114a"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "step.md",
+        "5-step",
+        "mini-cycle-count-app",
+        "storyboard.md",
+        "shorts-barcodes-printable.pdf",
+        "node-modules",
+        "memory.md",
+        "today's"
+      ]
+    },
+    "memory:memory/2026-03-04.md:58:101": {
+      "key": "memory:memory/2026-03-04.md:58:101",
+      "path": "memory/2026-03-04.md",
+      "startLine": 58,
+      "endLine": 101,
+      "source": "memory",
+      "snippet": "> \"Congrats on Six months of sobriety! Whether that seems short or incredibly long, either way 6 months is a big deal. I'm sure there are many more months to come and we wish you the best of luck. So many of us walk this path with you are we are supporting you along the way – Apart Not Alone\" **Adapted for Veterans:** Congrats on six months! Whether that seems short or incredibly long, either way six months is a big deal. I'm sure there are many more months to come and we wish you the best of luck. So many of us walk this path with you and we are supporting you along the way. Apart Not Alone --- ## 9 MONTH COIN (Silver Tier) **Tone:** Almost at the year mark **Script:** Nine months d",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T20:35:50.423Z",
+      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
+      "queryHashes": [
+        "5919912bf44c",
+        "706aa83977f7"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "congrats",
+        "six",
+        "months",
+        "sobriety",
+        "whether",
+        "seems",
+        "incredibly",
+        "either"
+      ]
+    },
+    "memory:memory/2026-04-14.md:31:66": {
+      "key": "memory:memory/2026-04-14.md:31:66",
+      "path": "memory/2026-04-14.md",
+      "startLine": 31,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "- React README: `/documents/pc/cycle-count-react-version/README.md` - explains where current version lives ### Kiki Check - Checked on Kiki agent - heartbeat running, 9 backups created today - Note: sessions_list triggers Kiki's heartbeat (causes backup) [LESSON] Checking sessions_list wakes up the heartbeat agent --- ## Additional Cycle Count Fixes (Evening Session) **Review Screen Updates:** - Eliminated Zone column (all items show \"Not Scanned\" - redundant) - Description now shows concatenated \"Description/Brand\" (e.g., \"WT Tank/lululemon\") - Added Buy Date field in place of Zone column - Added formatBuyDate() function to convert Excel serial dates (45505 → 2024-12-30) **Adjustments",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T20:35:50.423Z",
+      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
+      "queryHashes": [
+        "5919912bf44c",
+        "706aa83977f7"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "sessions-list",
+        "description/brand",
+        "e.g",
+        "tank/lululemon",
+        "react",
+        "readme"
       ]
     }
   }
