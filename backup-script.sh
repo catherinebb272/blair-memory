@@ -11,17 +11,31 @@ cp /home/openclaw/.openclaw/cron/jobs.json ./cron-jobs-backup.json 2>/dev/null |
 source .env
 export GITHUB_TOKEN
 
-# Ensure .env is not staged or its changes are not tracked
-# Attempt to remove .env from the index if it's staged
-git reset HEAD .env 2>/dev/null || true
-# Also ensure it's untracked if it was added as new
-git rm --cached .env 2>/dev/null || true
+# Ensure .gitignore is present and contains necessary exclusions
+if [ ! -f ".gitignore" ]; then
+    echo "Creating .gitignore file."
+    echo -e ".env\nblair-memory/\ndocuments/heyron-tutorials/\nheyron-tutorials/" > .gitignore
+else
+    # Ensure .env and blair-memory are ignored if not already
+    if ! grep -q "^\.env$" .gitignore; then
+        echo ".env" >> .gitignore
+    fi
+    if ! grep -q "^blair-memory/$" .gitignore; then
+        echo "blair-memory/" >> .gitignore
+    fi
+    if ! grep -q "^documents/heyron-tutorials/$" .gitignore; then
+        echo "documents/heyron-tutorials/" >> .gitignore
+    fi
+    if ! grep -q "^heyron-tutorials/$" .gitignore; then
+        echo "heyron-tutorials/" >> .gitignore
+    fi
+fi
+git add .gitignore
 
 # Add all tracked files, excluding .env, heyron-tutorials
+# Use git add --update for modified/deleted, and git add --all for new
 git add --update -- ':!documents/heyron-tutorials' ':!heyron-tutorials' ':!.env'
-
-# Add new files, excluding .env, heyron-tutorials, and blair-memory (which is the destination)
-git add --all -- ':!documents/heyron-tutorials' ':!heyron-tutorials' ':!.env' ':!blair-memory'
+git add --all -- ':!documents/heyron-tutorials' ':!heyron-tutorials' ':!.env'
 
 # Ensure blair-memory directory is added
 if [ -d "blair-memory" ]; then
