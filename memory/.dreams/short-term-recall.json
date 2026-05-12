@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T20:36:08.204Z",
+  "updatedAt": "2026-05-12T00:24:53.236Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -104,20 +104,22 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# Memory Log - 2026-03-12 ## Summary Major connectivity day - established multiple new integrations and backed up all critical files. ## Activities ### Discord Connection - Successfully connected to Discord via CB BlairAI server - User can now communicate via Discord DM - Bot: BlairANA (blairana@agentmail.to) ### GitHub Integration - Confirmed GitHub token works - Uploaded country club research PDF to agent-output folder - Created comprehensive backup of all memory files ### Email Setup (AgentMail) - Configured AgentMail service - Email address: blairana@agentmail.to - Successfully tested sending to catherine1@bellbracken.com - Drew's email added for ANA reports: Drew@bellbracken.com #",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-05-10T20:35:53.014Z",
+      "lastRecalledAt": "2026-05-11T15:35:51.351Z",
       "queryHashes": [
         "626666369489",
-        "e9db6d6c9af5"
+        "e9db6d6c9af5",
+        "c49bc3dfde3e"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "backup",
@@ -168,21 +170,23 @@
       "endLine": 61,
       "source": "memory",
       "snippet": "# Milestone Coin Scripts - Apart Not Alone **Note:** These scripts match Drew and your daughter's voice from customer samples—warm, enthusiastic, and community-focused. Adjusted for veteran employee recognition context. --- ## 2 MONTH COIN (Bronze Tier) **Tone:** Welcoming, encouraging—first milestone **Script:** Congrats on two months! That's a real accomplishment. Every day adds up, and you've got a good streak going. Keep building on this foundation. – Apart Not Alone --- ## 3 MONTH COIN (Bronze Tier) **Tone:** Acknowledging the first quarter **Script:** Congrats on three months! That's a solid chunk of time. You're proving to yourself (and everyone else) that you've got this.",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
+      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
-        "706aa83977f7"
+        "706aa83977f7",
+        "837961e215db"
       ],
       "recallDays": [
         "2026-04-22",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "community-focused",
@@ -202,21 +206,23 @@
       "endLine": 176,
       "source": "memory",
       "snippet": "Two years already! Wow! That is truly impressive. It represents a dedication to living a healthy life. Here's to the next chapter. Apart Not Alone --- ## 3 YEAR COIN (Platinum Tier) **Tone:** Big milestone—culmination of bronze, silver, gold journey **Script:** Three years. Platinum level. That's extraordinary. You've gone through seasons of hard work, tough days, and victories. This coin represents the whole journey—every step, every milestone, every ounce of effort. Hot damn. You did that. Apart Not Alone --- ## Voice Notes for Calligraphic Cards **Key phrases to capture in handwriting:** - \"Hot damn!\" – signature exclamation, high energy - \"You are amazing\" – direct affirmatio",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
+      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
-        "706aa83977f7"
+        "706aa83977f7",
+        "837961e215db"
       ],
       "recallDays": [
         "2026-04-22",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "two",
@@ -236,21 +242,23 @@
       "endLine": 152,
       "source": "memory",
       "snippet": "Congrats on 18 months! You are amazing! Take some time to reflect on your journey to this point and look at the scenery around you. Celebrate your persistence—you're doing the work. Apart Not Alone --- ## 1 YEAR KOI COIN (Gold Tier) **Reference Sample:** > \"Hot damn! You've made it a whole year! That's truly a milestone to celebrate. Congrats on...\" **Note:** Sample cuts off mid-sentence. Matches exuberant style. **Adapted for Veterans:** Hot damn! You've made it a whole year! That's truly a milestone to celebrate. One full trip around the sun. You've proven to yourself what you're capable of, and you've earned this gold. We're so proud of you. Apart Not Alone --- ## 1 YEAR PHOEN",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
+      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
-        "706aa83977f7"
+        "706aa83977f7",
+        "837961e215db"
       ],
       "recallDays": [
         "2026-04-22",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "mid-sentence",
@@ -332,18 +340,20 @@
       "endLine": 69,
       "source": "memory",
       "snippet": "### Files Created - `CORE/heartbeat_state.json` - Time tracking - `heyron-tutorials/10-heartbeat-system.html` - Kiki-created tutorial on heartbeat system - `heyron-tutorials/11-canva-automation-workflow.html` - Canva workflow diagram - `heyron-tutorials/canva-requirements.md` - Canva plan requirements ### Next Steps for Remory - Need a way to trigger Kiki without active session (system-level cron or external ping) - Could use a monitoring agent or webhook to ping Kiki periodically - Test after gateway restart to see if state file survives and helps recovery",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T15:25:12.924Z",
-      "lastRecalledAt": "2026-05-10T15:25:12.924Z",
+      "lastRecalledAt": "2026-05-11T15:35:37.944Z",
       "queryHashes": [
-        "7ede20e6d2a2"
+        "7ede20e6d2a2",
+        "92b0e02ccc5d"
       ],
       "recallDays": [
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "gateway",
@@ -363,18 +373,20 @@
       "endLine": 65,
       "source": "memory",
       "snippet": "3. **Error handling gaps** - Early HEARTBEAT.md allowed failures to stop execution 4. **No active session = no heartbeat** - If agent isn't running, nothing fires ### Solutions Implemented 1. **heartbeat_state.json** - Persistent state file tracking last_1h, last_6h, last_12h timestamps 2. **Updated HEARTBEAT.md** - Added State Tracking section with rules: - Check timestamps on each run - Run overdue tasks based on time, not session - Update state file after each interval 3. **Error handling rules** - \"Never stop execution\", \"always continue on failure\" ### Test Results After Fixes (2026-04-13) - 20:20 - Set all state timestamps to trigger all intervals (1h, 6h, 12h) - 20:21",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T15:25:12.924Z",
-      "lastRecalledAt": "2026-05-10T15:25:12.924Z",
+      "lastRecalledAt": "2026-05-11T15:35:37.944Z",
       "queryHashes": [
-        "7ede20e6d2a2"
+        "7ede20e6d2a2",
+        "92b0e02ccc5d"
       ],
       "recallDays": [
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "heartbeat.md",
@@ -425,18 +437,20 @@
       "endLine": 21,
       "source": "memory",
       "snippet": "# 2026-04-16 ## Today's Recap - Created new PC inventory reconciliation process doc: `Step by Step.md` - 5-step workflow: Upload Item Buy Detail → Upload Precount → Collect Store Scans → Review Missing Items → Generate Barcodes - Cleaned up old mini-cycle-count-app folder: - Deleted storyboard.md, framework, data files (Precount, Item Buy Detail, Shorts scan file, subset file) - Pushed shorts-barcodes-printable.pdf to GitHub - Deleted old React app code, node_modules, barcodes - Moved Step by Step.md to GitHub repo: catherinebb272/mini-cycle-count-app - Updated MEMORY.md with GitHub location for the app - Created How I Built It tutorial: Cron with Discord - Saved to GitHub: cathe",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T15:36:24.030Z",
-      "lastRecalledAt": "2026-05-10T15:36:24.030Z",
+      "lastRecalledAt": "2026-05-12T00:24:53.236Z",
       "queryHashes": [
-        "a7a74d5c114a"
+        "a7a74d5c114a",
+        "a1431f3061ba"
       ],
       "recallDays": [
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-12"
       ],
       "conceptTags": [
         "step.md",
@@ -456,19 +470,21 @@
       "endLine": 101,
       "source": "memory",
       "snippet": "> \"Congrats on Six months of sobriety! Whether that seems short or incredibly long, either way 6 months is a big deal. I'm sure there are many more months to come and we wish you the best of luck. So many of us walk this path with you are we are supporting you along the way – Apart Not Alone\" **Adapted for Veterans:** Congrats on six months! Whether that seems short or incredibly long, either way six months is a big deal. I'm sure there are many more months to come and we wish you the best of luck. So many of us walk this path with you and we are supporting you along the way. Apart Not Alone --- ## 9 MONTH COIN (Silver Tier) **Tone:** Almost at the year mark **Script:** Nine months d",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T20:35:50.423Z",
-      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
+      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
       "queryHashes": [
         "5919912bf44c",
-        "706aa83977f7"
+        "706aa83977f7",
+        "837961e215db"
       ],
       "recallDays": [
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "congrats",
@@ -511,6 +527,285 @@
         "tank/lululemon",
         "react",
         "readme"
+      ]
+    },
+    "memory:memory/2026-05-04.md:26:38": {
+      "key": "memory:memory/2026-05-04.md:26:38",
+      "path": "memory/2026-05-04.md",
+      "startLine": 26,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "8. Working Hours — Vintage hourglass with cyan sand, clock gears, warm amber accent 9. Privacy — Balance scale (cyan left, violet right), shield icon, secure feel 10. Finish — Raccoon in pilot seat, hand on launch button, flames, high energy --- **⚠️ REMINDER FOR CATHERINE:** When asked \"what are we working on?\" — remind me to: 1. Update the list of images (Canva descriptions need corresponding image files) 2. Go through ALL tool screens + Model and Memory in the Expert flow path 3. We discovered an edit that turned both the upload screen and previous version black (\"the black screen of death\") 4. I successfully recovered by restoring from one of Catherine's backups **Recovery Note:** The",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T15:35:37.944Z",
+      "lastRecalledAt": "2026-05-11T15:35:37.944Z",
+      "queryHashes": [
+        "92b0e02ccc5d"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "working",
+        "hours",
+        "vintage",
+        "hourglass",
+        "cyan",
+        "sand"
+      ]
+    },
+    "memory:memory/2026-05-03.md:1:30": {
+      "key": "memory:memory/2026-05-03.md:1:30",
+      "path": "memory/2026-05-03.md",
+      "startLine": 1,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "# 2026-05-03 ## Heyron Launchpad Redesign - **Changelog:** Created in CHANGELOG.md - **Project:** Heyron.ai Launchpad module redesign (launchpad-source.html) - **Status:** In progress - testing different colors and images - **Completed:** Introductory Hello page with animation - **Design guidelines:** Stored in `heyronstyle.md` - **Color scheme:** Current scheme represented in Hello page animation - **Removed hello/welcome pages:** launchpad-source.html now starts on Names page - **Added larger mascot images:** Each screen has 180x180px image spot (raccoon2-raccoon12.png) - **To do:** Test different visual variations for Launchpad, add raccoon image files ## Canva Visual Descriptions 1.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T15:35:37.944Z",
+      "lastRecalledAt": "2026-05-11T15:35:37.944Z",
+      "queryHashes": [
+        "92b0e02ccc5d"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "changelog.md",
+        "heyron.ai",
+        "launchpad-source.html",
+        "heyronstyle.md",
+        "hello/welcome",
+        "raccoon2-raccoon12.png",
+        "heyron",
+        "launchpad"
+      ]
+    },
+    "memory:memory/2026-05-04.md:1:32": {
+      "key": "memory:memory/2026-05-04.md:1:32",
+      "path": "memory/2026-05-04.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-05-04 ## Heyron Redesign Project (Ongoing) **Project:** Heyron.ai Launchpad module redesign **Status:** Active development **Key Files:** - `launchpad-source.html` — Main launchpad file (redesigned, starts on Names page) - `hello.html` — Introductory Hello page with animation - `CHANGELOG.md` — Project changelog - `heyronstyle.md` — Design guidelines **Design Specs:** - Color scheme: Current scheme in Hello page animation - Removed old hello/welcome pages — launchpad now starts on Names page - Added larger mascot images: 180x180px image spots (raccoon2-raccoon12.png) **Canva Visual Descriptions (10 screens):** 1. Hello — Astronaut raccoon floating in zero-g, small spaceship, Earth",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T15:35:37.944Z",
+      "lastRecalledAt": "2026-05-11T15:35:37.944Z",
+      "queryHashes": [
+        "92b0e02ccc5d"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "heyron.ai",
+        "launchpad-source.html",
+        "hello.html",
+        "changelog.md",
+        "heyronstyle.md",
+        "hello/welcome",
+        "raccoon2-raccoon12.png",
+        "zero-g"
+      ]
+    },
+    "memory:memory/2026-05-11.md:1:10": {
+      "key": "memory:memory/2026-05-11.md:1:10",
+      "path": "memory/2026-05-11.md",
+      "startLine": 1,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "# 2026-05-11 ## Social Media Automation - Sober Life Expectations v Reality Series Catherine wants to create a series of social media posts called \"Sober Life Expectations v Reality\". - Template concept: Left side shows expectations (e.g., \"Wake up early, eat clean, do yoga\"), right side shows reality (e.g., \"Wake up late, eat snacks, watch trash TV\"), ending with \"I'll take the win\" - Brainstormed 6 examples covering: work productivity, home maintenance, patience with others, learning new skills, and meal prep - Saved ideas in `ana/social_media_ideas.md` with screen text and caption for each - Note: Blair cannot directly use Canva, but will prepare text content that Catherine can copy/p",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T15:35:51.351Z",
+      "lastRecalledAt": "2026-05-11T15:35:51.351Z",
+      "queryHashes": [
+        "c49bc3dfde3e"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "e.g",
+        "ana/social-media-ideas.md",
+        "copy/p",
+        "social",
+        "media",
+        "automation",
+        "sober",
+        "life"
+      ]
+    },
+    "memory:memory/2026-03-02.md:1:40": {
+      "key": "memory:memory/2026-03-02.md:1:40",
+      "path": "memory/2026-03-02.md",
+      "startLine": 1,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "# 2026-03-02 - Milestone Coins Project ## Business Context - **Business:** Apart Not Alone (milestone coin recognition program) - **Product:** Challenge coins for employee milestone recognition program - **Program:** Employees receive commemorative coins at service anniversaries (2mo, 3mo, 4mo, 5mo, 6mo, 9mo, 18mo, 1yr, 2yr, 3yr) ## Coin Specifications - **Tiers:** - Bronze: 2mo, 3mo, 4mo, 5mo, 6mo - Silver: 9mo, 18mo - Gold: 1yr (Koi & Phoenix variants), 2yr - Platinum: 3yr - **Files Created/Verified:** - `coin-2mo.jpg` - Bronze 2-month coin - `coin-3mo.jpg` - Bronze 3-month coin - `coin-4mo.jpg` - Bronze 4-month coin - `coin-5mo.jpg` - Bronze 5-month coin - `coin-6mo.j",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-11T22:07:55.340Z",
+      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
+      "queryHashes": [
+        "837961e215db"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "created/verified",
+        "coin-2mo.jpg",
+        "2-month",
+        "coin-3mo.jpg",
+        "3-month",
+        "coin-4mo.jpg",
+        "4-month",
+        "coin-5mo.jpg"
+      ]
+    },
+    "memory:memory/2026-04-11.md:1:9": {
+      "key": "memory:memory/2026-04-11.md:1:9",
+      "path": "memory/2026-04-11.md",
+      "startLine": 1,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "## How I Built It Tutorials - **Template location:** `documents/How-I-Built-Tutorials/index.html` (contains the HTML template) - **Existing tutorials:** - Creating Audio from Family Memoirs using Eleven Labs - Animated Avatar Project - **Format:** Teal header, sections for Project Scope, Tools Needed, Workflow, Prompts Used",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-12T00:24:53.236Z",
+      "lastRecalledAt": "2026-05-12T00:24:53.236Z",
+      "queryHashes": [
+        "a1431f3061ba"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "how",
+        "built",
+        "tutorials",
+        "template",
+        "location",
+        "documents",
+        "index.html",
+        "contains"
+      ]
+    },
+    "memory:memory/2026-05-05.md:27:69": {
+      "key": "memory:memory/2026-05-05.md:27:69",
+      "path": "memory/2026-05-05.md",
+      "startLine": 27,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "- Component library: buttons, cards, toggles, inputs, grids, chips **Mascot:** - Currently SVG code (`Mascot` component) - Each screen calls `<Mascot>` inline with size/pose - To replace: update each screen's `<Mascot />` call OR modify Mascot component **UX Issues Noted:** - Day selector (HoursScreen) — selected/unselected not intuitive, needs helper text **Files Created:** - `documents/heyron-redesign/Code_sections.md` — comprehensive code documentation (~1400 lines) **Not In Scope (skipped):** - Help pages (~line 1202) - Troubleshooting (~line 1505) - Support widget (1611–1759) --- ## Welcome Page Elimination **Completed:** 1. Display block — done 2. Rendering conditions — done 3.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-12T00:24:53.236Z",
+      "lastRecalledAt": "2026-05-12T00:24:53.236Z",
+      "queryHashes": [
+        "a1431f3061ba"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "size/pose",
+        "selected/unselected",
+        "component",
+        "library",
+        "buttons",
+        "cards",
+        "toggles",
+        "inputs"
+      ]
+    },
+    "memory:memory/2026-03-13.md:71:116": {
+      "key": "memory:memory/2026-03-13.md:71:116",
+      "path": "memory/2026-03-13.md",
+      "startLine": 71,
+      "endLine": 116,
+      "source": "memory",
+      "snippet": "- Emailed to Catherine via AgentMail --- ## Etsy Review Reminder — AUTOMATED ### Setup - OpenClaw cron job: Mon/Wed/Fri at 2 PM UTC (9 AM Central) - Sends Discord DM to Catherine - Removed old Linux crontab entry - Tracking: `etsy-review-tracking.md` ### Status - Jade's review: COMPLETE (Drew posted reply 2026-03-13) - No pending replies --- ## GitHub Backup System — VERIFIED ### Status - Nightly backups working to `memory-backup/` folder - Last backup: 2026-03-12 22:45 UTC - Deleted orphaned `memory-backups/` folder - TOOLS.md updated with correct cron info --- ## Key Files Created/Modified Today | File | Location | Purpose | |------|----------|---------| | `index-standalone.html`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-12T00:24:53.236Z",
+      "lastRecalledAt": "2026-05-12T00:24:53.236Z",
+      "queryHashes": [
+        "a1431f3061ba"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "mon/wed/fri",
+        "etsy-review-tracking.md",
+        "memory-backup",
+        "memory-backups",
+        "tools.md",
+        "created/modified"
+      ]
+    },
+    "memory:memory/2026-04-14.md:1:40": {
+      "key": "memory:memory/2026-04-14.md:1:40",
+      "path": "memory/2026-04-14.md",
+      "startLine": 1,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "# 2026-04-14 Memory Log ## Today's Recap ### Cycle Count App Updates **Splash Page Created:** - New SplashPage.jsx with Plato's Closet branding - Tagline: \"Targeted inventory counts that fit your schedule — not your budget\" - Sections: How It Works, DRS Files Needed, Barcode Sheets, Important Caveats - Integrated into App.jsx as entry point (splash screen) **Duplicate Detection Enhanced:** - ConductScan.jsx: Added 3-tier duplicate detection - NEARBY_DUPLICATE_THRESHOLD = 5 (items within 5 scans) - EXACT_CHUNK_THRESHOLD = 8 (same 8 items scanned twice) - Flags: isDuplicate, isNearbyDuplicate, isRepeatedChunk, scanPosition **ExportResults.jsx Updates:** - Added Duplicate Scan Log sect",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-12T00:24:53.236Z",
+      "lastRecalledAt": "2026-05-12T00:24:53.236Z",
+      "queryHashes": [
+        "a1431f3061ba"
+      ],
+      "recallDays": [
+        "2026-05-12"
+      ],
+      "conceptTags": [
+        "splashpage.jsx",
+        "app.jsx",
+        "conductscan.jsx",
+        "3-tier",
+        "nearby-duplicate-threshold",
+        "exact-chunk-threshold",
+        "exportresults.jsx",
+        "log"
       ]
     }
   }

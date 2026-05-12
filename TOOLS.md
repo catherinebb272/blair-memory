@@ -3,6 +3,28 @@
 ## API Keys
 All API keys and tokens are stored in `.env` — never hardcode values in this file.
 
+### AgentMail Email Attachments
+To send emails with attachments via AgentMail, use the `attachments` array in the JSON body:
+
+```bash
+curl -X POST "https://api.agentmail.to/v0/inboxes/blairana@agentmail.to/messages/send" \
+  -H "Authorization: Bearer $AGENTMAIL_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "recipient@email.com",
+    "subject": "Subject line",
+    "body": {"text": "Email body text"},
+    "attachments": [{"filename": "image.png", "content": "BASE64_STRING", "contentType": "image/png"}]
+  }'
+```
+
+- `filename`: The name the file should have when attached
+- `content`: Base64-encoded file content  
+- `contentType`: MIME type (e.g., `image/png`, `application/pdf`, `text/plain`)
+
+**Primary email:** apartxalone@gmail.com (AI/agent communications)
+**Secondary email:** catherine1@bellbracken.com (personal, occasionally bounces)
+
 
 Skills define how tools work. This file is for your specifics — the stuff that's unique to your setup.
 - **Browser_Tool** – wraps the Composio Browser Tool (`BROWSER_TOOL`). See `skills/browser_tool/skills_browser.md` for usage.
