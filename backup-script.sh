@@ -28,4 +28,4 @@ else
 fi
 
 # Push to the backup repository
-git push origin "${BRANCH}"
+git push --force origin "${BRANCH}"
