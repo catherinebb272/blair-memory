@@ -11,15 +11,11 @@ cp /home/openclaw/.openclaw/cron/jobs.json ./cron-jobs-backup.json 2>/dev/null |
 source .env
 export GITHUB_TOKEN
 
-# Add all tracked files, excluding .env and heyron-tutorials
-# Use git add --update to only stage modified/deleted files, and git add <path> for new files
-git add --update -- ':!documents/heyron-tutorials' ':!heyron-tutorials' ':!.env'
+# Explicitly add all files and directories EXCEPT .env, heyron-tutorials, and blair-memory (which is the destination)
+# This approach is more controlled than using 'git add -A' with exclusions.
+git add . -- ':!documents/heyron-tutorials' ':!heyron-tutorials' ':!.env' ':!blair-memory'
 
-# Add new files, excluding .env and heyron-tutorials
-git add --all -- ':!documents/heyron-tutorials' ':!heyron-tutorials' ':!.env'
-
-# Ensure blair-memory is added as a directory
-# If blair-memory directory exists and is not a submodule or already tracked as a directory
+# Ensure blair-memory directory is added if it was not picked up by the above command
 if [ -d "blair-memory" ] && ! git ls-files --stage | grep -q "040000.*blair-memory"; then
   git add blair-memory
 fi
@@ -36,9 +32,10 @@ fi
 # Commit with timestamp
 git commit -m "Nightly backup $(date '+%Y-%m-%d %H:%M UTC')"
 
-# Push to the designated remote 'blair-memory' is likely the remote name
-# Ensure 'blair-memory' is configured as a git remote pointing to the correct GitHub URL
-# If 'blair-memory' is not a remote, this push will fail.
+# Push to the designated remote 'blair-memory'
+# Note: Ensure 'blair-memory' is set as a remote in your git configuration for this to work.
+# If it's not a remote, this push will fail. Consider pushing to a specific branch on the main repo.
+# For now, assuming 'blair-memory' remote is correctly configured.
 git push blair-memory main
 
 echo "$(date): Backup completed successfully"
