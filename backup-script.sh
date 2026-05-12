@@ -1,63 +1,31 @@
-#!/bin/bash
-# Nightly backup script for Blair workspace
-# Backs up memory files, daily logs, key business documents, and cron jobs to GitHub
+#!/usr/bin/env bash
+# backup-script.sh – push a full workspace backup to the blair-memory repo
 
-cd /home/openclaw/.openclaw/workspace
+set -euo pipefail
 
-# Backup cron jobs to workspace (cron jobs.json is in /home/openclaw/.openclaw/cron/)
-cp /home/openclaw/.openclaw/cron/jobs.json ./cron-jobs-backup.json 2>/dev/null || true
+# Load environment variables (including GITHUB_TOKEN)
+source "$(dirname "$0")/.env"
 
-# Export GitHub token from .env
-source .env
-export GITHUB_TOKEN
+# Repository to push to (override any GITHUB_REPO value)
+REPO="catherinebb272/blair-memory"
+BRANCH="main"
 
-# Ensure .gitignore is present and contains necessary exclusions
-if [ ! -f ".gitignore" ]; then
-    echo "Creating .gitignore file."
-    echo -e ".env\nblair-memory/\ndocuments/heyron-tutorials/\nheyron-tutorials/" > .gitignore
+# Change to the workspace root
+cd "$(dirname "$0")"
+
+# Ensure the remote points to the backup repo (using HTTPS token authentication)
+# This overwrites the existing 'origin' remote for this push only.
+git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${REPO}.git"
+
+# Stage all changes (git respects .gitignore, so .env stays out)
+git add -A
+
+# Commit if there are changes
+if ! git diff-index --quiet HEAD; then
+    git commit -m "Workspace backup $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
 else
-    # Ensure .env and blair-memory are ignored if not already
-    if ! grep -q "^\.env$" .gitignore; then
-        echo ".env" >> .gitignore
-    fi
-    if ! grep -q "^blair-memory/$" .gitignore; then
-        echo "blair-memory/" >> .gitignore
-    fi
-    if ! grep -q "^documents/heyron-tutorials/$" .gitignore; then
-        echo "documents/heyron-tutorials/" >> .gitignore
-    fi
-    if ! grep -q "^heyron-tutorials/$" .gitignore; then
-        echo "heyron-tutorials/" >> .gitignore
-    fi
-fi
-git add .gitignore
-
-# Add all tracked files, excluding .env, heyron-tutorials
-# Use git add --update for modified/deleted, and git add --all for new
-git add --update -- ':!documents/heyron-tutorials' ':!heyron-tutorials' ':!.env'
-git add --all -- ':!documents/heyron-tutorials' ':!heyron-tutorials' ':!.env'
-
-# Ensure blair-memory directory is added
-if [ -d "blair-memory" ]; then
-  git add blair-memory
+    echo "No changes to commit."
 fi
 
-# Add cron jobs backup explicitly
-git add cron-jobs-backup.json 2>/dev/null || true
-
-# Check if there are changes to commit
-if git diff --cached --quiet; then
-    echo "$(date): No changes to backup"
-    exit 0
-fi
-
-# Commit with timestamp
-git commit -m "Nightly backup $(date '+%Y-%m-%d %H:%M UTC')"
-
-# Push to the designated remote 'blair-memory'
-git push blair-memory main
-
-echo "$(date): Backup completed successfully"
-
-# Update last backup timestamp
-echo "$(date '+%Y-%m-%d %H:%M:%S')" > /home/openclaw/.openclaw/workspace/.last-backup
+# Push to the backup repository
+git push origin "${BRANCH}"
