@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T00:24:53.236Z",
+  "updatedAt": "2026-05-14T02:32:14.988Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -170,23 +170,25 @@
       "endLine": 61,
       "source": "memory",
       "snippet": "# Milestone Coin Scripts - Apart Not Alone **Note:** These scripts match Drew and your daughter's voice from customer samples—warm, enthusiastic, and community-focused. Adjusted for veteran employee recognition context. --- ## 2 MONTH COIN (Bronze Tier) **Tone:** Welcoming, encouraging—first milestone **Script:** Congrats on two months! That's a real accomplishment. Every day adds up, and you've got a good streak going. Keep building on this foundation. – Apart Not Alone --- ## 3 MONTH COIN (Bronze Tier) **Tone:** Acknowledging the first quarter **Script:** Congrats on three months! That's a solid chunk of time. You're proving to yourself (and everyone else) that you've got this.",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
+      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
         "706aa83977f7",
-        "837961e215db"
+        "837961e215db",
+        "29fdb6f4553f"
       ],
       "recallDays": [
         "2026-04-22",
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-14"
       ],
       "conceptTags": [
         "community-focused",
@@ -206,23 +208,25 @@
       "endLine": 176,
       "source": "memory",
       "snippet": "Two years already! Wow! That is truly impressive. It represents a dedication to living a healthy life. Here's to the next chapter. Apart Not Alone --- ## 3 YEAR COIN (Platinum Tier) **Tone:** Big milestone—culmination of bronze, silver, gold journey **Script:** Three years. Platinum level. That's extraordinary. You've gone through seasons of hard work, tough days, and victories. This coin represents the whole journey—every step, every milestone, every ounce of effort. Hot damn. You did that. Apart Not Alone --- ## Voice Notes for Calligraphic Cards **Key phrases to capture in handwriting:** - \"Hot damn!\" – signature exclamation, high energy - \"You are amazing\" – direct affirmatio",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
+      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
         "706aa83977f7",
-        "837961e215db"
+        "837961e215db",
+        "29fdb6f4553f"
       ],
       "recallDays": [
         "2026-04-22",
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-14"
       ],
       "conceptTags": [
         "two",
@@ -242,23 +246,25 @@
       "endLine": 152,
       "source": "memory",
       "snippet": "Congrats on 18 months! You are amazing! Take some time to reflect on your journey to this point and look at the scenery around you. Celebrate your persistence—you're doing the work. Apart Not Alone --- ## 1 YEAR KOI COIN (Gold Tier) **Reference Sample:** > \"Hot damn! You've made it a whole year! That's truly a milestone to celebrate. Congrats on...\" **Note:** Sample cuts off mid-sentence. Matches exuberant style. **Adapted for Veterans:** Hot damn! You've made it a whole year! That's truly a milestone to celebrate. One full trip around the sun. You've proven to yourself what you're capable of, and you've earned this gold. We're so proud of you. Apart Not Alone --- ## 1 YEAR PHOEN",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
+      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
         "706aa83977f7",
-        "837961e215db"
+        "837961e215db",
+        "29fdb6f4553f"
       ],
       "recallDays": [
         "2026-04-22",
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-14"
       ],
       "conceptTags": [
         "mid-sentence",
@@ -629,18 +635,20 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-05-11 ## Social Media Automation - Sober Life Expectations v Reality Series Catherine wants to create a series of social media posts called \"Sober Life Expectations v Reality\". - Template concept: Left side shows expectations (e.g., \"Wake up early, eat clean, do yoga\"), right side shows reality (e.g., \"Wake up late, eat snacks, watch trash TV\"), ending with \"I'll take the win\" - Brainstormed 6 examples covering: work productivity, home maintenance, patience with others, learning new skills, and meal prep - Saved ideas in `ana/social_media_ideas.md` with screen text and caption for each - Note: Blair cannot directly use Canva, but will prepare text content that Catherine can copy/p",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T15:35:51.351Z",
-      "lastRecalledAt": "2026-05-11T15:35:51.351Z",
+      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
       "queryHashes": [
-        "c49bc3dfde3e"
+        "c49bc3dfde3e",
+        "29fdb6f4553f"
       ],
       "recallDays": [
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-14"
       ],
       "conceptTags": [
         "e.g",
@@ -660,18 +668,20 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "# 2026-03-02 - Milestone Coins Project ## Business Context - **Business:** Apart Not Alone (milestone coin recognition program) - **Product:** Challenge coins for employee milestone recognition program - **Program:** Employees receive commemorative coins at service anniversaries (2mo, 3mo, 4mo, 5mo, 6mo, 9mo, 18mo, 1yr, 2yr, 3yr) ## Coin Specifications - **Tiers:** - Bronze: 2mo, 3mo, 4mo, 5mo, 6mo - Silver: 9mo, 18mo - Gold: 1yr (Koi & Phoenix variants), 2yr - Platinum: 3yr - **Files Created/Verified:** - `coin-2mo.jpg` - Bronze 2-month coin - `coin-3mo.jpg` - Bronze 3-month coin - `coin-4mo.jpg` - Bronze 4-month coin - `coin-5mo.jpg` - Bronze 5-month coin - `coin-6mo.j",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T22:07:55.340Z",
-      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
+      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
       "queryHashes": [
-        "837961e215db"
+        "837961e215db",
+        "29fdb6f4553f"
       ],
       "recallDays": [
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-14"
       ],
       "conceptTags": [
         "created/verified",
@@ -753,18 +763,21 @@
       "endLine": 116,
       "source": "memory",
       "snippet": "- Emailed to Catherine via AgentMail --- ## Etsy Review Reminder — AUTOMATED ### Setup - OpenClaw cron job: Mon/Wed/Fri at 2 PM UTC (9 AM Central) - Sends Discord DM to Catherine - Removed old Linux crontab entry - Tracking: `etsy-review-tracking.md` ### Status - Jade's review: COMPLETE (Drew posted reply 2026-03-13) - No pending replies --- ## GitHub Backup System — VERIFIED ### Status - Nightly backups working to `memory-backup/` folder - Last backup: 2026-03-12 22:45 UTC - Deleted orphaned `memory-backups/` folder - TOOLS.md updated with correct cron info --- ## Key Files Created/Modified Today | File | Location | Purpose | |------|----------|---------| | `index-standalone.html`",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-12T00:24:53.236Z",
-      "lastRecalledAt": "2026-05-12T00:24:53.236Z",
+      "lastRecalledAt": "2026-05-13T14:20:58.678Z",
       "queryHashes": [
-        "a1431f3061ba"
+        "a1431f3061ba",
+        "545a9d9f8b7c",
+        "96d163102668"
       ],
       "recallDays": [
-        "2026-05-12"
+        "2026-05-12",
+        "2026-05-13"
       ],
       "conceptTags": [
         "backup",
@@ -806,6 +819,195 @@
         "exact-chunk-threshold",
         "exportresults.jsx",
         "log"
+      ]
+    },
+    "memory:memory/2026-05-09.md:1:15": {
+      "key": "memory:memory/2026-05-09.md:1:15",
+      "path": "memory/2026-05-09.md",
+      "startLine": 1,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "# 2026-05-09 Daily Log ## Etsy Check-in (Saturday) - 1 order: Yasmina Moore-Foster - 1 Year Phoenix Rising, ship by May 12, gift + gift teaser - No new messages - No new reviews - Posted Discord DM to Drew with order details + handwritten note suggestion - Included Mother's Day reminder ## Browser Tool Test - Tried to log into Etsy but Etsy blocked the VPS IP (bot detection) - Will need to find alternative method ## Notes -",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-13T14:20:49.476Z",
+      "lastRecalledAt": "2026-05-13T14:20:58.678Z",
+      "queryHashes": [
+        "545a9d9f8b7c",
+        "a91c53fdde37",
+        "96d163102668"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "check-in",
+        "moore-foster",
+        "log",
+        "etsy",
+        "check",
+        "saturday",
+        "order",
+        "yasmina"
+      ]
+    },
+    "memory:memory/2026-04-25.md:1:37": {
+      "key": "memory:memory/2026-04-25.md:1:37",
+      "path": "memory/2026-04-25.md",
+      "startLine": 1,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "# 2026-04-25 ## Etsy Check-In Cron Investigation ### Problem Test cron `etsy-checkin-test-v2` was running but emails weren't being received automatically on schedule. ### Root Cause The isolated cron session couldn't access the AgentMail API key. The `.env` file in the workspace wasn't being read by the cron job's isolated session. ### Fix Applied Added API key directly to workspace `.env`: ``` AGENTMAIL_API_KEY=am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a ``` ### Current Cron Config - **ID:** c5b95218-0a87-4546-8edf-1bb1bfe1dbf9 - **Name:** etsy-checkin-test-v2 - **Schedule:** Every 1 hour - **Session:** isolated - **Message:** \"Send a test email to apartxalon",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-13T14:20:49.476Z",
+      "lastRecalledAt": "2026-05-13T14:20:58.678Z",
+      "queryHashes": [
+        "545a9d9f8b7c",
+        "96d163102668"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "check-in",
+        "etsy-checkin-test-v2",
+        "agentmail-api-key",
+        "etsy",
+        "check",
+        "cron",
+        "investigation",
+        "problem"
+      ]
+    },
+    "memory:memory/2026-03-28.md:1:38": {
+      "key": "memory:memory/2026-03-28.md:1:38",
+      "path": "memory/2026-03-28.md",
+      "startLine": 1,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "# Memory Log — March 28, 2026 ## Session: PC Loss Prevention Framework Development ### What We Did **1. HEARTBEAT TASK — Heyron Tutorials Sync** - Ran daily sync of heyron-tutorial files from GitHub - Already up to date **2. PC LP Framework — Created & Evolved** Started with user asking to save a framework separately. Built out a comprehensive LP Analysis Framework for Plato's Closet franchise owners. **Key developments:** - **Folder Structure Created:** - `/documents/pc/` — generic files (columns, LP framework, workflows) - `/documents/pc/plano/` — Plano-specific analysis (moved inventory.xlsx, investigation report, buyer analyses, writeoffs) - **Memory Updated:** Added PC secti",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-13T14:20:52.474Z",
+      "lastRecalledAt": "2026-05-13T14:20:52.474Z",
+      "queryHashes": [
+        "a91c53fdde37"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "heyron-tutorial",
+        "documents/pc",
+        "documents/pc/plano",
+        "plano-specific",
+        "inventory.xlsx",
+        "log",
+        "march",
+        "loss"
+      ]
+    },
+    "memory:memory/2026-03-28.md:55:93": {
+      "key": "memory:memory/2026-03-28.md:55:93",
+      "path": "memory/2026-03-28.md",
+      "startLine": 55,
+      "endLine": 93,
+      "source": "memory",
+      "snippet": "- **Post-data clarification:** Ask owner about writeoff dates — \"clearance vs. cycle count?\" Reason codes: \"Cycle Count\" = physical scan by RGIS/Datascan - **Clearance schedule question:** Ask if they followed brand schedule (Sept, Jan, Apr, Jun) - **Store folder naming:** `/documents/pc/pc-8xxxx/` for store-specific work **6. Files Modified/Created** - `/documents/pc/lp-analysis-framework.md` — main framework - `/documents/pc/inventory-loss-facts.md` — added Method #6, updated theft list - `/documents/pc/README.md` — folder overview - `/documents/pc/plano/` — subfolder with Plano data (moved from pc root) - `MEMORY.md` — updated PC section with file locations --- ## Questions to Explore",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-13T14:20:52.474Z",
+      "lastRecalledAt": "2026-05-13T14:20:52.474Z",
+      "queryHashes": [
+        "a91c53fdde37"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "post-data",
+        "rgis/datascan",
+        "documents/pc/pc-8xxxx",
+        "store-specific",
+        "modified/created",
+        "documents/pc/readme.md",
+        "documents/pc/plano",
+        "memory.md"
+      ]
+    },
+    "memory:memory/2026-03-27.md:1:34": {
+      "key": "memory:memory/2026-03-27.md:1:34",
+      "path": "memory/2026-03-27.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# March 27, 2026 ## Heyron Tutorial Module Updates Worked on Module 05 (Audio-Visual) updates and navigation fixes across all modules: ### Module 05 - Audio-Visual (key changes) - Streamlined Orchestration Model section with orchestra conductor analogy - Removed duplicate CAN/CANNOT lists from Images section - Added \"preferred vendor\" callouts (ElevenLabs for audio) - Added \"How to Connect\" callouts with exact phrases like \"Help me connect to ElevenLabs\" - Added troubleshooting note for image upload (use Telegram/Discord if chat UI fails) - Added free option for image prompts (paste into ChatGPT) - Gutted and rebuilt Video section with Sora, Runway, Veo as video generation platforms - Add",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-13T14:20:52.474Z",
+      "lastRecalledAt": "2026-05-13T14:20:52.474Z",
+      "queryHashes": [
+        "a91c53fdde37"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "gpt",
+        "audio-visual",
+        "can/cannot",
+        "telegram/discord",
+        "march",
+        "heyron",
+        "tutorial",
+        "module"
+      ]
+    },
+    "memory:memory/2026-05-13.md:1:44": {
+      "key": "memory:memory/2026-05-13.md:1:44",
+      "path": "memory/2026-05-13.md",
+      "startLine": 1,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "# 2026-05-13 — Etsy Optimization Deep Dive ## Session Summary ### What We Did **1. Etsy Check-In (Wed)** - No new orders, messages, or reviews - Posted update to #general and DM'd Drew — enjoy the breathing room **2. Compiled 30-Day Stats** - Created `documents/ana/etsy-stats-60-day.md` - Storewide: 607 visits (-13% YoY), 32 orders, 5.3% conversion, $672 revenue - Added all 10 product rows with visits, orders, conversion rates **3. Conversion Analysis** - Compared lifetime (Mar) vs 30-day (May) conversion - Key finding: New customer acquisition broken (Month 1-6 at 0% or near-zero) - Repeat customers thriving (2-3 Year up significantly) **4. Competitor Research: TheAchievemint** - Pull",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-14T02:32:14.988Z",
+      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
+      "queryHashes": [
+        "29fdb6f4553f"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "check-in",
+        "30-day",
+        "5.3",
+        "1-6",
+        "near-zero",
+        "2-3",
+        "etsy",
+        "optimization"
       ]
     }
   }
