@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-14T02:32:14.988Z",
+  "updatedAt": "2026-05-14T15:10:14.701Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -542,18 +542,20 @@
       "endLine": 38,
       "source": "memory",
       "snippet": "8. Working Hours — Vintage hourglass with cyan sand, clock gears, warm amber accent 9. Privacy — Balance scale (cyan left, violet right), shield icon, secure feel 10. Finish — Raccoon in pilot seat, hand on launch button, flames, high energy --- **⚠️ REMINDER FOR CATHERINE:** When asked \"what are we working on?\" — remind me to: 1. Update the list of images (Canva descriptions need corresponding image files) 2. Go through ALL tool screens + Model and Memory in the Expert flow path 3. We discovered an edit that turned both the upload screen and previous version black (\"the black screen of death\") 4. I successfully recovered by restoring from one of Catherine's backups **Recovery Note:** The",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T15:35:37.944Z",
-      "lastRecalledAt": "2026-05-11T15:35:37.944Z",
+      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
       "queryHashes": [
-        "92b0e02ccc5d"
+        "92b0e02ccc5d",
+        "0c1ca8ff538b"
       ],
       "recallDays": [
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-14"
       ],
       "conceptTags": [
         "backup",
@@ -986,15 +988,18 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# 2026-05-13 — Etsy Optimization Deep Dive ## Session Summary ### What We Did **1. Etsy Check-In (Wed)** - No new orders, messages, or reviews - Posted update to #general and DM'd Drew — enjoy the breathing room **2. Compiled 30-Day Stats** - Created `documents/ana/etsy-stats-60-day.md` - Storewide: 607 visits (-13% YoY), 32 orders, 5.3% conversion, $672 revenue - Added all 10 product rows with visits, orders, conversion rates **3. Conversion Analysis** - Compared lifetime (Mar) vs 30-day (May) conversion - Key finding: New customer acquisition broken (Month 1-6 at 0% or near-zero) - Repeat customers thriving (2-3 Year up significantly) **4. Competitor Research: TheAchievemint** - Pull",
-      "recallCount": 1,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T02:32:14.988Z",
-      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
+      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
       "queryHashes": [
-        "29fdb6f4553f"
+        "29fdb6f4553f",
+        "b4858c274d60",
+        "8dc4267f1660",
+        "0c1ca8ff538b"
       ],
       "recallDays": [
         "2026-05-14"
@@ -1008,6 +1013,163 @@
         "2-3",
         "etsy",
         "optimization"
+      ]
+    },
+    "memory:memory/2026-05-13.md:38:80": {
+      "key": "memory:memory/2026-05-13.md:38:80",
+      "path": "memory/2026-05-13.md",
+      "startLine": 38,
+      "endLine": 80,
+      "source": "memory",
+      "snippet": "- Instagram started (paused), Pinterest started - YTD conversion is 4.2% — lower than lifetime 5% - Hypothesis: Changes may have boosted traffic but hurt conversion **6. Description Comparison** - TheAchievemint: Flowing prose, emotional storytelling, quotes - ANA: Scannable bullets, features-focused, \"what's in box\" - Trade-off: Mobile-friendly vs emotional resonance **7. What Can/Cannot Change** - CANNOT: Months on front (design choice), extended milestones, new photography - CAN: Titles, descriptions, AI-generated lifestyle videos, related products --- ## Action Items - [ ] Test shorter titles on top performers (1 Year Koi, 6 Month Koi) - [ ] Consider richer descriptions on key lis",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-14T14:03:44.075Z",
+      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
+      "queryHashes": [
+        "b4858c274d60",
+        "8dc4267f1660",
+        "0c1ca8ff538b"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "4.2",
+        "features-focused",
+        "trade-off",
+        "mobile-friendly",
+        "can/cannot",
+        "ai-generated",
+        "instagram",
+        "started"
+      ]
+    },
+    "memory:memory/2026-03-13.md:35:84": {
+      "key": "memory:memory/2026-03-13.md:35:84",
+      "path": "memory/2026-03-13.md",
+      "startLine": 35,
+      "endLine": 84,
+      "source": "memory",
+      "snippet": "- Started with 300 credits, down to 210 after uploads/testing - Static site uses minimal credits (bandwidth only) - Manual deploys preferred over builds to conserve credits --- ## AgentMail Email System — FIXED ### Problem - Old API key expired - Wrong endpoint being used (`/v1/` instead of `/v0/`) - Incorrect request format ### Solution - New API key: `am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a` - Correct endpoint: `POST /v0/inboxes/{inbox_id}/messages/send` - Proper format: `{\"to\": \"...\", \"subject\": \"...\", \"body\": {\"text\": \"...\"}}` - Deleted orphaned inbox `selfishcompetition741@agentmail.to` - Confirmed working: sent test email + PDF attachment successfully",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-14T14:03:44.075Z",
+      "lastRecalledAt": "2026-05-14T14:03:44.075Z",
+      "queryHashes": [
+        "b4858c274d60"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "uploads/testing",
+        "v0/inboxes",
+        "inbox-id",
+        "messages/send",
+        "agentmail.to",
+        "started",
+        "credits",
+        "down"
+      ]
+    },
+    "memory:memory/2026-04-12.md:1:7": {
+      "key": "memory:memory/2026-04-12.md:1:7",
+      "path": "memory/2026-04-12.md",
+      "startLine": 1,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "## Today’s Recap - Pulled latest Heyron tutorial files from GitHub and synced to workspace. - Kiki's heartbeat ran and logged a 1‑hour check. - Assigned Kiki a task to research Indy Clover vendor policies; findings saved to `memory/indy-clover-rules.md`. - Updated Indy Clover rules with Sunday hours (12 pm – 6 pm). - Confirmed backup not needed (last backup less than 24 h ago).",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-14T14:03:44.075Z",
+      "lastRecalledAt": "2026-05-14T14:03:44.075Z",
+      "queryHashes": [
+        "b4858c274d60"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "backup",
+        "memory/indy-clover-rules.md",
+        "today’s",
+        "recap",
+        "pulled",
+        "latest",
+        "heyron",
+        "tutorial"
+      ]
+    },
+    "memory:memory/2026-05-14.md:1:30": {
+      "key": "memory:memory/2026-05-14.md:1:30",
+      "path": "memory/2026-05-14.md",
+      "startLine": 1,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "# 2026-05-14 — Competitor Research + Avatar Project + Barbara Business Brainstorm ## Competitor Research - Visited DTC sites for competitors with websites (DoingItSober, TheAchieveMint, LibertyLaserUSA, Unity16, SaltyPotatoChips) - Created `documents/ana/competitor-product-offerings.md` with full breakdown - Key findings: DoingItSober has broadest line (apparel, jewelry, holders), LibertyLaserUSA does drinkware/engraving, Unity16 focuses on B2B wholesale - Opportunities: Secular positioning, mugs, stickers, fidget items, gift bundles ## Avatar / Character Sheet App ## Avatar / Character Sheet App - Catherine would own it separately (not Heyron) - Could live under Plaid Fox brand rebrand -",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-14T15:10:14.701Z",
+      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
+      "queryHashes": [
+        "0c1ca8ff538b"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "drinkware/engraving",
+        "competitor",
+        "research",
+        "avatar",
+        "project",
+        "barbara",
+        "business",
+        "brainstorm"
+      ]
+    },
+    "memory:memory/2026-04-15.md:1:30": {
+      "key": "memory:memory/2026-04-15.md:1:30",
+      "path": "memory/2026-04-15.md",
+      "startLine": 1,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "# 2026-04-15 Memory Log ## Cycle Count Process (Step by Step) ### Step 1: Upload Item Buy Detail - Source: DRS \"Item Buy Detail\" report - File: `Item Buy Detail Aug124-April142026.xlsx` - Row count: 172,860 items ### Step 2: Upload Precount (Precount.001) - SKUs in Precount: 10,310 - Matched to Item Buy Detail: 4,002 items (subset created) ### Step 3: Upload Scanned Data (BShortsPhysicalCountRev3.csv) - Total scans: 416 - Unique scanned SKUs: 415 **Matching Process (in order):** 1. Compare scanned SKUs to subset (Precount → Item Buy Detail match) 2. Matched to subset: 403 3. Missing (in subset but not scanned): 3,599 — **then** filter by QOH > 0 **Key finding:** 97% of \"missing\" items",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-14T15:10:14.701Z",
+      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
+      "queryHashes": [
+        "0c1ca8ff538b"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "aug124-april142026.xlsx",
+        "precount.001",
+        "bshortsphysicalcountrev3.csv",
+        "log",
+        "cycle",
+        "count",
+        "process",
+        "step"
       ]
     }
   }
