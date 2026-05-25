@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-16T02:18:15.934Z",
+  "updatedAt": "2026-05-25T13:36:40.448Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -639,20 +639,24 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-05-11 ## Social Media Automation - Sober Life Expectations v Reality Series Catherine wants to create a series of social media posts called \"Sober Life Expectations v Reality\". - Template concept: Left side shows expectations (e.g., \"Wake up early, eat clean, do yoga\"), right side shows reality (e.g., \"Wake up late, eat snacks, watch trash TV\"), ending with \"I'll take the win\" - Brainstormed 6 examples covering: work productivity, home maintenance, patience with others, learning new skills, and meal prep - Saved ideas in `ana/social_media_ideas.md` with screen text and caption for each - Note: Blair cannot directly use Canva, but will prepare text content that Catherine can copy/p",
-      "recallCount": 2,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T15:35:51.351Z",
-      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
+      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
       "queryHashes": [
         "c49bc3dfde3e",
-        "29fdb6f4553f"
+        "29fdb6f4553f",
+        "9907211e386a",
+        "e67681840b0e",
+        "5914a007eae2"
       ],
       "recallDays": [
         "2026-05-11",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-25"
       ],
       "conceptTags": [
         "e.g",
@@ -767,21 +771,23 @@
       "endLine": 116,
       "source": "memory",
       "snippet": "- Emailed to Catherine via AgentMail --- ## Etsy Review Reminder — AUTOMATED ### Setup - OpenClaw cron job: Mon/Wed/Fri at 2 PM UTC (9 AM Central) - Sends Discord DM to Catherine - Removed old Linux crontab entry - Tracking: `etsy-review-tracking.md` ### Status - Jade's review: COMPLETE (Drew posted reply 2026-03-13) - No pending replies --- ## GitHub Backup System — VERIFIED ### Status - Nightly backups working to `memory-backup/` folder - Last backup: 2026-03-12 22:45 UTC - Deleted orphaned `memory-backups/` folder - TOOLS.md updated with correct cron info --- ## Key Files Created/Modified Today | File | Location | Purpose | |------|----------|---------| | `index-standalone.html`",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-12T00:24:53.236Z",
-      "lastRecalledAt": "2026-05-13T14:20:58.678Z",
+      "lastRecalledAt": "2026-05-25T13:35:58.021Z",
       "queryHashes": [
         "a1431f3061ba",
         "545a9d9f8b7c",
-        "96d163102668"
+        "96d163102668",
+        "9907211e386a"
       ],
       "recallDays": [
         "2026-05-12",
-        "2026-05-13"
+        "2026-05-13",
+        "2026-05-25"
       ],
       "conceptTags": [
         "backup",
@@ -832,20 +838,23 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-09 Daily Log ## Etsy Check-in (Saturday) - 1 order: Yasmina Moore-Foster - 1 Year Phoenix Rising, ship by May 12, gift + gift teaser - No new messages - No new reviews - Posted Discord DM to Drew with order details + handwritten note suggestion - Included Mother's Day reminder ## Browser Tool Test - Tried to log into Etsy but Etsy blocked the VPS IP (bot detection) - Will need to find alternative method ## Notes -",
-      "recallCount": 3,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-05-13T14:20:58.678Z",
+      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "a91c53fdde37",
-        "96d163102668"
+        "96d163102668",
+        "9907211e386a",
+        "5914a007eae2"
       ],
       "recallDays": [
-        "2026-05-13"
+        "2026-05-13",
+        "2026-05-25"
       ],
       "conceptTags": [
         "check-in",
@@ -865,19 +874,22 @@
       "endLine": 37,
       "source": "memory",
       "snippet": "# 2026-04-25 ## Etsy Check-In Cron Investigation ### Problem Test cron `etsy-checkin-test-v2` was running but emails weren't being received automatically on schedule. ### Root Cause The isolated cron session couldn't access the AgentMail API key. The `.env` file in the workspace wasn't being read by the cron job's isolated session. ### Fix Applied Added API key directly to workspace `.env`: ``` AGENTMAIL_API_KEY=am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a ``` ### Current Cron Config - **ID:** c5b95218-0a87-4546-8edf-1bb1bfe1dbf9 - **Name:** etsy-checkin-test-v2 - **Schedule:** Every 1 hour - **Session:** isolated - **Message:** \"Send a test email to apartxalon",
-      "recallCount": 2,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-05-13T14:20:58.678Z",
+      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
       "queryHashes": [
         "545a9d9f8b7c",
-        "96d163102668"
+        "96d163102668",
+        "9907211e386a",
+        "5914a007eae2"
       ],
       "recallDays": [
-        "2026-05-13"
+        "2026-05-13",
+        "2026-05-25"
       ],
       "conceptTags": [
         "check-in",
@@ -990,21 +1002,24 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# 2026-05-13 — Etsy Optimization Deep Dive ## Session Summary ### What We Did **1. Etsy Check-In (Wed)** - No new orders, messages, or reviews - Posted update to #general and DM'd Drew — enjoy the breathing room **2. Compiled 30-Day Stats** - Created `documents/ana/etsy-stats-60-day.md` - Storewide: 607 visits (-13% YoY), 32 orders, 5.3% conversion, $672 revenue - Added all 10 product rows with visits, orders, conversion rates **3. Conversion Analysis** - Compared lifetime (Mar) vs 30-day (May) conversion - Key finding: New customer acquisition broken (Month 1-6 at 0% or near-zero) - Repeat customers thriving (2-3 Year up significantly) **4. Competitor Research: TheAchievemint** - Pull",
-      "recallCount": 4,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T02:32:14.988Z",
-      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
+      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
       "queryHashes": [
         "29fdb6f4553f",
         "b4858c274d60",
         "8dc4267f1660",
-        "0c1ca8ff538b"
+        "0c1ca8ff538b",
+        "9907211e386a",
+        "5914a007eae2"
       ],
       "recallDays": [
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-25"
       ],
       "conceptTags": [
         "check-in",
@@ -1172,6 +1187,132 @@
         "count",
         "process",
         "step"
+      ]
+    },
+    "memory:memory/2026-05-14.md:1:15": {
+      "key": "memory:memory/2026-05-14.md:1:15",
+      "path": "memory/2026-05-14.md",
+      "startLine": 1,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "# 2026-05-14 ## Competitor Intel ### AACoinClub (Etsy) - 11 months on Etsy, 171 sales - Exclusively coins, mixed styles (no apparent strategy) - Top sellers: - Bling style: sun with moon on back, available years 1-15 - 4 year: embossed images of AA founders - 19 total styles - Unknown: stocking vs on-demand etching ## Action Items - [ ] Update competitor file with AACoinClub",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-25T13:35:58.021Z",
+      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "queryHashes": [
+        "9907211e386a",
+        "5914a007eae2"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "1-15",
+        "on-demand",
+        "competitor",
+        "intel",
+        "aacoinclub",
+        "etsy",
+        "months",
+        "sales"
+      ]
+    },
+    "memory:memory/2026-05-23.md:43:76": {
+      "key": "memory:memory/2026-05-23.md:43:76",
+      "path": "memory/2026-05-23.md",
+      "startLine": 43,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "- All-in-one: keyword research, product research, shop operations - Marketing & automation (email, Pinterest) - 800K+ users ### EverBee - Hobby (Free), Growth ($19.99/mo), Business ($69/mo) - Keyword Score (built-in ranking metric) - Product analytics with conversion data - Trend tracking up to 24 months --- ## Created Research Document - Created `documents/ana/etsy-seller-tools-comparison.md` with full comparison of both design tools and keyword tools - Initially pushed to blair-memory repo, then moved to blair-documents (ANA folder) per user's request that blair-memory is only for memory backups - File location: `catherinebb272/blair-documents/documents/ana/etsy-seller-tools-comparison",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-25T13:35:58.021Z",
+      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "queryHashes": [
+        "9907211e386a",
+        "5914a007eae2"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "all-in-one",
+        "19.99/mo",
+        "69/mo",
+        "built-in",
+        "blair-memory",
+        "blair-documents"
+      ]
+    },
+    "memory:memory/2026-05-17.md:1:11": {
+      "key": "memory:memory/2026-05-17.md:1:11",
+      "path": "memory/2026-05-17.md",
+      "startLine": 1,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "# Daily Memory Log - May 17, 2026 ## ANA / Business - **Midjourney abandoned** — couldn't get reliable repeatable look for greeting card series. Kept defaulting to \"cute\" aesthetic (heart-shaped faces, tiny noses, big eyes). $10 spent, not worth fighting. - **Lost designs** — had 4 good designs from ChatGPT/CoPilot but lost them when had to restart and regenerate. - **Barbara unavailable** — can't do artwork right now, so AI generation is the path forward. - **Printify** — account set up, connected to Etsy store. - **Product decision:** 5x7 folded greeting cards, matte paper, envelope included, prefolded (to stay in small letter shipping rate per YouTube advice). ## Personal - Catherine he",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-25T13:36:02.903Z",
+      "lastRecalledAt": "2026-05-25T13:36:02.903Z",
+      "queryHashes": [
+        "e67681840b0e"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "gpt",
+        "heart-shaped",
+        "chatgpt/copilot",
+        "log",
+        "may",
+        "ana",
+        "business",
+        "midjourney"
+      ]
+    },
+    "memory:memory/2026-03-28.md:33:60": {
+      "key": "memory:memory/2026-03-28.md:33:60",
+      "path": "memory/2026-03-28.md",
+      "startLine": 33,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "**3. Three Problem Classifications (Stage 3)** | Problem | Description | Analysis Needed | |---------|-------------|-----------------| | A | Inventory missing | Fake buys, partial fake buys, fake returns, shoplifting, employee theft | | B | Margins low (<59%) | Period Close report (not Item Buy Detail), bad buyers or donated goods | | C | DRS inventory lower than expected | Solve equation for writeoffs: OH = Buys - Sales + Beginning OH - Writeoffs | **4. Six Theft Methods (inventory-loss-facts.md)** 1. Classic fake buys (full transaction, never existed) 2. Intermittent fake items (adding 1-3 items after customer leaves) 3. Personal/Goodwill donations (bringing own junk) 4. Physical theft",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-25T13:36:40.448Z",
+      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "queryHashes": [
+        "5914a007eae2"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "inventory-loss-facts.md",
+        "1-3",
+        "personal/goodwill",
+        "three",
+        "problem",
+        "classifications",
+        "stage",
+        "description"
       ]
     }
   }
