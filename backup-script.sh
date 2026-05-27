@@ -18,7 +18,8 @@ cd "$(dirname "$0")"
 git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${REPO}.git"
 
 # Stage all changes (git respects .gitignore, so .env stays out)
-git add -A
+# Exclude blair-memory submodule - it has its own repo
+git add -A -- ':!blair-memory'
 
 # Commit if there are changes
 if ! git diff-index --quiet HEAD; then
