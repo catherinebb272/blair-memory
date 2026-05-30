@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-25T13:36:40.448Z",
+  "updatedAt": "2026-05-29T23:32:20.877Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -443,22 +443,24 @@
       "endLine": 21,
       "source": "memory",
       "snippet": "# 2026-04-16 ## Today's Recap - Created new PC inventory reconciliation process doc: `Step by Step.md` - 5-step workflow: Upload Item Buy Detail → Upload Precount → Collect Store Scans → Review Missing Items → Generate Barcodes - Cleaned up old mini-cycle-count-app folder: - Deleted storyboard.md, framework, data files (Precount, Item Buy Detail, Shorts scan file, subset file) - Pushed shorts-barcodes-printable.pdf to GitHub - Deleted old React app code, node_modules, barcodes - Moved Step by Step.md to GitHub repo: catherinebb272/mini-cycle-count-app - Updated MEMORY.md with GitHub location for the app - Created How I Built It tutorial: Cron with Discord - Saved to GitHub: cathe",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T15:36:24.030Z",
-      "lastRecalledAt": "2026-05-16T02:18:15.934Z",
+      "lastRecalledAt": "2026-05-29T16:37:44.083Z",
       "queryHashes": [
         "a7a74d5c114a",
         "a1431f3061ba",
-        "1d7e16506eb5"
+        "1d7e16506eb5",
+        "f6454ddbeec7"
       ],
       "recallDays": [
         "2026-05-10",
         "2026-05-12",
-        "2026-05-16"
+        "2026-05-16",
+        "2026-05-29"
       ],
       "conceptTags": [
         "step.md",
@@ -709,18 +711,20 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "## How I Built It Tutorials - **Template location:** `documents/How-I-Built-Tutorials/index.html` (contains the HTML template) - **Existing tutorials:** - Creating Audio from Family Memoirs using Eleven Labs - Animated Avatar Project - **Format:** Teal header, sections for Project Scope, Tools Needed, Workflow, Prompts Used",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-12T00:24:53.236Z",
-      "lastRecalledAt": "2026-05-12T00:24:53.236Z",
+      "lastRecalledAt": "2026-05-29T23:32:20.877Z",
       "queryHashes": [
-        "a1431f3061ba"
+        "a1431f3061ba",
+        "8c104fb22cfe"
       ],
       "recallDays": [
-        "2026-05-12"
+        "2026-05-12",
+        "2026-05-29"
       ],
       "conceptTags": [
         "how",
@@ -1313,6 +1317,223 @@
         "classifications",
         "stage",
         "description"
+      ]
+    },
+    "memory:memory/2026-05-25.md:59:82": {
+      "key": "memory:memory/2026-05-25.md:59:82",
+      "path": "memory/2026-05-25.md",
+      "startLine": 59,
+      "endLine": 82,
+      "source": "memory",
+      "snippet": "- Still locked out of Etsy admin due to 2FA - Posted traffic update to #general channel (Erank graph showing downtrend) - Sent DM to Drew (@kaliodyme) saying update was posted - Tagged Drew in #general --- --- ## Composio Status Check (22:59 UTC) - Tried agent signup flow at `agents.composio.dev` — returned \"deployment not found\" (Vercel error) - Tried API key `ak_DvFKZiWcCtmvm3CWv6fi` directly — still getting DNS resolution failure for `api.composio.dev` - Catherine confirmed same issue on her personal Composio - **Conclusion:** Composio infrastructure is down; not a key or network issue on our end - Cannot use Composio tools until they resolve their side --- ## Action Items - [ ] Fi",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-29T16:37:44.083Z",
+      "lastRecalledAt": "2026-05-29T16:37:44.083Z",
+      "queryHashes": [
+        "f6454ddbeec7"
+      ],
+      "recallDays": [
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "network",
+        "agents.composio.dev",
+        "ak-dvfkziwcctmvm3cwv6fi",
+        "api.composio.dev",
+        "still",
+        "locked",
+        "out",
+        "etsy"
+      ]
+    },
+    "memory:memory/2026-05-25.md:1:35": {
+      "key": "memory:memory/2026-05-25.md:1:35",
+      "path": "memory/2026-05-25.md",
+      "startLine": 1,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "# May 25, 2026 ## Composio API Issues - Composio had a massive security breach on 5/23/26 - Previous API key was deleted by Composio - Tried using Catherine's new project API key: `ak_DvFKZiWcCtmvm3CWv6fi` - Updated the key in `.env` - CLI commands work locally but the container can't reach api.composio.dev (DNS/network block) - **Result:** Cannot use Composio tools (browser, image generation, etc.) from this environment until network issue is resolved ## Sober Birthday Greeting Cards - Etsy Listings - Created `documents/ana/sober-birthday-cards.csv` for Etsy bulk upload - 12 monthly cards (SBC-01 through SBC-12) - Title format: \"Sobriety Anniversary Card [Month] [Flower] - Downloadable",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-29T16:37:44.083Z",
+      "lastRecalledAt": "2026-05-29T16:37:44.083Z",
+      "queryHashes": [
+        "f6454ddbeec7"
+      ],
+      "recallDays": [
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "network",
+        "5/23/26",
+        "ak-dvfkziwcctmvm3cwv6fi",
+        "api.composio.dev",
+        "dns/network",
+        "sbc-01",
+        "sbc-12",
+        "may"
+      ]
+    },
+    "memory:memory/2026-05-25.md:28:70": {
+      "key": "memory:memory/2026-05-25.md:28:70",
+      "path": "memory/2026-05-25.md",
+      "startLine": 28,
+      "endLine": 70,
+      "source": "memory",
+      "snippet": "- \"mental health card\" dominates globally (high volume) - \"sobriety card\" is lowest - Feb 2026 had major spike for \"mental health card\" ### Erank Keyword Data - \"sobriety gift\": 2,560 searches/month (Etsy's top term) - \"sober gift\": 1,260 searches/month - \"mental health gift\": <20 searches (nearly invisible on Etsy!) - **Key insight:** Google and Etsy are opposite — Etsy buyers search \"sobriety\", not \"mental health\" ### Erank Top Listings - Viewed \"Mental Health Card\" and broader \"Mental Health\" listings - Modest revenue: $204-$869 over 500+ days (long-tail, low volume) - Humor/sarcastic cards perform better than serious ones - PaperPawsCo is a major player in this space ### Strategic Ins",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-29T16:37:44.083Z",
+      "lastRecalledAt": "2026-05-29T16:37:44.083Z",
+      "queryHashes": [
+        "f6454ddbeec7"
+      ],
+      "recallDays": [
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "searches/month",
+        "long-tail",
+        "humor/sarcastic",
+        "mental",
+        "health",
+        "card",
+        "dominates",
+        "globally"
+      ]
+    },
+    "memory:memory/2026-04-30.md:1:7": {
+      "key": "memory:memory/2026-04-30.md:1:7",
+      "path": "memory/2026-04-30.md",
+      "startLine": 1,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "# 2026-04-30 ## Session Notes - Context over 50% = problems in our setup, not cache metric - Strategy: Keep responses brief, restart proactively before hitting 50% - Rehab project: Removed cron email step, keep file housekeeping on-demand - Deleted all files in project rehab so Catherine can start fresh",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-29T23:32:20.877Z",
+      "lastRecalledAt": "2026-05-29T23:32:20.877Z",
+      "queryHashes": [
+        "8c104fb22cfe"
+      ],
+      "recallDays": [
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "on-demand",
+        "context",
+        "problems",
+        "setup",
+        "not",
+        "cache",
+        "metric",
+        "strategy"
+      ]
+    },
+    "memory:memory/2026-05-01.md:1:27": {
+      "key": "memory:memory/2026-05-01.md:1:27",
+      "path": "memory/2026-05-01.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# 2026-05-01 ## Session Notes - Ran probe_system test: file write, read, child execution, and state persistence all succeeded. - Confirmed container has required permissions for file operations. - Noted user instruction: when providing markdown files, explicitly say \"do not execute\" to have them saved only. - Ready to start a new session for the next task. ## Etsy Check‑in Project ## Project Rehab Summary - Encountered multiple interruptions: 2 error messages during initial run, then 6 additional errors while debugging. - Executed the full Project Rehab flow (Prep → Teach Behavior → API Consolidation → Tools Rebuild → Updating Tools). - Added Tool Awareness, Handling, and Reference entrie",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-29T23:32:20.877Z",
+      "lastRecalledAt": "2026-05-29T23:32:20.877Z",
+      "queryHashes": [
+        "8c104fb22cfe"
+      ],
+      "recallDays": [
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "probe-system",
+        "ran",
+        "test",
+        "write",
+        "read",
+        "child",
+        "execution",
+        "state"
+      ]
+    },
+    "memory:memory/2026-05-02.md:1:30": {
+      "key": "memory:memory/2026-05-02.md:1:30",
+      "path": "memory/2026-05-02.md",
+      "startLine": 1,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "# 2026-05-02 ## Session Notes ## Project Rehab - Description Project Rehab is a modular system designed to reduce apparent \"agent forgetfulness\" by enforcing disciplined organization of tools, skills, and files. Rather than treating memory issues as cognitive failures, this system treats them as **organizational failures** and corrects them through: 1. **Behavior modification** - modify startup instructions to create stricter rules for storage of tools and skills 2. **Structural repair** - consolidate existing tokens & keys in one .env file, move skills into files 3. **Future maintenance** The anticipated user is someone who has a new agent that has not been organized or developed any",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-29T23:32:20.877Z",
+      "lastRecalledAt": "2026-05-29T23:32:20.877Z",
+      "queryHashes": [
+        "8c104fb22cfe"
+      ],
+      "recallDays": [
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "project",
+        "rehab",
+        "description",
+        "modular",
+        "designed",
+        "reduce",
+        "apparent",
+        "forgetfulness"
+      ]
+    },
+    "memory:memory/2026-04-18.md:1:34": {
+      "key": "memory:memory/2026-04-18.md:1:34",
+      "path": "memory/2026-04-18.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# 2026-04-18 ## Today's Recap ### GitHub Actions Discord DM Project Catherine built a GitHub Actions workflow to send scheduled Discord DMs, replacing the unreliable container cron. The project: - **Repo:** plaid-fox-pinger (private) - **Workflow:** Fires at scheduled times via GitHub Actions - **Files:** send.js, package.json, .github/workflows/send.yml **Initial issue:** Cron used `0 18,20,22,0 * * *` which fires at midnight UTC = 7pm CT **previous day** — so 7pm reminder never fired correctly. **Fix provided:** Change to `0 18,20,22,12 * * *` to get 1pm, 3pm, 5pm, 7pm CT (all correct during DST). ### Tutorial Created - Created \"How I Built This - GitHub Actions Scheduled Discord D",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-29T23:32:20.877Z",
+      "lastRecalledAt": "2026-05-29T23:32:20.877Z",
+      "queryHashes": [
+        "8c104fb22cfe"
+      ],
+      "recallDays": [
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "plaid-fox-pinger",
+        "send.js",
+        "package.json",
+        "github/workflows/send.yml",
+        "today's",
+        "recap",
+        "github",
+        "actions"
       ]
     }
   }

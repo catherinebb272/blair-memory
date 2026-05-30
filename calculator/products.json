@@ -1,0 +1,60 @@
+{
+  "products": {
+    "greeting-card-5x7": {
+      "name": "5x7 Greeting Card",
+      "category": "card",
+      "description": "Standard 5x7 greeting card with envelope",
+      "inputs": {
+        "paperCostPerSheet": {"label": "Paper cost per sheet", "default": 0.2, "unit": "$"},
+        "sheetsPerUnit": {"label": "Sheets per card", "default": 1, "unit": "sheets"},
+        "coverage": {"label": "Ink coverage %", "default": 15, "unit": "%"},
+        "laborMinutes": {"label": "Production labor (min per unit)", "default": 2, "unit": "min"},
+        "packagingCost": {"label": "Packaging (cello bag)", "default": 0.1, "unit": "$"},
+        "envelopeCost": {"label": "Envelope cost", "default": 0.08, "unit": "$"}
+      }
+    },
+    "greeting-card-4x6": {
+      "name": "4x6 Greeting Card",
+      "category": "card",
+      "description": "Standard 4x6 greeting card with envelope",
+      "inputs": {
+        "paperCostPerSheet": {"label": "Paper cost per sheet", "default": 0.15, "unit": "$"},
+        "sheetsPerUnit": {"label": "Sheets per card", "default": 1, "unit": "sheets"},
+        "coverage": {"label": "Ink coverage %", "default": 15, "unit": "%"},
+        "laborMinutes": {"label": "Production labor (min per unit)", "default": 2, "unit": "min"},
+        "packagingCost": {"label": "Packaging (cello bag)", "default": 0.1, "unit": "$"},
+        "envelopeCost": {"label": "Envelope cost", "default": 0.06, "unit": "$"}
+      }
+    },
+    "sticker-sheet-4x6": {
+      "name": "4x6 Sticker Sheet",
+      "category": "sticker",
+      "description": "Sticker sheet printed on color laser, cut with Cricut",
+      "inputs": {
+        "paperCostPerSheet": {"label": "Sticker paper cost per sheet", "default": 0.25, "unit": "$"},
+        "stickersPerSheet": {"label": "Stickers per sheet", "default": 8, "unit": "stickers"},
+        "laborMinutesPerSheet": {"label": "Labor min per sheet (print + cut)", "default": 5, "unit": "min"},
+        "laminationCost": {"label": "Lamination cost per sheet", "default": 0.15, "unit": "$"},
+        "packagingCost": {"label": "Packaging per sticker sheet", "default": 0.05, "unit": "$"}
+      }
+    },
+    "individual-sticker-2": {
+      "name": "2\" Individual Sticker",
+      "category": "sticker",
+      "description": "Single sticker printed on color laser, cut with Cricut",
+      "inputs": {
+        "paperCostPerSheet": {"label": "Sticker paper cost per sheet", "default": 0.25, "unit": "$"},
+        "stickersPerSheet": {"label": "Stickers per sheet", "default": 4, "unit": "stickers"},
+        "laborMinutesPerSheet": {"label": "Labor min per sheet (print + cut)", "default": 3, "unit": "min"},
+        "laminationCost": {"label": "Lamination cost per sheet", "default": 0.15, "unit": "$"},
+        "packagingCost": {"label": "Packaging per sticker", "default": 0.02, "unit": "$"}
+      }
+    }
+  },
+  "shared": {
+    "inkCostPerPage": {"label": "Ink cost per full-coverage page", "default": 0.08, "unit": "$"},
+    "printerCost": {"label": "Printer cost", "default": 400, "unit": "$"},
+    "printerLifetimePages": {"label": "Printer lifetime pages", "default": 50000, "unit": "pages"},
+    "hourlyLaborRate": {"label": "Hourly labor rate", "default": 15, "unit": "$/hr"}
+  }
+}

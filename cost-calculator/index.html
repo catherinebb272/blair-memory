@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANA Cost Calculator</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 { color: #008080; margin-bottom: 20px; }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    label { display: block; margin-bottom: 5px; font-weight: 600; color: #333; }
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .row { display: flex; gap: 10px; }
+    .row > div { flex: 1; }
+    button {
+      background: #008080;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover { background: #006666; }
+    .result {
+      background: #e0f2f2;
+      border: 2px solid #008080;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .result-row:last-child {
+      border-bottom: none;
+      font-weight: bold;
+      font-size: 18px;
+      color: #008080;
+    }
+    .coverage-note {
+      font-size: 12px;
+      color: #666;
+      margin-top: -10px;
+      margin-bottom: 15px;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1>🪙 ANA Cost Calculator</h1>
+  
+  <div class="card">
+    <label for="product">Product</label>
+    <select id="product"></select>
+    
+    <div id="coverageGroup">
+      <label for="coverage">Print Coverage (%)</label>
+      <input type="number" id="coverage" value="50" min="1" max="100">
+      <div class="coverage-note">Estimated % of card area that gets printed on</div>
+    </div>
+    
+    <div class="row">
+      <div>
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" value="25" min="1">
+      </div>
+      <div>
+        <label for="laborRate">Labor Rate ($/hr)</label>
+        <input type="number" id="laborRate" value="15" min="0">
+      </div>
+    </div>
+    
+    <label for="paperType">Paper Type</label>
+    <select id="paperType"></select>
+    
+    <button onclick="calculate()">Calculate Cost</button>
+  </div>
+  
+  <div class="result hidden" id="result">
+    <div class="result-row"><span>Paper Cost</span><span id="paperCost">$0.00</span></div>
+    <div class="result-row"><span>Printing Cost</span><span id="printCost">$0.00</span></div>
+    <div class="result-row"><span>Labor Cost</span><span id="laborCost">$0.00</span></div>
+    <div class="result-row"><span>Packaging Cost</span><span id="packagingCost">$0.00</span></div>
+    <div class="result-row"><span>Lamination</span><span id="laminationCost">$0.00</span></div>
+    <div class="result-row"><span>Total Cost</span><span id="totalCost">$0.00</span></div>
+    <div class="result-row"><span>Cost Per Unit</span><span id="costPerUnit">$0.00</span></div>
+  </div>
+
+  <script>
+    let config = null;
+    
+    async function loadConfig() {
+      const response = await fetch('parameters.json');
+      config = await response.json();
+      populateOptions();
+    }
+    
+    function populateOptions() {
+      const productSelect = document.getElementById('product');
+      const paperSelect = document.getElementById('paperType');
+      
+      // Products
+      for (const [key, product] of Object.entries(config.products)) {
+        const opt = document.createElement('option');
+        opt.value = key;
+        opt.textContent = product.name;
+        productSelect.appendChild(opt);
+      }
+      
+      // Paper options
+      for (const paper of config.materials.paper.commonOptions) {
+        const opt = document.createElement('option');
+        opt.value = paper.cost;
+        opt.textContent = `${paper.name} ($${paper.cost.toFixed(2)}/sheet)`;
+        paperSelect.appendChild(opt);
+      }
+      
+      // Set defaults
+      document.getElementById('laborRate').value = config.laborRate.default;
+      
+      // Show/hide coverage based on product
+      productSelect.addEventListener('change', updateCoverageVisibility);
+      updateCoverageVisibility();
+    }
+    
+    function updateCoverageVisibility() {
+      const productKey = document.getElementById('product').value;
+      const product = config.products[productKey];
+      const coverageGroup = document.getElementById('coverageGroup');
+      
+      if (product.coverageInput) {
+        coverageGroup.classList.remove('hidden');
+      } else {
+        coverageGroup.classList.add('hidden');
+      }
+    }
+    
+    function calculate() {
+      const productKey = document.getElementById('product').value;
+      const product = config.products[productKey];
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const laborRate = parseFloat(document.getElementById('laborRate').value);
+      const paperCostPerSheet = parseFloat(document.getElementById('paperType').value);
+      const coverage = product.coverageInput ? parseInt(document.getElementById('coverage').value) / 100 : 1;
+      
+      // Calculate sheets needed
+      const sheetsNeeded = Math.ceil(quantity / product.yieldPerPage);
+      
+      // Paper cost
+      const paperCost = sheetsNeeded * paperCostPerSheet;
+      
+      // Printing cost (toner per page * sheets)
+      const printCost = sheetsNeeded * config.printer.colorLaser.tonerCostPerPage;
+      
+      // Labor cost
+      const laborHours = config.labor[productKey].defaultHours * quantity;
+      const laborCost = laborHours * laborRate;
+      
+      // Packaging (cello bag + backing card + tape per unit)
+      const packagingPerUnit = config.materials.packaging.celloBag.defaultCost + 
+                               config.materials.packaging.backingCard.defaultCost +
+                               config.materials.packaging.tape.defaultCost;
+      const packagingCost = quantity * packagingPerUnit;
+      
+      // Lamination (if applicable)
+      let laminationCost = 0;
+      if (product.lamination) {
+        const laminationSheets = Math.ceil(quantity / 4); // 4 stickers per 8.5x11 sheet
+        laminationCost = laminationSheets * config.materials.lamination.labelSheet.defaultCost;
+      }
+      
+      // Totals
+      const totalCost = paperCost + printCost + laborCost + packagingCost + laminationCost;
+      const costPerUnit = totalCost / quantity;
+      
+      // Display
+      document.getElementById('paperCost').textContent = `$${paperCost.toFixed(2)}`;
+      document.getElementById('printCost').textContent = `$${printCost.toFixed(2)}`;
+      document.getElementById('laborCost').textContent = `$${laborCost.toFixed(2)}`;
+      document.getElementById('packagingCost').textContent = `$${packagingCost.toFixed(2)}`;
+      document.getElementById('laminationCost').textContent = `$${laminationCost.toFixed(2)}`;
+      document.getElementById('totalCost').textContent = `$${totalCost.toFixed(2)}`;
+      document.getElementById('costPerUnit').textContent = `$${costPerUnit.toFixed(2)}`;
+      
+      document.getElementById('result').classList.remove('hidden');
+    }
+    
+    loadConfig();
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-05-29",
+  "products": {
+    "greetingCard_5x7": {
+      "name": "Greeting Card 5x7",
+      "dimensions": {
+        "card": {"width": 5, "height": 7, "unit": "in"},
+        "envelope": {"width": 5.25, "height": 7.25, "unit": "in"},
+        "paperSize": {"width": 8.5, "height": 11, "unit": "in"}
+      },
+      "yieldPerPage": 1,
+      "defaultCoverage": 50,
+      "coverageInput": true
+    },
+    "greetingCard_4x6": {
+      "name": "Greeting Card 4x6",
+      "dimensions": {
+        "card": {"width": 4, "height": 6, "unit": "in"},
+        "envelope": {"width": 4.25, "height": 6.25, "unit": "in"},
+        "paperSize": {"width": 8.5, "height": 11, "unit": "in"}
+      },
+      "yieldPerPage": 4,
+      "defaultCoverage": 50,
+      "coverageInput": true
+    },
+    "stickerSheet_4x6": {
+      "name": "Sticker Sheet 4x6 (2/page)",
+      "dimensions": {
+        "sticker": {"width": 4, "height": 6, "unit": "in"},
+        "paperSize": {"width": 8.5, "height": 11, "unit": "in"}
+      },
+      "yieldPerPage": 2,
+      "coverageInput": false,
+      "coverageFixed": 100,
+      "cricutCutting": false
+    },
+    "stickerIndividual_2in": {
+      "name": "Individual Sticker 2\"",
+      "dimensions": {
+        "sticker": {"width": 2, "height": 2, "unit": "in"},
+        "paperSize": {"width": 8.5, "height": 11, "unit": "in"}
+      },
+      "yieldPerPage": 16,
+      "coverageInput": false,
+      "coverageFixed": 100,
+      "cricutCutting": true,
+      "lamination": true
+    }
+  },
+  "materials": {
+    "paper": {
+      "defaultCost": 0.25,
+      "unit": "per sheet",
+      "lastUsed": null,
+      "commonOptions": [
+        {"name": "Standard Cardstock (80lb)", "cost": 0.15},
+        {"name": "Premium Cardstock (110lb)", "cost": 0.25},
+        {"name": "Glossy Photo Paper", "cost": 0.30},
+        {"name": "Matte Specialty", "cost": 0.35}
+      ]
+    },
+    "packaging": {
+      "celloBag": {"defaultCost": 0.12, "unit": "each"},
+      "backingCard": {"defaultCost": 0.05, "unit": "each"},
+      "tape": {"defaultCost": 0.02, "unit": "per unit"}
+    },
+    "lamination": {
+      "labelSheet": {"defaultCost": 0.25, "unit": "per 8.5x11 sheet"},
+      "appliesTo": ["stickerIndividual_2in"]
+    }
+  },
+  "labor": {
+    "greetingCard_5x7": {"defaultHours": 0.05, "unit": "hours per card"},
+    "greetingCard_4x6": {"defaultHours": 0.04, "unit": "hours per card"},
+    "stickerSheet_4x6": {"defaultHours": 0.03, "unit": "hours per sheet"},
+    "stickerIndividual_2in": {"defaultHours": 0.02, "unit": "hours per sticker"}
+  },
+  "printer": {
+    "colorLaser": {
+      "tonerCostPerPage": 0.08,
+      "unit": "per printed page",
+      "notes": "Estimated color laser cost per page (toner + wear)"
+    }
+  },
+  "laborRate": {
+    "default": 15,
+    "unit": "per hour"
+  },
+  "savedDesigns": {}
+}
