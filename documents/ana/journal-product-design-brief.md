@@ -39,7 +39,7 @@
 | Front matter | ~10 | Set the tone, introduce the journal, capture "why you started" |
 | Daily-style prompted pages | ~90 | The heart of the book — date-in, prompt, write |
 | Recap pages (monthly/quarterly) | ~6 | Periodic gentle check-ins, optional |
-| Back matter / tools | ~10 | Reference, resources, "letter to future self," blank overflow |
+| Back matter / tools | ~10 | Reference, resources, "letter to future self," blank overflow, full-color ANA coins page (see below) |
 | **Total** | **~116** | Fits Lulu 6×9 coil spec |
 
 The 90 daily pages *cover* 90 days if someone journals daily, but it's not required. A user who journals twice a week will still be in the daily section for over a year. A user who journals sporadically will move through the book over multiple years.
@@ -195,13 +195,32 @@ Brand voice: **optimistic recovery, not somber plodding through recovery.** The 
 
 ---
 
-## Endpiece (hold that thought)
+## Recap Pages — "Looking back" (every 7 entries)
 
-The actual coin objects (not imagery) might appear as a single endpiece — placeholder for a coin-sized recess, a "place your coin here" inscription, or a closure page. **Not committed in v2.** Catherine to decide after seeing v1 layout.
+**Decision (2026-06-03):** Recap pages appear every 7 daily entries. **Not** called "weekly" — the journal has no weeks. Called **"Looking back"** (or a final-name TBD).
 
-If yes → endpiece is a foil-stamped coin-sized circle on the inside back cover with: *"This journal is complete. Place your token here."* Optional, not core to the product.
+Why every 7, not every 10 or every 15:
+- 90 daily pages / 7 = ~12–13 recaps. Right rhythm for the book.
+- Plays into Catherine's marketing insight: nothing is "wasted" by the passing of time. If the user writes 3 entries one week, nothing for 2 months, then 4 in a weekend, a "looking back" page still fits — they're looking back at 7 things they wrote, regardless of the calendar.
+- The word "weekly" would be dishonest in a self-paced journal. "Every 7 entries" is honest and matches the math.
 
-If no → back cover stays clean. No coin reference at all.
+**Layout option (worth considering):** Recap pages rotate through the iconography — a "looking back" page might feature a phoenix line-art illustration with a motif-tied prompt ("What rose again in this stretch?") or a waterfall ("What moved around an obstacle?"). This integrates the iconography into the recap structure, not just the daily pages.
+
+## Back-matter coin page (the "marketing endpiece")
+
+**Decision (2026-06-03):** YES. One full-color back-matter page showing the 11 ANA coins (current range), with text framing this as *one application* of the journal, not the only one. For people specifically on a sobriety recovery path, the page lets them know the journal exists in the same brand world as the coins.
+
+**Working text draft:**
+
+> *If you're on a recovery journey, you may recognize these tokens. The 11 ANA coins mark sobriety milestones — 2 months, 3 months, 4 months, and so on. This journal doesn't track your timeline. It just gives you space to write, on the days you choose to. Learn more at apartnotalone.com.*
+
+(Final copy to be written, but framing is: optional/adjacent, not "this is a sobriety journal.")
+
+**Layout:** Full-color coin grid (11 images), light/airy white space, small ANA logo (two fish), one paragraph of text, URL.
+
+## ANA Logo (Two-Fish Symbol)
+
+**Confirmed (2026-06-03):** The ANA logo is two stylized fish, koi-like in form. Can be used for subtle branding throughout — small ornaments at section dividers, back cover mark, watermark elements, the back-matter coin page. Not large or central. The journal is gift-able and brand-adjacent, not brand-front.
 
 ---
 
@@ -211,18 +230,23 @@ If no → back cover stays clean. No coin reference at all.
 2. **Pick the cover concept** (1, 2, or 3 above, or sketch a fourth)
 3. **Iconography library** — confirm the icon list above maps to the actual coin designs Barbara has. Add any coins I missed.
 4. **Line-art rendering** — who draws the icons? Barbara redraws in line-art, or we commission, or AI-generate (and if AI, with what style reference)?
-5. **Endpiece decision** — coin recess yes/no, and if yes, who provides the stamp/die
+5. **Back-matter coin page layout** — provide 11 coin JPGs at print resolution, and sign off on the working text draft
 6. **Final copy approval** — sample prompts will go through ChatGPT for layout mockups, but Catherine approves the copy voice and content
 
 ---
 
 ## Open Questions for Catherine
 
-1. **Endpiece decision** — coin recess yes/no? (See above.)
-2. **Title for the journal** — `a journal.` is a placeholder. Options: `a journal.`, `apart, not alone.`, `still here.`, `one day at a time.` (avoid), or something else. This drives the cover.
-3. **Daily page prompt count** — 90 covers 90 days if used daily. Is that the right number? More? Fewer?
-4. **Recap page cadence** — every 15 daily pages = ~6 recaps in the book. Right? Or fewer (every 30 = ~3)?
-5. **Sub-branding** — does the journal say "Apart Not Alone" anywhere on the cover/interior, or is it a brand-adjacent product with no explicit ANA reference? My instinct: small ANA logo on back cover, no front-cover reference. Standalone gift-able product.
+1. **Title for the journal** — placeholder is `a journal.` Working options below. This drives the cover.
+   - **`Still Here.`** — present-tense, defiant, "I made it through another stretch." Works for both audiences. Distinctive. (My pick.)
+   - **`A Field Journal.`** — borrows from nature/scientific notebook feel, low-key, doesn't claim recovery or mental health explicitly. Pairs well with the iconography.
+   - **`On the Way.`** — implies movement without destination.
+   - **`Carry On.`** — two meanings: "carry this with you" and "keep going."
+   - **`Quiet Pages.`** — emphasizes the calm, secular tone.
+   - **`My Journey`** — solid, generic, safe. Most searchable on Etsy.
+2. **Daily page prompt count** — 90 covers 90 days if used daily. Right number? More? Fewer?
+3. **Recap motif rotation** — should the "looking back" pages rotate through the coin iconography (e.g., phoenix prompt for one, waterfall for another), or stay text-only and let the daily pages own the iconography? My instinct: rotate, it makes the recaps feel intentional rather than mechanical.
+4. **Sub-branding** — confirmed small ANA logo (two fish) throughout. Question is just *how small* and *where*. My instinct: back cover only (subtle), back-matter coin page (small), section dividers (occasional, ornament-grade). Nothing on the front cover.
 
 ---
 
