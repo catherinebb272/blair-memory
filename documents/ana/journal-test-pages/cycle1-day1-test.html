@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Still Here — Daily Page Test (Cycle 1, Day 1 of 7)</title>
+<style>
+  :root {
+    --paper:        #f5efe8;  /* Soft Linen */
+    --ocean-indigo: #003b88;
+    --medium-blue:  #4d7bcc;
+    --leaf-green:   #37c86f;
+    --coral:        #ff5d4c;
+    --ink:          #1f2937;
+    --ink-soft:     #5a6473;
+    --rule:         #c9bfae;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #d9d4c7;
+    font-family: 'Georgia', 'Iowan Old Style', 'Source Serif Pro', serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .stage {
+    min-height: 100vh;
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 6" x 9" page at 72 dpi = 432 x 648 px */
+  .page {
+    position: relative;
+    width: 432px;
+    height: 648px;
+    background: var(--paper);
+    padding: 36px 36px 28px 36px;     /* ~0.5" margins, Lulu coil-safe on spine */
+    box-shadow:
+      0 2px 4px rgba(0,0,0,0.08),
+      0 12px 32px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ============ TOP BLOCK (10% cap) ============ */
+  .top-block {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    column-gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  .top-left .cycle-label {
+    font-family: 'Helvetica Neue', 'Inter', system-ui, sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+
+  .top-left .thoughts {
+    font-family: 'Helvetica Neue', 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--leaf-green);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .top-left .date-line {
+    font-family: 'Helvetica Neue', 'Inter', system-ui, sans-serif;
+    font-size: 10px;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .date-line .date-label { white-space: nowrap; }
+  .date-line .date-underline {
+    flex: 1;
+    border-bottom: 0.5px solid var(--ink-soft);
+    height: 1em;
+  }
+
+  /* cycle icon, top-right */
+  .cycle-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cycle-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* ============ GUIDED PROMPTS (Variant A) ============ */
+  .prompts {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .prompt {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .prompt-text {
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .prompt-text em {
+    font-style: italic;
+    color: var(--ocean-indigo);
+    font-weight: 500;
+  }
+  .prompt-lines {
+    border-bottom: 0.5px solid var(--rule);
+    height: 18px;
+  }
+  .prompt-lines.three { height: 56px; }
+  .prompt-lines.two   { height: 38px; }
+
+  /* ============ FREE WRITE (dot grid) ============ */
+  .free-write {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .free-write .cue {
+    font-family: 'Helvetica Neue', 'Inter', system-ui, sans-serif;
+    font-size: 9px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+  .dot-grid {
+    flex: 1;
+    background-image: radial-gradient(circle, var(--rule) 0.6px, transparent 0.6px);
+    background-size: 14px 14px;
+    background-position: 0 0;
+    border-radius: 2px;
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .footer img {
+    height: 14px;
+    width: auto;
+    opacity: 0.55;
+  }
+
+  /* Page number bottom corner */
+  .page-num {
+    position: absolute;
+    bottom: 14px;
+    right: 36px;
+    font-family: 'Helvetica Neue', 'Inter', system-ui, sans-serif;
+    font-size: 8px;
+    color: var(--ink-soft);
+    opacity: 0.6;
+  }
+
+  /* Print preview label, only in HTML preview */
+  .preview-label {
+    font-family: 'Helvetica Neue', 'Inter', system-ui, sans-serif;
+    font-size: 11px;
+    color: #5a6473;
+    text-align: center;
+    margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+
+    <div>
+      <div class="page">
+
+        <!-- TOP BLOCK -->
+        <div class="top-block">
+          <div class="top-left">
+            <div class="cycle-label">Cycle 1 · 1 of 7</div>
+            <div class="thoughts">Thoughts for the day</div>
+            <div class="date-line">
+              <span class="date-label">Date:</span>
+              <span class="date-underline"></span>
+            </div>
+          </div>
+          <div class="cycle-icon">
+            <!-- Cycle 1 icon: Torii gate (line vector) -->
+            <img src="assets/torii-linevector.png" alt="Torii gate icon" />
+          </div>
+        </div>
+
+        <!-- GUIDED PROMPTS — Variant A: 2 short lined prompts -->
+        <div class="prompts">
+          <div class="prompt">
+            <div class="prompt-text">
+              How would you rate today? Take a moment to think about your mood, energy, sleep, or any urges that came up. <em>1–5, then say what made it that.</em>
+            </div>
+            <div class="prompt-lines three"></div>
+          </div>
+          <div class="prompt">
+            <div class="prompt-text">
+              What's one thing you noticed today that you might forget in a week if you don't write it down?
+            </div>
+            <div class="prompt-lines two"></div>
+          </div>
+        </div>
+
+        <!-- FREE WRITE — dot grid -->
+        <div class="free-write">
+          <div class="cue">Free write — use for written thoughts, or other creative expression.</div>
+          <div class="dot-grid"></div>
+        </div>
+
+        <!-- FOOTER + PAGE NUM -->
+        <div class="footer">
+          <img src="assets/logo-fish-linevector.png" alt="Apart Not Alone" />
+        </div>
+        <div class="page-num">3</div>
+
+      </div>
+      <div class="preview-label">Still Here · Daily Page · Cycle 1 Day 1 (Variant A) · 6×9 in</div>
+    </div>
+
+  </div>
+</body>
+</html>
