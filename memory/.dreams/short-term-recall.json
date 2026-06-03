@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-29T23:32:20.877Z",
+  "updatedAt": "2026-06-02T17:00:44.614Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -104,22 +104,24 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# Memory Log - 2026-03-12 ## Summary Major connectivity day - established multiple new integrations and backed up all critical files. ## Activities ### Discord Connection - Successfully connected to Discord via CB BlairAI server - User can now communicate via Discord DM - Bot: BlairANA (blairana@agentmail.to) ### GitHub Integration - Confirmed GitHub token works - Uploaded country club research PDF to agent-output folder - Created comprehensive backup of all memory files ### Email Setup (AgentMail) - Configured AgentMail service - Email address: blairana@agentmail.to - Successfully tested sending to catherine1@bellbracken.com - Drew's email added for ANA reports: Drew@bellbracken.com #",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-05-11T15:35:51.351Z",
+      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
       "queryHashes": [
         "626666369489",
         "e9db6d6c9af5",
-        "c49bc3dfde3e"
+        "c49bc3dfde3e",
+        "b8dfdc61945a"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-06-02"
       ],
       "conceptTags": [
         "backup",
@@ -1006,24 +1008,26 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# 2026-05-13 — Etsy Optimization Deep Dive ## Session Summary ### What We Did **1. Etsy Check-In (Wed)** - No new orders, messages, or reviews - Posted update to #general and DM'd Drew — enjoy the breathing room **2. Compiled 30-Day Stats** - Created `documents/ana/etsy-stats-60-day.md` - Storewide: 607 visits (-13% YoY), 32 orders, 5.3% conversion, $672 revenue - Added all 10 product rows with visits, orders, conversion rates **3. Conversion Analysis** - Compared lifetime (Mar) vs 30-day (May) conversion - Key finding: New customer acquisition broken (Month 1-6 at 0% or near-zero) - Repeat customers thriving (2-3 Year up significantly) **4. Competitor Research: TheAchievemint** - Pull",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T02:32:14.988Z",
-      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
       "queryHashes": [
         "29fdb6f4553f",
         "b4858c274d60",
         "8dc4267f1660",
         "0c1ca8ff538b",
         "9907211e386a",
-        "5914a007eae2"
+        "5914a007eae2",
+        "b8dfdc61945a"
       ],
       "recallDays": [
         "2026-05-14",
-        "2026-05-25"
+        "2026-05-25",
+        "2026-06-02"
       ],
       "conceptTags": [
         "check-in",
@@ -1043,20 +1047,22 @@
       "endLine": 80,
       "source": "memory",
       "snippet": "- Instagram started (paused), Pinterest started - YTD conversion is 4.2% — lower than lifetime 5% - Hypothesis: Changes may have boosted traffic but hurt conversion **6. Description Comparison** - TheAchievemint: Flowing prose, emotional storytelling, quotes - ANA: Scannable bullets, features-focused, \"what's in box\" - Trade-off: Mobile-friendly vs emotional resonance **7. What Can/Cannot Change** - CANNOT: Months on front (design choice), extended milestones, new photography - CAN: Titles, descriptions, AI-generated lifestyle videos, related products --- ## Action Items - [ ] Test shorter titles on top performers (1 Year Koi, 6 Month Koi) - [ ] Consider richer descriptions on key lis",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T14:03:44.075Z",
-      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
+      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
       "queryHashes": [
         "b4858c274d60",
         "8dc4267f1660",
-        "0c1ca8ff538b"
+        "0c1ca8ff538b",
+        "b8dfdc61945a"
       ],
       "recallDays": [
-        "2026-05-14"
+        "2026-05-14",
+        "2026-06-02"
       ],
       "conceptTags": [
         "4.2",
@@ -1232,19 +1238,21 @@
       "endLine": 76,
       "source": "memory",
       "snippet": "- All-in-one: keyword research, product research, shop operations - Marketing & automation (email, Pinterest) - 800K+ users ### EverBee - Hobby (Free), Growth ($19.99/mo), Business ($69/mo) - Keyword Score (built-in ranking metric) - Product analytics with conversion data - Trend tracking up to 24 months --- ## Created Research Document - Created `documents/ana/etsy-seller-tools-comparison.md` with full comparison of both design tools and keyword tools - Initially pushed to blair-memory repo, then moved to blair-documents (ANA folder) per user's request that blair-memory is only for memory backups - File location: `catherinebb272/blair-documents/documents/ana/etsy-seller-tools-comparison",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:35:58.021Z",
-      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
       "queryHashes": [
         "9907211e386a",
-        "5914a007eae2"
+        "5914a007eae2",
+        "b8dfdc61945a"
       ],
       "recallDays": [
-        "2026-05-25"
+        "2026-05-25",
+        "2026-06-02"
       ],
       "conceptTags": [
         "backup",
@@ -1357,18 +1365,20 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# May 25, 2026 ## Composio API Issues - Composio had a massive security breach on 5/23/26 - Previous API key was deleted by Composio - Tried using Catherine's new project API key: `ak_DvFKZiWcCtmvm3CWv6fi` - Updated the key in `.env` - CLI commands work locally but the container can't reach api.composio.dev (DNS/network block) - **Result:** Cannot use Composio tools (browser, image generation, etc.) from this environment until network issue is resolved ## Sober Birthday Greeting Cards - Etsy Listings - Created `documents/ana/sober-birthday-cards.csv` for Etsy bulk upload - 12 monthly cards (SBC-01 through SBC-12) - Title format: \"Sobriety Anniversary Card [Month] [Flower] - Downloadable",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T16:37:44.083Z",
-      "lastRecalledAt": "2026-05-29T16:37:44.083Z",
+      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
       "queryHashes": [
-        "f6454ddbeec7"
+        "f6454ddbeec7",
+        "b8dfdc61945a"
       ],
       "recallDays": [
-        "2026-05-29"
+        "2026-05-29",
+        "2026-06-02"
       ],
       "conceptTags": [
         "network",

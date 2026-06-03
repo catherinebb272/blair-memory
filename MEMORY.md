@@ -22,6 +22,20 @@
 
 Drew is a recovering alcoholic who experienced sudden liver failure and needed a transplant. During recovery, they searched for meaningful ways to mark sobriety milestones but were dissatisfied with what they found on the market. This gap led to the creation of Apart Not Alone. The experience also ignited a passion for the transplant community. This origin story is woven into their Etsy bio and a pinned Instagram post.
 
+### Journal Product Line (active as of 2026-06-02)
+
+* **Print partner:** Lulu (Morrisville, NC — same state as Catherine)
+* **Spec locked:** 6×9 coil-bound, 120 pages, 60lb uncoated interior, matte cover, ~$11.66 print cost
+* **Three-SKU strategy (Option C):**
+  1. Digital Fillable PDF — $7.99 (iPad/GoodNotes, hyperlinked TOC, form fields)
+  2. Print-Ready Letter PDF — $9.99 (8.5×11, home-printer friendly, 3-hole-punch-safe)
+  3. Lulu Print — $19.99 retail / $24.99 Etsy (manual order forwarding, fine at <30 orders/mo)
+* **Why 2 PDFs:** fillable form fields fight printable layout. iPad buyer ≠ print buyer. Split them.
+* **Differentiator:** most Etsy sobriety journals don't bother with iPad fillable. Real moat.
+* **PDF design rule:** PDFs must look distinct from Lulu version — different fonts/layouts, not "degraded book"
+* **Scope expansion parked for v2:** mental health / anxiety / emotional sobriety. Google search trends show it's a growing category. Don't block v1 launch.
+* **Full brief:** `documents/ana/journal-product-design-brief.md`
+
 ### Plato's Closet (PC)
 
 * **Business:** Used clothing franchise

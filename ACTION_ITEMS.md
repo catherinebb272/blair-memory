@@ -1,6 +1,6 @@
 # Action Items
 
-> Updated: 2026-03-02
+> Updated: 2026-06-02
 > Format: [ ] = open, [x] = complete, [~] = in progress
 
 ---
@@ -108,6 +108,37 @@ Items stay active until user marks them complete.
 - How to sign up
 - How to use the Heyron connection link
 - How to test the connection
+
+---
+
+## 📓 ANA Journal Product Line (Priority: HIGH — Active)
+
+**Target:** Launch digital + print journal SKUs (sobriety, year one)
+**Reference:** `documents/ana/journal-product-design-brief.md`
+
+### Print (Lulu)
+- [ ] **Order 1 Lulu proof copy** — 6×9 coil, 120pp, 60lb uncoated, matte cover ($11.66)
+- [ ] **Barbara QA the proof** — color, alignment, page order, coil alignment
+- [ ] **Decide 6×9 vs 7×10** after seeing proof in hand (mockup both)
+- [ ] **Set up Lulu Bookstore / Lulu Direct** for print SKU
+- [ ] **Etsy listing for print SKU** — $24.99 retail, manual order forwarding to Lulu
+- [ ] **Confirm full spec** with Barbara: text paper stock separately from cover stock in Lulu's quote line-by-line
+
+### Digital PDFs (two SKUs)
+- [ ] **Build Digital Fillable PDF** ($7.99) — iPad/GoodNotes/Notability, hyperlinked TOC, form fields per prompt
+- [ ] **Build Print-Ready Letter PDF** ($9.99) — 8.5×11, no fillables, bleed-safe, 3-hole-punch-safe margins
+- [ ] **Last page of print PDF** — single-line Lulu pointer, nothing more
+- [ ] **PDFs must look distinct from Lulu print version** — different fonts/layouts, not "degraded book"
+- [ ] **Etsy listings for both PDFs**
+
+### Design
+- [ ] Catherine approves the 4 ChatGPT prompts (daily, weekly, front matter, 1mo milestone)
+- [ ] Catherine provides: 1-month coin photo, ANA logo (two-fish-in-circle line drawing)
+- [ ] Barbara picks the 4 stand-in icons for 7/8/10/11 (suggested: anchor, river bend, tree, firefly)
+- [ ] Order 1 proof copy from Lulu before any listing goes live
+
+### Parked for v2 (do not block v1)
+- [~] **Scope expansion: mental health / anxiety / emotional sobriety** — page style retool for both spaces. Daily/weekly prompts need a second-voice pass. Milestone pages stay sobriety-anchored (moat). Front matter + tools section retunable for both audiences. Trending in Google search.
 
 ---
 
