@@ -32,17 +32,17 @@
 
 **The user writes the date on every page. There is no calendar, no day counter, no week number.** This is the central design rule. Every page should work whether the user opens the journal daily, weekly, monthly, or three times a year.
 
-**Total: 100–120 pages.**
+**Total: ~116 pages (fits Lulu 6×9 coil spec, sits in 100–120 target).**
 
 | Section | Pages | Purpose |
 |---|---|---|
 | Front matter | ~10 | Set the tone, introduce the journal, capture "why you started" |
-| Daily-style prompted pages | ~90 | The heart of the book — date-in, prompt, write |
-| Recap pages (monthly/quarterly) | ~6 | Periodic gentle check-ins, optional |
-| Back matter / tools | ~10 | Reference, resources, "letter to future self," blank overflow, full-color ANA coins page (see below) |
-| **Total** | **~116** | Fits Lulu 6×9 coil spec |
+| Daily-style prompted pages | ~72 | The heart of the book — date-in, prompt, write. Includes ~12 image-led single pages (½-page image, ½-page prompt) |
+| "Looking back" recap spreads | ~24 | 12 two-page spreads (one per 7-entry cycle) — full-page image + prompted reflection |
+| Back matter / tools | ~10 | Reference, resources, "letter to future self," blank overflow, full-color ANA coins page |
+| **Total** | **~116** | |
 
-The 90 daily pages *cover* 90 days if someone journals daily, but it's not required. A user who journals twice a week will still be in the daily section for over a year. A user who journals sporadically will move through the book over multiple years.
+**Math:** 84 daily entries (12 perfect cycles of 7). Each cycle: 6 normal daily pages + 1 recap spread (2 pages). No leftover entries. Covers 84 days if used daily, longer if sporadic.
 
 **This matches Catherine's own use pattern (10 years, sometimes a few times a year, sometimes more).**
 
@@ -52,13 +52,13 @@ The 90 daily pages *cover* 90 days if someone journals daily, but it's not requi
 
 **One page per visit.** Date is filled in by user. Page works as a complete experience — open, read prompt, write, close.
 
-**Prompt categories (rotating across the 90 pages):**
+**Prompt categories (rotating across the 72 daily pages):**
 - Mood / state check-in
 - Gratitude
 - Reflection on something that happened
 - A "what's alive in me right now" prompt
 - A "what I'm working on" prompt
-- **Image-led prompts** (every ~6–8 pages) — see Iconography section below
+- **Image-led prompts** (every 6th daily page = 12 total) — see Iconography section below
 - Occasional "letter to yourself" prompts (longer-form)
 - Occasional "what I want to remember" prompts
 - Closing prompts (smaller, evening-feeling)
@@ -72,20 +72,35 @@ The 90 daily pages *cover* 90 days if someone journals daily, but it's not requi
 >
 > *Write as much or as little as you want.*
 
-**Sample image-led prompt:**
+**Sample image-led daily prompt (single-page, ½ image):**
 > *Date: ____________*
 >
-> *[Full-page line-art illustration: a waterfall]*
+> *[Top ½ page: line-art illustration of a waterfall]*
 >
-> *Water moves around obstacles without losing itself. Reflect a minute on this imagery. What in your life is moving around an obstacle right now?*
+> *Water moves around obstacles without losing itself. What in your life is moving around an obstacle right now?*
+>
+> *[Bottom ½ page: free-write lines]*
 
-**Recap pages (every ~15 daily pages, optional):**
+**Sample "Looking back" recap spread (2-page, every 7 entries):**
+
+*Left page:*
+> *[Full-page line-art illustration, e.g., phoenix]*
+>
+> *What rises after?* (small caption at bottom)
+>
+> *[Empty space around the image for stickers, notes, ticket stubs — user-added, not pre-printed]*
+
+*Right page:*
 > *Date: ____________*
 >
-> *Looking back at the last stretch of pages:*
+> *Looking back at the last 7 entries:*
 > - *What kept coming up?*
-> - *What's shifted?*
+> - *What shifted?*
 > - *One thing you want to remember:*
+>
+> *[Free-write space]*
+
+**The image rotates through the iconography** — phoenix, waterfall, koi, stag, lighthouse, fish, etc. — so the 12 recap spreads cover the full vocabulary over the course of the book.
 
 ---
 
@@ -150,14 +165,16 @@ Brand voice: **optimistic recovery, not somber plodding through recovery.** The 
 
 ---
 
-## Cover Direction (artistic + cheerful)
+## Cover Direction (artistic + cheerful, title = `Still Here.`)
 
-**Concept:** A single full-bleed illustration in line art + one accent color. Title is small, lowercase, restrained. The cover should feel gift-able — like something you'd buy for a friend going through a hard time, not a personal accountability tool.
+**Title (locked 2026-06-03):** `Still Here.`
+
+**Concept:** A single full-bleed illustration in line art + one accent color. Title is small, lowercase, restrained, bottom of cover. The cover should feel gift-able — like something you'd buy for a friend going through a hard time, not a personal accountability tool.
 
 **Working concepts (Catherine to choose):**
-1. **Torii gate centered, large, in Ocean Indigo line art** — single accent of Golden Sunrise behind it (sunrise through the gate). Title in small lowercase below: `a journal.`
-2. **Two fish curving around each other** (the "apart not alone" symbol) in Leaf Green, forming a circular embrace. Title below: `apart, not alone.` (Risky — explicit brand call-out. Probably not v1.)
-3. **Single oversized botanical / line-art element** (waterfall or koi or stag) in one full-saturation color, lots of white space. Title minimal.
+1. **Torii gate centered, large, in Ocean Indigo line art** — single accent of Golden Sunrise behind it (sunrise through the gate). Title in small lowercase below: `still here.`
+2. **Two fish curving around each other** (the "apart not alone" symbol) in Leaf Green, forming a circular embrace. Title below: `still here.` (Risky — explicit brand call-out. Probably not v1.)
+3. **Single oversized botanical / line-art element** (waterfall or koi or stag) in one full-saturation color, lots of white space. Title minimal: `still here.`
 
 **Cover specs:**
 - Matte soft-touch finish (Lulu premium tier)
@@ -195,16 +212,26 @@ Brand voice: **optimistic recovery, not somber plodding through recovery.** The 
 
 ---
 
-## Recap Pages — "Looking back" (every 7 entries)
+## Recap Pages — "Looking back" (every 7 entries, 2-page spread)
 
-**Decision (2026-06-03):** Recap pages appear every 7 daily entries. **Not** called "weekly" — the journal has no weeks. Called **"Looking back"** (or a final-name TBD).
+**Decision (2026-06-03):** Recap pages appear every 7 daily entries. **Not** called "weekly" — the journal has no weeks. Called **"Looking back."** 12 spreads total in the book (one per 7-entry cycle).
+
+**Layout: 2-page spread** (locked 2026-06-03).
+- **Left page:** Full-page line-art illustration (single coin-icon motif), small motif-tied caption at bottom, empty space around the image for stickers, tape, ticket stubs, notes (user-added).
+- **Right page:** "Looking back at the last 7 entries" header + 3 short prompts + free-write space.
+- Image and prompts sit on the same spread — user turns one page and lands on the image, then writes in response. Splitting them across separate visits breaks the rhythm.
+
+Why 2-page spread, not ½-page image + ½-page prompts:
+- The image needs to breathe. ½ page forces the eye to read and look at the same time. A full image page lets the user pause on the imagery first, then turn the page and engage with the prompts.
+- "Room to jot" space is exactly the kind of overflow that makes a journal feel lived-in. ½ page isn't enough. A full page is.
+- The recap prompts deserve real estate. "What kept coming up? What's shifted? What do you want to remember?" + free write is more than ½ page can hold comfortably.
 
 Why every 7, not every 10 or every 15:
-- 90 daily pages / 7 = ~12–13 recaps. Right rhythm for the book.
-- Plays into Catherine's marketing insight: nothing is "wasted" by the passing of time. If the user writes 3 entries one week, nothing for 2 months, then 4 in a weekend, a "looking back" page still fits — they're looking back at 7 things they wrote, regardless of the calendar.
+- 84 daily pages / 7 = 12 perfect recaps. Clean math (no leftover entries).
+- Plays into Catherine's marketing insight: nothing is "wasted" by the passing of time. If the user writes 3 entries one week, nothing for 2 months, then 4 in a weekend, a "looking back" page still fits.
 - The word "weekly" would be dishonest in a self-paced journal. "Every 7 entries" is honest and matches the math.
 
-**Layout option (worth considering):** Recap pages rotate through the iconography — a "looking back" page might feature a phoenix line-art illustration with a motif-tied prompt ("What rose again in this stretch?") or a waterfall ("What moved around an obstacle?"). This integrates the iconography into the recap structure, not just the daily pages.
+**Image rotation (locked 2026-06-03):** The 12 recap spreads rotate through the full iconography — phoenix, waterfall, koi, stag, lighthouse, fish, etc. — so the book covers the full motif vocabulary over the course of the journal. This integrates the iconography into the recap structure, not just the daily pages.
 
 ## Back-matter coin page (the "marketing endpiece")
 
@@ -237,16 +264,9 @@ Why every 7, not every 10 or every 15:
 
 ## Open Questions for Catherine
 
-1. **Title for the journal** — placeholder is `a journal.` Working options below. This drives the cover.
-   - **`Still Here.`** — present-tense, defiant, "I made it through another stretch." Works for both audiences. Distinctive. (My pick.)
-   - **`A Field Journal.`** — borrows from nature/scientific notebook feel, low-key, doesn't claim recovery or mental health explicitly. Pairs well with the iconography.
-   - **`On the Way.`** — implies movement without destination.
-   - **`Carry On.`** — two meanings: "carry this with you" and "keep going."
-   - **`Quiet Pages.`** — emphasizes the calm, secular tone.
-   - **`My Journey`** — solid, generic, safe. Most searchable on Etsy.
-2. **Daily page prompt count** — 90 covers 90 days if used daily. Right number? More? Fewer?
-3. **Recap motif rotation** — should the "looking back" pages rotate through the coin iconography (e.g., phoenix prompt for one, waterfall for another), or stay text-only and let the daily pages own the iconography? My instinct: rotate, it makes the recaps feel intentional rather than mechanical.
-4. **Sub-branding** — confirmed small ANA logo (two fish) throughout. Question is just *how small* and *where*. My instinct: back cover only (subtle), back-matter coin page (small), section dividers (occasional, ornament-grade). Nothing on the front cover.
+1. **Cover concept with `Still Here.` title** — re-render the three cover concepts from the Cover Direction section against this title, then pick. (Will update with new mocks once you confirm direction.)
+2. **Recap image rotation order** — 12 spreads rotating through the iconography. Pick the order, or hand it to Barbara to sequence? My instinct: a sequence that builds — start gentle (waterfall, fish, koi) early, build intensity (stag, lighthouse, kraken) in the middle, end with rising/resolution (phoenix, torii) in the last 3–4 spreads. Mirrors a year of journaling.
+3. **Sub-branding placement** — confirmed small ANA logo (two fish) throughout. Question is *how small* and *where*. My instinct: back cover only (subtle), back-matter coin page (small), section dividers (occasional, ornament-grade). Nothing on the front cover.
 
 ---
 
