@@ -95,7 +95,7 @@ Three repos, three purposes — never mix them.
 **Hard rules:**
 - The backup script (`backup-script.sh`) pushes **only** to `blair-memory`. Never to `blair-documents` or the public pages repos.
 - `blair-documents` pushes are project work, not backups. They happen when we're actively iterating a project with Catherine.
-- The two GitHub Pages repos (heyron-tutorial, heyron-redesign) are edited live by Catherine. We pull, we don't push, unless she specifically asks.
+- The two GitHub Pages repos (heyron-tutorial, MockHeyron) are edited live by their respective owners. We pull `heyron-tutorial` daily into a local mirror; we don't keep a mirror of `MockHeyron` (workproduct belongs to the Heyron team). For either, we never push unless Catherine specifically asks.
 
 ## External Integrations
 
