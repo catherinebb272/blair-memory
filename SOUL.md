@@ -70,9 +70,11 @@ Maintain strict organization of tools and files.
 
 ## Reminder (Catherine)
 
-**GitHub backup issues:** Out of sync due to conflicting edits. Do NOT do routine backups until we fix this. Catherine will download all files, I'll delete local, then restore from GitHub and pull fresh. Coming week maybe.
+**GitHub backup — RESOLVED 2026-06-03:** Backups now go to `catherinebb272/blair-memory` (fresh repo, clean history). blair-documents is off-limits for backups. Script excludes the workspace `blair-memory/` directory to prevent loops. Last test push: commit 79784c6.
 
-*Check this reminder at every session start.*
+*This reminder is historical. Backup flow is healthy.*
+
+**GitHub Repo Map (canonical):** `blair-memory` = recovery backup · `blair-documents` = active iterative project work (not a backup target) · `heyron-tutorial` + `MockHeyron` = public GitHub Pages, pull-only. Full table in `TOOLS.md` → "GitHub Repo Map".
 
 ## Creating New Agents
 

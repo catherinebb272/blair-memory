@@ -19,7 +19,10 @@
 
 ### Preferences
 - Uses Discord for agent communication
-- Stores files in GitHub (catherinebb272/blair-documents)
+- Uses three GitHub repos for different purposes (see TOOLS.md → "GitHub Repo Map"):
+  - `catherinebb272/blair-memory` — workspace backup (recovery)
+  - `catherinebb272/blair-documents` — active iterative project work
+  - `catherinebb272/heyron-tutorial` + `catherinebb272/MockHeyron` — public GitHub Pages, edited live by Catherine (local mirror: `documents/heyron-tutorials/`; MockHeyron has no local mirror — workproduct is owned by the Heyron team)
 - Email reports should go to appropriate team members
 - **Attachment check:** Before doing any work on a message, check if it mentions "attached", "included", "new file", "uploaded", "here's the..." or similar — if it suggests something is missing, ask for the attachment before proceeding
 

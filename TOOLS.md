@@ -72,20 +72,42 @@ openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chi
 - **Command:** `openclaw message send --target @catherine1724 --content "keepalive" && openclaw message delete --last`
 - **Description:** Sends a DM with the text 'keepalive' to the user and immediately deletes it to keep the DM channel active without spamming.
 
-### Nightly Backup to GitHub (may be broken)
+### Nightly Backup to GitHub
 - **Schedule:** Daily at 2:00 AM UTC
 - **Command:** `cd /home/openclaw/.openclaw/workspace && export GITHUB_TOKEN=<token> && ./backup-script.sh >> /var/log/blair-backup.log 2>&1`
 - **Script:** `/home/openclaw/.openclaw/workspace/backup-script.sh`
-- **What it backs up:** All memory files, daily logs, and business files to GitHub
-- **Destination:** `catherinebb272/blair-documents/memory-backup/`
+- **Destination:** `catherinebb272/blair-memory` (recovery-only, see GitHub Repo Map below)
+- **Loop guard:** `git add -A -- ':!blair-memory'` excludes the local `blair-memory/` checkout from the push
 - **Log:** `/var/log/blair-backup.log`
+- **Last verified:** 2026-06-03 (commit 79784c6, 15 files synced)
+
+## GitHub Repo Map (canonical)
+
+Three repos, three purposes — never mix them.
+
+| Repo | Purpose | Push? | Pull? | Notes |
+|---|---|---|---|---|
+| `catherinebb272/blair-memory` | **Workspace backup (recovery)** | ✅ nightly cron only | rarely | Fresh repo, clean history. The only destination for backups. Loop-excluded. |
+| `catherinebb272/blair-documents` | **Active iterative work** | ✅ as part of project work | ✅ | Used when a project needs back-and-forth with Catherine through GitHub. Commit frequently as we iterate. **Not a backup target.** |
+| `catherinebb272/heyron-tutorial` | **Public GitHub Pages** | ⛔ only on explicit ask | ✅ daily | Mature. Catherine edits live on GitHub to speed deployment. Local mirror in `documents/heyron-tutorials/`. |
+| `catherinebb272/MockHeyron` | **Public GitHub Pages (the "Heyron redesign")** | ⛔ only on explicit ask | ✅ only on need | Mature, edited live by Catherine. **No local mirror** — the public repo is the source of truth, and workproduct is owned by the Heyron team. Pull into a scratch dir only if we need to look something up. |
+
+**Hard rules:**
+- The backup script (`backup-script.sh`) pushes **only** to `blair-memory`. Never to `blair-documents` or the public pages repos.
+- `blair-documents` pushes are project work, not backups. They happen when we're actively iterating a project with Catherine.
+- The two GitHub Pages repos (heyron-tutorial, heyron-redesign) are edited live by Catherine. We pull, we don't push, unless she specifically asks.
 
 ## External Integrations
 
-### GitHub
-- **Repo:** catherinebb272/blair-documents
-- **Token:** Stored in `.env` file
-- **Used for:** File backups, document storage
+### GitHub — Backup (recovery)
+- **Repo:** `catherinebb272/blair-memory`
+- **Token:** Stored in `.env` file as `GITHUB_TOKEN`
+- **Used for:** Emergency recovery only. Nightly cron runs the backup script.
+
+### GitHub — Active project work
+- **Repo:** `catherinebb272/blair-documents`
+- **Used for:** Live project files Catherine and Blair iterate on through GitHub
+- **Backup rule:** Do NOT push to this repo from the backup script. Pushes here are project commits, not backups.
 
 ### AgentMail (Email)
 - **Address:** blairana@agentmail.to

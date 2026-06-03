@@ -120,13 +120,13 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * **Config File:** `documents/config/agentmail.env` (in GitHub, private repo)
 * **Token Storage:** GitHub (private file) — do not paste in chat
 
-### Heyron Tutorial Workflow
+## GitHub Repo Map (canonical — 3 purposes, 4 repos)
 
-* Source: GitHub Pages repo `catherinebb272/heyron-tutorial` — must stay pristine
-* Flow: GitHub → local ONLY (never push backups to it)
-* Daily retrieval: Pull latest versions into `documents/heyron-tutorials/` every day
-* Reason: User edits live on GitHub Pages to speed deployment
-* Exception: Only push if user specifically asks
+* **`catherinebb272/blair-memory`** — workspace backup (recovery). Nightly cron pushes the workspace here. The ONLY destination for backups. Fresh repo, clean history. Loop-excluded.
+* **`catherinebb272/blair-documents`** — active iterative project work. Push here when we're actively iterating a project with Catherine through GitHub. **Not a backup target.**
+* **`catherinebb272/heyron-tutorial`** + **`catherinebb272/MockHeyron`** — public GitHub Pages repos. Mature, Catherine edits live on GitHub. Push only on explicit request. Pull: tutorial is mirrored locally in `documents/heyron-tutorials/`; MockHeyron has no local mirror (workproduct is owned by the Heyron team — pull to a scratch dir only if we need to look something up).
+
+Full rules in `TOOLS.md` → "GitHub Repo Map".
 
 ## Kiki Test Agent
 
@@ -188,4 +188,7 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 
 ## Heyron Redesign Project
 
-* **GitHub Push Protocol:** Push directly to blair-documents main (no folder, no branch) — overwrite what's there. Commit frequently as we make changes.
+* **Repo:** `catherinebb272/MockHeyron` (live at https://catherinebb272.github.io/MockHeyron/)
+* **Mature public GitHub Pages repo** — edited live by the Heyron team.
+* **No local mirror** — the public repo is the source of truth. Workproduct belongs to the Heyron team; workspace copies were deleted 2026-06-03. If we ever need to look something up, clone to `/tmp` and reference, don't keep a persistent mirror.
+* Push only on explicit request.
