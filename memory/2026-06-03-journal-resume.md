@@ -49,3 +49,33 @@ Brief v2 is locked. Page count, asset inventory, rotation, and closing pages all
 - AI-gen or Barbara-draw the ~25 line-art pieces (recap + daily image-led + filler)
 - Build the iPad-fillable PDF and print-ready 8.5×11 PDF (separate from Lulu)
 - Order 1 Lulu proof copy
+
+---
+
+## 2026-06-03 (23:50 UTC) — End of day correction + tomorrow's plan
+
+**Correction on the recap image debate** (I conflated two things, Catherine called it out):
+- The **Torii watercolor** Catherine uploaded was originally for the **little page-top cycle icons** on dailies, not the recap spread. I told her it was too busy to use there — she agreed and is throwing it out.
+- It's **not** suitable as a large image either (too detailed/busy for a full-page recap).
+- So: **throw out the Torii watercolor entirely.** Don't try to repurpose it.
+
+**Separate issue — line art for the 12 recap spreads:**
+- AI-generated line art version was too thin AND the background wouldn't remove cleanly. Not usable.
+- **Canva has decent vector line art** — Catherine will look there for the 12 recap icons.
+- The 12 small page-top daily icons can come from the same Canva source (scaled down).
+
+**Holding pattern — no further activity tonight. Resume tomorrow.**
+
+### Tomorrow's starting points (for me, fresh session)
+
+1. **Wait for Catherine's Canva finds.** Don't proactively generate recap line art yet — she wants to browse Canva vectors first. If she gets stuck or wants options, *then* help.
+2. **Still open from tonight:**
+   - Cover concept pick (3 options in brief — torii / two-fish / single oversized line-art element)
+   - Barbara sign-off on palette + copy + resource page
+   - Recap icon source decision: Canva vector library (Catherine's lead) vs. AI regen with corrected prompt vs. Barbara
+3. **Don't repeat my mistake:** I told her the watercolor was unsuitable for a small icon. That was correct. But I didn't clearly separate "small top icon" from "large recap spread" — she had to back me up and re-explain the original intent. When reviewing assets, **always name the placement** (daily top-icon / recap spread / cover / filler page) before critiquing.
+
+### File state
+- Brief v2 still locked: `documents/ana/journal-product-design-brief.md`
+- This resume note: `memory/2026-06-03-journal-resume.md` (this file)
+- Torii watercolor: discarded. Don't reference it as a candidate going forward.

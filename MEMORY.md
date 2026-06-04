@@ -22,10 +22,11 @@
 
 Drew is a recovering alcoholic who experienced sudden liver failure and needed a transplant. During recovery, they searched for meaningful ways to mark sobriety milestones but were dissatisfied with what they found on the market. This gap led to the creation of Apart Not Alone. The experience also ignited a passion for the transplant community. This origin story is woven into their Etsy bio and a pinned Instagram post.
 
-### Journal Product Line (active as of 2026-06-02)
+### Journal Product Line (active as of 2026-06-03)
 
 * **Print partner:** Lulu (Morrisville, NC — same state as Catherine)
-* **Spec locked:** 6×9 coil-bound, 120 pages, 60lb uncoated interior, matte cover, ~$11.66 print cost
+* **Spec locked:** 6×9 coil-bound, **124 pages** (updated from 120), 60lb uncoated interior, matte cover, ~$11.66 print cost
+* **Page math locked:** 84 daily pages (12 cycles × 7) + 24 recap pages (12 spreads) + 10 filler/goal pages + 1 resources + 1 envelope/letter-to-self + 1 coin end cap + 2 intro = 124
 * **Three-SKU strategy (Option C):**
   1. Digital Fillable PDF — $7.99 (iPad/GoodNotes, hyperlinked TOC, form fields)
   2. Print-Ready Letter PDF — $9.99 (8.5×11, home-printer friendly, 3-hole-punch-safe)
@@ -33,7 +34,14 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * **Why 2 PDFs:** fillable form fields fight printable layout. iPad buyer ≠ print buyer. Split them.
 * **Differentiator:** most Etsy sobriety journals don't bother with iPad fillable. Real moat.
 * **PDF design rule:** PDFs must look distinct from Lulu version — different fonts/layouts, not "degraded book"
-* **Scope expansion parked for v2:** mental health / anxiety / emotional sobriety. Google search trends show it's a growing category. Don't block v1 launch.
+* **Positioning (locked 2026-06-03):** "A journal for people on a journey of emotional and mental health, or recovery from addiction." Primary audience = mental health/anxiety. Secondary = recovery. Self-paced, no calendar, user writes the date.
+* **Title (locked 2026-06-03):** `Still Here.`
+* **Palette (locked 2026-06-03):** Ocean Indigo, Leaf Green, Medium Blue, Sunrise Coral, Golden Sunrise, Soft Linen (paper). Brighter, more artistic, gift-able.
+* **Recap rotation (locked 2026-06-03):** Torii (C1), Waterfall (C2), Two-fish logo (C3), Stag (C4), Kraken (C5), Fox (C6), Rowing (C7), Horse (C8), Desert (C9), Frog (C10), Koi late re-use (C11), Phoenix (C12). 11 coin motifs + logo.
+* **Closing pages (locked 2026-06-03):** Coin end cap (p122), Resources/crisis lines (p123), Letter-to-future-self envelope page (p124 — user seals a letter and tapes the envelope to the page. Catherine's idea.)
+* **Logo placement (locked 2026-06-03):** Back cover (small + wordmark), intro p1 (logo + wordmark), daily pages (very small two-fish only, ornament-grade). Nothing front cover.
+* **Marketing language:** "12 reflection cycles" or "84 entries, paced by you" — NEVER "90 days" (false advertising for self-paced book).
+* **Open items:** cover concept pick (3 options in brief), Barbara sign-off on palette/copy/resource page, line-art rendering decision (Barbara vs AI vs commission)
 * **Full brief:** `documents/ana/journal-product-design-brief.md`
 
 ### Plato's Closet (PC)
