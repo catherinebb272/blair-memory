@@ -22,11 +22,22 @@
 
 Drew is a recovering alcoholic who experienced sudden liver failure and needed a transplant. During recovery, they searched for meaningful ways to mark sobriety milestones but were dissatisfied with what they found on the market. This gap led to the creation of Apart Not Alone. The experience also ignited a passion for the transplant community. This origin story is woven into their Etsy bio and a pinned Instagram post.
 
-### Journal Product Line (active as of 2026-06-03)
+### Journal Product Line (v3, active as of 2026-06-04)
 
 * **Print partner:** Lulu (Morrisville, NC — same state as Catherine)
-* **Spec locked:** 6×9 coil-bound, **124 pages** (updated from 120), 60lb uncoated interior, matte cover, ~$11.66 print cost
-* **Page math locked:** 84 daily pages (12 cycles × 7) + 24 recap pages (12 spreads) + 10 filler/goal pages + 1 resources + 1 envelope/letter-to-self + 1 coin end cap + 2 intro = 124
+* **Spec locked:** 6×9 coil-bound, **126 pages**, 60lb uncoated interior, matte cover, ~$11.66 print cost (v3 update from v2's 124)
+* **Page math locked (v3):** 2 intro + 120 cycle pages (12 × 10) + 4 end pages (coin cap, letter-to-self, resources, blank) = **126**
+* **Cycle structure (v3, simplified):** all 12 cycles = 10 pages each. Per cycle: 7 dailies + 1 goal + 2 recap spread. v2's "cycle 1 has no goals" and "cycle 12 ends on recap" rules retired in v3
+* **Daily page layout (locked v3):** top → bottom — "Today's Thoughts" heading (Architect's Daughter) + date line + 0.8" line art at top right → streak box (left, user-filled) + affirmation box (right, 84 unique cycling) → "Reflections" subheading → 2 prompts × 3 lines each → bottom 1/3 = free space with bullet-journal dots + cue "Free space — use for written thoughts or creative expression" → footer page number in format "Cycle x-y" (e.g., "Cycle 1-4")
+* **Fonts (locked v3):** Architect's Daughter (heading/subheading) + Avenir (body). Open: confirm commercial-print licensing for both
+* **Margins (locked v3, Lulu-compliant):** 0.5" outside / 0.75" gutter / 0.75" top / 0.5" bottom. Open: sister (former book designer) reviewing against Lulu coil-binding minimums
+* **Streak box design intent:** intentionally unfilled at print time. User defines what they track (sober days, weeks of therapy, days without panic attack, journal-consistency, etc.) — serves the broadened audience
+* **Daily page layout (locked v3, simplified 2026-06-04):** every daily page uses the **same layout** — no Variant A/B split (retired). Differentiation comes from rotating prompts + 84 cycling affirmations, not layout variants
+* **Palette (locked v3 2026-06-04, refined 2026-06-04 update 5):** simple model
+  * **Active ink colors:** Ocean Indigo `#003B88` = accent text (headings, subheadings, labels, page numbers); Black = body text; Soft Linen `#F5EFE8` = paper only (never as ink)
+  * **Cycle tints (rotating per cycle):** 5 tints used as the wash behind the 0.8" line art icon + banner section dividers. Tints: soft sky (of Ocean Indigo), soft mint (of Leaf Green), soft periwinkle (of Medium Blue), soft peach (of Sunrise Coral), soft butter (of Golden Sunrise). One tint per cycle, cycles through 12 cycles (sequence TBD). Exact hex TBD with Barbara, likely ~20-30% opacity of saturated parent
+  * **Available saturated palette (not currently in use):** Leaf Green, Medium Blue, Sunrise Coral, Golden Sunrise — available if a future design need calls for them
+  * **Pairing convention:** tints always reference their saturated source color conceptually, even though the saturated sources aren't in active ink use
 * **Three-SKU strategy (Option C):**
   1. Digital Fillable PDF — $7.99 (iPad/GoodNotes, hyperlinked TOC, form fields)
   2. Print-Ready Letter PDF — $9.99 (8.5×11, home-printer friendly, 3-hole-punch-safe)
@@ -34,15 +45,18 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * **Why 2 PDFs:** fillable form fields fight printable layout. iPad buyer ≠ print buyer. Split them.
 * **Differentiator:** most Etsy sobriety journals don't bother with iPad fillable. Real moat.
 * **PDF design rule:** PDFs must look distinct from Lulu version — different fonts/layouts, not "degraded book"
-* **Positioning (locked 2026-06-03):** "A journal for people on a journey of emotional and mental health, or recovery from addiction." Primary audience = mental health/anxiety. Secondary = recovery. Self-paced, no calendar, user writes the date.
+* **Positioning (v3, broadened from v2):** A journal for ANY recovery journey — mental health, anxiety, emotional/physical sobriety, addiction, grief, divorce, identity transition, or any path requiring self-examination. Adult M/F, not gendered. Self-paced, no calendar, user writes the date.
 * **Title (locked 2026-06-03):** `Still Here.`
-* **Palette (locked 2026-06-03):** Ocean Indigo, Leaf Green, Medium Blue, Sunrise Coral, Golden Sunrise, Soft Linen (paper). Brighter, more artistic, gift-able.
-* **Recap rotation (locked 2026-06-03):** Torii (C1), Waterfall (C2), Two-fish logo (C3), Stag (C4), Kraken (C5), Fox (C6), Rowing (C7), Horse (C8), Desert (C9), Frog (C10), Koi late re-use (C11), Phoenix (C12). 11 coin motifs + logo.
-* **Closing pages (locked 2026-06-03):** Coin end cap (p122), Resources/crisis lines (p123), Letter-to-future-self envelope page (p124 — user seals a letter and tapes the envelope to the page. Catherine's idea.)
+* **Palette (locked 2026-06-03, in refinement for v3):** two coordinated sets from ANA brand kit — one rich/saturated, one unsaturated. Underlying colors include Ocean Indigo, Leaf Green, Medium Blue, Sunrise Coral, Golden Sunrise, Soft Linen (paper). Brighter, more artistic, gift-able. v3 split (rich vs unsaturated) TBD.
+* **Cycle → icon mapping (locked v3):** Torii (C1, 1mo), Waterfall & lily (C2, 18mo), Two-fish logo (C3), Stag (C4, 4mo), Kraken lighthouse (C5, 5mo), Fox in snow (C6, 9mo), Rowing POV (C7, 2yr), Resting horse (C8, 3yr), Desert landscape (C9, 2mo), Frog (C10, 3mo), Koi late re-use (C11, 6mo top seller), Phoenix (C12, 1yr). 11 coin motifs + 1 logo = 12 designs. Koi deliberately held to C11 for weight; 1-year koi NOT used in journal.
+* **End page order (locked v3):** (1) Coin-grid end cap, (2) Letter-to-self envelope page [last facing page in book; envelope taped to verso sits in inside back cover; verso = ANA/coins pitch], (3) Resources page [1 page, crisis lines + professional help + ANA links], (4) Blank page [purpose TBD, likely surface for envelope or inside cover]
+* **Icon asset source (v3):** Catherine found a Canva designer with SVG icons matching the 12 motifs. SVG scales cleanly to 0.8" line art and full-bleed watercolor source. Open: confirm SVG coverage across all 12 motifs vs custom re-draw
 * **Logo placement (locked 2026-06-03):** Back cover (small + wordmark), intro p1 (logo + wordmark), daily pages (very small two-fish only, ornament-grade). Nothing front cover.
 * **Marketing language:** "12 reflection cycles" or "84 entries, paced by you" — NEVER "90 days" (false advertising for self-paced book).
-* **Open items:** cover concept pick (3 options in brief), Barbara sign-off on palette/copy/resource page, line-art rendering decision (Barbara vs AI vs commission)
-* **Full brief:** `documents/ana/journal-product-design-brief.md`
+* **Sister as layout consultant:** Catherine's sister is a former book designer, consulted on margin/bleed/type fit/coil-binding safety questions. Folded into v3 as decisions land.
+* **End goal:** CSV that drives production. Each row = one journal page.
+* **Open items (v3):** cover concept pick (3 options in v2 brief), color palette split (rich vs unsaturated), 84 affirmations content list, resources page copy, letter-to-self page copy, ANA/coins pitch copy, font licensing check, Lulu margin compliance check, watercolor mood board for recap art, CSV schema definition
+* **Full brief:** `documents/ana/journal/journal-product-design-brief.v3.md` (active). Predecessors: v2 → `documents/ana/journal.v2-archive/journal-product-design-brief.v2.md`; v1 → `documents/ana/journal.v1-milestone-anchor-archive/journal-product-design-brief.v1-milestone-anchor.md`
 
 ### Plato's Closet (PC)
 

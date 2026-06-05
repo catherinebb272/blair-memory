@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T17:00:44.614Z",
+  "updatedAt": "2026-06-05T00:49:55.405Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -516,19 +516,21 @@
       "endLine": 66,
       "source": "memory",
       "snippet": "- React README: `/documents/pc/cycle-count-react-version/README.md` - explains where current version lives ### Kiki Check - Checked on Kiki agent - heartbeat running, 9 backups created today - Note: sessions_list triggers Kiki's heartbeat (causes backup) [LESSON] Checking sessions_list wakes up the heartbeat agent --- ## Additional Cycle Count Fixes (Evening Session) **Review Screen Updates:** - Eliminated Zone column (all items show \"Not Scanned\" - redundant) - Description now shows concatenated \"Description/Brand\" (e.g., \"WT Tank/lululemon\") - Added Buy Date field in place of Zone column - Added formatBuyDate() function to convert Excel serial dates (45505 → 2024-12-30) **Adjustments",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T20:35:50.423Z",
-      "lastRecalledAt": "2026-05-10T20:36:08.204Z",
+      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
       "queryHashes": [
         "5919912bf44c",
-        "706aa83977f7"
+        "706aa83977f7",
+        "b1a989a6c8a8"
       ],
       "recallDays": [
-        "2026-05-10"
+        "2026-05-10",
+        "2026-06-05"
       ],
       "conceptTags": [
         "backup",
@@ -1175,18 +1177,20 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-04-15 Memory Log ## Cycle Count Process (Step by Step) ### Step 1: Upload Item Buy Detail - Source: DRS \"Item Buy Detail\" report - File: `Item Buy Detail Aug124-April142026.xlsx` - Row count: 172,860 items ### Step 2: Upload Precount (Precount.001) - SKUs in Precount: 10,310 - Matched to Item Buy Detail: 4,002 items (subset created) ### Step 3: Upload Scanned Data (BShortsPhysicalCountRev3.csv) - Total scans: 416 - Unique scanned SKUs: 415 **Matching Process (in order):** 1. Compare scanned SKUs to subset (Precount → Item Buy Detail match) 2. Matched to subset: 403 3. Missing (in subset but not scanned): 3,599 — **then** filter by QOH > 0 **Key finding:** 97% of \"missing\" items",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T15:10:14.701Z",
-      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
+      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
       "queryHashes": [
-        "0c1ca8ff538b"
+        "0c1ca8ff538b",
+        "b1a989a6c8a8"
       ],
       "recallDays": [
-        "2026-05-14"
+        "2026-05-14",
+        "2026-06-05"
       ],
       "conceptTags": [
         "aug124-april142026.xlsx",
@@ -1544,6 +1548,130 @@
         "recap",
         "github",
         "actions"
+      ]
+    },
+    "memory:memory/2026-06-02.md:1:32": {
+      "key": "memory:memory/2026-06-02.md:1:32",
+      "path": "memory/2026-06-02.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-06-02 — Journal Product Research for ANA ## Session Catherine still scoping digital/print product line for ANA. Asked for research on sobriety journals — what features people use, what they want. ## What I did - Researched 7+ top sobriety journals across reviews and roundups - Pulled Reddit search signals (r/stopdrinking, r/SoberCurious — direct fetches blocked, used search snippets) - Looked at Etsy printable/digital market - Wrote synthesis to `documents/ana/journal-product-research.md` ## Key takeaways I flagged 1. **Secular positioning is a real gap.** Most journals are either religious/12-step OR gendered (\"Dear Alcohol,\" \"Sober as Fuck\"). ANA's brand is already secular — t",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "queryHashes": [
+        "b1a989a6c8a8"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "digital/print",
+        "r/stopdrinking",
+        "r/sobercurious",
+        "printable/digital",
+        "religious/12-step",
+        "journal",
+        "product",
+        "research"
+      ]
+    },
+    "memory:memory/2026-06-02.md:27:53": {
+      "key": "memory:memory/2026-06-02.md:27:53",
+      "path": "memory/2026-06-02.md",
+      "startLine": 27,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "- Year-one only scope - No pouches (POD multi-item shipping pain) - Don't care about extra design work for specialty pages - Constraints I found: 1mo, 7mo, 8mo have no coin image assets — must work around with quote-only or line-art stand-in pages - Wrote full design brief: `documents/ana/journal-product-design-brief.md` ## Action - [ ] Await Catherine's call: one SKU at launch or two? I'd recommend unisex first - [ ] Then: pick POD vendor, cover style, coin illustration approach (color photo vs line-art redraw vs silhouette) - [ ] Barbara sign-off needed on copy tone (no religious, no gendered clichés in alt-female) ### 3rd pass — locked decisions + sample pages created Catherine's clari",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "queryHashes": [
+        "b1a989a6c8a8"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "year-one",
+        "multi-item",
+        "quote-only",
+        "line-art",
+        "stand-in",
+        "sign-off",
+        "alt-female",
+        "one"
+      ]
+    },
+    "memory:memory/2026-06-02.md:51:72": {
+      "key": "memory:memory/2026-06-02.md:51:72",
+      "path": "memory/2026-06-02.md",
+      "startLine": 51,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "- `documents/ana/journal/sample-pages/README.md` — master style tokens + workflow - `documents/ana/journal/sample-pages/01-daily-page-prompt.md` — ChatGPT prompt for the standard daily page (used 90 times) - `documents/ana/journal/sample-pages/02-weekly-page-prompt.md` — ChatGPT prompt for the weekly recap (used 40 times) - `documents/ana/journal/sample-pages/03-front-matter-prompts.md` — 7 front-matter pages, all ChatGPT-ready - `documents/ana/journal/sample-pages/04-milestone-1mo-prompt.md` — the anchor 1-month milestone spread (template for all 12) **Style tokens locked** in cream/forest green/charcoal/ochre palette. The 1mo spread is the template — once Catherine approves, the other 11",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "queryHashes": [
+        "b1a989a6c8a8"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "gpt",
+        "front-matter",
+        "chatgpt-ready",
+        "1-month",
+        "cream/forest",
+        "green/charcoal/ochre",
+        "documents",
+        "ana"
+      ]
+    },
+    "memory:memory/2026-06-02.md:97:109": {
+      "key": "memory:memory/2026-06-02.md:97:109",
+      "path": "memory/2026-06-02.md",
+      "startLine": 97,
+      "endLine": 109,
+      "source": "memory",
+      "snippet": "**Decision:** Parked for v2 design pass. v1 launches sober-focused. Daily/weekly prompts may need a second-voice pass — some substance-recovery-specific, others anxiety/mental-health-specific. Milestone pages stay sobriety-anchored (they're the moat). Front matter and tools section retunable for both audiences. Do not block v1 launch. ### Brief updated - `documents/ana/journal-product-design-brief.md` — added \"Print/Distribution Strategy\" section with POD specs + three-SKU model, updated POD Notes, updated Open Questions ## Updated Action Items (post-strategy) - [ ] **Order 1 Lulu proof copy** before listing — Barbara QA: color, alignment, page order, coil alignment - [ ] Build the iPad-fi",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "queryHashes": [
+        "b1a989a6c8a8"
+      ],
+      "recallDays": [
+        "2026-06-05"
+      ],
+      "conceptTags": [
+        "sober-focused",
+        "daily/weekly",
+        "second-voice",
+        "substance-recovery-specific",
+        "anxiety/mental-health-specific",
+        "sobriety-anchored",
+        "print/distribution",
+        "three-sku"
       ]
     }
   }
