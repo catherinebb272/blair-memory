@@ -265,21 +265,11 @@ The page math is locked. **Total: 126 pages.** Math is clean: 2 intro + 120 cycl
 
 ## 11. End Goal — CSV Build
 
-The deliverable is a **CSV that drives production.** Each row = one journal page. Columns will include (TBD, to be specified in v3):
+The deliverable is a **CSV that drives production.** Each row = one journal page (126 rows total).
 
-- Page number
-- Cycle number
-- Page within cycle (1–10)
-- Page type (intro / reflection / goal / recap-left / recap-right / coin-cap / letter / resources / blank)
-- Coin motif / line-art ID
-- Daily affirmation (one per reflection row — 84 unique)
-- Prompt 1 text
-- Prompt 2 text
-- Art direction notes
-- Layout variant (uniform — no A/B split)
-- Streak-box treatment (always blank — user fills in)
+**Schema drafted — see [`journal-csv-schema-v3.md`](./journal-csv-schema-v3.md).** 19 columns covering: page number, cycle, page-in-cycle, page type, section, line-art ID, art ID (recap), tint ID, heading, subheading, body, affirmation, prompts 1–3, cue, page label, status, and notes. Renderer constants (e.g., "Today's Thoughts" heading, "Reflections" sub-heading, streak box label) are baked into the renderer and not stored per-row, keeping the CSV focused on what actually varies.
 
-We will define the schema together before populating.
+We will review the schema together before populating rows.
 
 ---
 
@@ -311,7 +301,7 @@ These need decisions before the brief is "done":
 - [ ] **Tint rotation sequence across 12 cycles** — which order, which tints repeat (see §3b)
 
 **CSV**
-- [ ] **CSV schema definition** (see §11 candidate columns above) — confirm before populating
+- [ ] **CSV schema definition** — drafted in [`journal-csv-schema-v3.md`](./journal-csv-schema-v3.md) (19 columns, 9 page types, full slot map). Awaiting Catherine review.
 
 **Carryover review**
 - [ ] Review v2's "Daily Page Template" + "Layout Variants" sections — promote to v3 or revise
@@ -325,6 +315,7 @@ These need decisions before the brief is "done":
 - **2026-06-04 (update 4) — palette locked + variant A/B retired.** §3 expanded with full palette: 6 saturated inks (Ocean Indigo / Leaf Green / Medium Blue / Sunrise Coral / Golden Sunrise / Soft Linen paper) + 5 unsaturated tints (sky/mint/periwinkle/peach/butter — exact hex TBD with Barbara). Pairing rules still TBD (per section / per cycle / per page type). Variant A/B layout split removed — all 84 daily pages use the same layout, with differentiation via rotating prompts + affirmations. CSV §11 updated (no layout variant column). Open items updated.
 
 - **2026-06-04 (update 5) — palette corrected (tint per cycle, not primary per page).** Earlier v3 draft said "one primary per page" — that was a misread. Correct model: **Ocean Indigo for accent text** (headings, subheadings, labels, page numbers), **black for body text**, **one tint rotating per cycle** (5 tints across 12 cycles; sequence TBD). The other 4 saturated brand colors (Leaf Green, Medium Blue, Sunrise Coral, Golden Sunrise) are not in use in v3 by default but available. §3 restructured into 3a active ink colors / 3b cycle tints / 3c available saturated palette. Open items updated.
+- **2026-06-05 — CSV schema drafted.** §11 now points to `journal-csv-schema-v3.md` (19 columns, 9 page types, full slot map, RFC 4180 formatting rules, sample rows, v2→v3 diff). Renderer constants (locked headings, streak box label, date line, free-space cue) are not stored per-row. Open item updated.
 - **2026-06-04 (update 2) — v3 icons + math.** Added cycle → icon mapping table to §6a (carried from v2, confirmed by Catherine). Noted Canva SVG designer source. Locked letter-to-self as the very last facing page, envelope in inside back cover. Added resources spread (later revised to 1 page) and blank page to end-matter. Total target 126.
 - **2026-06-04 — v3 created.** Fresh start. Broadened purpose (any recovery journey), gender-neutral framing, two-set color palette, 12-cycle flexible structure, coin iconography as subtle tie-in, letter-to-self tactile element, end goal = CSV.
 - **2026-06-03 — v2 locked.** 124 pages, 6×9 coil-bound, self-paced, recovery-anchored positioning. (Archived.)
