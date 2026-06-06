@@ -1,0 +1,14 @@
+{
+  "name": "ana-journal-renderer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ANA Journal v3 — CSV → HTML book scaffold (Lulu-ready PDF in a follow-up step)",
+  "type": "module",
+  "main": "render.js",
+  "bin": {
+    "ana-journal-render": "./render.js"
+  },
+  "scripts": {
+    "render": "node render.js"
+  }
+}

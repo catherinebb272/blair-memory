@@ -1,0 +1,19 @@
+page_num,cycle_num,page_in_cycle,page_type,section,line_art_id,art_id,tint_id,heading,subheading,body,affirmation,prompt_1,prompt_2,prompt_3,cue,page_label,status,notes
+1,,,intro,front,,,,,Welcome,,This is a journal for any kind of recovery journey. Move at your own pace. The date line is yours to fill in.,,,,,,,draft,p1 = logo + wordmark
+2,,,intro,front,,,,,Why this journal exists,,"This journal holds space for reflection — not prescriptions. Twelve cycles, paced by you. There is no wrong way to use it.",,,,,,,draft,welcome copy
+3,1,1,reflection,cycle,torii,,soft_sky,,,,I am allowed to start where I am.,What is one small thing I can name right now?,What would I tell a friend in my position?,,,Cycle 1-1,draft,
+4,1,2,reflection,cycle,torii,,soft_sky,,,,Stillness is a form of practice.,What am I avoiding by staying busy?,What does ""enough"" feel like today?,,,Cycle 1-2,draft,
+5,1,3,reflection,cycle,torii,,soft_sky,,,,The body keeps its own time.,Where in my body do I feel tension right now?,What does it need from me?,,,Cycle 1-3,draft,
+6,1,4,reflection,cycle,torii,,soft_sky,,,,I can ask for help without apology.,Who has shown up for me this week?,Who do I want to thank?,,,Cycle 1-4,draft,
+7,1,5,reflection,cycle,torii,,soft_sky,,,,Small progress is still progress.,What did I get done today?,What did I let myself not do?,,,Cycle 1-5,draft,
+8,1,6,reflection,cycle,torii,,soft_sky,,,,Naming a feeling is the first step past it.,Name the strongest feeling from the last 24 hours.,Where did I first notice it?,,,Cycle 1-6,draft,
+9,1,7,reflection,cycle,torii,,soft_sky,,,,I am allowed to rest before I am done.,What did I do this week that was just for me?,What do I want to protect next week?,,,Cycle 1-7,draft,
+10,1,8,goal,cycle,torii,,soft_sky,Setting an Intention,,,,"What is the smallest, kindest thing I can do for myself in the next seven entries?","What would make me feel 1% more like myself?",,,draft,
+11,1,9,recap_left,cycle,torii,recap_01_torii,soft_sky,What rises after,,,,,,,,,draft,full-bleed watercolor
+12,1,10,recap_right,cycle,,,soft_sky,,Looking Back at the Last 7 Entries,,,"What surprised me about this cycle?","What do I want to carry forward?",What do I want to release?,,draft,
+13,2,1,reflection,cycle,waterfall_lily,,soft_mint,,,,Falling is not failing.,What helped me land softly this week?,What would help me land more softly?,,,Cycle 2-1,draft,
+14,2,2,reflection,cycle,waterfall_lily,,soft_mint,,,,I can move at the speed of trust.,Where am I rushing?,Where would pacing help?,,,Cycle 2-2,draft,
+123,,,coin_cap,end,,,,,Coins,,"Twelve milestones. One community. apartnotalone.com",,,,,,,draft,11-coin grid
+124,,,letter,end,,,,,Letter to your future self,,"Write a letter to the version of you who will read this. Tuck it into the envelope taped to the inside back cover. The verso of that envelope is space for an Apart Not Alone reminder. Envelope size: #10 (4.125 x 9.5 in).",,,,,,,draft,envelope size spec
+125,,,resources,end,,,,,Resources,,"If you are in crisis: 988 (US Suicide & Crisis Lifeline). For substance use: SAMHSA National Helpline 1-800-662-4357. For ongoing support, talk to a licensed clinician. Apart Not Alone: apartnotalone.com",,,,,,,draft,
+126,,,blank,end,,,,,,,,,,,,,,draft,purpose TBD

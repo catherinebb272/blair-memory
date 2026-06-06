@@ -55,7 +55,8 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * **Marketing language:** "12 reflection cycles" or "84 entries, paced by you" — NEVER "90 days" (false advertising for self-paced book).
 * **Sister as layout consultant:** Catherine's sister is a former book designer, consulted on margin/bleed/type fit/coil-binding safety questions. Folded into v3 as decisions land.
 * **End goal:** CSV that drives production. Each row = one journal page.
-* **Open items (v3):** cover concept pick (3 options in v2 brief), color palette split (rich vs unsaturated), 84 affirmations content list, resources page copy, letter-to-self page copy, ANA/coins pitch copy, font licensing check, Lulu margin compliance check, watercolor mood board for recap art, CSV schema definition
+* **CSV schema (v3) — drafted 2026-06-05:** `documents/ana/journal/journal-csv-schema-v3.md`. 19 columns, 9 page types, 126 rows. Renderer constants (e.g., "Today's Thoughts", "Reflections", streak box label) are NOT in the CSV — renderer bakes them in. Master file approach (not per-template files) confirmed by Catherine 2026-06-05; renderer will filter by `page_type`. Awaiting Catherine review.
+* **Open items (v3):** cover concept pick (3 options in v2 brief), color palette split (rich vs unsaturated), 84 affirmations content list, 84 daily prompts (2 per page), resources page copy, letter-to-self page copy, ANA/coins pitch copy, font licensing check, Lulu margin compliance check, watercolor mood board for recap art, tint rotation sequence across 12 cycles
 * **Full brief:** `documents/ana/journal/journal-product-design-brief.v3.md` (active). Predecessors: v2 → `documents/ana/journal.v2-archive/journal-product-design-brief.v2.md`; v1 → `documents/ana/journal.v1-milestone-anchor-archive/journal-product-design-brief.v1-milestone-anchor.md`
 
 ### Plato's Closet (PC)

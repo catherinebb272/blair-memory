@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ANA Journal v3 — Book Preview</title>
+  <style>
+    :root {
+      --ink-accent: #003B88;
+      --ink-body: #000000;
+      --font-heading: "Architects Daughter", "Comic Sans MS", cursive;
+      --font-body: Avenir, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #888; }
+    body { font-family: var(--font-body); color: var(--ink-body); }
+    .book {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 0;
+    }
+    .page {
+      width: 6in;
+      height: 9in;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      page-break-after: always;
+      break-after: page;
+    }
+    .page.bleed { padding: 0; }
+    .page-inner {
+      position: absolute;
+      inset: 0.75in 0.5in 0.5in 0.75in;
+    }
+    .page.bleed .page-inner { inset: 0; }
+    .page-label {
+      position: absolute;
+      bottom: 0.18in;
+      right: 0.1in;
+      font-size: 9pt;
+      color: var(--ink-accent);
+      font-family: var(--font-heading);
+    }
+    h1.page-heading {
+      font-family: var(--font-heading);
+      color: var(--ink-accent);
+      font-size: 20pt;
+      margin: 0 0 0.18in 0;
+    }
+    h2.page-subheading {
+      font-family: var(--font-heading);
+      color: var(--ink-accent);
+      font-size: 12pt;
+      margin: 0.18in 0 0.08in 0;
+    }
+    .body-copy {
+      font-family: var(--font-body);
+      font-size: 11pt;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+    .intro-p1 { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 0.3in; }
+    .wordmark { font-family: var(--font-heading); color: var(--ink-accent); font-size: 36pt; }
+    .logo-mark { width: 1.2in; height: 1.2in; border: 1px dashed #888; display: flex; align-items: center; justify-content: center; color: #888; font-size: 8pt; }
+    .line-art { width: 0.8in; height: 0.8in; border: 1px dashed #888; }
+    .recap-art { position: absolute; inset: 0; border: 1px dashed #888; }
+    .reflection-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.12in; }
+    .date-line { font-family: var(--font-heading); color: var(--ink-accent); font-size: 10pt; }
+    .reflection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.12in; margin-bottom: 0.12in; }
+    .streak-box { border: 1px solid var(--ink-accent); padding: 0.1in; }
+    .streak-label { font-family: var(--font-heading); color: var(--ink-accent); font-size: 9pt; margin-bottom: 0.1in; }
+    .streak-input { height: 0.5in; border: 1px dashed #aaa; }
+    .affirmation-box { border: 1px solid var(--ink-accent); padding: 0.1in; display: flex; align-items: center; }
+    .affirmation { font-family: var(--font-body); font-size: 11pt; line-height: 1.35; }
+    .prompt { margin: 0.08in 0; }
+    .prompt-text { font-family: var(--font-body); font-size: 10pt; margin-bottom: 0.04in; }
+    .prompt-lines { min-height: 0.45in; border-bottom: 1px solid #999; }
+    .prompt-large .prompt-lines { min-height: 1.2in; }
+    .free-space { position: absolute; left: 0; right: 0; bottom: 0.3in; height: 2.2in; border-top: 1px solid var(--ink-accent); }
+    .dot-grid { width: 100%; height: 100%; background-image: radial-gradient(#888 0.5pt, transparent 0.5pt); background-size: 0.18in 0.18in; }
+    .free-space-cue { position: absolute; bottom: 0.1in; left: 0; right: 0; text-align: center; font-size: 8pt; color: #666; font-style: italic; }
+    .recap-caption { position: absolute; bottom: 0.2in; left: 0; right: 0; text-align: center; font-family: var(--font-heading); color: #fff; mix-blend-mode: difference; }
+    .coin-grid { width: 100%; height: 5.5in; border: 1px dashed #888; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.2in; padding: 0.4in; }
+    .blank-note { color: #aaa; font-style: italic; display: flex; align-items: center; justify-content: center; height: 100%; font-size: 9pt; }
+    .unknown-page { padding: 0.2in; color: red; font-family: monospace; }
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; }
+      .book { gap: 0; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="book">
+    
+<section class="page " data-page-type="intro" data-page-num="1">
+  <div class="page-inner" style="">
+    <div class="intro-p1">
+        <div class="logo-mark" data-asset="logo"></div>
+        <div class="wordmark">Still Here.</div>
+      </div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="intro" data-page-num="2">
+  <div class="page-inner" style="">
+    <h1 class="page-heading">Why this journal exists</h1>
+     <div class="body-copy">[welcome copy TBD]</div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="3">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">I am allowed to start where I am.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">What is one small thing I can name right now?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">What would I tell a friend in my position?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="4">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Stillness is a form of practice.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">What am I avoiding by staying busy?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">What does enough feel like today?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="5">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The body keeps its own time.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">Where in my body do I feel tension right now?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">What does it need from me?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="6">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">I can ask for help without apology.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">Who has shown up for me this week?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">Who do I want to thank?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="7">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Small progress is still progress.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">What did I get done today?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">What did I let myself not do?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="8">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Naming a feeling is the first step past it.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">Name the strongest feeling from the last 24 hours.</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">Where did I first notice it?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="9">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">I am allowed to rest before I am done.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">What did I do this week that was just for me?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">What do I want to protect next week?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="10">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">What is the smallest, kindest thing I can do for myself in the next seven entries?</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">What would make me feel 1% more like myself?</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="11">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_01_torii" title="recap art: recap_01_torii"></div>
+       <div class="recap-caption">What rises after</div>
+     </div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="12">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">What surprised me about this cycle?</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">What do I want to carry forward?</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">What do I want to release?</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="13">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Falling is not failing.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">What helped me land softly this week?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">What would help me land more softly?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="14">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">I can move at the speed of trust.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">Where am I rushing?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">Where would pacing help?</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="coin_cap" data-page-num="123">
+  <div class="page-inner" style="">
+    <h1 class="page-heading">Coins</h1>
+     <div class="coin-grid" data-asset="coin-grid-11">
+       <!-- 11-coin grid hard-coded image set goes here -->
+     </div>
+     <div class="body-copy">apartnotalone.com</div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="letter" data-page-num="124">
+  <div class="page-inner" style="">
+    <h1 class="page-heading">Letter to your future self</h1>
+     <div class="body-copy">[letter instructions]</div>
+     
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="resources" data-page-num="125">
+  <div class="page-inner" style="">
+    <h1 class="page-heading">Resources</h1>
+     <div class="body-copy">[crisis lines, professional help, ANA links]</div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="blank" data-page-num="126">
+  <div class="page-inner" style="">
+    <div class="blank-note">[blank page — purpose TBD]</div>
+    
+  </div>
+</section>
+  </div>
+</body>
+</html>
