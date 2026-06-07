@@ -1,0 +1,3645 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ANA Journal v3 — Book Preview</title>
+  <style>
+    :root {
+      --ink-accent: #003B88;
+      --ink-body: #000000;
+      --font-heading: "Architects Daughter", "Comic Sans MS", cursive;
+      --font-body: Avenir, "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #888; }
+    body { font-family: var(--font-body); color: var(--ink-body); }
+    .book {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 0;
+    }
+    .page {
+      width: 6in;
+      height: 9in;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      page-break-after: always;
+      break-after: page;
+    }
+    .page.bleed { padding: 0; }
+    .page-inner {
+      position: absolute;
+      inset: 0.75in 0.5in 0.5in 0.75in;
+    }
+    .page.bleed .page-inner { inset: 0; }
+    .page-label {
+      position: absolute;
+      bottom: 0.18in;
+      right: 0.1in;
+      font-size: 9pt;
+      color: var(--ink-accent);
+      font-family: var(--font-heading);
+    }
+    h1.page-heading {
+      font-family: var(--font-heading);
+      color: var(--ink-accent);
+      font-size: 20pt;
+      margin: 0 0 0.18in 0;
+    }
+    h2.page-subheading {
+      font-family: var(--font-heading);
+      color: var(--ink-accent);
+      font-size: 12pt;
+      margin: 0.18in 0 0.08in 0;
+    }
+    .body-copy {
+      font-family: var(--font-body);
+      font-size: 11pt;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+    .intro-p1 { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 0.3in; }
+    .wordmark { font-family: var(--font-heading); color: var(--ink-accent); font-size: 36pt; }
+    .logo-mark { width: 1.2in; height: 1.2in; border: 1px dashed #888; display: flex; align-items: center; justify-content: center; color: #888; font-size: 8pt; }
+    .line-art { width: 0.8in; height: 0.8in; border: 1px dashed #888; }
+    .recap-art { position: absolute; inset: 0; border: 1px dashed #888; }
+    .reflection-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.12in; }
+    .date-line { font-family: var(--font-heading); color: var(--ink-accent); font-size: 10pt; }
+    .reflection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.12in; margin-bottom: 0.12in; }
+    .streak-box { border: 1px solid var(--ink-accent); padding: 0.1in; }
+    .streak-label { font-family: var(--font-heading); color: var(--ink-accent); font-size: 9pt; margin-bottom: 0.1in; }
+    .streak-input { height: 0.5in; border: 1px dashed #aaa; }
+    .affirmation-box { border: 1px solid var(--ink-accent); padding: 0.1in; display: flex; align-items: center; }
+    .affirmation { font-family: var(--font-body); font-size: 11pt; line-height: 1.35; }
+    .prompt { margin: 0.08in 0; }
+    .prompt-text { font-family: var(--font-body); font-size: 10pt; margin-bottom: 0.04in; }
+    .prompt-lines { min-height: 0.45in; border-bottom: 1px solid #999; }
+    .prompt-large .prompt-lines { min-height: 1.2in; }
+    .free-space { position: absolute; left: 0; right: 0; bottom: 0.3in; height: 2.2in; border-top: 1px solid var(--ink-accent); }
+    .dot-grid { width: 100%; height: 100%; background-image: radial-gradient(#888 0.5pt, transparent 0.5pt); background-size: 0.18in 0.18in; }
+    .free-space-cue { position: absolute; bottom: 0.1in; left: 0; right: 0; text-align: center; font-size: 8pt; color: #666; font-style: italic; }
+    .recap-caption { position: absolute; bottom: 0.2in; left: 0; right: 0; text-align: center; font-family: var(--font-heading); color: #fff; mix-blend-mode: difference; }
+    .coin-grid { width: 100%; height: 5.5in; border: 1px dashed #888; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.2in; padding: 0.4in; }
+    .blank-note { color: #aaa; font-style: italic; display: flex; align-items: center; justify-content: center; height: 100%; font-size: 9pt; }
+    .unknown-page { padding: 0.2in; color: red; font-family: monospace; }
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; }
+      .book { gap: 0; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="book">
+    
+<section class="page " data-page-type="intro" data-page-num="1">
+  <div class="page-inner" style="">
+    <div class="intro-p1">
+        <div class="logo-mark" data-asset="logo"></div>
+        <div class="wordmark">Still Here.</div>
+      </div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="intro" data-page-num="2">
+  <div class="page-inner" style="">
+    <h1 class="page-heading">Why this journal exists</h1>
+     <div class="body-copy">This journal holds space for reflection — not prescriptions. Twelve cycles, paced by you. There is no wrong way to use it.</div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="3">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Today will be a great day</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="4">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are allowed to begin again</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="5">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The door is open. You walked through.</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="6">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Day one energy is overrated, just show up</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="7">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Small steps count, even tiny ones</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="8">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You made it here, that&#39;s not nothing</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="9">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Be patient with the new version of you</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 1-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="10">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="torii" title="line art: torii"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="11">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_01_torii" title="recap art: recap_01_torii"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="12">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="13">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Let it move through you, not stick</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="14">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You don&#39;t have to hold it all</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="15">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Stillness is allowed in motion</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="16">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Trust the pace of water</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="17">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can let go without losing</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="18">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Emotions are not a to-do list</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="19">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Flow returns, even after stillness</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 2-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="20">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="waterfall_lily" title="line art: waterfall_lily"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="21">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_02_waterfall" title="recap art: recap_02_waterfall"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="22">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="23">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="two_fish" title="line art: two_fish"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are not the only one carrying this</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 3-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="24">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="two_fish" title="line art: two_fish"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are not a burden, sorry</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 3-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="25">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="two_fish" title="line art: two_fish"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Someone out there is glad you exist</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 3-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="26">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="two_fish" title="line art: two_fish"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Asking for help is not weakness</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 3-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="27">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="two_fish" title="line art: two_fish"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can ask for help today</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 3-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="28">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="two_fish" title="line art: two_fish"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are allowed to need people</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 3-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="29">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="two_fish" title="line art: two_fish"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Together is a real kind of strong</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 3-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="30">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="two_fish" title="line art: two_fish"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="31">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_03_two" title="recap art: recap_03_two"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="32">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="33">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="stag" title="line art: stag"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Strength is not always loud</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 4-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="34">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="stag" title="line art: stag"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Slow and steady still arrives</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 4-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="35">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="stag" title="line art: stag"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are more rooted than you think</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 4-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="36">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="stag" title="line art: stag"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Quiet does not mean stuck</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 4-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="37">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="stag" title="line art: stag"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Calm is not a personality flaw</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 4-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="38">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="stag" title="line art: stag"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Groundedness is also a kind of brave</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 4-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="39">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="stag" title="line art: stag"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can be still and still be moving</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 4-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="40">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="stag" title="line art: stag"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="41">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_04_stag" title="recap art: recap_04_stag"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="42">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="43">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="kraken_lighthouse" title="line art: kraken_lighthouse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Not every wave is yours to meet</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 5-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="44">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="kraken_lighthouse" title="line art: kraken_lighthouse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can see it and still be okay</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 5-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="45">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="kraken_lighthouse" title="line art: kraken_lighthouse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Your brain is not a weather report</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 5-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="46">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="kraken_lighthouse" title="line art: kraken_lighthouse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Vigilance is not the same as panic</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 5-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="47">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="kraken_lighthouse" title="line art: kraken_lighthouse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You have weathered things before</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 5-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="48">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="kraken_lighthouse" title="line art: kraken_lighthouse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Your light does not have to be big</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 5-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="49">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="kraken_lighthouse" title="line art: kraken_lighthouse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can warn yourself and keep going</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 5-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="50">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="kraken_lighthouse" title="line art: kraken_lighthouse"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="51">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_05_kraken" title="recap art: recap_05_kraken"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="52">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="53">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="fox_snow" title="line art: fox_snow"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Solitude can be a kind of company</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 6-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="54">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="fox_snow" title="line art: fox_snow"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are warmer than the day looks</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 6-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="55">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="fox_snow" title="line art: fox_snow"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The long middle is also a place</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 6-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="56">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="fox_snow" title="line art: fox_snow"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Wisdom is allowed to arrive slowly</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 6-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="57">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="fox_snow" title="line art: fox_snow"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are still here, that matters</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 6-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="58">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="fox_snow" title="line art: fox_snow"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Alone is not the same as lonely, mostly</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 6-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="59">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="fox_snow" title="line art: fox_snow"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The snow melts, and so does this</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 6-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="60">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="fox_snow" title="line art: fox_snow"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="61">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_06_fox" title="recap art: recap_06_fox"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="62">
+  <div class="page-inner" style="background:#D6E4F2;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="63">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="rowing_pov" title="line art: rowing_pov"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Hustle is not the only valid pace</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 7-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="64">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="rowing_pov" title="line art: rowing_pov"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are the one holding the oar</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 7-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="65">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="rowing_pov" title="line art: rowing_pov"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Momentum counts, even in small</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 7-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="66">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="rowing_pov" title="line art: rowing_pov"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The view changes when you do</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 7-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="67">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="rowing_pov" title="line art: rowing_pov"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Effort is allowed to look different</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 7-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="68">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="rowing_pov" title="line art: rowing_pov"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can adjust your grip anytime</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 7-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="69">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="rowing_pov" title="line art: rowing_pov"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The boat moves because you do</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 7-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="70">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="rowing_pov" title="line art: rowing_pov"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="71">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_07_rowing" title="recap art: recap_07_rowing"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="72">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="73">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="resting_horse" title="line art: resting_horse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Rest is part of the work</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 8-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="74">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="resting_horse" title="line art: resting_horse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You have earned this pause</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 8-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="75">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="resting_horse" title="line art: resting_horse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Stopping is not the same as quitting</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 8-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="76">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="resting_horse" title="line art: resting_horse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Doing nothing is a skill</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 8-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="77">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="resting_horse" title="line art: resting_horse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are allowed to lay it down</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 8-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="78">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="resting_horse" title="line art: resting_horse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Your body knows what it needs</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 8-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="79">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="resting_horse" title="line art: resting_horse"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Stillness is a kind of progress</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 8-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="80">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="resting_horse" title="line art: resting_horse"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="81">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_08_resting" title="recap art: recap_08_resting"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="82">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="83">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="desert_landscape" title="line art: desert_landscape"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Vastness is not the same as empty</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 9-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="84">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="desert_landscape" title="line art: desert_landscape"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are not behind, you are mid-journey</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 9-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="85">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="desert_landscape" title="line art: desert_landscape"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The long haul is its own kind of brave</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 9-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="86">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="desert_landscape" title="line art: desert_landscape"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Enduring is something to be proud of</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 9-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="87">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="desert_landscape" title="line art: desert_landscape"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can carry less, even out here</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 9-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="88">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="desert_landscape" title="line art: desert_landscape"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Not everything has to be a sprint</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 9-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="89">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="desert_landscape" title="line art: desert_landscape"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The desert has its own kind of beauty</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 9-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="90">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="desert_landscape" title="line art: desert_landscape"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="91">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_09_desert" title="recap art: recap_09_desert"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="92">
+  <div class="page-inner" style="background:#F8DCCB;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="93">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="frog" title="line art: frog"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are springier than you feel</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 10-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="94">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="frog" title="line art: frog"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Small jumps still change the view</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 10-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="95">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="frog" title="line art: frog"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Personal growth is mostly a mess</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 10-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="96">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="frog" title="line art: frog"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are allowed to leap without warning</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 10-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="97">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="frog" title="line art: frog"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The old you is not a loss</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 10-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="98">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="frog" title="line art: frog"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Change is allowed to feel awkward</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 10-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="99">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="frog" title="line art: frog"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can land softer than you think</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 10-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="100">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="frog" title="line art: frog"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="101">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_10_frog" title="recap art: recap_10_frog"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="102">
+  <div class="page-inner" style="background:#D4ECDC;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="103">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="koi" title="line art: koi"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are still swimming, that matters</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 11-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="104">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="koi" title="line art: koi"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The current is real, and so are you</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 11-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="105">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="koi" title="line art: koi"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Persistence is its own kind of grace</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 11-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="106">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="koi" title="line art: koi"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Half a year of choosing yourself</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 11-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="107">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="koi" title="line art: koi"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Your resilience is honestly a little annoying</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 11-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="108">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="koi" title="line art: koi"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You can keep going without liking it</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 11-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="109">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="koi" title="line art: koi"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">The water moves, and you move with it</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 11-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="110">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="koi" title="line art: koi"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="111">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_11_koi" title="recap art: recap_11_koi"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="112">
+  <div class="page-inner" style="background:#F8EBC8;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="113">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="phoenix" title="line art: phoenix"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You rose, and you can rise again</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 12-1</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="114">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="phoenix" title="line art: phoenix"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are not the same as yesterday, still</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 12-2</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="115">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="phoenix" title="line art: phoenix"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Renewal is allowed without ceremony</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 12-3</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="116">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="phoenix" title="line art: phoenix"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">Fire transforms, it does not erase</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 12-4</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="117">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="phoenix" title="line art: phoenix"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You came back to the page, good</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 12-5</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="118">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="phoenix" title="line art: phoenix"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">This is not an ending, just a turn</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 12-6</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="reflection" data-page-num="119">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="reflection">
+       <div class="reflection-header">
+         <h1 class="page-heading">Today&#39;s Thoughts</h1>
+         <div class="date-line">[date: ____________]</div>
+         <div class="line-art" data-line-art-id="phoenix" title="line art: phoenix"></div>
+       </div>
+       <div class="reflection-grid">
+         <div class="streak-box">
+           <div class="streak-label">Current streak</div>
+           <div class="streak-input"></div>
+         </div>
+         <div class="affirmation-box">
+           <div class="affirmation">You are proof that endings reopen</div>
+         </div>
+       </div>
+       <h2 class="page-subheading">Reflections</h2>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 1]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="prompt">
+         <div class="prompt-text">[prompt 2]</div>
+         <div class="prompt-lines"></div>
+       </div>
+       <div class="free-space">
+         <div class="dot-grid"></div>
+         <div class="free-space-cue">Free space — use for written thoughts or creative expression.</div>
+       </div>
+     </div>
+    <div class="page-label">Cycle 12-7</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="goal" data-page-num="120">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <h1 class="page-heading">Setting an Intention</h1>
+     <div class="line-art" data-line-art-id="phoenix" title="line art: phoenix"></div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt prompt-large">
+       <div class="prompt-text">[goal prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page bleed" data-page-type="recap_left" data-page-num="121">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <div class="recap-spread-left">
+       <div class="recap-art" data-art-id="recap_12_phoenix" title="recap art: recap_12_phoenix"></div>
+       
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="recap_right" data-page-num="122">
+  <div class="page-inner" style="background:#DCE0F2;">
+    <h1 class="page-heading">Recap</h1>
+     <h2 class="page-subheading">Looking Back at the Last 7 Entries</h2>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 1]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 2]</div>
+       <div class="prompt-lines"></div>
+     </div>
+     <div class="prompt">
+       <div class="prompt-text">[recap prompt 3]</div>
+       <div class="prompt-lines"></div>
+     </div>
+    <div class="page-label">draft</div>
+  </div>
+</section>
+
+<section class="page " data-page-type="coin_cap" data-page-num="123">
+  <div class="page-inner" style="">
+    <h1 class="page-heading">Coins</h1>
+     <div class="coin-grid" data-asset="coin-grid-11">
+       <!-- 11-coin grid hard-coded image set goes here -->
+     </div>
+     <div class="body-copy">Twelve milestones. One community. apartnotalone.com</div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="letter" data-page-num="124">
+  <div class="page-inner" style="">
+    <h1 class="page-heading">Letter to your future self</h1>
+     <div class="body-copy">Write a letter to the version of you who will read this. Tuck it into the envelope taped to the inside back cover. The verso of that envelope is space for an Apart Not Alone reminder. Envelope size: #10 (4.125 x 9.5 in).</div>
+     
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="resources" data-page-num="125">
+  <div class="page-inner" style="">
+    <h1 class="page-heading">Resources</h1>
+     <div class="body-copy">If you are in crisis: 988 (US Suicide &amp; Crisis Lifeline). For substance use: SAMHSA National Helpline 1-800-662-4357. For ongoing support, talk to a licensed clinician. Apart Not Alone: apartnotalone.com</div>
+    
+  </div>
+</section>
+
+<section class="page " data-page-type="blank" data-page-num="126">
+  <div class="page-inner" style="">
+    <div class="blank-note">[blank page — purpose TBD]</div>
+    
+  </div>
+</section>
+  </div>
+</body>
+</html>

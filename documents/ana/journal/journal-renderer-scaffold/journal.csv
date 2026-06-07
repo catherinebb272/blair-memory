@@ -1,0 +1,127 @@
+page_num,cycle_num,page_in_cycle,page_type,section,line_art_id,art_id,tint_id,heading,subheading,body,affirmation,prompt_1,prompt_2,prompt_3,cue,page_label,draft,status; notes
+1,,,intro,front,,,,Welcome,,This is a journal for any kind of recovery journey. Move at your own pace. The date line is yours to fill in.,,,,,,,draft,p1 = logo + wordmark
+2,,,intro,front,,,,Why this journal exists,,"This journal holds space for reflection — not prescriptions. Twelve cycles, paced by you. There is no wrong way to use it.",,,,,,,draft,welcome copy TBD
+3,1,1,reflection,cycle,torii,,soft_sky,,,,Today will be a great day,,,,,Cycle 1-1,draft,affirmation: 'Today will be a great day'
+4,1,2,reflection,cycle,torii,,soft_sky,,,,You are allowed to begin again,,,,,Cycle 1-2,draft,affirmation: 'You are allowed to begin again'
+5,1,3,reflection,cycle,torii,,soft_sky,,,,The door is open. You walked through.,,,,,Cycle 1-3,draft,affirmation: 'The door is open. You walked through.'
+6,1,4,reflection,cycle,torii,,soft_sky,,,,"Day one energy is overrated, just show up",,,,,Cycle 1-4,draft,"affirmation: 'Day one energy is overrated, just show up'"
+7,1,5,reflection,cycle,torii,,soft_sky,,,,"Small steps count, even tiny ones",,,,,Cycle 1-5,draft,"affirmation: 'Small steps count, even tiny ones'"
+8,1,6,reflection,cycle,torii,,soft_sky,,,,"You made it here, that's not nothing",,,,,Cycle 1-6,draft,"affirmation: ""You made it here, that's not nothing"""
+9,1,7,reflection,cycle,torii,,soft_sky,,,,Be patient with the new version of you,,,,,Cycle 1-7,draft,affirmation: 'Be patient with the new version of you'
+10,1,8,goal,cycle,torii,,soft_sky,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+11,1,9,recap_left,cycle,torii,recap_01_torii,soft_sky,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+12,1,10,recap_right,cycle,,,soft_sky,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+13,2,1,reflection,cycle,waterfall_lily,,soft_mint,,,,"Let it move through you, not stick",,,,,Cycle 2-1,draft,"affirmation: 'Let it move through you, not stick'"
+14,2,2,reflection,cycle,waterfall_lily,,soft_mint,,,,You don't have to hold it all,,,,,Cycle 2-2,draft,"affirmation: ""You don't have to hold it all"""
+15,2,3,reflection,cycle,waterfall_lily,,soft_mint,,,,Stillness is allowed in motion,,,,,Cycle 2-3,draft,affirmation: 'Stillness is allowed in motion'
+16,2,4,reflection,cycle,waterfall_lily,,soft_mint,,,,Trust the pace of water,,,,,Cycle 2-4,draft,affirmation: 'Trust the pace of water'
+17,2,5,reflection,cycle,waterfall_lily,,soft_mint,,,,You can let go without losing,,,,,Cycle 2-5,draft,affirmation: 'You can let go without losing'
+18,2,6,reflection,cycle,waterfall_lily,,soft_mint,,,,Emotions are not a to-do list,,,,,Cycle 2-6,draft,affirmation: 'Emotions are not a to-do list'
+19,2,7,reflection,cycle,waterfall_lily,,soft_mint,,,,"Flow returns, even after stillness",,,,,Cycle 2-7,draft,"affirmation: 'Flow returns, even after stillness'"
+20,2,8,goal,cycle,waterfall_lily,,soft_mint,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+21,2,9,recap_left,cycle,waterfall_lily,recap_02_waterfall,soft_mint,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+22,2,10,recap_right,cycle,,,soft_mint,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+23,3,1,reflection,cycle,two_fish,,soft_periwinkle,,,,You are not the only one carrying this,,,,,Cycle 3-1,draft,affirmation: 'You are not the only one carrying this'
+24,3,2,reflection,cycle,two_fish,,soft_periwinkle,,,,"You are not a burden, sorry",,,,,Cycle 3-2,draft,"affirmation: 'You are not a burden, sorry'"
+25,3,3,reflection,cycle,two_fish,,soft_periwinkle,,,,Someone out there is glad you exist,,,,,Cycle 3-3,draft,affirmation: 'Someone out there is glad you exist'
+26,3,4,reflection,cycle,two_fish,,soft_periwinkle,,,,Asking for help is not weakness,,,,,Cycle 3-4,draft,affirmation: 'Asking for help is not weakness'
+27,3,5,reflection,cycle,two_fish,,soft_periwinkle,,,,You can ask for help today,,,,,Cycle 3-5,draft,affirmation: 'You can ask for help today'
+28,3,6,reflection,cycle,two_fish,,soft_periwinkle,,,,You are allowed to need people,,,,,Cycle 3-6,draft,affirmation: 'You are allowed to need people'
+29,3,7,reflection,cycle,two_fish,,soft_periwinkle,,,,Together is a real kind of strong,,,,,Cycle 3-7,draft,affirmation: 'Together is a real kind of strong'
+30,3,8,goal,cycle,two_fish,,soft_periwinkle,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+31,3,9,recap_left,cycle,two_fish,recap_03_two,soft_periwinkle,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+32,3,10,recap_right,cycle,,,soft_periwinkle,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+33,4,1,reflection,cycle,stag,,soft_mint,,,,Strength is not always loud,,,,,Cycle 4-1,draft,affirmation: 'Strength is not always loud'
+34,4,2,reflection,cycle,stag,,soft_mint,,,,Slow and steady still arrives,,,,,Cycle 4-2,draft,affirmation: 'Slow and steady still arrives'
+35,4,3,reflection,cycle,stag,,soft_mint,,,,You are more rooted than you think,,,,,Cycle 4-3,draft,affirmation: 'You are more rooted than you think'
+36,4,4,reflection,cycle,stag,,soft_mint,,,,Quiet does not mean stuck,,,,,Cycle 4-4,draft,affirmation: 'Quiet does not mean stuck'
+37,4,5,reflection,cycle,stag,,soft_mint,,,,Calm is not a personality flaw,,,,,Cycle 4-5,draft,affirmation: 'Calm is not a personality flaw'
+38,4,6,reflection,cycle,stag,,soft_mint,,,,Groundedness is also a kind of brave,,,,,Cycle 4-6,draft,affirmation: 'Groundedness is also a kind of brave'
+39,4,7,reflection,cycle,stag,,soft_mint,,,,You can be still and still be moving,,,,,Cycle 4-7,draft,affirmation: 'You can be still and still be moving'
+40,4,8,goal,cycle,stag,,soft_mint,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+41,4,9,recap_left,cycle,stag,recap_04_stag,soft_mint,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+42,4,10,recap_right,cycle,,,soft_mint,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+43,5,1,reflection,cycle,kraken_lighthouse,,soft_periwinkle,,,,Not every wave is yours to meet,,,,,Cycle 5-1,draft,affirmation: 'Not every wave is yours to meet'
+44,5,2,reflection,cycle,kraken_lighthouse,,soft_periwinkle,,,,You can see it and still be okay,,,,,Cycle 5-2,draft,affirmation: 'You can see it and still be okay'
+45,5,3,reflection,cycle,kraken_lighthouse,,soft_periwinkle,,,,Your brain is not a weather report,,,,,Cycle 5-3,draft,affirmation: 'Your brain is not a weather report'
+46,5,4,reflection,cycle,kraken_lighthouse,,soft_periwinkle,,,,Vigilance is not the same as panic,,,,,Cycle 5-4,draft,affirmation: 'Vigilance is not the same as panic'
+47,5,5,reflection,cycle,kraken_lighthouse,,soft_periwinkle,,,,You have weathered things before,,,,,Cycle 5-5,draft,affirmation: 'You have weathered things before'
+48,5,6,reflection,cycle,kraken_lighthouse,,soft_periwinkle,,,,Your light does not have to be big,,,,,Cycle 5-6,draft,affirmation: 'Your light does not have to be big'
+49,5,7,reflection,cycle,kraken_lighthouse,,soft_periwinkle,,,,You can warn yourself and keep going,,,,,Cycle 5-7,draft,affirmation: 'You can warn yourself and keep going'
+50,5,8,goal,cycle,kraken_lighthouse,,soft_periwinkle,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+51,5,9,recap_left,cycle,kraken_lighthouse,recap_05_kraken,soft_periwinkle,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+52,5,10,recap_right,cycle,,,soft_periwinkle,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+53,6,1,reflection,cycle,fox_snow,,soft_sky,,,,Solitude can be a kind of company,,,,,Cycle 6-1,draft,affirmation: 'Solitude can be a kind of company'
+54,6,2,reflection,cycle,fox_snow,,soft_sky,,,,You are warmer than the day looks,,,,,Cycle 6-2,draft,affirmation: 'You are warmer than the day looks'
+55,6,3,reflection,cycle,fox_snow,,soft_sky,,,,The long middle is also a place,,,,,Cycle 6-3,draft,affirmation: 'The long middle is also a place'
+56,6,4,reflection,cycle,fox_snow,,soft_sky,,,,Wisdom is allowed to arrive slowly,,,,,Cycle 6-4,draft,affirmation: 'Wisdom is allowed to arrive slowly'
+57,6,5,reflection,cycle,fox_snow,,soft_sky,,,,"You are still here, that matters",,,,,Cycle 6-5,draft,"affirmation: 'You are still here, that matters'"
+58,6,6,reflection,cycle,fox_snow,,soft_sky,,,,"Alone is not the same as lonely, mostly",,,,,Cycle 6-6,draft,"affirmation: 'Alone is not the same as lonely, mostly'"
+59,6,7,reflection,cycle,fox_snow,,soft_sky,,,,"The snow melts, and so does this",,,,,Cycle 6-7,draft,"affirmation: 'The snow melts, and so does this'"
+60,6,8,goal,cycle,fox_snow,,soft_sky,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+61,6,9,recap_left,cycle,fox_snow,recap_06_fox,soft_sky,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+62,6,10,recap_right,cycle,,,soft_sky,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+63,7,1,reflection,cycle,rowing_pov,,soft_peach,,,,Hustle is not the only valid pace,,,,,Cycle 7-1,draft,affirmation: 'Hustle is not the only valid pace'
+64,7,2,reflection,cycle,rowing_pov,,soft_peach,,,,You are the one holding the oar,,,,,Cycle 7-2,draft,affirmation: 'You are the one holding the oar'
+65,7,3,reflection,cycle,rowing_pov,,soft_peach,,,,"Momentum counts, even in small",,,,,Cycle 7-3,draft,"affirmation: 'Momentum counts, even in small'"
+66,7,4,reflection,cycle,rowing_pov,,soft_peach,,,,The view changes when you do,,,,,Cycle 7-4,draft,affirmation: 'The view changes when you do'
+67,7,5,reflection,cycle,rowing_pov,,soft_peach,,,,Effort is allowed to look different,,,,,Cycle 7-5,draft,affirmation: 'Effort is allowed to look different'
+68,7,6,reflection,cycle,rowing_pov,,soft_peach,,,,You can adjust your grip anytime,,,,,Cycle 7-6,draft,affirmation: 'You can adjust your grip anytime'
+69,7,7,reflection,cycle,rowing_pov,,soft_peach,,,,The boat moves because you do,,,,,Cycle 7-7,draft,affirmation: 'The boat moves because you do'
+70,7,8,goal,cycle,rowing_pov,,soft_peach,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+71,7,9,recap_left,cycle,rowing_pov,recap_07_rowing,soft_peach,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+72,7,10,recap_right,cycle,,,soft_peach,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+73,8,1,reflection,cycle,resting_horse,,soft_butter,,,,Rest is part of the work,,,,,Cycle 8-1,draft,affirmation: 'Rest is part of the work'
+74,8,2,reflection,cycle,resting_horse,,soft_butter,,,,You have earned this pause,,,,,Cycle 8-2,draft,affirmation: 'You have earned this pause'
+75,8,3,reflection,cycle,resting_horse,,soft_butter,,,,Stopping is not the same as quitting,,,,,Cycle 8-3,draft,affirmation: 'Stopping is not the same as quitting'
+76,8,4,reflection,cycle,resting_horse,,soft_butter,,,,Doing nothing is a skill,,,,,Cycle 8-4,draft,affirmation: 'Doing nothing is a skill'
+77,8,5,reflection,cycle,resting_horse,,soft_butter,,,,You are allowed to lay it down,,,,,Cycle 8-5,draft,affirmation: 'You are allowed to lay it down'
+78,8,6,reflection,cycle,resting_horse,,soft_butter,,,,Your body knows what it needs,,,,,Cycle 8-6,draft,affirmation: 'Your body knows what it needs'
+79,8,7,reflection,cycle,resting_horse,,soft_butter,,,,Stillness is a kind of progress,,,,,Cycle 8-7,draft,affirmation: 'Stillness is a kind of progress'
+80,8,8,goal,cycle,resting_horse,,soft_butter,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+81,8,9,recap_left,cycle,resting_horse,recap_08_resting,soft_butter,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+82,8,10,recap_right,cycle,,,soft_butter,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+83,9,1,reflection,cycle,desert_landscape,,soft_peach,,,,Vastness is not the same as empty,,,,,Cycle 9-1,draft,affirmation: 'Vastness is not the same as empty'
+84,9,2,reflection,cycle,desert_landscape,,soft_peach,,,,"You are not behind, you are mid-journey",,,,,Cycle 9-2,draft,"affirmation: 'You are not behind, you are mid-journey'"
+85,9,3,reflection,cycle,desert_landscape,,soft_peach,,,,The long haul is its own kind of brave,,,,,Cycle 9-3,draft,affirmation: 'The long haul is its own kind of brave'
+86,9,4,reflection,cycle,desert_landscape,,soft_peach,,,,Enduring is something to be proud of,,,,,Cycle 9-4,draft,affirmation: 'Enduring is something to be proud of'
+87,9,5,reflection,cycle,desert_landscape,,soft_peach,,,,"You can carry less, even out here",,,,,Cycle 9-5,draft,"affirmation: 'You can carry less, even out here'"
+88,9,6,reflection,cycle,desert_landscape,,soft_peach,,,,Not everything has to be a sprint,,,,,Cycle 9-6,draft,affirmation: 'Not everything has to be a sprint'
+89,9,7,reflection,cycle,desert_landscape,,soft_peach,,,,The desert has its own kind of beauty,,,,,Cycle 9-7,draft,affirmation: 'The desert has its own kind of beauty'
+90,9,8,goal,cycle,desert_landscape,,soft_peach,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+91,9,9,recap_left,cycle,desert_landscape,recap_09_desert,soft_peach,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+92,9,10,recap_right,cycle,,,soft_peach,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+93,10,1,reflection,cycle,frog,,soft_mint,,,,You are springier than you feel,,,,,Cycle 10-1,draft,affirmation: 'You are springier than you feel'
+94,10,2,reflection,cycle,frog,,soft_mint,,,,Small jumps still change the view,,,,,Cycle 10-2,draft,affirmation: 'Small jumps still change the view'
+95,10,3,reflection,cycle,frog,,soft_mint,,,,Personal growth is mostly a mess,,,,,Cycle 10-3,draft,affirmation: 'Personal growth is mostly a mess'
+96,10,4,reflection,cycle,frog,,soft_mint,,,,You are allowed to leap without warning,,,,,Cycle 10-4,draft,affirmation: 'You are allowed to leap without warning'
+97,10,5,reflection,cycle,frog,,soft_mint,,,,The old you is not a loss,,,,,Cycle 10-5,draft,affirmation: 'The old you is not a loss'
+98,10,6,reflection,cycle,frog,,soft_mint,,,,Change is allowed to feel awkward,,,,,Cycle 10-6,draft,affirmation: 'Change is allowed to feel awkward'
+99,10,7,reflection,cycle,frog,,soft_mint,,,,You can land softer than you think,,,,,Cycle 10-7,draft,affirmation: 'You can land softer than you think'
+100,10,8,goal,cycle,frog,,soft_mint,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+101,10,9,recap_left,cycle,frog,recap_10_frog,soft_mint,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+102,10,10,recap_right,cycle,,,soft_mint,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+103,11,1,reflection,cycle,koi,,soft_butter,,,,"You are still swimming, that matters",,,,,Cycle 11-1,draft,"affirmation: 'You are still swimming, that matters'"
+104,11,2,reflection,cycle,koi,,soft_butter,,,,"The current is real, and so are you",,,,,Cycle 11-2,draft,"affirmation: 'The current is real, and so are you'"
+105,11,3,reflection,cycle,koi,,soft_butter,,,,Persistence is its own kind of grace,,,,,Cycle 11-3,draft,affirmation: 'Persistence is its own kind of grace'
+106,11,4,reflection,cycle,koi,,soft_butter,,,,Half a year of choosing yourself,,,,,Cycle 11-4,draft,affirmation: 'Half a year of choosing yourself'
+107,11,5,reflection,cycle,koi,,soft_butter,,,,Your resilience is honestly a little annoying,,,,,Cycle 11-5,draft,affirmation: 'Your resilience is honestly a little annoying'
+108,11,6,reflection,cycle,koi,,soft_butter,,,,You can keep going without liking it,,,,,Cycle 11-6,draft,affirmation: 'You can keep going without liking it'
+109,11,7,reflection,cycle,koi,,soft_butter,,,,"The water moves, and you move with it",,,,,Cycle 11-7,draft,"affirmation: 'The water moves, and you move with it'"
+110,11,8,goal,cycle,koi,,soft_butter,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+111,11,9,recap_left,cycle,koi,recap_11_koi,soft_butter,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+112,11,10,recap_right,cycle,,,soft_butter,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+113,12,1,reflection,cycle,phoenix,,soft_periwinkle,,,,"You rose, and you can rise again",,,,,Cycle 12-1,draft,"affirmation: 'You rose, and you can rise again'"
+114,12,2,reflection,cycle,phoenix,,soft_periwinkle,,,,"You are not the same as yesterday, still",,,,,Cycle 12-2,draft,"affirmation: 'You are not the same as yesterday, still'"
+115,12,3,reflection,cycle,phoenix,,soft_periwinkle,,,,Renewal is allowed without ceremony,,,,,Cycle 12-3,draft,affirmation: 'Renewal is allowed without ceremony'
+116,12,4,reflection,cycle,phoenix,,soft_periwinkle,,,,"Fire transforms, it does not erase",,,,,Cycle 12-4,draft,"affirmation: 'Fire transforms, it does not erase'"
+117,12,5,reflection,cycle,phoenix,,soft_periwinkle,,,,"You came back to the page, good",,,,,Cycle 12-5,draft,"affirmation: 'You came back to the page, good'"
+118,12,6,reflection,cycle,phoenix,,soft_periwinkle,,,,"This is not an ending, just a turn",,,,,Cycle 12-6,draft,"affirmation: 'This is not an ending, just a turn'"
+119,12,7,reflection,cycle,phoenix,,soft_periwinkle,,,,You are proof that endings reopen,,,,,Cycle 12-7,draft,affirmation: 'You are proof that endings reopen'
+120,12,8,goal,cycle,phoenix,,soft_periwinkle,Setting an Intention,,,,,,,,draft,draft,goal prompt 1+2 TBD
+121,12,9,recap_left,cycle,phoenix,recap_12_phoenix,soft_periwinkle,,,,,,,,,draft,draft,full-bleed watercolor; art source TBD
+122,12,10,recap_right,cycle,,,soft_periwinkle,,Looking Back at the Last 7 Entries,,,,,,,draft,draft,recap prompts 1+2+3 TBD
+123,,,coin_cap,end,,,,Coins,,Twelve milestones. One community. apartnotalone.com,,,,,,,draft,11-coin grid hard-coded
+124,,,letter,end,,,,Letter to your future self,,Write a letter to the version of you who will read this. Tuck it into the envelope taped to the inside back cover. The verso of that envelope is space for an Apart Not Alone reminder. Envelope size: #10 (4.125 x 9.5 in).,,,,,,,draft,envelope size spec
+125,,,resources,end,,,,Resources,,"If you are in crisis: 988 (US Suicide & Crisis Lifeline). For substance use: SAMHSA National Helpline 1-800-662-4357. For ongoing support, talk to a licensed clinician. Apart Not Alone: apartnotalone.com",,,,,,,draft,crisis + ANA links
+126,,,blank,end,,,,,,,,,,,,,draft,purpose TBD
