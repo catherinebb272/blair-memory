@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-05T00:49:55.405Z",
+  "updatedAt": "2026-06-07T23:28:53.065Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -73,18 +73,20 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# Memory - April 2, 2026 ## Today's Work ### Discord Training Module (03-connect-discord.html) - Reviewed user's heyron-tutorial at https://catherinebb272.github.io/heyron-tutorial/03-connect-discord.html - Cross-referenced with official OpenClaw docs - Identified key issues: 1. Pairing code mystery — users don't understand where it comes from 2. groupPolicy buried in troubleshooting — should be a required step 3. Missing server privacy settings (enable DMs for pairing) - Rewrote module with fixes: - Added \"What About That Pairing Code?\" explainer box - Moved groupPolicy to main setup flow (critical step) - Added Server Privacy Settings step - Added Developer Portal explanati",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-04-17T21:36:28.786Z",
+      "lastRecalledAt": "2026-06-07T15:29:29.270Z",
       "queryHashes": [
-        "626666369489"
+        "626666369489",
+        "f1d3ff54ff40"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-06-07"
       ],
       "conceptTags": [
         "03-connect-discord.html",
@@ -210,25 +212,27 @@
       "endLine": 176,
       "source": "memory",
       "snippet": "Two years already! Wow! That is truly impressive. It represents a dedication to living a healthy life. Here's to the next chapter. Apart Not Alone --- ## 3 YEAR COIN (Platinum Tier) **Tone:** Big milestone—culmination of bronze, silver, gold journey **Script:** Three years. Platinum level. That's extraordinary. You've gone through seasons of hard work, tough days, and victories. This coin represents the whole journey—every step, every milestone, every ounce of effort. Hot damn. You did that. Apart Not Alone --- ## Voice Notes for Calligraphic Cards **Key phrases to capture in handwriting:** - \"Hot damn!\" – signature exclamation, high energy - \"You are amazing\" – direct affirmatio",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
+      "lastRecalledAt": "2026-06-07T15:29:29.268Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
         "706aa83977f7",
         "837961e215db",
-        "29fdb6f4553f"
+        "29fdb6f4553f",
+        "6a129c354fd1"
       ],
       "recallDays": [
         "2026-04-22",
         "2026-05-10",
         "2026-05-11",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-06-07"
       ],
       "conceptTags": [
         "two",
@@ -645,24 +649,26 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-05-11 ## Social Media Automation - Sober Life Expectations v Reality Series Catherine wants to create a series of social media posts called \"Sober Life Expectations v Reality\". - Template concept: Left side shows expectations (e.g., \"Wake up early, eat clean, do yoga\"), right side shows reality (e.g., \"Wake up late, eat snacks, watch trash TV\"), ending with \"I'll take the win\" - Brainstormed 6 examples covering: work productivity, home maintenance, patience with others, learning new skills, and meal prep - Saved ideas in `ana/social_media_ideas.md` with screen text and caption for each - Note: Blair cannot directly use Canva, but will prepare text content that Catherine can copy/p",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T15:35:51.351Z",
-      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "lastRecalledAt": "2026-06-07T22:19:45.777Z",
       "queryHashes": [
         "c49bc3dfde3e",
         "29fdb6f4553f",
         "9907211e386a",
         "e67681840b0e",
-        "5914a007eae2"
+        "5914a007eae2",
+        "8c8efa6008e2"
       ],
       "recallDays": [
         "2026-05-11",
         "2026-05-14",
-        "2026-05-25"
+        "2026-05-25",
+        "2026-06-07"
       ],
       "conceptTags": [
         "e.g",
@@ -779,23 +785,25 @@
       "endLine": 116,
       "source": "memory",
       "snippet": "- Emailed to Catherine via AgentMail --- ## Etsy Review Reminder — AUTOMATED ### Setup - OpenClaw cron job: Mon/Wed/Fri at 2 PM UTC (9 AM Central) - Sends Discord DM to Catherine - Removed old Linux crontab entry - Tracking: `etsy-review-tracking.md` ### Status - Jade's review: COMPLETE (Drew posted reply 2026-03-13) - No pending replies --- ## GitHub Backup System — VERIFIED ### Status - Nightly backups working to `memory-backup/` folder - Last backup: 2026-03-12 22:45 UTC - Deleted orphaned `memory-backups/` folder - TOOLS.md updated with correct cron info --- ## Key Files Created/Modified Today | File | Location | Purpose | |------|----------|---------| | `index-standalone.html`",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-12T00:24:53.236Z",
-      "lastRecalledAt": "2026-05-25T13:35:58.021Z",
+      "lastRecalledAt": "2026-06-07T23:28:53.065Z",
       "queryHashes": [
         "a1431f3061ba",
         "545a9d9f8b7c",
         "96d163102668",
-        "9907211e386a"
+        "9907211e386a",
+        "96c5283df7ab"
       ],
       "recallDays": [
         "2026-05-12",
         "2026-05-13",
-        "2026-05-25"
+        "2026-05-25",
+        "2026-06-07"
       ],
       "conceptTags": [
         "backup",
@@ -846,23 +854,25 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-09 Daily Log ## Etsy Check-in (Saturday) - 1 order: Yasmina Moore-Foster - 1 Year Phoenix Rising, ship by May 12, gift + gift teaser - No new messages - No new reviews - Posted Discord DM to Drew with order details + handwritten note suggestion - Included Mother's Day reminder ## Browser Tool Test - Tried to log into Etsy but Etsy blocked the VPS IP (bot detection) - Will need to find alternative method ## Notes -",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "lastRecalledAt": "2026-06-07T15:29:29.270Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "a91c53fdde37",
         "96d163102668",
         "9907211e386a",
-        "5914a007eae2"
+        "5914a007eae2",
+        "f1d3ff54ff40"
       ],
       "recallDays": [
         "2026-05-13",
-        "2026-05-25"
+        "2026-05-25",
+        "2026-06-07"
       ],
       "conceptTags": [
         "check-in",
@@ -1010,13 +1020,13 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# 2026-05-13 — Etsy Optimization Deep Dive ## Session Summary ### What We Did **1. Etsy Check-In (Wed)** - No new orders, messages, or reviews - Posted update to #general and DM'd Drew — enjoy the breathing room **2. Compiled 30-Day Stats** - Created `documents/ana/etsy-stats-60-day.md` - Storewide: 607 visits (-13% YoY), 32 orders, 5.3% conversion, $672 revenue - Added all 10 product rows with visits, orders, conversion rates **3. Conversion Analysis** - Compared lifetime (Mar) vs 30-day (May) conversion - Key finding: New customer acquisition broken (Month 1-6 at 0% or near-zero) - Repeat customers thriving (2-3 Year up significantly) **4. Competitor Research: TheAchievemint** - Pull",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 7,
+      "totalScore": 8,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T02:32:14.988Z",
-      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
+      "lastRecalledAt": "2026-06-07T15:29:29.270Z",
       "queryHashes": [
         "29fdb6f4553f",
         "b4858c274d60",
@@ -1024,12 +1034,14 @@
         "0c1ca8ff538b",
         "9907211e386a",
         "5914a007eae2",
-        "b8dfdc61945a"
+        "b8dfdc61945a",
+        "f1d3ff54ff40"
       ],
       "recallDays": [
         "2026-05-14",
         "2026-05-25",
-        "2026-06-02"
+        "2026-06-02",
+        "2026-06-07"
       ],
       "conceptTags": [
         "check-in",
@@ -1084,18 +1096,20 @@
       "endLine": 84,
       "source": "memory",
       "snippet": "- Started with 300 credits, down to 210 after uploads/testing - Static site uses minimal credits (bandwidth only) - Manual deploys preferred over builds to conserve credits --- ## AgentMail Email System — FIXED ### Problem - Old API key expired - Wrong endpoint being used (`/v1/` instead of `/v0/`) - Incorrect request format ### Solution - New API key: `am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a` - Correct endpoint: `POST /v0/inboxes/{inbox_id}/messages/send` - Proper format: `{\"to\": \"...\", \"subject\": \"...\", \"body\": {\"text\": \"...\"}}` - Deleted orphaned inbox `selfishcompetition741@agentmail.to` - Confirmed working: sent test email + PDF attachment successfully",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T14:03:44.075Z",
-      "lastRecalledAt": "2026-05-14T14:03:44.075Z",
+      "lastRecalledAt": "2026-06-07T23:28:53.065Z",
       "queryHashes": [
-        "b4858c274d60"
+        "b4858c274d60",
+        "96c5283df7ab"
       ],
       "recallDays": [
-        "2026-05-14"
+        "2026-05-14",
+        "2026-06-07"
       ],
       "conceptTags": [
         "uploads/testing",
@@ -1242,21 +1256,23 @@
       "endLine": 76,
       "source": "memory",
       "snippet": "- All-in-one: keyword research, product research, shop operations - Marketing & automation (email, Pinterest) - 800K+ users ### EverBee - Hobby (Free), Growth ($19.99/mo), Business ($69/mo) - Keyword Score (built-in ranking metric) - Product analytics with conversion data - Trend tracking up to 24 months --- ## Created Research Document - Created `documents/ana/etsy-seller-tools-comparison.md` with full comparison of both design tools and keyword tools - Initially pushed to blair-memory repo, then moved to blair-documents (ANA folder) per user's request that blair-memory is only for memory backups - File location: `catherinebb272/blair-documents/documents/ana/etsy-seller-tools-comparison",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:35:58.021Z",
-      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
+      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
       "queryHashes": [
         "9907211e386a",
         "5914a007eae2",
-        "b8dfdc61945a"
+        "b8dfdc61945a",
+        "2543d2c430ae"
       ],
       "recallDays": [
         "2026-05-25",
-        "2026-06-02"
+        "2026-06-02",
+        "2026-06-07"
       ],
       "conceptTags": [
         "backup",
@@ -1276,18 +1292,22 @@
       "endLine": 11,
       "source": "memory",
       "snippet": "# Daily Memory Log - May 17, 2026 ## ANA / Business - **Midjourney abandoned** — couldn't get reliable repeatable look for greeting card series. Kept defaulting to \"cute\" aesthetic (heart-shaped faces, tiny noses, big eyes). $10 spent, not worth fighting. - **Lost designs** — had 4 good designs from ChatGPT/CoPilot but lost them when had to restart and regenerate. - **Barbara unavailable** — can't do artwork right now, so AI generation is the path forward. - **Printify** — account set up, connected to Etsy store. - **Product decision:** 5x7 folded greeting cards, matte paper, envelope included, prefolded (to stay in small letter shipping rate per YouTube advice). ## Personal - Catherine he",
-      "recallCount": 1,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:36:02.903Z",
-      "lastRecalledAt": "2026-05-25T13:36:02.903Z",
+      "lastRecalledAt": "2026-06-07T15:29:29.268Z",
       "queryHashes": [
-        "e67681840b0e"
+        "e67681840b0e",
+        "e32e6bf831d8",
+        "2543d2c430ae",
+        "6a129c354fd1"
       ],
       "recallDays": [
-        "2026-05-25"
+        "2026-05-25",
+        "2026-06-07"
       ],
       "conceptTags": [
         "gpt",
@@ -1369,20 +1389,22 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# May 25, 2026 ## Composio API Issues - Composio had a massive security breach on 5/23/26 - Previous API key was deleted by Composio - Tried using Catherine's new project API key: `ak_DvFKZiWcCtmvm3CWv6fi` - Updated the key in `.env` - CLI commands work locally but the container can't reach api.composio.dev (DNS/network block) - **Result:** Cannot use Composio tools (browser, image generation, etc.) from this environment until network issue is resolved ## Sober Birthday Greeting Cards - Etsy Listings - Created `documents/ana/sober-birthday-cards.csv` for Etsy bulk upload - 12 monthly cards (SBC-01 through SBC-12) - Title format: \"Sobriety Anniversary Card [Month] [Flower] - Downloadable",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T16:37:44.083Z",
-      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
+      "lastRecalledAt": "2026-06-07T22:19:45.777Z",
       "queryHashes": [
         "f6454ddbeec7",
-        "b8dfdc61945a"
+        "b8dfdc61945a",
+        "8c8efa6008e2"
       ],
       "recallDays": [
         "2026-05-29",
-        "2026-06-02"
+        "2026-06-02",
+        "2026-06-07"
       ],
       "conceptTags": [
         "network",
@@ -1402,18 +1424,20 @@
       "endLine": 70,
       "source": "memory",
       "snippet": "- \"mental health card\" dominates globally (high volume) - \"sobriety card\" is lowest - Feb 2026 had major spike for \"mental health card\" ### Erank Keyword Data - \"sobriety gift\": 2,560 searches/month (Etsy's top term) - \"sober gift\": 1,260 searches/month - \"mental health gift\": <20 searches (nearly invisible on Etsy!) - **Key insight:** Google and Etsy are opposite — Etsy buyers search \"sobriety\", not \"mental health\" ### Erank Top Listings - Viewed \"Mental Health Card\" and broader \"Mental Health\" listings - Modest revenue: $204-$869 over 500+ days (long-tail, low volume) - Humor/sarcastic cards perform better than serious ones - PaperPawsCo is a major player in this space ### Strategic Ins",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T16:37:44.083Z",
-      "lastRecalledAt": "2026-05-29T16:37:44.083Z",
+      "lastRecalledAt": "2026-06-07T15:29:29.268Z",
       "queryHashes": [
-        "f6454ddbeec7"
+        "f6454ddbeec7",
+        "6a129c354fd1"
       ],
       "recallDays": [
-        "2026-05-29"
+        "2026-05-29",
+        "2026-06-07"
       ],
       "conceptTags": [
         "searches/month",
@@ -1557,18 +1581,20 @@
       "endLine": 32,
       "source": "memory",
       "snippet": "# 2026-06-02 — Journal Product Research for ANA ## Session Catherine still scoping digital/print product line for ANA. Asked for research on sobriety journals — what features people use, what they want. ## What I did - Researched 7+ top sobriety journals across reviews and roundups - Pulled Reddit search signals (r/stopdrinking, r/SoberCurious — direct fetches blocked, used search snippets) - Looked at Etsy printable/digital market - Wrote synthesis to `documents/ana/journal-product-research.md` ## Key takeaways I flagged 1. **Secular positioning is a real gap.** Most journals are either religious/12-step OR gendered (\"Dear Alcohol,\" \"Sober as Fuck\"). ANA's brand is already secular — t",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-05T00:49:55.405Z",
-      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
       "queryHashes": [
-        "b1a989a6c8a8"
+        "b1a989a6c8a8",
+        "2543d2c430ae"
       ],
       "recallDays": [
-        "2026-06-05"
+        "2026-06-05",
+        "2026-06-07"
       ],
       "conceptTags": [
         "digital/print",
@@ -1650,18 +1676,20 @@
       "endLine": 109,
       "source": "memory",
       "snippet": "**Decision:** Parked for v2 design pass. v1 launches sober-focused. Daily/weekly prompts may need a second-voice pass — some substance-recovery-specific, others anxiety/mental-health-specific. Milestone pages stay sobriety-anchored (they're the moat). Front matter and tools section retunable for both audiences. Do not block v1 launch. ### Brief updated - `documents/ana/journal-product-design-brief.md` — added \"Print/Distribution Strategy\" section with POD specs + three-SKU model, updated POD Notes, updated Open Questions ## Updated Action Items (post-strategy) - [ ] **Order 1 Lulu proof copy** before listing — Barbara QA: color, alignment, page order, coil alignment - [ ] Build the iPad-fi",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-05T00:49:55.405Z",
-      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-06-07T15:29:09.049Z",
       "queryHashes": [
-        "b1a989a6c8a8"
+        "b1a989a6c8a8",
+        "e32e6bf831d8"
       ],
       "recallDays": [
-        "2026-06-05"
+        "2026-06-05",
+        "2026-06-07"
       ],
       "conceptTags": [
         "sober-focused",
@@ -1672,6 +1700,285 @@
         "sobriety-anchored",
         "print/distribution",
         "three-sku"
+      ]
+    },
+    "memory:memory/2026-06-03.md:1:35": {
+      "key": "memory:memory/2026-06-03.md:1:35",
+      "path": "memory/2026-06-03.md",
+      "startLine": 1,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "# 2026-06-03 — Journal Project: Major Pivot ## Session 1: Backup policy audit (early session) See earlier in this file. ## Session 2: Journal project pivot Catherine rethought the journal positioning. Major changes from yesterday's brief: ### Why the pivot Yesterday's brief was milestone-coin-anchored. Catherine realized: most people don't hit sobriety milestones on time. A journal that says \"6 months\" and you're at month 3 shames the user. **Milestone-tied journaling is out.** ### New positioning - **Audience:** Primary = mental health / anxiety / emotional sobriety. Secondary = recovery from addiction. Both served under one positioning line: **\"a journal for people on a journey of emo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T15:29:09.049Z",
+      "lastRecalledAt": "2026-06-07T15:29:09.049Z",
+      "queryHashes": [
+        "e32e6bf831d8"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "backup",
+        "milestone-coin-anchored",
+        "milestone-tied",
+        "journal",
+        "project",
+        "major",
+        "pivot",
+        "policy"
+      ]
+    },
+    "memory:memory/2026-06-04.md:123:150": {
+      "key": "memory:memory/2026-06-04.md:123:150",
+      "path": "memory/2026-06-04.md",
+      "startLine": 123,
+      "endLine": 150,
+      "source": "memory",
+      "snippet": "- `#FFD437` Golden Sunrise - `#F5EFE8` Soft Linen (paper stock only — **never as ink**) **Unsaturated tints (behind 0.8\" line art, banner section dividers, accents):** - soft sky tint of `#003B88` - soft mint tint of `#37C86F` - soft periwinkle tint of `#4D7BCC` - soft peach tint of `#FF5D4C` - soft butter tint of `#FFD437` Exact hex for tints TBD with Barbara. Likely ~20-30% opacity of saturated parent or hand-tuned pastel. **Pairing rule still open:** per section / per cycle / per page type. Tints always pair with saturated parent. **Catherine reminded me about font licensing for commercial print.** Kept on open items list. Architect's Daughter + Avenir both need commercial-print licen",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T15:29:09.049Z",
+      "lastRecalledAt": "2026-06-07T15:29:09.049Z",
+      "queryHashes": [
+        "e32e6bf831d8"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "0.8",
+        "20-30",
+        "hand-tuned",
+        "commercial-print",
+        "ffd437",
+        "golden",
+        "sunrise",
+        "f5efe8"
+      ]
+    },
+    "memory:memory/2026-06-04.md:1:29": {
+      "key": "memory:memory/2026-06-04.md:1:29",
+      "path": "memory/2026-06-04.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# 2026-06-04 ## ANA Journal — v3 brief rewrite (active) **Context:** v2 brief was getting confusing. Catherine asked for a fresh start — v3, with v2 archived. **What landed:** - Archived: `documents/ana/journal-product-design-brief.md` → `documents/ana/journal.v2-archive/journal-product-design-brief.v2.md` (matched v1's archive-folder pattern) - New active: `documents/ana/journal/journal-product-design-brief.v3.md` (in the empty `journal/` folder) **v3 changes from v2:** 1. **Purpose broadened** — from \"emotional/mental health + addiction recovery\" to ANY recovery journey (mental health, anxiety, emotional/physical sobriety, addiction, grief, divorce, identity, etc.) 2. **Audience** —",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T15:29:09.052Z",
+      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
+      "queryHashes": [
+        "2543d2c430ae"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "archive-folder",
+        "emotional/mental",
+        "emotional/physical",
+        "ana",
+        "journal",
+        "brief",
+        "rewrite",
+        "active"
+      ]
+    },
+    "memory:memory/2026-05-23.md:1:56": {
+      "key": "memory:memory/2026-05-23.md:1:56",
+      "path": "memory/2026-05-23.md",
+      "startLine": 1,
+      "endLine": 56,
+      "source": "memory",
+      "snippet": "# May 23, 2026 ## Research: Print on Demand Design Tools ### Kittl - Free ($0), Pro ($12/mo), Expert ($26/mo) - Strong AI generation (DALL-E, Flux, Ideogram) - Built for merch (t-shirts, stickers, mockups) - Commercial license on paid plans - Best for POD-focused users ### Playground AI (playground.com) - Free ($0), Pro ($12/mo), Pro Plus ($36/mo) - AI image generation (GPT Image 2, Nano Banana, Seedream) - Templates for social/digital, not POD-specific - Commercial license on Pro+ only - Good for AI image generation, then design elsewhere ### Adobe Express - Pricing: ~$9.99/mo (often bundled with Creative Cloud) - Firefly AI, huge template library - Best versatility, integration with Ad",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T15:29:09.052Z",
+      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
+      "queryHashes": [
+        "2543d2c430ae"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "gpt",
+        "12/mo",
+        "26/mo",
+        "dall-e",
+        "t-shirts",
+        "pod-focused",
+        "playground.com",
+        "36/mo"
+      ]
+    },
+    "memory:memory/2026-06-03.md:55:88": {
+      "key": "memory:memory/2026-06-03.md:55:88",
+      "path": "memory/2026-06-03.md",
+      "startLine": 55,
+      "endLine": 88,
+      "source": "memory",
+      "snippet": "- → 100–120 pages total (decent journal length, fits Lulu spec) ### What stays locked from yesterday - POD: Lulu, 6×9 coil, 60lb uncoated, matte cover - Three-SKU strategy: Lulu print ($19.99) + fillable PDF ($7.99) + print-ready letter PDF ($9.99) - Two-PDF split rationale (iPad fillable vs print) ### What I'm doing now Rewriting `documents/ana/journal-product-design-brief.md` from scratch. Clean rewrite > patch. Old version saved to `documents/ana/journal-product-design-brief.v1-milestone-anchor.md` for reference. ## Session 3: Still Here daily-page architecture (continued) Continuation of journal work. Major decisions locked this session. ### Page count locked: 124 total (even, Lulu",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T15:29:09.052Z",
+      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
+      "queryHashes": [
+        "2543d2c430ae"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "three-sku",
+        "19.99",
+        "7.99",
+        "print-ready",
+        "9.99",
+        "two-pdf",
+        "daily-page",
+        "pages"
+      ]
+    },
+    "memory:memory/2026-03-23.md:1:26": {
+      "key": "memory:memory/2026-03-23.md:1:26",
+      "path": "memory/2026-03-23.md",
+      "startLine": 1,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "# Training Modules Status Update **Date:** 2026-03-23 ## Heyron Onboarding Tutorial - COMPLETE ✅ All 7 training modules plus the intro module have been updated with: - Corrected module titles per Catherine's specifications - Navigation buttons (Previous/Next) added to each module - HTML formatted and ready for deployment ### Module Titles (Final): - **Intro:** Heyron Onboarding Guide - **01:** What's in the Box - **02:** Talk to Your Agent - **03:** Communicate with Discord - **04:** File Storage Using GitHub - **05:** Audio-Visual Issues - **06:** Deep Dive Into Memory - **07:** Time and Scheduling ### Status: **READY FOR TRANSMISSION** to Robby's helper for deployment. Updated intro",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T15:29:29.270Z",
+      "lastRecalledAt": "2026-06-07T15:29:29.270Z",
+      "queryHashes": [
+        "f1d3ff54ff40"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "previous/next",
+        "audio-visual",
+        "training",
+        "modules",
+        "status",
+        "update",
+        "date",
+        "heyron"
+      ]
+    },
+    "memory:memory/2026-06-07.md:18:45": {
+      "key": "memory:memory/2026-06-07.md:18:45",
+      "path": "memory/2026-06-07.md",
+      "startLine": 18,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "**Offered:** one-pager per line with phrases grouped + character assignments + rules of the road. Awaiting go-ahead. **Also delivered earlier:** short Spoon Theory description for the back of a greeting card, ~80 words, credits Christine Miserandino (2003). --- ## Product stable + vacation prep (afternoon session) ### Product stable framing Catherine floated the full product architecture: coins (established) + sober anniversary cards (324 Etsy-ready designs) + journal v3 (in dev) + softer side / spoons / Tiny Victories (all in early concept). Multiple entry points and price tiers, audience overlap by design. **Tiny Victories = the snarky/edgy line.** Source: `documents/ana/snarky-sober",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T22:19:45.777Z",
+      "lastRecalledAt": "2026-06-07T22:19:45.777Z",
+      "queryHashes": [
+        "8c8efa6008e2"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "one-pager",
+        "go-ahead",
+        "etsy-ready",
+        "snarky/edgy",
+        "documents/ana/snarky-sober",
+        "offered",
+        "one",
+        "pager"
+      ]
+    },
+    "memory:memory/2026-06-07.md:40:58": {
+      "key": "memory:memory/2026-06-07.md:40:58",
+      "path": "memory/2026-06-07.md",
+      "startLine": 40,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "- What physically goes in the box (Printify samples, art prints, spec sheets, mix?) - Ship-by date (vacation start) - Barbara's evaluation format (printed review sheet vs. open reaction) **Set up in advance:** - Created `documents/ana/products/sku-table.md` skeleton (sections for each line, status legend, columns locked) - Offered to draft a one-page \"Barbara's Review Sheet\" for structured feedback **My editorial suggestion:** Focus the box on softer side + spoons (the two lines needing direction now), leave sober anniversary (well-established) and Tiny Victories (still concept) for a second round. Tighter feedback, less overwhelm for Barbara. ### Files created/updated this session - `MEM",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T23:28:53.065Z",
+      "lastRecalledAt": "2026-06-07T23:28:53.065Z",
+      "queryHashes": [
+        "96c5283df7ab"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "ship-by",
+        "one-page",
+        "well-established",
+        "created/updated",
+        "what",
+        "physically",
+        "goes",
+        "box"
+      ]
+    },
+    "memory:memory/2026-05-05.md:1:37": {
+      "key": "memory:memory/2026-05-05.md:1:37",
+      "path": "memory/2026-05-05.md",
+      "startLine": 1,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "# 2026-05-05 ## Heyron Redesign Project (Ongoing) **⚠️ CRITICAL: File Status** - `launchpad-source.html` — OBSOLETE, do not use - `launchpad-original.html` — CANON file (in documents/Heyron-Redesign/) - All edits must go to launchpad-original.html **Project:** Heyron.ai Launchpad module redesign **Status:** Code review in progress ## Today's Work (May 5): Code Structure Review **Goal:** Understand launchpad-original.html structure to enable redesign work **Method:** Catherine pasted code chunks, Blair documented in Code_sections.md **Key Findings:** - **Two paths:** Beginner (6 quick screens) vs Expert (detailed per-tool setup) - **Beginner screens:** Welcome → Names → UseCases → Integ",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T23:28:53.065Z",
+      "lastRecalledAt": "2026-06-07T23:28:53.065Z",
+      "queryHashes": [
+        "96c5283df7ab"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "launchpad-source.html",
+        "launchpad-original.html",
+        "documents/heyron-redesign",
+        "heyron.ai",
+        "code-sections.md",
+        "per-tool",
+        "heyron",
+        "redesign"
       ]
     }
   }

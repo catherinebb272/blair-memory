@@ -59,6 +59,44 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * **Open items (v3):** cover concept pick (3 options in v2 brief), color palette split (rich vs unsaturated), 84 affirmations content list, 84 daily prompts (2 per page), resources page copy, letter-to-self page copy, ANA/coins pitch copy, font licensing check, Lulu margin compliance check, watercolor mood board for recap art, tint rotation sequence across 12 cycles
 * **Full brief:** `documents/ana/journal/journal-product-design-brief.v3.md` (active). Predecessors: v2 → `documents/ana/journal.v2-archive/journal-product-design-brief.v2.md`; v1 → `documents/ana/journal.v1-milestone-anchor-archive/journal-product-design-brief.v1-milestone-anchor.md`
 
+### ANA Product Stable (framing 2026-06-07)
+
+Catherine is building deliberately, not accidentally. Multiple entry points and price tiers; audience-overlap is the strategy.
+
+| Line | Audience | Price tier | Status |
+|------|----------|------------|--------|
+| Milestone coins | Sobriety (core ANA) | $15–30 | Established |
+| Sober anniversary cards — flower (CSF-01–12) | Sobriety birthday gifting | $3–8 digital | 12 cards, listed (CSV ready, renamed SBC→CSF 2026-06-07) |
+| Sober anniversary cards — themed (CSB-01+) | "Happy Soberversary" themed (cupcake kickoff) | TBD | 2 cards identified 2026-06-07 (CSB-01 Him / CSB-02 Her) |
+| Journal v3 (in dev) | Recovery journey, 84 cycles | $7.99 iPad / $9.99 print PDF / $19.99 Lulu | v3 brief |
+| Softer side cards/stickers | Mental health / general | TBD $4.50–6 cards | Concept, Barbara evaluating |
+| Spoons (rabbit) cards/stickers | Chronic illness / disability | TBD $4.50–6 cards | Concept, Barbara evaluating |
+| Tiny Victories — cards (CTV-01–14) | Women 25–45, gift-buyers, self-aware irony | TBD | 14 designs identified 2026-06-07, art in progress |
+| Stickers — sheets (SS-01–04) | Cross-line character/phrase merch | TBD | Concept 2026-06-07 (Anxiety, Forest, Feelings, Spoons) |
+| Stickers — die cut (SD-01–04) | Cross-line character merch | TBD | Concept 2026-06-07 (Meerkat, Capybara, Owl Mug, Chill Frog) |
+
+_Master SKU table: `documents/ana/products/sku-table.md` (Material-first structure: cards/stickers/coins sections primary, Collection cross-reference appendix for themed-line view)_
+_SKU prefix convention: `CSF` Card-Sober Flower · `CSB` Card-Sober Birthday · `CTV` Card Tiny Victories · `SS` Sticker Sheet · `SD` Sticker Die cut._
+
+### Softer Side Cards & Spoon Theory Rabbits (exploring 2026-06-07)
+
+* **Concept:** A new product line — greeting cards + stickers — at the "softer" end of ANA's range
+* **Visual style:** "soft lumpy warm" — peachy-coral palette (Sunrise Coral from brand kit)
+* **Character stable (5 total, soft/lumpy/warm, all in same family style):**
+  * **Softer side:** Hamster, Teddy, Panda, Otter
+  * **Spoons line (rabbit only):** the rabbit drew itself into the spoon concept because the original rabbit was so vulnerable
+* **Sample phrases — softer side:** "sometimes you need a blanket", "it's ok to feel all the feelings"
+* **Sample phrases — spoons:** "some days require 5 spoons", "all the soons have spooned", "more spoons please", "spoons all gone", "spoon there for you", "borrow a spoon?", "i'm all spooned out", "hopping back later", "spoon thief", "bunny needs a nap"
+* **Source of spoon connection:** Barbara talks about spoon theory — personal/family reference, treat with care
+* **Line architecture (Catherine's instinct, validated):**
+  * **Softer side** = permission/comfort/"you can pause"
+  * **Spoons** = capacity/identity/"your limits are valid"
+  * **Do NOT cross-pollinate** characters between lines
+* **Visual hierarchy:** Rabbit is the anchor character of the line — most-defined, tied to a real cultural reference (Spoon Theory, Christine Miserandino, 2003). Vulnerability is a feature; don't sand it down.
+* **Consistency note:** Use rabbit as the licensed anchor style; other characters orbit it. Solves the "all art in exactly the same style" problem.
+* **Status:** Early exploration, no brief yet
+* **Open items:** price positioning (my gut: $4.50–$6 cards, $3.50–$4.50 stickers), launch set composition, one-pager per line
+
 ### Plato's Closet (PC)
 
 * **Business:** Used clothing franchise
