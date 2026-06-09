@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-07T23:28:53.065Z",
+  "updatedAt": "2026-06-08T23:34:27.557Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -1256,23 +1256,25 @@
       "endLine": 76,
       "source": "memory",
       "snippet": "- All-in-one: keyword research, product research, shop operations - Marketing & automation (email, Pinterest) - 800K+ users ### EverBee - Hobby (Free), Growth ($19.99/mo), Business ($69/mo) - Keyword Score (built-in ranking metric) - Product analytics with conversion data - Trend tracking up to 24 months --- ## Created Research Document - Created `documents/ana/etsy-seller-tools-comparison.md` with full comparison of both design tools and keyword tools - Initially pushed to blair-memory repo, then moved to blair-documents (ANA folder) per user's request that blair-memory is only for memory backups - File location: `catherinebb272/blair-documents/documents/ana/etsy-seller-tools-comparison",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:35:58.021Z",
-      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
+      "lastRecalledAt": "2026-06-08T23:34:27.557Z",
       "queryHashes": [
         "9907211e386a",
         "5914a007eae2",
         "b8dfdc61945a",
-        "2543d2c430ae"
+        "2543d2c430ae",
+        "7fad612fd2b1"
       ],
       "recallDays": [
         "2026-05-25",
         "2026-06-02",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-08"
       ],
       "conceptTags": [
         "backup",
@@ -1581,20 +1583,22 @@
       "endLine": 32,
       "source": "memory",
       "snippet": "# 2026-06-02 — Journal Product Research for ANA ## Session Catherine still scoping digital/print product line for ANA. Asked for research on sobriety journals — what features people use, what they want. ## What I did - Researched 7+ top sobriety journals across reviews and roundups - Pulled Reddit search signals (r/stopdrinking, r/SoberCurious — direct fetches blocked, used search snippets) - Looked at Etsy printable/digital market - Wrote synthesis to `documents/ana/journal-product-research.md` ## Key takeaways I flagged 1. **Secular positioning is a real gap.** Most journals are either religious/12-step OR gendered (\"Dear Alcohol,\" \"Sober as Fuck\"). ANA's brand is already secular — t",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-05T00:49:55.405Z",
-      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
+      "lastRecalledAt": "2026-06-08T23:34:27.557Z",
       "queryHashes": [
         "b1a989a6c8a8",
-        "2543d2c430ae"
+        "2543d2c430ae",
+        "7fad612fd2b1"
       ],
       "recallDays": [
         "2026-06-05",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-08"
       ],
       "conceptTags": [
         "digital/print",
@@ -1645,18 +1649,20 @@
       "endLine": 72,
       "source": "memory",
       "snippet": "- `documents/ana/journal/sample-pages/README.md` — master style tokens + workflow - `documents/ana/journal/sample-pages/01-daily-page-prompt.md` — ChatGPT prompt for the standard daily page (used 90 times) - `documents/ana/journal/sample-pages/02-weekly-page-prompt.md` — ChatGPT prompt for the weekly recap (used 40 times) - `documents/ana/journal/sample-pages/03-front-matter-prompts.md` — 7 front-matter pages, all ChatGPT-ready - `documents/ana/journal/sample-pages/04-milestone-1mo-prompt.md` — the anchor 1-month milestone spread (template for all 12) **Style tokens locked** in cream/forest green/charcoal/ochre palette. The 1mo spread is the template — once Catherine approves, the other 11",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-05T00:49:55.405Z",
-      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-06-08T23:34:27.557Z",
       "queryHashes": [
-        "b1a989a6c8a8"
+        "b1a989a6c8a8",
+        "7fad612fd2b1"
       ],
       "recallDays": [
-        "2026-06-05"
+        "2026-06-05",
+        "2026-06-08"
       ],
       "conceptTags": [
         "gpt",
@@ -1771,18 +1777,20 @@
       "endLine": 29,
       "source": "memory",
       "snippet": "# 2026-06-04 ## ANA Journal — v3 brief rewrite (active) **Context:** v2 brief was getting confusing. Catherine asked for a fresh start — v3, with v2 archived. **What landed:** - Archived: `documents/ana/journal-product-design-brief.md` → `documents/ana/journal.v2-archive/journal-product-design-brief.v2.md` (matched v1's archive-folder pattern) - New active: `documents/ana/journal/journal-product-design-brief.v3.md` (in the empty `journal/` folder) **v3 changes from v2:** 1. **Purpose broadened** — from \"emotional/mental health + addiction recovery\" to ANY recovery journey (mental health, anxiety, emotional/physical sobriety, addiction, grief, divorce, identity, etc.) 2. **Audience** —",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-07T15:29:09.052Z",
-      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
+      "lastRecalledAt": "2026-06-08T23:34:27.557Z",
       "queryHashes": [
-        "2543d2c430ae"
+        "2543d2c430ae",
+        "7fad612fd2b1"
       ],
       "recallDays": [
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-08"
       ],
       "conceptTags": [
         "archive-folder",
