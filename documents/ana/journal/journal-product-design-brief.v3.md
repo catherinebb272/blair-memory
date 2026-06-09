@@ -120,24 +120,26 @@ The mapping below is the **single source of truth** for which icon motif lives o
 |---|---|---|---|
 | 1 | Torii | 1 month coin | New journey, threshold, the start |
 | 2 | Waterfall & lily | 18 month coin | Serenity, ongoing flow after the start |
-| 3 | Two-fish | ANA logo | "Apart not alone" — mutual support, mid-early |
+| 3 | 1-Year Koi | 1yr koi coin (gold tier) | Persistence earned, the long swim, mid-early |
 | 4 | Stag | 4 month coin | Quiet strength, grounding, mid-journey |
-| 5 | Kraken lighthouse | 5 month coin | Lurking perils + vigilance, mid-journey |
+| 5 | Kraken lighthouse | 5 month coin | Beacon to safe haven + beware lurking perils, mid-journey |
 | 6 | Fox in snow | 9 month coin | Solitude, wisdom, the long middle |
 | 7 | Rowing POV | 2 year coin | Agency, momentum, you're moving |
 | 8 | Resting horse | 3 year coin | Rest is part of the work, deep middle |
 | 9 | Desert landscape | 2 month coin | Endurance, vastness, the long haul |
 | 10 | Frog | 3 month coin | Leap, transformation, late-middle |
-| 11 | Koi (late re-use) | 6 month coin (top seller) | Persistence, popular motif returns late |
+| 11 | Koi (6mo top seller) | 6 month coin | Persistence, popular motif returns late, the leap |
 | 12 | Phoenix | 1 year coin | Rising again, renewal, the close |
 
-**Narrative arc:** gentle start (water, fish) → growing strength (stag, lighthouse, fox) → action and endurance (rowing, horse, desert, frog) → re-emergence (koi, phoenix). Mirrors a year of recovery/mental-health work without naming it.
+**Narrative arc:** gentle start (torii, waterfall) → growing strength (koi, stag, lighthouse, fox) → action and endurance (rowing, horse, desert, frog) → re-emergence (koi, phoenix). Mirrors a year of recovery/mental-health work without naming it.
 
 **Continuity rule (locked):** The 7 daily pages in a cycle share the same top-of-page line-art anchor. When the user reaches the recap spread at the end of that cycle, the full-bleed watercolor on the left page is the *same* motif, larger. The user feels continuity without being told.
 
 **Asset source:** Catherine has identified a designer in Canva with suitable SVG icons that match the 12 motifs. Confirmed 2026-06-04. SVG format → scales cleanly to both 0.8" line art and full-bleed watercolor source. (Open: which icons match cleanly out-of-the-box vs. need custom re-draw.)
 
-**Koi note (locked):** The 6-month koi (ANA's top seller) is deliberately held until cycle 11 — a late return that gives the top motif weight. The 1-year coin's koi design is *not* used in the journal.
+**Two-koi design (locked 2026-06-08, Option A pivot):** The 1-Year Koi (gold tier, ANA catalog #1511799649) is now used at C3 — a calm-water, gold-palette, portrait-composition rendering. The 6-Month Koi (top seller, ANA catalog #1316799115) is the late-return C11 — a mid-leap, red-orange, landscape-composition rendering. **The two koi watercolors must be visually distinct** — different compositions, different palettes, different water treatments, different scales. Barbara to render both. See `journal-recap-content-v3.md` C3 and C11 entries for the direction.
+
+**Logo placement (revised 2026-06-08):** The ANA two-fish logo appears on the **back cover** (small + wordmark) and **intro p1** (logo + wordmark). The logo is *no longer* on the daily page footers (sister's call — only the "Cycle x-y" page number sits at the bottom of each daily page; the two-fish ornament was overkill at that scale). The logo is also no longer a recap-spread motif — the C3 slot is now the 1-Year Koi, replacing the logo.
 
 ---
 
@@ -195,6 +197,7 @@ The 84 daily reflection pages share a common layout. The user sees the same temp
 - Format at bottom of page: **`Cycle x-y`** where `x` = cycle number and `y` = page within that cycle
 - Example: "Cycle 1-4" = 4th page of Cycle 1
 - Small, low contrast, footer-grade
+- **Footer is page number only** (sister feedback 2026-06-08). The small two-fish ornament previously planned for the daily page bottom is removed — at that scale, the logo reads as ornamentation rather than meaning, and the page number alone is sufficient. The two-fish logo continues to live on the back cover and intro p1 (see §6a logo placement note).
 
 ### 8g. Fonts (locked for v3)
 
@@ -306,6 +309,11 @@ These need decisions before the brief is "done":
 **Carryover review**
 - [ ] Review v2's "Daily Page Template" + "Layout Variants" sections — promote to v3 or revise
 
+**Resolved 2026-06-08**
+- [x] **Recap spread art descriptions + significance + first-prompt drafted** in [`journal-recap-content-v3.md`](./journal-recap-content-v3.md). 12 entries, all cycles covered. Awaiting Catherine proofread + Barbara art-direction pass.
+- [x] **Two-koi design (Option A) confirmed** — 1-yr koi at C3, 6mo koi at C11. Logo dropped from recap rotation. §6a updated.
+- [x] **Daily page footer simplified** — page number only, two-fish ornament removed (sister feedback). §8f updated.
+
 ---
 
 ## 13. Changelog
@@ -315,7 +323,7 @@ These need decisions before the brief is "done":
 - **2026-06-04 (update 4) — palette locked + variant A/B retired.** §3 expanded with full palette: 6 saturated inks (Ocean Indigo / Leaf Green / Medium Blue / Sunrise Coral / Golden Sunrise / Soft Linen paper) + 5 unsaturated tints (sky/mint/periwinkle/peach/butter — exact hex TBD with Barbara). Pairing rules still TBD (per section / per cycle / per page type). Variant A/B layout split removed — all 84 daily pages use the same layout, with differentiation via rotating prompts + affirmations. CSV §11 updated (no layout variant column). Open items updated.
 
 - **2026-06-04 (update 5) — palette corrected (tint per cycle, not primary per page).** Earlier v3 draft said "one primary per page" — that was a misread. Correct model: **Ocean Indigo for accent text** (headings, subheadings, labels, page numbers), **black for body text**, **one tint rotating per cycle** (5 tints across 12 cycles; sequence TBD). The other 4 saturated brand colors (Leaf Green, Medium Blue, Sunrise Coral, Golden Sunrise) are not in use in v3 by default but available. §3 restructured into 3a active ink colors / 3b cycle tints / 3c available saturated palette. Open items updated.
-- **2026-06-05 — CSV schema drafted.** §11 now points to `journal-csv-schema-v3.md` (19 columns, 9 page types, full slot map, RFC 4180 formatting rules, sample rows, v2→v3 diff). Renderer constants (locked headings, streak box label, date line, free-space cue) are not stored per-row. Open item updated.
+- **2026-06-08 — Option A (two-koi) + sister footer feedback + recap content drafted.** §6a cycle mapping updated: C3 = 1-Year Koi (replaces ANA logo in recap rotation), C11 = 6mo Koi (unchanged). Narrative arc updated to drop the "fish" reference at C3. Koi note expanded to cover the two distinct koi watercolors (calm gold at C3, mid-leap red-orange at C11). Logo placement revised: two-fish logo now on back cover + intro p1 only — no longer on daily page footers. §8f page-numbering updated with sister feedback: footer is page number only, no two-fish ornament. New file `journal-recap-content-v3.md` authored with 12 image descriptions + significance callouts + first recap prompt per cycle. Resolved items added to §12. C5 kraken-lighthouse significance now reflects the duality Catherine articulated: lighthouse = beacon to safe haven, kraken = peril still in the water.
 - **2026-06-04 (update 2) — v3 icons + math.** Added cycle → icon mapping table to §6a (carried from v2, confirmed by Catherine). Noted Canva SVG designer source. Locked letter-to-self as the very last facing page, envelope in inside back cover. Added resources spread (later revised to 1 page) and blank page to end-matter. Total target 126.
 - **2026-06-04 — v3 created.** Fresh start. Broadened purpose (any recovery journey), gender-neutral framing, two-set color palette, 12-cycle flexible structure, coin iconography as subtle tie-in, letter-to-self tactile element, end goal = CSV.
 - **2026-06-03 — v2 locked.** 124 pages, 6×9 coil-bound, self-paced, recovery-anchored positioning. (Archived.)
