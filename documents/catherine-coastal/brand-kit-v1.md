@@ -405,7 +405,25 @@ Don't ship all of A1–A5. Ship **5 files per print** designed in 2:3 ratio (cov
 
 ## 16. Print Lineup v1 (5 prints)
 
-**Source images:** AI-generated watercolor (Gemini) from OBX photography, uploaded 2026-06-16.
+**Source images:** AI-generated watercolor from OBX photography, uploaded 2026-06-16.
+
+**Per-print AI source (confirmed 2026-06-16):**
+
+| Print | AI model | Notes |
+|---|---|---|
+| Dog on the Beach (a) | **Gemini 3.1 + Nano-Banana** | Best watercolor output so far. File is 3584×4800 (portrait dimensions) but scene is landscape, rotated 90° — re-render in portrait for launch. |
+| Walk on the Beach (b) | **Gemini 3.1 + Nano-Banana** | Two variants uploaded: Walk_1 (landscape, 1200×896) and Walk_portrait (portrait, 3125×4166). |
+| Lady Reading (c) | **MidJourney + extra manipulation** | Square format (2048×2048). Needs ratio crop to 4:5 for standard bundle. |
+| Lonely Houses (d) | **GPT-rendered** | Native portrait ~4:5 (1122×1402). Heavy upscale needed. |
+| Lifeguard Station (e) | **Gemini 3.1 + Nano-Banana** (original) + **GPT** (alternate v2 with strong diagonals but "not facing the sea") | Original parked — contrast issue. GPT v2 has compositional strengths (diagonal zig-zag, reflected sunset, lonely chair) but place-correctness tell. Recommend re-prompting GPT before any launch use. |
+
+**Tool hierarchy observed (so far):**
+- **Gemini 3.1 + Nano-Banana** = strongest watercolor output, most consistent
+- **MidJourney** = good with manipulation, more painterly edge
+- **GPT** = strong composition but place-correctness needs explicit prompting
+- **Adobe Firefly** = tried native, v1 didn't work — may revisit
+
+**Default for new prints: lead with Gemini 3.1 + Nano-Banana. Use GPT when you want a specific compositional element (diagonals, geometric structure).**
 
 | # | File name | Title (working) | Brand fit | Launch order |
 |---|---|---|---|---|
