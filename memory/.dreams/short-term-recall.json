@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-16T21:25:33.464Z",
+  "updatedAt": "2026-06-17T18:47:49.608Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -589,18 +589,20 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-05-03 ## Heyron Launchpad Redesign - **Changelog:** Created in CHANGELOG.md - **Project:** Heyron.ai Launchpad module redesign (launchpad-source.html) - **Status:** In progress - testing different colors and images - **Completed:** Introductory Hello page with animation - **Design guidelines:** Stored in `heyronstyle.md` - **Color scheme:** Current scheme represented in Hello page animation - **Removed hello/welcome pages:** launchpad-source.html now starts on Names page - **Added larger mascot images:** Each screen has 180x180px image spot (raccoon2-raccoon12.png) - **To do:** Test different visual variations for Launchpad, add raccoon image files ## Canva Visual Descriptions 1.",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T15:35:37.944Z",
-      "lastRecalledAt": "2026-05-11T15:35:37.944Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
       "queryHashes": [
-        "92b0e02ccc5d"
+        "92b0e02ccc5d",
+        "7edf04690987"
       ],
       "recallDays": [
-        "2026-05-11"
+        "2026-05-11",
+        "2026-06-17"
       ],
       "conceptTags": [
         "changelog.md",
@@ -856,13 +858,13 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-09 Daily Log ## Etsy Check-in (Saturday) - 1 order: Yasmina Moore-Foster - 1 Year Phoenix Rising, ship by May 12, gift + gift teaser - No new messages - No new reviews - Posted Discord DM to Drew with order details + handwritten note suggestion - Included Mother's Day reminder ## Browser Tool Test - Tried to log into Etsy but Etsy blocked the VPS IP (bot detection) - Will need to find alternative method ## Notes -",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 7,
+      "totalScore": 8,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
+      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "a91c53fdde37",
@@ -870,13 +872,15 @@
         "9907211e386a",
         "5914a007eae2",
         "f1d3ff54ff40",
-        "e634c48d5530"
+        "e634c48d5530",
+        "27522abfbf4d"
       ],
       "recallDays": [
         "2026-05-13",
         "2026-05-25",
         "2026-06-07",
-        "2026-06-16"
+        "2026-06-16",
+        "2026-06-17"
       ],
       "conceptTags": [
         "check-in",
@@ -896,22 +900,24 @@
       "endLine": 37,
       "source": "memory",
       "snippet": "# 2026-04-25 ## Etsy Check-In Cron Investigation ### Problem Test cron `etsy-checkin-test-v2` was running but emails weren't being received automatically on schedule. ### Root Cause The isolated cron session couldn't access the AgentMail API key. The `.env` file in the workspace wasn't being read by the cron job's isolated session. ### Fix Applied Added API key directly to workspace `.env`: ``` AGENTMAIL_API_KEY=am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a ``` ### Current Cron Config - **ID:** c5b95218-0a87-4546-8edf-1bb1bfe1dbf9 - **Name:** etsy-checkin-test-v2 - **Schedule:** Every 1 hour - **Session:** isolated - **Message:** \"Send a test email to apartxalon",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "96d163102668",
         "9907211e386a",
-        "5914a007eae2"
+        "5914a007eae2",
+        "27522abfbf4d"
       ],
       "recallDays": [
         "2026-05-13",
-        "2026-05-25"
+        "2026-05-25",
+        "2026-06-17"
       ],
       "conceptTags": [
         "check-in",
@@ -995,20 +1001,22 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# March 27, 2026 ## Heyron Tutorial Module Updates Worked on Module 05 (Audio-Visual) updates and navigation fixes across all modules: ### Module 05 - Audio-Visual (key changes) - Streamlined Orchestration Model section with orchestra conductor analogy - Removed duplicate CAN/CANNOT lists from Images section - Added \"preferred vendor\" callouts (ElevenLabs for audio) - Added \"How to Connect\" callouts with exact phrases like \"Help me connect to ElevenLabs\" - Added troubleshooting note for image upload (use Telegram/Discord if chat UI fails) - Added free option for image prompts (paste into ChatGPT) - Gutted and rebuilt Video section with Sora, Runway, Veo as video generation platforms - Add",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:52.474Z",
-      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
       "queryHashes": [
         "a91c53fdde37",
-        "e634c48d5530"
+        "e634c48d5530",
+        "7edf04690987"
       ],
       "recallDays": [
         "2026-05-13",
-        "2026-06-16"
+        "2026-06-16",
+        "2026-06-17"
       ],
       "conceptTags": [
         "gpt",
@@ -1028,13 +1036,13 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# 2026-05-13 — Etsy Optimization Deep Dive ## Session Summary ### What We Did **1. Etsy Check-In (Wed)** - No new orders, messages, or reviews - Posted update to #general and DM'd Drew — enjoy the breathing room **2. Compiled 30-Day Stats** - Created `documents/ana/etsy-stats-60-day.md` - Storewide: 607 visits (-13% YoY), 32 orders, 5.3% conversion, $672 revenue - Added all 10 product rows with visits, orders, conversion rates **3. Conversion Analysis** - Compared lifetime (Mar) vs 30-day (May) conversion - Key finding: New customer acquisition broken (Month 1-6 at 0% or near-zero) - Repeat customers thriving (2-3 Year up significantly) **4. Competitor Research: TheAchievemint** - Pull",
-      "recallCount": 8,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 8,
+      "totalScore": 9,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T02:32:14.988Z",
-      "lastRecalledAt": "2026-06-07T15:29:29.270Z",
+      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
       "queryHashes": [
         "29fdb6f4553f",
         "b4858c274d60",
@@ -1043,13 +1051,15 @@
         "9907211e386a",
         "5914a007eae2",
         "b8dfdc61945a",
-        "f1d3ff54ff40"
+        "f1d3ff54ff40",
+        "27522abfbf4d"
       ],
       "recallDays": [
         "2026-05-14",
         "2026-05-25",
         "2026-06-02",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-17"
       ],
       "conceptTags": [
         "check-in",
@@ -1234,19 +1244,21 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-14 ## Competitor Intel ### AACoinClub (Etsy) - 11 months on Etsy, 171 sales - Exclusively coins, mixed styles (no apparent strategy) - Top sellers: - Bling style: sun with moon on back, available years 1-15 - 4 year: embossed images of AA founders - 19 total styles - Unknown: stocking vs on-demand etching ## Action Items - [ ] Update competitor file with AACoinClub",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:35:58.021Z",
-      "lastRecalledAt": "2026-05-25T13:36:40.448Z",
+      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
       "queryHashes": [
         "9907211e386a",
-        "5914a007eae2"
+        "5914a007eae2",
+        "27522abfbf4d"
       ],
       "recallDays": [
-        "2026-05-25"
+        "2026-05-25",
+        "2026-06-17"
       ],
       "conceptTags": [
         "1-15",
@@ -1266,25 +1278,27 @@
       "endLine": 76,
       "source": "memory",
       "snippet": "- All-in-one: keyword research, product research, shop operations - Marketing & automation (email, Pinterest) - 800K+ users ### EverBee - Hobby (Free), Growth ($19.99/mo), Business ($69/mo) - Keyword Score (built-in ranking metric) - Product analytics with conversion data - Trend tracking up to 24 months --- ## Created Research Document - Created `documents/ana/etsy-seller-tools-comparison.md` with full comparison of both design tools and keyword tools - Initially pushed to blair-memory repo, then moved to blair-documents (ANA folder) per user's request that blair-memory is only for memory backups - File location: `catherinebb272/blair-documents/documents/ana/etsy-seller-tools-comparison",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:35:58.021Z",
-      "lastRecalledAt": "2026-06-08T23:34:27.557Z",
+      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
       "queryHashes": [
         "9907211e386a",
         "5914a007eae2",
         "b8dfdc61945a",
         "2543d2c430ae",
-        "7fad612fd2b1"
+        "7fad612fd2b1",
+        "27522abfbf4d"
       ],
       "recallDays": [
         "2026-05-25",
         "2026-06-02",
         "2026-06-07",
-        "2026-06-08"
+        "2026-06-08",
+        "2026-06-17"
       ],
       "conceptTags": [
         "backup",
@@ -1304,22 +1318,25 @@
       "endLine": 11,
       "source": "memory",
       "snippet": "# Daily Memory Log - May 17, 2026 ## ANA / Business - **Midjourney abandoned** — couldn't get reliable repeatable look for greeting card series. Kept defaulting to \"cute\" aesthetic (heart-shaped faces, tiny noses, big eyes). $10 spent, not worth fighting. - **Lost designs** — had 4 good designs from ChatGPT/CoPilot but lost them when had to restart and regenerate. - **Barbara unavailable** — can't do artwork right now, so AI generation is the path forward. - **Printify** — account set up, connected to Etsy store. - **Product decision:** 5x7 folded greeting cards, matte paper, envelope included, prefolded (to stay in small letter shipping rate per YouTube advice). ## Personal - Catherine he",
-      "recallCount": 4,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:36:02.903Z",
-      "lastRecalledAt": "2026-06-07T15:29:29.268Z",
+      "lastRecalledAt": "2026-06-17T18:47:49.608Z",
       "queryHashes": [
         "e67681840b0e",
         "e32e6bf831d8",
         "2543d2c430ae",
-        "6a129c354fd1"
+        "6a129c354fd1",
+        "652d4dafb86d",
+        "f5b7eb9a5a6c"
       ],
       "recallDays": [
         "2026-05-25",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-17"
       ],
       "conceptTags": [
         "gpt",
@@ -1401,22 +1418,25 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# May 25, 2026 ## Composio API Issues - Composio had a massive security breach on 5/23/26 - Previous API key was deleted by Composio - Tried using Catherine's new project API key: `ak_DvFKZiWcCtmvm3CWv6fi` - Updated the key in `.env` - CLI commands work locally but the container can't reach api.composio.dev (DNS/network block) - **Result:** Cannot use Composio tools (browser, image generation, etc.) from this environment until network issue is resolved ## Sober Birthday Greeting Cards - Etsy Listings - Created `documents/ana/sober-birthday-cards.csv` for Etsy bulk upload - 12 monthly cards (SBC-01 through SBC-12) - Title format: \"Sobriety Anniversary Card [Month] [Flower] - Downloadable",
-      "recallCount": 3,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T16:37:44.083Z",
-      "lastRecalledAt": "2026-06-07T22:19:45.777Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.278Z",
       "queryHashes": [
         "f6454ddbeec7",
         "b8dfdc61945a",
-        "8c8efa6008e2"
+        "8c8efa6008e2",
+        "27522abfbf4d",
+        "652d4dafb86d"
       ],
       "recallDays": [
         "2026-05-29",
         "2026-06-02",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-17"
       ],
       "conceptTags": [
         "network",
@@ -1436,20 +1456,24 @@
       "endLine": 70,
       "source": "memory",
       "snippet": "- \"mental health card\" dominates globally (high volume) - \"sobriety card\" is lowest - Feb 2026 had major spike for \"mental health card\" ### Erank Keyword Data - \"sobriety gift\": 2,560 searches/month (Etsy's top term) - \"sober gift\": 1,260 searches/month - \"mental health gift\": <20 searches (nearly invisible on Etsy!) - **Key insight:** Google and Etsy are opposite — Etsy buyers search \"sobriety\", not \"mental health\" ### Erank Top Listings - Viewed \"Mental Health Card\" and broader \"Mental Health\" listings - Modest revenue: $204-$869 over 500+ days (long-tail, low volume) - Humor/sarcastic cards perform better than serious ones - PaperPawsCo is a major player in this space ### Strategic Ins",
-      "recallCount": 2,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T16:37:44.083Z",
-      "lastRecalledAt": "2026-06-07T15:29:29.268Z",
+      "lastRecalledAt": "2026-06-17T18:47:49.608Z",
       "queryHashes": [
         "f6454ddbeec7",
-        "6a129c354fd1"
+        "6a129c354fd1",
+        "27522abfbf4d",
+        "652d4dafb86d",
+        "f5b7eb9a5a6c"
       ],
       "recallDays": [
         "2026-05-29",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-17"
       ],
       "conceptTags": [
         "searches/month",
@@ -1822,18 +1846,20 @@
       "endLine": 56,
       "source": "memory",
       "snippet": "# May 23, 2026 ## Research: Print on Demand Design Tools ### Kittl - Free ($0), Pro ($12/mo), Expert ($26/mo) - Strong AI generation (DALL-E, Flux, Ideogram) - Built for merch (t-shirts, stickers, mockups) - Commercial license on paid plans - Best for POD-focused users ### Playground AI (playground.com) - Free ($0), Pro ($12/mo), Pro Plus ($36/mo) - AI image generation (GPT Image 2, Nano Banana, Seedream) - Templates for social/digital, not POD-specific - Commercial license on Pro+ only - Good for AI image generation, then design elsewhere ### Adobe Express - Pricing: ~$9.99/mo (often bundled with Creative Cloud) - Firefly AI, huge template library - Best versatility, integration with Ad",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-07T15:29:09.052Z",
-      "lastRecalledAt": "2026-06-07T15:29:09.052Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
       "queryHashes": [
-        "2543d2c430ae"
+        "2543d2c430ae",
+        "7edf04690987"
       ],
       "recallDays": [
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-17"
       ],
       "conceptTags": [
         "gpt",
@@ -1915,18 +1941,21 @@
       "endLine": 45,
       "source": "memory",
       "snippet": "**Offered:** one-pager per line with phrases grouped + character assignments + rules of the road. Awaiting go-ahead. **Also delivered earlier:** short Spoon Theory description for the back of a greeting card, ~80 words, credits Christine Miserandino (2003). --- ## Product stable + vacation prep (afternoon session) ### Product stable framing Catherine floated the full product architecture: coins (established) + sober anniversary cards (324 Etsy-ready designs) + journal v3 (in dev) + softer side / spoons / Tiny Victories (all in early concept). Multiple entry points and price tiers, audience overlap by design. **Tiny Victories = the snarky/edgy line.** Source: `documents/ana/snarky-sober",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-07T22:19:45.777Z",
-      "lastRecalledAt": "2026-06-07T22:19:45.777Z",
+      "lastRecalledAt": "2026-06-17T18:47:49.608Z",
       "queryHashes": [
-        "8c8efa6008e2"
+        "8c8efa6008e2",
+        "652d4dafb86d",
+        "f5b7eb9a5a6c"
       ],
       "recallDays": [
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-17"
       ],
       "conceptTags": [
         "one-pager",
@@ -2154,6 +2183,255 @@
         "sentence-case",
         "original",
         "source"
+      ]
+    },
+    "memory:memory/2026-03-03.md:38:66": {
+      "key": "memory:memory/2026-03-03.md:38:66",
+      "path": "memory/2026-03-03.md",
+      "startLine": 38,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "**Step 3: Auto-Trace (Image Trace)** - Select image, Window → Image Trace - Mode: Black and White, Threshold ~128 - Paths: More Accurate, Corners: Middle, Noise: ~10px - Click Trace, then Expand **Step 4: Clean It Up** - Zoom in, use Direct Selection Tool (A) to delete stray points - Select all paths → Object → Path → Simplify **Step 5: Export as SVG** - File → Save As → SVG (svg) - SVG 1.1 default settings ### Cricut Design Space (6 Steps) 1. Upload → Upload Image 2. Select your SVG file 3. Import should auto-detect as \"Draw\" lines 4. Insert → resize → position on canvas 5. Attach to your project 6. Load pen → mat → go ### Pro Tips - Write larger than needed — small handwriting traces",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:47:12.276Z",
+      "lastRecalledAt": "2026-06-17T18:47:49.608Z",
+      "queryHashes": [
+        "7edf04690987",
+        "f5b7eb9a5a6c"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "auto-trace",
+        "1.1",
+        "auto-detect",
+        "step",
+        "auto",
+        "trace",
+        "image",
+        "select"
+      ]
+    },
+    "memory:memory/2026-06-03.md:157:171": {
+      "key": "memory:memory/2026-06-03.md:157:171",
+      "path": "memory/2026-06-03.md",
+      "startLine": 157,
+      "endLine": 171,
+      "source": "memory",
+      "snippet": "Catherine uploaded a watercolor-style 1-month coin render (torii gate, red, blue water, pink lilies, green hills, yellow sun, white cloud, soft/dreamlike). 2.2 MB, ~2.2 MP. I can't view images (model doesn't accept image output), so working from her description + file size. - My read: WRONG asset for 56×56 top-right icon slot. Will smear into colored noise. - Better fits: cover, cycle 1 recap spread image (full page), or coin end cap. - I asked her to pick: (a) true line-art version, (b) tight crop of watercolor, (c) use as-is and wash out later. - Also asked where watercolor should live (cover/recap/end cap). ### Files saved this session - `/home/openclaw/.openclaw/workspace/documents/ana",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:47:12.276Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
+      "queryHashes": [
+        "7edf04690987"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "watercolor-style",
+        "1-month",
+        "soft/dreamlike",
+        "2.2",
+        "top-right",
+        "line-art",
+        "as-is",
+        "cover/recap/end"
+      ]
+    },
+    "memory:memory/2026-03-03.md:1:47": {
+      "key": "memory:memory/2026-03-03.md:1:47",
+      "path": "memory/2026-03-03.md",
+      "startLine": 1,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "# 2026-03-03 - Font Software Research ## Handwriting-to-Font Options ### Option A: Calligraphr - **Pricing:** Free tier (limited) or $8/month ($96/year) for full features - **How it works:** Print template → write letters → scan/upload → generates font - **Best for:** True handwriting replication, quick personal fonts - **Note:** Subscription model, not one-time purchase ### Option B: Fontself - **Pricing:** One-time purchase - $49 for Illustrator OR $49 for Photoshop (iPad version $39) - **How it works:** Plugin for Adobe apps - draw vectors, click export to font - **Best for:** Stylized/concept fonts, if already using Adobe Creative Cloud - **License:** Perpetual, commercial use allowed",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:47:12.276Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
+      "queryHashes": [
+        "7edf04690987"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "handwriting-to-font",
+        "8/month",
+        "96/year",
+        "scan/upload",
+        "one-time",
+        "stylized/concept",
+        "font",
+        "software"
+      ]
+    },
+    "memory:memory/2026-06-03.md:168:176": {
+      "key": "memory:memory/2026-06-03.md:168:176",
+      "path": "memory/2026-06-03.md",
+      "startLine": 168,
+      "endLine": 176,
+      "source": "memory",
+      "snippet": "- Brief updated: `documents/ana/journal-product-design-brief.md` — removed 6 image-led dailies, added Daily Page Template section, added CSV schema, added cycle icon table, fixed asset inventory (template count now 8 not 9). Pushed to blair-documents. ### Pushback I gave - Catherine said \"I think we agreed on the 84 daily pages\" — I had been conflating dailies with image-led dailies. Brief still had stale references to \"6 of the 84 are image-led.\" Fixed throughout. - She said recap images are NOT in the icon table the way I'd been using them. I had confused recap spread (full page, full-bleed) with top-right icon (small, ornament). Now using the same motif for both — different scale, same i",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:47:12.276Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
+      "queryHashes": [
+        "7edf04690987"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "image-led",
+        "blair-documents",
+        "full-bleed",
+        "top-right",
+        "brief",
+        "updated",
+        "documents",
+        "ana"
+      ]
+    },
+    "memory:memory/2026-06-07.md:1:27": {
+      "key": "memory:memory/2026-06-07.md:1:27",
+      "path": "memory/2026-06-07.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# 2026-06-07 ## New product line exploration: Softer Side Cards & Spoon Theory Rabbits Catherine floated a soft-card/sticker line built around the soft-lumpy-warm characters Barbara has been drawing (hamster, teddy, panda, otter) — plus a new rabbit character that landed in the spoon theory space because the original rabbit was so vulnerable it made Catherine think of what Barbara talks about. **Key decisions in conversation:** - Two distinct lines, not one - Softer side (hamster/teddy/panda/otter) = permission/comfort - Spoons (rabbit only) = capacity/identity - Don't cross-pollinate characters - Rabbit is the anchor character of the spoons line - Vulnerability is a feature — don't s",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:47:12.278Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.278Z",
+      "queryHashes": [
+        "652d4dafb86d"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "soft-card/sticker",
+        "soft-lumpy-warm",
+        "hamster/teddy/panda/otter",
+        "permission/comfort",
+        "capacity/identity",
+        "cross-pollinate",
+        "new",
+        "product"
+      ]
+    },
+    "memory:memory/2026-06-16.md:1:16": {
+      "key": "memory:memory/2026-06-16.md:1:16",
+      "path": "memory/2026-06-16.md",
+      "startLine": 1,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "# 2026-06-16 — Vacation return, ANA 2FA crisis, new coastal shop plan ## What happened - Catherine back from vacation. Nothing changed on the ANA side because of the hospital week. - Drew was back in the hospital last week. Details unclear; hoping short stay. This is layered on top of the liver transplant history. - **ANA Etsy 2FA is structurally broken.** Tied to Barbara's phone. Both Drew and Barbara have to be in the same place to authorize anything. Catherine has been locked out for ~1-2 months. Single point of failure — flagged as business-continuity emergency. - Catherine has been quietly building a parallel product line because \"they need another income stream\": - **Mental-health-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:47:12.278Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.278Z",
+      "queryHashes": [
+        "652d4dafb86d"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "1-2",
+        "business-continuity",
+        "mental-health",
+        "vacation",
+        "return",
+        "ana",
+        "2fa",
+        "crisis"
+      ]
+    },
+    "memory:memory/2026-06-16.md:80:102": {
+      "key": "memory:memory/2026-06-16.md:80:102",
+      "path": "memory/2026-06-16.md",
+      "startLine": 80,
+      "endLine": 102,
+      "source": "memory",
+      "snippet": "- Beach_Walk_1: 1200×896 (landscape, heavy upscale) - Beach_Walk_portrait: 3125×4166 (portrait 3:4, moderate upscale) - Beach_Read: 2048×2048 (square, heavy + ratio decision) - Beach_Lonely_houses: 1122×1402 (portrait ~4:5, heavy ~5× upscale) - Beach_Lifeguard_3: 896×1200 (portrait ~3:4, heavy ~6× upscale) ### Image prep workflow (locked) - **Upscale to 7200px on the long edge** — one master file per print, downscale to the 5 delivery sizes. - **Tool choice:** Upscayl (free, open source, desktop, \"Artwork\" model) first. Topaz Gigapixel AI ($100 one-time, \"Art / Painting\" preset) as gold standard fallback. - **CRITICAL for watercolor: use Art/Artwork preset, NOT Photo mode.** Photo mode ove",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:47:12.278Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.278Z",
+      "queryHashes": [
+        "652d4dafb86d"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "beach-walk-1",
+        "beach-walk-portrait",
+        "beach-read",
+        "beach-lonely-houses",
+        "beach-lifeguard-3",
+        "one-time",
+        "art/artwork",
+        "landscape"
+      ]
+    },
+    "memory:memory/2026-06-16.md:97:120": {
+      "key": "memory:memory/2026-06-16.md:97:120",
+      "path": "memory/2026-06-16.md",
+      "startLine": 97,
+      "endLine": 120,
+      "source": "memory",
+      "snippet": "- Fulfillment: Printful POD (quality ok) or local NC printer (Catherine is in NC, Lulu is in NC — local options exist). - Sample on-brand sentiments (not \"live laugh coast\" — must be \"slightly literary, never precious\"): - \"Quiet days to you.\" - \"The kind of stillness that stays with you.\" - \"From one empty beach to another.\" - \"Wishing you salt air and slow mornings.\" - \"For the friend who needs the coast more than I do.\" - Catherine's ANA card series experience is real prep, voice transfer works. ### Critical limitation discovered: I CANNOT SEE IMAGES - Files uploaded by Catherine land in `/home/openclaw/.openclaw/media/inbound/` with `---` separator + UUID filenames. - My curr",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:47:49.608Z",
+      "lastRecalledAt": "2026-06-17T18:47:49.608Z",
+      "queryHashes": [
+        "f5b7eb9a5a6c"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "on-brand",
+        "home/openclaw",
+        "openclaw/media/inbound",
+        "fulfillment",
+        "printful",
+        "pod",
+        "quality",
+        "local"
       ]
     }
   }
