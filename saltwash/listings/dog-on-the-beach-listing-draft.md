@@ -1,9 +1,10 @@
 # Etsy Listing Draft — Dog on the Beach
 
-**Status:** Draft v1, sizes complete (5/5 rendered 2026-06-17)
+**Status:** Draft v2 — template applied (top digital banner, end AI disclosure, 2026 Etsy requirements baked in)
 **Date:** 2026-06-16 (updated 2026-06-17)
 **AI source:** Gemini 3.1 + Nano-Banana
 **Orientation:** Portrait (orientation decision locked)
+**Template:** See `saltwash/listing-creation-process.md` for the reusable recipe this listing follows.
 
 ---
 
@@ -44,17 +45,24 @@ Alternates if title needs to test different SEO:
 
 Twilight on the Outer Banks. A woman in a red dress stands in the shallow water with her black dog, the beach and waves washed in grey, white, and greige, the sky layered in soft blue and grey overhead. The light is fading. The scene is quiet.
 
+*This is a digital download. No physical item will be shipped.*
+
 **What you'll receive:**
-Five high-resolution JPG files (300 DPI, quality 95), one for each standard frame size — 5×7, 8×10, 11×14, 16×24, and 18×24. JPG is the right format for watercolor at this resolution: visually lossless, and the files are small enough to download quickly and stay under Etsy's 20MB upload limit. The 5×7 and 16×24 use the image's native 2:3 ratio (clean fit, no cropping). The 8×10, 11×14, and 18×24 use a soft 4:5 ratio with a small horizontal crop on the 11×14 and 18×24 to match standard frame dimensions. Print at home, send to a print shop, or take to your local frame store — same files work for all three.
+Five high-resolution JPG files (300 DPI, quality 95), one for each standard frame size — 5×7, 8×10, 11×14, 16×24, and 18×24. JPG is the right format for watercolor at this resolution: visually lossless and small enough to stay under Etsy's 20MB upload limit. The 5×7 and 16×24 use the image's native 2:3 ratio (clean fit, no cropping). The 8×10, 11×14, and 18×24 use a soft 4:5 ratio with a small horizontal crop on the 11×14 and 18×24 to match standard frame dimensions. Print at home or at your local frame store — same files work for either.
 
 **How it's made:**
-Each Saltwash print begins as a moment from the North Carolina coast, then is washed, layered, and re-imagined in watercolor. No crowds, no parking lots — just shoreline, weather, and the kind of stillness you can't stage.
+Each Saltwash print begins as a photograph from the North Carolina coast, then is reimagined in watercolor using AI-assisted image generation. The tools are configured to keep the loose, place-specific feel of the original scene — the parts most people walk past. No crowds, no parking lots — just shoreline, weather, and the kind of stillness you can't stage.
+
+Tools used: Gemini 3.1 for the watercolor render, finished at high resolution for print.
 
 **Please note:**
-This is a digital download. No physical item will be shipped. Frame not included. Colors may vary slightly between your screen and the final print.
+Frame not included. Colors may vary slightly between your screen and the final print.
 
-**More from Saltwash:** [shop link]
-Questions? Message us anytime.
+**Terms of use:**
+For personal use only. Please don't resell or redistribute the digital file. Print it for your home or as a gift — print as many copies as you'd like.
+
+*This design was created with AI assistance under the creative direction of the seller.*
+
 © Saltwash Prints — Outer Banks, NC
 
 ---
