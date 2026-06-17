@@ -74,7 +74,7 @@ openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chi
 
 ### Nightly Backup to GitHub
 - **Schedule:** Daily at 2:00 AM UTC
-- **Command:** `cd /home/openclaw/.openclaw/workspace && export GITHUB_TOKEN=<token> && ./backup-script.sh >> /var/log/blair-backup.log 2>&1`
+- **Command:** `cd /home/openclaw/.openclaw/workspace && export GITHUB_TOKEN=<token> && ./backup-script.sh` (script self-logs to `/var/log/blair-backup.log` via `exec >>`)
 - **Script:** `/home/openclaw/.openclaw/workspace/backup-script.sh`
 - **Destination:** `catherinebb272/blair-memory` (recovery-only, see GitHub Repo Map below)
 - **Loop guard:** `git add -A -- ':!blair-memory'` excludes the local `blair-memory/` checkout from the push

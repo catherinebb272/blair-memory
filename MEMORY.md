@@ -60,6 +60,30 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 * **Recap spread content drafted 2026-06-08:** `documents/ana/journal/journal-recap-content-v3.md`. 12 entries: image description (for Barbara) + significance text-box overlay + first recap prompt per cycle. Awaiting Catherine proofread + Barbara art-direction pass. C5 kraken-lighthouse significance updated to "beacon to safe haven + beware lurking perils" duality per Catherine. C3 + C11 koi must be visually distinct (different compositions, palettes, water treatments). Second recap prompt per cycle (12 more) TBD — per Catherine, second prompt should be *different from* the imagery (general "what kept coming up / what shifted" type), not cycle-specific.
 * **Full brief:** `documents/ana/journal/journal-product-design-brief.v3.md` (active). Predecessors: v2 → `documents/ana/journal.v2-archive/journal-product-design-brief.v2.md`; v1 → `documents/ana/journal.v1-milestone-anchor-archive/journal-product-design-brief.v1-milestone-anchor.md`
 
+### ANA Operational State (2026-06-16)
+
+- **Drew back in the hospital** (week of 2026-06-09; details unknown, hoping short stay). Drew handles ops for ANA. Per Catherine 2026-06-16: "last week was spent in the hospital."
+- **ANA Etsy shop 2FA is locked to Barbara's phone.** Account was set up by Barbara; Drew manages the store. Both have to be in the same place to authorize 2FA or any shop change. **Single point of failure** — one lost phone or one out-of-town Barbara = total paralysis.
+- **Catherine locked out of ANA shop for ~1-2 months.** Had a token from when Drew signed in on her computer (was operating as owner without her own login). Drew set her up her own login, but role unclear; token cache expired and her own login now hits 2FA she can't pass.
+- **Structural fix needed for ANA (separate from new shop):** When Barbara is available — switch ANA to an authenticator app (Authy / Google Authenticator, not SMS), add Catherine as Shop Manager, give Catherine her own 2FA. This is a business-continuity emergency; raise with Barbara on her own, not bundled.
+- **Why this matters for the new venture:** Even if Catherine starts a new coastal shop, the ANA 2FA problem will still need solving eventually. New shop is the workaround, not the fix.
+
+### Catherine's Coastal Shop (new venture, 2026-06-16)
+
+- **Strategic context:** Family needs another income stream while Drew recovers. New shop is a forced workaround for the ANA 2FA block, not a strategic choice.
+- **Product line:** Coastal / "salty life" / beach watercolor prints. Source: Catherine's vacation photos → Adobe Firefly watercolor conversions. Adobe Firefly Creative Suite subscription is already paid (was a hidden one — Commercial license OK since she's a paid subscriber).
+- **Format mix:** Lead with **digital downloads** of the watercolor files (owns the art, no inventory, ~95% margin). POD as secondary at most (margins brutal on Etsy).
+- **Brand separation rationale:** Coastal is decor-impulse / gift-giver / Pinterest crowd. ANA is sobriety-mission / milestone-driven. Different buyers, different SEO, different brand voice. Cannot coexist in one shop without diluting ANA's mission and confusing Etsy's algorithm.
+- **Mental-health-adjacent products (cards, stickers, spoon theory, digital planner) — PARKED.** They were designed to live under ANA's brand to leverage 4-year review history. Don't launch on the new shop (different brand, would start from zero). Hold until ANA access is restored.
+- **Structural must-haves for the new shop (per SOUL fix to ANA's pattern):**
+  - Owned by Catherine (not Drew, not Barbara)
+  - 2FA on Catherine's phone + an authenticator app (not SMS)
+  - Business email Catherine controls
+  - Bank/PayPal in Catherine's own name
+- **Open items (need Catherine):** shop name, ready print count (launch set of 10-20 ideal), PayPal/bank in own name status, whether to draft listing copy for parked mental-health products now.
+- **Files to create:** `documents/catherine-coastal/` workspace folder TBD; brand kit / SEO strategy / listing copy templates to live there.
+- **Brand kit drafted 2026-06-16:** `documents/catherine-coastal/brand-kit-v1.md` (12 sections: positioning, voice, taglines, color palette w/ hex, typography, art style, shop banner spec, About copy, SEO keyword groups, sample listing "Dune Houses" full copy, open items, one-breath summary). Recommended tagline: "Quiet scenes from the edge of the sea." for hero, "Saltwater and stillness." for social. Recommended fonts: Playfair Display + Karla (both Google Fonts, commercial-licensed). Recommended palette: Sand `#E8DCC4`, Mist `#93A3AC`, Sea Fog `#F5F1EA`, Driftwood `#6B5D4F`, Storm Navy `#2C3E4A`.
+
 ### ANA Product Stable (framing 2026-06-07)
 
 Catherine is building deliberately, not accidentally. Multiple entry points and price tiers; audience-overlap is the strategy.

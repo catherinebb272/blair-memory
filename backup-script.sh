@@ -3,6 +3,14 @@
 
 set -euo pipefail
 
+# Log file (also appended by cron, but doing it here keeps the script self-contained)
+# Use a writable workspace path since /var/log is root-owned.
+LOG_DIR="$(dirname "$0")/logs"
+mkdir -p "$LOG_DIR"
+LOG_FILE="${LOG_DIR}/blair-backup.log"
+exec >> "$LOG_FILE" 2>&1
+echo "----- backup-script.sh run at $(date -u +'%Y-%m-%d %H:%M:%S UTC') -----"
+
 # Load environment variables (including GITHUB_TOKEN)
 source "$(dirname "$0")/.env"
 

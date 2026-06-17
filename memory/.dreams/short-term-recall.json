@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T23:34:27.557Z",
+  "updatedAt": "2026-06-16T21:25:33.464Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -520,21 +520,23 @@
       "endLine": 66,
       "source": "memory",
       "snippet": "- React README: `/documents/pc/cycle-count-react-version/README.md` - explains where current version lives ### Kiki Check - Checked on Kiki agent - heartbeat running, 9 backups created today - Note: sessions_list triggers Kiki's heartbeat (causes backup) [LESSON] Checking sessions_list wakes up the heartbeat agent --- ## Additional Cycle Count Fixes (Evening Session) **Review Screen Updates:** - Eliminated Zone column (all items show \"Not Scanned\" - redundant) - Description now shows concatenated \"Description/Brand\" (e.g., \"WT Tank/lululemon\") - Added Buy Date field in place of Zone column - Added formatBuyDate() function to convert Excel serial dates (45505 → 2024-12-30) **Adjustments",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T20:35:50.423Z",
-      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-06-16T18:13:52.575Z",
       "queryHashes": [
         "5919912bf44c",
         "706aa83977f7",
-        "b1a989a6c8a8"
+        "b1a989a6c8a8",
+        "4c2a378d6864"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-06-05"
+        "2026-06-05",
+        "2026-06-16"
       ],
       "conceptTags": [
         "backup",
@@ -854,25 +856,27 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-09 Daily Log ## Etsy Check-in (Saturday) - 1 order: Yasmina Moore-Foster - 1 Year Phoenix Rising, ship by May 12, gift + gift teaser - No new messages - No new reviews - Posted Discord DM to Drew with order details + handwritten note suggestion - Included Mother's Day reminder ## Browser Tool Test - Tried to log into Etsy but Etsy blocked the VPS IP (bot detection) - Will need to find alternative method ## Notes -",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-06-07T15:29:29.270Z",
+      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "a91c53fdde37",
         "96d163102668",
         "9907211e386a",
         "5914a007eae2",
-        "f1d3ff54ff40"
+        "f1d3ff54ff40",
+        "e634c48d5530"
       ],
       "recallDays": [
         "2026-05-13",
         "2026-05-25",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-16"
       ],
       "conceptTags": [
         "check-in",
@@ -958,18 +962,20 @@
       "endLine": 93,
       "source": "memory",
       "snippet": "- **Post-data clarification:** Ask owner about writeoff dates — \"clearance vs. cycle count?\" Reason codes: \"Cycle Count\" = physical scan by RGIS/Datascan - **Clearance schedule question:** Ask if they followed brand schedule (Sept, Jan, Apr, Jun) - **Store folder naming:** `/documents/pc/pc-8xxxx/` for store-specific work **6. Files Modified/Created** - `/documents/pc/lp-analysis-framework.md` — main framework - `/documents/pc/inventory-loss-facts.md` — added Method #6, updated theft list - `/documents/pc/README.md` — folder overview - `/documents/pc/plano/` — subfolder with Plano data (moved from pc root) - `MEMORY.md` — updated PC section with file locations --- ## Questions to Explore",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:52.474Z",
-      "lastRecalledAt": "2026-05-13T14:20:52.474Z",
+      "lastRecalledAt": "2026-06-16T18:13:52.575Z",
       "queryHashes": [
-        "a91c53fdde37"
+        "a91c53fdde37",
+        "4c2a378d6864"
       ],
       "recallDays": [
-        "2026-05-13"
+        "2026-05-13",
+        "2026-06-16"
       ],
       "conceptTags": [
         "post-data",
@@ -989,18 +995,20 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# March 27, 2026 ## Heyron Tutorial Module Updates Worked on Module 05 (Audio-Visual) updates and navigation fixes across all modules: ### Module 05 - Audio-Visual (key changes) - Streamlined Orchestration Model section with orchestra conductor analogy - Removed duplicate CAN/CANNOT lists from Images section - Added \"preferred vendor\" callouts (ElevenLabs for audio) - Added \"How to Connect\" callouts with exact phrases like \"Help me connect to ElevenLabs\" - Added troubleshooting note for image upload (use Telegram/Discord if chat UI fails) - Added free option for image prompts (paste into ChatGPT) - Gutted and rebuilt Video section with Sora, Runway, Veo as video generation platforms - Add",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:52.474Z",
-      "lastRecalledAt": "2026-05-13T14:20:52.474Z",
+      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
       "queryHashes": [
-        "a91c53fdde37"
+        "a91c53fdde37",
+        "e634c48d5530"
       ],
       "recallDays": [
-        "2026-05-13"
+        "2026-05-13",
+        "2026-06-16"
       ],
       "conceptTags": [
         "gpt",
@@ -1096,20 +1104,22 @@
       "endLine": 84,
       "source": "memory",
       "snippet": "- Started with 300 credits, down to 210 after uploads/testing - Static site uses minimal credits (bandwidth only) - Manual deploys preferred over builds to conserve credits --- ## AgentMail Email System — FIXED ### Problem - Old API key expired - Wrong endpoint being used (`/v1/` instead of `/v0/`) - Incorrect request format ### Solution - New API key: `am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a` - Correct endpoint: `POST /v0/inboxes/{inbox_id}/messages/send` - Proper format: `{\"to\": \"...\", \"subject\": \"...\", \"body\": {\"text\": \"...\"}}` - Deleted orphaned inbox `selfishcompetition741@agentmail.to` - Confirmed working: sent test email + PDF attachment successfully",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T14:03:44.075Z",
-      "lastRecalledAt": "2026-06-07T23:28:53.065Z",
+      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
       "queryHashes": [
         "b4858c274d60",
-        "96c5283df7ab"
+        "96c5283df7ab",
+        "e634c48d5530"
       ],
       "recallDays": [
         "2026-05-14",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-16"
       ],
       "conceptTags": [
         "uploads/testing",
@@ -1521,18 +1531,20 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-05-02 ## Session Notes ## Project Rehab - Description Project Rehab is a modular system designed to reduce apparent \"agent forgetfulness\" by enforcing disciplined organization of tools, skills, and files. Rather than treating memory issues as cognitive failures, this system treats them as **organizational failures** and corrects them through: 1. **Behavior modification** - modify startup instructions to create stricter rules for storage of tools and skills 2. **Structural repair** - consolidate existing tokens & keys in one .env file, move skills into files 3. **Future maintenance** The anticipated user is someone who has a new agent that has not been organized or developed any",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T23:32:20.877Z",
-      "lastRecalledAt": "2026-05-29T23:32:20.877Z",
+      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
       "queryHashes": [
-        "8c104fb22cfe"
+        "8c104fb22cfe",
+        "e634c48d5530"
       ],
       "recallDays": [
-        "2026-05-29"
+        "2026-05-29",
+        "2026-06-16"
       ],
       "conceptTags": [
         "project",
@@ -1987,6 +1999,161 @@
         "per-tool",
         "heyron",
         "redesign"
+      ]
+    },
+    "memory:memory/2026-06-04.md:88:107": {
+      "key": "memory:memory/2026-06-04.md:88:107",
+      "path": "memory/2026-06-04.md",
+      "startLine": 88,
+      "endLine": 107,
+      "source": "memory",
+      "snippet": "**New §8 Daily Page Layout added** (top-to-bottom spec): - Header: \"Today's Thoughts\" heading (Architect's Daughter) + date line + 0.8\" line art at top right - Streak + affirmation row (two boxes side by side): - Left = \"Current streak\" — unfilled at print, user defines (sober days, weeks of therapy, days without panic attack, etc.) — serves broadened audience - Right = daily affirmation — cycles through **84 unique affirmations** (one per daily page, new content list to author) - \"Reflections\" subheading (Architect's Daughter) - 2 prompts × 3 lines each - Bottom 1/3 = free space, bullet-journal dots, cue \"Free space — use for written thoughts or creative expression\" - Page number at bot",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-16T18:13:52.573Z",
+      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
+      "queryHashes": [
+        "e634c48d5530"
+      ],
+      "recallDays": [
+        "2026-06-16"
+      ],
+      "conceptTags": [
+        "top-to-bottom",
+        "0.8",
+        "1/3",
+        "bullet-journal",
+        "new",
+        "page",
+        "layout",
+        "added"
+      ]
+    },
+    "memory:memory/2026-05-02.md:24:42": {
+      "key": "memory:memory/2026-05-02.md:24:42",
+      "path": "memory/2026-05-02.md",
+      "startLine": 24,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "- SOUL.md - removed Tool Awareness section - TOOLS.md - removed teach_behavior/updating_tools sections - AGENTS.md - removed Tool Reference section 2. **Scattered API keys from .env to various locations:** - ELEVENLABS_API_KEY → tools.md (hardcoded) + eleven-labs-setup (new file) - HERENOW_API_KEY → config/herenow.env (new file) - .env now only has: GITHUB_TOKEN, MOCKHEYRON_TOKEN, GITHUB_REPO, GITHUB_BRANCH, AGENTMAIL_API_KEY, DISCORD_BOT_TOKEN, TELEGRAM_BOT_TOKEN 3. **Dismantled /skills folder:** - All skill folders emptied and deleted - Contents moved to root workspace: SKILL.md, etsy files, references/, scripts/, _meta.json - Skills folder now empty 4. **Rema",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-16T18:13:52.573Z",
+      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
+      "queryHashes": [
+        "e634c48d5530"
+      ],
+      "recallDays": [
+        "2026-06-16"
+      ],
+      "conceptTags": [
+        "soul.md",
+        "tools.md",
+        "teach-behavior/updating-tools",
+        "agents.md",
+        "elevenlabs-api-key",
+        "eleven-labs-setup",
+        "herenow-api-key",
+        "config/herenow.env"
+      ]
+    },
+    "memory:memory/2026-06-16.md:36:58": {
+      "key": "memory:memory/2026-06-16.md:36:58",
+      "path": "memory/2026-06-16.md",
+      "startLine": 36,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "- Coastal watercolor source files (Firefly exports) — ask Catherine to keep them in a known location once she has a workspace folder. They're the actual product. - The 12-product mental-health SKU table in `documents/ana/products/sku-table.md` will need re-pathing if/when those products move — but for now, parked. ## Tone / what worked - Catherine responded well to a direct \"this isn't ADD, this is resourceful\" reframe. She was second-guessing herself for having too many ideas; reframing as \"income stream under constraint\" landed. - Concrete next-step questions (4 things) worked better than open-ended \"what do you want to do.\" --- ## Session 2 (later today, ~8:30 PM UTC) — Saltwash bran",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-16T21:25:33.464Z",
+      "lastRecalledAt": "2026-06-16T21:25:33.464Z",
+      "queryHashes": [
+        "7a1bdd19f473"
+      ],
+      "recallDays": [
+        "2026-06-16"
+      ],
+      "conceptTags": [
+        "12-product",
+        "mental-health",
+        "re-pathing",
+        "if/when",
+        "second-guessing",
+        "next-step",
+        "open-ended",
+        "coastal"
+      ]
+    },
+    "memory:memory/2026-06-16.md:112:135": {
+      "key": "memory:memory/2026-06-16.md:112:135",
+      "path": "memory/2026-06-16.md",
+      "startLine": 112,
+      "endLine": 135,
+      "source": "memory",
+      "snippet": "- If a future model version gains vision, the inbound/ folder is the right place to read from. ### Wordmark setup in Canva (recipe saved in brand kit Section 17) - Canvas: 2000×600 custom size - Background: #E8DCC4 (Sand) - Font: Playfair Display, Regular or Medium weight (NOT Bold) - Size: ~140pt, fill 60% canvas width - Color: #2C3E4A (Storm Navy) - Letter spacing: default (sentence case doesn't need widening) - **No** drop shadow, outline, background shape, rotation, or third font - Two variants: full lockup \"Saltwash Prints\" + compact \"Saltwash\" or \"SP\" monogram ### Etsy research finding (filed in brand kit Section 14) - Catherine searched Etsy using \"coastal\" + variations. **\"Nothin",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-16T21:25:33.464Z",
+      "lastRecalledAt": "2026-06-16T21:25:33.464Z",
+      "queryHashes": [
+        "7a1bdd19f473"
+      ],
+      "recallDays": [
+        "2026-06-16"
+      ],
+      "conceptTags": [
+        "future",
+        "model",
+        "version",
+        "gains",
+        "vision",
+        "inbound",
+        "folder",
+        "right"
+      ]
+    },
+    "memory:memory/2026-06-16.md:52:69": {
+      "key": "memory:memory/2026-06-16.md:52:69",
+      "path": "memory/2026-06-16.md",
+      "startLine": 52,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "- Original source note said \"Adobe Firefly\" but Catherine is actually using **Gemini** for the watercolor generation. Update the origin line. Some renders come back sideways/portrait (Gemini quirk) — crop in post. - Domain/handles search results filed in brand kit Section 13. ### Brand kit — locked decisions (`documents/catherine-coastal/brand-kit-v1.md`) - Display: **Playfair Display** - Body: **Lato** (replaces Karla, not available in Canva) - Wordmark: **Sentence case** — `Saltwash Prints`. Was wide-tracked all caps; refactored. Reasoning: two-word all-caps gets long with Playfair, \"Prints\" reads as a label not part of name, sentence case matches sentence-case tagline voice. - Tagline:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-16T21:25:33.464Z",
+      "lastRecalledAt": "2026-06-16T21:25:33.464Z",
+      "queryHashes": [
+        "7a1bdd19f473"
+      ],
+      "recallDays": [
+        "2026-06-16"
+      ],
+      "conceptTags": [
+        "sideways/portrait",
+        "domain/handles",
+        "wide-tracked",
+        "two-word",
+        "all-caps",
+        "sentence-case",
+        "original",
+        "source"
       ]
     }
   }
