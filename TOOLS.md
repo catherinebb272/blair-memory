@@ -78,8 +78,8 @@ openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chi
 - **Script:** `/home/openclaw/.openclaw/workspace/backup-script.sh`
 - **Destination:** `catherinebb272/blair-memory` (recovery-only, see GitHub Repo Map below)
 - **Loop guard:** `git add -A -- ':!blair-memory'` excludes the local `blair-memory/` checkout from the push
-- **Log:** `/var/log/blair-backup.log`
-- **Last verified:** 2026-06-03 (commit 79784c6, 15 files synced)
+- **Log:** `logs/blair-backup.log` (in workspace; `/var/log` is root-owned and unwritable, so the script writes here)
+- **Last verified:** 2026-06-17 (commit 72d7920, 7 files synced; recovered after /var/log permission failure broke backups from 2026-06-10 to 2026-06-16)
 
 ## GitHub Repo Map (canonical)
 

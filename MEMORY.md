@@ -84,6 +84,24 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 - **Files to create:** `documents/catherine-coastal/` workspace folder TBD; brand kit / SEO strategy / listing copy templates to live there.
 - **Brand kit drafted 2026-06-16:** `documents/catherine-coastal/brand-kit-v1.md` (12 sections: positioning, voice, taglines, color palette w/ hex, typography, art style, shop banner spec, About copy, SEO keyword groups, sample listing "Dune Houses" full copy, open items, one-breath summary). Recommended tagline: "Quiet scenes from the edge of the sea." for hero, "Saltwater and stillness." for social. Recommended fonts: Playfair Display + Karla (both Google Fonts, commercial-licensed). Recommended palette: Sand `#E8DCC4`, Mist `#93A3AC`, Sea Fog `#F5F1EA`, Driftwood `#6B5D4F`, Storm Navy `#2C3E4A`.
 
+### Saltwash Prints (Catherine's coastal shop) — v1 LOCKED 2026-06-16
+
+- **Brand name: Saltwash Prints** (locked — only variant with web + Etsy + IG all clear; the "Prints" descriptor preserves expansion room). Folder: `/home/openclaw/blair-documents/saltwash/` + workspace: `documents/catherine-coastal/`.
+- **AI source: Gemini**, not Firefly. Some renders come back sideways/portrait (Gemini quirk) — crop in post.
+- **Taglines (locked):** "Quiet scenes from the edge of the sea." (hero) · "Saltwater and stillness." (social bio) · "Painted from the dunes." (product cards).
+- **Fonts (locked v1):** Playfair Display (display) + **Lato** (body, replaced Karla — not in Canva).
+- **Wordmark: sentence case** "Saltwash Prints" — not all-caps. Playfair Regular/Medium, ~140pt on 2000×600 canvas, Sand bg, Storm Navy text. Full Canva recipe in brand kit Section 17.
+- **Palette (locked v1):** Sand `#E8DCC4` · Mist `#93A3AC` · Sea Fog `#F5F1EA` · Driftwood `#6B5D4F` · Storm Navy `#2C3E4A`.
+- **Pricing (locked v1):** $9.99 single / $24.99 bundle of 3 / $39.99 bundle of 5 (Etsy mid-premium for digital watercolor, room to step to $12.99 later if reviews support).
+- **Print sizes per print:** 5×7, 8×10, 11×14, 16×24, 18×24. Ship 5×7 + 8×10 PNG @ 300 DPI. 11×14/16×24/18×24 = Catherine's Firefly upscale task.
+- **Print lineup v1 (5 prints):** Dog on the Beach (launch lead) · Lonely Houses (tied strongest) · Lady Reading (square, needs 4:5/2:3 crop) for **launch set**. Walk on the Beach (couple+sunset = brand risk, reframe or park) + Lifeguard Station (Catherine's contrast concern, park for v2) — NOT launching.
+- **Print masters built 2026-06-16:** `beach-dog` and `beach-walk` print sets in `blair-documents/saltwash/`. Each has 2:3 + 4:5 native crops + 5×7 + 8×10 ship-ready PNGs + build script + per-print README documenting crop math. Pipeline: ImageMagick `convert` with Lanczos + PNG compression 9. **5×7 trap documented** (5:7 ≠ 2:3 downscale; downscale 2:3 to 1500×2250 first, then crop 75px top + 75px bottom).
+- **Crop bias convention:** figure on right of source → cut 2/3 left / 1/3 right; figure on left → mirror. Goal: figure lands at 1/3 in final frame.
+- **Listing draft v1:** `documents/catherine-coastal/listings/dog-on-the-beach-listing-draft.md` (Dog on the Beach, 95-char title, 13/13 tags, 1-sentence opening for Etsy snippet). Awaiting Catherine review.
+- **Phase 2 (greeting cards):** yes, sensible, **not day 1.** Trigger: 3-6mo post-launch OR 5+ prints with reviews. 5×7 folded, Printful POD or local NC printer. On-brand sentiments drafted (see 2026-06-16 memory).
+- **Brand kit structure:** 18 sections in brand-kit-v1.md (added: tagline, color, typography, art style, shop banner, About, SEO, sample listing, open items, summary, name research, sizes/pricing/landscape, Phase 2 roadmap, print lineup, wordmark recipe, image prep workflow).
+- **Open items (next session):** (1) Catherine reviews 2 print masters + Dog listing draft. (2) Wordmark in Canva. (3) Upscale launch 3 prints (Dog, Lonely Houses, Lady Reading) via Firefly for 11×14/16×24/18×24. (4) Decide Lady Reading ratio (4:5 or 2:3). (5) Re-decide Walk on the Beach (reframe or park). (6) Once Dog is up, I can draft second listing (Lonely Houses).
+
 ### ANA Product Stable (framing 2026-06-07)
 
 Catherine is building deliberately, not accidentally. Multiple entry points and price tiers; audience-overlap is the strategy.

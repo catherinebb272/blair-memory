@@ -1,6 +1,6 @@
 # Action Items
 
-> Updated: 2026-06-02
+> Updated: 2026-06-17
 > Format: [ ] = open, [x] = complete, [~] = in progress
 
 ---
@@ -111,6 +111,41 @@ Items stay active until user marks them complete.
 
 ---
 
+## 🌊 Saltwash Prints (Coastal Shop — Priority: ACTIVE, awaiting Catherine)
+
+**Target:** Launch Etsy shop with 3 prints (Dog on the Beach, Lonely Houses, Lady Reading)
+**Brand kit:** `documents/catherine-coastal/brand-kit-v1.md` (locked 2026-06-16)
+**Print masters folder:** `blair-documents/saltwash/`
+
+### Print masters (in `blair-documents/saltwash/`)
+- [ ] **Catherine review of 2 print masters** — beach-dog and beach-walk 5×7 + 8×10 PNGs in `/home/openclaw/blair-documents/saltwash/{beach-dog,beach-walk}/`
+- [ ] **Upscale launch 3 prints** to 11×14 / 16×24 / 18×24 — Catherine's task in Firefly, sources are the 2:3 + 4:5 native crops (NOT the 5×7 / 8×10 downscales)
+- [ ] **Lonely Houses print master** — not yet built; needs source upload
+- [ ] **Lady Reading print master** — not yet built; square 2048×2048 source, decide ratio (4:5 or 2:3) before crop
+- [ ] **Re-decide Walk on the Beach** — reframe copy (emphasize shoreline over people) or park for v2
+- [ ] **Lifeguard Station** — park for v2 unless contrast is fixed
+
+### Listing copy
+- [ ] **Catherine review Dog on the Beach listing v1** — `documents/catherine-coastal/listings/dog-on-the-beach-listing-draft.md`. Note: assumes portrait, but beach-dog was rotated to landscape. Either re-render portrait or update listing to "horizontal".
+- [ ] **Lonely Houses listing draft** — once master is built, follow Dog template (95-char title formula, 13 tags, 1-sentence opening)
+- [ ] **Lady Reading listing draft** — same template, after ratio is decided
+
+### Brand assets
+- [ ] **Wordmark in Canva** — recipe in brand kit Section 17 (2000×600, Sand bg, Playfair Regular, sentence case, Storm Navy)
+- [ ] **Shop banner** — spec in brand kit Section 7 (not yet built)
+- [ ] **About / Bio section** — copy drafted in brand kit Section 8 (not yet posted)
+
+### Shop infrastructure (Catherine, structural — not Blair's task)
+- [ ] **Shop name on Etsy: Saltwash Prints** — handle check, account creation
+- [ ] **2FA on Catherine's phone + authenticator app** (NOT SMS)
+- [ ] **Business email Catherine controls**
+- [ ] **PayPal / bank in Catherine's own name** (step zero)
+
+### Phase 2 (parked — not day 1)
+- [ ] **Greeting cards** — 5×7 folded, mixed blank/curated, Printful POD or local NC printer. Trigger: 3-6mo post-launch OR 5+ prints with reviews. Sample sentiments ready.
+
+---
+
 ## 📓 ANA Journal Product Line (Priority: HIGH — Active)
 
 **Target:** Launch digital + print journal SKUs (sobriety, year one)
@@ -146,5 +181,8 @@ Items stay active until user marks them complete.
 
 | Date | Item | Result |
 |------|------|--------|
+| 2026-06-16 | Saltwash Prints brand kit v1 | Locked: name, fonts, palette, taglines, wordmark, print lineup, image prep workflow. 18 sections. |
+| 2026-06-16 | Saltwash beach-dog + beach-walk print masters | Built 4 sizes each (2:3 + 4:5 native + 5×7 + 8×10 ship-ready). Pushed to blair-documents commit 381629c. |
+| 2026-06-16 | Saltwash Dog on the Beach listing draft v1 | Title (95ch), 13/13 tags, description with voice checklist. Awaiting Catherine review. |
 | 2026-03-02 | Retitle all Etsy listings | Done — simplified format, no pipes |
 | 2026-03-02 | Replace all listing images | Done — clean coin on solid background with legend |
