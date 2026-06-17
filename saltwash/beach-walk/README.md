@@ -19,11 +19,11 @@ Source dimensions: 3584 × 4800 (3:4 portrait, ratio 0.75).
 | `beach-walk-source.png` | 3584 × 4800 | Untouched master, copied from upload. |
 | `beach-walk-2x3.png` | 3200 × 4800 | Native 2:3 crop. Used as source for 5×7, 16×24. |
 | `beach-walk-4x5.png` | 3584 × 4480 | Native 4:5 crop. Used as source for 8×10, 11×14, 18×24. |
-| `beach-walk-5x7.png` | 1500 × 2100 | 5×7 @ 300 DPI, ready to ship. |
-| `beach-walk-8x10.png` | 2400 × 3000 | 8×10 @ 300 DPI, ready to ship. |
-| `beach-walk-11x14.png` | 3300 × 4200 | 11×14 @ 300 DPI, ready to ship. |
-| `beach-walk-16x24.png` | 4800 × 7200 | 16×24 @ 300 DPI, ready to ship. |
-| `beach-walk-18x24.png` | 5400 × 7200 | 18×24 @ 300 DPI, ready to ship. |
+| `beach-walk-5x7.png` / `.jpg` | 1500 × 2100 | 5×7 @ 300 DPI. PNG = master, JPG (Q95) = Etsy upload. |
+| `beach-walk-8x10.png` / `.jpg` | 2400 × 3000 | 8×10 @ 300 DPI. PNG = master, JPG (Q95) = Etsy upload. |
+| `beach-walk-11x14.png` / `.jpg` | 3300 × 4200 | 11×14 @ 300 DPI. PNG = master, JPG (Q95) = Etsy upload. |
+| `beach-walk-16x24.png` / `.jpg` | 4800 × 7200 | 16×24 @ 300 DPI. PNG = master, JPG (Q95) = Etsy upload. |
+| `beach-walk-18x24.png` / `.jpg` | 5400 × 7200 | 18×24 @ 300 DPI. PNG = master, JPG (Q95) = Etsy upload. |
 
 ## Crop bias
 
@@ -36,8 +36,9 @@ For the upscaled 11×14 (0.786 ratio from 4:5 source) and 18×24 (0.75 ratio fro
 ## Build / rebuild
 
 ```bash
-bash build.sh            # full build (crops + 5x7 + 8x10 downscales)
-bash ../../build-big-sizes.sh   # 11x14, 16x24, 18x24 finals (requires the 2x3 and 4x5 crops first)
+bash build.sh                  # full build (crops + 5x7 + 8x10 downscales)
+bash ../../build-big-sizes.sh  # 11x14, 16x24, 18x24 finals (requires the 2x3 and 4x5 crops first)
+python3 ../../build-jpg-delivery.py  # JPG delivery versions at Q95 (Etsy upload format)
 ```
 
 ## Upscale notes
