@@ -36,7 +36,16 @@
 - **Tags** (13 max): curated mix of primary, secondary, long-tail, medium-volume, and format tags.
 - **Description** (template below).
 
-### 3. Description template (sections, in order)
+### 3. Shop-level content (one-time, locked 2026-06-18)
+
+The following is **universal across all Saltwash print listings** and was written once in the customer-comms folder. It is not a per-listing content decision.
+
+- **Message to buyer** — `saltwash/customer-comms/message-to-buyer.md` (+ .pdf). 86-word text covering the 5 file sizes, paper advice, and "save this message" reminder. Set on listing #1, then copy from an existing Saltwash listing into each new listing's "Message to buyer" field. Lives in order confirmation email + buyer's Purchases page forever.
+- **Printing tips reference** — `saltwash/customer-comms/printing-tips.md` (+ .pdf). ~310-word copy-paste reference for buyer questions. Not auto-delivered; use when responding to convos/emails.
+
+**Per-listing implication:** When setting up a new listing, copy the message-to-buyer text from any existing Saltwash listing (or from the customer-comms file) into the new listing's message field. 30-second copy-paste. **Do not edit the text per listing** — universal consistency is the point. The text is plain-text safe; Etsy's message field doesn't render markdown.
+
+### 4. Description template (sections, in order)
 
 1. **Hero** — print-specific, 1-2 sentences from the brief. Time + place + mood in one breath.
 2. **Top banner** (italicized, just below hero) — *"This is a digital download. No physical item will be shipped."* Multiple disclosure of digital nature because mockup buyers won't read carefully.
@@ -47,7 +56,7 @@
 7. **AI disclosure** (italicized, just before signature) — *"This design was created with AI assistance under the creative direction of the seller."* This is the 2026 Etsy-required disclosure line.
 8. **Shop signature** — `© Saltwash Prints — Outer Banks, NC`.
 
-### 4. Output deliverable
+### 5. Output deliverable
 
 - **Files**: 5 JPGs + 3–5 PNG masters in `saltwash/[print-name]/` on GitHub.
 - **Listing draft**: `saltwash/listings/[print-name]-listing-draft.md` on GitHub, with title / alternates / 13 tags / description / checklist / per-print notes.
@@ -68,6 +77,7 @@
 - [ ] Set price ($9.99 single, per brand-kit Section 14)
 - [ ] Set quantity (1, or unlimited for digital)
 - [ ] Add 1–3 mockup photos (print in a frame or room scene)
+- [ ] Copy message-to-buyer from any existing Saltwash listing (or from `saltwash/customer-comms/message-to-buyer.md`) into the new listing's message field. Do not edit.
 - [ ] Publish
 
 ---
