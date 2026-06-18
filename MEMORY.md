@@ -297,3 +297,57 @@ Full rules in `TOOLS.md` → "GitHub Repo Map".
 * **Mature public GitHub Pages repo** — edited live by the Heyron team.
 * **No local mirror** — the public repo is the source of truth. Workproduct belongs to the Heyron team; workspace copies were deleted 2026-06-03. If we ever need to look something up, clone to `/tmp` and reference, don't keep a persistent mirror.
 * Push only on explicit request.
+
+---
+
+## Saltwash Prints (Pre-Launch, June 2026)
+
+### Business
+
+* **Business:** Coastal watercolor art prints + adjacent crafts, Catherine-owned
+* **Independence:** Structurally independent of ANA. Different shop, different bank, different 2FA. Lessons from ANA 2FA breakdown (Drew/Barbara lockout) drive this. **Built with Barbara (Catherine's daughter) in mind as a future owner/operator** — see "Deeper purpose" below.
+* **Status (2026-06-17):** Pre-launch. Etsy shop registered. Setup copy drafted. Wordmark + shop icon + receipt banner in progress (Catherine working in Canva). Print masters pipeline working for Dog on the Beach. Launch lineup = Dog → Lonely Houses → Lady Reading.
+* **Origin:** Catherine's Outer Banks photography → digital watercolor wash (Gemini) → hand-painted watercolor from sister (select pieces)
+* **Primary channel:** Etsy (digital downloads first; POD/print + greeting cards Phase 2)
+* **Status (2026-06-17):** Pre-launch. Etsy shop registered. Setup copy drafted. Wordmark + shop icon + receipt banner in progress (Catherine working in Canva). Print masters pipeline working for Dog on the Beach. Launch lineup = Dog → Lonely Houses → Lady Reading.
+* **Tagline (locked):** "Quiet scenes from the edge of the sea." (hero) · "Saltwater and stillness." (social) · "Painted from the dunes." (cards/tags)
+* **Pricing (locked):** $9.99 single / $24.99 bundle of 3 / $39.99 bundle of 5
+* **Wordmark (locked):** sentence case "Saltwash Prints" — Playfair Display + Lato
+* **Brand kit:** `documents/catherine-coastal/brand-kit-v1.md`
+* **Etsy setup copy:** `documents/catherine-coastal/etsy-shop-setup-copy-v1.md`
+* **Print masters:** `/home/openclaw/blair-documents/saltwash/`
+
+### The Family (the real story behind "two generations")
+
+* **Catherine** — founder, photographer. Engineer → lawyer for 20 years ("real job"). Owned a quilt & needlework shop with her mother earlier in life. The systems-thinking and brand discipline come from the engineering/legal background.
+* **Sister** — graphic arts training, book designer for many years (career), now painting in retirement. Currently does Texas themes: landscapes, trees, hills, bluebonnets. Also does some water themes (sailboats mostly). This is the same sister who reviewed the ANA journal layout (book designer).
+* **Mother** — owned the quilt & needlework shop with Catherine. The matriarch line of the family's "artsy-craftsy" lineage. Legacy reference only; not in the business.
+* **Barbara** — Catherine's daughter. Third generation in the lineage (mother → Catherine+sister → Barbara). Currently **AWOL** (Catherine's word) — not active in either ANA or Saltwash. Catherine is building Saltwash in parallel to ANA for her, contingent on Barbara + Drew's health stabilizing.
+* **Family framing:** "artsy-craftsy family all around" — Catherine's words. Three generations of making things: mother (quilt/needlework) → Catherine + sister (current makers) → Barbara (third gen, currently absent).
+
+### Sister-painter status (2026-06-17)
+
+* **Confirmed she paints.** Texas themes (landscapes, trees, hills, bluebonnets), occasional sailboats.
+* **Catherine's framing:** "might ultimately use a little of her work for authenticity." Not committed.
+* **Current About copy holds as placeholder truth** — "the image is then translated into watercolor in our studio" is honest either way (AI or hand-painted or both).
+* **Don't act until Catherine says go.** When it activates, prefer **per-listing credit** ("Hand-painted by [sister's name]") on the pieces she touches, not a shop-wide claim. Cleaner, more honest, harder to challenge.
+* **Natural future product expansion** (don't design in, just note exists): sister could do Texas landscape line (bluebonnets, hills) — fits the same brand voice (place-anchored, painted, honest). Sailboat work could cross-sell with OBX prints (both water-themed, both sister-painted).
+
+### Deeper purpose — Saltwash is also built for Barbara (2026-06-17)
+
+* **Catherine's framing:** "I'm building this Etsy business parallel to ANA for her [Barbara], if she and Drew can ever get their health fixed."
+* **Barbara is currently AWOL** (Catherine's word) — not active in either ANA or Saltwash. Drew's health has been recurring (recent hospital stay per 2026-06-16 notes; "can ever" phrasing suggests long-term, not near-term).
+* **Implication:** Saltwash is being built as a clean asset Barbara can step into (or benefit from) when she's well enough, without inheriting ANA's structural problems (2FA tied to a single phone, Drew/Barbara lockout trap).
+* **Why this affects the build:**
+  * Structural independence (own shop, bank, 2FA, domain, email) is even more important — it means Barbara can take over without rework.
+  * The brand kit, listings, copy, and pipeline should be written so they can be picked up by someone who isn't Catherine. Documentation matters.
+  * The About copy doesn't name Barbara publicly, and shouldn't until she's actually in the work. Public brand promise = Catherine + the studio. Internal long-game purpose = broader.
+* **Don't act on this** — don't design Barbara into listings, don't credit her, don't promise her involvement. She's the contingency, not the current face.
+
+### Voice rules — AI tics to avoid (flagged by Catherine 2026-06-17)
+
+* **No triple repetition** — "X, Y, and Z" triads are AI's favorite. Use once per piece at most, or break the rhythm. Catherine caught me doing this in the v1 About: "Quiet, place-specific, honest about what's not in the frame."
+* **No "no X, no Y, no Z" negation lists** — One or two negations per piece; three in a row reads as generated. Worst offender in v1: "No crowds, no parking lots, no perfect sunsets."
+* **No "this not that" structural framing** — Use sparingly, not as a section spine. Brand *can* name what it isn't; just once, in passing.
+* **Audit pass before finalizing any Saltwash copy:** scan for triads and negation lists. Read aloud. Sounds like a person who's been to the OBX → ship it. Sounds like a copywriting template → revise.
+* **Applies forward to:** all Saltwash copy — listings, social captions, blog posts, future About revisions, future card lines.

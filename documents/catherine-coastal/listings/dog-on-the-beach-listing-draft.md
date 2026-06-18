@@ -1,9 +1,10 @@
 # Etsy Listing Draft — Dog on the Beach
 
-**Status:** Draft v1, awaiting Catherine review + image orientation fix
-**Date:** 2026-06-16
+**Status:** Draft v2 — template applied (top digital banner, end AI disclosure, 2026 Etsy requirements baked in)
+**Date:** 2026-06-16 (updated 2026-06-17)
 **AI source:** Gemini 3.1 + Nano-Banana
-**Orientation assumed:** Portrait (re-render recommended — see brand kit Section 16)
+**Orientation:** Portrait (orientation decision locked)
+**Template:** See `saltwash/listing-creation-process.md` for the reusable recipe this listing follows.
 
 ---
 
@@ -44,17 +45,24 @@ Alternates if title needs to test different SEO:
 
 Twilight on the Outer Banks. A woman in a red dress stands in the shallow water with her black dog, the beach and waves washed in grey, white, and greige, the sky layered in soft blue and grey overhead. The light is fading. The scene is quiet.
 
+*This is a digital download. No physical item will be shipped.*
+
 **What you'll receive:**
-One high-resolution PNG file (300 DPI) in five sizes — 5×7, 8×10, 11×14, 16×24, and 18×24. Designed in 2:3 ratio (with soft-cropped 4:5 versions for 8×10 and 11×14). Print at home, send to a print shop, or take to your local frame store.
+Five high-resolution JPG files (300 DPI, quality 95), one for each standard frame size — 5×7, 8×10, 11×14, 16×24, and 18×24. JPG is the right format for watercolor at this resolution: visually lossless and small enough to stay under Etsy's 20MB upload limit. The 5×7 and 16×24 use the image's native 2:3 ratio (clean fit, no cropping). The 8×10, 11×14, and 18×24 use a soft 4:5 ratio with a small horizontal crop on the 11×14 and 18×24 to match standard frame dimensions. Print at home or at your local frame store — same files work for either.
 
 **How it's made:**
-Each Saltwash print begins as a moment from the North Carolina coast, then is washed, layered, and re-imagined in watercolor. No crowds, no parking lots — just shoreline, weather, and the kind of stillness you can't stage.
+Each Saltwash print begins as a photograph from the North Carolina coast, then is reimagined in watercolor using AI-assisted image generation. The tools are configured to keep the loose, place-specific feel of the original scene — the parts most people walk past. No crowds, no parking lots — just shoreline, weather, and the kind of stillness you can't stage.
+
+Tools used: Gemini 3.1 for the watercolor render, finished at high resolution for print.
 
 **Please note:**
-This is a digital download. No physical item will be shipped. Frame not included. Colors may vary slightly between your screen and the final print.
+Frame not included. Colors may vary slightly between your screen and the final print.
 
-**More from Saltwash:** [shop link]
-Questions? Message us anytime.
+**Terms of use:**
+For personal use only. Please don't resell or redistribute the digital file. Print it for your home or as a gift — print as many copies as you'd like.
+
+*This design was created with AI assistance under the creative direction of the seller.*
+
 © Saltwash Prints — Outer Banks, NC
 
 ---
@@ -73,4 +81,6 @@ Questions? Message us anytime.
 - **"Distant Figure" in the title** emphasizes the indistinct quality (a feature, not a bug) and is a literary signal that distinguishes this from commodity Etsy watercolor.
 - **No "dolphin," "starfish," or "sunset" in the copy** — these are the saturated search terms but they pull the brand toward tropical kitsch. Letting go of those keywords is a moat-building choice.
 - **Description opening** is the most important sentence. It places the image in time (twilight), place (Outer Banks), and tone (quiet) in one line. Etsy search snippets often pull the first 160 characters — this opening is designed to land hard in that window.
-- **If you go landscape (Path B) instead of portrait:** the size list changes (7×5, 10×8, 14×11, 16×12, 24×16, 20×15, 24×18) and the description's "shallow water" line might need a slight re-frame. The opening sentence and tags stay the same.
+- **All 5 sizes rendered (Lanczos upscale) and pushed to GitHub** at `saltwash/beach-dog/` (PNG masters + JPG delivery versions). JPG is the upload-to-Etsy format at quality 95 — visually lossless for watercolor, every file well under Etsy's 20MB limit (biggest is ~9MB). PNGs stay as masters for archival.
+- **One PNG was found truncated** during the JPG conversion (beach-walk-16x24.png from the earlier session — original upscale got killed mid-write). Re-rendered from the 2:3 native crop; the JPG conversion then succeeded cleanly. Worth knowing in case any other render silently produced a partial file.
+- **If you go landscape (Path B) later:** the size list flips to 7×5, 10×8, 14×11, 16×12, 24×16, 20×15, 24×18, and you'd crop from `beach-dog-rotated-full.png` (4800×3584) using the same figure-bias math in reverse. Not done yet — portrait set is the active listing.

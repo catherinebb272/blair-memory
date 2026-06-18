@@ -42,7 +42,17 @@ We're not the "Beach Vibes" shop. We're not "Coastal Grandma" merch. We're the s
 **Three rules:**
 1. **Slightly literary, never precious.** Sentences can be beautiful, but they should sound like a person who reads, not a copywriting textbook.
 2. **Specific over general.** "Outer Banks" beats "coastal." "Dune house" beats "beach house." Place is the moat.
-3. **Honest about what it isn't.** "No crowds, no parking lots" is a feature. The negatives describe the aesthetic.
+3. **Honest about what it isn't.** "No crowds, no parking lots" is a feature. The negatives describe the aesthetic. *(See mechanics rule below — use sparingly.)*
+
+**Writing mechanics (avoiding AI tics — flagged by Catherine 2026-06-17):**
+
+The voice rules above say *what* to say. These rules say *how* to structure it. AI copywriting has a few tells that show up fast, and Catherine caught me leaning on both of them in the About draft:
+
+- **Avoid triple repetition.** "X, Y, and Z" triads are AI's favorite pattern. Use once per piece at most, or break the rhythm — vary the structure, use two instead of three, or let one of the three go implied. *Example of overuse in v1 About: "Quiet, place-specific, honest about what's not in the frame."* — three adjectives in a row, all doing similar work.
+- **Avoid "no X, no Y, no Z" negation lists.** Also AI's favorite. One or two negations per piece is fine; three in a row reads as generated copy. *Example of overuse in v1 About + announcement: "No crowds, no parking lots, no perfect sunsets."* — a classic triple negation.
+- **Watch for "this not that" contrast framing.** "We're not X, we're Y" is a copy-template pattern. Use sparingly. The brand *can* name what it isn't — just once, in passing, not as a structural device.
+- **Audit pass before finalizing any Saltwash copy:** scan for triads and negation lists. If you find three of anything in a row, rewrite. If you find yourself using the same syntactic pattern more than once in a paragraph, vary it.
+- **The test:** read the copy aloud. If it sounds like a person who's been to the Outer Banks, ship it. If it sounds like a copywriting template, revise.
 
 **Sample voice in action:**
 - ✅ "Two houses sit on the dunes, alone with the wind."
@@ -165,6 +175,19 @@ We're not the "Beach Vibes" shop. We're not "Coastal Grandma" merch. We're the s
 ---
 
 ## 7. Shop Banner Spec
+
+**Two banner surfaces on Etsy (confirmed labels, 2026-06-17):**
+
+| Etsy label | Dimensions (working) | Notes |
+|---|---|---|
+| **Big Banner** | 1200 × 300 px* | "Fills the top of your page with one big image." Confirmed by Catherine 2026-06-17. Takes ~½ of the typical screen on both mobile and desktop (URL bar fills the other half). |
+| **Mini Banner** | 760 × 100 px | Same file works for both the compact shop header AND Etsy's order receipts. Two-for-one. |
+
+*\*Verify the exact dimensions on the Etsy upload screen before exporting.* Etsy has been tweaking the upload spec as the layout evolves. The 1200×300 is the long-stable working number, but if the uploader shows a different spec, design at that spec. The recipe (proportions, layout, palette) transfers to any reasonable aspect ratio.
+
+**Recommendation: make the Big Banner.** Saltwash is an atmospheric, place-anchored brand — the larger banner is what gives the wordmark + tagline + hero image room to land. The ½-screen real estate (post URL-bar) is exactly the first-impression surface where the brand's quiet, windswept, unhurried tone does its work. The Mini is a fine fallback if you want a more restrained look, but the Big one carries the "this isn't Coastal Grandmother kitsch" work on the shop homepage.
+
+**Conditional:** if you don't have a launch print image ready to use as the hero strip yet, the Mini Banner is the right v1 (no image dependency, faster to ship, two-for-one with receipts). Upgrade to the Big Banner once Dog on the Beach (or whichever print leads) is upscaled and prepped.
 
 **Etsy banner dimensions:** 1200 × 300 px (also safe at 636 × 300)
 **Safe area for mobile crop:** center 1500 × 300 px

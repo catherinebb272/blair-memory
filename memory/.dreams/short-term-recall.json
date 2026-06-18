@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-17T18:47:49.608Z",
+  "updatedAt": "2026-06-17T18:54:01.193Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -2099,18 +2099,20 @@
       "endLine": 58,
       "source": "memory",
       "snippet": "- Coastal watercolor source files (Firefly exports) — ask Catherine to keep them in a known location once she has a workspace folder. They're the actual product. - The 12-product mental-health SKU table in `documents/ana/products/sku-table.md` will need re-pathing if/when those products move — but for now, parked. ## Tone / what worked - Catherine responded well to a direct \"this isn't ADD, this is resourceful\" reframe. She was second-guessing herself for having too many ideas; reframing as \"income stream under constraint\" landed. - Concrete next-step questions (4 things) worked better than open-ended \"what do you want to do.\" --- ## Session 2 (later today, ~8:30 PM UTC) — Saltwash bran",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-16T21:25:33.464Z",
-      "lastRecalledAt": "2026-06-16T21:25:33.464Z",
+      "lastRecalledAt": "2026-06-17T18:54:01.193Z",
       "queryHashes": [
-        "7a1bdd19f473"
+        "7a1bdd19f473",
+        "45ba0738fa4f"
       ],
       "recallDays": [
-        "2026-06-16"
+        "2026-06-16",
+        "2026-06-17"
       ],
       "conceptTags": [
         "12-product",
@@ -2432,6 +2434,99 @@
         "pod",
         "quality",
         "local"
+      ]
+    },
+    "memory:memory/2026-06-16.md:171:192": {
+      "key": "memory:memory/2026-06-16.md:171:192",
+      "path": "memory/2026-06-16.md",
+      "startLine": 171,
+      "endLine": 192,
+      "source": "memory",
+      "snippet": "- Size: ~140pt, fill 60% canvas width - Color: #2C3E4A (Storm Navy) - Letter spacing: default (sentence case doesn't need widening) - **No** drop shadow, outline, background shape, rotation, or third font - Two variants: full lockup \"Saltwash Prints\" + compact \"Saltwash\" or \"SP\" monogram ### Etsy research finding (filed in brand kit Section 14) - Catherine searched Etsy using \"coastal\" + variations. **\"Nothing at all like what I have so far\"** — confirms blue ocean positioning. Coastal Etsy is saturated with tropical kitsch / Coastal Grandmother merch / photoreal sunsets. Saltwash's place-specific + painterly + honest-about-negatives is unoccupied. The moat evaporates if the work stops bei",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:54:01.193Z",
+      "lastRecalledAt": "2026-06-17T18:54:01.193Z",
+      "queryHashes": [
+        "45ba0738fa4f"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "place-specific",
+        "honest-about-negatives",
+        "size",
+        "140pt",
+        "fill",
+        "canvas",
+        "width",
+        "color"
+      ]
+    },
+    "memory:memory/2026-06-16.md:156:178": {
+      "key": "memory:memory/2026-06-16.md:156:178",
+      "path": "memory/2026-06-16.md",
+      "startLine": 156,
+      "endLine": 178,
+      "source": "memory",
+      "snippet": "- Status: **Awaiting Catherine review + image orientation decision** (the listing assumes portrait, but the resized file is landscape orientation after rotation. Need to either re-render portrait or note that this is \"horizontal\" not \"portrait\") ### Critical limitation discovered: I CANNOT SEE IMAGES - Files uploaded by Catherine land in `/home/openclaw/.openclaw/media/inbound/` with `---` separator + UUID filenames. - My current model (MiniMax-M3) does NOT process image attachments. Errors: \"Optional dependency sharp is required for image attachment processing\" / \"model does not support images\". - **Workaround:** Catherine describes images in chat. I work from descriptions + file metadata",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:54:01.193Z",
+      "lastRecalledAt": "2026-06-17T18:54:01.193Z",
+      "queryHashes": [
+        "45ba0738fa4f"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "re-render",
+        "home/openclaw",
+        "openclaw/media/inbound",
+        "minimax-m3",
+        "status",
+        "awaiting",
+        "catherine",
+        "review"
+      ]
+    },
+    "memory:memory/2026-06-16.md:97:125": {
+      "key": "memory:memory/2026-06-16.md:97:125",
+      "path": "memory/2026-06-16.md",
+      "startLine": 97,
+      "endLine": 125,
+      "source": "memory",
+      "snippet": "- Fulfillment: Printful POD (quality ok) or local NC printer (Catherine is in NC, Lulu is in NC — local options exist). - Sample on-brand sentiments (not \"live laugh coast\" — must be \"slightly literary, never precious\"): - \"Quiet days to you.\" - \"The kind of stillness that stays with you.\" - \"From one empty beach to another.\" - \"Wishing you salt air and slow mornings.\" - \"For the friend who needs the coast more than I do.\" - Catherine's ANA card series experience is real prep, voice transfer works. --- ## Session 3 (late night, ~22:00-23:00 UTC) — Print masters for beach-dog + beach-walk ### What I built - **beach-dog print set** (`/home/openclaw/blair-documents/saltwash/beach-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-17T18:54:01.193Z",
+      "lastRecalledAt": "2026-06-17T18:54:01.193Z",
+      "queryHashes": [
+        "45ba0738fa4f"
+      ],
+      "recallDays": [
+        "2026-06-17"
+      ],
+      "conceptTags": [
+        "on-brand",
+        "00-23",
+        "beach-dog",
+        "beach-walk",
+        "fulfillment",
+        "printful",
+        "pod",
+        "quality"
       ]
     }
   }
