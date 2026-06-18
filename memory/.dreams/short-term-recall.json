@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-17T18:54:01.193Z",
+  "updatedAt": "2026-06-18T20:09:44.733Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -556,20 +556,22 @@
       "endLine": 38,
       "source": "memory",
       "snippet": "8. Working Hours — Vintage hourglass with cyan sand, clock gears, warm amber accent 9. Privacy — Balance scale (cyan left, violet right), shield icon, secure feel 10. Finish — Raccoon in pilot seat, hand on launch button, flames, high energy --- **⚠️ REMINDER FOR CATHERINE:** When asked \"what are we working on?\" — remind me to: 1. Update the list of images (Canva descriptions need corresponding image files) 2. Go through ALL tool screens + Model and Memory in the Expert flow path 3. We discovered an edit that turned both the upload screen and previous version black (\"the black screen of death\") 4. I successfully recovered by restoring from one of Catherine's backups **Recovery Note:** The",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T15:35:37.944Z",
-      "lastRecalledAt": "2026-05-14T15:10:14.701Z",
+      "lastRecalledAt": "2026-06-18T15:56:22.365Z",
       "queryHashes": [
         "92b0e02ccc5d",
-        "0c1ca8ff538b"
+        "0c1ca8ff538b",
+        "720a3dcd0396"
       ],
       "recallDays": [
         "2026-05-11",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-06-18"
       ],
       "conceptTags": [
         "backup",
@@ -589,20 +591,22 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-05-03 ## Heyron Launchpad Redesign - **Changelog:** Created in CHANGELOG.md - **Project:** Heyron.ai Launchpad module redesign (launchpad-source.html) - **Status:** In progress - testing different colors and images - **Completed:** Introductory Hello page with animation - **Design guidelines:** Stored in `heyronstyle.md` - **Color scheme:** Current scheme represented in Hello page animation - **Removed hello/welcome pages:** launchpad-source.html now starts on Names page - **Added larger mascot images:** Each screen has 180x180px image spot (raccoon2-raccoon12.png) - **To do:** Test different visual variations for Launchpad, add raccoon image files ## Canva Visual Descriptions 1.",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T15:35:37.944Z",
-      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
+      "lastRecalledAt": "2026-06-18T15:56:22.365Z",
       "queryHashes": [
         "92b0e02ccc5d",
-        "7edf04690987"
+        "7edf04690987",
+        "720a3dcd0396"
       ],
       "recallDays": [
         "2026-05-11",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-18"
       ],
       "conceptTags": [
         "changelog.md",
@@ -1001,22 +1005,24 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# March 27, 2026 ## Heyron Tutorial Module Updates Worked on Module 05 (Audio-Visual) updates and navigation fixes across all modules: ### Module 05 - Audio-Visual (key changes) - Streamlined Orchestration Model section with orchestra conductor analogy - Removed duplicate CAN/CANNOT lists from Images section - Added \"preferred vendor\" callouts (ElevenLabs for audio) - Added \"How to Connect\" callouts with exact phrases like \"Help me connect to ElevenLabs\" - Added troubleshooting note for image upload (use Telegram/Discord if chat UI fails) - Added free option for image prompts (paste into ChatGPT) - Gutted and rebuilt Video section with Sora, Runway, Veo as video generation platforms - Add",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:52.474Z",
-      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
       "queryHashes": [
         "a91c53fdde37",
         "e634c48d5530",
-        "7edf04690987"
+        "7edf04690987",
+        "784546acc677"
       ],
       "recallDays": [
         "2026-05-13",
         "2026-06-16",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-18"
       ],
       "conceptTags": [
         "gpt",
@@ -1079,22 +1085,24 @@
       "endLine": 80,
       "source": "memory",
       "snippet": "- Instagram started (paused), Pinterest started - YTD conversion is 4.2% — lower than lifetime 5% - Hypothesis: Changes may have boosted traffic but hurt conversion **6. Description Comparison** - TheAchievemint: Flowing prose, emotional storytelling, quotes - ANA: Scannable bullets, features-focused, \"what's in box\" - Trade-off: Mobile-friendly vs emotional resonance **7. What Can/Cannot Change** - CANNOT: Months on front (design choice), extended milestones, new photography - CAN: Titles, descriptions, AI-generated lifestyle videos, related products --- ## Action Items - [ ] Test shorter titles on top performers (1 Year Koi, 6 Month Koi) - [ ] Consider richer descriptions on key lis",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T14:03:44.075Z",
-      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
       "queryHashes": [
         "b4858c274d60",
         "8dc4267f1660",
         "0c1ca8ff538b",
-        "b8dfdc61945a"
+        "b8dfdc61945a",
+        "784546acc677"
       ],
       "recallDays": [
         "2026-05-14",
-        "2026-06-02"
+        "2026-06-02",
+        "2026-06-18"
       ],
       "conceptTags": [
         "4.2",
@@ -1244,21 +1252,23 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-14 ## Competitor Intel ### AACoinClub (Etsy) - 11 months on Etsy, 171 sales - Exclusively coins, mixed styles (no apparent strategy) - Top sellers: - Bling style: sun with moon on back, available years 1-15 - 4 year: embossed images of AA founders - 19 total styles - Unknown: stocking vs on-demand etching ## Action Items - [ ] Update competitor file with AACoinClub",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:35:58.021Z",
-      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
+      "lastRecalledAt": "2026-06-18T15:56:22.365Z",
       "queryHashes": [
         "9907211e386a",
         "5914a007eae2",
-        "27522abfbf4d"
+        "27522abfbf4d",
+        "720a3dcd0396"
       ],
       "recallDays": [
         "2026-05-25",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-18"
       ],
       "conceptTags": [
         "1-15",
@@ -1846,20 +1856,22 @@
       "endLine": 56,
       "source": "memory",
       "snippet": "# May 23, 2026 ## Research: Print on Demand Design Tools ### Kittl - Free ($0), Pro ($12/mo), Expert ($26/mo) - Strong AI generation (DALL-E, Flux, Ideogram) - Built for merch (t-shirts, stickers, mockups) - Commercial license on paid plans - Best for POD-focused users ### Playground AI (playground.com) - Free ($0), Pro ($12/mo), Pro Plus ($36/mo) - AI image generation (GPT Image 2, Nano Banana, Seedream) - Templates for social/digital, not POD-specific - Commercial license on Pro+ only - Good for AI image generation, then design elsewhere ### Adobe Express - Pricing: ~$9.99/mo (often bundled with Creative Cloud) - Firefly AI, huge template library - Best versatility, integration with Ad",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-07T15:29:09.052Z",
-      "lastRecalledAt": "2026-06-17T18:47:12.276Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
       "queryHashes": [
         "2543d2c430ae",
-        "7edf04690987"
+        "7edf04690987",
+        "784546acc677"
       ],
       "recallDays": [
         "2026-06-07",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-18"
       ],
       "conceptTags": [
         "gpt",
@@ -2099,20 +2111,27 @@
       "endLine": 58,
       "source": "memory",
       "snippet": "- Coastal watercolor source files (Firefly exports) — ask Catherine to keep them in a known location once she has a workspace folder. They're the actual product. - The 12-product mental-health SKU table in `documents/ana/products/sku-table.md` will need re-pathing if/when those products move — but for now, parked. ## Tone / what worked - Catherine responded well to a direct \"this isn't ADD, this is resourceful\" reframe. She was second-guessing herself for having too many ideas; reframing as \"income stream under constraint\" landed. - Concrete next-step questions (4 things) worked better than open-ended \"what do you want to do.\" --- ## Session 2 (later today, ~8:30 PM UTC) — Saltwash bran",
-      "recallCount": 2,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 8,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-16T21:25:33.464Z",
-      "lastRecalledAt": "2026-06-17T18:54:01.193Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
       "queryHashes": [
         "7a1bdd19f473",
-        "45ba0738fa4f"
+        "45ba0738fa4f",
+        "b5640eb7dd3f",
+        "4c888b769703",
+        "da8b3018df8e",
+        "ac718a28cf3c",
+        "4bb68d85c1e7",
+        "784546acc677"
       ],
       "recallDays": [
         "2026-06-16",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-18"
       ],
       "conceptTags": [
         "12-product",
@@ -2443,18 +2462,25 @@
       "endLine": 192,
       "source": "memory",
       "snippet": "- Size: ~140pt, fill 60% canvas width - Color: #2C3E4A (Storm Navy) - Letter spacing: default (sentence case doesn't need widening) - **No** drop shadow, outline, background shape, rotation, or third font - Two variants: full lockup \"Saltwash Prints\" + compact \"Saltwash\" or \"SP\" monogram ### Etsy research finding (filed in brand kit Section 14) - Catherine searched Etsy using \"coastal\" + variations. **\"Nothing at all like what I have so far\"** — confirms blue ocean positioning. Coastal Etsy is saturated with tropical kitsch / Coastal Grandmother merch / photoreal sunsets. Saltwash's place-specific + painterly + honest-about-negatives is unoccupied. The moat evaporates if the work stops bei",
-      "recallCount": 1,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-17T18:54:01.193Z",
-      "lastRecalledAt": "2026-06-17T18:54:01.193Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
       "queryHashes": [
-        "45ba0738fa4f"
+        "45ba0738fa4f",
+        "b5640eb7dd3f",
+        "4c888b769703",
+        "da8b3018df8e",
+        "ac718a28cf3c",
+        "4bb68d85c1e7",
+        "784546acc677"
       ],
       "recallDays": [
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-18"
       ],
       "conceptTags": [
         "place-specific",
@@ -2474,18 +2500,24 @@
       "endLine": 178,
       "source": "memory",
       "snippet": "- Status: **Awaiting Catherine review + image orientation decision** (the listing assumes portrait, but the resized file is landscape orientation after rotation. Need to either re-render portrait or note that this is \"horizontal\" not \"portrait\") ### Critical limitation discovered: I CANNOT SEE IMAGES - Files uploaded by Catherine land in `/home/openclaw/.openclaw/media/inbound/` with `---` separator + UUID filenames. - My current model (MiniMax-M3) does NOT process image attachments. Errors: \"Optional dependency sharp is required for image attachment processing\" / \"model does not support images\". - **Workaround:** Catherine describes images in chat. I work from descriptions + file metadata",
-      "recallCount": 1,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-17T18:54:01.193Z",
-      "lastRecalledAt": "2026-06-17T18:54:01.193Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.441Z",
       "queryHashes": [
-        "45ba0738fa4f"
+        "45ba0738fa4f",
+        "b5640eb7dd3f",
+        "4c888b769703",
+        "720a3dcd0396",
+        "ac718a28cf3c",
+        "4bb68d85c1e7"
       ],
       "recallDays": [
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-18"
       ],
       "conceptTags": [
         "re-render",
@@ -2527,6 +2559,293 @@
         "printful",
         "pod",
         "quality"
+      ]
+    },
+    "memory:memory/2026-06-17.md:192:211": {
+      "key": "memory:memory/2026-06-17.md:192:211",
+      "path": "memory/2026-06-17.md",
+      "startLine": 192,
+      "endLine": 211,
+      "source": "memory",
+      "snippet": "- **Recommendation stands:** Big Banner. The ½-screen real estate reinforces it. That's exactly where Saltwash's atmospheric, place-anchored brand does its \"this isn't Coastal Grandmother kitsch\" work. --- ### Etsy setup progress check-in (~20:01 UTC) - **Catherine's status update:** \"Got it. Did the very simple Shop Icon graphic. Will switch to working on the Receipt banner and the Big Banner. Back later.\" - **Shop Icon: done** ✓ (built in Canva per Section 4 recipe — compact \"Saltwash\" wordmark on Sand) - **Working on next:** Receipt Banner + Big Banner - **Recipes ready:** Section 5 of etsy-shop-setup-copy-v1.md (Receipt Banner) and Section 7 of brand-kit-v1.md (Big Banner) - **Pointer",
+      "recallCount": 6,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 6,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T14:01:28.203Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
+      "queryHashes": [
+        "b5640eb7dd3f",
+        "4c888b769703",
+        "da8b3018df8e",
+        "ac718a28cf3c",
+        "4bb68d85c1e7",
+        "784546acc677"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "1⁄2-screen",
+        "place-anchored",
+        "check-in",
+        "etsy-shop-setup-copy-v1.md",
+        "brand-kit-v1.md",
+        "recommendation",
+        "stands",
+        "big"
+      ]
+    },
+    "memory:memory/2026-06-17.md:69:84": {
+      "key": "memory:memory/2026-06-17.md:69:84",
+      "path": "memory/2026-06-17.md",
+      "startLine": 69,
+      "endLine": 84,
+      "source": "memory",
+      "snippet": "- **TBD: clarify whether the sister-painter is the same sister as the book-designer sister** who reviewed the journal layout. Could be the same person (multi-discipline artist) or a different sister. Ask when relevant — not blocking anything right now. - **Don't act on this yet.** Catherine said \"might\" and \"ultimately.\" Wait for her to actually start using sister's work before revising the About or any other copy. For now, just file the fact and keep watching. ### Sister confirmed: same person as the book designer - Catherine: \"Same sister. Studied graphic arts, worked for many years as a book designer, has resumed painting in retirement. Currently does Texas-theme (landscapes with trees,",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T14:01:28.203Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.441Z",
+      "queryHashes": [
+        "b5640eb7dd3f",
+        "4c888b769703",
+        "ac718a28cf3c",
+        "4bb68d85c1e7"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "sister-painter",
+        "book-designer",
+        "multi-discipline",
+        "texas-theme",
+        "tbd",
+        "clarify",
+        "whether",
+        "sister"
+      ]
+    },
+    "memory:memory/2026-05-06.md:1:45": {
+      "key": "memory:memory/2026-05-06.md:1:45",
+      "path": "memory/2026-05-06.md",
+      "startLine": 1,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "# 2026-05-06 ## Heyron Launchpad Redesign (Complete for Now) **Summary:** Incremental approach worked — made one change at a time to isolate what was breaking the black screen. ### Files on GitHub (blair-documents main) - `launchpad-originaltools.html` — cyan accent + tool name fix - `launchpad-originalmascot.html` — PNG mascots - `launchpad-originalpath.html` — URL param for beginner/expert path - `launchpad-originalimage.html` — current working version (square images, raccoon14.png) - `hello-screen.html` — button underline fix ### Changes Made (chronological) 1. **Tool names:** Black on dark → cream (#F5F0E8) via `color: var(--text-primary)` 2. **Mascots:** SVG → PNG images at `assets/",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T15:56:22.365Z",
+      "lastRecalledAt": "2026-06-18T15:56:22.365Z",
+      "queryHashes": [
+        "720a3dcd0396"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "blair-documents",
+        "launchpad-originaltools.html",
+        "launchpad-originalmascot.html",
+        "launchpad-originalpath.html",
+        "beginner/expert",
+        "launchpad-originalimage.html",
+        "raccoon14.png",
+        "hello-screen.html"
+      ]
+    },
+    "memory:memory/2026-05-06.md:33:73": {
+      "key": "memory:memory/2026-05-06.md:33:73",
+      "path": "memory/2026-05-06.md",
+      "startLine": 33,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "- Verify all images load correctly - May need to add more raccoon images (image numbering mismatch noted) --- ## Site Dashboard (site-dashboard.html) **Status:** ✅ Done - matches hello-screen style ### Quick Cards - Launchpad Setup → links to `hello-screen.html` - Support → links to `support.html` - Quickstart Guide → links to tutorial page - Tutorials → renamed to Ron Academy (no link yet) - Ideas → links to https://www.thedenheyron.com/ ### Hero Section - Heading: \"Mission Control\" (38px, bold, -0.03em letter-spacing) - Tagline: \"GUIDE · IMPROVE · SUPPORT\" (uppercase, 14px, cyan #22D3EE, 0.15em letter-spacing) - Body: \"Your agent is up and running. Access tools, tutorials, prompts, an",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T15:56:22.365Z",
+      "lastRecalledAt": "2026-06-18T15:56:22.365Z",
+      "queryHashes": [
+        "720a3dcd0396"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "site-dashboard.html",
+        "hello-screen",
+        "hello-screen.html",
+        "support.html",
+        "www.thedenheyron.com",
+        "0.03em",
+        "letter-spacing",
+        "0.15em"
+      ]
+    },
+    "memory:memory/2026-04-22.md:1:14": {
+      "key": "memory:memory/2026-04-22.md:1:14",
+      "path": "memory/2026-04-22.md",
+      "startLine": 1,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "# 2026-04-22 ## Browser Tool Testing - **Browser tool installed** in prior session (not by me directly) - **Tested for:** Finding real estate images for NC Neighborhoods app - **Findings:** - Zillow blocked (bot detection) - Google blocked (CAPTCHA) - DuckDuckGo blocked (CAPTCHA) - **Urban Durham Realty** (urbandurhamrealty.com) - worked, no blocking - Browser is flaky - times out frequently, requires multiple dashboard refreshes - Eventually crashed completely (CDP unreachable after ~5 refreshes) - **Issue:** Browser becomes unreliable when hitting anti-bot measures; needs gateway refresh each time it times out",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T15:56:22.365Z",
+      "lastRecalledAt": "2026-06-18T15:56:22.365Z",
+      "queryHashes": [
+        "720a3dcd0396"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "gateway",
+        "urbandurhamrealty.com",
+        "anti-bot",
+        "browser",
+        "tool",
+        "testing",
+        "installed",
+        "prior"
+      ]
+    },
+    "memory:memory/2026-06-17.md:79:95": {
+      "key": "memory:memory/2026-06-17.md:79:95",
+      "path": "memory/2026-06-17.md",
+      "startLine": 79,
+      "endLine": 95,
+      "source": "memory",
+      "snippet": "- **Future Saltwash crossover potential:** Texas landscape prints could be a natural second line. Sailboat work could cross-sell with OBX water pieces. Don't design in — just note the door is open. ### Catherine's own history (filed 2026-06-17) - \"We are an artsy-craftsy family all around. Owned a quilt & needlework shop with my mother for a while. But one must live, so I was an engineer then lawyer for my real job for 20 years.\" - **Implications for Saltwash:** - The brand kit, SEO discipline, print masters pipeline, Etsy setup structure are not first-time-Etsy-seller energy. The systems-thinking is from the engineering/legal training. **This is why the brand is being built properly**",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T15:56:29.444Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
+      "queryHashes": [
+        "784546acc677"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "cross-sell",
+        "artsy-craftsy",
+        "first-time-etsy-seller",
+        "systems-thinking",
+        "engineering/legal",
+        "future",
+        "saltwash",
+        "crossover"
+      ]
+    },
+    "memory:memory/2026-06-18.md:71:80": {
+      "key": "memory:memory/2026-06-18.md:71:80",
+      "path": "memory/2026-06-18.md",
+      "startLine": 71,
+      "endLine": 80,
+      "source": "memory",
+      "snippet": "**What I delivered (commit b170f0f):** `ana/sober-birthday-cards-title-desc-tags.csv` — clean 3-column CSV (Title, Description, Tags) for all 12 cards, January through December, in calendar order. 13 tags per card, mostly the same across cards (only month name and flower name change per row). **SKU scheme preserved from existing master:** CSF-01 (January Carnation) → CSF-12 (December Narcissus). **Key process note (bug found):** The existing master at `documents/ana/sober-birthday-cards.csv` is a 12-column CSV with malformed row endings — the description's closing quote is missing, so the rest of the row's fields (price, qty, tags, materials, image URL, SKU, etc.) are all jammed onto a sin",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T20:09:44.733Z",
+      "lastRecalledAt": "2026-06-18T20:09:44.733Z",
+      "queryHashes": [
+        "4fda033cc97f"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "3-column",
+        "csf-01",
+        "csf-12",
+        "12-column",
+        "what",
+        "delivered",
+        "commit",
+        "b170f0f"
+      ]
+    },
+    "memory:memory/2026-06-16.md:120:145": {
+      "key": "memory:memory/2026-06-16.md:120:145",
+      "path": "memory/2026-06-16.md",
+      "startLine": 120,
+      "endLine": 145,
+      "source": "memory",
+      "snippet": "- `beach-walk-source.png` (3584×4800) — untouched master - `beach-walk-2x3.png` (3200×4800) — 2:3 crop, cut 1/3-left / 2/3-right (figure at 1/3 from left, mirrored from dog) - `beach-walk-4x5.png` (3584×4480) — 4:5 crop, centered vertical cut - `beach-walk-5x7.png` (1500×2100), `beach-walk-8x10.png` (2400×3000) - `build.sh` + `README.md` ### Pipeline math (locked, both prints) - 5×7 = 1500×2100 px @ 300 DPI (5:7 aspect = 0.714) - 8×10 = 2400×3000 px @ 300 DPI (4:5 aspect = 0.800, exact match) - 11×14 / 16×24 / 18×24 = **Catherine's upscale task in Firefly**, not built here - Native crops (2:3 + 4:5) always saved at source resolution so Catherine can upscale from the master, not f",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T20:09:44.733Z",
+      "lastRecalledAt": "2026-06-18T20:09:44.733Z",
+      "queryHashes": [
+        "4fda033cc97f"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "beach-walk-source.png",
+        "beach-walk-2x3.png",
+        "1/3-left",
+        "2/3-right",
+        "1/3",
+        "beach-walk-4x5.png",
+        "beach-walk-5x7.png",
+        "beach-walk-8x10.png"
+      ]
+    },
+    "memory:memory/2026-06-17.md:208:217": {
+      "key": "memory:memory/2026-06-17.md:208:217",
+      "path": "memory/2026-06-17.md",
+      "startLine": 208,
+      "endLine": 217,
+      "source": "memory",
+      "snippet": "1. **Original Gemini render** — 3584×4800 portrait frame, but sideways content (landscape design in portrait frame = \"oddball vertical\"). NOT the same as a true landscape image. 2. **`beach-dog-rotated-full.png`** — 4800×3584 landscape, produced by rotating the source 90° clockwise. This is the standard landscape master. 3. **Portrait crops** (`-2x3`, `-4x5`, `-5x7`, `-8x10`) — taken from the rotated landscape, biased so figure sits near center of the final portrait frame. **Etsy Big Banner** used form #1 (oddball vertical), rotated in Canva. NOT beach-walk. **beach-walk is a SEPARATE image** — different source, different figures (two figures on the beach), also portrait-cropped for its ow",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-18T20:09:44.733Z",
+      "lastRecalledAt": "2026-06-18T20:09:44.733Z",
+      "queryHashes": [
+        "4fda033cc97f"
+      ],
+      "recallDays": [
+        "2026-06-18"
+      ],
+      "conceptTags": [
+        "beach-dog-rotated-full.png",
+        "beach-walk",
+        "portrait-cropped",
+        "original",
+        "gemini",
+        "render",
+        "portrait",
+        "frame"
       ]
     }
   }
