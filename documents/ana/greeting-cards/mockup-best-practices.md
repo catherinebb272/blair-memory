@@ -2,6 +2,8 @@
 
 **Applies to:** All ANA greeting card lines — Sober Birthday Flowers (CSF-01–12), Sober Birthday Themed (CSB-01+), Tiny Victories (CTV-01–14), and any future 5×7 folded card SKU.
 
+**Format state (2026-06-20):** Currently digital-only downloads. If/when physical versions launch (planned for sober cards as coin-order add-ons), the doc will gain a "physical SKU addendum" with envelope + packaging shots.
+
 **Last updated:** 2026-06-20
 
 ---
@@ -47,7 +49,7 @@ That's the whole toolkit. Don't invent new poses for variety's sake — variety 
 | 3 | **Open / interior reveal** — the money shot |
 | 4 | **Text close-up** — pinhole zoom on the inside copy, legible at thumb size |
 | 5 | **In hand** — shows scale, humanizes |
-| 6 | **With envelope** — confirms the package deal |
+| 6 | *Physical SKUs only:* **with envelope** — confirms the package deal. Skip for digital downloads. |
 | 7 | **Detail shot** — paper texture, matte finish, fold quality |
 | 8 | **Group / line shot** — 2–3 other cards from the same line fanned or stacked. Builds "I'm a real line." |
 | 9 | **Occasion cue** — single contextual prop that fits the line's tone (coffee mug, stem, notebook, etc.) |
