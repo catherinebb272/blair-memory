@@ -118,3 +118,55 @@ AI generation with a locked prompt beats every Canva template for cards specific
 - [ ] Decide line-by-line prop for the occasion-cue slot
 - [ ] Test the master prompt across 3 cards to confirm the studio "reads" as consistent before committing to all 14
 - [ ] Decide if video is in scope for v1 launch or post-launch iteration
+
+---
+
+## Nano Banana (Gemini 2.5 Flash Image) — Known Quirks & Fixes
+
+Confirmed as the card-mockup tool of choice over GPT (better output quality, higher credit cost acceptable). Documented issues from working through the CTV line:
+
+### Issue: AI enlarges artwork relative to card front
+
+**Symptom:** Artwork figures feel small in the white space. AI is re-deciding the framing during render — preserving artwork content but enlarging it relative to the card.
+
+**Why edit mode fails:** Nano banana is decent at fixing drift and elements, weak at re-scaling framing in-place. It prefers to re-render from scratch with new framing instructions.
+
+**Fixes (try in order):**
+
+1. **Drop-in scale-preservation block** — place right after the artwork reference:
+   ```
+   The artwork from reference image 2 must remain at its exact original 
+   scale and framing within the card front. Do not crop, zoom, enlarge, 
+   or reframe the artwork. Preserve all original whitespace, margins, 
+   and negative space around the artwork exactly as shown in reference 
+   image 2. The artwork must not fill or extend to the edges of the card.
+   ```
+
+2. **Explicit margin call:** "Maintain a minimum 10% margin on all four sides between the artwork and the card edges."
+
+3. **Numerical anchor:** "The artwork occupies approximately [X%] of the card front surface, matching the framing in reference image 2." — estimate from source file, lock it.
+
+4. **Third reference trick (strongest fix):** Add a flat, dead-on photo of just the card front on a neutral background as reference image 3. "Reference image 3 shows the exact framing and whitespace of the card front. Replicate that framing precisely within the card shown in the final image." A flat front gives nano banana a cleaner framing target than an angled hero shot.
+
+**Root cause if all fail:** Nano banana tends to treat white space as "missing content" and crop inward. Ensure reference image 2 is the high-res print file (1500×2100+ at 300dpi), not a smaller export. More source pixels = less improvisation.
+
+### Issue: Table distressing drifts between renders
+
+**Symptom:** Wood grain or surface texture changes shape, direction, or pattern between cards in the same line.
+
+**Fix:** Add explicit stability instruction: "Keep the wood grain pattern in the table identical to reference image 1. Do not change the wood's knots, color variation, or grain direction." Re-roll if drift persists — sometimes the seed wins.
+
+### Issue: Card interior looks mottled when card is "barely open"
+
+**Symptom:** Card interior surface shows texture/pattern that shouldn't be there — the AI invents a paper texture.
+
+**Fix:** Add: "The card interior must appear smooth and uniformly off-white, matching the matte paper finish. Do not add texture, pattern, or variation to the interior surface."
+
+---
+
+## Prompt Iteration Discipline (lesson from CTV work)
+
+- Lock the studio first (surface, lighting direction, angle, focal length, background). Spend credits here.
+- Lock framing preservation before doing the full set. 3 test cards across the line — if the art occupies consistent % of card front across all 3, the lock holds.
+- Drift fixes (table grain, mottled interior) need explicit per-element instructions. Vague "match reference" isn't enough.
+- Background consistency on nano banana takes prompt refinement — get it stable, then don't touch it.
