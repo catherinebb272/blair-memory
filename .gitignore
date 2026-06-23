@@ -1,8 +1,31 @@
--e agent-library/
+# Backup exclusions for the blair-memory recovery repo.
+# Anything added here will not be pushed to GitHub even if it lives in the workspace.
+
+# Local-only state
+agent-library/
 .last-backup
 .trash/
 .env
+
+# Local mirrors / sub-repos
 blair-memory/
 documents/heyron-tutorials/
+heyron-tutorial-mirror/
 heyron-tutorials/
+
+# Logs (don't back up logs)
 logs/
+
+# Python virtualenvs (huge, never want to back these up)
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.pyc
+
+# Temp backups of edited files at workspace root
+AGENTS.md.bak.*
+SOUL.md.bak.*
+TOOLS.md.bak.*
+USER.md.bak.*
+MEMORY.md.bak.*
+IDENTITY.md.bak.*
