@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-18T20:09:44.733Z",
+  "updatedAt": "2026-06-23T22:11:30.537Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -1328,25 +1328,27 @@
       "endLine": 11,
       "source": "memory",
       "snippet": "# Daily Memory Log - May 17, 2026 ## ANA / Business - **Midjourney abandoned** — couldn't get reliable repeatable look for greeting card series. Kept defaulting to \"cute\" aesthetic (heart-shaped faces, tiny noses, big eyes). $10 spent, not worth fighting. - **Lost designs** — had 4 good designs from ChatGPT/CoPilot but lost them when had to restart and regenerate. - **Barbara unavailable** — can't do artwork right now, so AI generation is the path forward. - **Printify** — account set up, connected to Etsy store. - **Product decision:** 5x7 folded greeting cards, matte paper, envelope included, prefolded (to stay in small letter shipping rate per YouTube advice). ## Personal - Catherine he",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:36:02.903Z",
-      "lastRecalledAt": "2026-06-17T18:47:49.608Z",
+      "lastRecalledAt": "2026-06-23T22:11:28.135Z",
       "queryHashes": [
         "e67681840b0e",
         "e32e6bf831d8",
         "2543d2c430ae",
         "6a129c354fd1",
         "652d4dafb86d",
-        "f5b7eb9a5a6c"
+        "f5b7eb9a5a6c",
+        "0e3c49e1e224"
       ],
       "recallDays": [
         "2026-05-25",
         "2026-06-07",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-23"
       ],
       "conceptTags": [
         "gpt",
@@ -1728,20 +1730,22 @@
       "endLine": 109,
       "source": "memory",
       "snippet": "**Decision:** Parked for v2 design pass. v1 launches sober-focused. Daily/weekly prompts may need a second-voice pass — some substance-recovery-specific, others anxiety/mental-health-specific. Milestone pages stay sobriety-anchored (they're the moat). Front matter and tools section retunable for both audiences. Do not block v1 launch. ### Brief updated - `documents/ana/journal-product-design-brief.md` — added \"Print/Distribution Strategy\" section with POD specs + three-SKU model, updated POD Notes, updated Open Questions ## Updated Action Items (post-strategy) - [ ] **Order 1 Lulu proof copy** before listing — Barbara QA: color, alignment, page order, coil alignment - [ ] Build the iPad-fi",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-05T00:49:55.405Z",
-      "lastRecalledAt": "2026-06-07T15:29:09.049Z",
+      "lastRecalledAt": "2026-06-23T22:11:30.537Z",
       "queryHashes": [
         "b1a989a6c8a8",
-        "e32e6bf831d8"
+        "e32e6bf831d8",
+        "e988c1f6212a"
       ],
       "recallDays": [
         "2026-06-05",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-23"
       ],
       "conceptTags": [
         "sober-focused",
@@ -2338,18 +2342,20 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# 2026-06-07 ## New product line exploration: Softer Side Cards & Spoon Theory Rabbits Catherine floated a soft-card/sticker line built around the soft-lumpy-warm characters Barbara has been drawing (hamster, teddy, panda, otter) — plus a new rabbit character that landed in the spoon theory space because the original rabbit was so vulnerable it made Catherine think of what Barbara talks about. **Key decisions in conversation:** - Two distinct lines, not one - Softer side (hamster/teddy/panda/otter) = permission/comfort - Spoons (rabbit only) = capacity/identity - Don't cross-pollinate characters - Rabbit is the anchor character of the spoons line - Vulnerability is a feature — don't s",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-17T18:47:12.278Z",
-      "lastRecalledAt": "2026-06-17T18:47:12.278Z",
+      "lastRecalledAt": "2026-06-23T22:11:28.135Z",
       "queryHashes": [
-        "652d4dafb86d"
+        "652d4dafb86d",
+        "0e3c49e1e224"
       ],
       "recallDays": [
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-23"
       ],
       "conceptTags": [
         "soft-card/sticker",
@@ -2846,6 +2852,37 @@
         "render",
         "portrait",
         "frame"
+      ]
+    },
+    "memory:memory/2026-06-18.md:88:102": {
+      "key": "memory:memory/2026-06-18.md:88:102",
+      "path": "memory/2026-06-18.md",
+      "startLine": 88,
+      "endLine": 102,
+      "source": "memory",
+      "snippet": "- **Dropped** `anniversary` (wedding-dominated), `encouragement` (drowns in sympathy), `gift` (4M+ Etsy listings, unrankable), `support` (no purchase intent) - **Replaced** `greeting card` with `sober birthday card` (the actual buyer-intent phrase) - **Added** `sober birthday`, `birthday card`, `milestone` (ANA brand language), `instant download` (digital buyer signal) Final 13 per card: 11 shared (`sobriety, soberversary, sober birthday, recovery, addiction recovery, sober birthday card, birthday card, milestone, downloadable, printable, instant download`) + 2 unique (month + flower). All under 20 chars. May's `lily of the valley` is 19 chars — tightest fit. **Pushed to blair-documents, c",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-23T22:11:28.135Z",
+      "lastRecalledAt": "2026-06-23T22:11:28.135Z",
+      "queryHashes": [
+        "0e3c49e1e224"
+      ],
+      "recallDays": [
+        "2026-06-23"
+      ],
+      "conceptTags": [
+        "wedding-dominated",
+        "buyer-intent",
+        "blair-documents",
+        "dropped",
+        "anniversary",
+        "wedding",
+        "dominated",
+        "encouragement"
       ]
     }
   }
