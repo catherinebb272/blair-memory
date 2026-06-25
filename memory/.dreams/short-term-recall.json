@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-23T22:11:30.537Z",
+  "updatedAt": "2026-06-24T14:16:02.312Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -252,25 +252,28 @@
       "endLine": 152,
       "source": "memory",
       "snippet": "Congrats on 18 months! You are amazing! Take some time to reflect on your journey to this point and look at the scenery around you. Celebrate your persistence—you're doing the work. Apart Not Alone --- ## 1 YEAR KOI COIN (Gold Tier) **Reference Sample:** > \"Hot damn! You've made it a whole year! That's truly a milestone to celebrate. Congrats on...\" **Note:** Sample cuts off mid-sentence. Matches exuberant style. **Adapted for Veterans:** Hot damn! You've made it a whole year! That's truly a milestone to celebrate. One full trip around the sun. You've proven to yourself what you're capable of, and you've earned this gold. We're so proud of you. Apart Not Alone --- ## 1 YEAR PHOEN",
-      "recallCount": 5,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
+      "lastRecalledAt": "2026-06-24T14:16:02.312Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
         "706aa83977f7",
         "837961e215db",
-        "29fdb6f4553f"
+        "29fdb6f4553f",
+        "0fb87764e693",
+        "00ebb34203ac"
       ],
       "recallDays": [
         "2026-04-22",
         "2026-05-10",
         "2026-05-11",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-06-24"
       ],
       "conceptTags": [
         "mid-sentence",
@@ -486,21 +489,24 @@
       "endLine": 101,
       "source": "memory",
       "snippet": "> \"Congrats on Six months of sobriety! Whether that seems short or incredibly long, either way 6 months is a big deal. I'm sure there are many more months to come and we wish you the best of luck. So many of us walk this path with you are we are supporting you along the way – Apart Not Alone\" **Adapted for Veterans:** Congrats on six months! Whether that seems short or incredibly long, either way six months is a big deal. I'm sure there are many more months to come and we wish you the best of luck. So many of us walk this path with you and we are supporting you along the way. Apart Not Alone --- ## 9 MONTH COIN (Silver Tier) **Tone:** Almost at the year mark **Script:** Nine months d",
-      "recallCount": 3,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T20:35:50.423Z",
-      "lastRecalledAt": "2026-05-11T22:07:55.340Z",
+      "lastRecalledAt": "2026-06-24T14:16:02.312Z",
       "queryHashes": [
         "5919912bf44c",
         "706aa83977f7",
-        "837961e215db"
+        "837961e215db",
+        "0fb87764e693",
+        "00ebb34203ac"
       ],
       "recallDays": [
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-06-24"
       ],
       "conceptTags": [
         "congrats",
@@ -520,23 +526,26 @@
       "endLine": 66,
       "source": "memory",
       "snippet": "- React README: `/documents/pc/cycle-count-react-version/README.md` - explains where current version lives ### Kiki Check - Checked on Kiki agent - heartbeat running, 9 backups created today - Note: sessions_list triggers Kiki's heartbeat (causes backup) [LESSON] Checking sessions_list wakes up the heartbeat agent --- ## Additional Cycle Count Fixes (Evening Session) **Review Screen Updates:** - Eliminated Zone column (all items show \"Not Scanned\" - redundant) - Description now shows concatenated \"Description/Brand\" (e.g., \"WT Tank/lululemon\") - Added Buy Date field in place of Zone column - Added formatBuyDate() function to convert Excel serial dates (45505 → 2024-12-30) **Adjustments",
-      "recallCount": 4,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T20:35:50.423Z",
-      "lastRecalledAt": "2026-06-16T18:13:52.575Z",
+      "lastRecalledAt": "2026-06-24T14:15:55.326Z",
       "queryHashes": [
         "5919912bf44c",
         "706aa83977f7",
         "b1a989a6c8a8",
-        "4c2a378d6864"
+        "4c2a378d6864",
+        "2400d9f6cb3d",
+        "1911f09c897b"
       ],
       "recallDays": [
         "2026-05-10",
         "2026-06-05",
-        "2026-06-16"
+        "2026-06-16",
+        "2026-06-24"
       ],
       "conceptTags": [
         "backup",
@@ -696,20 +705,23 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "# 2026-03-02 - Milestone Coins Project ## Business Context - **Business:** Apart Not Alone (milestone coin recognition program) - **Product:** Challenge coins for employee milestone recognition program - **Program:** Employees receive commemorative coins at service anniversaries (2mo, 3mo, 4mo, 5mo, 6mo, 9mo, 18mo, 1yr, 2yr, 3yr) ## Coin Specifications - **Tiers:** - Bronze: 2mo, 3mo, 4mo, 5mo, 6mo - Silver: 9mo, 18mo - Gold: 1yr (Koi & Phoenix variants), 2yr - Platinum: 3yr - **Files Created/Verified:** - `coin-2mo.jpg` - Bronze 2-month coin - `coin-3mo.jpg` - Bronze 3-month coin - `coin-4mo.jpg` - Bronze 4-month coin - `coin-5mo.jpg` - Bronze 5-month coin - `coin-6mo.j",
-      "recallCount": 2,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-11T22:07:55.340Z",
-      "lastRecalledAt": "2026-05-14T02:32:14.988Z",
+      "lastRecalledAt": "2026-06-24T14:16:02.312Z",
       "queryHashes": [
         "837961e215db",
-        "29fdb6f4553f"
+        "29fdb6f4553f",
+        "0fb87764e693",
+        "00ebb34203ac"
       ],
       "recallDays": [
         "2026-05-11",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-06-24"
       ],
       "conceptTags": [
         "created/verified",
@@ -862,13 +874,13 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-09 Daily Log ## Etsy Check-in (Saturday) - 1 order: Yasmina Moore-Foster - 1 Year Phoenix Rising, ship by May 12, gift + gift teaser - No new messages - No new reviews - Posted Discord DM to Drew with order details + handwritten note suggestion - Included Mother's Day reminder ## Browser Tool Test - Tried to log into Etsy but Etsy blocked the VPS IP (bot detection) - Will need to find alternative method ## Notes -",
-      "recallCount": 8,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 8,
+      "totalScore": 10,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
+      "lastRecalledAt": "2026-06-24T14:15:55.326Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "a91c53fdde37",
@@ -877,14 +889,17 @@
         "5914a007eae2",
         "f1d3ff54ff40",
         "e634c48d5530",
-        "27522abfbf4d"
+        "27522abfbf4d",
+        "2400d9f6cb3d",
+        "1911f09c897b"
       ],
       "recallDays": [
         "2026-05-13",
         "2026-05-25",
         "2026-06-07",
         "2026-06-16",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-24"
       ],
       "conceptTags": [
         "check-in",
@@ -1430,25 +1445,27 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# May 25, 2026 ## Composio API Issues - Composio had a massive security breach on 5/23/26 - Previous API key was deleted by Composio - Tried using Catherine's new project API key: `ak_DvFKZiWcCtmvm3CWv6fi` - Updated the key in `.env` - CLI commands work locally but the container can't reach api.composio.dev (DNS/network block) - **Result:** Cannot use Composio tools (browser, image generation, etc.) from this environment until network issue is resolved ## Sober Birthday Greeting Cards - Etsy Listings - Created `documents/ana/sober-birthday-cards.csv` for Etsy bulk upload - 12 monthly cards (SBC-01 through SBC-12) - Title format: \"Sobriety Anniversary Card [Month] [Flower] - Downloadable",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T16:37:44.083Z",
-      "lastRecalledAt": "2026-06-17T18:47:12.278Z",
+      "lastRecalledAt": "2026-06-24T03:10:58.875Z",
       "queryHashes": [
         "f6454ddbeec7",
         "b8dfdc61945a",
         "8c8efa6008e2",
         "27522abfbf4d",
-        "652d4dafb86d"
+        "652d4dafb86d",
+        "e58cee2e7978"
       ],
       "recallDays": [
         "2026-05-29",
         "2026-06-02",
         "2026-06-07",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-24"
       ],
       "conceptTags": [
         "network",
@@ -1796,18 +1813,20 @@
       "endLine": 150,
       "source": "memory",
       "snippet": "- `#FFD437` Golden Sunrise - `#F5EFE8` Soft Linen (paper stock only — **never as ink**) **Unsaturated tints (behind 0.8\" line art, banner section dividers, accents):** - soft sky tint of `#003B88` - soft mint tint of `#37C86F` - soft periwinkle tint of `#4D7BCC` - soft peach tint of `#FF5D4C` - soft butter tint of `#FFD437` Exact hex for tints TBD with Barbara. Likely ~20-30% opacity of saturated parent or hand-tuned pastel. **Pairing rule still open:** per section / per cycle / per page type. Tints always pair with saturated parent. **Catherine reminded me about font licensing for commercial print.** Kept on open items list. Architect's Daughter + Avenir both need commercial-print licen",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-07T15:29:09.049Z",
-      "lastRecalledAt": "2026-06-07T15:29:09.049Z",
+      "lastRecalledAt": "2026-06-24T03:15:08.136Z",
       "queryHashes": [
-        "e32e6bf831d8"
+        "e32e6bf831d8",
+        "e20e1915ce6f"
       ],
       "recallDays": [
-        "2026-06-07"
+        "2026-06-07",
+        "2026-06-24"
       ],
       "conceptTags": [
         "0.8",
@@ -1957,21 +1976,23 @@
       "endLine": 45,
       "source": "memory",
       "snippet": "**Offered:** one-pager per line with phrases grouped + character assignments + rules of the road. Awaiting go-ahead. **Also delivered earlier:** short Spoon Theory description for the back of a greeting card, ~80 words, credits Christine Miserandino (2003). --- ## Product stable + vacation prep (afternoon session) ### Product stable framing Catherine floated the full product architecture: coins (established) + sober anniversary cards (324 Etsy-ready designs) + journal v3 (in dev) + softer side / spoons / Tiny Victories (all in early concept). Multiple entry points and price tiers, audience overlap by design. **Tiny Victories = the snarky/edgy line.** Source: `documents/ana/snarky-sober",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-07T22:19:45.777Z",
-      "lastRecalledAt": "2026-06-17T18:47:49.608Z",
+      "lastRecalledAt": "2026-06-24T03:10:58.892Z",
       "queryHashes": [
         "8c8efa6008e2",
         "652d4dafb86d",
-        "f5b7eb9a5a6c"
+        "f5b7eb9a5a6c",
+        "53694a0d9de2"
       ],
       "recallDays": [
         "2026-06-07",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-06-24"
       ],
       "conceptTags": [
         "one-pager",
@@ -2861,18 +2882,20 @@
       "endLine": 102,
       "source": "memory",
       "snippet": "- **Dropped** `anniversary` (wedding-dominated), `encouragement` (drowns in sympathy), `gift` (4M+ Etsy listings, unrankable), `support` (no purchase intent) - **Replaced** `greeting card` with `sober birthday card` (the actual buyer-intent phrase) - **Added** `sober birthday`, `birthday card`, `milestone` (ANA brand language), `instant download` (digital buyer signal) Final 13 per card: 11 shared (`sobriety, soberversary, sober birthday, recovery, addiction recovery, sober birthday card, birthday card, milestone, downloadable, printable, instant download`) + 2 unique (month + flower). All under 20 chars. May's `lily of the valley` is 19 chars — tightest fit. **Pushed to blair-documents, c",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-23T22:11:28.135Z",
-      "lastRecalledAt": "2026-06-23T22:11:28.135Z",
+      "lastRecalledAt": "2026-06-24T03:10:58.875Z",
       "queryHashes": [
-        "0e3c49e1e224"
+        "0e3c49e1e224",
+        "e58cee2e7978"
       ],
       "recallDays": [
-        "2026-06-23"
+        "2026-06-23",
+        "2026-06-24"
       ],
       "conceptTags": [
         "wedding-dominated",
@@ -2883,6 +2906,255 @@
         "wedding",
         "dominated",
         "encouragement"
+      ]
+    },
+    "memory:memory/2026-06-18.md:63:74": {
+      "key": "memory:memory/2026-06-18.md:63:74",
+      "path": "memory/2026-06-18.md",
+      "startLine": 63,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "- **Color analysis finding:** beach-walk sky has subtle right-side warm bias (R=152 on right vs R=128 on left, top-quarter mean) — soft watercolor sunset wash, not saturated orange. B still dominates on both sides (B=184 right, B=168 left), so the image is predominantly blue, not warm. beach-dog sky is uniform neutral grey (R≈G≈B) for comparison. ## ANA sober birthday card line — unpaused for upload 2026-06-18 **Context:** Drew gave Catherine temporary 2FA access to the ANA Etsy shop. She needs to draft and stage content for upload before she loses access. Highest-priority item: the 12 sober birthday cards (one per month, each with its birth flower and a story on the back). **Existing ass",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-24T03:10:58.875Z",
+      "lastRecalledAt": "2026-06-24T03:10:58.875Z",
+      "queryHashes": [
+        "e58cee2e7978"
+      ],
+      "recallDays": [
+        "2026-06-24"
+      ],
+      "conceptTags": [
+        "beach-walk",
+        "right-side",
+        "top-quarter",
+        "beach-dog",
+        "highest-priority",
+        "color",
+        "analysis",
+        "finding"
+      ]
+    },
+    "memory:memory/2026-06-21.md:1:32": {
+      "key": "memory:memory/2026-06-21.md:1:32",
+      "path": "memory/2026-06-21.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-06-21 **Summary by Catherine (2026-06-23 20:55 UTC):** Two parallel tracks — AI disclosure drafting + CFF Feelings card text. Catherine mostly doing image generation, Blair mostly doing written deliverables. --- ## Track 1: AI disclosure for Etsy listings (both shops) **The problem:** Etsy (and probably broader platform rules) requires disclosure when listings use AI-generated imagery. ANA and Saltwash both use Gemini/Nano-Banana for image work, but in different ways: - ANA: image is the product artwork itself (coins, cards) - Saltwash: image is intermediate (Gemini watercolor wash of Catherine's photo, then used as digital print master or sent to Printful) **What was decided (pe",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-24T03:10:58.892Z",
+      "lastRecalledAt": "2026-06-24T03:10:58.892Z",
+      "queryHashes": [
+        "53694a0d9de2"
+      ],
+      "recallDays": [
+        "2026-06-24"
+      ],
+      "conceptTags": [
+        "ai-generated",
+        "gemini/nano-banana",
+        "summary",
+        "catherine",
+        "utc",
+        "two",
+        "parallel",
+        "tracks"
+      ]
+    },
+    "memory:memory/2026-06-18.md:57:66": {
+      "key": "memory:memory/2026-06-18.md:57:66",
+      "path": "memory/2026-06-18.md",
+      "startLine": 57,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "- \"No crowds, no boardwalks\" mirrors dog listing's negation pattern with scene-appropriate replacements - **Two placeholders to fill in:** 1. AI tool name in \"How it's made\" section (likely Gemini 3.1 + Nano-Banana, same as dog, but confirm) 2. Image review — Catherine to verify portrait-crop sunset looks right when she opens the file. Hero + negation lines may want adjusting based on what she sees - **Process decision (locked 2026-06-18):** When starting a new product, generate in landscape first if the source is landscape, then crop to portrait. Keep the original landscape render in the library alongside the portrait source. Reason: future landscape SKUs (P-OBX-N-L) and wider greeting-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-24T03:10:58.892Z",
+      "lastRecalledAt": "2026-06-24T03:10:58.892Z",
+      "queryHashes": [
+        "53694a0d9de2"
+      ],
+      "recallDays": [
+        "2026-06-24"
+      ],
+      "conceptTags": [
+        "scene-appropriate",
+        "3.1",
+        "nano-banana",
+        "portrait-crop",
+        "p-obx-n-l",
+        "crowds",
+        "boardwalks",
+        "mirrors"
+      ]
+    },
+    "memory:memory/2026-06-07.md:119:138": {
+      "key": "memory:memory/2026-06-07.md:119:138",
+      "path": "memory/2026-06-07.md",
+      "startLine": 119,
+      "endLine": 138,
+      "source": "memory",
+      "snippet": "- All 14 CTV front sayings now captured (CTV-11 through CTV-14 came in after the handoff was first written) - Text-only card format confirmed as a real type — five cards (CTV-05, 07, 12, 13, 14) inferred text-only - CTV-11 saying is a pun: paper airplanes → flying fox (fruit bat) - CTV-14 saying uses curly apostrophe (\"don’t\") in Catherine's source — preserved as such in the table - The handoff above is now FINAL for the SKU work block. The \"Box for Barbara\" thread (see \"Still in flight from earlier today\" below) is the next priority when Catherine resumes, not the SKU table. ### Naming conventions to remember (don't re-derive) - `Owl Mug` (two words), `Capybara` (not `Capybera`), `CTV-##`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-24T03:10:58.892Z",
+      "lastRecalledAt": "2026-06-24T03:10:58.892Z",
+      "queryHashes": [
+        "53694a0d9de2"
+      ],
+      "recallDays": [
+        "2026-06-24"
+      ],
+      "conceptTags": [
+        "ctv-11",
+        "ctv-14",
+        "text-only",
+        "ctv-05",
+        "re-derive",
+        "all",
+        "ctv",
+        "front"
+      ]
+    },
+    "memory:memory/2026-06-05.md:1:30": {
+      "key": "memory:memory/2026-06-05.md:1:30",
+      "path": "memory/2026-06-05.md",
+      "startLine": 1,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "# 2026-06-05 ## ANA Journal v3 — CSV schema drafted - **File:** `documents/ana/journal/journal-csv-schema-v3.md` (new, 201 lines) - **Shape:** 19 columns, 9 page types, 126 rows total (2 intro + 120 cycle + 4 end) - **Page types:** intro (2), reflection (84), goal (12), recap_left (12), recap_right (12), coin_cap (1), letter (1), resources (1), blank (1) - **Cycle structure (uniform 1–10):** pages 1–7 reflection, p8 goal, p9 recap_left, p10 recap_right - **Design choice:** renderer constants (e.g., \"Today's Thoughts\", \"Reflections\", streak box label) are NOT in the CSV — only per-page content. Keeps the file focused. - **Visual anchors:** `line_art_id` (12 motifs), `art_id` (recap watercol",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-24T03:15:08.136Z",
+      "lastRecalledAt": "2026-06-24T03:15:08.136Z",
+      "queryHashes": [
+        "e20e1915ce6f"
+      ],
+      "recallDays": [
+        "2026-06-24"
+      ],
+      "conceptTags": [
+        "recap-left",
+        "recap-right",
+        "coin-cap",
+        "e.g",
+        "per-page",
+        "line-art-id",
+        "art-id",
+        "ana"
+      ]
+    },
+    "memory:memory/2026-06-08.md:21:31": {
+      "key": "memory:memory/2026-06-08.md:21:31",
+      "path": "memory/2026-06-08.md",
+      "startLine": 21,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "- **New file:** `documents/ana/journal/journal-recap-content-v3.md` — 12 entries, each with image description (for Barbara) + significance callout (text-box overlay) + first recap prompt (one of two). Includes audit section + open questions. Title passed to Catherine so she can navigate. - **Updated `journal-product-design-brief.v3.md`:** - §6a cycle→icon mapping: C3 = 1-Year Koi, replaces logo - §6a narrative arc: updated to drop the \"fish\" reference - §6a Koi note: expanded to cover the two distinct koi watercolors - §6a Logo placement: revised to back cover + intro p1 only (no longer on daily pages or recap) - §8f page numbering: sister feedback added — page number only, no two-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-24T03:15:08.136Z",
+      "lastRecalledAt": "2026-06-24T03:15:08.136Z",
+      "queryHashes": [
+        "e20e1915ce6f"
+      ],
+      "recallDays": [
+        "2026-06-24"
+      ],
+      "conceptTags": [
+        "text-box",
+        "1-year",
+        "new",
+        "documents",
+        "ana",
+        "journal",
+        "recap",
+        "content"
+      ]
+    },
+    "memory:memory/2026-06-08.md:31:43": {
+      "key": "memory:memory/2026-06-08.md:31:43",
+      "path": "memory/2026-06-08.md",
+      "startLine": 31,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "- **Fixed `Celebrate.csv`:** 12 rows in canonical milestone order. Previous file had 11 rows; first three were off by one (2mo row described torii, 3mo row described desert) and the 3-month frog was missing entirely. Now aligned to `PRODUCT_CATALOG_MASTER.md` as source of truth. Updated 1mo back quote to Neil Gaiman (\"Write your story as it needs to be written\") per the catalog. Added new 3mo frog row with fresh symbolism. Updated 5mo kraken-lighthouse symbolism to reflect the duality. **Open follow-up:** actual JPG file names in `/assets/coins/` may still be misnamed — needs an audit, out of scope here. - **Updated MEMORY.md:** cycle mapping line (Option A), logo placement (revised), added",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-24T03:15:08.136Z",
+      "lastRecalledAt": "2026-06-24T03:15:08.136Z",
+      "queryHashes": [
+        "e20e1915ce6f"
+      ],
+      "recallDays": [
+        "2026-06-24"
+      ],
+      "conceptTags": [
+        "celebrate.csv",
+        "3-month",
+        "product-catalog-master.md",
+        "kraken-lighthouse",
+        "follow-up",
+        "assets/coins",
+        "memory.md",
+        "fixed"
+      ]
+    },
+    "memory:memory/2026-04-19.md:41:52": {
+      "key": "memory:memory/2026-04-19.md:41:52",
+      "path": "memory/2026-04-19.md",
+      "startLine": 41,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "- Added secrets manually (fine-grained tokens can't create GitHub Actions secrets due to encryption limitations) - Updated tutorials with note about needing \"workflow\" scope for agents to create workflow files ### Files Created/Updated - walk-pinger repo (GitHub) - Updated How I Built This tutorial with workflow scope requirement - README files for both repos ### Tutorial Update Added note about GitHub token needing \"workflow\" scope for agents to create workflow files automatically.",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-24T14:15:26.444Z",
+      "lastRecalledAt": "2026-06-24T14:15:55.326Z",
+      "queryHashes": [
+        "2400d9f6cb3d",
+        "1911f09c897b"
+      ],
+      "recallDays": [
+        "2026-06-24"
+      ],
+      "conceptTags": [
+        "fine-grained",
+        "created/updated",
+        "walk-pinger",
+        "added",
+        "secrets",
+        "manually",
+        "fine",
+        "grained"
       ]
     }
   }
