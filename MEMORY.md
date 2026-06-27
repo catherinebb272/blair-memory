@@ -166,6 +166,20 @@ _SKU prefix convention: `CSF` Card-Sober Flower · `CSB` Card-Sober Birthday · 
   * Animated Avatar Project (ElevenLabs TTS + LipSync AI)
 * **Use for:** Step-by-step project guides with prompts the user can reuse
 
+## Platform Health Notes (2026-06-26)
+
+* **No vision models in rotation.** Only two text-only models configured: `openrouter/minimax/minimax-m3` (primary) and `openrouter/minimax/minimax-m2.5` (fallback). Reading PNG/JPG screenshots via the `read` tool returns "image data removed" placeholder. This is why the Etsy M-W-F check-in screenshot flow is broken. Workaround: ask user to type details. Affects: Etsy check-in, any image-parsing workflow.
+  * **Why Gemini Flash was removed (2026-06-26):** kept auto-becoming the default model multiple times per day, was unable to do anything useful (couldn't find keys/files, claimed no GitHub access). Robby (founder) removed it from the list to stop the auto-swap. Robby disengaged from heyron env (moved away). OpenRouter swaps considered but other users stuck on expensive models they can't swap back from. Not a reliable fix. **Don't re-litigate "can we get Gemini back" in future sessions — accept the gap.**
+* **Composio: CLI is broken, but the SDK works.** (Updated 2026-06-26)
+  * `~/.local/bin/composio` is dead — `apps`, `execute`, `connections`, `integrations`, `triggers` all return HTTP 410 (v1 endpoints deprecated). Only `whoami` works.
+  * **The official `@composio/core` npm SDK works against the live v3 endpoints.** Bypass the CLI; call `c.tools.getRawComposioTools`, `c.tools.getRawComposioToolBySlug(slug)`, `c.connectedAccounts.list`, etc. directly.
+  * Key lives in `.env` as `COMPOSIO_API_KEY=ak_*`. There is a separate `USER_API_KEY=ck_*` that was removed 2026-06-26 — that was Catherine's personal Composio key, not for agent use.
+  * SDK install lives at `/tmp/composio-test` for now. To be moved to `~/composio-sdk/` (outside workspace) tomorrow.
+  * **Vision gap is NOT closeable via Composio Gemini.** `GEMINI_GENERATE_CONTENT` schema only accepts text fields (model, prompt, system_instruction, etc.) — no image/file/contents input. Composio wraps Gemini's text endpoint, not the multimodal one. OCR/document extraction IS available via `MISTRAL_AI_CREATE_OCR`, `GOOGLE_CLOUD_VISION_ANNOTATE_FILES`, `ARYN_PARTITION_DOCUMENT`, `JIGSAWSTACK_EXTRACT_VOCR`, `ASTICA_AI_ASTICA_READ_TEXT`. For "look at this screenshot and reason about it" — accept the gap.
+  * (Older entry claiming "v3 endpoints return 404" was WRONG — corrected 2026-06-26 after verifying the SDK. Source: memory/2026-06-26.md)
+* **`react` Discord action broken.** Returns "Unknown Message" even on messages the bot just sent. Has been failing this way for a while per Catherine. Drop from workflows; don't retry.
+* **Long Discord messages may split** into multiple messages when Discord renders them. Keep under ~2000 chars for clean single-block posts.
+
 ## Cron Jobs (Open Issue)
 
 **Known issues:**
