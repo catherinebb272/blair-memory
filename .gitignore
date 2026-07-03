@@ -22,6 +22,14 @@ logs/
 **/__pycache__/
 **/*.pyc
 
+# Node.js (one-off `npm install` artifacts for image processing tools)
+node_modules/
+package.json
+package-lock.json
+
+# Local scratch images (thumbnails, side-by-sides, previews)
+images/
+
 # Temp backups of edited files at workspace root
 AGENTS.md.bak.*
 SOUL.md.bak.*
