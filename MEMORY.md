@@ -86,7 +86,7 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 
 ### Saltwash Prints (Catherine's coastal shop) — v1 LOCKED 2026-06-16
 
-- **Brand name: Saltwash Prints** (locked — only variant with web + Etsy + IG all clear; the "Prints" descriptor preserves expansion room). Folder: `/home/openclaw/blair-documents/saltwash/` + workspace: `documents/catherine-coastal/`.
+- **Brand name: Saltwash Prints** (locked — only variant with web + Etsy + IG all clear; the "Prints" descriptor preserves expansion room). Folder: `/home/openclaw/.openclaw/workspace/saltwash/` + workspace: `documents/catherine-coastal/`.
 - **AI source: Gemini**, not Firefly. Some renders come back sideways/portrait (Gemini quirk) — crop in post.
 - **Taglines (locked):** "Quiet scenes from the edge of the sea." (hero) · "Saltwater and stillness." (social bio) · "Painted from the dunes." (product cards).
 - **Fonts (locked v1):** Playfair Display (display) + **Lato** (body, replaced Karla — not in Canva).
@@ -101,6 +101,43 @@ Drew is a recovering alcoholic who experienced sudden liver failure and needed a
 - **Phase 2 (greeting cards):** yes, sensible, **not day 1.** Trigger: 3-6mo post-launch OR 5+ prints with reviews. 5×7 folded, Printful POD or local NC printer. On-brand sentiments drafted (see 2026-06-16 memory).
 - **Brand kit structure:** 18 sections in brand-kit-v1.md (added: tagline, color, typography, art style, shop banner, About, SEO, sample listing, open items, summary, name research, sizes/pricing/landscape, Phase 2 roadmap, print lineup, wordmark recipe, image prep workflow).
 - **Open items (next session):** (1) Catherine reviews 2 print masters + Dog listing draft. (2) Wordmark in Canva. (3) Upscale launch 3 prints (Dog, Lonely Houses, Lady Reading) via Firefly for 11×14/16×24/18×24. (4) Decide Lady Reading ratio (4:5 or 2:3). (5) Re-decide Walk on the Beach (reframe or park). (6) Once Dog is up, I can draft second listing (Lonely Houses).
+
+### Saltwash print workflow — v2 LOCKED 2026-07-03 (plover was the first print built this way)
+
+The old PNG-first pipeline (build 2:3 / 4:5 native crops, then upscales for 11×14 / 16×24 / 18×24, then batch convert to JPG) was retired after the plover. The new pipeline is JPG-only, master-first, Photoshop-in-the-loop. Full step-by-step in `saltwash/listing-creation-process.md` and the 2026-07-03 daily note.
+
+**Why it changed:**
+- **Master-first means Catherine reviews the actual 18×24 master** in Photoshop, not a native crop that gets upscaled. Any artifact she fixes propagates to all 4 derived sizes automatically. Old pipeline had her reviewing crops that then got re-upscaled.
+- **No more PNG archival** — the source is already JPG (Firefly export), the Etsy delivery is JPG, and keeping PNGs alongside doubled the file count without a real benefit. Plover batch = 5 JPGs in `print-sizes/`, period.
+- **GitHub as the transfer mechanism** for the 18×24 review master (too big to attach in Discord). Standard pattern: push to a branch in `catherinebb272/blair-documents`, Catherine merges when ready.
+- **Lanczos-only resampling** is still the standing decision (no Real-ESRGAN — watercolor texture is the moat).
+
+**Per-print layout going forward:**
+```
+saltwash/<print-name>/
+├── source.<ext>                       # (optional) original source, kept for reference
+├── <print-name>-18x24-review.png      # pre-Photoshop review master (Lanczos, sent to GH)
+├── print-sizes/                       # delivery batch — everything Etsy uploads
+│   ├── <print-name>_18x24_300dpi.jpg  # post-Photoshop master = Etsy 18×24
+│   ├── <print-name>_16x24_300dpi.jpg
+│   ├── <print-name>_11x14_300dpi.jpg
+│   ├── <print-name>_8x10_300dpi.jpg
+│   └── <print-name>_5x7_300dpi.jpg
+└── README.md
+```
+
+**Key script:** `saltwash/build-print-sizes.py` (PIL, Lanczos, Q95 JPG output, 20MB Etsy limit check). Takes the 18×24 master JPG + print name as args; produces the 4 other sizes with centered crop. Per-size crop instructions handled in conversation, applied as one-off convert steps before/after the script as needed.
+
+**Two old parent-level scripts deleted 2026-07-03:**
+- `saltwash/build-big-sizes.sh` — referenced deleted PNG paths and 2:3/4:5 native crops. No analog in the new workflow (16×24 and 18×24 derive from the master, not from separate crops).
+- `saltwash/build-jpg-delivery.sh` — batch-converted PNGs to JPGs across prints. Replaced by `build-print-sizes.py`, which is single-print and per-call.
+
+**Historical prints (built with v1 pipeline, do NOT rebuild):**
+- `saltwash/beach-dog/` — built 2026-06-16 with native-crops pipeline. Still live on Etsy, the files are fine. README updated with "Built with pre-2026-07-03 workflow" notice.
+- `saltwash/beach-walk/` — same.
+- `saltwash/beach-plover/` — built 2026-07-03 with v2 pipeline. The `beach-plover/` subfolder is the working dir (source + pre-Photoshop review master); the deliverables are in `saltwash/plover/print-sizes/`. Don't repeat the `beach-` prefix in the working-dir name for future prints.
+
+**Plover file sizes (Q95 JPG):** 5×7 = 1.4 MB, 8×10 = 3.0 MB, 11×14 = 5.1 MB, 16×24 = 10.2 MB, 18×24 = 11.4 MB. All well under 20MB Etsy limit, no quality drop needed.
 
 ### ANA Product Stable (framing 2026-06-07)
 

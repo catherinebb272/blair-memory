@@ -1,18 +1,20 @@
 # Saltwash Prints — Beach Dog
 
+> **Built with the v1 (pre-2026-07-03) workflow.** This print is live on Etsy and the files are fine — not rebuilding with the v2 pipeline. The README is kept as a record of how the v1 build worked (native 2:3 / 4:5 crops, PNG masters, upscale to 11×14 / 16×24 / 18×24, then batch JPG conversion). For the v2 workflow, see [`saltwash/README.md`](../README.md) and [`saltwash/listing-creation-process.md`](../listing-creation-process.md).
+
 Source: Gemini render delivered in a portrait frame with the subject rotated 90° sideways.
 Source dimensions: 3584 × 4800 (3:4 portrait, sideways content).
 
-## Build steps
+## Build steps (v1 workflow, 2026-06-16)
 
 1. Rotate 90° clockwise (sky was on the LEFT edge of the source, ground on the RIGHT).
 2. After rotation: 4800 × 3584 landscape.
 3. Figure (lady + dog) sits at roughly x=2800 (58% from left) in the rotated image, in the lower 12% of the height.
 4. Crop to 2:3 and 4:5 ratios, biased ~2/3 from the left / ~1/3 from the right (figure is right of center → keep more of the right).
 5. Downscale 5×7 and 8×10 to their print-size pixel dimensions.
-6. Render 11×14, 16×24, 18×24 by cropping the native crops to the target ratio and upscaling with Lanczos (see `build-big-sizes.sh` in the parent `saltwash/` folder).
+6. Render 11×14, 16×24, 18×24 by cropping the native crops to the target ratio and upscaling with Lanczos (see `build-big-sizes.sh` in the parent `saltwash/` folder — **script deleted 2026-07-03 with the v2 workflow cleanup**).
 
-## Files in this set
+## Files in this set (v1 workflow, kept as-is — not the v2 delivery format)
 
 | File | Size | Notes |
 |---|---|---|
@@ -25,20 +27,26 @@ Source dimensions: 3584 × 4800 (3:4 portrait, sideways content).
 | `beach-dog-16x24.png` / `.jpg` | 4800 × 7200 | 16×24 @ 300 DPI. PNG = master, JPG (Q95) = Etsy upload. |
 | `beach-dog-18x24.png` / `.jpg` | 5400 × 7200 | 18×24 @ 300 DPI. PNG = master, JPG (Q95) = Etsy upload. |
 
+> The v2 workflow's delivery format is 1 review master PNG (pre-Photoshop) + 5 JPGs (post-Photoshop 18×24 + 4 downsizes) in `print-sizes/`. This print predates that, so it has the older "PNG + JPG for every size" format with native crops on disk. No need to convert unless Catherine wants the v2 layout for consistency.
+
 ## Crop bias
 
 The figure lands at ~58% from the left of the rotated image, so a centered crop would leave the figure off-center to the right. The crops here put **~2/3 of the horizontal cut on the LEFT and ~1/3 on the RIGHT** so the figure sits closer to the middle of the final frame.
 
 For the upscaled 11×14 (0.786 ratio from 4:5 source) and 18×24 (0.75 ratio from 4:5 source), the additional horizontal cropping is centered so the figure's position is preserved.
 
-## Build / rebuild
+## Build / rebuild (v1, for reference — not the current workflow)
 
 ```bash
 bash build.sh                  # full build (rotation + crops + 5x7 + 8x10 downscales)
-bash ../../build-big-sizes.sh  # 11x14, 16x24, 18x24 finals (requires the 2x3 and 4x5 crops first)
-python3 ../../build-jpg-delivery.py  # JPG delivery versions at Q95 (Etsy upload format)
+bash ../../build-big-sizes.sh  # 11x14, 16x24, 18x24 finals (requires the 2x3 and 4x5 crops first) — SCRIPT DELETED 2026-07-03
+python3 ../../build-jpg-delivery.py  # JPG delivery versions at Q95 (Etsy upload format) — SCRIPT DELETED 2026-07-03
 bash fix-5x7.sh                # only the 5x7 downscale, if you tweaked the 2:3 crop
 ```
+
+**Both parent-level scripts have been deleted** as part of the v2 workflow cleanup. The replacements are `saltwash/build-print-sizes.py` (per-call, takes a 18×24 master JPG and produces 4 downscaled JPGs) and a manual upscale step for the 18×24 master itself. See `saltwash/README.md` for the v2 pipeline.
+
+**Don't rebuild this print with the v2 pipeline** — the files are live on Etsy, the JPGs are Q95 and under 20 MB, and the per-print crop math is already documented above. Re-deriving would just churn git history for no Etsy-facing change.
 
 ## Upscale notes
 
