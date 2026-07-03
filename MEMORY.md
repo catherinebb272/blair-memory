@@ -139,6 +139,8 @@ saltwash/<print-name>/
 
 **Plover file sizes (Q95 JPG):** 5×7 = 1.4 MB, 8×10 = 3.0 MB, 11×14 = 5.1 MB, 16×24 = 10.2 MB, 18×24 = 11.4 MB. All well under 20MB Etsy limit, no quality drop needed.
 
+**Plover pair SKU — `plover-resting`** (started 2026-07-03): working dir `saltwash/plover-resting/` (no `beach-` prefix per v2 naming). Source = same 3584×4800 dimensions as the in-flight plover, but the bird is standing on the beach instead of in flight. Built the 18×24 review master with the v2 workflow minus the `-flop` — Catherine's instruction: "keep him facing the same way, no change in orientation" (so the new source's natural facing already matches the in-flight print's direction). Pushed to blair-documents main (commits `232d3dd` + `72ddcc1`) for Catherine's Photoshop pass. Etsy listing name not yet set — likely "Plover at Rest" to match the source filename (`Plover2_at_rest`) and pair with the in-flight "Plover" listing.
+
 ### ANA Product Stable (framing 2026-06-07)
 
 Catherine is building deliberately, not accidentally. Multiple entry points and price tiers; audience-overlap is the strategy.
