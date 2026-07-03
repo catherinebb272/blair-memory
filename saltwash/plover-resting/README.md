@@ -70,3 +70,56 @@ Lanczos is the established Saltwash resampler — pure interpolation, no halluci
 ## Git
 
 The source + 18×24 review master are committed to the workspace git (`saltwash/plover-resting/`) and pushed to `catherinebb272/blair-documents` on `main` on 2026-07-03. The delivery files in `saltwash/plover-resting/print-sizes/` will be added in a follow-up commit once Catherine finishes the Photoshop pass.
+
+## Photoshop cleanup + delivery batch (added 2026-07-03)
+
+Catherine returned the cleaned 18×24 master on 2026-07-03 with edits to make the bird more clearly a plover. Crop rule from her: **"all crops come from the bottom or the left — the bird is already pretty close to the right edge."**
+
+That means:
+- 5×7, 16×24 (horizontal crops): cut comes from the **left** → right edge preserved.
+- 8×10, 11×14 (vertical crops): cut comes from the **bottom** → top edge preserved.
+- 18×24: no crop (same 3:4 aspect as the master).
+
+### Crop math (per size, from the 5400×7200 master)
+
+| Size  | Source crop                          | Output (px @ 300 DPI) | Cut direction                  |
+|-------|--------------------------------------|------------------------|--------------------------------|
+| 18×24 | none (master)                        | 5400 × 7200            | —                              |
+| 5×7   | 5143 × 7200 from x=257 (cut 257 L)   | 1500 × 2100            | all from left                  |
+| 8×10  | 5400 × 6750 from y=0 (cut 450 B)     | 2400 × 3000            | all from bottom                |
+| 11×14 | 5400 × 6873 from y=0 (cut 327 B)     | 3300 × 4200            | all from bottom                |
+| 16×24 | 4800 × 7200 from x=600 (cut 600 L)   | 4800 × 7200            | all from left                  |
+
+Crop offsets passed to `build-print-sizes.py`:
+
+```bash
+CROP_OFFSETS='{"5x7":[0,-129,0,129],"8x10":[-225,0,0,0],"11x14":[-163,0,0,0],"16x24":[0,-300,0,300]}'
+```
+
+(top, right, bottom, left) — negative offsets shift the crop box away from that side so all the cut goes to the opposite side.
+
+### Files in `print-sizes/`
+
+| File                                  | Size      | Notes                        |
+|---------------------------------------|-----------|------------------------------|
+| `plover-resting_18x24_300dpi.jpg`     | 5400×7200 | Post-Photoshop master        |
+| `plover-resting_16x24_300dpi.jpg`     | 4800×7200 | cut 600 from left            |
+| `plover-resting_11x14_300dpi.jpg`     | 3300×4200 | cut 327 from bottom          |
+| `plover-resting_8x10_300dpi.jpg`      | 2400×3000 | cut 450 from bottom          |
+| `plover-resting_5x7_300dpi.jpg`       | 1500×2100 | cut 257 from left            |
+
+All 5 files are under Etsy's 20 MB upload limit (largest is 9.8 MB).
+
+## Build commands for the delivery batch
+
+```bash
+# 1. Save the post-Photoshop 18x24 master to print-sizes/
+cp /path/from/catherine/plover-resting-18x24edited.jpg \
+   saltwash/plover-resting/print-sizes/plover-resting_18x24_300dpi.jpg
+
+# 2. Build the 4 derived sizes with the bottom-or-left crop rule
+CROP_OFFSETS='{"5x7":[0,-129,0,129],"8x10":[-225,0,0,0],"11x14":[-163,0,0,0],"16x24":[0,-300,0,300]}' \
+  python3 saltwash/build-print-sizes.py \
+    saltwash/plover-resting/print-sizes/plover-resting_18x24_300dpi.jpg \
+    plover-resting
+```
