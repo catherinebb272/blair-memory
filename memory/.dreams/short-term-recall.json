@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-03T19:10:26.513Z",
+  "updatedAt": "2026-07-04T21:22:21.826Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -3374,6 +3374,37 @@
       ],
       "recallDays": [
         "2026-07-03"
+      ],
+      "conceptTags": [
+        "beach-plover",
+        "plover-in-flight",
+        "saltwash",
+        "beach",
+        "plover",
+        "18x24",
+        "review",
+        "master"
+      ]
+    },
+    "memory:memory/2026-07-03.md:1:24": {
+      "key": "memory:memory/2026-07-03.md:1:24",
+      "path": "memory/2026-07-03.md",
+      "startLine": 1,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "# 2026-07-03 ## Saltwash — beach-plover 18x24 review master Catherine asked for the plover-in-flight source to be upscaled to 18x24 with two conditions: Lanczos resampling (the established Saltwash choice) and a horizontal flip so the bird faces the other way. She'll review the large version in Photoshop for stray upscaling artifacts, fix them, and return the cleaned master — at which point I derive the other 4 print sizes from it. ### Built - `saltwash/beach-plover/beach-plover-source.png` (3584×4800, 24 MB) — untouched master copied from upload - `saltwash/beach-plover/beach-plover-18x24.png` (5400×7200, 45 MB) — review master - `-flop` for the horizontal flip - Crop to exact 3:4:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-04T21:22:21.826Z",
+      "lastRecalledAt": "2026-07-04T21:22:21.826Z",
+      "queryHashes": [
+        "f49cae3cb90e"
+      ],
+      "recallDays": [
+        "2026-07-04"
       ],
       "conceptTags": [
         "beach-plover",
