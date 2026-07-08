@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-04T21:22:21.826Z",
+  "updatedAt": "2026-07-06T19:06:36.004Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -1683,18 +1683,20 @@
       "endLine": 53,
       "source": "memory",
       "snippet": "- Year-one only scope - No pouches (POD multi-item shipping pain) - Don't care about extra design work for specialty pages - Constraints I found: 1mo, 7mo, 8mo have no coin image assets — must work around with quote-only or line-art stand-in pages - Wrote full design brief: `documents/ana/journal-product-design-brief.md` ## Action - [ ] Await Catherine's call: one SKU at launch or two? I'd recommend unisex first - [ ] Then: pick POD vendor, cover style, coin illustration approach (color photo vs line-art redraw vs silhouette) - [ ] Barbara sign-off needed on copy tone (no religious, no gendered clichés in alt-female) ### 3rd pass — locked decisions + sample pages created Catherine's clari",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-05T00:49:55.405Z",
-      "lastRecalledAt": "2026-06-05T00:49:55.405Z",
+      "lastRecalledAt": "2026-07-06T19:06:21.938Z",
       "queryHashes": [
-        "b1a989a6c8a8"
+        "b1a989a6c8a8",
+        "32daef6c445e"
       ],
       "recallDays": [
-        "2026-06-05"
+        "2026-06-05",
+        "2026-07-06"
       ],
       "conceptTags": [
         "year-one",
@@ -1813,20 +1815,22 @@
       "endLine": 150,
       "source": "memory",
       "snippet": "- `#FFD437` Golden Sunrise - `#F5EFE8` Soft Linen (paper stock only — **never as ink**) **Unsaturated tints (behind 0.8\" line art, banner section dividers, accents):** - soft sky tint of `#003B88` - soft mint tint of `#37C86F` - soft periwinkle tint of `#4D7BCC` - soft peach tint of `#FF5D4C` - soft butter tint of `#FFD437` Exact hex for tints TBD with Barbara. Likely ~20-30% opacity of saturated parent or hand-tuned pastel. **Pairing rule still open:** per section / per cycle / per page type. Tints always pair with saturated parent. **Catherine reminded me about font licensing for commercial print.** Kept on open items list. Architect's Daughter + Avenir both need commercial-print licen",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-07T15:29:09.049Z",
-      "lastRecalledAt": "2026-06-24T03:15:08.136Z",
+      "lastRecalledAt": "2026-07-06T19:06:21.938Z",
       "queryHashes": [
         "e32e6bf831d8",
-        "e20e1915ce6f"
+        "e20e1915ce6f",
+        "32daef6c445e"
       ],
       "recallDays": [
         "2026-06-07",
-        "2026-06-24"
+        "2026-06-24",
+        "2026-07-06"
       ],
       "conceptTags": [
         "0.8",
@@ -2142,7 +2146,7 @@
       "totalScore": 9,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-16T21:25:33.464Z",
-      "lastRecalledAt": "2026-07-03T16:45:20.645Z",
+      "lastRecalledAt": "2026-07-06T19:06:27.150Z",
       "queryHashes": [
         "7a1bdd19f473",
         "45ba0738fa4f",
@@ -2152,13 +2156,13 @@
         "ac718a28cf3c",
         "4bb68d85c1e7",
         "784546acc677",
-        "f1d117887593"
+        "b58ec60c8930"
       ],
       "recallDays": [
         "2026-06-16",
         "2026-06-17",
         "2026-06-18",
-        "2026-07-03"
+        "2026-07-06"
       ],
       "conceptTags": [
         "12-product",
@@ -2429,20 +2433,18 @@
       "endLine": 102,
       "source": "memory",
       "snippet": "- Beach_Walk_1: 1200×896 (landscape, heavy upscale) - Beach_Walk_portrait: 3125×4166 (portrait 3:4, moderate upscale) - Beach_Read: 2048×2048 (square, heavy + ratio decision) - Beach_Lonely_houses: 1122×1402 (portrait ~4:5, heavy ~5× upscale) - Beach_Lifeguard_3: 896×1200 (portrait ~3:4, heavy ~6× upscale) ### Image prep workflow (locked) - **Upscale to 7200px on the long edge** — one master file per print, downscale to the 5 delivery sizes. - **Tool choice:** Upscayl (free, open source, desktop, \"Artwork\" model) first. Topaz Gigapixel AI ($100 one-time, \"Art / Painting\" preset) as gold standard fallback. - **CRITICAL for watercolor: use Art/Artwork preset, NOT Photo mode.** Photo mode ove",
-      "recallCount": 2,
+      "recallCount": 1,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 1,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-17T18:47:12.278Z",
-      "lastRecalledAt": "2026-07-03T16:45:29.377Z",
+      "lastRecalledAt": "2026-06-17T18:47:12.278Z",
       "queryHashes": [
-        "652d4dafb86d",
-        "4833b74a8032"
+        "652d4dafb86d"
       ],
       "recallDays": [
-        "2026-06-17",
-        "2026-07-03"
+        "2026-06-17"
       ],
       "conceptTags": [
         "beach-walk-1",
@@ -2493,13 +2495,13 @@
       "endLine": 192,
       "source": "memory",
       "snippet": "- Size: ~140pt, fill 60% canvas width - Color: #2C3E4A (Storm Navy) - Letter spacing: default (sentence case doesn't need widening) - **No** drop shadow, outline, background shape, rotation, or third font - Two variants: full lockup \"Saltwash Prints\" + compact \"Saltwash\" or \"SP\" monogram ### Etsy research finding (filed in brand kit Section 14) - Catherine searched Etsy using \"coastal\" + variations. **\"Nothing at all like what I have so far\"** — confirms blue ocean positioning. Coastal Etsy is saturated with tropical kitsch / Coastal Grandmother merch / photoreal sunsets. Saltwash's place-specific + painterly + honest-about-negatives is unoccupied. The moat evaporates if the work stops bei",
-      "recallCount": 8,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 8,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-17T18:54:01.193Z",
-      "lastRecalledAt": "2026-07-03T16:45:20.645Z",
+      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
       "queryHashes": [
         "45ba0738fa4f",
         "b5640eb7dd3f",
@@ -2507,13 +2509,11 @@
         "da8b3018df8e",
         "ac718a28cf3c",
         "4bb68d85c1e7",
-        "784546acc677",
-        "f1d117887593"
+        "784546acc677"
       ],
       "recallDays": [
         "2026-06-17",
-        "2026-06-18",
-        "2026-07-03"
+        "2026-06-18"
       ],
       "conceptTags": [
         "place-specific",
@@ -2576,14 +2576,14 @@
       "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-17T18:54:01.193Z",
-      "lastRecalledAt": "2026-07-03T16:45:29.377Z",
+      "lastRecalledAt": "2026-07-06T19:06:36.004Z",
       "queryHashes": [
         "45ba0738fa4f",
-        "4833b74a8032"
+        "f4d2aea5c76b"
       ],
       "recallDays": [
         "2026-06-17",
-        "2026-07-03"
+        "2026-07-06"
       ],
       "conceptTags": [
         "on-brand",
@@ -2834,14 +2834,14 @@
       "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-18T20:09:44.733Z",
-      "lastRecalledAt": "2026-07-03T16:45:29.377Z",
+      "lastRecalledAt": "2026-07-06T19:06:36.004Z",
       "queryHashes": [
         "4fda033cc97f",
-        "4833b74a8032"
+        "f4d2aea5c76b"
       ],
       "recallDays": [
         "2026-06-18",
-        "2026-07-03"
+        "2026-07-06"
       ],
       "conceptTags": [
         "beach-walk-source.png",
@@ -2861,20 +2861,18 @@
       "endLine": 217,
       "source": "memory",
       "snippet": "1. **Original Gemini render** — 3584×4800 portrait frame, but sideways content (landscape design in portrait frame = \"oddball vertical\"). NOT the same as a true landscape image. 2. **`beach-dog-rotated-full.png`** — 4800×3584 landscape, produced by rotating the source 90° clockwise. This is the standard landscape master. 3. **Portrait crops** (`-2x3`, `-4x5`, `-5x7`, `-8x10`) — taken from the rotated landscape, biased so figure sits near center of the final portrait frame. **Etsy Big Banner** used form #1 (oddball vertical), rotated in Canva. NOT beach-walk. **beach-walk is a SEPARATE image** — different source, different figures (two figures on the beach), also portrait-cropped for its ow",
-      "recallCount": 2,
+      "recallCount": 1,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 1,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-18T20:09:44.733Z",
-      "lastRecalledAt": "2026-07-03T16:45:29.377Z",
+      "lastRecalledAt": "2026-06-18T20:09:44.733Z",
       "queryHashes": [
-        "4fda033cc97f",
-        "4833b74a8032"
+        "4fda033cc97f"
       ],
       "recallDays": [
-        "2026-06-18",
-        "2026-07-03"
+        "2026-06-18"
       ],
       "conceptTags": [
         "beach-dog-rotated-full.png",
@@ -3051,18 +3049,20 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-06-05 ## ANA Journal v3 — CSV schema drafted - **File:** `documents/ana/journal/journal-csv-schema-v3.md` (new, 201 lines) - **Shape:** 19 columns, 9 page types, 126 rows total (2 intro + 120 cycle + 4 end) - **Page types:** intro (2), reflection (84), goal (12), recap_left (12), recap_right (12), coin_cap (1), letter (1), resources (1), blank (1) - **Cycle structure (uniform 1–10):** pages 1–7 reflection, p8 goal, p9 recap_left, p10 recap_right - **Design choice:** renderer constants (e.g., \"Today's Thoughts\", \"Reflections\", streak box label) are NOT in the CSV — only per-page content. Keeps the file focused. - **Visual anchors:** `line_art_id` (12 motifs), `art_id` (recap watercol",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-24T03:15:08.136Z",
-      "lastRecalledAt": "2026-06-24T03:15:08.136Z",
+      "lastRecalledAt": "2026-07-06T19:06:21.938Z",
       "queryHashes": [
-        "e20e1915ce6f"
+        "e20e1915ce6f",
+        "32daef6c445e"
       ],
       "recallDays": [
-        "2026-06-24"
+        "2026-06-24",
+        "2026-07-06"
       ],
       "conceptTags": [
         "recap-left",
@@ -3169,221 +3169,98 @@
         "grained"
       ]
     },
-    "memory:memory/2026-06-18.md:1:20": {
-      "key": "memory:memory/2026-06-18.md:1:20",
-      "path": "memory/2026-06-18.md",
-      "startLine": 1,
-      "endLine": 20,
+    "memory:memory/2026-06-04.md:48:79": {
+      "key": "memory:memory/2026-06-04.md:48:79",
+      "path": "memory/2026-06-04.md",
+      "startLine": 48,
+      "endLine": 79,
       "source": "memory",
-      "snippet": "# 2026-06-18 ## Saltwash customer-comms: decided the PDF question **The debate:** Should printing instructions ship as a PDF in the Etsy download bundle, or in the \"Message to buyer\" field? **Context:** - Etsy digital listings cap at 5 download files (default). To raise, requires Etsy support ticket. - Saltwash Dog on the Beach lineup uses all 5 slots: `beach-dog-5x7.jpg`, `beach-dog-8x10.jpg`, `beach-dog-11x14.jpg`, `beach-dog-16x24.jpg`, `beach-dog-18x24.jpg`. - The 2 biggest JPGs (16x24 = 8.7MB, 18x24 = 9.8MB) push a single zip over Etsy's 20MB server-side zip cap. **No zipping the downloads — buyers get files individually.** **Decision:** Use Etsy's \"Message to buyer\" field as the pr",
+      "snippet": "| 8 | Resting horse | 3 year coin | Rest is part of the work | | 9 | Desert landscape | 2 month coin | Endurance | | 10 | Frog | 3 month coin | Leap, transformation | | 11 | Koi (late re-use) | 6 month coin (top seller) | Persistence | | 12 | Phoenix | 1 year coin | Rising, renewal | Narrative arc: gentle start → growing strength → action/endurance → re-emergence. **Asset source for icons:** Catherine found a Canva designer with SVG icons that match the 12 motifs. SVG scales cleanly to 0.8\" line art and full-bleed watercolor source. Open: which motifs match cleanly out-of-the-box vs. need custom re-draw. **Koi note (locked):** 6-month koi (top seller) deliberately held until cycle 11. 1-y",
       "recallCount": 1,
       "dailyCount": 0,
       "groundedCount": 0,
       "totalScore": 1,
       "maxScore": 1,
-      "firstRecalledAt": "2026-07-03T16:45:20.645Z",
-      "lastRecalledAt": "2026-07-03T16:45:20.645Z",
+      "firstRecalledAt": "2026-07-06T19:06:21.938Z",
+      "lastRecalledAt": "2026-07-06T19:06:21.938Z",
       "queryHashes": [
-        "f1d117887593"
+        "32daef6c445e"
       ],
       "recallDays": [
-        "2026-07-03"
+        "2026-07-06"
       ],
       "conceptTags": [
-        "customer-comms",
-        "beach-dog-5x7.jpg",
-        "beach-dog-8x10.jpg",
-        "beach-dog-11x14.jpg",
-        "beach-dog-16x24.jpg",
-        "beach-dog-18x24.jpg",
-        "8.7mb",
-        "9.8mb"
+        "re-use",
+        "action/endurance",
+        "re-emergence",
+        "0.8",
+        "full-bleed",
+        "out-of-the-box",
+        "re-draw",
+        "6-month"
       ]
     },
-    "memory:memory/2026-06-20.md:105:116": {
-      "key": "memory:memory/2026-06-20.md:105:116",
-      "path": "memory/2026-06-20.md",
-      "startLine": 105,
-      "endLine": 116,
-      "source": "memory",
-      "snippet": "### Open questions at end of 6/20 - Whether Real-ESRGAN should be reserved for cases where Lanczos shows visible quality loss (watercolor texture risk) - Whether to ever bring video generation into Saltwash listings (Etsy supports listing video) --- > **Backfill note (2026-06-23):** This daily memory file merges two reconstructions: > 1. The greeting card mockup best practices work — recovered from `git log --all` on `blair-documents/main` showing three commits dated 2026-06-20 18:13–19:41 UTC, file `documents/ana/greeting-cards/mockup-best-practices.md` (only on the blair-documents remote, not in this workspace's local main). > 2. The Saltwash upscale experiments — Catherine summarized f",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 1,
-      "maxScore": 1,
-      "firstRecalledAt": "2026-07-03T16:45:20.645Z",
-      "lastRecalledAt": "2026-07-03T16:45:20.645Z",
-      "queryHashes": [
-        "f1d117887593"
-      ],
-      "recallDays": [
-        "2026-07-03"
-      ],
-      "conceptTags": [
-        "6/20",
-        "real-esrgan",
-        "blair-documents/main",
-        "blair-documents",
-        "open",
-        "questions",
-        "end",
-        "whether"
-      ]
-    },
-    "memory:memory/2026-06-18.md:17:32": {
-      "key": "memory:memory/2026-06-18.md:17:32",
-      "path": "memory/2026-06-18.md",
-      "startLine": 17,
-      "endLine": 32,
-      "source": "memory",
-      "snippet": "5. The longer reference doc (printing tips, framing, custom-size requests) lives in `saltwash/customer-comms/printing-tips.md` as a copy-paste reference for Catherine when responding to buyer questions **Files created (committed + pushed to blair-documents, commit 9fd3f5d):** - `saltwash/customer-comms/message-to-buyer.md` (+ .pdf) — 86-word Etsy message field, universal across all Saltwash print listings - `saltwash/customer-comms/printing-tips.md` (+ .pdf) — ~310-word copy-paste reference for buyer questions, with quick-reference table for common question patterns **Key advice baked into both docs:** - **Paper:** Matte or linen finish, 80–100 lb / 200–270 gsm. Never glossy photo paper (f",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 1,
-      "maxScore": 1,
-      "firstRecalledAt": "2026-07-03T16:45:20.645Z",
-      "lastRecalledAt": "2026-07-03T16:45:20.645Z",
-      "queryHashes": [
-        "f1d117887593"
-      ],
-      "recallDays": [
-        "2026-07-03"
-      ],
-      "conceptTags": [
-        "custom-size",
-        "copy-paste",
-        "blair-documents",
-        "86-word",
-        "310-word",
-        "quick-reference",
-        "longer",
-        "reference"
-      ]
-    },
-    "memory:memory/2026-06-20.md:87:112": {
-      "key": "memory:memory/2026-06-20.md:87:112",
-      "path": "memory/2026-06-20.md",
-      "startLine": 87,
-      "endLine": 112,
-      "source": "memory",
-      "snippet": "- **Real-ESRGAN** — neural upscaler. Better quality on photographic content, slower, can introduce artifacts on watercolor texture. **For image generation (Adobe Creative Cloud / Firefly):** - 5 native Firefly image generators — characterized as \"mediocre\" - Several Gemini image generators — **Nano-Banana (Gemini 2.5 Flash Image)** rated most satisfactory - Several video generators (separate from image) **For video generation:** - **Veo** — uses 400 credits per generation - **Kling** — uses 120 credits per generation (~3.3× cheaper) - **Decision:** Use Kling (cost ratio makes Veo uneconomical for iteration) ### Settled workflow **Settled on Lanczos for Saltwash** for the 1k → 2k upscale",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 1,
-      "maxScore": 1,
-      "firstRecalledAt": "2026-07-03T16:45:20.645Z",
-      "lastRecalledAt": "2026-07-03T16:45:20.645Z",
-      "queryHashes": [
-        "f1d117887593"
-      ],
-      "recallDays": [
-        "2026-07-03"
-      ],
-      "conceptTags": [
-        "real-esrgan",
-        "nano-banana",
-        "2.5",
-        "3.3",
-        "real",
-        "esrgan",
-        "neural",
-        "upscaler"
-      ]
-    },
-    "memory:memory/2026-06-16.md:62:87": {
-      "key": "memory:memory/2026-06-16.md:62:87",
-      "path": "memory/2026-06-16.md",
-      "startLine": 62,
-      "endLine": 87,
-      "source": "memory",
-      "snippet": "- Sizes per print: 5 files at 5×7, 8×10, 11×14, 16×24, 18×24 (16×24 is the must-have). All in 2:3 / 4:5 / 3:4 ratios. Do NOT ship A1-A5. - Palette already locked in v1 (Sand / Mist / Sea Fog / Driftwood / Storm Navy). ### Print lineup v1 — 5 prints, brand fit | # | Print | Brand fit | Decision | |---|---|---|---| | a | Dog on the Beach (lady in red dress + black dog, twilight) | 🟢 Strongest | **Launch lead** | | b | Walk on the Beach (couple, sunset, impressionist) | 🟡 Couple + sunset = brand risks | **Reframe copy or park** — emphasize shoreline/light over people, or cut | | c | Lady Reading (red Adirondack chair, dunes, houses, cord grass) | 🟢 Strong | **Launch — 2nd or 3rd.** Square",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 1,
-      "maxScore": 1,
-      "firstRecalledAt": "2026-07-03T16:45:29.377Z",
-      "lastRecalledAt": "2026-07-03T16:45:29.377Z",
-      "queryHashes": [
-        "4833b74a8032"
-      ],
-      "recallDays": [
-        "2026-07-03"
-      ],
-      "conceptTags": [
-        "must-have",
-        "a1-a5",
-        "shoreline/light",
-        "sizes",
-        "per",
-        "print",
-        "must",
-        "all"
-      ]
-    },
-    "memory:memory/2026-06-18.md:47:60": {
-      "key": "memory:memory/2026-06-18.md:47:60",
-      "path": "memory/2026-06-18.md",
-      "startLine": 47,
-      "endLine": 60,
-      "source": "memory",
-      "snippet": "- **P-OBX-2 = beach-walk** (originally brand-kit \"Walk on the Beach (couple)\", parked for v2, promoted to #2 because it's closer in style to dog and shows well as a pair) - Catherine noted \"2 days to get #1, but I'll get faster\" — velocity will compound as the listing-creation-process.md doc pays off ## Listing #2 drafted (beach-walk, P-OBX-2) — pushed 2026-06-18 commit 82af8ab - File: `saltwash/listings/beach-walk-listing-draft.md` - Title: \"Sunset Beach Walk Watercolor Print, Couple on Outer Banks Shore, Coastal Wall Art, Digital Download\" (100 chars) - 13 tags, 8 shared with dog-on-the-beach (consistent brand presence), 5 walk-specific (sunset/couple/walk theme) - Description follows",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 1,
-      "maxScore": 1,
-      "firstRecalledAt": "2026-07-03T16:45:29.377Z",
-      "lastRecalledAt": "2026-07-03T16:45:29.377Z",
-      "queryHashes": [
-        "4833b74a8032"
-      ],
-      "recallDays": [
-        "2026-07-03"
-      ],
-      "conceptTags": [
-        "p-obx-2",
-        "beach-walk",
-        "brand-kit",
-        "listing-creation-process.md",
-        "dog-on-the-beach",
-        "walk-specific",
-        "sunset/couple/walk",
-        "obx"
-      ]
-    },
-    "memory:memory/2026-07-03.md:1:23": {
-      "key": "memory:memory/2026-07-03.md:1:23",
+    "memory:memory/2026-07-03.md:31:55": {
+      "key": "memory:memory/2026-07-03.md:31:55",
       "path": "memory/2026-07-03.md",
-      "startLine": 1,
-      "endLine": 23,
+      "startLine": 31,
+      "endLine": 55,
       "source": "memory",
-      "snippet": "# 2026-07-03 ## Saltwash — beach-plover 18x24 review master Catherine asked for the plover-in-flight source to be upscaled to 18x24 with two conditions: Lanczos resampling (the established Saltwash choice) and a horizontal flip so the bird faces the other way. She'll review the large version in Photoshop for stray upscaling artifacts, fix them, and return the cleaned master — at which point I derive the other 4 print sizes from it. ### Built - `saltwash/beach-plover/beach-plover-source.png` (3584×4800, 24 MB) — untouched master copied from upload - `saltwash/beach-plover/beach-plover-18x24.png` (5400×7200, 45 MB) — review master - `-flop` for the horizontal flip - Crop to exact 3:4:",
+      "snippet": "- **Build the 18x24 first, downscale from it** — opposite of the beach-dog / beach-walk pipeline, which builds 2:3 / 4:5 native crops and upscales from those. The 18x24-first approach guarantees Catherine is reviewing the actual master that all other sizes will be derived from, so any artifacts she fixes propagate to every print size. - **Lanczos remains the Saltwash upscaler** — no Real-ESRGAN needed at 1.5× upscale, watercolor texture preserved cleanly. --- ## Saltwash — plover print complete + NEW WORKFLOW LOCKED 2026-07-03 Catherine returned the cleaned 18×24 master around 18:24 UTC. I derived the other 4 sizes from it and the plover is the first print built with the **new Saltwash pr",
       "recallCount": 1,
       "dailyCount": 0,
       "groundedCount": 0,
       "totalScore": 1,
       "maxScore": 1,
-      "firstRecalledAt": "2026-07-03T19:10:26.513Z",
-      "lastRecalledAt": "2026-07-03T19:10:26.513Z",
+      "firstRecalledAt": "2026-07-06T19:06:27.150Z",
+      "lastRecalledAt": "2026-07-06T19:06:27.150Z",
       "queryHashes": [
-        "acf24cfb47e1"
+        "b58ec60c8930"
       ],
       "recallDays": [
-        "2026-07-03"
+        "2026-07-06"
       ],
       "conceptTags": [
-        "beach-plover",
-        "plover-in-flight",
-        "saltwash",
-        "beach",
-        "plover",
+        "beach-dog",
+        "beach-walk",
+        "18x24-first",
+        "real-esrgan",
+        "1.5",
         "18x24",
-        "review",
-        "master"
+        "first",
+        "downscale"
+      ]
+    },
+    "memory:memory/2026-07-03.md:95:103": {
+      "key": "memory:memory/2026-07-03.md:95:103",
+      "path": "memory/2026-07-03.md",
+      "startLine": 95,
+      "endLine": 103,
+      "source": "memory",
+      "snippet": "- `saltwash/build-jpg-delivery.sh` — DELETED, replaced with `saltwash/build-print-sizes.py`. The new script is purpose-built for the new workflow: takes the 18×24 master JPG + print name as args, derives the 4 other sizes as Q95 JPGs, centered crop by default, checks 20MB Etsy limit. Per-size crop instructions are still handled in conversation (one-off convert before/after the script if needed) — didn't bother parameterizing for a feature that may not be needed often. ### Standing docs that needed updating - `saltwash/listing-creation-process.md` — overhauled to describe the new JPG-only pipeline (was: PNG archival, native crops, batch JPG conversion). - `saltwash/README.md` — conventions",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T19:06:27.150Z",
+      "lastRecalledAt": "2026-07-06T19:06:36.004Z",
+      "queryHashes": [
+        "b58ec60c8930",
+        "f4d2aea5c76b"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "saltwash/build-jpg-delivery.sh",
+        "saltwash/build-print-sizes.py",
+        "purpose-built",
+        "per-size",
+        "one-off",
+        "before/after",
+        "jpg-only",
+        "saltwash/readme.md"
       ]
     },
     "memory:memory/2026-07-03.md:1:24": {
@@ -3398,13 +3275,13 @@
       "groundedCount": 0,
       "totalScore": 1,
       "maxScore": 1,
-      "firstRecalledAt": "2026-07-04T21:22:21.826Z",
-      "lastRecalledAt": "2026-07-04T21:22:21.826Z",
+      "firstRecalledAt": "2026-07-06T19:06:27.150Z",
+      "lastRecalledAt": "2026-07-06T19:06:27.150Z",
       "queryHashes": [
-        "f49cae3cb90e"
+        "b58ec60c8930"
       ],
       "recallDays": [
-        "2026-07-04"
+        "2026-07-06"
       ],
       "conceptTags": [
         "beach-plover",
@@ -3415,6 +3292,37 @@
         "18x24",
         "review",
         "master"
+      ]
+    },
+    "memory:memory/2026-06-16.md:140:160": {
+      "key": "memory:memory/2026-06-16.md:140:160",
+      "path": "memory/2026-06-16.md",
+      "startLine": 140,
+      "endLine": 160,
+      "source": "memory",
+      "snippet": "- Documented in both build scripts and READMEs so I don't relearn this ### Crop bias rule (per source's reported subject position) - Figure on the right of source → 2:3 crop cuts 2/3 from left, 1/3 from right (beach-dog) - Figure on the left of source → 2:3 crop cuts 1/3 from left, 2/3 from right (beach-walk, mirror) - Goal: figure lands at ~1/3 from the SAME side of the final crop, so composition reads as balanced - Documented in `saltwash/README.md` as a convention for future prints ### Listing draft v1 — Dog on the Beach - `documents/catherine-coastal/listings/dog-on-the-beach-listing-draft.md` (76 lines) - Title formula: `[Mood] + [Subject] + [Medium] + [Place] + [Format]` - Chosen t",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T19:06:36.004Z",
+      "lastRecalledAt": "2026-07-06T19:06:36.004Z",
+      "queryHashes": [
+        "f4d2aea5c76b"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "2/3",
+        "1/3",
+        "beach-dog",
+        "beach-walk",
+        "saltwash/readme.md",
+        "documented",
+        "both",
+        "scripts"
       ]
     }
   }
