@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T19:06:36.004Z",
+  "updatedAt": "2026-07-13T19:39:21.984Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -874,13 +874,13 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-09 Daily Log ## Etsy Check-in (Saturday) - 1 order: Yasmina Moore-Foster - 1 Year Phoenix Rising, ship by May 12, gift + gift teaser - No new messages - No new reviews - Posted Discord DM to Drew with order details + handwritten note suggestion - Included Mother's Day reminder ## Browser Tool Test - Tried to log into Etsy but Etsy blocked the VPS IP (bot detection) - Will need to find alternative method ## Notes -",
-      "recallCount": 10,
+      "recallCount": 11,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 10,
+      "totalScore": 10.864521404684435,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-06-24T14:15:55.326Z",
+      "lastRecalledAt": "2026-07-13T19:39:21.984Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "a91c53fdde37",
@@ -891,7 +891,8 @@
         "e634c48d5530",
         "27522abfbf4d",
         "2400d9f6cb3d",
-        "1911f09c897b"
+        "1911f09c897b",
+        "c9d860442bf6"
       ],
       "recallDays": [
         "2026-05-13",
@@ -899,7 +900,8 @@
         "2026-06-07",
         "2026-06-16",
         "2026-06-17",
-        "2026-06-24"
+        "2026-06-24",
+        "2026-07-13"
       ],
       "conceptTags": [
         "check-in",
@@ -1485,24 +1487,26 @@
       "endLine": 70,
       "source": "memory",
       "snippet": "- \"mental health card\" dominates globally (high volume) - \"sobriety card\" is lowest - Feb 2026 had major spike for \"mental health card\" ### Erank Keyword Data - \"sobriety gift\": 2,560 searches/month (Etsy's top term) - \"sober gift\": 1,260 searches/month - \"mental health gift\": <20 searches (nearly invisible on Etsy!) - **Key insight:** Google and Etsy are opposite — Etsy buyers search \"sobriety\", not \"mental health\" ### Erank Top Listings - Viewed \"Mental Health Card\" and broader \"Mental Health\" listings - Modest revenue: $204-$869 over 500+ days (long-tail, low volume) - Humor/sarcastic cards perform better than serious ones - PaperPawsCo is a major player in this space ### Strategic Ins",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 5.869028666573591,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T16:37:44.083Z",
-      "lastRecalledAt": "2026-06-17T18:47:49.608Z",
+      "lastRecalledAt": "2026-07-13T19:39:21.984Z",
       "queryHashes": [
         "f6454ddbeec7",
         "6a129c354fd1",
         "27522abfbf4d",
         "652d4dafb86d",
-        "f5b7eb9a5a6c"
+        "f5b7eb9a5a6c",
+        "c9d860442bf6"
       ],
       "recallDays": [
         "2026-05-29",
         "2026-06-07",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-07-13"
       ],
       "conceptTags": [
         "searches/month",
@@ -3323,6 +3327,68 @@
         "documented",
         "both",
         "scripts"
+      ]
+    },
+    "memory:memory/2026-06-18.md:1:20": {
+      "key": "memory:memory/2026-06-18.md:1:20",
+      "path": "memory/2026-06-18.md",
+      "startLine": 1,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "# 2026-06-18 ## Saltwash customer-comms: decided the PDF question **The debate:** Should printing instructions ship as a PDF in the Etsy download bundle, or in the \"Message to buyer\" field? **Context:** - Etsy digital listings cap at 5 download files (default). To raise, requires Etsy support ticket. - Saltwash Dog on the Beach lineup uses all 5 slots: `beach-dog-5x7.jpg`, `beach-dog-8x10.jpg`, `beach-dog-11x14.jpg`, `beach-dog-16x24.jpg`, `beach-dog-18x24.jpg`. - The 2 biggest JPGs (16x24 = 8.7MB, 18x24 = 9.8MB) push a single zip over Etsy's 20MB server-side zip cap. **No zipping the downloads — buyers get files individually.** **Decision:** Use Etsy's \"Message to buyer\" field as the pr",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8633300059388649,
+      "maxScore": 0.8633300059388649,
+      "firstRecalledAt": "2026-07-13T19:39:21.984Z",
+      "lastRecalledAt": "2026-07-13T19:39:21.984Z",
+      "queryHashes": [
+        "c9d860442bf6"
+      ],
+      "recallDays": [
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "customer-comms",
+        "beach-dog-5x7.jpg",
+        "beach-dog-8x10.jpg",
+        "beach-dog-11x14.jpg",
+        "beach-dog-16x24.jpg",
+        "beach-dog-18x24.jpg",
+        "8.7mb",
+        "9.8mb"
+      ]
+    },
+    "memory:memory/2026-06-26.md:35:51": {
+      "key": "memory:memory/2026-06-26.md:35:51",
+      "path": "memory/2026-06-26.md",
+      "startLine": 35,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "- **Recommendation:** Open a help ticket. Need admin to either (a) upgrade `composio-core` in this container or (b) document the v3 API base URL/paths. Don't burn more agent time on this until ticket lands. - Cleared `COMPOSIO_API_KEY` env var after testing — key not left in shell history. - Workaround in place: today's Etsy check-in ran via type-it-out. Monday 6/29 can do the same. ## Files / artifacts referenced - `/home/openclaw/.openclaw/skills/etsy_checkin/` — skill ran cleanly for steps 1, 3, 4; step 2 (image parse) failed due to no vision - `/home/openclaw/.openclaw/workspace/documents/ana/etsy-mwf-checkin.md` — workflow format - `/home/openclaw/.openclaw/workspace/skills/etsy_checki",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8610518203501725,
+      "maxScore": 0.8610518203501725,
+      "firstRecalledAt": "2026-07-13T19:39:21.984Z",
+      "lastRecalledAt": "2026-07-13T19:39:21.984Z",
+      "queryHashes": [
+        "c9d860442bf6"
+      ],
+      "recallDays": [
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "composio-core",
+        "url/paths",
+        "composio-api-key",
+        "check-in",
+        "type-it-out",
+        "6/29",
+        "home/openclaw",
+        "openclaw/skills/etsy-checkin"
       ]
     }
   }
