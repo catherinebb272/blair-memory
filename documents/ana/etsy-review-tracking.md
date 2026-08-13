@@ -68,3 +68,22 @@
 | Date | Customer | Review Summary | Date Responded |
 |------|----------|----------------|----------------|
 | 2026-06-19 | (prior review) | Last review answered | 2026-06-19 (per Catherine 2026-06-24) |
+
+---
+
+### 2026-08-12 (Fri)
+- **Check Date:** 2026-08-12
+- **Checked By:** Catherine (via Discord)
+- **New Reviews Found:** 4
+- **Pending Replies:** 4
+- **Proposed Replies Sent to Drew:** Yes (via Discord #general)
+- **Status:** Sent, awaiting posting
+
+### Pending Replies Summary (Updated)
+
+| Date | Customer | Review Summary | Proposed Reply | Status |
+|------|----------|----------------|----------------|--------|
+| 2026-08-12 | Etsy Buyer (Aug 9) | ⭐5 "Exactly as described. Outstanding customer service too!" (3 Year coin) | Hi! Thank you for the kind words – thrilled the 3‑year coin meets your expectations. | Sent |
+| 2026-08-12 | Noah (Aug 3) | ⭐5 "I love it so much I’m glad to have a physical representative of my journey now thank you!🥰" (1 Year coin) | Noah, so glad the coin captures your journey – thank you for sharing the love! | Sent |
+| 2026-08-12 | Stacy (Aug 2) | ⭐5 "I bought the coi fish coin as a gift. it was more beautiful than advertised. great communication with the seller, even after delivery." (6 Month coin) | Stacy, delighted the gift brought joy – thank you for the wonderful feedback! | Sent |
+| 2026-08-12 | Etsy Buyer (Jul 26) | ⭐5 "beautiful item again. Just amazing the love that is felt from this seller." (1 Year Phoenix coin) | Thank you! Your support means everything – happy the Phoenix coin resonated with you. | Sent |
