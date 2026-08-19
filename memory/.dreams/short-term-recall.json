@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-13T19:39:21.984Z",
+  "updatedAt": "2026-08-18T15:58:13.102Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -40,20 +40,22 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# Session Notes - 2026-03-25 ## Connections Status ### GitHub ✓ CONNECTED - CLI authenticated as catherinebb272 - Repo accessible: catherinebb272/blair-documents - Git identity configured ### AgentMail ⏸ ON HOLD - Skill installed to: /root/.openclaw/workspace/skills/agentmail/ - Token ready in config/agentmail.env - Blocked: Cannot edit openclaw.json to enable skill (permission denied, needs heyron-configure or admin) - **To complete:** Add skills.entries.agentmail config with API key ### Discord ⏳ NEEDS CHECK - User says they may have already set up bot + server for DMs - Need to verify if connection is active ## Config Files Created - /root/.openclaw/workspace/config/discord.env - /ro",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-05-09T20:36:11.891Z",
+      "lastRecalledAt": "2026-08-18T15:58:13.102Z",
       "queryHashes": [
         "626666369489",
-        "a0903a12abe4"
+        "a0903a12abe4",
+        "17d38c23a721"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-08-18"
       ],
       "conceptTags": [
         "catherinebb272/blair-documents",
@@ -73,20 +75,22 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# Memory - April 2, 2026 ## Today's Work ### Discord Training Module (03-connect-discord.html) - Reviewed user's heyron-tutorial at https://catherinebb272.github.io/heyron-tutorial/03-connect-discord.html - Cross-referenced with official OpenClaw docs - Identified key issues: 1. Pairing code mystery — users don't understand where it comes from 2. groupPolicy buried in troubleshooting — should be a required step 3. Missing server privacy settings (enable DMs for pairing) - Rewrote module with fixes: - Added \"What About That Pairing Code?\" explainer box - Moved groupPolicy to main setup flow (critical step) - Added Server Privacy Settings step - Added Developer Portal explanati",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-06-07T15:29:29.270Z",
+      "lastRecalledAt": "2026-08-18T15:58:13.102Z",
       "queryHashes": [
         "626666369489",
-        "f1d3ff54ff40"
+        "f1d3ff54ff40",
+        "17d38c23a721"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-08-18"
       ],
       "conceptTags": [
         "03-connect-discord.html",
@@ -106,24 +110,26 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# Memory Log - 2026-03-12 ## Summary Major connectivity day - established multiple new integrations and backed up all critical files. ## Activities ### Discord Connection - Successfully connected to Discord via CB BlairAI server - User can now communicate via Discord DM - Bot: BlairANA (blairana@agentmail.to) ### GitHub Integration - Confirmed GitHub token works - Uploaded country club research PDF to agent-output folder - Created comprehensive backup of all memory files ### Email Setup (AgentMail) - Configured AgentMail service - Email address: blairana@agentmail.to - Successfully tested sending to catherine1@bellbracken.com - Drew's email added for ANA reports: Drew@bellbracken.com #",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-06-02T17:00:44.614Z",
+      "lastRecalledAt": "2026-08-18T15:58:13.102Z",
       "queryHashes": [
         "626666369489",
         "e9db6d6c9af5",
         "c49bc3dfde3e",
-        "b8dfdc61945a"
+        "b8dfdc61945a",
+        "17d38c23a721"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-05-10",
         "2026-05-11",
-        "2026-06-02"
+        "2026-06-02",
+        "2026-08-18"
       ],
       "conceptTags": [
         "backup",
@@ -3336,18 +3342,20 @@
       "endLine": 20,
       "source": "memory",
       "snippet": "# 2026-06-18 ## Saltwash customer-comms: decided the PDF question **The debate:** Should printing instructions ship as a PDF in the Etsy download bundle, or in the \"Message to buyer\" field? **Context:** - Etsy digital listings cap at 5 download files (default). To raise, requires Etsy support ticket. - Saltwash Dog on the Beach lineup uses all 5 slots: `beach-dog-5x7.jpg`, `beach-dog-8x10.jpg`, `beach-dog-11x14.jpg`, `beach-dog-16x24.jpg`, `beach-dog-18x24.jpg`. - The 2 biggest JPGs (16x24 = 8.7MB, 18x24 = 9.8MB) push a single zip over Etsy's 20MB server-side zip cap. **No zipping the downloads — buyers get files individually.** **Decision:** Use Etsy's \"Message to buyer\" field as the pr",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8633300059388649,
-      "maxScore": 0.8633300059388649,
+      "totalScore": 1.8633300059388649,
+      "maxScore": 1,
       "firstRecalledAt": "2026-07-13T19:39:21.984Z",
-      "lastRecalledAt": "2026-07-13T19:39:21.984Z",
+      "lastRecalledAt": "2026-08-18T15:58:13.102Z",
       "queryHashes": [
-        "c9d860442bf6"
+        "c9d860442bf6",
+        "17d38c23a721"
       ],
       "recallDays": [
-        "2026-07-13"
+        "2026-07-13",
+        "2026-08-18"
       ],
       "conceptTags": [
         "customer-comms",
