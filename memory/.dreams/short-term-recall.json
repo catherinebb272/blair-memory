@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18T15:58:13.102Z",
+  "updatedAt": "2026-08-25T00:36:53.427Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -40,22 +40,24 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# Session Notes - 2026-03-25 ## Connections Status ### GitHub ✓ CONNECTED - CLI authenticated as catherinebb272 - Repo accessible: catherinebb272/blair-documents - Git identity configured ### AgentMail ⏸ ON HOLD - Skill installed to: /root/.openclaw/workspace/skills/agentmail/ - Token ready in config/agentmail.env - Blocked: Cannot edit openclaw.json to enable skill (permission denied, needs heyron-configure or admin) - **To complete:** Add skills.entries.agentmail config with API key ### Discord ⏳ NEEDS CHECK - User says they may have already set up bot + server for DMs - Need to verify if connection is active ## Config Files Created - /root/.openclaw/workspace/config/discord.env - /ro",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-08-18T15:58:13.102Z",
+      "lastRecalledAt": "2026-08-24T19:10:45.425Z",
       "queryHashes": [
         "626666369489",
         "a0903a12abe4",
-        "17d38c23a721"
+        "17d38c23a721",
+        "bb67594e56fc"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-05-09",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-24"
       ],
       "conceptTags": [
         "catherinebb272/blair-documents",
@@ -218,27 +220,29 @@
       "endLine": 176,
       "source": "memory",
       "snippet": "Two years already! Wow! That is truly impressive. It represents a dedication to living a healthy life. Here's to the next chapter. Apart Not Alone --- ## 3 YEAR COIN (Platinum Tier) **Tone:** Big milestone—culmination of bronze, silver, gold journey **Script:** Three years. Platinum level. That's extraordinary. You've gone through seasons of hard work, tough days, and victories. This coin represents the whole journey—every step, every milestone, every ounce of effort. Hot damn. You did that. Apart Not Alone --- ## Voice Notes for Calligraphic Cards **Key phrases to capture in handwriting:** - \"Hot damn!\" – signature exclamation, high energy - \"You are amazing\" – direct affirmatio",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-22T17:06:37.823Z",
-      "lastRecalledAt": "2026-06-07T15:29:29.268Z",
+      "lastRecalledAt": "2026-08-24T19:10:04.324Z",
       "queryHashes": [
         "fa8b805c80d0",
         "5919912bf44c",
         "706aa83977f7",
         "837961e215db",
         "29fdb6f4553f",
-        "6a129c354fd1"
+        "6a129c354fd1",
+        "f6b4702b64ec"
       ],
       "recallDays": [
         "2026-04-22",
         "2026-05-10",
         "2026-05-11",
         "2026-05-14",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-08-24"
       ],
       "conceptTags": [
         "two",
@@ -458,24 +462,26 @@
       "endLine": 21,
       "source": "memory",
       "snippet": "# 2026-04-16 ## Today's Recap - Created new PC inventory reconciliation process doc: `Step by Step.md` - 5-step workflow: Upload Item Buy Detail → Upload Precount → Collect Store Scans → Review Missing Items → Generate Barcodes - Cleaned up old mini-cycle-count-app folder: - Deleted storyboard.md, framework, data files (Precount, Item Buy Detail, Shorts scan file, subset file) - Pushed shorts-barcodes-printable.pdf to GitHub - Deleted old React app code, node_modules, barcodes - Moved Step by Step.md to GitHub repo: catherinebb272/mini-cycle-count-app - Updated MEMORY.md with GitHub location for the app - Created How I Built It tutorial: Cron with Discord - Saved to GitHub: cathe",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-10T15:36:24.030Z",
-      "lastRecalledAt": "2026-05-29T16:37:44.083Z",
+      "lastRecalledAt": "2026-08-24T19:10:04.324Z",
       "queryHashes": [
         "a7a74d5c114a",
         "a1431f3061ba",
         "1d7e16506eb5",
-        "f6454ddbeec7"
+        "f6454ddbeec7",
+        "f6b4702b64ec"
       ],
       "recallDays": [
         "2026-05-10",
         "2026-05-12",
         "2026-05-16",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-08-24"
       ],
       "conceptTags": [
         "step.md",
@@ -811,25 +817,27 @@
       "endLine": 116,
       "source": "memory",
       "snippet": "- Emailed to Catherine via AgentMail --- ## Etsy Review Reminder — AUTOMATED ### Setup - OpenClaw cron job: Mon/Wed/Fri at 2 PM UTC (9 AM Central) - Sends Discord DM to Catherine - Removed old Linux crontab entry - Tracking: `etsy-review-tracking.md` ### Status - Jade's review: COMPLETE (Drew posted reply 2026-03-13) - No pending replies --- ## GitHub Backup System — VERIFIED ### Status - Nightly backups working to `memory-backup/` folder - Last backup: 2026-03-12 22:45 UTC - Deleted orphaned `memory-backups/` folder - TOOLS.md updated with correct cron info --- ## Key Files Created/Modified Today | File | Location | Purpose | |------|----------|---------| | `index-standalone.html`",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-12T00:24:53.236Z",
-      "lastRecalledAt": "2026-06-07T23:28:53.065Z",
+      "lastRecalledAt": "2026-08-24T19:09:59.083Z",
       "queryHashes": [
         "a1431f3061ba",
         "545a9d9f8b7c",
         "96d163102668",
         "9907211e386a",
-        "96c5283df7ab"
+        "96c5283df7ab",
+        "61e62b213a1a"
       ],
       "recallDays": [
         "2026-05-12",
         "2026-05-13",
         "2026-05-25",
-        "2026-06-07"
+        "2026-06-07",
+        "2026-08-24"
       ],
       "conceptTags": [
         "backup",
@@ -880,13 +888,13 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-09 Daily Log ## Etsy Check-in (Saturday) - 1 order: Yasmina Moore-Foster - 1 Year Phoenix Rising, ship by May 12, gift + gift teaser - No new messages - No new reviews - Posted Discord DM to Drew with order details + handwritten note suggestion - Included Mother's Day reminder ## Browser Tool Test - Tried to log into Etsy but Etsy blocked the VPS IP (bot detection) - Will need to find alternative method ## Notes -",
-      "recallCount": 11,
+      "recallCount": 12,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 10.864521404684435,
+      "totalScore": 11.804399418002362,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-07-13T19:39:21.984Z",
+      "lastRecalledAt": "2026-08-24T19:10:09.929Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "a91c53fdde37",
@@ -907,7 +915,8 @@
         "2026-06-16",
         "2026-06-17",
         "2026-06-24",
-        "2026-07-13"
+        "2026-07-13",
+        "2026-08-24"
       ],
       "conceptTags": [
         "check-in",
@@ -1065,13 +1074,13 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# 2026-05-13 — Etsy Optimization Deep Dive ## Session Summary ### What We Did **1. Etsy Check-In (Wed)** - No new orders, messages, or reviews - Posted update to #general and DM'd Drew — enjoy the breathing room **2. Compiled 30-Day Stats** - Created `documents/ana/etsy-stats-60-day.md` - Storewide: 607 visits (-13% YoY), 32 orders, 5.3% conversion, $672 revenue - Added all 10 product rows with visits, orders, conversion rates **3. Conversion Analysis** - Compared lifetime (Mar) vs 30-day (May) conversion - Key finding: New customer acquisition broken (Month 1-6 at 0% or near-zero) - Repeat customers thriving (2-3 Year up significantly) **4. Competitor Research: TheAchievemint** - Pull",
-      "recallCount": 9,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 9,
+      "totalScore": 9.926925358688127,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T02:32:14.988Z",
-      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
+      "lastRecalledAt": "2026-08-24T19:10:09.929Z",
       "queryHashes": [
         "29fdb6f4553f",
         "b4858c274d60",
@@ -1081,14 +1090,16 @@
         "5914a007eae2",
         "b8dfdc61945a",
         "f1d3ff54ff40",
-        "27522abfbf4d"
+        "27522abfbf4d",
+        "c9d860442bf6"
       ],
       "recallDays": [
         "2026-05-14",
         "2026-05-25",
         "2026-06-02",
         "2026-06-07",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-08-24"
       ],
       "conceptTags": [
         "check-in",
@@ -1145,22 +1156,24 @@
       "endLine": 84,
       "source": "memory",
       "snippet": "- Started with 300 credits, down to 210 after uploads/testing - Static site uses minimal credits (bandwidth only) - Manual deploys preferred over builds to conserve credits --- ## AgentMail Email System — FIXED ### Problem - Old API key expired - Wrong endpoint being used (`/v1/` instead of `/v0/`) - Incorrect request format ### Solution - New API key: `am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a` - Correct endpoint: `POST /v0/inboxes/{inbox_id}/messages/send` - Proper format: `{\"to\": \"...\", \"subject\": \"...\", \"body\": {\"text\": \"...\"}}` - Deleted orphaned inbox `selfishcompetition741@agentmail.to` - Confirmed working: sent test email + PDF attachment successfully",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T14:03:44.075Z",
-      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
+      "lastRecalledAt": "2026-08-24T19:09:59.083Z",
       "queryHashes": [
         "b4858c274d60",
         "96c5283df7ab",
-        "e634c48d5530"
+        "e634c48d5530",
+        "61e62b213a1a"
       ],
       "recallDays": [
         "2026-05-14",
         "2026-06-07",
-        "2026-06-16"
+        "2026-06-16",
+        "2026-08-24"
       ],
       "conceptTags": [
         "uploads/testing",
@@ -1275,23 +1288,25 @@
       "endLine": 15,
       "source": "memory",
       "snippet": "# 2026-05-14 ## Competitor Intel ### AACoinClub (Etsy) - 11 months on Etsy, 171 sales - Exclusively coins, mixed styles (no apparent strategy) - Top sellers: - Bling style: sun with moon on back, available years 1-15 - 4 year: embossed images of AA founders - 19 total styles - Unknown: stocking vs on-demand etching ## Action Items - [ ] Update competitor file with AACoinClub",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 4.928578632344494,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:35:58.021Z",
-      "lastRecalledAt": "2026-06-18T15:56:22.365Z",
+      "lastRecalledAt": "2026-08-24T19:10:09.929Z",
       "queryHashes": [
         "9907211e386a",
         "5914a007eae2",
         "27522abfbf4d",
-        "720a3dcd0396"
+        "720a3dcd0396",
+        "c9d860442bf6"
       ],
       "recallDays": [
         "2026-05-25",
         "2026-06-17",
-        "2026-06-18"
+        "2026-06-18",
+        "2026-08-24"
       ],
       "conceptTags": [
         "1-15",
@@ -1493,13 +1508,13 @@
       "endLine": 70,
       "source": "memory",
       "snippet": "- \"mental health card\" dominates globally (high volume) - \"sobriety card\" is lowest - Feb 2026 had major spike for \"mental health card\" ### Erank Keyword Data - \"sobriety gift\": 2,560 searches/month (Etsy's top term) - \"sober gift\": 1,260 searches/month - \"mental health gift\": <20 searches (nearly invisible on Etsy!) - **Key insight:** Google and Etsy are opposite — Etsy buyers search \"sobriety\", not \"mental health\" ### Erank Top Listings - Viewed \"Mental Health Card\" and broader \"Mental Health\" listings - Modest revenue: $204-$869 over 500+ days (long-tail, low volume) - Humor/sarcastic cards perform better than serious ones - PaperPawsCo is a major player in this space ### Strategic Ins",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.869028666573591,
+      "totalScore": 6.814563410549615,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T16:37:44.083Z",
-      "lastRecalledAt": "2026-07-13T19:39:21.984Z",
+      "lastRecalledAt": "2026-08-24T19:10:09.929Z",
       "queryHashes": [
         "f6454ddbeec7",
         "6a129c354fd1",
@@ -1512,7 +1527,8 @@
         "2026-05-29",
         "2026-06-07",
         "2026-06-17",
-        "2026-07-13"
+        "2026-07-13",
+        "2026-08-24"
       ],
       "conceptTags": [
         "searches/month",
@@ -2150,13 +2166,13 @@
       "endLine": 58,
       "source": "memory",
       "snippet": "- Coastal watercolor source files (Firefly exports) — ask Catherine to keep them in a known location once she has a workspace folder. They're the actual product. - The 12-product mental-health SKU table in `documents/ana/products/sku-table.md` will need re-pathing if/when those products move — but for now, parked. ## Tone / what worked - Catherine responded well to a direct \"this isn't ADD, this is resourceful\" reframe. She was second-guessing herself for having too many ideas; reframing as \"income stream under constraint\" landed. - Concrete next-step questions (4 things) worked better than open-ended \"what do you want to do.\" --- ## Session 2 (later today, ~8:30 PM UTC) — Saltwash bran",
-      "recallCount": 9,
+      "recallCount": 11,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 9,
+      "totalScore": 11,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-16T21:25:33.464Z",
-      "lastRecalledAt": "2026-07-06T19:06:27.150Z",
+      "lastRecalledAt": "2026-08-24T22:04:00.710Z",
       "queryHashes": [
         "7a1bdd19f473",
         "45ba0738fa4f",
@@ -2166,13 +2182,16 @@
         "ac718a28cf3c",
         "4bb68d85c1e7",
         "784546acc677",
-        "b58ec60c8930"
+        "b58ec60c8930",
+        "f6b4702b64ec",
+        "bda750e49f8b"
       ],
       "recallDays": [
         "2026-06-16",
         "2026-06-17",
         "2026-06-18",
-        "2026-07-06"
+        "2026-07-06",
+        "2026-08-24"
       ],
       "conceptTags": [
         "12-product",
@@ -2613,23 +2632,25 @@
       "endLine": 211,
       "source": "memory",
       "snippet": "- **Recommendation stands:** Big Banner. The ½-screen real estate reinforces it. That's exactly where Saltwash's atmospheric, place-anchored brand does its \"this isn't Coastal Grandmother kitsch\" work. --- ### Etsy setup progress check-in (~20:01 UTC) - **Catherine's status update:** \"Got it. Did the very simple Shop Icon graphic. Will switch to working on the Receipt banner and the Big Banner. Back later.\" - **Shop Icon: done** ✓ (built in Canva per Section 4 recipe — compact \"Saltwash\" wordmark on Sand) - **Working on next:** Receipt Banner + Big Banner - **Recipes ready:** Section 5 of etsy-shop-setup-copy-v1.md (Receipt Banner) and Section 7 of brand-kit-v1.md (Big Banner) - **Pointer",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-18T14:01:28.203Z",
-      "lastRecalledAt": "2026-06-18T15:56:29.444Z",
+      "lastRecalledAt": "2026-08-24T19:10:04.324Z",
       "queryHashes": [
         "b5640eb7dd3f",
         "4c888b769703",
         "da8b3018df8e",
         "ac718a28cf3c",
         "4bb68d85c1e7",
-        "784546acc677"
+        "784546acc677",
+        "f6b4702b64ec"
       ],
       "recallDays": [
-        "2026-06-18"
+        "2026-06-18",
+        "2026-08-24"
       ],
       "conceptTags": [
         "1⁄2-screen",
@@ -3217,18 +3238,22 @@
       "endLine": 55,
       "source": "memory",
       "snippet": "- **Build the 18x24 first, downscale from it** — opposite of the beach-dog / beach-walk pipeline, which builds 2:3 / 4:5 native crops and upscales from those. The 18x24-first approach guarantees Catherine is reviewing the actual master that all other sizes will be derived from, so any artifacts she fixes propagate to every print size. - **Lanczos remains the Saltwash upscaler** — no Real-ESRGAN needed at 1.5× upscale, watercolor texture preserved cleanly. --- ## Saltwash — plover print complete + NEW WORKFLOW LOCKED 2026-07-03 Catherine returned the cleaned 18×24 master around 18:24 UTC. I derived the other 4 sizes from it and the plover is the first print built with the **new Saltwash pr",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-07-06T19:06:27.150Z",
-      "lastRecalledAt": "2026-07-06T19:06:27.150Z",
+      "lastRecalledAt": "2026-08-25T00:36:53.427Z",
       "queryHashes": [
-        "b58ec60c8930"
+        "b58ec60c8930",
+        "bda750e49f8b",
+        "4d69aea82c42"
       ],
       "recallDays": [
-        "2026-07-06"
+        "2026-07-06",
+        "2026-08-24",
+        "2026-08-25"
       ],
       "conceptTags": [
         "beach-dog",
@@ -3248,19 +3273,23 @@
       "endLine": 103,
       "source": "memory",
       "snippet": "- `saltwash/build-jpg-delivery.sh` — DELETED, replaced with `saltwash/build-print-sizes.py`. The new script is purpose-built for the new workflow: takes the 18×24 master JPG + print name as args, derives the 4 other sizes as Q95 JPGs, centered crop by default, checks 20MB Etsy limit. Per-size crop instructions are still handled in conversation (one-off convert before/after the script if needed) — didn't bother parameterizing for a feature that may not be needed often. ### Standing docs that needed updating - `saltwash/listing-creation-process.md` — overhauled to describe the new JPG-only pipeline (was: PNG archival, native crops, batch JPG conversion). - `saltwash/README.md` — conventions",
-      "recallCount": 2,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-07-06T19:06:27.150Z",
-      "lastRecalledAt": "2026-07-06T19:06:36.004Z",
+      "lastRecalledAt": "2026-08-25T00:36:53.427Z",
       "queryHashes": [
         "b58ec60c8930",
-        "f4d2aea5c76b"
+        "f4d2aea5c76b",
+        "bda750e49f8b",
+        "4d69aea82c42"
       ],
       "recallDays": [
-        "2026-07-06"
+        "2026-07-06",
+        "2026-08-24",
+        "2026-08-25"
       ],
       "conceptTags": [
         "saltwash/build-jpg-delivery.sh",
@@ -3280,18 +3309,23 @@
       "endLine": 24,
       "source": "memory",
       "snippet": "# 2026-07-03 ## Saltwash — beach-plover 18x24 review master Catherine asked for the plover-in-flight source to be upscaled to 18x24 with two conditions: Lanczos resampling (the established Saltwash choice) and a horizontal flip so the bird faces the other way. She'll review the large version in Photoshop for stray upscaling artifacts, fix them, and return the cleaned master — at which point I derive the other 4 print sizes from it. ### Built - `saltwash/beach-plover/beach-plover-source.png` (3584×4800, 24 MB) — untouched master copied from upload - `saltwash/beach-plover/beach-plover-18x24.png` (5400×7200, 45 MB) — review master - `-flop` for the horizontal flip - Crop to exact 3:4:",
-      "recallCount": 1,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-07-06T19:06:27.150Z",
-      "lastRecalledAt": "2026-07-06T19:06:27.150Z",
+      "lastRecalledAt": "2026-08-25T00:36:53.427Z",
       "queryHashes": [
-        "b58ec60c8930"
+        "b58ec60c8930",
+        "61e62b213a1a",
+        "bda750e49f8b",
+        "4d69aea82c42"
       ],
       "recallDays": [
-        "2026-07-06"
+        "2026-07-06",
+        "2026-08-24",
+        "2026-08-25"
       ],
       "conceptTags": [
         "beach-plover",
@@ -3342,20 +3376,21 @@
       "endLine": 20,
       "source": "memory",
       "snippet": "# 2026-06-18 ## Saltwash customer-comms: decided the PDF question **The debate:** Should printing instructions ship as a PDF in the Etsy download bundle, or in the \"Message to buyer\" field? **Context:** - Etsy digital listings cap at 5 download files (default). To raise, requires Etsy support ticket. - Saltwash Dog on the Beach lineup uses all 5 slots: `beach-dog-5x7.jpg`, `beach-dog-8x10.jpg`, `beach-dog-11x14.jpg`, `beach-dog-16x24.jpg`, `beach-dog-18x24.jpg`. - The 2 biggest JPGs (16x24 = 8.7MB, 18x24 = 9.8MB) push a single zip over Etsy's 20MB server-side zip cap. **No zipping the downloads — buyers get files individually.** **Decision:** Use Etsy's \"Message to buyer\" field as the pr",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.8633300059388649,
+      "totalScore": 2.801924793393124,
       "maxScore": 1,
       "firstRecalledAt": "2026-07-13T19:39:21.984Z",
-      "lastRecalledAt": "2026-08-18T15:58:13.102Z",
+      "lastRecalledAt": "2026-08-24T19:10:09.929Z",
       "queryHashes": [
         "c9d860442bf6",
         "17d38c23a721"
       ],
       "recallDays": [
         "2026-07-13",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-24"
       ],
       "conceptTags": [
         "customer-comms",
@@ -3375,18 +3410,20 @@
       "endLine": 51,
       "source": "memory",
       "snippet": "- **Recommendation:** Open a help ticket. Need admin to either (a) upgrade `composio-core` in this container or (b) document the v3 API base URL/paths. Don't burn more agent time on this until ticket lands. - Cleared `COMPOSIO_API_KEY` env var after testing — key not left in shell history. - Workaround in place: today's Etsy check-in ran via type-it-out. Monday 6/29 can do the same. ## Files / artifacts referenced - `/home/openclaw/.openclaw/skills/etsy_checkin/` — skill ran cleanly for steps 1, 3, 4; step 2 (image parse) failed due to no vision - `/home/openclaw/.openclaw/workspace/documents/ana/etsy-mwf-checkin.md` — workflow format - `/home/openclaw/.openclaw/workspace/skills/etsy_checki",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8610518203501725,
-      "maxScore": 0.8610518203501725,
+      "totalScore": 2.7968984686501743,
+      "maxScore": 1,
       "firstRecalledAt": "2026-07-13T19:39:21.984Z",
-      "lastRecalledAt": "2026-07-13T19:39:21.984Z",
+      "lastRecalledAt": "2026-08-24T19:10:45.425Z",
       "queryHashes": [
-        "c9d860442bf6"
+        "c9d860442bf6",
+        "bb67594e56fc"
       ],
       "recallDays": [
-        "2026-07-13"
+        "2026-07-13",
+        "2026-08-24"
       ],
       "conceptTags": [
         "composio-core",
@@ -3397,6 +3434,353 @@
         "6/29",
         "home/openclaw",
         "openclaw/skills/etsy-checkin"
+      ]
+    },
+    "memory:memory/2026-06-22.md:16:52": {
+      "key": "memory:memory/2026-06-22.md:16:52",
+      "path": "memory/2026-06-22.md",
+      "startLine": 16,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "**Lesson logged in TOOLS.md (2026-06-23):** When cleaning up openclaw crons, distinguish between \"test\" crons and \"production\" crons. The `openclaw cron list` output should be reviewed before bulk deletion. Production crons should be re-registered, not abandoned. --- ## Midday: M-W-F Etsy checkin **Monday** (2026-06-22 was a Monday). Standard Etsy checkin workflow: - Review new orders since last check - Identify any pending replies - Notify Drew via Discord `#general` channel of order status **Orders processed:** 4 orders (per Catherine). Blair notified Drew of these 4 orders via Discord. **Standard workflow files used:** - `documents/ana/etsy-review-tracking.md` (the review tracking l",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-24T19:09:59.083Z",
+      "lastRecalledAt": "2026-08-24T19:09:59.083Z",
+      "queryHashes": [
+        "61e62b213a1a"
+      ],
+      "recallDays": [
+        "2026-08-24"
+      ],
+      "conceptTags": [
+        "tools.md",
+        "re-registered",
+        "m-w-f",
+        "lesson",
+        "logged",
+        "when",
+        "cleaning",
+        "openclaw"
+      ]
+    },
+    "memory:memory/2026-07-03.md:69:87": {
+      "key": "memory:memory/2026-07-03.md:69:87",
+      "path": "memory/2026-07-03.md",
+      "startLine": 69,
+      "endLine": 87,
+      "source": "memory",
+      "snippet": "- **Master-first guarantees consistency.** The old pipeline built 2:3 and 4:5 native crops first, then upscales for 11×14 / 16×24 / 18×24. That meant Catherine was reviewing 2:3 / 4:5 crops in Photoshop, not the final print masters. If she found artifacts, she'd have to fix them across multiple files. The new pipeline: she reviews the actual 18×24 master, fixes once, and the 4 downscaled versions inherit the fix automatically. - **GitHub as transfer mechanism** because the 18×24 review master is too big to attach in Discord. Pushing to blair-documents branch is the established pattern (last used for plover as branch `beach-plover-print`). - **Lanczos-only resampling** is the standing decisio",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-24T19:09:59.083Z",
+      "lastRecalledAt": "2026-08-24T19:09:59.083Z",
+      "queryHashes": [
+        "61e62b213a1a"
+      ],
+      "recallDays": [
+        "2026-08-24"
+      ],
+      "conceptTags": [
+        "master-first",
+        "blair-documents",
+        "beach-plover-print",
+        "lanczos-only",
+        "master",
+        "first",
+        "guarantees",
+        "consistency"
+      ]
+    },
+    "memory:memory/2026-07-13.md:8:19": {
+      "key": "memory:memory/2026-07-13.md:8:19",
+      "path": "memory/2026-07-13.md",
+      "startLine": 8,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "- **Next‑step recommendations** – suggested core product line (print, sticker sheet, journal sticker pack, optional digital bundle), SEO/tag strategy, tiered sticker pricing, seasonal collections, and potential mail‑club/subscription model. ## Actions Taken - Generated the competitive‑research markdown and saved it to `/home/openclaw/.openclaw/workspace/saltwash_competitive_research.md`. - Provided a clear action list for Catherine to follow up on tag extraction, listing copy creation, and product development. ## Open Items / Follow‑up - Extract exact tag lists from Studio Tuesday and BellisiCasaGifts (using browser automation or HTML fetch) and store them for SEO. - Draft the first three",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-24T19:10:04.324Z",
+      "lastRecalledAt": "2026-08-24T19:10:04.324Z",
+      "queryHashes": [
+        "f6b4702b64ec"
+      ],
+      "recallDays": [
+        "2026-08-24"
+      ],
+      "conceptTags": [
+        "seo/tag",
+        "club/subscription",
+        "home/openclaw",
+        "step",
+        "recommendations",
+        "suggested",
+        "core",
+        "product"
+      ]
+    },
+    "memory:memory/2026-07-13.md:1:11": {
+      "key": "memory:memory/2026-07-13.md:1:11",
+      "path": "memory/2026-07-13.md",
+      "startLine": 1,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "# 2026-07-13 Daily Log ## Key Topics Covered - **Saltwash Prints focus** – redirected discussion away from coin‑related visuals toward developing the Saltwash Etsy store. - **Studio Tuesday analysis** – 17 yr Etsy shop, 41k sales, coastal watercolor prints, bestseller plover 5×7 ($19, free shipping), stickers $4, journal sticker pack $8, in‑house printing, strong reviews praising watercolor realism and framing‑ready quality. Noted lack of reviews for the plover despite strong cart volume, and that the artist also sells in local retail. - **BellisiCasaGifts analysis** – sticker‑only shop, 6 yr Etsy, 43k sales, seasonal themed 7‑sheet sticker sets priced $3.84 per sheet with tiered dropdown p",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-24T19:10:04.324Z",
+      "lastRecalledAt": "2026-08-25T00:36:53.427Z",
+      "queryHashes": [
+        "f6b4702b64ec",
+        "bda750e49f8b",
+        "4d69aea82c42"
+      ],
+      "recallDays": [
+        "2026-08-24",
+        "2026-08-25"
+      ],
+      "conceptTags": [
+        "3.84",
+        "log",
+        "key",
+        "topics",
+        "covered",
+        "saltwash",
+        "prints",
+        "focus"
+      ]
+    },
+    "memory:memory/2026-06-17.md:142:156": {
+      "key": "memory:memory/2026-06-17.md:142:156",
+      "path": "memory/2026-06-17.md",
+      "startLine": 142,
+      "endLine": 156,
+      "source": "memory",
+      "snippet": "- **What I drafted (now Section 8 of etsy-shop-setup-copy-v1.md):** - **Payment** — Etsy handles it, standard acceptance list - **Shipping** — \"no physical shipping, file is in your account + email\" (consistent with the digital download message) - **Returns & Exchange** — \"all sales are final on downloaded files\" + 7-day carve-out for corrupted/wrong/resolution-mismatch - **Cancellations** — can't cancel after download; first-hour courtesy window if buyer changes their mind - **License (personal use)** — same as the digital download message - **Privacy** — use Etsy's default - **Contact** — Etsy's messaging system, 24h response expectation - **Voice check on the policies draft:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9329268696283521,
+      "maxScore": 0.9329268696283521,
+      "firstRecalledAt": "2026-08-24T19:10:09.929Z",
+      "lastRecalledAt": "2026-08-24T19:10:09.929Z",
+      "queryHashes": [
+        "c9d860442bf6"
+      ],
+      "recallDays": [
+        "2026-08-24"
+      ],
+      "conceptTags": [
+        "etsy-shop-setup-copy-v1.md",
+        "7-day",
+        "carve-out",
+        "first-hour",
+        "what",
+        "drafted",
+        "now",
+        "section"
+      ]
+    },
+    "memory:memory/2026-06-22.md:42:79": {
+      "key": "memory:memory/2026-06-22.md:42:79",
+      "path": "memory/2026-06-22.md",
+      "startLine": 42,
+      "endLine": 79,
+      "source": "memory",
+      "snippet": "- 2 sober birthday [duplicate mention, possibly typo — could be sober-curious, sober-versary, or another sober sub-line] - \"A handful of other random stuff\" — unspecified category **Per listing, the upload work involved:** - Listing images (hero + variants) - Downloadable files (the digital assets themselves) - Title, description, tags - Pricing, SKU - Category / section - Listing-type flags (digital download, etc.) **Where drafts live:** Etsy draft state (in Etsy's UI), not in the workspace. The workspace files (CSVs, copy drafts) are inputs to the upload, not the upload state itself. --- ## End-of-day state **Deliverables:** - 4 Etsy orders processed and routed to Drew - 22 new draft",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9269718017895924,
+      "maxScore": 0.9269718017895924,
+      "firstRecalledAt": "2026-08-24T19:10:09.929Z",
+      "lastRecalledAt": "2026-08-24T19:10:09.929Z",
+      "queryHashes": [
+        "c9d860442bf6"
+      ],
+      "recallDays": [
+        "2026-08-24"
+      ],
+      "conceptTags": [
+        "sober-curious",
+        "sober-versary",
+        "sub-line",
+        "listing-type",
+        "end-of-day",
+        "sober",
+        "birthday",
+        "duplicate"
+      ]
+    },
+    "memory:memory/2026-06-26.md:93:101": {
+      "key": "memory:memory/2026-06-26.md:93:101",
+      "path": "memory/2026-06-26.md",
+      "startLine": 93,
+      "endLine": 101,
+      "source": "memory",
+      "snippet": "5. Update `~/.openclaw/skills/gemini-canva-watercolor-props/SKILL.md` to use the wrapper instead of the broken CLI. (Currently the skill references `~/.composio/composio execute` which is the dead CLI path.) ## Action items - [x] ~~Open Composio help ticket~~ — resolved: v3 SDK works, no ticket needed. - [ ] **Resume Composio setup tomorrow**: move SDK, build wrapper, link Google/Canva/browser OAuth, re-enable watercolor skill. - [ ] Monday 6/29 Etsy check-in: run via type-it-out (vision still broken — see note below about Composio not closing this gap). - [ ] Note for self: long Discord messages may split into multiple messages when rendered; keep under ~2000 chars to stay clean. - [ ] Not",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-24T19:10:45.425Z",
+      "lastRecalledAt": "2026-08-24T19:10:45.425Z",
+      "queryHashes": [
+        "bb67594e56fc"
+      ],
+      "recallDays": [
+        "2026-08-24"
+      ],
+      "conceptTags": [
+        "composio/composio",
+        "google/canva/browser",
+        "re-enable",
+        "6/29",
+        "check-in",
+        "type-it-out",
+        "update",
+        "openclaw"
+      ]
+    },
+    "memory:memory/2026-07-06.md:1:25": {
+      "key": "memory:memory/2026-07-06.md:1:25",
+      "path": "memory/2026-07-06.md",
+      "startLine": 1,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "# 2026-07-06 ## Saltwash — beach-read print complete Catherine uploaded the cleaned 18×24 master (`Beach-Read-18x24.jpg`, 5400×7232) post-Photoshop. She asked for crops from the right and bottom only (composition bias) and Lanczos downscale to the 4 standard derived sizes. ### What I built - `saltwash/beach-read/` working dir + `print-sizes/` delivery batch - Master: `saltwash-beach-read_18x24_300dpi.jpg` (5400×7200, 7.1 MB) — 32 px trimmed from the bottom of the source to land at clean 18×24 - Derived sizes, all under Etsy 20MB: - 16×24 (4800×7200, 6.4 MB) — 600 px trim, all from right - 11×14 (3300×4200, 3.5 MB) — 327 px trim, all from bottom - 8×10 (2400×3000, 2.1 MB) — 450 px t",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-24T22:04:00.710Z",
+      "lastRecalledAt": "2026-08-25T00:36:53.427Z",
+      "queryHashes": [
+        "bda750e49f8b",
+        "4d69aea82c42"
+      ],
+      "recallDays": [
+        "2026-08-24",
+        "2026-08-25"
+      ],
+      "conceptTags": [
+        "beach-read",
+        "beach-read-18x24.jpg",
+        "post-photoshop",
+        "saltwash/beach-read",
+        "print-sizes",
+        "7.1",
+        "6.4",
+        "3.5"
+      ]
+    },
+    "memory:memory/2026-08-24.md:1:19": {
+      "key": "memory:memory/2026-08-24.md:1:19",
+      "path": "memory/2026-08-24.md",
+      "startLine": 1,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "# 2026-08-24 ## Saltwash — running log started Catherine asked me to keep track of everything she tells me about Saltwash Prints in a running log so we can spot patterns later. Created `saltwash/RUNNING-LOG.md` with: - Business context (customer, product mix, 22 listings, the orphaned capybara) - Sales history (1 sale / 2 months / $4 greeting card; 73 views 40 visits last 30d) - Listing timeline (watercolors from 6/18, Heritage Crest from 7/25, sale 8/6) - Strategy discussion (SEO-first, capybara → notecard set, 30-day checkpoint) - Pointer to prior context (7/13 competitive research, 7/30 MEMORY.md trim, 8/8 posterize method) Convention going forward: append raw entries to `saltwash/RUNN",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-25T00:36:18.347Z",
+      "lastRecalledAt": "2026-08-25T00:36:53.427Z",
+      "queryHashes": [
+        "70dff3db0703",
+        "4d69aea82c42"
+      ],
+      "recallDays": [
+        "2026-08-25"
+      ],
+      "conceptTags": [
+        "saltwash/running-log.md",
+        "6/18",
+        "7/25",
+        "8/6",
+        "seo-first",
+        "30-day",
+        "7/13",
+        "7/30"
+      ]
+    },
+    "memory:memory/2026-08-25.md:16:27": {
+      "key": "memory:memory/2026-08-25.md:16:27",
+      "path": "memory/2026-08-25.md",
+      "startLine": 16,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "- Set up \"next steps\" block: wait 3-5 days post-thumbnail-swap before editing titles, so Etsy re-index signals don't get muddied. ### Open state in the running log - Art print title review (waiting on the 3-5 day buffer after thumbnail swap, so ~2026-08-28 to 2026-08-30). - Capybara notecard set production. - Heritage Crest / Beach Vibes tee delist-or-keep decisions. - 30-day checkpoint vs. 2026-08-24 baseline. ### Session housekeeping - Catherine noted she may start a new session. State is preserved in this file and in `saltwash/RUNNING-LOG.md` — a new session can pick up by reading both. - Edit tool had whitespace-match issues mid-session; worked around with `cat >>` appends. Worth notin",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-25T00:36:18.347Z",
+      "lastRecalledAt": "2026-08-25T00:36:18.347Z",
+      "queryHashes": [
+        "70dff3db0703"
+      ],
+      "recallDays": [
+        "2026-08-25"
+      ],
+      "conceptTags": [
+        "3-5",
+        "post-thumbnail-swap",
+        "re-index",
+        "delist-or-keep",
+        "30-day",
+        "saltwash/running-log.md",
+        "whitespace-match",
+        "mid-session"
+      ]
+    },
+    "memory:memory/2026-08-25.md:1:21": {
+      "key": "memory:memory/2026-08-25.md:1:21",
+      "path": "memory/2026-08-25.md",
+      "startLine": 1,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "# 2026-08-25 ## Saltwash Prints — strategic triage and first decisions Full detail in `saltwash/RUNNING-LOG.md`. This is the index. ### What happened today - Per-listing visit data pulled and analyzed. Pattern surfaced: pairs/couples move (couple walking, beach walk, plover at rest); solo figures flatline (plover in flight, lady reading, solo dog walk). Suggests Catherine's contemplative photography mood ≠ the target customer's \"entertaining/hosting\" aesthetic. - Thumbnail decision executed: all 5 art prints swapped from raw 5×7 painting images to framed room mockups (~70% image coverage). 3 listings use one mockup style, 2 use different styles — mixed deliberately to avoid templated look",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-25T00:36:18.347Z",
+      "lastRecalledAt": "2026-08-25T00:36:18.347Z",
+      "queryHashes": [
+        "70dff3db0703"
+      ],
+      "recallDays": [
+        "2026-08-25"
+      ],
+      "conceptTags": [
+        "saltwash/running-log.md",
+        "per-listing",
+        "pairs/couples",
+        "entertaining/hosting",
+        "saltwash",
+        "prints",
+        "strategic",
+        "triage"
       ]
     }
   }
