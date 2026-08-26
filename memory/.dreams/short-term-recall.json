@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-25T00:36:53.427Z",
+  "updatedAt": "2026-08-25T20:24:16.442Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -9,18 +9,20 @@
       "endLine": 57,
       "source": "memory",
       "snippet": "- Created reference doc: `documents/agentmail-instructions.md` ### AgentMail Training Module (08-agentmail-setup.html) - Updated Module 08 based on discoveries: - Added critical JSON format box at top (text + html at top level) - Deleted Quick Limits table - Shortened Common Issues (removed bounce rate, other bloat) - Added clickable link to docs.agentmail.to/messages - General tightening — 14KB → 7.7KB - User uploaded to GitHub ### Daily Backup - Backup excluding heyron-tutorials folder (those stay on GitHub) - Target: catherinebb272/blair-documents --- ## Action Items - [x] Update Discord training module (03) - [x] Test HTML in AgentMail emails - [x] Update AgentMail training",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-04-17T21:36:28.786Z",
+      "lastRecalledAt": "2026-08-25T20:24:16.442Z",
       "queryHashes": [
-        "626666369489"
+        "626666369489",
+        "d53f06f0c499"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-08-25"
       ],
       "conceptTags": [
         "backup",
@@ -1579,18 +1581,20 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# 2026-05-01 ## Session Notes - Ran probe_system test: file write, read, child execution, and state persistence all succeeded. - Confirmed container has required permissions for file operations. - Noted user instruction: when providing markdown files, explicitly say \"do not execute\" to have them saved only. - Ready to start a new session for the next task. ## Etsy Check‑in Project ## Project Rehab Summary - Encountered multiple interruptions: 2 error messages during initial run, then 6 additional errors while debugging. - Executed the full Project Rehab flow (Prep → Teach Behavior → API Consolidation → Tools Rebuild → Updating Tools). - Added Tool Awareness, Handling, and Reference entrie",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T23:32:20.877Z",
-      "lastRecalledAt": "2026-05-29T23:32:20.877Z",
+      "lastRecalledAt": "2026-08-25T20:24:16.442Z",
       "queryHashes": [
-        "8c104fb22cfe"
+        "8c104fb22cfe",
+        "d53f06f0c499"
       ],
       "recallDays": [
-        "2026-05-29"
+        "2026-05-29",
+        "2026-08-25"
       ],
       "conceptTags": [
         "probe-system",
@@ -3759,15 +3763,16 @@
       "endLine": 21,
       "source": "memory",
       "snippet": "# 2026-08-25 ## Saltwash Prints — strategic triage and first decisions Full detail in `saltwash/RUNNING-LOG.md`. This is the index. ### What happened today - Per-listing visit data pulled and analyzed. Pattern surfaced: pairs/couples move (couple walking, beach walk, plover at rest); solo figures flatline (plover in flight, lady reading, solo dog walk). Suggests Catherine's contemplative photography mood ≠ the target customer's \"entertaining/hosting\" aesthetic. - Thumbnail decision executed: all 5 art prints swapped from raw 5×7 painting images to framed room mockups (~70% image coverage). 3 listings use one mockup style, 2 use different styles — mixed deliberately to avoid templated look",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-08-25T00:36:18.347Z",
-      "lastRecalledAt": "2026-08-25T00:36:18.347Z",
+      "lastRecalledAt": "2026-08-25T20:24:16.442Z",
       "queryHashes": [
-        "70dff3db0703"
+        "70dff3db0703",
+        "d53f06f0c499"
       ],
       "recallDays": [
         "2026-08-25"
@@ -3781,6 +3786,68 @@
         "prints",
         "strategic",
         "triage"
+      ]
+    },
+    "memory:memory/2026-06-04.md:21:55": {
+      "key": "memory:memory/2026-06-04.md:21:55",
+      "path": "memory/2026-06-04.md",
+      "startLine": 21,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "8. **Letter-to-self as very last facing page** — front = letter instructions + tape envelope here, verso (back, facing inside back cover) = ANA/coins pitch. Envelope sits in inside back cover. **v3 page architecture (target 126):** - 2 intro - 84 daily (7 × 12) - 24 recap (2 × 12) - 10 goal (cycles 2-11) - 2 resources (NEW v3 — front and back, was 1 in v2) - 1 letter-to-self - 1 coin cap - 1 blank (TBD) - = 125 in table; target 126. Math discrepancy flagged in §9. **v2's table actually summed to 123, not 124 (off by 1). v3 is off by 1 in the other direction (125 vs 126).** Likely resolution: front matter or goal-pages section needs +1, or the inside front cover counts. Open question in §9",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-25T20:24:16.442Z",
+      "lastRecalledAt": "2026-08-25T20:24:16.442Z",
+      "queryHashes": [
+        "d53f06f0c499"
+      ],
+      "recallDays": [
+        "2026-08-25"
+      ],
+      "conceptTags": [
+        "letter-to-self",
+        "ana/coins",
+        "2-11",
+        "goal-pages",
+        "letter",
+        "self",
+        "very",
+        "last"
+      ]
+    },
+    "memory:memory/2026-06-03.md:22:62": {
+      "key": "memory:memory/2026-06-03.md:22:62",
+      "path": "memory/2026-06-03.md",
+      "startLine": 22,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "- `#003b88` Ocean Indigo - `#37c86f` Leaf Green - `#4d7bcc` Medium Blue - `#ff5d4c` Sunrise Coral - `#ffd437` Golden Sunrise - `#f5efe8` Soft Linen (paper/background) **Unsaturated (tonal lighter versions):** - `#4fb6ff` Light Blue - `#83e2a4` Spring Green - `#ffeb8e` Pastel Sunrise - `#f4f8f8` Misty White - `#ff9b8f` Pastel Coral Print adaptation OK. Hexes are loose references, not exact requirements. ### Iconography, not the coins themselves The coin imagery stays **as a design language**, not a featured object: - Torii gate → new journeys (front matter) - Fish → mutual support - Phoenix → rising again - Waterfall → serenity - Kraken/lighthouse → lurking perils - Etc. Pages are mostly",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-08-25T20:24:16.442Z",
+      "lastRecalledAt": "2026-08-25T20:24:16.442Z",
+      "queryHashes": [
+        "d53f06f0c499"
+      ],
+      "recallDays": [
+        "2026-08-25"
+      ],
+      "conceptTags": [
+        "paper/background",
+        "kraken/lighthouse",
+        "003b88",
+        "ocean",
+        "indigo",
+        "37c86f",
+        "leaf",
+        "green"
       ]
     }
   }
