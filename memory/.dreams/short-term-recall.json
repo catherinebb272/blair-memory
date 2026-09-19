@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-25T20:24:16.442Z",
+  "updatedAt": "2026-09-18T20:51:21.119Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -9,20 +9,22 @@
       "endLine": 57,
       "source": "memory",
       "snippet": "- Created reference doc: `documents/agentmail-instructions.md` ### AgentMail Training Module (08-agentmail-setup.html) - Updated Module 08 based on discoveries: - Added critical JSON format box at top (text + html at top level) - Deleted Quick Limits table - Shortened Common Issues (removed bounce rate, other bloat) - Added clickable link to docs.agentmail.to/messages - General tightening — 14KB → 7.7KB - User uploaded to GitHub ### Daily Backup - Backup excluding heyron-tutorials folder (those stay on GitHub) - Target: catherinebb272/blair-documents --- ## Action Items - [x] Update Discord training module (03) - [x] Test HTML in AgentMail emails - [x] Update AgentMail training",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-08-25T20:24:16.442Z",
+      "lastRecalledAt": "2026-09-18T19:55:47.884Z",
       "queryHashes": [
         "626666369489",
-        "d53f06f0c499"
+        "d53f06f0c499",
+        "3a232443e969"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-08-25"
+        "2026-08-25",
+        "2026-09-18"
       ],
       "conceptTags": [
         "backup",
@@ -42,24 +44,26 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# Session Notes - 2026-03-25 ## Connections Status ### GitHub ✓ CONNECTED - CLI authenticated as catherinebb272 - Repo accessible: catherinebb272/blair-documents - Git identity configured ### AgentMail ⏸ ON HOLD - Skill installed to: /root/.openclaw/workspace/skills/agentmail/ - Token ready in config/agentmail.env - Blocked: Cannot edit openclaw.json to enable skill (permission denied, needs heyron-configure or admin) - **To complete:** Add skills.entries.agentmail config with API key ### Discord ⏳ NEEDS CHECK - User says they may have already set up bot + server for DMs - Need to verify if connection is active ## Config Files Created - /root/.openclaw/workspace/config/discord.env - /ro",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-08-24T19:10:45.425Z",
+      "lastRecalledAt": "2026-09-18T18:34:36.494Z",
       "queryHashes": [
         "626666369489",
         "a0903a12abe4",
         "17d38c23a721",
-        "bb67594e56fc"
+        "bb67594e56fc",
+        "b7b54473b92d"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-05-09",
         "2026-08-18",
-        "2026-08-24"
+        "2026-08-24",
+        "2026-09-18"
       ],
       "conceptTags": [
         "catherinebb272/blair-documents",
@@ -79,22 +83,24 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# Memory - April 2, 2026 ## Today's Work ### Discord Training Module (03-connect-discord.html) - Reviewed user's heyron-tutorial at https://catherinebb272.github.io/heyron-tutorial/03-connect-discord.html - Cross-referenced with official OpenClaw docs - Identified key issues: 1. Pairing code mystery — users don't understand where it comes from 2. groupPolicy buried in troubleshooting — should be a required step 3. Missing server privacy settings (enable DMs for pairing) - Rewrote module with fixes: - Added \"What About That Pairing Code?\" explainer box - Moved groupPolicy to main setup flow (critical step) - Added Server Privacy Settings step - Added Developer Portal explanati",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T21:36:28.786Z",
-      "lastRecalledAt": "2026-08-18T15:58:13.102Z",
+      "lastRecalledAt": "2026-09-18T19:55:47.884Z",
       "queryHashes": [
         "626666369489",
         "f1d3ff54ff40",
-        "17d38c23a721"
+        "17d38c23a721",
+        "3a232443e969"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-06-07",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-09-18"
       ],
       "conceptTags": [
         "03-connect-discord.html",
@@ -819,27 +825,29 @@
       "endLine": 116,
       "source": "memory",
       "snippet": "- Emailed to Catherine via AgentMail --- ## Etsy Review Reminder — AUTOMATED ### Setup - OpenClaw cron job: Mon/Wed/Fri at 2 PM UTC (9 AM Central) - Sends Discord DM to Catherine - Removed old Linux crontab entry - Tracking: `etsy-review-tracking.md` ### Status - Jade's review: COMPLETE (Drew posted reply 2026-03-13) - No pending replies --- ## GitHub Backup System — VERIFIED ### Status - Nightly backups working to `memory-backup/` folder - Last backup: 2026-03-12 22:45 UTC - Deleted orphaned `memory-backups/` folder - TOOLS.md updated with correct cron info --- ## Key Files Created/Modified Today | File | Location | Purpose | |------|----------|---------| | `index-standalone.html`",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6,
+      "totalScore": 7,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-12T00:24:53.236Z",
-      "lastRecalledAt": "2026-08-24T19:09:59.083Z",
+      "lastRecalledAt": "2026-09-18T20:51:21.119Z",
       "queryHashes": [
         "a1431f3061ba",
         "545a9d9f8b7c",
         "96d163102668",
         "9907211e386a",
         "96c5283df7ab",
-        "61e62b213a1a"
+        "61e62b213a1a",
+        "11108fba8d77"
       ],
       "recallDays": [
         "2026-05-12",
         "2026-05-13",
         "2026-05-25",
         "2026-06-07",
-        "2026-08-24"
+        "2026-08-24",
+        "2026-09-18"
       ],
       "conceptTags": [
         "backup",
@@ -938,24 +946,26 @@
       "endLine": 37,
       "source": "memory",
       "snippet": "# 2026-04-25 ## Etsy Check-In Cron Investigation ### Problem Test cron `etsy-checkin-test-v2` was running but emails weren't being received automatically on schedule. ### Root Cause The isolated cron session couldn't access the AgentMail API key. The `.env` file in the workspace wasn't being read by the cron job's isolated session. ### Fix Applied Added API key directly to workspace `.env`: ``` AGENTMAIL_API_KEY=am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a ``` ### Current Cron Config - **ID:** c5b95218-0a87-4546-8edf-1bb1bfe1dbf9 - **Name:** etsy-checkin-test-v2 - **Schedule:** Every 1 hour - **Session:** isolated - **Message:** \"Send a test email to apartxalon",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-13T14:20:49.476Z",
-      "lastRecalledAt": "2026-06-17T18:47:07.547Z",
+      "lastRecalledAt": "2026-09-18T16:35:02.845Z",
       "queryHashes": [
         "545a9d9f8b7c",
         "96d163102668",
         "9907211e386a",
         "5914a007eae2",
-        "27522abfbf4d"
+        "27522abfbf4d",
+        "1b7f6400fc55"
       ],
       "recallDays": [
         "2026-05-13",
         "2026-05-25",
-        "2026-06-17"
+        "2026-06-17",
+        "2026-09-18"
       ],
       "conceptTags": [
         "check-in",
@@ -1158,24 +1168,26 @@
       "endLine": 84,
       "source": "memory",
       "snippet": "- Started with 300 credits, down to 210 after uploads/testing - Static site uses minimal credits (bandwidth only) - Manual deploys preferred over builds to conserve credits --- ## AgentMail Email System — FIXED ### Problem - Old API key expired - Wrong endpoint being used (`/v1/` instead of `/v0/`) - Incorrect request format ### Solution - New API key: `am_us_51e73bb1b1d943c447c17a3f409bb63878fef1145b82a1a27b57d4a98c607e9a` - Correct endpoint: `POST /v0/inboxes/{inbox_id}/messages/send` - Proper format: `{\"to\": \"...\", \"subject\": \"...\", \"body\": {\"text\": \"...\"}}` - Deleted orphaned inbox `selfishcompetition741@agentmail.to` - Confirmed working: sent test email + PDF attachment successfully",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-14T14:03:44.075Z",
-      "lastRecalledAt": "2026-08-24T19:09:59.083Z",
+      "lastRecalledAt": "2026-09-18T20:51:21.119Z",
       "queryHashes": [
         "b4858c274d60",
         "96c5283df7ab",
         "e634c48d5530",
-        "61e62b213a1a"
+        "61e62b213a1a",
+        "11108fba8d77"
       ],
       "recallDays": [
         "2026-05-14",
         "2026-06-07",
         "2026-06-16",
-        "2026-08-24"
+        "2026-08-24",
+        "2026-09-18"
       ],
       "conceptTags": [
         "uploads/testing",
@@ -1368,13 +1380,13 @@
       "endLine": 11,
       "source": "memory",
       "snippet": "# Daily Memory Log - May 17, 2026 ## ANA / Business - **Midjourney abandoned** — couldn't get reliable repeatable look for greeting card series. Kept defaulting to \"cute\" aesthetic (heart-shaped faces, tiny noses, big eyes). $10 spent, not worth fighting. - **Lost designs** — had 4 good designs from ChatGPT/CoPilot but lost them when had to restart and regenerate. - **Barbara unavailable** — can't do artwork right now, so AI generation is the path forward. - **Printify** — account set up, connected to Etsy store. - **Product decision:** 5x7 folded greeting cards, matte paper, envelope included, prefolded (to stay in small letter shipping rate per YouTube advice). ## Personal - Catherine he",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 7,
+      "totalScore": 8,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-25T13:36:02.903Z",
-      "lastRecalledAt": "2026-06-23T22:11:28.135Z",
+      "lastRecalledAt": "2026-09-18T19:55:47.884Z",
       "queryHashes": [
         "e67681840b0e",
         "e32e6bf831d8",
@@ -1382,13 +1394,15 @@
         "6a129c354fd1",
         "652d4dafb86d",
         "f5b7eb9a5a6c",
-        "0e3c49e1e224"
+        "0e3c49e1e224",
+        "3a232443e969"
       ],
       "recallDays": [
         "2026-05-25",
         "2026-06-07",
         "2026-06-17",
-        "2026-06-23"
+        "2026-06-23",
+        "2026-09-18"
       ],
       "conceptTags": [
         "gpt",
@@ -1614,20 +1628,22 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-05-02 ## Session Notes ## Project Rehab - Description Project Rehab is a modular system designed to reduce apparent \"agent forgetfulness\" by enforcing disciplined organization of tools, skills, and files. Rather than treating memory issues as cognitive failures, this system treats them as **organizational failures** and corrects them through: 1. **Behavior modification** - modify startup instructions to create stricter rules for storage of tools and skills 2. **Structural repair** - consolidate existing tokens & keys in one .env file, move skills into files 3. **Future maintenance** The anticipated user is someone who has a new agent that has not been organized or developed any",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-05-29T23:32:20.877Z",
-      "lastRecalledAt": "2026-06-16T18:13:52.573Z",
+      "lastRecalledAt": "2026-09-18T18:34:36.494Z",
       "queryHashes": [
         "8c104fb22cfe",
-        "e634c48d5530"
+        "e634c48d5530",
+        "b7b54473b92d"
       ],
       "recallDays": [
         "2026-05-29",
-        "2026-06-16"
+        "2026-06-16",
+        "2026-09-18"
       ],
       "conceptTags": [
         "project",
@@ -3179,19 +3195,21 @@
       "endLine": 52,
       "source": "memory",
       "snippet": "- Added secrets manually (fine-grained tokens can't create GitHub Actions secrets due to encryption limitations) - Updated tutorials with note about needing \"workflow\" scope for agents to create workflow files ### Files Created/Updated - walk-pinger repo (GitHub) - Updated How I Built This tutorial with workflow scope requirement - README files for both repos ### Tutorial Update Added note about GitHub token needing \"workflow\" scope for agents to create workflow files automatically.",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-06-24T14:15:26.444Z",
-      "lastRecalledAt": "2026-06-24T14:15:55.326Z",
+      "lastRecalledAt": "2026-09-18T18:34:36.494Z",
       "queryHashes": [
         "2400d9f6cb3d",
-        "1911f09c897b"
+        "1911f09c897b",
+        "b7b54473b92d"
       ],
       "recallDays": [
-        "2026-06-24"
+        "2026-06-24",
+        "2026-09-18"
       ],
       "conceptTags": [
         "fine-grained",
@@ -3313,23 +3331,25 @@
       "endLine": 24,
       "source": "memory",
       "snippet": "# 2026-07-03 ## Saltwash — beach-plover 18x24 review master Catherine asked for the plover-in-flight source to be upscaled to 18x24 with two conditions: Lanczos resampling (the established Saltwash choice) and a horizontal flip so the bird faces the other way. She'll review the large version in Photoshop for stray upscaling artifacts, fix them, and return the cleaned master — at which point I derive the other 4 print sizes from it. ### Built - `saltwash/beach-plover/beach-plover-source.png` (3584×4800, 24 MB) — untouched master copied from upload - `saltwash/beach-plover/beach-plover-18x24.png` (5400×7200, 45 MB) — review master - `-flop` for the horizontal flip - Crop to exact 3:4:",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-07-06T19:06:27.150Z",
-      "lastRecalledAt": "2026-08-25T00:36:53.427Z",
+      "lastRecalledAt": "2026-09-18T20:51:21.119Z",
       "queryHashes": [
         "b58ec60c8930",
         "61e62b213a1a",
         "bda750e49f8b",
-        "4d69aea82c42"
+        "4d69aea82c42",
+        "11108fba8d77"
       ],
       "recallDays": [
         "2026-07-06",
         "2026-08-24",
-        "2026-08-25"
+        "2026-08-25",
+        "2026-09-18"
       ],
       "conceptTags": [
         "beach-plover",
@@ -3414,20 +3434,22 @@
       "endLine": 51,
       "source": "memory",
       "snippet": "- **Recommendation:** Open a help ticket. Need admin to either (a) upgrade `composio-core` in this container or (b) document the v3 API base URL/paths. Don't burn more agent time on this until ticket lands. - Cleared `COMPOSIO_API_KEY` env var after testing — key not left in shell history. - Workaround in place: today's Etsy check-in ran via type-it-out. Monday 6/29 can do the same. ## Files / artifacts referenced - `/home/openclaw/.openclaw/skills/etsy_checkin/` — skill ran cleanly for steps 1, 3, 4; step 2 (image parse) failed due to no vision - `/home/openclaw/.openclaw/workspace/documents/ana/etsy-mwf-checkin.md` — workflow format - `/home/openclaw/.openclaw/workspace/skills/etsy_checki",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.7968984686501743,
+      "totalScore": 3.7968984686501743,
       "maxScore": 1,
       "firstRecalledAt": "2026-07-13T19:39:21.984Z",
-      "lastRecalledAt": "2026-08-24T19:10:45.425Z",
+      "lastRecalledAt": "2026-09-18T16:35:02.845Z",
       "queryHashes": [
         "c9d860442bf6",
-        "bb67594e56fc"
+        "bb67594e56fc",
+        "1b7f6400fc55"
       ],
       "recallDays": [
         "2026-07-13",
-        "2026-08-24"
+        "2026-08-24",
+        "2026-09-18"
       ],
       "conceptTags": [
         "composio-core",
@@ -3447,18 +3469,21 @@
       "endLine": 52,
       "source": "memory",
       "snippet": "**Lesson logged in TOOLS.md (2026-06-23):** When cleaning up openclaw crons, distinguish between \"test\" crons and \"production\" crons. The `openclaw cron list` output should be reviewed before bulk deletion. Production crons should be re-registered, not abandoned. --- ## Midday: M-W-F Etsy checkin **Monday** (2026-06-22 was a Monday). Standard Etsy checkin workflow: - Review new orders since last check - Identify any pending replies - Notify Drew via Discord `#general` channel of order status **Orders processed:** 4 orders (per Catherine). Blair notified Drew of these 4 orders via Discord. **Standard workflow files used:** - `documents/ana/etsy-review-tracking.md` (the review tracking l",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-08-24T19:09:59.083Z",
-      "lastRecalledAt": "2026-08-24T19:09:59.083Z",
+      "lastRecalledAt": "2026-09-18T20:51:21.119Z",
       "queryHashes": [
-        "61e62b213a1a"
+        "61e62b213a1a",
+        "1b7f6400fc55",
+        "11108fba8d77"
       ],
       "recallDays": [
-        "2026-08-24"
+        "2026-08-24",
+        "2026-09-18"
       ],
       "conceptTags": [
         "tools.md",
@@ -3848,6 +3873,224 @@
         "37c86f",
         "leaf",
         "green"
+      ]
+    },
+    "memory:memory/2026-06-22.md:1:24": {
+      "key": "memory:memory/2026-06-22.md:1:24",
+      "path": "memory/2026-06-22.md",
+      "startLine": 1,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "# 2026-06-22 **Summary by Catherine (2026-06-23 20:55 UTC):** File housekeeping in the morning, M-W-F Etsy checkin midday, Etsy listing uploads for the rest of the day. Ended with 22 new draft listings. --- ## Morning: file housekeeping **What happened:** Per Catherine, \"we did the file housekeeping.\" Based on context from later conversation (2026-06-23 session), this almost certainly includes: - **Cron cleanup** that swept out the `workspace-nightly-backup` openclaw cron along with the test crons. Catherine's quote: \"We were doing some housekeeping and I said get rid of all the cron jobs that weren't currently active (a bunch of tests). We may have 'thrown out the baby with the bathwat",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-18T16:35:02.845Z",
+      "lastRecalledAt": "2026-09-18T16:35:02.845Z",
+      "queryHashes": [
+        "1b7f6400fc55"
+      ],
+      "recallDays": [
+        "2026-09-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "m-w-f",
+        "workspace-nightly-backup",
+        "summary",
+        "catherine",
+        "utc",
+        "housekeeping",
+        "morning"
+      ]
+    },
+    "memory:memory/2026-04-14.md:60:75": {
+      "key": "memory:memory/2026-04-14.md:60:75",
+      "path": "memory/2026-04-14.md",
+      "startLine": 60,
+      "endLine": 75,
+      "source": "memory",
+      "snippet": "**Barcode ZIP Processing (NEW):** - Added section for uploading ZIP from barcodegenerator.tech - Spec: Use Code 128 barcode format (industry standard for retail SKUs) - Workflow: Generate barcodes → Download ZIP (~200 PNG) → Upload → Creates 5×22 page layouts - Technical: Use JSZip library to unzip, create printable PDF/HTML **Files Updated:** - ReviewItems.jsx, ExportResults.jsx (both versions) - mini-cycle-count-app-framework.md - storyboard.md --- ## Catherine's Test Tomorrow - Testing cycle count app in live environment - Files deployed to GitHub Pages: https://catherinebb272.github.io/heyron-tutorial/cycle-count.html",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-18T18:34:36.494Z",
+      "lastRecalledAt": "2026-09-18T18:34:36.494Z",
+      "queryHashes": [
+        "b7b54473b92d"
+      ],
+      "recallDays": [
+        "2026-09-18"
+      ],
+      "conceptTags": [
+        "barcodegenerator.tech",
+        "pdf/html",
+        "reviewitems.jsx",
+        "exportresults.jsx",
+        "storyboard.md",
+        "barcode",
+        "zip",
+        "processing"
+      ]
+    },
+    "memory:memory/2026-09-17.md:1:20": {
+      "key": "memory:memory/2026-09-17.md:1:20",
+      "path": "memory/2026-09-17.md",
+      "startLine": 1,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "# 2026-09-17 ## Backup pipeline status - Checked nightly backup cron (`workspace-nightly-backup`). Healthy: runs 02:00 UTC, status ok, targets `catherinebb272/blair-memory`. - Last actual backup commit: 2026-08-26. Not broken — workspace has been idle since Aug 25 (no memory notes, no edits). Every nightly run since has correctly reported \"no changes.\" - Heyron platform unstable per Catherine. She's been doing all real work via Heyron's `portalcoder` agent — explains the gap. Portalcoder itself is broken too. - No need to force heartbeat commits. Infrastructure is fine. ## Housekeeping on C1 (75% full) - `.trash/` emptied (1.2 MB). Six items: four stale Heyron redesign/tutorial directories",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-18T18:34:36.494Z",
+      "lastRecalledAt": "2026-09-18T20:51:21.119Z",
+      "queryHashes": [
+        "b7b54473b92d",
+        "11108fba8d77"
+      ],
+      "recallDays": [
+        "2026-09-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "workspace-nightly-backup",
+        "catherinebb272/blair-memory",
+        "1.2",
+        "redesign/tutorial",
+        "pipeline",
+        "status",
+        "checked"
+      ]
+    },
+    "memory:memory/2026-03-28.md:113:139": {
+      "key": "memory:memory/2026-03-28.md:113:139",
+      "path": "memory/2026-03-28.md",
+      "startLine": 113,
+      "endLine": 139,
+      "source": "memory",
+      "snippet": "**Intermittent fake items wording updated:** - Extra pieces added immediately before cashing out - Employee handles customer interaction, swaps paperwork **Shoplifting & shrink rate added:** - Normal: 1-1.5%, 2%+ indicates theft - Formula: Shrink % = Total Adjustments ÷ Annual Sales - Conflicting data guidance (timing, codes, digital count) - \"When in doubt: Scan Everything\" - physical cycle count is best method **Blog post created:** \"Effects of Theft on Your Plato's Business\" --- ## Future Tasks - **Buyer Evaluation Report** — Need export to cross-reference buyer who opened vs. cashier who sold (another ~2 hr data pull) - Helps catch fake buys and price manipulation --- ## End of Se",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-18T19:55:47.884Z",
+      "lastRecalledAt": "2026-09-18T19:55:47.884Z",
+      "queryHashes": [
+        "3a232443e969"
+      ],
+      "recallDays": [
+        "2026-09-18"
+      ],
+      "conceptTags": [
+        "1-1.5",
+        "cross-reference",
+        "intermittent",
+        "fake",
+        "items",
+        "wording",
+        "updated",
+        "extra"
+      ]
+    },
+    "memory:memory/2026-03-28.md:88:120": {
+      "key": "memory:memory/2026-03-28.md:88:120",
+      "path": "memory/2026-03-28.md",
+      "startLine": 88,
+      "endLine": 120,
+      "source": "memory",
+      "snippet": "- Stage 1 questions caught key details (suspect, timeline, key access) - Data-first approach surfaced suspects quickly - Mapping \"goodwill donations\" to Method #6 connected dots **What to improve:** - **Ask questions one at a time** — don't dump all Stage 1 questions at once. Ask → wait for answer → note it → ask next. - **Warehouse key security** — add question: key in safe (who accesses?) or keyring (how secure is purse? any trusted employee with copies?) - **Check write-off dates against clearance** — if large write-off within ~5 days of month-end (Sept/Jan/Apr/Jun), it's likely clearance, not suspicious. Don't jump to conclusions. **Updated framework accordingly.** --- ## Additional",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-18T19:55:47.884Z",
+      "lastRecalledAt": "2026-09-18T19:55:47.884Z",
+      "queryHashes": [
+        "3a232443e969"
+      ],
+      "recallDays": [
+        "2026-09-18"
+      ],
+      "conceptTags": [
+        "data-first",
+        "write-off",
+        "month-end",
+        "sept/jan/apr/jun",
+        "stage",
+        "questions",
+        "caught",
+        "key"
+      ]
+    },
+    "memory:memory/2026-06-03.md:105:143": {
+      "key": "memory:memory/2026-06-03.md:105:143",
+      "path": "memory/2026-06-03.md",
+      "startLine": 105,
+      "endLine": 143,
+      "source": "memory",
+      "snippet": "Each cycle's 7 dailies get the same top icon. The recap image at end of cycle is the same icon at full-bleed. User feels continuity. | Cycle | Icon | Source | |---|---|---| | 1 | Torii | 1 month coin | | 2 | Waterfall & lily | 18 month coin | | 3 | Two-fish | ANA logo | | 4 | Stag | 4 month coin | | 5 | Kraken lighthouse | 5 month coin | | 6 | Fox in snow | 9 month coin | | 7 | Rowing POV | 2 year coin | | 8 | Resting horse | 3 year coin | | 9 | Desert landscape | 2 month coin | | 10 | Frog | 3 month coin | | 11 | Koi (late re-use) | 6 month coin | | 12 | Phoenix | 1 year coin | ### Prompt categories (7 rotating across 84 dailies) 1. Check-in — mood/energy/sleep/urges (sobriety-coded) 2. W",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-18T19:55:47.884Z",
+      "lastRecalledAt": "2026-09-18T19:55:47.884Z",
+      "queryHashes": [
+        "3a232443e969"
+      ],
+      "recallDays": [
+        "2026-09-18"
+      ],
+      "conceptTags": [
+        "full-bleed",
+        "two-fish",
+        "re-use",
+        "check-in",
+        "mood/energy/sleep/urges",
+        "sobriety-coded",
+        "each",
+        "cycle's"
+      ]
+    },
+    "memory:memory/2026-09-17.md:16:27": {
+      "key": "memory:memory/2026-09-17.md:16:27",
+      "path": "memory/2026-09-17.md",
+      "startLine": 16,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "`ACTION_ITEMS.md`, `HEARTBEAT.md`, `check_drew_status.py`, `drew-protocol.md`, `etsy-review-templates.md`, `etsy-review-tracking.md`, `send_review_reminder.py`. - **TODO (tomorrow):** Confirm these were intentionally removed during the Etsy Apart Not Alone workflow redesign. If yes, no action. If not, recover from `blair-memory`. ## Open follow-ups - **Tomorrow:** Review Etsy Apart Not Alone workflow with Catherine. - Backups: nothing to do. Resuming daily memory notes so audit trail is visible again. ## Context - C1 at ~75% capacity, expected to be fine for a while. - C8 at 98%, can't fix from our side — only Robby in Spain can authorize deletion. Owner quit without cleaning up his own fi",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-18T20:51:21.119Z",
+      "lastRecalledAt": "2026-09-18T20:51:21.119Z",
+      "queryHashes": [
+        "11108fba8d77"
+      ],
+      "recallDays": [
+        "2026-09-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "action-items.md",
+        "heartbeat.md",
+        "check-drew-status.py",
+        "drew-protocol.md",
+        "etsy-review-templates.md",
+        "etsy-review-tracking.md"
       ]
     }
   }

@@ -58,7 +58,7 @@ For each pending order, extract:
 
 ### Step 2: Suggest Handwritten Note Variation
 
-Reference: `documents/ana/handwritten-notes-all-milestones.md`
+Reference: `skills/etsy_checkin/templates/handwritten_notes.md`
 
 - Review existing note versions for the relevant coin milestone
 - If existing version exists → suggest it
