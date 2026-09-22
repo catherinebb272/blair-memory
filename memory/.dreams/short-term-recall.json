@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18T20:51:21.119Z",
+  "updatedAt": "2026-09-21T23:50:22.962Z",
   "entries": {
     "memory:memory/2026-04-02.md:28:57": {
       "key": "memory:memory/2026-04-02.md:28:57",
@@ -3661,18 +3661,20 @@
       "endLine": 101,
       "source": "memory",
       "snippet": "5. Update `~/.openclaw/skills/gemini-canva-watercolor-props/SKILL.md` to use the wrapper instead of the broken CLI. (Currently the skill references `~/.composio/composio execute` which is the dead CLI path.) ## Action items - [x] ~~Open Composio help ticket~~ — resolved: v3 SDK works, no ticket needed. - [ ] **Resume Composio setup tomorrow**: move SDK, build wrapper, link Google/Canva/browser OAuth, re-enable watercolor skill. - [ ] Monday 6/29 Etsy check-in: run via type-it-out (vision still broken — see note below about Composio not closing this gap). - [ ] Note for self: long Discord messages may split into multiple messages when rendered; keep under ~2000 chars to stay clean. - [ ] Not",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-08-24T19:10:45.425Z",
-      "lastRecalledAt": "2026-08-24T19:10:45.425Z",
+      "lastRecalledAt": "2026-09-21T23:50:22.962Z",
       "queryHashes": [
-        "bb67594e56fc"
+        "bb67594e56fc",
+        "492d5e1f1107"
       ],
       "recallDays": [
-        "2026-08-24"
+        "2026-08-24",
+        "2026-09-21"
       ],
       "conceptTags": [
         "composio/composio",
@@ -4091,6 +4093,130 @@
         "drew-protocol.md",
         "etsy-review-templates.md",
         "etsy-review-tracking.md"
+      ]
+    },
+    "memory:memory/2026-09-18.md:1:27": {
+      "key": "memory:memory/2026-09-18.md:1:27",
+      "path": "memory/2026-09-18.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# 2026-09-18 ## Etsy check-in workflow — OCR pipeline working Catherine asked me to OCR an Etsy orders screenshot. The `read` tool failed because `sharp` wasn't installed for image processing. Solution: **Installed local OCR stack:** - `tesseract.js` (pure-JS OCR, no system tesseract needed) in `/home/openclaw/.openclaw/workspace/ocr-tools/` - `npm install sharp` also installed (for image preprocessing if needed) - `npm install tesseract.js` for OCR - Run with: `cd /home/openclaw/.openclaw/workspace/ocr-tools && node ocr.js <image-path>` - Confidence on the orders screenshot: 82% **Today's Etsy data:** - Orders (2), both ship by Sep 21, 2026: - Megan Aree — 5-Month Kraken Lighthouse (S",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-21T23:50:22.962Z",
+      "lastRecalledAt": "2026-09-21T23:50:22.962Z",
+      "queryHashes": [
+        "492d5e1f1107"
+      ],
+      "recallDays": [
+        "2026-09-21"
+      ],
+      "conceptTags": [
+        "check-in",
+        "tesseract.js",
+        "pure-js",
+        "home/openclaw",
+        "openclaw/workspace/ocr-tools",
+        "ocr.js",
+        "image-path",
+        "5-month"
+      ]
+    },
+    "memory:memory/2026-09-18.md:22:39": {
+      "key": "memory:memory/2026-09-18.md:22:39",
+      "path": "memory/2026-09-18.md",
+      "startLine": 22,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "- Messages: none **Posted summary to Discord #general** (Drew alerts channel = 1481691069878894702) with `<@163139270515752960>` mention for Drew. ## Lessons - The `read` tool can't process images without sharp — sharp is installed locally now but the read tool may not pick it up; tesseract.js is the reliable path for OCR. - Catherine prefers the weekly Etsy check-in be a repeatable process; she explicitly said \"easier to launch this process again next week.\" Future-me: this is now a standing Monday-or-whenever check-in, use tesseract.js, post summary to #general, draft review replies for Catherine to post on Etsy. - **IMPORTANT — the 2026-09-17 memory note was wrong.** The etsy workflow f",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-21T23:50:22.962Z",
+      "lastRecalledAt": "2026-09-21T23:50:22.962Z",
+      "queryHashes": [
+        "492d5e1f1107"
+      ],
+      "recallDays": [
+        "2026-09-21"
+      ],
+      "conceptTags": [
+        "tesseract.js",
+        "check-in",
+        "future-me",
+        "monday-or-whenever",
+        "messages",
+        "none",
+        "posted",
+        "summary"
+      ]
+    },
+    "memory:memory/2026-06-26.md:56:69": {
+      "key": "memory:memory/2026-06-26.md:56:69",
+      "path": "memory/2026-06-26.md",
+      "startLine": 56,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "- Removed `USER_API_KEY=\"ck_P_...\"` from `.env` — Catherine said it's her personal Composio key, not for agent use. Only `COMPOSIO_API_KEY` should remain. ### What works via SDK (verified) | Toolkit | Slugs working | Use | |---|---|---| | Gemini | `GEMINI_GENERATE_CONTENT`, `GEMINI_GENERATE_IMAGE`, `GEMINI_LIST_MODELS`, `GEMINI_COUNT_TOKENS`, `GEMINI_EMBED_CONTENT`, `GEMINI_GENERATE_VIDEOS` | Text generation, image generation, embeddings | | Canva | `CANVA_GET_URL_IMPORTS_JOBID`, `CANVA_GET_USERS_ME_CAPABILITIES`, `CANVA_CREATE_DESIGN_IMPORT_JOB`, `CANVA_CREATE_DESIGN_RESIZE_JOB`, `CANVA_CREATE_URL_ASSET_UPLOAD_JOB`, `CANVA_FETCH_CURRENT_USER_DETAILS`, `CANVA_INITIATE_CANVA_DESIGN_AUTOFILL",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-21T23:50:22.962Z",
+      "lastRecalledAt": "2026-09-21T23:50:22.962Z",
+      "queryHashes": [
+        "492d5e1f1107"
+      ],
+      "recallDays": [
+        "2026-09-21"
+      ],
+      "conceptTags": [
+        "embedding",
+        "embeddings",
+        "user-api-key",
+        "ck-p",
+        "composio-api-key",
+        "gemini-generate-content",
+        "gemini-generate-image",
+        "gemini-list-models"
+      ]
+    },
+    "memory:memory/2026-06-26.md:68:83": {
+      "key": "memory:memory/2026-06-26.md:68:83",
+      "path": "memory/2026-06-26.md",
+      "startLine": 68,
+      "endLine": 83,
+      "source": "memory",
+      "snippet": "Catherine's main reason for wanting Composio back was image understanding (the swap-to Gemini Flash that was removed). **Composio's `GEMINI_GENERATE_CONTENT` is text-only** — schema has `model, prompt, system_instruction, temperature, top_p, top_k, max_output_tokens, stop_sequences, safety_settings, voice_name`. No `image`, `file`, `contents`, or multimodal field. Composio wraps Gemini's text endpoint, not the multimodal one. So the conversational image-understanding gap **stays open** via this path. OCR/document extraction is covered (Mistral, Google Vision, Aryn, JigsawStack, Astica), but \"look at this screenshot and reason about it\" is not. ### Why Gemini Flash was removed (Catherine's",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-09-21T23:50:22.962Z",
+      "lastRecalledAt": "2026-09-21T23:50:22.962Z",
+      "queryHashes": [
+        "492d5e1f1107"
+      ],
+      "recallDays": [
+        "2026-09-21"
+      ],
+      "conceptTags": [
+        "swap-to",
+        "gemini-generate-content",
+        "text-only",
+        "system-instruction",
+        "top-p",
+        "top-k",
+        "max-output-tokens",
+        "stop-sequences"
       ]
     }
   }

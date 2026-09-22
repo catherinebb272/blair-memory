@@ -138,6 +138,13 @@ Three repos, three purposes — never mix them.
 - **Bot:** BlairANA
 - **Used for:** Primary communication channel
 
+### OCR (Local — tesseract.js)
+- **Location:** `/home/openclaw/.openclaw/workspace/ocr-tools/`
+- **Skill doc:** `skills/ocr/SKILL.md`
+- **Use:** Extract text from screenshots when vision models aren't available (all our current OpenRouter models are text-only).
+- **Run:** `cd /home/openclaw/.openclaw/workspace/ocr-tools && node ocr.js <image-path>`
+- **Typical confidence:** 75–85% on Etsy screenshots
+
 ### here.now (Static Site Hosting)
 - **API Key:** Stored in `.env` as `HERENOW_API_KEY`
 - **Live Site:** https://boreal-larch-wxxv.here.now/
@@ -184,6 +191,12 @@ All tools must:
 - store documentation in /skills
 - store secrets in .env
 - follow /skills/UPDATING_SKILLS.md
+
+### Skills Index
+Skills live in `/home/openclaw/.openclaw/workspace/skills/`. Current entries:
+- `etsy_checkin/` — Mon/Wed/Fri Etsy check-in workflow
+- `ocr/` — Local tesseract.js OCR (no vision models required)
+- `UPDATING_SKILLS.md` — procedure for adding new skills
 
 ## From updating_tools module of Project Rehab
 All new tools must follow /skills/UPDATING_SKILLS.md

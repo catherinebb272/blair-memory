@@ -93,9 +93,24 @@
 
 ---
 
+## 1 Year — Koi
+
+*The koi embodies perseverance, resilience, and swimming upstream against the current. This is the ANA gold-tier 1-year design.*
+
+**Version A (Classic):**
+> One whole year. The koi swims against the current and comes through stronger — that's you, every single day. This milestone is proof that showing up for yourself works. So proud of you. 🐟
+
+**Version B (Emotional):**
+> One year. Every day you chose to keep going — and the koi embodies exactly that: perseverance against the current. You didn't just survive the year, you transformed. Incredible. ✨
+
+**Version C (Simple):**
+> One year strong. The koi swims upstream — and so do you. That's the whole coin in one sentence. 🎉
+
+---
+
 ## 1 Year — Phoenix Rising
 
-*The phoenix symbolizes rebirth, transformation, and rising from the ashes.*
+*The phoenix symbolizes rebirth, transformation, and rising from the ashes. This is the alternate 1-year design.*
 
 **Version A (Classic):**
 > One year. You've been reborn. The phoenix rises — and so have you. This coin represents everything you've built. 🔥

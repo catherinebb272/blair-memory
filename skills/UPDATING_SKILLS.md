@@ -30,8 +30,7 @@ Inside the folder, create `SKILL.md` with:
 ### 4. Update TOOLS.md
 Add an entry in the Tools section linking to the skill.
 
-### 5. Log to SummaryLog.md
-Append action taken to `/Project_rehab/SummaryLog.md`.
+### 5. (Removed 2026-09-22 — Project Rehab log retired by Catherine; no replacement log required.)
 
 ## Rules
 - NEVER hardcode secrets in .md files

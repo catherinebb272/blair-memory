@@ -14,6 +14,14 @@
 
 ## Phase 1: Trigger & Data Collection (Discord-Native)
 
+### Tools Index
+- OCR for screenshots: `skills/ocr/SKILL.md` → run `cd /home/openclaw/.openclaw/workspace/ocr-tools && node ocr.js <image>`
+- Discord send: `skills/discord/`
+- Review templates: `templates/review_responses.md`
+- Handwritten note templates: `templates/handwritten_notes.md`
+- Review tracker: `templates/review_tracking.md`
+- Full tools list: `TOOLS.md` → "External Integrations" + "Skills Index"
+
 ### Trigger: Cron Job (Email → Discord)
 
 Every Mon/Wed/Fri at 9 AM Chicago, I send an email to Catherine (apartxalone@gmail.com):

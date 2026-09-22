@@ -87,3 +87,19 @@
 | 2026-08-12 | Noah (Aug 3) | ⭐5 "I love it so much I’m glad to have a physical representative of my journey now thank you!🥰" (1 Year coin) | Noah, so glad the coin captures your journey – thank you for sharing the love! | Sent |
 | 2026-08-12 | Stacy (Aug 2) | ⭐5 "I bought the coi fish coin as a gift. it was more beautiful than advertised. great communication with the seller, even after delivery." (6 Month coin) | Stacy, delighted the gift brought joy – thank you for the wonderful feedback! | Sent |
 | 2026-08-12 | Etsy Buyer (Jul 26) | ⭐5 "beautiful item again. Just amazing the love that is felt from this seller." (1 Year Phoenix coin) | Thank you! Your support means everything – happy the Phoenix coin resonated with you. | Sent |
+
+### 2026-09-21 (Mon)
+- **Check Date:** 2026-09-21
+- **Checked By:** Catherine (via Discord)
+- **New Reviews Found:** 2 (1 carried over from 9/18, Drew hasn't posted; 1 new)
+- **Pending Replies:** 2 → 0 (drafts sent to Drew)
+- **Prior review (Aug 27, Etsy buyer):** Draft refined (now covers both 5-mo Kraken Lighthouse + 6-mo Koi), re-sent to Drew
+- **Proposed Replies Sent to Drew:** Yes (via Discord #general)
+- **Status:** Complete — awaiting Drew to post on Etsy
+
+### Pending Replies Summary (Updated 2026-09-21)
+
+| Date | Customer | Review Summary | Proposed Reply | Status |
+|------|----------|----------------|----------------|--------|
+| 2026-08-27 | Etsy buyer (photo added) | ⭐5 "Absolutely stunning. The handwritten card with words of encouragement was truly special. Thank you." (5-mo Kraken Lighthouse + 6-mo Koi) | See Phase 2 — Response 1 below | Drafted (refined from 9/18, now covers both coins) |
+| 2026-08-26 | Lo | ⭐5 "Really fine piece and wonderful seller. Thank you much!!!" (6-mo Koi) | See Phase 2 — Response 2 below | Drafted (new) |
