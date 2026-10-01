@@ -29,8 +29,9 @@ git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${REPO}.git"
 # Exclude blair-memory submodule - it has its own repo
 git add -A -- ':!blair-memory'
 
-# Commit if there are changes
-if ! git diff-index --quiet HEAD; then
+# Commit only if there is actually staged content (ignores submodules showing as
+# "modified content" when their own uncommitted changes can't be staged here).
+if ! git diff --cached --quiet --ignore-submodules=dirty HEAD; then
     git commit -m "Workspace backup $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
 else
     echo "No changes to commit."
