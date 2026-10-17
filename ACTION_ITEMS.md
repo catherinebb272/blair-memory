@@ -118,7 +118,7 @@ Items stay active until user marks them complete.
 **Print masters folder:** `blair-documents/saltwash/`
 
 ### Print masters (in `blair-documents/saltwash/`)
-- [ ] **Catherine review of 2 print masters** — beach-dog and beach-walk 5×7 + 8×10 PNGs in `/home/openclaw/blair-documents/saltwash/{beach-dog,beach-walk}/`
+- [ ] **Catherine review of 2 print masters** — beach-dog and beach-walk 5×7 + 8×10 PNGs in `/home/node/blair-documents/saltwash/{beach-dog,beach-walk}/`
 - [ ] **Upscale launch 3 prints** to 11×14 / 16×24 / 18×24 — Catherine's task in Firefly, sources are the 2:3 + 4:5 native crops (NOT the 5×7 / 8×10 downscales)
 - [ ] **Lonely Houses print master** — not yet built; needs source upload
 - [ ] **Lady Reading print master** — not yet built; square 2048×2048 source, decide ratio (4:5 or 2:3) before crop

@@ -1,10 +1,10 @@
 #!/bin/bash
 # Etsy M-W-F Check-In Reminder
 # Runs Mon, Wed, Fri at 8 AM Chicago (1 PM UTC)
-# Logs to /home/openclaw/.openclaw/workspace/memory/etsy-checkin.log
+# Logs to /home/node/.openclaw/workspace/memory/etsy-checkin.log
 
-LOGFILE="/home/openclaw/.openclaw/workspace/memory/etsy-checkin.log"
-TRACKING_FILE="/home/openclaw/.openclaw/workspace/documents/ana/etsy-review-tracking.md"
+LOGFILE="/home/node/.openclaw/workspace/memory/etsy-checkin.log"
+TRACKING_FILE="/home/node/.openclaw/workspace/documents/ana/etsy-review-tracking.md"
 
 echo "---" >> "$LOGFILE"
 echo "$(date -u '+%Y-%m-%d %H:%M:%S UTC') - Etsy check-in reminder triggered" >> "$LOGFILE"

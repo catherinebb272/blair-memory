@@ -278,7 +278,7 @@
         </table>
 
         <h3>Backup & Restore</h3>
-        <p>Cron jobs are stored in <code>/home/openclaw/.openclaw/cron/jobs.json</code>. They can be lost if the container is recreated (e.g., during an OpenClaw update).</p>
+        <p>Cron jobs are stored in <code>/home/node/.openclaw/cron/jobs.json</code>. They can be lost if the container is recreated (e.g., during an OpenClaw update).</p>
 
         <div class="note-box">
             <h4>📦 Backup</h4>
@@ -288,7 +288,7 @@
         <div class="note-box">
             <h4>🔄 Restore</h4>
             <p>If cron jobs disappear after a container restart, run:</p>
-            <div class="prompt-inset">bash /home/openclaw/.openclaw/workspace/restore-crons.sh</div>
+            <div class="prompt-inset">bash /home/node/.openclaw/workspace/restore-crons.sh</div>
             <p>Or ask your agent to "restore cron jobs".</p>
         </div>
 

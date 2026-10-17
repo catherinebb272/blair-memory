@@ -35,7 +35,7 @@ Blair checks for this in the daily memory context loaded at session start.
 # save-chat.sh — run at end of session or when triggered
 
 SESSION_NAME="chat-$(date -u +%Y-%m-%d-%H%M%S)"
-SNAPSHOT_DIR="/home/openclaw/.openclaw/workspace/memory/snapshots"
+SNAPSHOT_DIR="/home/node/.openclaw/workspace/memory/snapshots"
 mkdir -p "$SNAPSHOT_DIR"
 
 # Build the snapshot

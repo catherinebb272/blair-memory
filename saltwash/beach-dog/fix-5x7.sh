@@ -5,7 +5,7 @@
 
 set -euo pipefail
 
-OUT="/home/openclaw/blair-documents/saltwash/beach-dog"
+OUT="/home/node/blair-documents/saltwash/beach-dog"
 
 convert "$OUT/beach-dog-2x3.png" \
   -filter Lanczos -resize 1500x2250 \

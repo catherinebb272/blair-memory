@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build the Saltwash "Beach Dog" print image set
-# Source: /home/openclaw/.openclaw/media/inbound/Beach_Dog---3b38053b-4080-4c25-aacf-d7a33a8a3a10.png
+# Source: /home/node/.openclaw/media/inbound/Beach_Dog---3b38053b-4080-4c25-aacf-d7a33a8a3a10.png
 # Source size: 3584 x 4800 (portrait, but content is landscape with dog sideways)
 # Brand kit: 2:3 primary ratio, 4:5 soft-crop for 8x10 and 11x14
 #   Print sizes (300 DPI): 5x7, 8x10, 11x14, 16x24, 18x24
@@ -13,8 +13,8 @@
 
 set -euo pipefail
 
-SRC="/home/openclaw/.openclaw/media/inbound/Beach_Dog---3b38053b-4080-4c25-aacf-d7a33a8a3a10.png"
-OUT="/home/openclaw/blair-documents/saltwash/beach-dog"
+SRC="/home/node/.openclaw/media/inbound/Beach_Dog---3b38053b-4080-4c25-aacf-d7a33a8a3a10.png"
+OUT="/home/node/blair-documents/saltwash/beach-dog"
 
 # Step 1: Rotate 90 CW, save full landscape (no crop)
 #   After rotation: 4800 x 3584 landscape

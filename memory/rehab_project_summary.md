@@ -3,7 +3,7 @@
 **Purpose**: Stabilize OpenClaw agents (especially Blair) against memory loss, improve tool/skill discoverability, and streamline repetitive workflows (e.g., Etsy M‑W‑F check‑ins).
 
 **Key Components**
-- **Etsy Check‑in Skill** (`/home/openclaw/.openclaw/skills/etsy_checkin/`):
+- **Etsy Check‑in Skill** (`/home/node/.openclaw/skills/etsy_checkin/`):
   - Parses order, message, and review screenshots.
   - Suggests handwritten‑note variations and review responses.
   - Posts a formatted Discord alert tagging Drew (`@kaliodyme`).

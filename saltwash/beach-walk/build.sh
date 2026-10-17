@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build the Saltwash "Beach Walk" print image set
-# Source: /home/openclaw/.openclaw/media/inbound/Beach_Walk_Upscale---6139f20c-5112-4b2a-846b-1c5fae010c83.jpg
+# Source: /home/node/.openclaw/media/inbound/Beach_Walk_Upscale---6139f20c-5112-4b2a-846b-1c5fae010c83.jpg
 # Source size: 3584 x 4800 (3:4 portrait, already correctly oriented, already upscaled)
 # Brand kit: 2:3 primary, 4:5 soft-crop for 8x10/11x14
 # Composition: figures at 1/3 from left, ~55% from top (a little below center)
@@ -14,8 +14,8 @@
 
 set -euo pipefail
 
-SRC="/home/openclaw/.openclaw/media/inbound/Beach_Walk_Upscale---6139f20c-5112-4b2a-846b-1c5fae010c83.jpg"
-OUT="/home/openclaw/blair-documents/saltwash/beach-walk"
+SRC="/home/node/.openclaw/media/inbound/Beach_Walk_Upscale---6139f20c-5112-4b2a-846b-1c5fae010c83.jpg"
+OUT="/home/node/blair-documents/saltwash/beach-walk"
 mkdir -p "$OUT"
 
 # Save the source untouched as a "master" reference

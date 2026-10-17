@@ -47,7 +47,7 @@ The December birth flower is the narcissus, particularly the paperwhite, represe
 
 ## Generated Watercolor Images
 
-The following loose watercolor images have been generated for each month's flower. They are saved in `/home/openclaw/.openclaw/workspace/assets/`:
+The following loose watercolor images have been generated for each month's flower. They are saved in `/home/node/.openclaw/workspace/assets/`:
 
 | Month | Flower | Filename |
 |-------|--------|----------|

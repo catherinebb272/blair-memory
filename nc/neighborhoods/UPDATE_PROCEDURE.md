@@ -53,4 +53,4 @@ cd ~/.agents/skills/here-now && ./scripts/publish.sh nc/neighborhoods/ --slug bo
 
 - **"expires in 24h"** → No API key saved. Run the auth setup above.
 - **"absolute paths not allowed"** → Use relative path from workspace, not absolute.
-- **"path does not exist"** → Make sure you're in `/root/.openclaw/workspace` when running the command.
+- **"path does not exist"** → Make sure you're in `/home/node/.openclaw/workspace` when running the command.

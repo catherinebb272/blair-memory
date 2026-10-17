@@ -2,7 +2,7 @@
 
 **Purpose:** Extract text from screenshots / images when vision models aren't available. Used by the Etsy check-in workflow for orders, messages, and reviews screenshots.
 
-**Location:** `/home/openclaw/.openclaw/workspace/ocr-tools/`
+**Location:** `/home/node/.openclaw/workspace/ocr-tools/`
 
 **Why local:** The configured OpenRouter models (`minimax-m3`, `minimax-m2.5`, `gpt-oss-120b`) are all text-only — no image input. `openclaw infer image describe` fails with "Model does not support images." tesseract.js is the reliable fallback.
 
@@ -13,13 +13,13 @@
 
 **Setup (already done 2026-09-18):**
 ```bash
-cd /home/openclaw/.openclaw/workspace/ocr-tools
+cd /home/node/.openclaw/workspace/ocr-tools
 npm install tesseract.js sharp
 ```
 
 **Usage:**
 ```bash
-cd /home/openclaw/.openclaw/workspace/ocr-tools
+cd /home/node/.openclaw/workspace/ocr-tools
 node ocr.js /path/to/image.png
 ```
 

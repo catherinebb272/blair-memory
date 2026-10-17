@@ -15,7 +15,7 @@
 ## Phase 1: Trigger & Data Collection (Discord-Native)
 
 ### Tools Index
-- OCR for screenshots: `skills/ocr/SKILL.md` → run `cd /home/openclaw/.openclaw/workspace/ocr-tools && node ocr.js <image>`
+- OCR for screenshots: `skills/ocr/SKILL.md` → run `cd /home/node/.openclaw/workspace/ocr-tools && node ocr.js <image>`
 - Discord send: `skills/discord/`
 - Review templates: `templates/review_responses.md`
 - Handwritten note templates: `templates/handwritten_notes.md`

@@ -78,5 +78,5 @@ I’ll wait for the host to approve, or you can paste the single reminder line i
 
 
 
-Project handling preference (pointer): see /root/.openclaw/workspace/IDENTITY.md#Project handling preference — Catherine (added 2026-03-24)
+Project handling preference (pointer): see /home/node/.openclaw/workspace/IDENTITY.md#Project handling preference — Catherine (added 2026-03-24)
 
