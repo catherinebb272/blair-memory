@@ -1,0 +1,1 @@
+[main/sessions/main/d835b987-fc56-4cb1-b99b-7881b1613654#L12] Assistant: Email not sent: Gmail isn’t connected, so I couldn’t send the reminder. I started the connection flow, but it needs authorization: *** ***](https://connect.composio.dev/link/lk_C7ZRvPRevQ1x).
