@@ -233,7 +233,7 @@ openclaw cron add --name "etsy-checkin" --cron "0 13 * * 1,3,5" --tz America/Chi
 
 ### Backup hygiene — gitignore rules
 The workspace `.gitignore` must exclude transient/bloat paths so nightly pushes stay small. Rules in place (2026-06-23):
-- `agent-library/`, `.last-backup`, `.trash/`, `.env` (local-only)
+- `agent-library/`, `.trash/`, `.env` (local-only)
 - `blair-memory/` (local mirror of the backup repo — prevents push loops)
 - `documents/heyron-tutorials/`, `heyron-tutorials/` (mirror of the GitHub Pages repo)
 - `logs/` (don't back up logs)

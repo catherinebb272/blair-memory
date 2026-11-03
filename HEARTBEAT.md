@@ -20,7 +20,6 @@ cd /tmp && git clone (or pull) https://github.com/catherinebb272/heyron-tutorial
 ## Daily Workspace Backup (rough daily check)
 - **Task:** Check if backup needed, run if >24h since last backup
 - **Script:** `/home/node/.openclaw/workspace/backup-script.sh` (note: NOT `/root/...`)
-- **Tracker:** `/home/node/.openclaw/workspace/.last-backup`
 - **Destination:** `catherinebb272/blair-memory` (recovery-only)
 - **Why:** Ensures daily work is saved to GitHub, protects against container resets
 - **Excludes:** `blair-memory/` local checkout (loop guard). The `documents/heyron-tutorials/` mirror rides along — fine, no harm.
