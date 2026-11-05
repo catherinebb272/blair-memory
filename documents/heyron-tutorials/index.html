@@ -5,129 +5,169 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Heyron "Quickstart" Guide</title>
  <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  background: #07090C; /* Deep void */
-  color: #E8EDF1; /* Off-white */
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  font-size: 15px;
-}
-
-nav {
-  background: rgba(15,20,28,0.85); /* Dark panel with glass effect */
-  border-bottom: 2px solid #1C222B; /* Muted border */
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  overflow-x: auto;
-  white-space: nowrap;
-  backdrop-filter: blur(8px);
-}
-
-nav a {
-  color: #E8EDF1;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  margin-right: 0.5rem;
-  border: 1px solid transparent;
-  transition: all 0.2s;
-  font-size: 13px;
-}
-
-nav a:hover, nav a.active {
-  border-color: #22D3EE; /* Cyan */
-  background: rgba(34,211,238,0.15);
-}
-
-nav a.home { font-weight: 600; color: #22D3EE; }
-
-.container {
-  max-width: 720px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #0F141C; /* Card background */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-h1, h2, h3 {
-  font-family: 'Inter', sans-serif;
-  color: #E8EDF1;
-}
-
-h1 { font-size: 2.2rem; margin-bottom: 1rem; }
-h2 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; border-bottom: 2px solid #22D3EE; padding-bottom: 0.4rem; }
-h3 { font-size: 1.2rem; margin: 1.2rem 0 0.5rem; }
-
-p, li { color: #E8EDF1; }
-
-.tagline {
-  font-size: 1.1rem;
-  color: #E8EDF1;
-  font-style: italic;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border-left: 4px solid #22D3EE;
-  background: rgba(34,211,238,0.1);
-}
-
-.module-list { margin: 2rem 0; display: grid; gap: 1rem; }
-.module-item {
-  background: rgba(15,20,28,0.85);
-  padding: 1rem;
-  border-radius: 12px;
-  border: 1px solid #1C222B;
-  transition: all 0.2s;
-}
-.module-item:hover {
-  border-color: #22D3EE;
-  background: rgba(34,211,238,0.15);
-}
-.module-item a {
-  color: #22D3EE;
-  font-weight: 500;
-  text-decoration: none;
-}
-.module-item .desc { font-size: 13px; color: #A78BFA; margin-top: 0.25rem; }
-
-.cta-button {
-  display: inline-block;
-  background: #22D3EE;
-  color: #07090C;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  margin-top: 2rem;
-  font-weight: 600;
-  border-radius: 10px;
-  transition: background 0.2s;
-}
-.cta-button:hover { background: #34D399; }
-
-.footer-nav {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px solid #1C222B;
-  display: flex;
-  justify-content: space-between;
-}
-.footer-nav a {
-  color: #E8EDF1;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #1C222B;
-  border-radius: 8px;
-}
-.footer-nav a:hover { background: rgba(34,211,238,0.15); border-color: #22D3EE; }
-.footer-nav .next { font-weight: 600; }
-
-code, pre { font-family: 'JetBrains Mono', monospace; background: #0F141C; color: #E8EDF1; padding: 0.2rem 0.4rem; border-radius: 4px; }
-</style>
+ @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+ 
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ 
+ body {
+ font-family: 'IBM Plex Mono', 'Courier New', monospace;
+ background: #faf8f3;
+ color: #2c241b;
+ line-height: 1.7;
+ font-size: 15px;
+ }
+ 
+ /* Top Navigation */
+ nav {
+ background: #fff;
+ border-bottom: 2px solid #d4c4a8;
+ padding: 1rem;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ overflow-x: auto;
+ white-space: nowrap;
+ }
+ 
+ nav a {
+ color: #5a4a3a;
+ text-decoration: none;
+ padding: 0.5rem 0.75rem;
+ margin-right: 0.5rem;
+ border: 1px solid transparent;
+ transition: all 0.2s;
+ font-size: 13px;
+ }
+ 
+ nav a:hover, nav a.active {
+ border-color: #8b7355;
+ background: #f5f0e8;
+ }
+ 
+ nav a.home {
+ font-weight: 600;
+ color: #2c241b;
+ }
+ 
+ /* Container */
+ .container {
+ max-width: 680px;
+ margin: 0 auto;
+ padding: 3rem 2rem;
+ }
+ 
+ /* Typography */
+ h1 {
+ font-size: 2rem;
+ margin-bottom: 1.5rem;
+ color: #1a1510;
+ font-weight: 600;
+ }
+ 
+ h2 {
+ font-size: 1.3rem;
+ margin: 2rem 0 1rem 0;
+ color: #2c241b;
+ font-weight: 600;
+ border-bottom: 1px solid #d4c4a8;
+ padding-bottom: 0.5rem;
+ }
+ 
+ h3 {
+ font-size: 1.1rem;
+ margin: 1.5rem 0 0.75rem 0;
+ color: #3d3126;
+ font-weight: 600;
+ }
+ 
+ p {
+ margin-bottom: 1.25rem;
+ }
+ 
+ /* Special elements */
+ .tagline {
+ font-size: 1.1rem;
+ color: #5a4a3a;
+ font-style: italic;
+ margin-bottom: 2rem;
+ padding: 1rem;
+ border-left: 3px solid #8b7355;
+ background: #f5f0e8;
+ }
+ 
+ .module-list {
+ margin: 2rem 0;
+ }
+ 
+ .module-item {
+ padding: 1rem;
+ margin-bottom: 0.75rem;
+ background: #fff;
+ border: 1px solid #d4c4a8;
+ transition: all 0.2s;
+ }
+ 
+ .module-item:hover {
+ border-color: #8b7355;
+ background: #f5f0e8;
+ }
+ 
+ .module-item a {
+ color: #2c241b;
+ text-decoration: none;
+ font-weight: 500;
+ }
+ 
+ .module-item .desc {
+ font-size: 13px;
+ color: #5a4a3a;
+ margin-top: 0.25rem;
+ }
+ 
+ .cta-button {
+ display: inline-block;
+ background: #2c241b;
+ color: #faf8f3;
+ padding: 0.75rem 1.5rem;
+ text-decoration: none;
+ margin-top: 2rem;
+ font-weight: 500;
+ transition: all 0.2s;
+ }
+ 
+ .cta-button:hover {
+ background: #5a4a3a;
+ }
+ 
+ /* Footer nav */
+ .footer-nav {
+ margin-top: 3rem;
+ padding-top: 2rem;
+ border-top: 2px solid #d4c4a8;
+ display: flex;
+ justify-content: space-between;
+ }
+ 
+ .footer-nav a {
+ color: #5a4a3a;
+ text-decoration: none;
+ padding: 0.5rem 1rem;
+ border: 1px solid #d4c4a8;
+ }
+ 
+ .footer-nav a:hover {
+ background: #f5f0e8;
+ border-color: #8b7355;
+ }
+ 
+ .footer-nav .next {
+ font-weight: 600;
+ }
+ </style>
 </head>
 <body>
  <nav>
@@ -197,7 +237,13 @@ code, pre { font-family: 'JetBrains Mono', monospace; background: #0F141C; color
  <div class="desc">Connecting to agentmail</div>
  </div>
  </div>
- 
+
+ <div class="module-item">
+* <a href="animated-avatar-project.html">How I Built it</a>
+ <div class="desc">Building an Avatar</div>
+ </div>
+ </div>
+  
  <h2>Start Here</h2>
  
  <p>This guide is built by the Heyron community. It's meant to be practical, modular, and adaptable to how you work.</p>
