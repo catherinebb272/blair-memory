@@ -1,0 +1,1 @@
+[main/sessions/main/9c3c4df1-ad40-4a52-b034-5cafef7d0757#L12] Assistant: Email not sent: AgentMail returned “Inbox not found” for `apartxalone@agentmail.to` (HTTP 404). I couldn’t deliver the check-in reminder.
