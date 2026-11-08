@@ -1,0 +1,1 @@
+[main/sessions/main/2fc40adf-2633-456c-96e5-b38a5d2cdff6#L12] Assistant: Couldn’t send the Etsy check-in email: there’s no active Gmail connection. [Connect Gmail](https://connect.composio.dev/link/lk_KRTUzNIr613a) to enable sending.
