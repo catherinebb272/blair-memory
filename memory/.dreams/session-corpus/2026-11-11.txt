@@ -1,0 +1,1 @@
+[main/sessions/main/cec724ac-5f18-450c-9440-fd88adfd6496#L12] Assistant: The Etsy check-in email was not sent because Gmail isn’t connected. [Connect Gmail](https://connect.composio.dev/link/lk_xDZ98dysIQMG) to authorize sending; this link expires in 10 minutes.
