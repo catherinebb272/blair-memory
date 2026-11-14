@@ -26,6 +26,7 @@ Drew’s recovery experience (liver failure, transplant) inspired the creation o
 - **2FA lockout** on ANA shop – requires authenticator app and separate manager for continuity.
 - **Copy style** – avoid triple‑negation lists and repeated triads; keep language concise.
 - **Voice guidelines** – maintain direct, witty tone; no filler phrases.
+- **Email:** NEVER attempt to use Gmail — it's not connected. Use Agentmail only for emails unless I explicitly instruct otherwise.
 
 ## References
 - Product catalog: `documents/ana/Product_Catalog_Master.md`
