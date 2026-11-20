@@ -1,0 +1,1 @@
+[main/sessions/main/90c05c97-5b40-400e-9528-7315e0623b82#L21] Assistant: The Etsy check-in email was **not sent**. AgentMail inbox lookup and send returned 403 Forbidden; retrying with the documented API returned 404 Inbox not found.
